@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan — Senior Full-Stack & AI Systems Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        purple: {
+                            600: '#9333ea',
+                            500: '#a855f7',
+                            400: '#c084fc',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #c084fc 50%, #9333ea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Ambient background glow -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 bg-indigo-600/15 rounded-full blur-[140px]"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-purple-900/20 rounded-full blur-[160px]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="terminal" class="w-5 h-5 text-white"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white group-hover:text-purple-400 transition-colors">Rehan.ai</span>
+                    <span class="block text-xs text-purple-400 font-mono tracking-wider">Senior Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#services" class="hover:text-purple-400 transition-colors">Expertise</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#pricing" class="hover:text-purple-400 transition-colors">Engagement</a>
+                <a href="#faq" class="hover:text-purple-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#contact" class="relative group overflow-hidden rounded-xl p-[1px] focus:outline-none">
+                    <span class="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl transition-all duration-300 group-hover:opacity-90"></span>
+                    <span class="relative px-5 py-2.5 rounded-xl bg-slate-950 text-white font-medium text-sm flex items-center gap-2 group-hover:bg-opacity-0 transition-all">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-purple-400 group-hover:text-white transition-colors"></i>
+                        Book Consultation
+                    </span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-slate-800 px-6 py-6 space-y-4 shadow-2xl">
+            <a href="#about" class="block text-base font-medium text-slate-300 hover:text-purple-400">About</a>
+            <a href="#services" class="block text-base font-medium text-slate-300 hover:text-purple-400">Expertise</a>
+            <a href="#projects" class="block text-base font-medium text-slate-300 hover:text-purple-400">Projects</a>
+            <a href="#pricing" class="block text-base font-medium text-slate-300 hover:text-purple-400">Engagement</a>
+            <a href="#faq" class="block text-base font-medium text-slate-300 hover:text-purple-400">FAQ</a>
+            <div class="pt-4 border-t border-slate-800">
+                <a href="#contact" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium text-center flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Book Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-32 pb-20 flex items-center justify-center bg-grid-pattern z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-purple-500/30 text-xs sm:text-sm font-medium text-purple-300 mb-8 animate-float">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Available for Select High-Impact AI & Full-Stack Contracts</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-purple-400"></i>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-tight mb-8">
+                Architecting <span class="text-gradient">Autonomous AI Systems</span> & High-Scale SaaS Platforms.
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed mb-12">
+                I’m Rehan—Senior Full-Stack & AI Engineer. I bridge state-of-the-art Large Language Models (LLMs), vector architecture, and ultra-fast Next.js/Go backends to build elite digital products that scale effortlessly.
+            </p>
+
+            <!-- Dual CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white font-semibold shadow-xl shadow-purple-600/25 hover:shadow-purple-600/40 hover:scale-[1.02] transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="calendar" class="w-5 h-5"></i> Schedule Technical Discovery
+                </a>
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-slate-200 font-semibold hover:border-purple-500/50 hover:bg-slate-900/80 transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="code" class="w-5 h-5 text-purple-400"></i> Explore Case Studies
+                </a>
+            </div>
+
+            <!-- Trust Metrics / Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto pt-10 border-t border-slate-800/80">
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">₹40Cr+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Client Revenue Scaled</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 mb-1">7+ Years</div>
+                    <div class="text-xs sm:text-sm text-slate-400">Full-Stack Experience</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-white mb-1">35+</div>
+                    <div class="text-xs sm:text-sm text-slate-400">AI & SaaS Products Shipped</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl text-center">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 mb-1">99.9%</div>
+                    <div class="text-xs sm:text-sm text-slate-400">System Uptime Record</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative z-10 bg-slate-900/40 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Profile Image / Tech Stack Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-3xl p-2 glass-panel shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Rehan - Senior AI Engineer" class="rounded-2xl object-cover w-full h-[420px] filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border border-purple-500/30 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-600/30 flex items-center justify-center text-purple-400">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">AI Systems Architect</h4>
+                                <p class="text-xs text-slate-400">PyTorch, LangChain, OpenAI APIs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-950/60 border border-purple-800/50 text-xs font-mono text-purple-300">
+                        <i data-lucide="user" class="w-3.5 h-3.5"></i> MEET THE ENGINEER
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                        Engineering robust digital solutions where performance meets artificial intelligence.
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        I am Rehan, a Senior Full-Stack & AI Engineer specializing in transforming complex business workflows into high-performance web applications and autonomous AI agents. With deep expertise across modern frontend frameworks, cloud-native backends, and cutting-edge machine learning integration, I help early-stage startups and enterprise unicorns build products that outpace competition.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-200">Custom LLM Fine-Tuning</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-200">Microservices & Kubernetes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-200">Real-time WebSockets & gRPC</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-sm font-medium text-slate-200">Vector Databases (Pinecone/Milvus)</span>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <a href="#contact" class="inline-flex items-center gap-2 text-purple-400 font-semibold hover:text-purple-300 transition-colors">
+                            <span>Let's discuss your tech stack</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Expertise Section -->
+    <section id="services" class="py-28 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Core Competencies</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
+                    Full-Stack & AI Engineering Capabilities
+                </h2>
+                <p class="text-slate-400 text-lg">
+                    End-to-end technical execution from database schema design to production-grade AI model deployment.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="brain" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Generative AI & LLM Agents</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Build production RAG pipelines, fine-tune open-source models (Llama 3, Mistral), and construct autonomous multi-agent workflows using LangChain & AutoGen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">OpenAI</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">LangChain</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Pinecone</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="layout" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">High-Performance Frontend</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Crafting lightning-fast, accessible user interfaces using Next.js App Router, React, Tailwind CSS, and TypeScript with optimal Core Web Vitals.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Next.js 14</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">TypeScript</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="server" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Scalable Backend Systems</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Designing resilient microservices in Node.js, Python FastAPI, and Go. Scalable REST/GraphQL APIs backed by PostgreSQL, Redis, and event streams.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">FastAPI</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Node.js</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="cloud" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Cloud Infrastructure & DevOps</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Automating deployments using Docker, Kubernetes, Terraform, and CI/CD pipelines across AWS, Google Cloud, and Vercel for 99.9% uptime.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">AWS / GCP</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Docker</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Enterprise Security & Audit</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Implementing robust OAuth2/JWT authentication, RBAC, GDPR/HIPAA compliance frameworks, and conducting thorough security vulnerability testing.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">OAuth2</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">JWT</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">RBAC</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-purple-500/40 transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-purple-600/30">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SaaS Product Architecture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        From MVP conception to multi-tenant DB architecture, Stripe billing integration, and automated user onboarding flows that convert visitors into recurring subscribers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80 text-xs font-mono text-purple-300">
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Stripe API</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Multi-tenant</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-950/60 border border-purple-900/40">Analytics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Case Studies Section -->
+    <section id="projects" class="py-28 relative z-10 bg-slate-900/30 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Featured Work</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4">
+                        Recent Engineering Case Studies
+                    </h2>
+                </div>
+                <p class="text-slate-400 max-w-md mt-4 md:mt-0">
+                    A glimpse into enterprise-grade SaaS applications and AI platforms built from scratch by Rehan.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Project 1 -->
+                <div class="glass-panel rounded-3xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition-all group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80" alt="NexusAI SaaS Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-lg glass-panel text-xs font-mono text-purple-300 border border-purple-500/30">AI Analytics Platform</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3">NexusAI — Enterprise Customer Intelligence</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Architected an enterprise RAG platform processing over 2M support tickets daily. Built with Next.js, FastAPI, Pinecone vector DB, and custom Llama-3 fine-tuned models. Reduced manual ticket resolution time by 74%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Next.js 14</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">FastAPI</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Pinecone</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Docker</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <span>Request System Architecture Walkthrough</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-panel rounded-3xl overflow-hidden border border-slate-800 hover:border-purple-500/50 transition-all group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="FinScale SaaS Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-lg glass-panel text-xs font-mono text-purple-300 border border-purple-500/30">Fintech SaaS</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3">FinScale — Multi-Tenant Billing & Ledger</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Engineered a high-concurrency payment orchestration SaaS handling ₹15Cr+ in monthly transactions. Integrated Stripe webhooks, automated invoicing, real-time balance calculations, and multi-region PostgreSQL replication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">TypeScript</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Node.js / Go</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Stripe API</span>
+                            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs text-purple-300 font-mono">Redis</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-purple-400 hover:text-purple-300 transition-colors">
+                                <span>Request System Architecture Walkthrough</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials Section -->
+    <section class="py-28 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Client Testimonials</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
+                    Trusted by Founders & Engineering VPs
+                </h2>
+                <p class="text-slate-400 text-lg">
+                    See what industry leaders have to say about working with Rehan on mission-critical projects.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Rehan is an absolute powerhouse. He took our ambiguous AI concept and turned it into a rock-solid, production-ready SaaS platform in under 8 weeks. His architectural grasp of LLMs and system design is world-class."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Aarav Sharma" class="w-12 h-12 rounded-full object-cover border border-purple-500/40">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Aarav Sharma</h4>
+                            <p class="text-xs text-slate-400">CEO & Co-Founder, NeuralFlow AI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "Finding a senior full-stack developer who truly understands both deep frontend UX and high-throughput backend architecture is rare. Rehan delivered beyond our expectations with zero technical debt."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Priya Patel" class="w-12 h-12 rounded-full object-cover border border-purple-500/40">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Priya Patel</h4>
+                            <p class="text-xs text-slate-400">CTO, CloudScale Systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            "His work on our fintech ledger and multi-tenant stripe architecture prevented catastrophic scaling bottlenecks. Rehan is our go-to fractional VP of Engineering whenever we launch a new product line."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Vikram Malhotra" class="w-12 h-12 rounded-full object-cover border border-purple-500/40">
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Vikram Malhotra</h4>
+                            <p class="text-xs text-slate-400">Founder, PayGrid India</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Engagement Models Section -->
+    <section id="pricing" class="py-28 relative z-10 bg-slate-900/30 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Engagement Tiers</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
+                    Flexible Collaboration Options
+                </h2>
+                <p class="text-slate-400 text-lg">
+                    Transparent pricing tailored for startups, scale-ups, and enterprise tech teams.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Tier 1 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                    <div>
+                        <div class="text-purple-400 font-mono text-xs uppercase tracking-wider mb-2">Technical Audit</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Codebase & AI Review</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">₹49,999 <span class="text-xs font-normal text-slate-400">/ one-time</span></div>
+                        <p class="text-slate-400 text-sm mb-8">
+                            Comprehensive security, performance, and AI architecture review with a detailed action report.
+                        </p>
+                        <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Full Codebase Security Audit
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> LLM Prompt & RAG Optimization
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Core Web Vitals & Speed Report
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> 1-Hour Strategy Call
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3.5 rounded-xl glass-panel text-white font-semibold text-center hover:bg-slate-900 transition-colors">
+                        Book Audit
+                    </a>
+                </div>
+
+                <!-- Tier 2 (Highlighted / Popular) -->
+                <div class="glass-panel p-8 rounded-3xl border-2 border-purple-500 flex flex-col justify-between relative shadow-2xl shadow-purple-600/20 transform lg:-translate-y-4">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+                        Most Popular
+                    </div>
+                    <div>
+                        <div class="text-purple-400 font-mono text-xs uppercase tracking-wider mb-2">SaaS MVP Build</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Full-Stack MVP Sprint</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">₹2,49,999 <span class="text-xs font-normal text-slate-400">/ project</span></div>
+                        <p class="text-slate-400 text-sm mb-8">
+                            Complete end-to-end development of your production-ready AI or SaaS product from scratch.
+                        </p>
+                        <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Next.js Frontend & Backend API
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> OpenAI / Vector DB Integration
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Stripe Subscriptions & Auth
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Fully Deployed on AWS/Vercel
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> 30 Days Post-Launch Support
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-center shadow-lg shadow-purple-600/30 hover:scale-[1.02] transition-all">
+                        Secure Sprint Slot
+                    </a>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+                    <div>
+                        <div class="text-purple-400 font-mono text-xs uppercase tracking-wider mb-2">Fractional CTO</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Engineering Retainer</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">₹1,49,999 <span class="text-xs font-normal text-slate-400">/ month</span></div>
+                        <p class="text-slate-400 text-sm mb-8">
+                            Dedicated senior engineering leadership, code reviews, and system architecture scaling.
+                        </p>
+                        <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> 20 Hours Weekly Dedication
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Team Mentorship & Code Reviews
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> System Scaling & Optimization
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Direct Slack / WhatsApp Access
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="w-full py-3.5 rounded-xl glass-panel text-white font-semibold text-center hover:bg-slate-900 transition-colors">
+                        Hire on Retainer
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-28 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Got Questions?</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mt-4 mb-6">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-400 text-lg">
+                    Everything you need to know about working with Rehan.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <details class="group glass-panel rounded-2xl border border-slate-800 overflow-hidden transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-white text-lg">
+                        <span>What is your typical project turnaround time?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-purple-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
+                        For a standard SaaS MVP (Next.js, FastAPI, Database, Stripe, Auth), my development sprints typically last between 4 to 8 weeks. For smaller audits or feature additions, turnaround is usually under 7 days.
+                    </div>
+                </details>
+
+                <details class="group glass-panel rounded-2xl border border-slate-800 overflow-hidden transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-white text-lg">
+                        <span>Do you sign NDAs and IP transfer agreements?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-purple-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
+                        Yes, absolutely. All intellectual property (IP) created during our engagement belongs 100% to you. I am happy to sign custom NDAs or standard contractor agreements prior to kickoff.
+                    </div>
+                </details>
+
+                <details class="group glass-panel rounded-2xl border border-slate-800 overflow-hidden transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-white text-lg">
+                        <span>What is your tech stack of choice for AI applications?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-purple-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
+                        For AI integration, I rely on Python (FastAPI, PyTorch, LangChain, LlamaIndex) paired with vector databases like Pinecone or Milvus, connected to a robust Next.js frontend for lightning-fast user interactions.
+                    </div>
+                </details>
+
+                <details class="group glass-panel rounded-2xl border border-slate-800 overflow-hidden transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-white text-lg">
+                        <span>Do you provide ongoing maintenance after launch?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-purple-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
+                        Yes! Every project includes 30 days of complimentary post-launch support. Beyond that, I offer retainer packages for ongoing feature development, infrastructure scaling, and system monitoring.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead / Contact Section -->
+    <section id="contact" class="py-28 relative z-10 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-950/80 px-3 py-1 rounded-md border border-purple-800/50">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+                        Let's build your next big breakthrough.
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        Have an AI product idea, a scaling bottleneck, or need an elite full-stack engineer for your team? Fill out the form or drop me a direct message.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass-panel flex items-center justify-center text-purple-400 border border-purple-500/30">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono text-slate-400 uppercase">Direct Email</h4>
+                                <a href="mailto:rehan@rehan.ai" class="text-white font-semibold hover:text-purple-400 transition-colors">rehan@rehan.ai</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass-panel flex items-center justify-center text-purple-400 border border-purple-500/30">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono text-slate-400 uppercase">Telegram / WhatsApp</h4>
+                                <span class="text-white font-semibold">+91 98765 43210</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass-panel flex items-center justify-center text-purple-400 border border-purple-500/30">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-mono text-slate-400 uppercase">Location</h4>
+                                <span class="text-white font-semibold">Bengaluru, India (Remote Worldwide)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
+                        
+                        <!-- Success Toast Overlay -->
+                        <div id="success-toast" class="hidden absolute inset-0 bg-slate-950/95 backdrop-blur-md flex flex-col items-center justify-center text-center p-8 z-20">
+                            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4 border border-emerald-500/40">
+                                <i data-lucide="check" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Message Received Successfully!</h3>
+                            <p class="text-slate-300 text-sm max-w-md mb-6">
+                                Thank you for reaching out. Rehan has received your project details and will get back to you within 24 hours.
+                            </p>
+                            <button id="reset-form-btn" class="px-6 py-2.5 rounded-xl bg-purple-600 text-white font-medium text-sm hover:bg-purple-500 transition-colors">
+                                Send Another Message
+                            </button>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Your Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-800 text-white focus:outline-none focus:border-purple-500 transition-colors" placeholder="Aarav Sharma">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Work Email *</label>
+                                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-800 text-white focus:outline-none focus:border-purple-500 transition-colors" placeholder="aarav@company.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Engagement Type *</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-800 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                                    <option class="bg-slate-900">SaaS MVP Development (₹2.5L+)</option>
+                                    <option class="bg-slate-900">AI / LLM Architecture Consultation</option>
+                                    <option class="bg-slate-900">Fractional CTO Retainer (₹1.5L/mo)</option>
+                                    <option class="bg-slate-900">Codebase Security & Audit (₹49k)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Project Details *</label>
+                                <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-800 text-white focus:outline-none focus:border-purple-500 transition-colors" placeholder="Tell me about your product, tech stack, and timeline..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 text-white font-semibold shadow-xl shadow-purple-600/25 hover:shadow-purple-600/40 hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
+                                <i data-lucide="send" class="w-5 h-5"></i> Submit Project Inquiry
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-16 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white">
+                            <i data-lucide="terminal" class="w-4 h-4"></i>
+                        </div>
+                        <span class="font-bold text-base text-white">Rehan.ai</span>
+                    </a>
+                    <p class="text-slate-400 text-sm max-w-sm">
+                        Senior Full-Stack & AI Systems Engineer. Building autonomous agents, high-scale SaaS architectures, and elite web applications.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-slate-300 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#about" class="hover:text-purple-400 transition-colors">About</a></li>
+                        <li><a href="#services" class="hover:text-purple-400 transition-colors">Expertise</a></li>
+                        <li><a href="#projects" class="hover:text-purple-400 transition-colors">Case Studies</a></li>
+                        <li><a href="#pricing" class="hover:text-purple-400 transition-colors">Engagement Tiers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-mono uppercase tracking-wider text-slate-300 mb-4">Connect</h4>
+                    <div class="flex items-center gap-4 text-slate-400">
+                        <a href="https://github.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center hover:text-purple-400 hover:border-purple-500/40 transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center hover:text-purple-400 hover:border-purple-500/40 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center hover:text-purple-400 hover:border-purple-500/40 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; <span id="current-year"></span> Rehan. All rights reserved.</p>
+                <p class="mt-2 sm:mt-0 font-mono">Engineered with Precision & Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bulletproof JS Initializations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            // Set current year in footer
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                // Close mobile menu when anchor links are clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Contact Form Submission & Success Toast
+            const contactForm = document.getElementById('contact-form');
+            const successToast = document.getElementById('success-toast');
+            const resetFormBtn = document.getElementById('reset-form-btn');
+
+            if (contactForm && successToast) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Simulate API network request
+                    successToast.classList.remove('hidden');
+                });
+
+                if (resetFormBtn) {
+                    resetFormBtn.addEventListener('click', () => {
+                        contactForm.reset();
+                        successToast.classList.add('hidden');
+                    });
+                }
+            }
+        });
+    </script>
+<script>
+// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (!href) return;
+            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
+                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+                const hashPart = href.includes('#') ? href.split('#')[1] : null;
+                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+                if (localEl) {
+                    e.preventDefault();
+                    localEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

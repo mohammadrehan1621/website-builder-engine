@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & AI Solutions | NexusFin AI - Enterprise Fintech Agency</title>
+  
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#151f32',
+              900: '#0f172a',
+              950: '#090d16',
+            },
+            purple: {
+              600: '#7c3aed',
+              500: '#8b5cf6',
+              400: '#a78bfa',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- TOP SECURITY BANNER & NAV -->
+  <div>
+    <div class="bg-gradient-to-r from-purple-900/40 via-slate-900 to-purple-900/40 border-b border-purple-500/20 text-xs py-1.5 px-4 text-center text-purple-300 font-medium flex items-center justify-center gap-2">
+      <i data-lucide="shield-check" class="w-3.5 h-3.5 text-purple-400"></i>
+      <span>256-Bit SSL Encrypted & SOC-2 Type II Certified Financial AI Infrastructure</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-white">Nexus<span class="text-purple-400">Fin</span></span>
+            <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">AI Fintech Agency</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="index.html" class="hover:text-purple-400 transition-colors">Home</a>
+          <a href="about.html" class="hover:text-purple-400 transition-colors">About</a>
+          <a href="services.html" class="text-purple-400 font-semibold transition-colors">Services</a>
+          <a href="contact.html" class="hover:text-purple-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Action Hub -->
+        <div class="hidden md:flex items-center gap-4">
+          <div id="auth-container">
+            <button onclick="openAuthModal()" class="flex items-center gap-2 text-sm font-medium bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/60 px-4 py-2.5 rounded-xl transition-all shadow-sm hover:border-purple-500/40">
+              <i data-lucide="user" class="w-4 h-4 text-purple-400"></i>
+              <span>Sign In / Register</span>
+            </button>
+          </div>
+          <a href="contact.html" class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-lg shadow-purple-600/25 transition-all hover:scale-[1.02]">
+            Book Audit
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+        <a href="index.html" class="block py-2 text-slate-300 hover:text-purple-400 font-medium">Home</a>
+        <a href="about.html" class="block py-2 text-slate-300 hover:text-purple-400 font-medium">About</a>
+        <a href="services.html" class="block py-2 text-purple-400 font-semibold">Services</a>
+        <a href="contact.html" class="block py-2 text-slate-300 hover:text-purple-400 font-medium">Contact</a>
+        <div class="pt-4 flex flex-col gap-3">
+          <button onclick="openAuthModal()" class="w-full py-2.5 bg-slate-800 text-slate-200 rounded-xl font-medium border border-slate-700 flex items-center justify-center gap-2">
+            <i data-lucide="user" class="w-4 h-4 text-purple-400"></i> Sign In / Register
+          </button>
+          <a href="contact.html" class="w-full py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl font-medium text-center">Book Audit</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- MAIN CONTENT: SERVICES CATALOG -->
+  <main class="flex-grow">
+    
+    <!-- Hero Header -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-slate-950 to-slate-950 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 text-purple-300 text-xs font-semibold mb-6">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Enterprise Solutions Catalog
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+          Next-Generation <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-purple-500 bg-clip-text text-transparent">AI Financial Services</span>
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto">
+          Scale your banking, hedge fund, or fintech startup with military-grade autonomous AI models engineered for extreme transaction velocities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Detailed Services Grid / Breakdown -->
+    <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+      
+      <!-- Service 1 -->
+      <div id="algorithmic-trading" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900/50 border border-slate-800/80 p-8 sm:p-12 rounded-3xl relative overflow-hidden group hover:border-purple-500/40 transition-all">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="lg:col-span-6 space-y-6">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+            <i data-lucide="trending-up" class="w-7 h-7"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-purple-400 font-bold">High-Frequency Execution</span>
+          <h2 class="text-3xl font-bold text-white tracking-tight">Autonomous Algorithmic Trading & Alpha Generation</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Deploy proprietary transformer models trained on multi-decade tick-level data across global equities, crypto derivatives, and FX markets. Achieve microsecond execution latency with built-in risk circuit breakers.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Sub-millisecond order routing
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Dynamic slippage mitigation
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Multi-exchange API aggregation
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Automated portfolio rebalancing
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-purple-600/20">
+              Deploy Trading Model <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <span class="text-xs text-slate-400 font-mono">Setup Time: 14 Days</span>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-950 p-4">
+            <img src="https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&q=80&w=800" alt="Algorithmic Trading Dashboard" class="rounded-xl object-cover w-full h-[320px] opacity-90 group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div id="fraud-detection" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900/50 border border-slate-800/80 p-8 sm:p-12 rounded-3xl relative overflow-hidden group hover:border-purple-500/40 transition-all">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="lg:col-span-6 order-2 lg:order-1">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-950 p-4">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800" alt="Fraud Detection Engine" class="rounded-xl object-cover w-full h-[320px] opacity-90 group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+        </div>
+        <div class="lg:col-span-6 space-y-6 order-1 lg:order-2">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+            <i data-lucide="shield-alert" class="w-7 h-7"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-indigo-400 font-bold">Real-Time Risk Management</span>
+          <h2 class="text-3xl font-bold text-white tracking-tight">AI-Powered AML & Fraud Prevention Engine</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Stop sophisticated financial crimes before they settle. Our graph neural networks analyze transaction topologies in real-time, catching synthetic identity fraud and laundering rings with 99.8% precision.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Graph neural network analysis
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> &lt;15ms latency per payload
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Automated SAR report generation
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Zero false-positive tuning
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-indigo-600/20">
+              Secure Your Ledger <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <span class="text-xs text-slate-400 font-mono">Setup Time: 7 Days</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div id="credit-scoring" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-slate-900/50 border border-slate-800/80 p-8 sm:p-12 rounded-3xl relative overflow-hidden group hover:border-purple-500/40 transition-all">
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="lg:col-span-6 space-y-6">
+          <div class="w-14 h-14 rounded-2xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+            <i data-lucide="cpu" class="w-7 h-7"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-purple-400 font-bold">Alternative Credit Intelligence</span>
+          <h2 class="text-3xl font-bold text-white tracking-tight">Deep-Learning Credit Scoring & Underwriting</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Expand your lending portfolio safely. By processing thousands of alternative behavioral data points beyond traditional credit bureaus, our models provide instant, bias-free credit decisions for unbanked and prime segments.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Alternative data ingestion
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Explainable AI (XAI) compliant
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Instant automated approvals
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Default risk minimization
+            </div>
+          </div>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-purple-600/20">
+              Upgrade Underwriting <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <span class="text-xs text-slate-400 font-mono">Setup Time: 10 Days</span>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-950 p-4">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Credit Scoring Analytics" class="rounded-xl object-cover w-full h-[320px] opacity-90 group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Package Comparison Table Section -->
+    <section class="py-20 bg-slate-900/30 border-t border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Transparent Enterprise Pricing</h2>
+          <p class="mt-4 text-slate-400 text-lg">Choose the deployment tier that matches your institutional volume and compliance needs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Tier 1 -->
+          <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+            <div>
+              <div class="text-purple-400 font-semibold text-sm tracking-wide uppercase">Growth Tier</div>
+              <h3 class="text-2xl font-bold text-white mt-2">Fintech Starter</h3>
+              <p class="text-slate-400 text-sm mt-3">Ideal for growing neo-banks and seed-stage fintechs scaling initial transaction volumes.</p>
+              
+              <div class="mt-6 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">₹1,49,999</span>
+                <span class="text-slate-400 text-sm">/ month</span>
+              </div>
+
+              <ul class="mt-8 space-y-4 text-sm text-slate-300">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Up to 1M monthly API calls
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Single AI model deployment
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Standard 99.9% uptime SLA
+                </li>
+                <li class="flex items-center gap-3 text-slate-500">
+                  <i data-lucide="x" class="w-4 h-4 text-slate-600 flex-shrink-0"></i> Dedicated GPU cluster
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="contact.html" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition-all border border-slate-700">
+                Get Started
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 2 (Popular) -->
+          <div class="bg-gradient-to-b from-purple-950/40 to-slate-900 border-2 border-purple-500 rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-purple-950/50">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-1 rounded-full text-xs font-semibold tracking-wider uppercase shadow-lg">
+              Most Popular
+            </div>
+            <div>
+              <div class="text-purple-400 font-semibold text-sm tracking-wide uppercase">Scale Tier</div>
+              <h3 class="text-2xl font-bold text-white mt-2">Enterprise AI Core</h3>
+              <p class="text-slate-400 text-sm mt-3">Designed for established financial institutions requiring custom model training & zero latency.</p>
+              
+              <div class="mt-6 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">₹3,99,999</span>
+                <span class="text-slate-400 text-sm">/ month</span>
+              </div>
+
+              <ul class="mt-8 space-y-4 text-sm text-slate-300">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Up to 25M monthly API calls
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Up to 3 custom AI models
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Dedicated GPU cluster (AWS/GCP)
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> 99.99% Enterprise Uptime SLA
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="contact.html" class="block w-full text-center bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-purple-600/30">
+                Deploy Scale Tier
+              </a>
+            </div>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-purple-500/40 transition-all">
+            <div>
+              <div class="text-purple-400 font-semibold text-sm tracking-wide uppercase">Institutional Tier</div>
+              <h3 class="text-2xl font-bold text-white mt-2">Hedge & Bank Custom</h3>
+              <p class="text-slate-400 text-sm mt-3">Tailored on-premise infrastructure and bespoke models for global tier-1 banks & hedge funds.</p>
+              
+              <div class="mt-6 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">Custom</span>
+              </div>
+
+              <ul class="mt-8 space-y-4 text-sm text-slate-300">
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Unlimited API volume
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Fully on-premise air-gapped deployment
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> 24/7 Dedicated AI Engineer team
+                </li>
+                <li class="flex items-center gap-3">
+                  <i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Full regulatory audit support
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="contact.html" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition-all border border-slate-700">
+                Contact Solutions Architect
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="space-y-4 md:col-span-1">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center">
+              <i data-lucide="cpu" class="w-4 h-4 text-white"></i>
+            </div>
+            <span class="text-lg font-bold text-white">Nexus<span class="text-purple-400">Fin</span></span>
+          </div>
+          <p class="text-slate-400 text-sm">Enterprise-grade artificial intelligence infrastructure for modern financial institutions.</p>
+          <div class="flex items-center gap-2 text-xs text-purple-300 bg-purple-950/40 border border-purple-500/20 px-3 py-1.5 rounded-lg w-fit">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 256-Bit SSL Encrypted & SOC-2
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="index.html" class="hover:text-purple-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-purple-400 transition-colors">About Us</a></li>
+            <li><a href="services.html" class="text-purple-400 font-medium">Services Catalog</a></li>
+            <li><a href="contact.html" class="hover:text-purple-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Core Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#algorithmic-trading" class="hover:text-purple-400 transition-colors">Algorithmic Trading</a></li>
+            <li><a href="services.html#fraud-detection" class="hover:text-purple-400 transition-colors">AML & Fraud Prevention</a></li>
+            <li><a href="services.html#credit-scoring" class="hover:text-purple-400 transition-colors">Deep Credit Scoring</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Global Headquarters</h4>
+          <p class="text-sm text-slate-400">Bandra Kurla Complex, Mumbai, India<br>contact@nexusfin.ai | +91 (22) 5544-0192</p>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="current-year"></span> NexusFin AI Technologies Pvt. Ltd. All rights reserved.</p>
+        <div class="flex gap-6 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400">Security Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- USER AUTHENTICATION MODAL -->
+  <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md hidden">
+    <div class="bg-slate-900 border border-slate-800 w-full max-w-md p-8 rounded-3xl relative shadow-2xl mx-4">
+      <button onclick="closeAuthModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex gap-4 mb-6 border-b border-slate-800 pb-4">
+        <button onclick="switchAuthTab('signin')" id="tab-signin" class="text-lg font-bold text-white pb-1 border-b-2 border-purple-500 transition-all">Sign In</button>
+        <button onclick="switchAuthTab('register')" id="tab-register" class="text-lg font-bold text-slate-500 pb-1 border-b-2 border-transparent transition-all">Create Account</button>
+      </div>
+
+      <form id="auth-form" onsubmit="handleAuthSubmit(event)" class="space-y-4">
+        <input type="hidden" name="csrf_token" value="sec_token_993847291">
+        <div id="name-field" class="hidden">
+          <label class="block text-xs font-medium text-slate-400 mb-1">Full Name</label>
+          <input type="text" id="auth-name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500" placeholder="Jane Doe">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Corporate Email</label>
+          <input type="email" id="auth-email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500" placeholder="name@institution.com">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">Password</label>
+          <div class="relative">
+            <input type="password" id="auth-password" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500 pr-10" placeholder="••••••••">
+            <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
+              <i data-lucide="eye" id="eye-icon" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between text-xs">
+          <label class="flex items-center gap-2 text-slate-400 cursor-pointer">
+            <input type="checkbox" class="rounded bg-slate-950 border-slate-800 text-purple-600 focus:ring-0"> Remember this device
+          </label>
+          <a href="#" class="text-purple-400 hover:underline">Forgot password?</a>
+        </div>
+
+        <button type="submit" id="auth-submit-btn" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-purple-600/20 mt-2">
+          Sign In to Portal
+        </button>
+
+        <div class="relative my-6 text-center">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-800"></div></div>
+          <span class="relative bg-slate-900 px-3 text-xs text-slate-500 uppercase">Or continue with</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <button type="button" onclick="simulateSocialAuth('Google')" class="flex items-center justify-center gap-2 py-2.5 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-xl text-xs font-medium text-slate-300 transition-all">
+            <i data-lucide="globe" class="w-4 h-4 text-purple-400"></i> Google
+          </button>
+          <button type="button" onclick="simulateSocialAuth('GitHub')" class="flex items-center justify-center gap-2 py-2.5 bg-slate-950 border border-slate-800 hover:border-slate-700 rounded-xl text-xs font-medium text-slate-300 transition-all">
+            <i data-lucide="code" class="w-4 h-4 text-indigo-400"></i> GitHub
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- PRIVACY & COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-4 sm:p-5 shadow-2xl hidden">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300">
+        <i data-lucide="lock" class="w-5 h-5 text-purple-400 flex-shrink-0"></i>
+        <span>We value your financial data privacy. We use secure cookies to optimize performance and enforce SOC-2 compliance.</span>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <button onclick="acceptCookies()" class="bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs px-5 py-2.5 rounded-xl transition-all shadow-md shadow-purple-600/20">
+          Accept All Secure Cookies
+        </button>
+        <button onclick="dismissCookies()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs px-4 py-2.5 rounded-xl transition-all">
+          Preferences
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Auth Modal Controller
+    let authMode = 'signin';
+    function openAuthModal() {
+      document.getElementById('auth-modal').classList.remove('hidden');
+    }
+    function closeAuthModal() {
+      document.getElementById('auth-modal').classList.add('hidden');
+    }
+    function switchAuthTab(mode) {
+      authMode = mode;
+      const tabIn = document.getElementById('tab-signin');
+      const tabReg = document.getElementById('tab-register');
+      const nameField = document.getElementById('name-field');
+      const submitBtn = document.getElementById('auth-submit-btn');
+
+      if (mode === 'signin') {
+        tabIn.className = 'text-lg font-bold text-white pb-1 border-b-2 border-purple-500 transition-all';
+        tabReg.className = 'text-lg font-bold text-slate-500 pb-1 border-b-2 border-transparent transition-all';
+        nameField.classList.add('hidden');
+        submitBtn.textContent = 'Sign In to Portal';
+      } else {
+        tabReg.className = 'text-lg font-bold text-white pb-1 border-b-2 border-purple-500 transition-all';
+        tabIn.className = 'text-lg font-bold text-slate-500 pb-1 border-b-2 border-transparent transition-all';
+        nameField.classList.remove('hidden');
+        submitBtn.textContent = 'Create Enterprise Account';
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const pwdInput = document.getElementById('auth-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      if (pwdInput.type === 'password') {
+        pwdInput.type = 'text';
+        eyeIcon.setAttribute('data-lucide', 'eye-off');
+      } else {
+        pwdInput.type = 'password';
+        eyeIcon.setAttribute('data-lucide', 'eye');
+      }
+      lucide.createIcons();
+    }
+
+    // Session Management & Auth Simulation
+    function handleAuthSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('auth-email').value;
+      const cleanEmail = email.replace(/</g, "&lt;").replace(/>/g, "&gt;"); // XSS Sanitization
+      
+      localStorage.setItem('nexusfin_user', JSON.stringify({ email: cleanEmail, loggedIn: true }));
+      closeAuthModal();
+      renderUserSession();
+    }
+
+    function simulateSocialAuth(provider) {
+      localStorage.setItem('nexusfin_user', JSON.stringify({ email: `user@${provider.toLowerCase()}.com`, loggedIn: true }));
+      closeAuthModal();
+      renderUserSession();
+    }
+
+    function signOut() {
+      localStorage.removeItem('nexusfin_user');
+      renderUserSession();
+    }
+
+    function renderUserSession() {
+      const container = document.getElementById('auth-container');
+      const sessionData = localStorage.getItem('nexusfin_user');
+      if (sessionData) {
+        const user = JSON.parse(sessionData);
+        container.innerHTML = `
+          <div class="relative group">
+            <button class="flex items-center gap-2 text-sm font-medium bg-purple-950/60 border border-purple-500/40 text-purple-300 px-3.5 py-2 rounded-xl">
+              <div class="w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center text-white text-xs font-bold">${user.email[0].toUpperCase()}</div>
+              <span class="max-w-[120px] truncate">${user.email}</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="absolute right-0 mt-2 w-48 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl py-2 hidden group-hover:block">
+              <a href="#" class="block px-4 py-2 text-xs text-slate-300 hover:bg-slate-800">My Dashboard</a>
+              <a href="#" class="block px-4 py-2 text-xs text-slate-300 hover:bg-slate-800">API Keys</a>
+              <div class="border-t border-slate-800 my-1"></div>
+              <button onclick="signOut()" class="w-full text-left px-4 py-2 text-xs text-red-400 hover:bg-slate-800 flex items-center gap-2">
+                <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Sign Out
+              </button>
+            </div>
+          </div>
+        `;
+      } else {
+        container.innerHTML = `
+          <button onclick="openAuthModal()" class="flex items-center gap-2 text-sm font-medium bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/60 px-4 py-2.5 rounded-xl transition-all shadow-sm hover:border-purple-500/40">
+            <i data-lucide="user" class="w-4 h-4 text-purple-400"></i>
+            <span>Sign In / Register</span>
+          </button>
+        `;
+      }
+      lucide.createIcons();
+    }
+
+    // Cookie Consent Logic
+    function acceptCookies() {
+      localStorage.setItem('nexusfin_cookies', 'accepted');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    function dismissCookies() {
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('nexusfin_cookies')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+      renderUserSession();
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+<script>
+// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (!href) return;
+            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
+                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+                const hashPart = href.includes('#') ? href.split('#')[1] : null;
+                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+                if (localEl) {
+                    e.preventDefault();
+                    localEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

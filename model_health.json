@@ -1,0 +1,50 @@
+{
+  "gemini-3.5-flash": {
+    "status": "degraded",
+    "success_count": 4,
+    "error_count": 112,
+    "last_success": 1791975660.1772525,
+    "last_error": 1792223756.4981573,
+    "last_error_msg": "429 RESOURCE_EXHAUSTED: Quota exceeded for model fleet."
+  },
+  "gemini-3.6-flash": {
+    "status": "degraded",
+    "success_count": 4,
+    "error_count": 111,
+    "last_success": 1791975662.0578642,
+    "last_error": 1792223756.5294945,
+    "last_error_msg": "429 RESOURCE_EXHAUSTED: Quota exceeded for model fleet."
+  },
+  "gemini-3.5-flash-lite": {
+    "status": "degraded",
+    "success_count": 196,
+    "error_count": 6,
+    "last_success": 1792223756.1925035,
+    "last_error": 1792223756.4091175,
+    "last_error_msg": "429 RESOURCE_EXHAUSTED: Quota exceeded for model fleet."
+  },
+  "gemini-2.5-flash": {
+    "status": "degraded",
+    "success_count": 0,
+    "error_count": 1,
+    "last_success": 0,
+    "last_error": 1792057562.9660447,
+    "last_error_msg": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer a"
+  },
+  "gemini-flash-lite-latest": {
+    "status": "degraded",
+    "success_count": 2,
+    "error_count": 4,
+    "last_success": 1792159299.8493166,
+    "last_error": 1792223756.4297366,
+    "last_error_msg": "429 RESOURCE_EXHAUSTED: Quota exceeded for model fleet."
+  },
+  "gemini-3.8-flash": {
+    "status": "degraded",
+    "success_count": 0,
+    "error_count": 4,
+    "last_success": 0,
+    "last_error": 1792223756.4707718,
+    "last_error_msg": "429 RESOURCE_EXHAUSTED: Quota exceeded for model fleet."
+  }
+}

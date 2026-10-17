@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NexaFin AI - Autonomous Fintech Intelligence</title>
+    
+    <!-- Strict Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://images.unsplash.com 'unsafe-inline' 'unsafe-eval';">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkslate: '#0B0F19',
+                        darkcard: '#131C31',
+                        purpleaccent: '#8B5CF6',
+                        indigoaccent: '#6366F1'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .glass-panel {
+            background: rgba(19, 28, 49, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-darkslate text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Top Security & Compliance Banner -->
+    <div class="bg-gradient-to-r from-purple-950 via-indigo-950 to-darkslate border-b border-purple-500/20 text-xs py-1.5 px-4 text-center text-slate-300 flex items-center justify-center gap-3">
+        <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 256-Bit SSL Encrypted & SOC-2 Type II Certified
+        </span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline">Enterprise-Grade Financial Intelligence Infrastructure</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-darkslate/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-500/25 group-hover:scale-105 transition-transform">
+                    <i data-lucide="cpu" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-purple-400 bg-clip-text text-transparent">
+                    NexaFin <span class="text-purple-400">AI</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="about.html" class="text-purple-400 font-semibold transition-colors">About</a>
+                <a href="services.html" class="hover:text-purple-400 transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-purple-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions / Auth Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <button id="auth-trigger-btn" onclick="openAuthModal()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium text-sm shadow-lg shadow-purple-600/20 hover:shadow-purple-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                    <span id="auth-btn-text">Sign In / Register</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 border-b border-slate-800 bg-darkslate/95 backdrop-blur-lg">
+            <div class="flex flex-col gap-4">
+                <a href="index.html" class="text-slate-300 hover:text-purple-400 py-1 font-medium">Home</a>
+                <a href="about.html" class="text-purple-400 py-1 font-semibold">About</a>
+                <a href="services.html" class="text-slate-300 hover:text-purple-400 py-1 font-medium">Services</a>
+                <a href="contact.html" class="text-slate-300 hover:text-purple-400 py-1 font-medium">Contact</a>
+                <button onclick="openAuthModal()" class="w-full mt-2 py-3 rounded-xl bg-purple-600 text-white font-medium text-center shadow-lg shadow-purple-600/25">
+                    Sign In / Register
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT: ABOUT PAGE -->
+    <main class="overflow-hidden">
+        
+        <!-- Hero Section -->
+        <section class="relative pt-20 pb-24 lg:pt-32 lg:pb-36">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(139,92,246,0.15),rgba(255,255,255,0))]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold mb-6">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Redefining Financial Engineering
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                    Engineering the Future of <span class="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">Autonomous Finance</span>
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+                    NexaFin AI was founded with a singular vision: to bridge the gap between complex artificial intelligence algorithms and institutional-grade financial decision making.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Grid -->
+        <section class="py-16 bg-darkcard/40 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-panel p-8 sm:p-10 rounded-2xl relative group hover:border-purple-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-6">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Our Core Mission</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            To empower financial institutions, hedge funds, and enterprise treasuries with transparent, self-learning AI agents capable of neutralizing risk, optimizing yield, and executing hyper-precise market analytics in sub-millisecond intervals.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 sm:p-10 rounded-2xl relative group hover:border-indigo-500/40 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6">
+                            <i data-lucide="eye" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Our Vision for 2030</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            We foresee a fully autonomous financial ecosystem where zero human error exists in core auditing, liquidity management, and fraud detection. We are building the foundational infrastructure to make this paradigm standard worldwide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Story Section -->
+        <section class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden border border-purple-500/30 shadow-2xl shadow-purple-900/20">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Founder & CEO Dr. Alexander Vance" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-darkslate via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 p-4 glass-panel rounded-xl">
+                                <h4 class="text-lg font-bold text-white">Dr. Alexander Vance</h4>
+                                <p class="text-xs text-purple-400">Founder & Chief Executive Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-semibold mb-4">
+                            <i data-lucide="bookmark" class="w-3.5 h-3.5"></i> The Genesis Story
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-6">
+                            From Wall Street Quantitative Research to Autonomous Neural Networks
+                        </h2>
+                        <div class="space-y-4 text-slate-300 leading-relaxed">
+                            <p>
+                                After spending over a decade engineering high-frequency trading models and risk management frameworks for tier-one global investment banks, Dr. Alexander Vance observed a fundamental limitation: legacy software was far too rigid to react to black-swan geopolitical and macroeconomic shifts in real-time.
+                            </p>
+                            <p>
+                                In 2021, Alexander assembled a world-class coalition of machine learning PhDs, cryptographers, and senior quantitative analysts in Zurich and New York. Their shared objective was clear: combine reinforcement learning with deep financial ledger auditing to create an invincible, self-adaptive intelligence layer.
+                            </p>
+                            <p>
+                                Today, NexaFin AI secures over ₹45,000 Crores ($5.4B+) in daily institutional transactions, setting the global benchmark for secure, ethical, and high-performance financial artificial intelligence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline Section -->
+        <section class="py-24 bg-darkcard/30 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Our Journey of Innovation</h2>
+                    <p class="mt-4 text-slate-400">Milestones that shaped NexaFin AI into an enterprise powerhouse.</p>
+                </div>
+
+                <div class="relative border-l border-purple-500/30 ml-4 sm:ml-32 space-y-12">
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative pl-8 sm:pl-12 group">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-darkslate border-2 border-purple-500 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <div class="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                        </div>
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Q3 2021</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Company Inception & Research Phase</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+                            Founded in Zurich by Dr. Alexander Vance. Initial development of proprietary reinforcement learning models specialized in anomaly detection across multi-currency ledgers.
+                        </p>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative pl-8 sm:pl-12 group">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-darkslate border-2 border-purple-500 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <div class="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                        </div>
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Q2 2022</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">SOC-2 Certification & Seed Funding</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+                            Successfully closed a ₹35 Crore ($4.2M) seed funding round led by top-tier European venture funds and achieved rigorous SOC-2 Type II compliance standards.
+                        </p>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative pl-8 sm:pl-12 group">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-darkslate border-2 border-purple-500 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <div class="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                        </div>
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Q1 2023</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Enterprise Scale & Global Expansion</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+                            Launched flagship Autonomous Risk Engine v2.0. Onboarded first batch of 25 global banking partners managing over ₹20,000 Crores in combined assets.
+                        </p>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="relative pl-8 sm:pl-12 group">
+                        <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-darkslate border-2 border-purple-500 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                            <div class="w-2.5 h-2.5 rounded-full bg-purple-500"></div>
+                        </div>
+                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Present Day</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Next-Gen Generative Financial Agents</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+                            Deploying advanced large financial models (LFMs) capable of natural language treasury commands and instantaneous cross-border settlement auditing.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Our Guiding Principles</h2>
+                    <p class="mt-4 text-slate-400">The cultural and engineering tenets that drive every line of code we write.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Relentless Security</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            In finance, trust is binary. We treat security not as a feature, but as the foundational architecture underlying every subsystem.
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Algorithmic Precision</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            We build models that eliminate cognitive bias, operating on deterministic mathematical models and self-optimizing neural topologies.
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="glass-panel p-8 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Radical Transparency</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            AI should never be a black box to those who rely on it. Our neural decisions come with cryptographic proof and clear audit trails.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darkslate border-t border-slate-800 text-slate-400 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-slate-800">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center text-white">
+                            <i data-lucide="cpu" class="w-4 h-4"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">NexaFin AI</span>
+                    </a>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Autonomous financial intelligence and risk management engines for enterprise institutions.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="hover:text-purple-400 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-purple-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-purple-400 transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Security & Compliance</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex items-center gap-2 text-emerald-400"><i data-lucide="check-circle" class="w-4 h-4"></i> SOC-2 Type II Certified</li>
+                        <li class="flex items-center gap-2 text-emerald-400"><i data-lucide="check-circle" class="w-4 h-4"></i> 256-Bit SSL Encrypted</li>
+                        <li class="flex items-center gap-2 text-emerald-400"><i data-lucide="check-circle" class="w-4 h-4"></i> ISO 27001 Compliant</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4">Global Headquarters</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        NexaFin Technologies Inc.<br>
+                        Zurich Technopark, Switzerland<br>
+                        Bandra Kurla Complex, Mumbai, India<br>
+                        <span class="text-purple-400 mt-2 block">secure@nexafin.ai</span>
+                    </p>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2025 NexaFin AI Technologies. All rights reserved.</p>
+                <div class="flex items-center gap-6 mt-4 sm:mt-0">
+                    <span class="inline-flex items-center gap-1.5 text-slate-400">
+                        <i data-lucide="shield" class="w-3.5 h-3.5 text-purple-400"></i> Secure Enterprise Session Active
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AUTHENTICATION MODAL -->
+    <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden">
+        <div class="glass-panel w-full max-w-md rounded-2xl p-8 relative border border-purple-500/30 shadow-2xl animate-in fade-in zoom-in duration-200">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Header Tabs -->
+            <div class="flex border-b border-slate-800 mb-6">
+                <button onclick="switchAuthTab('signin')" id="tab-signin" class="flex-1 pb-3 text-sm font-bold text-purple-400 border-b-2 border-purple-500 transition-all">Sign In</button>
+                <button onclick="switchAuthTab('register')" id="tab-register" class="flex-1 pb-3 text-sm font-semibold text-slate-400 border-b-2 border-transparent transition-all">Create Account</button>
+            </div>
+
+            <!-- Form Container -->
+            <form id="auth-form" onsubmit="handleAuthSubmit(event)" class="space-y-4">
+                <input type="hidden" id="auth-mode" value="signin">
+                
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Corporate Email</label>
+                    <input type="email5" id="auth-email" required placeholder="alex@enterprise.com" class="w-full px-4 py-3 rounded-xl bg-darkslate border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Password</label>
+                    <div class="relative">
+                        <input type="password" id="auth-password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl bg-darkslate border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-purple-500">
+                        <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-3.5 text-slate-400 hover:text-white">
+                            <i data-lucide="eye" id="eye-icon" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs">
+                    <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="checkbox" class="rounded bg-darkslate border-slate-700 text-purple-600 focus:ring-0">
+                        <span class="text-slate-300">Remember device</span>
+                    </label>
+                    <a href="#" class="text-purple-400 hover:underline">Forgot password?</a>
+                </div>
+
+                <button type="submit" id="auth-submit-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium text-sm shadow-lg shadow-purple-600/25 hover:scale-[1.01] transition-all">
+                    Sign In to Portal
+                </button>
+
+                <div class="relative flex py-2 items-center">
+                    <div class="flex-grow border-t border-slate-800"></div>
+                    <span class="flex-shrink mx-4 text-xs text-slate-500 uppercase">Or continue with</span>
+                    <div class="flex-grow border-t border-slate-800"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button type="button" onclick="simulateSocialAuth('Google')" class="py-2.5 px-4 rounded-xl border border-slate-700 bg-darkslate/50 hover:bg-slate-800 text-xs font-medium text-slate-200 flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="globe" class="w-4 h-4 text-purple-400"></i> Google
+                    </button>
+                    <button type="button" onclick="simulateSocialAuth('GitHub')" class="py-2.5 px-4 rounded-xl border border-slate-700 bg-darkslate/50 hover:bg-slate-800 text-xs font-medium text-slate-200 flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="code" class="w-4 h-4 text-indigo-400"></i> GitHub
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PRIVACY & COOKIE CONSENT BANNER -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-40 bg-darkcard/95 backdrop-blur-md border-t border-purple-500/20 p-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl hidden">
+        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-300">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-purple-400 flex-shrink-0"></i>
+            <p>We value your privacy. We use secure cookies and cryptographic tokens to optimize performance and secure your session.</p>
+        </div>
+        <div class="flex items-center gap-3 flex-shrink-0">
+            <button onclick="acceptCookies()" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-xs shadow-md">Accept Secure Cookies</button>
+            <button onclick="rejectCookies()" class="px-4 py-2 rounded-xl border border-slate-700 text-slate-300 hover:bg-slate-800 text-xs font-medium">Decline</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT BULLETPROOFING & AUTH LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Check Cookie Consent
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').classList.remove('hidden');
+                }, 1000);
+            }
+
+            // Check Existing Auth Session
+            const savedUser = localStorage.getItem('nexaSessionUser');
+            if (savedUser) {
+                updateNavbarForLoggedInUser(savedUser);
+            }
+        });
+
+        // Cookie Handlers
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'false');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        // Auth Modal Controls
+        function openAuthModal() {
+            document.getElementById('auth-modal').classList.remove('hidden');
+        }
+
+        function closeAuthModal() {
+            document.getElementById('auth-modal').classList.add('hidden');
+        }
+
+        function switchAuthTab(mode) {
+            const signinTab = document.getElementById('tab-signin');
+            const registerTab = document.getElementById('tab-register');
+            const submitBtn = document.getElementById('auth-submit-btn');
+            const modeInput = document.getElementById('auth-mode');
+
+            modeInput.value = mode;
+
+            if (mode === 'signin') {
+                signinTab.className = "flex-1 pb-3 text-sm font-bold text-purple-400 border-b-2 border-purple-500 transition-all";
+                registerTab.className = "flex-1 pb-3 text-sm font-semibold text-slate-400 border-b-2 border-transparent transition-all";
+                submitBtn.innerText = "Sign In to Portal";
+            } else {
+                registerTab.className = "flex-1 pb-3 text-sm font-bold text-purple-400 border-b-2 border-purple-500 transition-all";
+                signinTab.className = "flex-1 pb-3 text-sm font-semibold text-slate-400 border-b-2 border-transparent transition-all";
+                submitBtn.innerText = "Create Enterprise Account";
+            }
+        }
+
+        function togglePasswordVisibility() {
+            const pwdInput = document.getElementById('auth-password');
+            const eyeIcon = document.getElementById('eye-icon');
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.setAttribute('data-lucide', 'eye-off');
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.setAttribute('data-lucide', 'eye');
+            }
+            lucide.createIcons();
+        }
+
+        // Form Sanitization & Session Simulation
+        function handleAuthSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('auth-email').value;
+            
+            // Basic client-side HTML entity sanitization
+            const sanitizedEmail = emailInput.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'}[tag] || tag)
+            );
+
+            // Store session
+            localStorage.setItem('nexaSessionUser', sanitizedEmail);
+
+            // Close modal & update navbar
+            closeAuthModal();
+            updateNavbarForLoggedInUser(sanitizedEmail);
+
+            // Show success toast simulation
+            alert(`Authenticated Successfully as ${sanitizedEmail}! Secure session established.`);
+        }
+
+        function simulateSocialAuth(provider) {
+            const mockEmail = `user@${provider.toLowerCase()}-auth.com`;
+            localStorage.setItem('nexaSessionUser', mockEmail);
+            closeAuthModal();
+            updateNavbarForLoggedInUser(mockEmail);
+            alert(`Successfully authenticated via ${provider}!`);
+        }
+
+        function updateNavbarForLoggedInUser(email) {
+            const triggerBtn = document.getElementById('auth-trigger-btn');
+            if (triggerBtn) {
+                triggerBtn.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold border border-emerald-500/40">
+                            ${email.charAt(0).toUpperCase()}
+                        </div>
+                        <span class="text-xs truncate max-w-[120px]">${email}</span>
+                        <i data-lucide="log-out" class="w-3.5 h-3.5 text-slate-400 hover:text-white ml-1" onclick="signOutUser(event)" title="Sign Out"></i>
+                    </div>
+                `;
+                triggerBtn.onclick = null; // Disable modal trigger when logged in
+                lucide.createIcons();
+            }
+        }
+
+        function signOutUser(event) {
+            event.stopPropagation();
+            localStorage.removeItem('nexaSessionUser');
+            window.location.reload();
+        }
+    </script>
+<script>
+// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (!href) return;
+            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
+                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+                const hashPart = href.includes('#') ? href.split('#')[1] : null;
+                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+                if (localEl) {
+                    e.preventDefault();
+                    localEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

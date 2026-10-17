@@ -1,0 +1,23 @@
+# Secrets and Credentials
+.env
+.env.local
+*.env
+deployed_sites_registry.json
+
+# Cache and temporary builds
+__pycache__/
+*.py[cod]
+*$py.class
+*.zip
+*.tar.gz
+*.log
+
+# Temp exported websites & output zips
+Generated_Website/
+website_bundle.zip
+
+# OS / IDE
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

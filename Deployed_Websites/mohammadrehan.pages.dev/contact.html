@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<style>
+
+#chatbot-modal *::-webkit-scrollbar, #aria-window *::-webkit-scrollbar, #chat-messages::-webkit-scrollbar, #aria-messages::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+
+#chatbot-modal *::-webkit-scrollbar-track, #aria-window *::-webkit-scrollbar-track, #chat-messages::-webkit-scrollbar-track, #aria-messages::-webkit-scrollbar-track { background: transparent; }
+
+#chatbot-modal *::-webkit-scrollbar-thumb, #aria-window *::-webkit-scrollbar-thumb, #chat-messages::-webkit-scrollbar-thumb, #aria-messages::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.35); border-radius: 9999px; }
+
+.no-scrollbar::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+
+.no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+
+#chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
+
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mohammad Rehan | AI Systems Architect &amp; Tech Lead</title>
+<meta content="Get in touch with Mohammad Rehan for web development, business software, billing systems, and AI automation in Patna, Bihar, India." name="description"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Custom Tailwind Styling Extensions & Minimalist Theme Rules -->
+<script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        slateCanvas: '#f8fafc',
+
+                        charcoalHeading: '#0f172a',
+
+                        neutralBody: '#475569',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+<style>
+
+        /* Custom scrollbar & glassmorphism utilities */
+
+        ::-webkit-scrollbar { width: 6px; }
+
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    </style>
+<link href="https://mohammadrehan.pages.dev/contact.html" rel="canonical"/><link crossorigin href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link crossorigin href="https://cdn.tailwindcss.com" rel="preconnect"/><link crossorigin href="https://unpkg.com" rel="preconnect"/><meta content="website" property="og:type"/><meta content="Mohammad Rehan | AI Systems Architect &amp; Tech Lead" property="og:title"/><meta content="Get in touch with Mohammad Rehan for web development, business software, billing systems, and AI automation in Patna, Bihar, India." property="og:description"/><meta content="https://mohammadrehan.pages.dev/contact.html" property="og:url"/><meta content="https://mohammadrehan.pages.dev/og_preview.png" property="og:image"/><meta content="https://mohammadrehan.pages.dev/og_preview.png" property="og:image:secure_url"/><meta content="image/png" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Contact Mohammad Rehan - AI Systems Architect" property="og:image:alt"/><meta content="Mohammad Rehan" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="Mohammad Rehan | AI Systems Architect &amp; Tech Lead" name="twitter:title"/><meta content="Get in touch with Mohammad Rehan for web development, business software, billing systems, and AI automation in Patna, Bihar, India." name="twitter:description"/><meta content="https://mohammadrehan.pages.dev/og_preview.png" name="twitter:image"/><meta content="default-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' https: data:;" http-equiv="Content-Security-Policy"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammad Rehan",
+  "jobTitle": "Senior AI & Full-Stack Systems Architect",
+  "description": "Get in touch with Mohammad Rehan for web development, business software, billing systems, and AI automation in Patna, Bihar, India.",
+  "url": "https://mohammadrehan.pages.dev/contact.html",
+  "sameAs": [
+    "https://github.com/mohammadrehan1621",
+    "https://linkedin.com"
+  ]
+}</script>
+<script src="phoenix_sentinel.js"></script>
+<script src="aria_neural_engine.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
+<!-- Top Infrastructure Status Bar -->
+<div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 font-mono tracking-tight border-b border-slate-800">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-emerald-400 font-semibold uppercase">Production Infrastructure:</span>
+<span class="text-slate-300 hidden sm:inline">Fault-Tolerant Phoenix Mesh • 24/7 Chaos Verified • Zero Capital Leakage</span>
+<span class="text-slate-300 sm:hidden">Phoenix Mesh Active</span>
+</div>
+<div class="flex items-center gap-3 text-slate-400 text-xs font-sans">
+<span class="hidden md:inline font-mono text-emerald-400">MTTR: &lt;50ms</span>
+<span class="text-slate-700 hidden md:inline">|</span>
+<span>Patna &amp; Global Edge</span>
+</div>
+</div>
+<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock, Zero Collision) -->
+<div class="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 z-[70] max-w-2xl bg-slate-950/98 border border-slate-700/90 rounded-2xl p-4 sm:p-5 shadow-2xl backdrop-blur-2xl text-slate-100 transition-all duration-300 transform" id="cookie-banner">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 text-left">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+<i class="w-5 h-5" data-lucide="shield-check"></i>
+</div>
+<div>
+<p class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
+<span>Privacy &amp; Security Compliance</span>
+<span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono font-semibold">SOC-2 VERIFIED</span>
+</p>
+<p class="text-xs text-slate-200 leading-relaxed mt-1 font-medium">
+We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We use secure cookies to optimize performance.
+</p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
+<button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
+</div>
+</div>
+</div>
+<!-- STICKY NAVBAR -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="index.html">
+<div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-lg shadow-sm group-hover:scale-105 transition">
+
+                    MR
+
+                </div>
+<div>
+<span class="font-bold text-slate-900 text-lg tracking-tight block">Mohammad Rehan</span>
+<span class="text-xs text-slate-500 font-medium block">AI Systems Architect &amp; Tech Lead</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+<a class="hover:text-slate-900 transition" href="index.html">Home</a>
+<a class="hover:text-slate-900 transition" href="index.html#about">About</a>
+<a class="hover:text-slate-900 transition" href="projects.html">Projects</a>
+<a class="hover:text-slate-900 transition" href="experience.html">Experience</a>
+<a class="text-slate-900 font-semibold underline underline-offset-8" href="contact.html">Contact</a>
+</nav>
+<!-- Desktop CTAs -->
+<div class="hidden lg:flex items-center gap-3">
+<a class="px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition flex items-center gap-1.5" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
+<i class="w-3.5 h-3.5" data-lucide="message-square"></i> WhatsApp
+
+                </a>
+<a class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 shadow-sm transition flex items-center gap-1.5" href="Mohammad_Rehan_Resume.pdf" download>
+<i class="w-3.5 h-3.5" data-lucide="file-text"></i> Resume PDF
+
+                </a>
+</div>
+<!-- Mobile Hamburger Button -->
+<button aria-label="Toggle Navigation" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" id="mobile-menu-btn">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+<!-- Mobile Drawer Navigation -->
+<div class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
+<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="index.html">Home</a>
+<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="index.html#about">About</a>
+<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="projects.html">Projects</a>
+<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="experience.html">Experience</a>
+<a class="block text-base font-semibold text-slate-900" href="contact.html">Contact</a>
+<div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+<a class="w-full py-2.5 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 text-center flex items-center justify-center gap-2" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4" data-lucide="message-square"></i> Chat on WhatsApp
+
+                </a>
+<a class="w-full py-2.5 rounded-xl text-sm font-medium bg-slate-900 text-white text-center flex items-center justify-center gap-2" href="Mohammad_Rehan_Resume.pdf" download>
+<i class="w-4 h-4" data-lucide="file-text"></i> Download Resume PDF
+
+                </a>
+</div>
+</div>
+</header>
+<!-- MAIN CONTACT CONTENT -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-16 md:py-24 bg-white border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold mb-6 border border-slate-200">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+
+                    Available for Full-Time Roles, Freelance &amp; Collaborations
+
+                </div>
+<h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
+
+                    Let’s Build Something <span class="underline decoration-slate-400 underline-offset-8">Impactful</span> Together.
+
+                </h1>
+<p class="text-lg text-slate-600 leading-relaxed mb-8">
+
+                    Have a retail business requiring modern web presence, custom billing software, or AI automation? Reach out directly via the form below or connect instantly through WhatsApp or email.
+
+                </p>
+</div>
+</section>
+<!-- Contact Grid Section -->
+<section class="py-16 bg-slate-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Direct Contact Cards & Quick Copy -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+<h2 class="text-xl font-bold text-slate-900">Direct Contact Information</h2>
+<p class="text-sm text-slate-600 leading-relaxed">
+
+                                Prefer reaching out directly without filling out forms? Here are my verified direct communication channels:
+
+                            </p>
+<!-- Email Card with 1-Click Copy -->
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
+<i class="w-5 h-5" data-lucide="mail"></i>
+</div>
+<div class="truncate">
+<span class="text-xs text-slate-500 block font-medium">Email Address</span>
+<span class="text-sm font-semibold text-slate-900 truncate block" id="email-text">rehankhan20871621@gmail.com</span>
+</div>
+</div>
+<button class="px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" onclick="copyEmail()" title="Copy Email">
+<i class="w-3.5 h-3.5" data-lucide="copy"></i> Copy
+
+                                </button>
+</div>
+<!-- Phone / WhatsApp Card -->
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center flex-shrink-0">
+<i class="w-5 h-5" data-lucide="phone"></i>
+</div>
+<div>
+<span class="text-xs text-slate-500 block font-medium">Phone &amp; WhatsApp</span>
+<span class="text-sm font-semibold text-slate-900">+91 70915 18548</span>
+</div>
+</div>
+<a class="px-3 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" href="https://wa.me/917091518548?text=Hello!%20I%20am%20reaching%20out%20from%20your%20portfolio." rel="noopener noreferrer" target="_blank">
+<i class="w-3.5 h-3.5" data-lucide="message-circle"></i> Chat
+
+                                </a>
+</div>
+<!-- Location Card -->
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center flex-shrink-0">
+<i class="w-5 h-5" data-lucide="map-pin"></i>
+</div>
+<div>
+<span class="text-xs text-slate-500 block font-medium">Location &amp; Region</span>
+<span class="text-sm font-semibold text-slate-900">Patna, Bihar 800006, India</span>
+</div>
+</div>
+</div>
+<!-- Professional Guarantee Card -->
+<div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl space-y-4">
+<div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-emerald-400">
+<i class="w-5 h-5" data-lucide="shield-check"></i>
+</div>
+<h3 class="text-lg font-bold">Fast &amp; Transparent Communication</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+
+                                Whether you need a functional store website, inventory billing software, or retail consultation, expect clear timelines, clean code, and practical problem-solving.
+
+                            </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 text-xs font-bold text-white bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-xl transition" href="index.html#resume">
+<i class="w-4 h-4" data-lucide="download"></i> Download Full Resume (PDF)
+
+                                </a>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Inquiry Form -->
+<div class="lg:col-span-7">
+<div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm relative">
+<!-- Success Toast Notification (Hidden by default) -->
+<div class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3" id="form-success-toast">
+<i class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" data-lucide="check-circle-2"></i>
+<div>
+<span class="font-bold block text-sm">Message Successfully Logged!</span>
+<span class="text-xs">Thank you for reaching out. Your inquiry has been processed. For immediate response, feel free to ping me on WhatsApp at +91 70915 18548.</span>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 mb-2">Send an Inquiry or Proposal</h2>
+<p class="text-sm text-slate-600 mb-8">
+
+                                Fill out the secure form below with your project details or job opportunity. All inputs are sanitized and handled securely.
+
+                            </p>
+<form class="space-y-6" id="contact-form" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="name">Your Full Name *</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="name" placeholder="e.g. Rajesh Kumar" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="email">Email Address *</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="email" placeholder="e.g. rajesh@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="phone">Phone / WhatsApp Number</label>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="subject">Inquiry Type *</label>
+<select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 bg-white transition" id="subject" required="">
+<option value="">Select subject...</option>
+<option value="Full-Time Role / Job Opportunity">Full-Time Role / Job Opportunity</option>
+<option value="Website Development">Website Development</option>
+<option value="Billing &amp; Inventory Software">Billing &amp; Inventory Software</option>
+<option value="Retail Business Collaboration">Retail Business Collaboration</option>
+<option value="General Inquiry">General Inquiry</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="message">Project Details or Message *</label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition resize-none" id="message" placeholder="Describe your requirements, goals, or timeline..." required="" rows="5"></textarea>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+<span class="text-xs text-slate-500 flex items-center gap-1.5">
+<i class="w-3.5 h-3.5 text-emerald-600" data-lucide="lock"></i> Secure &amp; Confidential
+
+                                    </span>
+<button class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-sm transition flex items-center gap-2" type="submit">
+<span>Send Message</span>
+<i class="w-4 h-4" data-lucide="send"></i>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div class="space-y-4 md:col-span-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-sm">
+
+                            MR
+
+                        </div>
+<span class="font-bold text-slate-900 text-base">Mohammad Rehan</span>
+</div>
+<p class="text-xs text-slate-500 leading-relaxed max-w-sm">
+
+                        Combining real-world retail management experience with technology to build practical websites, billing software, and business automation solutions. Based in Patna, Bihar.
+
+                    </p>
+<div class="flex items-center gap-2 text-xs text-emerald-600 font-medium">
+<i class="w-4 h-4" data-lucide="shield-check"></i> 256-Bit SSL Encrypted &amp; SOC-2 Compliant Portfolio
+
+                    </div>
+</div>
+<div class="space-y-3">
+<h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Quick Navigation</h4>
+<ul class="space-y-2 text-xs text-slate-600">
+<li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
+<li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Portfolio</a></li>
+<li><a class="hover:text-slate-900 transition" href="experience.html">Experience &amp; Resume</a></li>
+<li><a class="hover:text-slate-900 transition font-semibold text-slate-900" href="contact.html">Contact &amp; Hire</a></li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Direct Connect</h4>
+<ul class="space-y-2 text-xs text-slate-600">
+<li><a class="hover:text-slate-900 transition flex items-center gap-1.5" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank"><i class="w-3.5 h-3.5 text-emerald-600" data-lucide="message-circle"></i> WhatsApp (+91 70915 18548)</a></li>
+<li><a class="hover:text-slate-900 transition flex items-center gap-1.5" href="mailto:rehankhan20871621@gmail.com"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="mail"></i> rehankhan20871621@gmail.com</a></li>
+<li><span class="text-slate-500 flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-slate-600" data-lucide="map-pin"></i> Patna, Bihar 800006</span></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+<p>© <span id="current-year"></span> Mohammad Rehan. All rights reserved.</p>
+<div class="flex items-center gap-6">
+<span class="hover:text-slate-900 cursor-pointer">Privacy Policy</span>
+<span class="hover:text-slate-900 cursor-pointer">Terms of Service</span>
+<span class="hover:text-slate-900 cursor-pointer">Security Overview</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- WHATSAPP FLOATING WIDGET -->
+<div class="fixed bottom-6 right-6 z-50">
+<a aria-label="Chat on WhatsApp" class="group flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-2xl transition transform hover:scale-110" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
+<svg class="w-7 h-7 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-semibold">Chat with Me</span>
+</a>
+</div>
+<!-- HOLOGRAPHIC AI COMPANION (ARIA v4.0) -->
+<div class="fixed bottom-6 left-6 z-50">
+<!-- Floating Hologram Avatar Pill -->
+<button class="relative group flex items-center gap-3 bg-slate-900 text-white p-3.5 rounded-full shadow-2xl border border-indigo-500/30 hover:scale-105 transition" id="aria-toggle-btn" onclick="toggleAriaChat()">
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900 animate-ping"></span>
+<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900"></span>
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center font-bold text-xs shadow-inner">
+
+                🔮
+
+            </div>
+<div class="text-left pr-2 hidden sm:block">
+<span class="text-xs font-bold block leading-tight">Aria v4.0 AI</span>
+<span class="text-[10px] text-emerald-400 block font-medium">Neural Assistant Online</span>
+</div>
+</button>
+<!-- Holographic HUD Terminal Window -->
+<div class="hidden absolute bottom-16 left-0 w-[380px] sm:w-[400px] h-[520px] bg-slate-900/95 backdrop-blur-xl border border-indigo-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-white z-50" id="aria-chat-window">
+<!-- Terminal Header -->
+<div class="bg-slate-800/90 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-xs font-mono font-bold tracking-wider text-indigo-300">ARIA // NEURAL INTERFACE v4.0</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Minimize Aria" class="text-slate-400 hover:text-white p-1" onclick="toggleAriaChat()">
+<i class="w-4 h-4" data-lucide="minus"></i>
+</button>
+</div>
+</div>
+<!-- Scrollable Message Stream -->
+<div class="flex-grow p-4 overflow-y-auto space-y-4 text-xs font-mono" id="aria-messages">
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-xs flex-shrink-0">🔮</div>
+<div class="bg-slate-800 p-3 rounded-xl border border-indigo-500/20 text-slate-200 leading-relaxed">
+
+                        Hello! I am Aria v4.0, Mohammad Rehan's neural intelligence assistant. How can I help you explore his retail management background, web projects, or billing software today?
+
+                    </div>
+</div>
+</div>
+<!-- Quick Action Chips -->
+<div class="px-3 py-2 bg-slate-800/50 border-t border-slate-700/50 flex gap-1.5 overflow-x-auto no-scrollbar">
+<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('Tell me about Mohammad Rehan\'s background')">💼 Background</button>
+<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('What projects has he built?')">🚀 Projects</button>
+<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('What is his tech stack?')">⚡ Tech Stack</button>
+<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('How can I contact him?')">📲 Contact &amp; WhatsApp</button>
+</div>
+<!-- Terminal Input Bar -->
+<div class="p-3 bg-slate-800 border-t border-slate-700 flex gap-2">
+<input class="flex-grow bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 font-sans" id="aria-input" onkeypress="handleAriaKeyPress(event)" placeholder="Ask Aria anything..." type="text"/>
+<button class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center" onclick="submitAriaInput()">
+<i class="w-3.5 h-3.5" data-lucide="send"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- GLOBAL JAVASCRIPT & INTERACTIVITY -->
+<script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            if (window.lucide) {
+
+                lucide.createIcons();
+
+            }
+
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+
+
+            // Mobile Menu Toggle
+
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+
+                mobileBtn.addEventListener('click', () => {
+
+                    mobileMenu.classList.toggle('hidden');
+
+                });
+
+            }
+
+        });
+
+
+
+        // 1-Click Email Copy Function
+
+        function copyEmail() {
+
+            const email = "rehankhan20871621@gmail.com";
+
+            navigator.clipboard.writeText(email).then(() => {
+
+                alert("Email address copied to clipboard: " + email);
+
+            }).catch(err => {
+
+                console.error("Failed to copy email: ", err);
+
+            });
+
+        }
+
+
+
+        // Contact Form Submission Handler with Toast
+
+        function handleFormSubmit(event) {
+
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+
+            const email = document.getElementById('email').value;
+
+            const subject = document.getElementById('subject').value;
+
+            const message = document.getElementById('message').value;
+
+
+
+            if (!name || !email || !subject || !message) {
+
+                alert("Please fill in all required fields.");
+
+                return;
+
+            }
+
+
+
+            // Show success toast
+
+            const toast = document.getElementById('form-success-toast');
+
+            toast.classList.remove('hidden');
+
+            
+
+            // Reset form
+
+            document.getElementById('contact-form').reset();
+
+
+
+            // Scroll to toast
+
+            toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+
+
+            // Hide toast after 8 seconds
+
+            setTimeout(() => {
+
+                toast.classList.add('hidden');
+
+            }, 8000);
+
+        }
+
+
+
+        // Holographic AI Companion (Aria v4.0) Logic
+
+        let ariaOpen = false;
+
+        function toggleAriaChat() {
+
+            ariaOpen = !ariaOpen;
+
+            const win = document.getElementById('aria-chat-window');
+
+            if (ariaOpen) {
+
+                win.classList.remove('hidden');
+
+                document.getElementById('aria-input').focus();
+
+            } else {
+
+                win.classList.add('hidden');
+
+            }
+
+        }
+
+
+
+        function handleAriaKeyPress(e) {
+
+            if (e.key === 'Enter') {
+
+                submitAriaInput();
+
+            }
+
+        }
+
+
+
+        function submitAriaInput() {
+
+            const input = document.getElementById('aria-input');
+
+            const val = input.value.trim();
+
+            if (!val) return;
+
+            appendUserMessage(val);
+
+            input.value = '';
+
+            processAriaResponse(val);
+
+        }
+
+
+
+        function sendAriaQuery(q) {
+
+            appendUserMessage(q);
+
+            processAriaResponse(q);
+
+        }
+
+
+
+        function appendUserMessage(text) {
+
+            const container = document.getElementById('aria-messages');
+
+            const div = document.createElement('div');
+
+            div.className = "flex items-start justify-end gap-2";
+
+            div.innerHTML = `
+
+                <div class="bg-indigo-600 p-3 rounded-xl text-white max-w-[80%] leading-relaxed">${escapeHtml(text)}</div>
+
+                <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs flex-shrink-0">👤</div>
+
+            `;
+
+            container.appendChild(div);
+
+            container.scrollTop = container.scrollHeight;
+
+        }
+
+
+
+        function appendAriaMessage(htmlContent) {
+
+            const container = document.getElementById('aria-messages');
+
+            const div = document.createElement('div');
+
+            div.className = "flex items-start gap-2";
+
+            div.innerHTML = `
+
+                <div class="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-xs flex-shrink-0">🔮</div>
+
+                <div class="bg-slate-800 p-3 rounded-xl border border-indigo-500/20 text-slate-200 leading-relaxed space-y-2">${htmlContent}</div>
+
+            `;
+
+            container.appendChild(div);
+
+            container.scrollTop = container.scrollHeight;
+
+        }
+
+
+
+        function processAriaResponse(query) {
+            setTimeout(() => {
+                let responseHtml = "";
+                if (window.generateAriaCognitiveResponse) {
+                    responseHtml = window.generateAriaCognitiveResponse(query);
+                } else {
+                    responseHtml = `Mohammad Rehan is an AI Systems Architect & Tech Lead in Patna, Bihar. How can I assist you with his background, projects, or architecture?`;
+                }
+                appendAriaMessage(responseHtml);
+            }, 300);
+        }
+
+        // Cookie Banner Management
+        function acceptCookies() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                try { localStorage.setItem('cookie_consent_accepted', 'true'); } catch (e) {}
+                banner.style.opacity = '0';
+                banner.style.pointerEvents = 'none';
+                setTimeout(() => banner.remove(), 250);
+            }
+        }
+        function dismissCookies() { acceptCookies(); }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('cookie_consent_accepted') === 'true') {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) banner.remove();
+            }
+        });
+
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+
+        }
+
+    </script>
+<script>
+
+// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    document.querySelectorAll('a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            const href = this.getAttribute('href');
+
+            if (!href) return;
+
+            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
+
+                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+
+                const hashPart = href.includes('#') ? href.split('#')[1] : null;
+
+                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+
+                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+
+                if (localEl) {
+
+                    e.preventDefault();
+
+                    localEl.scrollIntoView({ behavior: 'smooth' });
+
+                }
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <title>LADIES ZONE — Haute Couture, Footwear & Designer Atelier | Boring Road, Patna</title>
+  <meta name="description" content="Discover Maison Ladies Zone Exclusive Showroom. Patna's premier destination for haute footwear, imperial bridal shoes, handcrafted mojari, bespoke ethnic suits, and contemporary dresses. Boring Road, S.K. Puri." />
+  <meta name="keywords" content="Ladies Zone, luxury showroom Patna, Boring Road designer boutique, bridal footwear Patna, heels Patna, bespoke suits Boring Road" />
+  
+  <link rel="canonical" href="https://ladieszonepatna.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LADIES ZONE EXCLUSIVE SHOWROOM" />
+  <meta property="og:title" content="LADIES ZONE — Haute Couture & Footwear Atelier • Patna" />
+  <meta property="og:description" content="Where Fashion Meets Comfort. The art of distinction. Footwear, Bridal, Mojari, Suits & Western Wear." />
+  <meta property="og:url" content="https://ladieszonepatna.in/" />
+  <meta property="og:image" content="https://ladieszonepatna.in/assets/logo.png" />
+  <meta name="theme-color" content="#0a0a0c" />
+
+  <!-- Ultra-Luxury Fonts: Cinzel & Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org Luxury Store Metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Ladies Zone Exclusive Showroom",
+    "image": "https://ladieszonepatna.in/assets/logo.png",
+    "description": "Haute couture footwear, bridal shoes, ethnic suits, and western fashion atelier in Boring Road, Patna.",
+    "telephone": ["+91-8986047584", "+91-9835699398"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Boring Road, S.K. Puri",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "postalCode": "800001",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:30",
+        "closes": "21:00"
+      }
+    ],
+    "priceRange": "₹₹",
+    "url": "https://ladieszonepatna.in/"
+  }
+  </script>
+
+  <style>
+    :root {
+      --noir: #0a0a0c;
+      --noir-surface: #121215;
+      --noir-card: #18181c;
+      --silk-bg: #fdfcf9;
+      --silk-surface: #ffffff;
+      --silk-muted: #f7f5f0;
+      --gold-hermes: #c5a059;
+      --gold-light: #e8d8b8;
+      --gold-glow: rgba(197, 160, 89, 0.25);
+      --terracotta: #c46237;
+      --text-main: #141416;
+      --text-muted: #72727c;
+      --hairline: rgba(20, 20, 22, 0.08);
+      --hairline-gold: rgba(197, 160, 89, 0.35);
+      --font-serif: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+      --font-body-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      --wa-green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--silk-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    /* Global Micro-Animations */
+    @keyframes kenBurns {
+      0% { transform: scale(1.0); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1.0); }
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.97) translateY(16px); }
+      100% { opacity: 1; transform: scale(1.0) translateY(0); }
+    }
+
+    @keyframes subtlePulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+
+    /* Scroll Reveal System */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Top Maison Ticker */
+    .maison-ticker {
+      background: var(--noir);
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    }
+
+    .maison-ticker a {
+      color: #fff;
+      transition: color 0.25s;
+    }
+    .maison-ticker a:hover {
+      color: var(--gold-hermes);
+    }
+
+    /* Curator Admin Banner */
+    #adminBanner {
+      display: none;
+      background: #151518;
+      border-bottom: 1px solid var(--gold-hermes);
+      color: #fff;
+      padding: 10px 32px;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .admin-pill {
+      background: var(--gold-hermes);
+      color: #000;
+      font-weight: 700;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .btn-admin {
+      padding: 6px 14px;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.25s;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent;
+      color: #fff;
+    }
+    .btn-admin:hover {
+      border-color: var(--gold-hermes);
+      color: var(--gold-hermes);
+    }
+
+    .btn-admin-add {
+      background: var(--gold-hermes);
+      color: #000;
+      border-color: var(--gold-hermes);
+    }
+    .btn-admin-add:hover {
+      background: #dfb870;
+      color: #000;
+    }
+
+    /* Haute Navigation Header */
+    .haute-header {
+      background: rgba(253, 252, 249, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--hairline);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.35s ease;
+    }
+
+    .header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 22px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-top-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-location-tag {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .brand-mark {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .brand-mark:hover {
+      transform: scale(1.02);
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 600;
+      letter-spacing: 8px;
+      color: var(--noir);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.62rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-hermes);
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .btn-concierge-pill {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--noir);
+      border: 1px solid var(--noir);
+      padding: 8px 18px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-concierge-pill:hover {
+      background: var(--noir);
+      color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-staff-pill {
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color 0.25s;
+    }
+    .btn-staff-pill:hover {
+      color: var(--noir);
+    }
+
+    .nav-bar {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .nav-item {
+      font-size: 0.72rem;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      color: var(--noir);
+      font-weight: 500;
+      position: relative;
+      padding: 4px 0;
+      transition: color 0.25s ease;
+    }
+
+    .nav-item:hover, .nav-item.active {
+      color: var(--gold-hermes);
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1px;
+      background: var(--gold-hermes);
+      transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-item:hover::after, .nav-item.active::after {
+      width: 100%;
+    }
+
+    /* Cinematic Editorial Campaign Hero */
+    .campaign-hero {
+      position: relative;
+      background: #08080a;
+      color: #fff;
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg-visual {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.44;
+      filter: contrast(1.1) brightness(0.9);
+      animation: kenBurns 24s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    .hero-gradient-scrim {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 65% 50%, rgba(10,10,12,0.3) 0%, rgba(10,10,12,0.94) 100%);
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 90px 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-badge-season {
+      font-size: 0.68rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+      display: inline-block;
+      border-left: 2px solid var(--gold-hermes);
+      padding-left: 14px;
+    }
+
+    .hero-main-title {
+      font-family: var(--font-serif);
+      font-size: 4.2rem;
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+      color: #ffffff;
+      animation: fadeInScale 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-main-title span {
+      display: block;
+      font-style: italic;
+      font-family: var(--font-body-serif);
+      text-transform: none;
+      color: var(--gold-light);
+      font-size: 3.4rem;
+      letter-spacing: 0px;
+      margin-top: 6px;
+    }
+
+    .hero-lead-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #b8b8c4;
+      max-width: 580px;
+      margin-bottom: 44px;
+      font-weight: 300;
+    }
+
+    .hero-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .btn-haute-gold {
+      background: var(--gold-hermes);
+      color: #0a0a0c;
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 16px 36px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 24px var(--gold-glow);
+    }
+
+    .btn-haute-gold:hover {
+      background: #dfb870;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.45);
+    }
+
+    .btn-haute-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 16px 34px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-haute-outline:hover {
+      border-color: var(--gold-hermes);
+      color: var(--gold-hermes);
+      background: rgba(197, 160, 89, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .hero-salon-card {
+      background: rgba(18, 18, 22, 0.88);
+      border: 1px solid var(--hairline-gold);
+      backdrop-filter: blur(20px);
+      padding: 36px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.55);
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .hero-salon-card:hover {
+      border-color: var(--gold-hermes);
+      transform: translateY(-4px);
+    }
+
+    .salon-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .salon-card-desc {
+      font-size: 0.88rem;
+      color: #a4a4b2;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .salon-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      color: #d6d6e0;
+      margin-bottom: 26px;
+    }
+
+    .salon-perks li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .salon-perks li::before {
+      content: '◆';
+      color: var(--gold-hermes);
+      font-size: 0.6rem;
+    }
+
+    /* Curated Categories Architecture */
+    .section-haute {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 120px 40px;
+    }
+
+    .section-editorial-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 70px;
+    }
+
+    .editorial-label {
+      font-size: 0.68rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-hermes);
+      margin-bottom: 12px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .editorial-heading {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--noir);
+      margin-bottom: 16px;
+    }
+
+    .editorial-sub {
+      font-family: var(--font-body-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .haute-category-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .haute-cat-card {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #000;
+      border: 1px solid var(--hairline);
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .haute-cat-card:hover {
+      border-color: var(--gold-hermes);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+
+    .haute-cat-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+      will-change: transform;
+    }
+
+    .haute-cat-card:hover .haute-cat-img {
+      transform: scale(1.08);
+      opacity: 0.72;
+    }
+
+    .haute-cat-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px 22px;
+      background: linear-gradient(180deg, transparent 0%, rgba(10,10,12,0.85) 70%, rgba(10,10,12,0.98) 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .cat-index {
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+
+    .cat-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .cat-sub-action {
+      font-size: 0.66rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.25s ease;
+    }
+
+    .haute-cat-card:hover .cat-sub-action {
+      color: var(--gold-light);
+    }
+
+    /* Main Atelier Catalog Lookbook */
+    .catalog-section {
+      background: #ffffff;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 110px 40px;
+    }
+
+    .catalog-container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .catalog-controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 50px;
+    }
+
+    .category-filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .filter-tab {
+      font-size: 0.72rem;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 10px 22px;
+      background: transparent;
+      color: var(--noir);
+      border: 1px solid var(--hairline);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .filter-tab:hover {
+      border-color: var(--noir);
+      transform: translateY(-1px);
+    }
+
+    .filter-tab.active {
+      background: var(--noir);
+      color: var(--gold-light);
+      border-color: var(--noir);
+    }
+
+    .search-sort-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .haute-search {
+      padding: 11px 20px;
+      font-family: inherit;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      border: 1px solid var(--hairline);
+      background: #faf9f6;
+      width: 260px;
+      transition: all 0.3s;
+    }
+
+    .haute-search:focus {
+      border-color: var(--noir);
+      background: #fff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(10,10,12,0.06);
+    }
+
+    .haute-sort {
+      padding: 11px 18px;
+      font-family: inherit;
+      font-size: 0.76rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 1px solid var(--hairline);
+      background: #faf9f6;
+      cursor: pointer;
+    }
+
+    /* Architectural Product Cards with Butter Animations */
+    .exhibition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .haute-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .haute-card:hover {
+      border-color: var(--gold-hermes);
+      box-shadow: 0 20px 45px rgba(10, 10, 12, 0.09);
+      transform: translateY(-6px);
+    }
+
+    .haute-card-media {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      background: #f7f5f2;
+      overflow: hidden;
+    }
+
+    .haute-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
+    }
+
+    .haute-card:hover .haute-card-img {
+      transform: scale(1.07);
+    }
+
+    .haute-tag-pill {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(10, 10, 12, 0.88);
+      color: var(--gold-light);
+      font-size: 0.62rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      backdrop-filter: blur(6px);
+      font-weight: 600;
+    }
+
+    .salon-exclusive-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--noir);
+      font-size: 0.62rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .haute-quick-view {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--noir);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: 1px solid var(--hairline);
+    }
+
+    .haute-card:hover .haute-quick-view {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .haute-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .haute-category-line {
+      font-size: 0.68rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-hermes);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .haute-piece-title {
+      font-family: var(--font-serif);
+      font-size: 1.28rem;
+      letter-spacing: 1px;
+      color: var(--noir);
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .haute-pricing-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .haute-price {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--noir);
+      letter-spacing: 0.5px;
+    }
+
+    .haute-mrp {
+      font-size: 0.88rem;
+      color: #999;
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+
+    .haute-sizes-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .size-token {
+      font-size: 0.68rem;
+      padding: 3px 8px;
+      border: 1px solid var(--hairline);
+      background: #faf8f5;
+      color: var(--noir);
+      letter-spacing: 1px;
+    }
+
+    .haute-card-actions {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-reserve-wa {
+      background: var(--noir);
+      color: #ffffff;
+      font-size: 0.72rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 13px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid var(--noir);
+    }
+
+    .btn-reserve-wa:hover {
+      background: #25d366;
+      border-color: #25d366;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+    }
+
+    /* Card Curator Toolbar */
+    .card-curator-row {
+      display: none;
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 10px;
+      border-top: 1px dashed #d5bfc6;
+    }
+
+    .btn-curator-del {
+      flex: 1;
+      background: #fff0f2;
+      color: #c62828;
+      border: 1px solid #ffcdd2;
+      font-size: 0.68rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-curator-del:hover {
+      background: #c62828;
+      color: #fff;
+    }
+
+    .btn-curator-edit {
+      flex: 1;
+      background: #f0f4ff;
+      color: #1565c0;
+      border: 1px solid #bbdefb;
+      font-size: 0.68rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-curator-edit:hover {
+      background: #1565c0;
+      color: #fff;
+    }
+
+    /* Savoir-Faire / Craftsmanship Section */
+    .savoir-faire-section {
+      background: var(--noir);
+      color: #fff;
+      padding: 130px 40px;
+    }
+
+    .savoir-container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .savoir-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      margin-top: 70px;
+    }
+
+    .pillar-card {
+      border-top: 1px solid rgba(197, 160, 89, 0.35);
+      padding-top: 36px;
+      transition: transform 0.4s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .pillar-num {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--gold-hermes);
+      margin-bottom: 14px;
+    }
+
+    .pillar-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .pillar-text {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #a4a4b2;
+      font-weight: 300;
+    }
+
+    /* Showroom Atelier & Salon Experience */
+    .salon-section {
+      padding: 120px 40px;
+      background: var(--silk-bg);
+    }
+
+    .salon-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .salon-info-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .salon-detail-table {
+      border-top: 1px solid var(--hairline);
+      margin: 36px 0;
+    }
+
+    .salon-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--hairline);
+      font-size: 0.88rem;
+    }
+
+    .salon-label {
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--noir);
+      font-size: 0.74rem;
+    }
+
+    .salon-val {
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .salon-map-frame {
+      height: 440px;
+      border: 1px solid var(--hairline-gold);
+      background: #000;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+      transition: transform 0.4s ease;
+    }
+    .salon-map-frame:hover {
+      transform: scale(1.01);
+    }
+
+    .salon-map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.2) contrast(1.05);
+    }
+
+    /* Discerning Patrons Reviews */
+    .patrons-section {
+      background: #ffffff;
+      padding: 110px 40px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .patrons-grid {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .patron-quote-box {
+      padding: 44px 34px;
+      border: 1px solid var(--hairline);
+      background: #faf9f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .patron-quote-box:hover {
+      border-color: var(--gold-hermes);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.06);
+    }
+
+    .patron-quote-box::before {
+      content: '“';
+      font-family: var(--font-body-serif);
+      font-size: 4rem;
+      color: var(--gold-light);
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .quote-content {
+      font-family: var(--font-body-serif);
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--noir);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 24px;
+    }
+
+    .quote-signer {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-hermes);
+    }
+
+    .quote-location {
+      font-size: 0.68rem;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+    }
+
+    /* Haute Footer */
+    .haute-footer {
+      background: var(--noir);
+      color: #fff;
+      padding: 100px 40px 40px;
+      border-top: 1px solid rgba(197, 160, 89, 0.25);
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 60px;
+      padding-bottom: 70px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .footer-desc {
+      font-size: 0.86rem;
+      color: #9292a0;
+      line-height: 1.7;
+      max-width: 440px;
+      margin-bottom: 24px;
+      font-weight: 300;
+    }
+
+    .footer-col-head {
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    .footer-nav-list a {
+      color: #b0b0bc;
+      transition: color 0.25s;
+    }
+
+    .footer-nav-list a:hover {
+      color: var(--gold-hermes);
+    }
+
+    .footer-colophon {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666672;
+    }
+
+    /* Global Modal System with Silky Animations */
+    .haute-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .haute-modal.show {
+      opacity: 1;
+    }
+
+    .modal-dialog {
+      background: #ffffff;
+      max-width: 620px;
+      width: 100%;
+      padding: 44px;
+      position: relative;
+      border: 1px solid var(--hairline-gold);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+      max-height: 90vh;
+      overflow-y: auto;
+      transform: scale(0.96) translateY(12px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .haute-modal.show .modal-dialog {
+      transform: scale(1.0) translateY(0);
+    }
+
+    .modal-dismiss {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      background: transparent;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--noir);
+      transition: transform 0.2s;
+    }
+    .modal-dismiss:hover {
+      transform: scale(1.15);
+    }
+
+    .modal-hdr-title {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--noir);
+      margin-bottom: 8px;
+    }
+
+    .modal-hdr-sub {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .haute-input-wrap {
+      margin-bottom: 22px;
+    }
+
+    .haute-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--noir);
+    }
+
+    .haute-field {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--hairline);
+      background: #faf8f5;
+      font-family: inherit;
+      font-size: 0.88rem;
+      transition: all 0.25s;
+    }
+
+    .haute-field:focus {
+      border-color: var(--noir);
+      background: #fff;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(10,10,12,0.06);
+    }
+
+    .haute-dropzone {
+      border: 1px dashed var(--gold-hermes);
+      padding: 30px 20px;
+      text-align: center;
+      background: #faf9f6;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .haute-dropzone:hover {
+      background: #fff;
+      border-color: var(--noir);
+      transform: translateY(-2px);
+    }
+
+    .toast-pill {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--noir);
+      color: var(--gold-light);
+      padding: 14px 28px;
+      font-size: 0.74rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      z-index: 4000;
+      display: none;
+      border: 1px solid var(--gold-hermes);
+      animation: fadeInScale 0.35s ease;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1100px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+      }
+      .hero-main-title {
+        font-size: 3rem;
+      }
+      .haute-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .savoir-pillars {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .salon-container {
+        grid-template-columns: 1fr;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .maison-ticker {
+        font-size: 0.6rem;
+        letter-spacing: 1.5px;
+        padding: 8px 16px;
+      }
+      .nav-bar {
+        display: none;
+      }
+      .brand-title {
+        font-size: 1.35rem;
+        letter-spacing: 5px;
+      }
+      .hero-main-title {
+        font-size: 2.2rem;
+      }
+      .hero-main-title span {
+        font-size: 1.8rem;
+      }
+      .haute-category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .patrons-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .footer-colophon {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Maison Ticker -->
+  <div class="maison-ticker">
+    <div>
+      MAISON LADIES ZONE • PRIVATE SALON TRIALS • BORING ROAD, PATNA
+    </div>
+    <div>
+      CONCIERGE: <a href="tel:+918986047584">+91 89860 47584</a> | <a href="https://wa.me/918986047584">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Curator Admin Bar (Visible when logged in) -->
+  <div id="adminBanner">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <span class="admin-pill">Curator Active</span>
+      <span>ATELIER INVENTORY MANAGER</span>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <button class="btn-admin btn-admin-add" onclick="openAddProductModal()">➕ Add Haute Piece</button>
+      <button class="btn-admin" onclick="exportCatalogBackup()">💾 Backup JSON</button>
+      <button class="btn-admin" onclick="resetDefaultCatalog()">🔄 Restore Default</button>
+      <button class="btn-admin" style="border-color:#ff8888; color:#ff8888;" onclick="adminLogout()">Exit Curator Mode</button>
+    </div>
+  </div>
+
+  <!-- Haute Navigation Header -->
+  <header class="haute-header">
+    <div class="header-inner">
+      <div class="header-top-row">
+        <div class="header-location-tag">
+          SHOWROOM • S.K. PURI, PATNA
+        </div>
+
+        <div class="brand-mark">
+          <a href="#">
+            <div class="brand-title">LADIES ZONE</div>
+            <div class="brand-subtitle">EXCLUSIVE SHOWROOM • PATNA</div>
+          </a>
+        </div>
+
+        <div class="header-actions">
+          <a href="#showroom" class="btn-concierge-pill">
+            SALON TRIAL
+          </a>
+          <button id="staffLoginBtn" class="btn-staff-pill" onclick="openLoginModal()">
+            STAFF ACCESS
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-bar">
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('all')">ALL COLLECTIONS</a>
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('heels')">SCULPTED HEELS</a>
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('bridal')">BRIDAL COUTURE</a>
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('mojari')">ROYAL JUTTI</a>
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('suits')">ETHNIC SUITS</a>
+        <a href="#catalog" class="nav-item" onclick="filterByCategory('western')">CONTEMPORARY DRESSES</a>
+        <a href="#showroom" class="nav-item">THE SALON</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cinematic Campaign Hero with Ken Burns Zoom -->
+  <section class="campaign-hero">
+    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1800&q=85" alt="Ladies Zone Haute Collection" class="hero-bg-visual" />
+    <div class="hero-gradient-scrim"></div>
+
+    <div class="hero-container">
+      <div>
+        <span class="hero-badge-season">COLLECTION 2026 • BORING ROAD ATELIER</span>
+        <h1 class="hero-main-title">
+          THE ART OF <span>Distinction.</span>
+        </h1>
+        <p class="hero-lead-text">
+          Where global luxury aesthetics converge with ergonomic craftsmanship. Explore sculpted stilettos, imperial bridal footwear, artisanal juttis, and bespoke ethnic ensembles tailored for unforgettable moments.
+        </p>
+
+        <div class="hero-btn-row">
+          <a href="#catalog" class="btn-haute-gold">
+            EXPLORE THE EXHIBITION →
+          </a>
+          <a href="#showroom" class="btn-haute-outline">
+            VISIT BORING ROAD SALON
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-salon-card reveal">
+          <div class="salon-card-title">Private Salon Trial</div>
+          <p class="salon-card-desc">
+            We operate on an exclusive showroom trial model. Inspect our pieces online, reserve via WhatsApp concierge, and experience personalized comfort fittings in our Boring Road showroom.
+          </p>
+          <ul class="salon-perks">
+            <li>Zero online cart barriers — pure luxury trial</li>
+            <li>Guaranteed bite-free, memory-cloud soles</li>
+            <li>Personalized size holding & styling concierge</li>
+            <li>Located in Boring Road, S.K. Puri, Patna</li>
+          </ul>
+          <a href="https://wa.me/918986047584?text=Hello%20Ladies%20Zone,%20I%20would%20like%20to%20book%20a%20private%20trial%20at%20your%20Boring%20Road%20showroom." target="_blank" rel="noopener" class="btn-haute-gold" style="width:100%; justify-content:center;">
+            RESERVE WITH CONCIERGE 💬
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Categories Architecture (Hermès Lookbook Style) -->
+  <section class="section-haute reveal">
+    <div class="section-editorial-header">
+      <span class="editorial-label">CURATED DISCIPLINES</span>
+      <h2 class="editorial-heading">The Five Pillars of Style</h2>
+      <p class="editorial-sub">Each piece represents an intersection of architectural precision, heirloom embroidery, and pure comfort.</p>
+    </div>
+
+    <div class="haute-category-grid">
+      <!-- 1 -->
+      <div class="haute-cat-card" onclick="filterByCategory('heels')">
+        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=85" alt="Sculpted Heels" class="haute-cat-img" />
+        <div class="haute-cat-overlay">
+          <span class="cat-index">01 / HEELS & SANDALS</span>
+          <h3 class="cat-name">Sculpted Heels</h3>
+          <span class="cat-sub-action">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="haute-cat-card" onclick="filterByCategory('bridal')">
+        <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=800&q=85" alt="Bridal Footwear" class="haute-cat-img" />
+        <div class="haute-cat-overlay">
+          <span class="cat-index">02 / BRIDAL COUTURE</span>
+          <h3 class="cat-name">Imperial Bridal</h3>
+          <span class="cat-sub-action">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="haute-cat-card" onclick="filterByCategory('mojari')">
+        <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=800&q=85" alt="Mojari & Jutti" class="haute-cat-img" />
+        <div class="haute-cat-overlay">
+          <span class="cat-index">03 / ARTISANAL JUTTI</span>
+          <h3 class="cat-name">Royal Mojari</h3>
+          <span class="cat-sub-action">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="haute-cat-card" onclick="filterByCategory('suits')">
+        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85" alt="Suits & Ethnic Wear" class="haute-cat-img" />
+        <div class="haute-cat-overlay">
+          <span class="cat-index">04 / ETHNIC SUITS</span>
+          <h3 class="cat-name">Haute Anarkalis</h3>
+          <span class="cat-sub-action">Explore Collection →</span>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="haute-cat-card" onclick="filterByCategory('western')">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85" alt="Western Dresses" class="haute-cat-img" />
+        <div class="haute-cat-overlay">
+          <span class="cat-index">05 / CONTEMPORARY</span>
+          <h3 class="cat-name">Western Gowns</h3>
+          <span class="cat-sub-action">Explore Collection →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Exhibition / Atelier Lookbook Grid -->
+  <section id="catalog" class="catalog-section">
+    <div class="catalog-container">
+      <div class="catalog-controls-bar">
+        <div class="category-filter-pills">
+          <button class="filter-tab active" onclick="filterByCategory('all')">ALL PIECES</button>
+          <button class="filter-tab" onclick="filterByCategory('heels')">SCULPTED HEELS</button>
+          <button class="filter-tab" onclick="filterByCategory('bridal')">BRIDAL COUTURE</button>
+          <button class="filter-tab" onclick="filterByCategory('mojari')">ROYAL JUTTI</button>
+          <button class="filter-tab" onclick="filterByCategory('suits')">ETHNIC SUITS</button>
+          <button class="filter-tab" onclick="filterByCategory('western')">WESTERN GOWNS</button>
+        </div>
+
+        <div class="search-sort-group">
+          <input type="text" id="searchInput" class="haute-search" placeholder="SEARCH ARCHIVE..." oninput="handleSearch()" />
+          <select id="sortSelect" class="haute-sort" onchange="handleSort()">
+            <option value="featured">CURATION: FEATURED</option>
+            <option value="price-asc">PRICE: LOW TO HIGH</option>
+            <option value="price-desc">PRICE: HIGH TO LOW</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Exhibition Grid -->
+      <div id="productsGrid" class="exhibition-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Savoir-Faire / Craftsmanship Pillars -->
+  <section class="savoir-faire-section reveal">
+    <div class="savoir-container">
+      <span class="editorial-label" style="color:var(--gold-light);">SAVOIR-FAIRE & COMFORT</span>
+      <h2 class="editorial-heading" style="color:#ffffff;">The Standard of Excellence</h2>
+      <p style="font-family: var(--font-body-serif); font-size:1.3rem; font-style:italic; color:#9fa4b2; max-width:700px;">
+        "Luxury without ease is never luxury." — Every piece at Ladies Zone is scrutinized for anatomical balance and pure distinction.
+      </p>
+
+      <div class="savoir-pillars">
+        <div class="pillar-card">
+          <div class="pillar-num">01</div>
+          <h3 class="pillar-title">Architectural Balance</h3>
+          <p class="pillar-text">
+            Our stilettos and wedges feature calibrated weight distribution and dual-density memory arch inserts, allowing brides and executives to stand with uninterrupted grace.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">02</div>
+          <h3 class="pillar-title">Artisanal Needlework</h3>
+          <p class="pillar-text">
+            From the royal zardozi of Rajasthan to delicate Punjabi tilla work, our craftspeople preserve centuries of needlecraft on supple leather and raw silk fabrics.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">03</div>
+          <h3 class="pillar-title">Smart Elegance</h3>
+          <p class="pillar-text">
+            We believe timeless elegance belongs in everyday life. Enjoy boutique exclusivity without unnecessary extravagance — premium looks at accessible showroom prices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showroom Atelier & Salon Section -->
+  <section id="showroom" class="salon-section reveal">
+    <div class="salon-container">
+      <div class="salon-info-column">
+        <span class="editorial-label">THE SALON DESTINATION</span>
+        <h2 class="editorial-heading">Visit Boring Road, Patna</h2>
+        <p class="editorial-sub">Immerse yourself in our private showroom salon for personal styling and size fittings.</p>
+
+        <div class="salon-detail-table">
+          <div class="salon-row">
+            <span class="salon-label">Boutique Address</span>
+            <span class="salon-val">Ladies Zone Showroom, Boring Road, S.K. Puri, Patna, Bihar — 800001</span>
+          </div>
+
+          <div class="salon-row">
+            <span class="salon-label">Hours of Reception</span>
+            <span class="salon-val">Monday – Sunday • 10:30 AM to 9:00 PM (All 7 Days)</span>
+          </div>
+
+          <div class="salon-row">
+            <span class="salon-label">Direct Concierge</span>
+            <span class="salon-val">
+              <a href="tel:+918986047584" style="color:var(--terracotta); font-weight:700;">+91 89860 47584</a> / 
+              <a href="tel:+919835699398" style="color:var(--terracotta); font-weight:700;">+91 98356 99398</a>
+            </span>
+          </div>
+
+          <div class="salon-row">
+            <span class="salon-label">Trial Protocol</span>
+            <span class="salon-val">Walk-in trials welcome • WhatsApp reserve recommended</span>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="https://maps.google.com/?q=Ladies+Zone+Boring+Road+Patna" target="_blank" rel="noopener" class="btn-haute-gold">
+            GET DIRECTIONS (GOOGLE MAPS) 📍
+          </a>
+          <a href="https://wa.me/918986047584?text=Hello%20Ladies%20Zone,%20I%20am%20planning%20to%20visit%20your%20Boring%20Road%20showroom%20today." target="_blank" rel="noopener" class="btn-concierge-pill" style="padding:15px 28px;">
+            CHAT WITH CONCIERGE 💬
+          </a>
+        </div>
+      </div>
+
+      <div class="salon-map-frame">
+        <iframe 
+          title="Ladies Zone Patna Location" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14390.871168496417!2d85.1105908!3d25.6142646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed583a216b3f7f%3A0xb36b3ea4e17ef748!2sBoring%20Rd%2C%20Patna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discerning Patrons -->
+  <section class="patrons-section reveal">
+    <div class="section-editorial-header">
+      <span class="editorial-label">TESTIMONIALS</span>
+      <h2 class="editorial-heading">Words from Our Patrons</h2>
+    </div>
+
+    <div class="patrons-grid">
+      <div class="patron-quote-box">
+        <p class="quote-content">
+          "The finish and poise of their bridal heels rival global luxury houses. Stood and danced throughout my reception ceremony in total comfort. Truly an exceptional boutique in Patna."
+        </p>
+        <div>
+          <div class="quote-signer">Aishwarya Sen</div>
+          <div class="quote-location">Boring Road, Patna</div>
+        </div>
+      </div>
+
+      <div class="patron-quote-box">
+        <p class="quote-content">
+          "Their Banarasi and Chanderi suits drape with an undeniable richness. The in-store trial experience is courteous, private, and thoroughly elevated."
+        </p>
+        <div>
+          <div class="quote-signer">Meenakshi Kashyap</div>
+          <div class="quote-location">S.K. Puri, Patna</div>
+        </div>
+      </div>
+
+      <div class="patron-quote-box">
+        <p class="quote-content">
+          "The WhatsApp concierge service is brilliantly seamless. They had my size and pieces reserved when I arrived at the counter. Unmatched customer respect."
+        </p>
+        <div>
+          <div class="quote-signer">Shalini Roy</div>
+          <div class="quote-location">Patliputra, Patna</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Haute Footer -->
+  <footer class="haute-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">LADIES ZONE</div>
+        <p class="footer-desc">
+          Maison Ladies Zone Exclusive Showroom. Patna's landmark women's fashion house celebrating refined footwear, bridal couture, regal juttis, and contemporary silhouettes.
+        </p>
+        <div style="font-size:0.75rem; letter-spacing:2px; color:var(--gold-light); text-transform:uppercase;">
+          BORING ROAD, S.K. PURI, PATNA • BIHAR
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-head">DISCIPLINES</div>
+        <ul class="footer-nav-list">
+          <li><a href="#catalog" onclick="filterByCategory('heels')">Sculpted Heels & Sandals</a></li>
+          <li><a href="#catalog" onclick="filterByCategory('bridal')">Imperial Bridal Footwear</a></li>
+          <li><a href="#catalog" onclick="filterByCategory('mojari')">Royal Mojari & Jutti</a></li>
+          <li><a href="#catalog" onclick="filterByCategory('suits')">Suits & Ethnic Wear</a></li>
+          <li><a href="#catalog" onclick="filterByCategory('western')">Contemporary Gowns</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-head">THE SALON</div>
+        <ul class="footer-nav-list">
+          <li><a href="#showroom">Showroom Trial Protocol</a></li>
+          <li><a href="#showroom">WhatsApp Concierge</a></li>
+          <li><a href="#showroom">Directions & Parking</a></li>
+          <li><a href="#showroom">Private Appointments</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-head">CONCIERGE RECEPTION</div>
+        <p style="font-size:0.82rem; color:#a2a2b0; line-height:1.7; margin-bottom:12px;">
+          Monday – Sunday<br />
+          <strong>10:30 AM – 9:00 PM</strong>
+        </p>
+        <p style="font-size:0.82rem; color:#a2a2b0;">
+          Direct WhatsApp:<br />
+          <strong style="color:var(--gold-light); letter-spacing:1px;">+91 89860 47584</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-colophon">
+      <div>&copy; 2026 LADIES ZONE EXCLUSIVE SHOWROOM. ALL RIGHTS RESERVED.</div>
+      <div>OPERATED BY LADIES ZONE, PATNA, BIHAR, INDIA.</div>
+    </div>
+  </footer>
+
+  <!-- Modal 1: Staff Admin Access -->
+  <div id="loginModal" class="haute-modal">
+    <div class="modal-dialog">
+      <button class="modal-dismiss" onclick="closeLoginModal()">✕</button>
+      <h3 class="modal-hdr-title">Curator Portal</h3>
+      <p class="modal-hdr-sub">Authorized showroom personnel only. Access inventory and photo curation.</p>
+
+      <form onsubmit="handleLoginSubmit(event)">
+        <div class="haute-input-wrap">
+          <label class="haute-label">Staff ID or Phone</label>
+          <input type="text" id="loginUsername" class="haute-field" placeholder="admin or 8986047584 or ladieszone" required />
+        </div>
+
+        <div class="haute-input-wrap">
+          <label class="haute-label">Secure Password</label>
+          <input type="password" id="loginPin" class="haute-field" placeholder="Enter Secure Password" required />
+        </div>
+
+        <div id="loginError" style="color:#d32f2f; font-size:0.75rem; letter-spacing:1px; margin-bottom:14px; display:none;">
+          INVALID IDENTIFICATION OR PASSWORD.
+        </div>
+
+        <button type="submit" class="btn-haute-gold" style="width:100%; justify-content:center;">
+          ENTER CURATOR MODE →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Add New Product / Upload Photo -->
+  <div id="addProductModal" class="haute-modal">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <button class="modal-dismiss" onclick="closeAddProductModal()">✕</button>
+      <h3 class="modal-hdr-title">Add Haute Piece</h3>
+      <p class="modal-hdr-sub">Upload high-resolution photography, calibrate pricing, and add to the exhibition.</p>
+
+      <form onsubmit="handleAddProductSubmit(event)">
+        <div class="haute-input-wrap">
+          <label class="haute-label">Piece Photography *</label>
+          <div class="haute-dropzone" onclick="document.getElementById('fileUploadInput').click()">
+            <div style="font-size:2rem; margin-bottom:8px;">📷</div>
+            <div style="font-size:0.78rem; letter-spacing:2px; font-weight:700; text-transform:uppercase;">TAP TO SELECT PHOTO FROM DEVICE</div>
+            <div style="font-size:0.7rem; color:#888; margin-top:4px;">Auto-compressed to archival grade</div>
+          </div>
+          <input type="file" id="fileUploadInput" accept="image/*" style="display:none;" onchange="handleImageFileSelect(event)" />
+          <div id="previewImgBox" style="display:none; width:100%; height:220px; overflow:hidden; border:1px solid var(--hairline); margin-bottom:16px;">
+            <img id="previewImgElement" src="" alt="Preview" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+        </div>
+
+        <div class="haute-input-wrap">
+          <label class="haute-label">Piece Title *</label>
+          <input type="text" id="newProdName" class="haute-field" placeholder="e.g. Sovereign Stiletto in Metallic Gold" required />
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="haute-input-wrap">
+            <label class="haute-label">Discipline / Category *</label>
+            <select id="newProdCat" class="haute-field" required>
+              <option value="heels">Sculpted Heels & Sandals</option>
+              <option value="bridal">Imperial Bridal Footwear</option>
+              <option value="mojari">Royal Mojari & Jutti</option>
+              <option value="suits">Suits & Ethnic Wear</option>
+              <option value="western">Contemporary Dresses</option>
+            </select>
+          </div>
+
+          <div class="haute-input-wrap">
+            <label class="haute-label">Curation Label</label>
+            <select id="newProdTag" class="haute-field">
+              <option value="Maison Edition">Maison Edition</option>
+              <option value="Atelier Exclusive">Atelier Exclusive</option>
+              <option value="Couture Bridal">Couture Bridal</option>
+              <option value="Heritage Craft">Heritage Craft</option>
+              <option value="Iconic Silhouette">Iconic Silhouette</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="haute-input-wrap">
+            <label class="haute-label">Showroom Price (₹) *</label>
+            <input type="number" id="newProdPrice" class="haute-field" placeholder="2199" required />
+          </div>
+
+          <div class="haute-input-wrap">
+            <label class="haute-label">MRP (₹) (Optional strikethrough)</label>
+            <input type="number" id="newProdMrp" class="haute-field" placeholder="3499" />
+          </div>
+        </div>
+
+        <div class="haute-input-wrap">
+          <label class="haute-label">Available Sizes (Comma separated)</label>
+          <input type="text" id="newProdSizes" class="haute-field" placeholder="36, 37, 38, 39, 40 or M, L, XL" />
+        </div>
+
+        <div class="haute-input-wrap">
+          <label class="haute-label">Artisan Notes / Description</label>
+          <textarea id="newProdDesc" class="haute-field" rows="2" placeholder="Fabric, craft details, heel balance, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-haute-gold" style="width:100%; justify-content:center; padding:15px;">
+          PUBLISH TO ARCHIVE →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Quick View with Silky Scale -->
+  <div id="quickViewModal" class="haute-modal">
+    <div class="modal-dialog" style="max-width: 680px;">
+      <button class="modal-dismiss" onclick="closeQuickViewModal()">✕</button>
+      <div id="quickViewContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Pill -->
+  <div id="toastPill" class="toast-pill">
+    <span id="toastText">ACTION COMPLETED</span>
+  </div>
+
+  <!-- Master JavaScript Application -->
+  <script>
+    const DEFAULT_CATALOG = [
+  {
+    "id": "LZ-HAUTE-01",
+    "name": "The Aurelia Sculpted Stiletto",
+    "category": "heels",
+    "categoryName": "Heels & Sandals",
+    "price": 2199,
+    "mrp": 3499,
+    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=85",
+    "tag": "Maison Edition",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Architectural 3.5-inch stiletto in champagne metallic finish. Features triple-density ergonomic arch support for effortless evening grace."
+  },
+  {
+    "id": "LZ-HAUTE-02",
+    "name": "Sovereign Strappy Kitten Heel",
+    "category": "heels",
+    "categoryName": "Heels & Sandals",
+    "price": 1699,
+    "mrp": 2599,
+    "image": "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?auto=format&fit=crop&w=900&q=85",
+    "tag": "Iconic Silhouette",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Minimalist criss-cross straps in supple nude kidskin finish. The essential 2-inch heel crafted for day-to-night versatility."
+  },
+  {
+    "id": "LZ-HAUTE-03",
+    "name": "Lumi\u00e8re Pearl-Encrusted Block Sandal",
+    "category": "heels",
+    "categoryName": "Heels & Sandals",
+    "price": 1899,
+    "mrp": 2899,
+    "image": "https://images.unsplash.com/photo-1596704017254-9b121068fb31?auto=format&fit=crop&w=900&q=85",
+    "tag": "Atelier Exclusive",
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Lustrous micro-pearls hand-stitched along champagne satin straps. Grounded by a structural 2.5-inch block heel."
+  },
+  {
+    "id": "LZ-BR-01",
+    "name": "Imperial Zardozi Crimson Bridal Heel",
+    "category": "bridal",
+    "categoryName": "Bridal Footwear",
+    "price": 3499,
+    "mrp": 5499,
+    "image": "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=900&q=85",
+    "tag": "Couture Bridal",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Pure silk velvet upper hand-embroidered with antique gold dabka and gota patti. Engineered with cloud-comfort insole for wedding ceremonies."
+  },
+  {
+    "id": "LZ-BR-02",
+    "name": "Nocturne Golden Shimmer Bridal Wedge",
+    "category": "bridal",
+    "categoryName": "Bridal Footwear",
+    "price": 2899,
+    "mrp": 4299,
+    "image": "https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&w=900&q=85",
+    "tag": "Sangeet Favorite",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Lightweight 3-inch wedge wrapped in hand-applied metallic foils and Austrian crystal accents. Designed for dancing without fatigue."
+  },
+  {
+    "id": "LZ-BR-03",
+    "name": "Elysian Pearl Wedding Half-Shoe Mules",
+    "category": "bridal",
+    "categoryName": "Bridal Footwear",
+    "price": 2599,
+    "mrp": 3799,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=85",
+    "tag": "Atelier Piece",
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Pointed-toe backless silhouette adorned with micro-beads and delicate threadwork. An effortless statement for pre-wedding soirees."
+  },
+  {
+    "id": "LZ-MJ-01",
+    "name": "The Royal Mirror Velvet Jutti",
+    "category": "mojari",
+    "categoryName": "Ethnic Mojari & Jutti",
+    "price": 1399,
+    "mrp": 2199,
+    "image": "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=900&q=85",
+    "tag": "Artisanal",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Handcrafted genuine leather sole with deep garnet velvet upper, framed by miniature mirror cuts and fine resham embroidery. Guaranteed bite-free."
+  },
+  {
+    "id": "LZ-MJ-02",
+    "name": "Ivory Botanical Threadwork Mojari",
+    "category": "mojari",
+    "categoryName": "Ethnic Mojari & Jutti",
+    "price": 1299,
+    "mrp": 1999,
+    "image": "https://images.unsplash.com/photo-1582533561751-ef6f6ab93a2e?auto=format&fit=crop&w=900&q=85",
+    "tag": "Heritage Craft",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "description": "Hand-stitched pastel floral needlework on raw silk canvas. Triple-padded sole provides whisper-soft comfort."
+  },
+  {
+    "id": "LZ-MJ-03",
+    "name": "Imperial Gold Tilla Zari Jutti",
+    "category": "mojari",
+    "categoryName": "Ethnic Mojari & Jutti",
+    "price": 1499,
+    "mrp": 2399,
+    "image": "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=900&q=85",
+    "tag": "Signature Gold",
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "description": "Dense metallic tilla embroidery crafted by master artisans in traditional curved silhouette. Complements sarees, lehengas, and shararas."
+  },
+  {
+    "id": "LZ-ST-01",
+    "name": "Peach Blossom Organza Anarkali Set",
+    "category": "suits",
+    "categoryName": "Suits & Ethnic Wear",
+    "price": 4199,
+    "mrp": 6499,
+    "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85",
+    "tag": "Couture Set",
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "description": "Three-piece ensemble in gossamer organza with hand-cut gota trims, matched with silk-blend trousers and an airy floral organza dupatta."
+  },
+  {
+    "id": "LZ-ST-02",
+    "name": "Emerald Banarasi Woven Suit Ensemble",
+    "category": "suits",
+    "categoryName": "Suits & Ethnic Wear",
+    "price": 3699,
+    "mrp": 5599,
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=85",
+    "tag": "Festive Woven",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Heritage Banarasi brocade weave in jewel-tone emerald green with antique gold zari bootis, tailored pants, and contrasting dual-tone dupatta."
+  },
+  {
+    "id": "LZ-ST-03",
+    "name": "Chanderi Silk Hand-Embroidered Kurta Set",
+    "category": "suits",
+    "categoryName": "Suits & Ethnic Wear",
+    "price": 3199,
+    "mrp": 4799,
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85",
+    "tag": "Pure Elegance",
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Bespoke Chanderi silhouette featuring intricate threadwork around the neckline, accompanied by cotton silk culottes and scalloped dupatta."
+  },
+  {
+    "id": "LZ-WD-01",
+    "name": "Champagne Silk-Satin Wrap Gown",
+    "category": "western",
+    "categoryName": "Western Dresses",
+    "price": 2299,
+    "mrp": 3599,
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85",
+    "tag": "Evening Atelier",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "description": "Fluid heavy silk-satin drape with tailored plunge neckline and adjustable waist ribbon. Cut on the bias for sculpting movement."
+  },
+  {
+    "id": "LZ-WD-02",
+    "name": "Botanical Pleated Chiffon Tiered Dress",
+    "category": "western",
+    "categoryName": "Western Dresses",
+    "price": 1999,
+    "mrp": 2999,
+    "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=900&q=85",
+    "tag": "Contemporary",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "description": "Airy botanical printed georgette featuring knife pleats and delicate bishop sleeves. Fully lined with breathable mulberry-soft lining."
+  },
+  {
+    "id": "LZ-WD-03",
+    "name": "Obsidian Velvet Architectural Cocktail Dress",
+    "category": "western",
+    "categoryName": "Western Dresses",
+    "price": 2699,
+    "mrp": 4199,
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=85",
+    "tag": "Maison Noir",
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "description": "Structured plush stretch velvet midi featuring an asymmetric neckline and side slit. A sculptural statement for gala evenings."
+  }
+];
+    const PRIMARY_WA = "918986047584";
+    const SECONDARY_PHONE = "+91 98356 99398";
+
+    let products = [];
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'featured';
+    let isAdmin = false;
+    let uploadedImageBase64 = '';
+
+    function initApp() {
+      const savedProducts = localStorage.getItem('lz_catalog_products_v3');
+      if (savedProducts) {
+        try {
+          products = JSON.parse(savedProducts);
+        } catch(e) {
+          products = [...DEFAULT_CATALOG];
+        }
+      } else {
+        products = [...DEFAULT_CATALOG];
+        saveCatalog();
+      }
+
+      if (sessionStorage.getItem('lz_admin_logged_in') === 'true') {
+        isAdmin = true;
+      }
+
+      updateAdminUI();
+      renderProducts();
+      initScrollObserver();
+    }
+
+    function saveCatalog() {
+      try {
+        localStorage.setItem('lz_catalog_products_v3', JSON.stringify(products));
+      } catch(e) {
+        console.warn("Storage quota exceeded", e);
+        showToast("STORAGE QUOTA: PLEASE BACKUP");
+      }
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toastPill');
+      const txt = document.getElementById('toastText');
+      txt.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => {
+        t.style.display = 'none';
+      }, 3500);
+    }
+
+    // IntersectionObserver for Butter-Smooth Scroll Animations
+    function initScrollObserver() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      reveals.forEach(r => observer.observe(r));
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+
+      let filtered = products.filter(p => {
+        const matchesCategory = (currentCategory === 'all' || p.category === currentCategory);
+        const matchesSearch = !searchQuery || 
+          p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+          (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (p.tag && p.tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchesCategory && matchesSearch;
+      });
+
+      if (sortMode === 'price-asc') {
+        filtered.sort((a, b) => Number(a.price) - Number(b.price));
+      } else if (sortMode === 'price-desc') {
+        filtered.sort((a, b) => Number(b.price) - Number(a.price));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 80px 20px;">
+            <div style="font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 2px; color: var(--noir); margin-bottom: 10px;">ARCHIVE EMPTY</div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">No pieces matching your query in this collection.</p>
+            <button class="btn-haute-gold" onclick="filterByCategory('all')">VIEW ENTIRE ARCHIVE</button>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach((p, idx) => {
+        const card = document.createElement('div');
+        card.className = 'haute-card reveal';
+        card.style.transitionDelay = `${(idx % 3) * 0.1}s`;
+        card.dataset.id = p.id;
+
+        const sizeSpans = (p.sizes && p.sizes.length) 
+          ? p.sizes.map(s => `<span class="size-token">${s}</span>`).join('') 
+          : '<span class="size-token">Standard</span>';
+
+        const waText = encodeURIComponent(
+          `Hello Ladies Zone Concierge. I wish to inspect "${p.name}" (Reference: ${p.id}, Price: ₹${p.price}) at your Boring Road salon. Please reserve my size for a private trial.`
+        );
+        const waLink = `https://wa.me/${PRIMARY_WA}?text=${waText}`;
+
+        card.innerHTML = `
+          <div class="haute-card-media">
+            <img src="${p.image}" alt="${p.name}" class="haute-card-img" loading="lazy" />
+            <span class="haute-tag-pill">${p.tag || 'Maison Edition'}</span>
+            <span class="salon-exclusive-badge">SALON TRIAL</span>
+            <button class="haute-quick-view" onclick="openQuickView('${p.id}')">VIEW PIECE 👁️</button>
+          </div>
+
+          <div class="haute-card-body">
+            <div class="haute-category-line">${p.categoryName || p.category}</div>
+            <h4 class="haute-piece-title">${p.name}</h4>
+
+            <div class="haute-pricing-row">
+              <span class="haute-price">₹ ${Number(p.price).toLocaleString('en-IN')}</span>
+              ${p.mrp && p.mrp > p.price ? `<span class="haute-mrp">₹ ${Number(p.mrp).toLocaleString('en-IN')}</span>` : ''}
+            </div>
+
+            <div class="haute-sizes-row">
+              <span style="font-size:0.68rem; letter-spacing:1px; color:#888; margin-right:4px;">SIZES:</span>
+              ${sizeSpans}
+            </div>
+
+            <div class="haute-card-actions">
+              <a href="${waLink}" target="_blank" rel="noopener" class="btn-reserve-wa">
+                <span>RESERVE VIA CONCIERGE 💬</span>
+              </a>
+
+              <div class="card-curator-row" style="display: ${isAdmin ? 'flex' : 'none'};">
+                <button class="btn-curator-edit" onclick="editProductPrice('${p.id}')">✏️ EDIT PRICE</button>
+                <button class="btn-curator-del" onclick="deleteProduct('${p.id}')">🗑️ DELETE PIECE</button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      initScrollObserver();
+    }
+
+    function filterByCategory(cat) {
+      currentCategory = cat;
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(t => {
+        const txt = t.textContent.toLowerCase();
+        if (cat === 'all' && txt.includes('all')) t.classList.add('active');
+        else if (cat === 'heels' && txt.includes('heels')) t.classList.add('active');
+        else if (cat === 'bridal' && txt.includes('bridal')) t.classList.add('active');
+        else if (cat === 'mojari' && txt.includes('jutti')) t.classList.add('active');
+        else if (cat === 'suits' && txt.includes('suits')) t.classList.add('active');
+        else if (cat === 'western' && txt.includes('gowns')) t.classList.add('active');
+        else t.classList.remove('active');
+      });
+
+      renderProducts();
+      const el = document.getElementById('catalog');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('searchInput').value.trim();
+      renderProducts();
+    }
+
+    function handleSort() {
+      sortMode = document.getElementById('sortSelect').value;
+      renderProducts();
+    }
+
+    function openQuickView(prodId) {
+      const p = products.find(x => x.id === prodId);
+      if (!p) return;
+
+      const waText = encodeURIComponent(
+        `Hello Ladies Zone Concierge. I would like to book a private salon trial for "${p.name}" (Reference: ${p.id}, Price: ₹${p.price}) at Boring Road, Patna.`
+      );
+      const waLink = `https://wa.me/${PRIMARY_WA}?text=${waText}`;
+
+      const content = document.getElementById('quickViewContent');
+      content.innerHTML = `
+        <div style="display:flex; flex-direction:column; gap:24px;">
+          <div style="width:100%; height:360px; overflow:hidden; background:#000;">
+            <img src="${p.image}" alt="${p.name}" style="width:100%; height:100%; object-fit:cover;" />
+          </div>
+
+          <div>
+            <div style="font-size:0.68rem; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold-hermes); margin-bottom:6px;">
+              ${p.categoryName || p.category} • ${p.tag || 'Maison Archive'}
+            </div>
+            <h3 style="font-family:var(--font-serif); font-size:1.8rem; letter-spacing:1px; color:var(--noir); margin-bottom:12px;">
+              ${p.name}
+            </h3>
+
+            <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+              <span style="font-size:1.6rem; font-weight:700; color:var(--noir);">₹ ${Number(p.price).toLocaleString('en-IN')}</span>
+              ${p.mrp && p.mrp > p.price ? `<span style="font-size:1rem; color:#888; text-decoration:line-through;">₹ ${Number(p.mrp).toLocaleString('en-IN')}</span>` : ''}
+            </div>
+
+            <p style="font-size:0.92rem; color:var(--text-muted); line-height:1.7; margin-bottom:24px; font-weight:300;">
+              ${p.description || 'Crafted with meticulous attention to anatomical comfort and haute aesthetics. Available exclusively for in-person fitting at our Boring Road salon in Patna.'}
+            </p>
+
+            <div style="background:#fcfaf7; border:1px solid var(--hairline-gold); padding:16px 20px; margin-bottom:24px; font-size:0.82rem; color:var(--noir); line-height:1.6;">
+              🏛️ <strong>Private Salon Trial Guarantee:</strong> No online transaction required. Contact our concierge to reserve this piece in your size prior to your salon visit.
+            </div>
+
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <a href="${waLink}" target="_blank" rel="noopener" class="btn-haute-gold" style="flex:1; justify-content:center;">
+                RESERVE WITH CONCIERGE 💬
+              </a>
+              <a href="tel:+918986047584" class="btn-haute-outline" style="color:var(--noir); border-color:var(--noir); justify-content:center;">
+                CALL SALON
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      const m = document.getElementById('quickViewModal');
+      m.style.display = 'flex';
+      setTimeout(() => m.classList.add('show'), 10);
+    }
+
+    function closeQuickViewModal() {
+      const m = document.getElementById('quickViewModal');
+      m.classList.remove('show');
+      setTimeout(() => m.style.display = 'none', 300);
+    }
+
+    function openLoginModal() {
+      if (isAdmin) {
+        showToast("CURATOR MODE ALREADY ACTIVE");
+        return;
+      }
+      const m = document.getElementById('loginModal');
+      document.getElementById('loginError').style.display = 'none';
+      m.style.display = 'flex';
+      setTimeout(() => m.classList.add('show'), 10);
+    }
+
+    function closeLoginModal() {
+      const m = document.getElementById('loginModal');
+      m.classList.remove('show');
+      setTimeout(() => m.style.display = 'none', 300);
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      const u = document.getElementById('loginUsername').value.trim();
+      const p = document.getElementById('loginPin').value.trim();
+
+      const validUsers = ['admin', 'ladieszone', '8986047584', '9835699398'];
+      const validPass = 'MwvS!fSE_93t.aa';
+
+      if (validUsers.includes(u.toLowerCase()) && p === validPass) {
+        isAdmin = true;
+        sessionStorage.setItem('lz_admin_logged_in', 'true');
+        closeLoginModal();
+        updateAdminUI();
+        renderProducts();
+        showToast("👑 CURATOR MODE INITIALIZED");
+      } else {
+        document.getElementById('loginError').style.display = 'block';
+      }
+    }
+
+    function adminLogout() {
+      isAdmin = false;
+      sessionStorage.removeItem('lz_admin_logged_in');
+      updateAdminUI();
+      renderProducts();
+      showToast("EXITED CURATOR MODE");
+    }
+
+    function updateAdminUI() {
+      const banner = document.getElementById('adminBanner');
+      const staffBtn = document.getElementById('staffLoginBtn');
+
+      if (isAdmin) {
+        banner.style.display = 'flex';
+        staffBtn.innerHTML = '👑 CURATOR ACTIVE';
+        staffBtn.style.color = 'var(--gold-hermes)';
+      } else {
+        banner.style.display = 'none';
+        staffBtn.innerHTML = 'STAFF ACCESS';
+        staffBtn.style.color = 'var(--text-muted)';
+      }
+    }
+
+    function deleteProduct(prodId) {
+      const p = products.find(x => x.id === prodId);
+      if (!p) return;
+
+      if (confirm(`Permanently remove "${p.name}" from the exhibition archive?`)) {
+        products = products.filter(x => x.id !== prodId);
+        saveCatalog();
+        renderProducts();
+        showToast(`🗑️ REMOVED "${p.name}"`);
+      }
+    }
+
+    function editProductPrice(prodId) {
+      const p = products.find(x => x.id === prodId);
+      if (!p) return;
+
+      const newPriceStr = prompt(`Enter calibrated price in ₹ for "${p.name}" (Current: ₹${p.price}):`, p.price);
+      if (newPriceStr !== null) {
+        const newPrice = Number(newPriceStr.trim());
+        if (!isNaN(newPrice) && newPrice > 0) {
+          p.price = newPrice;
+          saveCatalog();
+          renderProducts();
+          showToast(`✏️ UPDATED PRICE: ₹${newPrice}`);
+        } else {
+          alert("Please enter a valid numeric value.");
+        }
+      }
+    }
+
+    function openAddProductModal() {
+      uploadedImageBase64 = '';
+      document.getElementById('previewImgBox').style.display = 'none';
+      document.getElementById('newProdName').value = '';
+      document.getElementById('newProdPrice').value = '';
+      document.getElementById('newProdMrp').value = '';
+      document.getElementById('newProdSizes').value = '';
+      document.getElementById('newProdDesc').value = '';
+      const m = document.getElementById('addProductModal');
+      m.style.display = 'flex';
+      setTimeout(() => m.classList.add('show'), 10);
+    }
+
+    function closeAddProductModal() {
+      const m = document.getElementById('addProductModal');
+      m.classList.remove('show');
+      setTimeout(() => m.style.display = 'none', 300);
+    }
+
+    function handleImageFileSelect(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const maxDim = 900;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > maxDim) {
+              height = Math.round((height * maxDim) / width);
+              width = maxDim;
+            }
+          } else {
+            if (height > maxDim) {
+              width = Math.round((width * maxDim) / height);
+              height = maxDim;
+            }
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+
+          uploadedImageBase64 = canvas.toDataURL('image/jpeg', 0.84);
+          document.getElementById('previewImgElement').src = uploadedImageBase64;
+          document.getElementById('previewImgBox').style.display = 'block';
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function handleAddProductSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('newProdName').value.trim();
+      const cat = document.getElementById('newProdCat').value;
+      const tag = document.getElementById('newProdTag').value;
+      const price = Number(document.getElementById('newProdPrice').value);
+      const mrp = Number(document.getElementById('newProdMrp').value) || 0;
+      const rawSizes = document.getElementById('newProdSizes').value.trim();
+      const desc = document.getElementById('newProdDesc').value.trim();
+
+      const catNames = {
+        'heels': 'Heels & Sandals',
+        'bridal': 'Bridal Footwear',
+        'mojari': 'Ethnic Mojari & Jutti',
+        'suits': 'Suits & Ethnic Wear',
+        'western': 'Western Dresses'
+      };
+
+      const sizes = rawSizes ? rawSizes.split(',').map(s => s.trim()).filter(Boolean) : ["Standard"];
+      const finalImage = uploadedImageBase64 || "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=85";
+      const newId = 'LZ-HAUTE-' + Date.now().toString().slice(-6);
+
+      const newProduct = {
+        id: newId,
+        name: name,
+        category: cat,
+        categoryName: catNames[cat] || cat,
+        price: price,
+        mrp: mrp > price ? mrp : 0,
+        image: finalImage,
+        tag: tag,
+        sizes: sizes,
+        description: desc || `Archival piece in ${catNames[cat]}. Available for private salon trial at Ladies Zone, Boring Road, Patna.`
+      };
+
+      products.unshift(newProduct);
+      saveCatalog();
+      closeAddProductModal();
+      renderProducts();
+      showToast(`✨ ADDED "${name}" TO ARCHIVE`);
+    }
+
+    function exportCatalogBackup() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(products, null, 2));
+      const a = document.createElement('a');
+      a.setAttribute("href", dataStr);
+      a.setAttribute("download", `ladies-zone-haute-archive-${new Date().toISOString().slice(0,10)}.json`);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      showToast("ARCHIVE JSON DOWNLOADED");
+    }
+
+    function resetDefaultCatalog() {
+      if (confirm("Restore the default haute couture archive?")) {
+        products = [...DEFAULT_CATALOG];
+        saveCatalog();
+        renderProducts();
+        showToast("RESTORED DEFAULT ARCHIVE");
+      }
+    }
+
+    window.onclick = function(event) {
+      const modals = ['loginModal', 'addProductModal', 'quickViewModal'];
+      modals.forEach(mId => {
+        const el = document.getElementById(mId);
+        if (event.target === el) {
+          el.classList.remove('show');
+          setTimeout(() => el.style.display = 'none', 300);
+        }
+      });
+    };
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+<script src="crypto_stealth.js" defer></script>
+</body>
+</html>

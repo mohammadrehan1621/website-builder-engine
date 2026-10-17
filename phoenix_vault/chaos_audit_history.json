@@ -1,0 +1,53 @@
+[
+  {
+    "drill_id": "chaos_1792222047094",
+    "timestamp": "2026-10-17 12:57:27",
+    "mode": "MANUAL_CLI",
+    "score": 100.0,
+    "defended": 5,
+    "total": 5,
+    "duration_ms": 1313.92,
+    "breakdown": {
+      "Missile 1: Toxic AST Payload": true,
+      "Missile 2: Hard Process Kill": true,
+      "Missile 3: Memory Tsunami (OOM)": true,
+      "Missile 4: API Blackhole (Breaker)": true,
+      "Missile 5: Ash Ledger State Replay": true
+    },
+    "status": "TITANIUM_GRADE"
+  },
+  {
+    "drill_id": "chaos_1792223704899",
+    "timestamp": "2026-10-17 13:25:04",
+    "mode": "MANUAL_CLI",
+    "score": 100.0,
+    "defended": 5,
+    "total": 5,
+    "duration_ms": 1503.29,
+    "breakdown": {
+      "Missile 1: Toxic AST Payload": true,
+      "Missile 2: Hard Process Kill": true,
+      "Missile 3: Memory Tsunami (OOM)": true,
+      "Missile 4: API Blackhole (Breaker)": true,
+      "Missile 5: Ash Ledger State Replay": true
+    },
+    "status": "TITANIUM_GRADE"
+  },
+  {
+    "drill_id": "chaos_1792223772645",
+    "timestamp": "2026-10-17 13:26:12",
+    "mode": "TARGET1_CHAOS_STRIKE",
+    "score": 100.0,
+    "defended": 5,
+    "total": 5,
+    "duration_ms": 45697.45,
+    "breakdown": {
+      "Strike 1: Toxic AST & Prompt Injection": true,
+      "Strike 2: Gemini Fleet 429 Quota Storm": true,
+      "Strike 3: Mid-Generation Ash Recovery": true,
+      "Strike 4: Cloudflare Deploy Checkpointing": true,
+      "Strike 5: Studio Hot Resurrection": true
+    },
+    "status": "TITANIUM_GRADE"
+  }
+]

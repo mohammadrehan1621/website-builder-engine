@@ -1,0 +1,20 @@
+{
+  "immunities": {
+    "96872a7320454214": {
+      "registered_at": 1792218059.220166,
+      "error_signature": "aa98192b49ae36bd",
+      "remediation": "AST_SANITIZATION_FALLBACK",
+      "hits": 2
+    },
+    "6205960d4bad38dd": {
+      "registered_at": 1792218059.3010993,
+      "error_signature": "a95903fa7e0d9e13",
+      "remediation": "AUTO_SANITIZE",
+      "hits": 0
+    }
+  },
+  "quarantined_hashes": [
+    "96872a7320454214",
+    "6205960d4bad38dd"
+  ]
+}

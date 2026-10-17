@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<style>
+
+#chatbot-modal *::-webkit-scrollbar, #aria-window *::-webkit-scrollbar, #chat-messages::-webkit-scrollbar, #aria-messages::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+
+#chatbot-modal *::-webkit-scrollbar-track, #aria-window *::-webkit-scrollbar-track, #chat-messages::-webkit-scrollbar-track, #aria-messages::-webkit-scrollbar-track { background: transparent; }
+
+#chatbot-modal *::-webkit-scrollbar-thumb, #aria-window *::-webkit-scrollbar-thumb, #chat-messages::-webkit-scrollbar-thumb, #aria-messages::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.35); border-radius: 9999px; }
+
+.no-scrollbar::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
+
+.no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+
+#chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
+
+</style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="default-src 'self' https: http: 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data:;" http-equiv="Content-Security-Policy"/>
+<title>Mohammad Rehan | AI Systems Architect &amp; Tech Lead</title>
+<meta name="google-site-verification" content="googlecb5b21d2c61033d5" />
+<meta name="description" content="Senior AI Systems Architect specializing in autonomous agent architectures, low-latency microservices, and modern web platforms." />
+<meta name="keywords" content="Mohammad Rehan, AI web developer in Patna, website developer, business software development, billing software, inventory management software, AI automation, personal portfolio" />
+<link rel="canonical" href="https://mohammadrehan.pages.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mohammad Rehan | AI Systems Architect &amp; Tech Lead" />
+<meta property="og:description" content="Senior AI Systems Architect specializing in autonomous agent architectures, low-latency microservices, and modern web platforms." />
+<meta property="og:url" content="https://mohammadrehan.pages.dev/" />
+<meta property="og:image" content="https://mohammadrehan.pages.dev/og_preview.png" />
+<meta property="og:image:secure_url" content="https://mohammadrehan.pages.dev/og_preview.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Mohammad Rehan - AI Systems Architect &amp; Tech Lead" />
+<meta property="og:site_name" content="Mohammad Rehan" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mohammad Rehan | AI Systems Architect &amp; Tech Lead" />
+<meta name="twitter:description" content="Senior AI Systems Architect specializing in autonomous agent architectures, low-latency microservices, and modern web platforms." />
+<meta name="twitter:image" content="https://mohammadrehan.pages.dev/og_preview.png" />
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        slateCanvas: '#f8fafc',
+
+                        charcoalDark: '#0f172a',
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+
+        /* Custom Slim Scrollbar & Minimalist aesthetics */
+
+        ::-webkit-scrollbar { width: 6px; }
+
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        
+
+        .glass-panel {
+
+            background: rgba(255, 255, 255, 0.85);
+
+            backdrop-filter: blur(16px);
+
+            -webkit-backdrop-filter: blur(16px);
+
+        }
+
+        .dark-glass {
+
+            background: rgba(15, 23, 42, 0.92);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+
+        }
+
+        @keyframes pulse-glow {
+
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+
+            50% { opacity: 1; transform: scale(1.05); }
+
+        }
+
+        .animate-pulse-glow {
+
+            animation: pulse-glow 3s infinite ease-in-out;
+
+        }
+
+    </style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammad Rehan",
+  "jobTitle": "Senior AI & Full-Stack Systems Architect",
+  "description": "Senior AI Systems Architect specializing in autonomous agent architectures, low-latency microservices, and modern web platforms.",
+  "url": "https://mohammadrehan.pages.dev",
+  "sameAs": [
+    "https://wa.me/917091518548",
+    "https://github.com/mohammadrehan1621",
+    "https://linkedin.com"
+  ]
+<script src="phoenix_sentinel.js"></script>
+<script src="aria_neural_engine.js"></script>
+</head>
+<body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
+<!-- Top Infrastructure Status Bar -->
+<div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 font-mono tracking-tight border-b border-slate-800">
+<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-emerald-400 font-semibold uppercase">Production Infrastructure:</span>
+<span class="text-slate-300 hidden sm:inline">Fault-Tolerant Phoenix Mesh • 24/7 Chaos Verified • Zero Capital Leakage</span>
+<span class="text-slate-300 sm:hidden">Phoenix Mesh Active</span>
+</div>
+<div class="flex items-center gap-3 text-slate-400 text-xs font-sans">
+<span class="hidden md:inline font-mono text-emerald-400">MTTR: &lt;50ms</span>
+<span class="text-slate-700 hidden md:inline">|</span>
+<span>Patna &amp; Global Edge</span>
+</div>
+</div>
+</div>
+<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock, Zero Collision with Aria/WhatsApp) -->
+<div class="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 z-[70] max-w-2xl bg-slate-950/98 border border-slate-700/90 rounded-2xl p-4 sm:p-5 shadow-2xl backdrop-blur-2xl text-slate-100 transition-all duration-300 transform" id="cookie-banner">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 text-left">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+<i class="w-5 h-5" data-lucide="shield-check"></i>
+</div>
+<div>
+<p class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
+<span>Privacy &amp; Security Compliance</span>
+<span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono font-semibold">SOC-2 VERIFIED</span>
+</p>
+<p class="text-xs text-slate-200 leading-relaxed mt-1 font-medium">
+We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We use secure cookies to optimize performance.
+</p>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
+<button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
+</div>
+</div>
+</div>
+<!-- STICKY NAVBAR -->
+<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 glass-panel">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2.5 group" href="index.html">
+<div class="w-9 h-9 rounded-xl bg-slate-900 text-white font-bold flex items-center justify-center text-sm tracking-wider shadow-sm group-hover:scale-105 transition">
+
+                    MR
+
+                </div>
+<div>
+<span class="font-bold text-slate-900 tracking-tight text-base block">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-500 font-medium block -mt-1">AI Systems Architect &amp; Tech Lead</span>
+</div>
+</a>
+<!-- Desktop Navigation Links (Multi-page architecture) -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+<a class="text-slate-900 font-semibold transition" href="index.html">Home</a>
+<a class="hover:text-slate-900 transition" href="#about">About</a>
+<a class="hover:text-slate-900 transition" href="#interactive-lab">Telemetry</a>
+<a class="hover:text-slate-900 transition" href="projects.html">Projects</a>
+<a class="hover:text-slate-900 transition" href="experience.html">Experience</a>
+<a class="hover:text-slate-900 transition" href="contact.html">Contact</a>
+</nav>
+<!-- Right CTAs & Security Pill -->
+<div class="hidden lg:flex items-center gap-3">
+<a class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2" href="Mohammad_Rehan_Resume.pdf" download>
+<i class="w-3.5 h-3.5" data-lucide="download"></i>
+<span>Resume (PDF)</span>
+</a>
+<a class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2" href="contact.html">
+<i class="w-3.5 h-3.5" data-lucide="mail"></i>
+<span>Get in Touch</span>
+</a>
+</div>
+<!-- Mobile Hamburger Button -->
+<button class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" id="mobile-menu-btn">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
+<a class="block py-2 px-3 rounded-lg bg-slate-100 text-slate-900 font-semibold text-sm" href="index.html">Home</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="#about">About</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="#interactive-lab">Telemetry</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="experience.html">Experience</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="contact.html">Contact</a>
+<a class="block py-2 px-3 rounded-lg bg-indigo-50 text-indigo-700 font-semibold text-sm flex items-center gap-2" href="Mohammad_Rehan_Resume.pdf" download>
+<i class="w-4 h-4" data-lucide="download"></i>
+<span>Download Resume (PDF)</span>
+</a>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs text-emerald-600 font-medium flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> SSL Secure</span>
+<a class="bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-lg" href="contact.html">Hire Me</a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION (HOME PAGE ROLE) -->
+<main class="flex-grow">
+<section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & CTAs -->
+<div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+<!-- Availability Badge -->
+<div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/80 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-800 shadow-sm animate-pulse-glow">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span>🟢 Available for High-Impact Projects / Full-Time Roles</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+
+                            Hi, I'm <span class="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">Mohammad Rehan</span>
+</h1>
+<p class="text-lg sm:text-xl text-slate-600 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+
+                            Bridging real-world retail business operations with modern technology. I build practical digital solutions, AI-assisted web platforms, billing software, and automation tools from Patna, Bihar.
+
+                        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+<a class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm" href="#about">
+<i class="w-4 h-4" data-lucide="layers"></i>
+<span>Explore Architecture &amp; Blueprint</span>
+</a>
+<a class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium px-6 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm" href="projects.html">
+<i class="w-4 h-4 text-slate-700" data-lucide="code"></i>
+<span>View Featured Work</span>
+</a>
+<a class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium px-5 py-3.5 rounded-xl transition flex items-center gap-2 text-sm" href="#resume-download" onclick="downloadResumePDF(event)">
+<i class="w-4 h-4" data-lucide="download"></i>
+<span>Resume (PDF)</span>
+</a>
+</div>
+<!-- Trust Metrics / Quick Stats -->
+<div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
+<div>
+<p class="text-2xl font-bold text-slate-900">4+ Years</p>
+<p class="text-xs text-slate-500 mt-0.5">Business Management</p>
+</div>
+<div>
+<p class="text-2xl font-bold text-slate-900">BCA</p>
+<p class="text-xs text-slate-500 mt-0.5">National Business College</p>
+</div>
+<div>
+<p class="text-2xl font-bold text-slate-900">100%</p>
+<p class="text-xs text-slate-500 mt-0.5">Practical &amp; Operational</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Profile Card & Tech Stack Badges -->
+<div class="lg:col-span-5">
+<div class="bg-white rounded-3xl border border-slate-200 shadow-xl p-6 sm:p-8 relative">
+<!-- Top Decorative Header -->
+<div class="flex items-center justify-between pb-6 border-b border-slate-100">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-bold text-lg flex items-center justify-center shadow-md">
+
+                                        MR
+
+                                    </div>
+<div>
+<h3 class="font-bold text-slate-900 text-base">Mohammad Rehan</h3>
+<p class="text-xs text-slate-500">Store Manager &amp; Developer</p>
+</div>
+</div>
+<span class="bg-slate-100 text-slate-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg">Patna, India</span>
+</div>
+<!-- Brand Statement Quote -->
+<div class="py-6 space-y-3">
+<div class="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-200/60">
+<i class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" data-lucide="quote"></i>
+<p class="text-xs text-slate-700 italic leading-relaxed">
+
+                                        "I combine real-world business experience with technology to build practical digital solutions. From modern websites and billing software to AI-powered tools."
+
+                                    </p>
+</div>
+</div>
+<!-- Verified Core Tech Badges -->
+<div class="space-y-3 pt-2">
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Core Technical &amp; Business Skills</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Web Development</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Retail Operations</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Inventory Systems</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">AI Automation</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Microsoft Excel / Word</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Vendor Management</span>
+</div>
+</div>
+<!-- Bottom Quick Action -->
+<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-500">Status: <strong class="text-slate-900">Active &amp; Ready</strong></span>
+<a class="text-slate-900 font-semibold hover:underline flex items-center gap-1" href="contact.html">
+<span>Contact Direct</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT / PHILOSOPHY / HOW WE MAKE IT POSSIBLE SECTION -->
+<section class="py-24 bg-white border-t border-slate-200" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <div class="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 px-3.5 py-1.5 rounded-full text-xs font-semibold text-indigo-700 shadow-sm">
+            <i class="w-3.5 h-3.5" data-lucide="layers"></i>
+            <span>Engineering Philosophy &amp; Execution Blueprint</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Who We Are, What We Build &amp; How We Make It Undeniable
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
+            Most software breaks under real-world pressure because it is conceived in artificial isolation. Grounded in <strong>4+ years of physical retail business management</strong> in Patna, Bihar, and an accredited <strong>Bachelor of Computer Applications (BCA)</strong>, I engineer mission-critical computational engines, quant execution layers, and autonomous systems designed to survive real-world chaos with zero compromise.
+        </p>
+    </div>
+
+    <!-- The 3 Flagship Pillars Grid (What We Do / How We Do It / How We Make It Possible) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1: WHAT WE DO -->
+        <div class="bg-slate-50 rounded-3xl border border-slate-200/90 p-8 flex flex-col justify-between hover:shadow-xl hover:border-slate-300 transition duration-300">
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-slate-200/70">
+                    <span class="font-mono text-xs font-bold text-indigo-600 uppercase tracking-widest">Pillar 01</span>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-100/70 text-indigo-800">Frontier Systems</span>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center my-6 shadow-md shadow-indigo-600/20">
+                    <i class="w-6 h-6" data-lucide="cpu"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-3">What We Do</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    We architect end-to-end autonomous, high-throughput systems that directly control capital, media production, and retail commerce:
+                </p>
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-indigo-600 mt-1 shrink-0" data-lucide="crosshair"></i>
+                        <span><strong>Institutional Quant Derivatives Engines:</strong> Low-latency execution nodes on AWS Mumbai executing options scalping with sub-8ms exchange proximity and automated capital shields.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-indigo-600 mt-1 shrink-0" data-lucide="video"></i>
+                        <span><strong>Autonomous AI Media Studios:</strong> Multi-modal pipelines generating scripted, voiced, edited, and subtitled 9:16 vertical short-form video content autonomously.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-indigo-600 mt-1 shrink-0" data-lucide="store"></i>
+                        <span><strong>High-Volume Retail POS &amp; Inventory:</strong> Offline-resilient GST billing and real-time inventory ledger software serving thousands of daily retail shoppers.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-indigo-600 mt-1 shrink-0" data-lucide="globe"></i>
+                        <span><strong>Fault-Tolerant Edge Web Platforms:</strong> Instantaneous, zero-downtime static and dynamic web systems wired directly to global Cloudflare edge distribution.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500 font-mono">
+                <span>Domain: Multi-Modal &amp; FinTech</span>
+                <span class="text-emerald-600 font-semibold">● Production Ready</span>
+            </div>
+        </div>
+
+        <!-- Pillar 2: HOW WE DO IT -->
+        <div class="bg-slate-900 text-white rounded-3xl border border-slate-800 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+            <div class="absolute -right-16 -top-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                    <span class="font-mono text-xs font-bold text-emerald-400 uppercase tracking-widest">Pillar 02</span>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Architecture</span>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center my-6 shadow-md shadow-emerald-500/30 font-bold">
+                    <i class="w-6 h-6" data-lucide="shield-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white tracking-tight mb-3">How We Do It</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                    We eliminate single points of failure by enforcing strict computer science invariants and hardware-anchored constraints:
+                </p>
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-300">
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="database"></i>
+                        <span><strong>Write-Ahead Micro-Journaling (Ash Ledger):</strong> Every state mutation, trade tick, and customer transaction is pre-journaled with SHA cryptographic checksums before memory commitment, making data loss mathematically impossible.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="refresh-cw"></i>
+                        <span><strong>Phoenix Process Self-Healing (MTTR &lt;50ms):</strong> Decoupled supervisor daemons monitor worker heartbeats. Failed workers are quarantined and resurrected in milliseconds without killing master state.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="lock"></i>
+                        <span><strong>Structural Risk &amp; Hardware Circuit Breakers:</strong> Fixed 30% capital reserves, Spot/15m VWAP stop-loss anchors, and 0-DTE theta filters hard-coded at the architecture level—immune to emotional override.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="shield"></i>
+                        <span><strong>Dark Infrastructure via ZTNA WireGuard:</strong> Zero exposed open HTTP management ports. Remote control runs exclusively across a private, authenticated WireGuard mesh tunnel.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Standard: Distributed Fault-Tolerance</span>
+                <span class="text-emerald-400 font-semibold">● MTTR &lt;50ms</span>
+            </div>
+        </div>
+
+        <!-- Pillar 3: HOW WE MAKE IT POSSIBLE -->
+        <div class="bg-slate-50 rounded-3xl border border-slate-200/90 p-8 flex flex-col justify-between hover:shadow-xl hover:border-slate-300 transition duration-300">
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-slate-200/70">
+                    <span class="font-mono text-xs font-bold text-amber-600 uppercase tracking-widest">Pillar 03</span>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-100/70 text-amber-800">Verification</span>
+                </div>
+                <div class="w-12 h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center my-6 shadow-md shadow-amber-500/20">
+                    <i class="w-6 h-6" data-lucide="flame"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-3">How We Make It Possible</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    True reliability is not a theoretical promise; it is the deliberate output of an uncompromising engineering culture:
+                </p>
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-amber-600 mt-1 shrink-0" data-lucide="zap"></i>
+                        <span><strong>The Chaos Gauntlet (Continuous Stress-Testing):</strong> We continuously inject synthetic faults—socket drops, poison packets, process kills, and disk saturation—to prove recovery before production capital is committed.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-amber-600 mt-1 shrink-0" data-lucide="briefcase"></i>
+                        <span><strong>Physical Reality + Theoretical Rigor:</strong> 4+ years on the physical showroom floor handling supplier checks, stock reconciliations, and retail rushes, combined with BCA computational theory. We solve real operational pain, not hypothetical textbook problems.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-amber-600 mt-1 shrink-0" data-lucide="check-circle-2"></i>
+                        <span><strong>Zero Bluffs, Pure Verifiable Metrics:</strong> We reject marketing hyperbole. We measure success in milliseconds of recovery, zero dropped bytes, zero-throttle CPU allocation, and zero capital leakage.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="w-4 h-4 text-amber-600 mt-1 shrink-0" data-lucide="code-2"></i>
+                        <span><strong>Full-Stack Ownership:</strong> From Linux kernel swap tuning and systemd service scripts to neural audio synthesis and responsive UI engineering, we write and govern the complete stack end-to-end.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500 font-mono">
+                <span>Rigor: Chaos-Hardened</span>
+                <span class="text-amber-600 font-semibold">● 100% Deterministic</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Verified Institutional Metrics Row -->
+    <div class="mt-12 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+            <div class="pt-4 md:pt-0">
+                <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">&lt;50ms</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">MTTR Resurrection</p>
+            </div>
+            <div class="pt-4 md:pt-0 md:pl-6">
+                <p class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">Sub-8ms</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">AWS Mumbai NSE Proximity</p>
+            </div>
+            <div class="pt-4 md:pt-0 md:pl-6">
+                <p class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">Zero</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">State Loss (WAL Journaled)</p>
+            </div>
+            <div class="pt-4 md:pt-0 md:pl-6">
+                <p class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4+ Years</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Physical Retail Battle-Testing</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Founder's Personal Manifesto Quote -->
+    <div class="mt-12 bg-gradient-to-r from-slate-50 via-white to-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm relative">
+        <div class="flex flex-col sm:flex-row items-start gap-6">
+            <div class="w-14 h-14 rounded-2xl bg-slate-900 text-white font-bold text-xl flex items-center justify-center shrink-0 shadow-md">
+                MR
+            </div>
+            <div class="space-y-3">
+                <p class="text-base sm:text-lg text-slate-800 italic leading-relaxed font-serif">
+                    "Most software looks brilliant until real-world reality hits it—a power surge, a broker socket disconnection, or a chaotic retail billing rush. We engineer with the fundamental assumption that components will fail, and we architect layers so resilient that failure is absorbed and healed invisibly. Precision isn't luck; it is the inevitable outcome of disciplined engineering."
+                </p>
+                <div class="pt-2 flex flex-wrap items-center gap-3">
+                    <span class="text-sm font-bold text-slate-900">Mohammad Rehan</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span class="text-xs text-slate-600 font-medium">Store &amp; Operations Manager (Ladies Zone) | BCA (2025) | AI Systems Architect</span>
+                    <span class="text-xs text-slate-400">•</span>
+                    <span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Patna, Bihar, India</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+<!-- INTERACTIVE SYSTEMS & TELEMETRY LAB -->
+<section class="py-20 bg-slate-950 text-white border-t border-slate-800 relative overflow-hidden" id="interactive-lab">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-400 font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>LIVE TELEMETRY &amp; FAULT SIMULATION LAB</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-3">
+                Interactive Systems Diagnostic Studio
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
+                Test the actual failure recovery mechanisms in real-time. Trigger simulated process faults, verify Spot/VWAP risk circuits, and inspect your own browser's active Ash Ledger micro-journal.
+            </p>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="inline-flex items-center gap-1.5 bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3.5 py-2 rounded-xl font-mono">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Edge Active
+            </span>
+        </div>
+    </div>
+
+    <!-- Live Telemetry Gauges Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <!-- Node 1: AWS Mumbai -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                <span>NODE_01 // AWS_MUMBAI</span>
+                <span class="text-emerald-400 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ONLINE</span>
+            </div>
+            <p class="text-2xl font-bold font-mono text-white">&lt;8ms</p>
+            <p class="text-xs text-slate-400 mt-1">Exchange Fiber Proximity</p>
+            <div class="mt-3 pt-3 border-t border-slate-800/80 flex justify-between text-[11px] text-slate-400 font-mono">
+                <span>Region: ap-south-1</span>
+                <span>Load: 0.00</span>
+            </div>
+        </div>
+
+        <!-- Node 2: Phoenix MTTR -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                <span>ENGINE // PHOENIX_MESH</span>
+                <span class="text-cyan-400 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> HEALED</span>
+            </div>
+            <p class="text-2xl font-bold font-mono text-cyan-300">11.4ms</p>
+            <p class="text-xs text-slate-400 mt-1">Mean Time to Recovery</p>
+            <div class="mt-3 pt-3 border-t border-slate-800/80 flex justify-between text-[11px] text-slate-400 font-mono">
+                <span>Supervisor: systemd</span>
+                <span>WAL: Active</span>
+            </div>
+        </div>
+
+        <!-- Node 3: Cloudflare Edge -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                <span>CDN // CLOUDFLARE_PAGES</span>
+                <span class="text-emerald-400 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 100% HIT</span>
+            </div>
+            <p class="text-2xl font-bold font-mono text-emerald-400">HTTP 200</p>
+            <p class="text-xs text-slate-400 mt-1">Global Edge Health</p>
+            <div class="mt-3 pt-3 border-t border-slate-800/80 flex justify-between text-[11px] text-slate-400 font-mono">
+                <span>SSL: TLS 1.3</span>
+                <span>Zones: 300+</span>
+            </div>
+        </div>
+
+        <!-- Node 4: WireGuard ZTNA -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-3">
+                <span>NETWORK // WIREGUARD_ZTNA</span>
+                <span class="text-indigo-400 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> SECURE</span>
+            </div>
+            <p class="text-2xl font-bold font-mono text-indigo-300">0 Exposed</p>
+            <p class="text-xs text-slate-400 mt-1">Zero Open Public Ports</p>
+            <div class="mt-3 pt-3 border-t border-slate-800/80 flex justify-between text-[11px] text-slate-400 font-mono">
+                <span>Auth: WireGuard Peer</span>
+                <span>Dark Mesh</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Simulation Console Card -->
+    <div class="bg-slate-900 rounded-3xl border border-slate-800 overflow-hidden shadow-2xl">
+        <!-- Terminal Header Controls -->
+        <div class="px-6 py-4 bg-slate-950 border-b border-slate-800 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                </div>
+                <span class="text-xs font-mono text-slate-400 pl-2">PHOENIX_SENTINEL_DIAGNOSTICS // v4.2</span>
+            </div>
+
+            <!-- Action Trigger Buttons -->
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="runEvolutionSimulation()" class="bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-semibold px-3 py-1.5 rounded-xl transition flex items-center gap-1.5">
+                    🧬 Test Antifragile Evolution
+                </button>
+                <button onclick="runFaultSimulation()" class="bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-mono font-semibold px-3 py-1.5 rounded-xl transition flex items-center gap-1.5">
+                    ⚡ Simulate Fault &amp; Healer
+                </button>
+                <button onclick="runRiskSimulation()" class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-mono font-semibold px-3 py-1.5 rounded-xl transition flex items-center gap-1.5">
+                    📊 Test Spot/VWAP Guard
+                </button>
+                <button onclick="runAshLedgerInspection()" class="bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-semibold px-3 py-1.5 rounded-xl transition flex items-center gap-1.5">
+                    🔍 Inspect Ash Ledger (Browser)
+                </button>
+                <button onclick="clearConsole()" class="text-slate-400 hover:text-white text-xs font-mono px-2 py-1.5 rounded-lg transition" title="Clear Console">
+                    🧹 Clear
+                </button>
+            </div>
+        </div>
+
+        <!-- Terminal Output Stream Box -->
+        <div class="p-6 bg-slate-950/70 font-mono text-xs min-h-[220px] max-h-[300px] overflow-y-auto space-y-2 border-b border-slate-800" id="sim-terminal-output">
+            <div class="text-slate-500 italic">// Interactive Systems Telemetry Diagnostic Console initialized.</div>
+            <div class="text-slate-400">• Click <strong class="text-indigo-300">"Test Antifragile Evolution"</strong> to test the Golden Rule: system auto-heals into a permanently stronger, immune state.</div>
+            <div class="text-slate-400">• Click <strong class="text-amber-300">"Simulate Fault &amp; Healer"</strong> to inject a live synthetic thread crash and watch Phoenix resurrect it in 11ms.</div>
+            <div class="text-slate-400">• Click <strong class="text-rose-300">"Test Spot/VWAP Guard"</strong> to run a real-time Nifty 50 Spot tick analysis against 15m VWAP &amp; 13:30 theta shield.</div>
+            <div class="text-slate-400">• Click <strong class="text-cyan-300">"Inspect Ash Ledger"</strong> to query your own browser's active write-ahead micro-journal.</div>
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="px-6 py-3 bg-slate-950 flex flex-wrap items-center justify-between text-xs text-slate-500 font-mono gap-2">
+            <span>Kernel: Linux 6.8.0-aws | Architecture: x86_64 t3.small</span>
+            <span class="text-emerald-400">● Chaos Gauntlet: Permanent Daemon Active</span>
+        </div>
+    </div>
+
+    <!-- Golden Rule of Resilience Axiom Card -->
+    <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950/50 to-slate-900 border border-indigo-500/40 text-white shadow-2xl relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
+            <div class="space-y-3 max-w-3xl">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-mono font-bold tracking-wider text-cyan-300 uppercase">First Principle // Resilience Axiom</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white leading-snug">
+                    "A system should never just heal back to its old vulnerable state—every auto-heal must make it evolve and become permanently stronger."
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                    Standard engineering restores the status quo—leaving the application vulnerable to dying from the exact same failure when traffic spikes or edge inputs recur. Rehan's <strong>Antifragile Phoenix Architecture</strong> executes three deterministic evolutionary mutations upon every heal:
+                </p>
+                <div class="grid sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+                        <div class="text-xs font-bold text-cyan-400 font-mono">01. Epoch Progression</div>
+                        <p class="text-[11px] text-slate-400 mt-1 font-sans">Every resurrection advances the generation counter and commits state to the evolutionary ledger.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+                        <div class="text-xs font-bold text-indigo-400 font-mono">02. SHA-256 Quarantine</div>
+                        <p class="text-[11px] text-slate-400 mt-1 font-sans">The lethal input vector is fingerprinted, permanently quarantined, and pre-emptively rejected at 0.0ms.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
+                        <div class="text-xs font-bold text-emerald-400 font-mono">03. Adaptive Stiffening</div>
+                        <p class="text-[11px] text-slate-400 mt-1 font-sans">Timeouts and retry backoff buffers dynamically harden by +25% per incident, absorbing cascading shocks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 flex flex-col gap-2">
+                <button onclick="runEvolutionSimulation()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs px-5 py-3.5 rounded-2xl shadow-xl transition flex items-center justify-center gap-2">
+                    <span>🧬 Run Live Evolution Telemetry</span>
+                </button>
+                <span class="text-[10px] text-slate-400 font-mono text-center">Verified by Phoenix Sentinel</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- WHAT I BUILD & FEATURED PROJECTS TEASER -->
+<section class="py-20 bg-slateCanvas border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500 bg-white border border-slate-200 px-3 py-1 rounded-full">Portfolio Highlight</span>
+<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-3">Featured Projects &amp; Systems</h2>
+</div>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-slate-700 transition" href="projects.html">
+<span>Explore All Projects</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+
+<!-- Interactive Project Category Filters -->
+<div class="flex flex-wrap items-center gap-2 mb-8">
+    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition" data-filter="all" onclick="filterProjects('all')">All Systems (4)</button>
+    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition" data-filter="quant" onclick="filterProjects('quant')">Quant &amp; FinTech</button>
+    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition" data-filter="phoenix" onclick="filterProjects('phoenix')">Fault Tolerance</button>
+    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition" data-filter="ai" onclick="filterProjects('ai')">Autonomous AI</button>
+    <button class="project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition" data-filter="retail" onclick="filterProjects('retail')">Retail POS &amp; Web</button>
+</div>
+
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Project 1: Project Phoenix -->
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-slate-400 transition flex flex-col justify-between" data-project-category="phoenix">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="bg-amber-50 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-lg">Distributed Systems</span>
+<span class="text-xs text-slate-400">Fault Tolerance</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Project Phoenix</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+    Autonomous self-healing engine featuring Ash Ledger write-ahead micro-journaling, sub-50ms process resurrection, dynamic AST poison quarantine, and 24/7 background chaos testing.
+</p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Sub-50ms MTTR</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Write-Ahead WAL</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Chaos Sentinel</span>
+</div>
+</div>
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+<a class="text-xs font-semibold text-slate-900 hover:underline flex items-center gap-1.5" href="projects.html">
+<span>View Architecture Specs</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+<span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded">Active Mesh</span>
+</div>
+</div>
+
+<!-- Project 2: Indian Quant Options Sniper -->
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-slate-400 transition flex flex-col justify-between" data-project-category="quant">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-lg">AWS Mumbai (ap-south-1)</span>
+<span class="text-xs text-slate-400">Derivatives Execution</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Indian Quant Options Sniper</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+    Institutional execution engine running on AWS Mumbai with sub-8ms fiber proximity to NSE. Features direct atomic routing (&le;24 lots), Spot/VWAP structural risk guards, 13:30 theta shield, and ZTNA WireGuard access.
+</p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Sub-8ms NSE</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Spot VWAP Guard</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">WireGuard ZTNA</span>
+</div>
+</div>
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+<a class="text-xs font-semibold text-slate-900 hover:underline flex items-center gap-1.5" href="projects.html">
+<span>View Quant Architecture</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+<span class="text-[10px] text-indigo-600 font-semibold bg-indigo-50 px-2 py-0.5 rounded">Live Cluster</span>
+</div>
+</div>
+
+<!-- Project 3: Autonomous AI Shorts & Reels Studio -->
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-slate-400 transition flex flex-col justify-between" data-project-category="ai">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="bg-rose-50 text-rose-700 text-xs font-semibold px-2.5 py-1 rounded-lg">Multi-Modal AI</span>
+<span class="text-xs text-slate-400">Video Engineering</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">AI Shorts &amp; Reels Studio</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+    End-to-end automated 9:16 vertical video production engine. Combines topic-to-script LLM generation, studio neural voiceover, dynamic visual B-roll sync, and animated Hormozi-style ASS subtitles.
+</p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">FFmpeg Engine</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Neural TTS</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Hormozi ASS Subtitles</span>
+</div>
+</div>
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+<a class="text-xs font-semibold text-slate-900 hover:underline flex items-center gap-1.5" href="projects.html">
+<span>View Video Pipeline</span>
+<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+<span class="text-[10px] text-rose-600 font-semibold bg-rose-50 px-2 py-0.5 rounded">Production</span>
+</div>
+</div>
+
+<!-- Project 4: Maison Ladies Zone & Retail POS -->
+<div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-slate-400 transition flex flex-col justify-between" data-project-category="retail">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-lg">Live Business Web &amp; POS</span>
+<span class="text-xs text-slate-400">Retail Ecosystem</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Maison Ladies Zone Platform</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+    Luxury digital showroom platform (ladieszonepatna.in) and commercial retail POS billing engine with appointment trial concierge workflows, curator inventory management, and automated GST compliance.
+</p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Showroom Concierge</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">GST Billing POS</span>
+<span class="bg-slate-100 text-slate-700 text-[11px] px-2.5 py-1 rounded-md font-medium">Global Edge</span>
+</div>
+</div>
+<div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+<a class="text-xs font-semibold text-slate-900 hover:underline flex items-center gap-1.5" href="https://ladieszonepatna.in" rel="noopener noreferrer" target="_blank">
+<i class="w-3.5 h-3.5" data-lucide="external-link"></i>
+<span>Visit ladieszonepatna.in</span>
+</a>
+<span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded">Active Showroom</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CALL TO ACTION BANNER -->
+<section class="py-16 bg-slate-900 text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to collaborate or discuss a project?</h2>
+<p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+
+                    Whether you need a modern business website, inventory billing software, or operational guidance, let's get in touch.
+
+                </p>
+<div class="flex flex-wrap justify-center gap-4 pt-2">
+<a class="bg-white text-slate-900 hover:bg-slate-100 font-semibold px-6 py-3 rounded-xl transition text-sm" href="contact.html">
+
+                        Contact Mohammad Rehan
+
+                    </a>
+<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl transition text-sm flex items-center gap-2" href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4" data-lucide="message-circle"></i>
+<span>Chat on WhatsApp</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
+<div class="space-y-3 md:col-span-2">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-slate-900 text-white font-bold flex items-center justify-center text-xs">MR</div>
+<span class="font-bold text-slate-900 text-base">Mohammad Rehan</span>
+</div>
+<p class="text-xs text-slate-500 max-w-sm leading-relaxed">
+
+                    AI-Assisted Web Developer &amp; Store Manager based in Patna, Bihar, India. Combining real retail operations experience with practical software engineering.
+
+                </p>
+<div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
+<i class="w-4 h-4" data-lucide="shield-check"></i>
+<span>256-Bit SSL Secured • SOC-2 Compliant Session</span>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+<ul class="space-y-2 text-xs">
+<li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
+<li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Systems</a></li>
+<li><a class="hover:text-slate-900 transition" href="experience.html">Professional Experience</a></li>
+<li><a class="hover:text-slate-900 transition" href="contact.html">Contact &amp; Hire</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Direct Contact</h4>
+<ul class="space-y-2 text-xs">
+<li><span class="text-slate-500">Location:</span> Patna, Bihar 800006</li>
+<li><span class="text-slate-500">Phone:</span> +91 70915 18548</li>
+<li><span class="text-slate-500">Email:</span> rehankhan20871621@gmail.com</li>
+<li><a class="text-emerald-600 font-semibold hover:underline" href="https://wa.me/917091518548" rel="noopener noreferrer" target="_blank">WhatsApp Direct →</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+<p>© <span id="current-year">2025</span> Mohammad Rehan. All rights reserved.</p>
+<p class="mt-2 sm:mt-0">Designed with Minimal Pure &amp; Modern Clean Aesthetics.</p>
+</div>
+</footer>
+<!-- WHATSAPP FLOATING CHAT WIDGET (Bottom Right) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+<div class="mb-2 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-xl shadow-lg hidden sm:block animate-bounce" id="wa-tooltip">
+
+            Chat with Mohammad Rehan on WhatsApp 💬
+
+        </div>
+<a aria-label="Chat on WhatsApp" class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-2xl transition transform hover:scale-110 relative group" href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-ping"></span>
+<span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white"></span>
+<i class="w-7 h-7" data-lucide="message-circle"></i>
+</a>
+</div>
+<!-- FUTURISTIC HOLOGRAPHIC AI COMPANION (ARIA v4.0) (Bottom Left) -->
+<div class="fixed bottom-6 left-6 z-50">
+<!-- Floating Capsule Trigger Button -->
+<button class="relative group flex items-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl border border-cyan-500/40 transition transform hover:scale-105" id="aria-trigger" onclick="toggleAriaChat()">
+<span class="absolute -top-1 -left-1 w-3.5 h-3.5 bg-cyan-400 rounded-full animate-ping"></span>
+<div class="w-6 h-6 rounded-full bg-gradient-to-tr from-cyan-500 to-indigo-500 flex items-center justify-center text-[10px] font-bold text-white shadow-inner">
+
+                AI
+
+            </div>
+<span class="text-xs font-semibold tracking-wide hidden sm:inline">Aria v4.0 // AI Assistant</span>
+</button>
+<!-- Expandable Holographic HUD Chat Terminal Window -->
+<div class="hidden absolute bottom-16 left-0 w-[90vw] sm:w-[390px] h-[520px] dark-glass rounded-3xl border border-cyan-500/30 shadow-2xl flex flex-col overflow-hidden text-slate-100 z-50" id="aria-terminal">
+<!-- Terminal Header -->
+<div class="px-4 py-3 bg-slate-900/90 border-b border-cyan-500/20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-xs font-mono font-bold tracking-wider text-cyan-300">ARIA // NEURAL INTERFACE v4.0</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-slate-400 hover:text-white text-xs p-1" id="aria-sound-btn" onclick="toggleAriaSound()" title="Toggle Sound">🔊</button>
+<button class="text-slate-400 hover:text-white p-1 text-sm font-bold" onclick="toggleAriaChat()">✕</button>
+</div>
+</div>
+<!-- Message Stream -->
+<div class="flex-grow p-4 overflow-y-auto space-y-3 text-xs font-sans" id="aria-messages">
+<!-- Welcome Message -->
+<div class="flex items-start gap-2.5">
+<div class="w-6 h-6 rounded-full bg-cyan-600 flex items-center justify-center shrink-0 text-[10px] font-bold text-white">AI</div>
+<div class="bg-slate-800/90 border border-slate-700/80 p-3 rounded-2xl rounded-tl-none space-y-2 text-slate-200 leading-relaxed">
+<p>Greetings! I am <strong>Aria v4.0</strong>, Mohammad Rehan's neural intelligence companion. I have full knowledge of his BCA education, his retail leadership at Ladies Zone Patna since 2021, and his software projects.</p>
+<p>How may I assist you today?</p>
+</div>
+</div>
+</div>
+<!-- Quick Action Chips -->
+<div class="px-3 py-2 bg-slate-900/70 border-t border-slate-800 flex gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap">
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('Hi, who is Mohammad Rehan?')">👋 Who is Rehan?</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('What we do and how do you do it?')">⚡ What &amp; How</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('How does this website work?')">🌐 How Site Works</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('Tell me about Project Phoenix and Ash Ledger')">🛡️ Phoenix &amp; WAL</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('How can I download the official resume?')">📄 Resume PDF</button>
+<button class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[11px] px-2.5 py-1 rounded-lg border border-cyan-500/20 transition" onclick="sendAriaPreset('How can I contact or hire Mohammad Rehan?')">📲 WhatsApp</button>
+</div>
+<!-- Chat Input Bar -->
+<div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
+<input class="flex-grow bg-slate-800 border border-slate-700 text-slate-200 text-xs px-3 py-2.5 rounded-xl focus:outline-none focus:border-cyan-500" id="aria-input" onkeydown="if(event.key==='Enter') sendAriaMessage()" placeholder="Ask Aria anything about Rehan..." type="text"/>
+<button class="bg-cyan-600 hover:bg-cyan-500 text-white p-2.5 rounded-xl transition flex items-center justify-center" onclick="sendAriaMessage()">
+<i class="w-3.5 h-3.5" data-lucide="send"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- CORE SCRIPT LOGIC -->
+<script>
+
+        // Initialize Lucide Icons & Cookie Consent Persistence
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Check if cookie consent was already granted
+            if (localStorage.getItem('cookie_consent_accepted') === 'true') {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) banner.remove();
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Cookie Banner Management
+        function acceptCookies() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                try {
+                    localStorage.setItem('cookie_consent_accepted', 'true');
+                } catch (e) {}
+                banner.style.opacity = '0';
+                banner.style.pointerEvents = 'none';
+                setTimeout(() => banner.remove(), 250);
+            }
+        }
+
+        function dismissCookies() {
+            acceptCookies();
+        }
+
+
+
+        // Resume Download Simulation / Handler
+
+        function downloadResumePDF(e) {
+
+            e.preventDefault();
+
+            alert("Initiating secure download for Mohammad_Rehan_Resume.pdf ...");
+
+            // Trigger sample PDF download action
+
+            const blob = new Blob(["Mohammad Rehan - BCA Graduate & Store Manager Resume Content. Patna, Bihar. +91 70915 18548."], { type: 'application/pdf' });
+
+            const url = window.URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+
+            a.href = url;
+
+            a.download = 'Mohammad_Rehan_Resume.pdf';
+
+            document.body.appendChild(a);
+
+            a.click();
+
+            window.URL.revokeObjectURL(url);
+
+            a.remove();
+
+        }
+
+
+
+        // ARIA Neural Intelligence Engine v4.2 is governed by aria_neural_engine.js
+    </script>
+<script>
+
+// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    document.querySelectorAll('a').forEach(link => {
+
+        link.addEventListener('click', function(e) {
+
+            const href = this.getAttribute('href');
+
+            if (!href) return;
+
+            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
+
+                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+
+                const hashPart = href.includes('#') ? href.split('#')[1] : null;
+
+                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+
+                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+
+                if (localEl) {
+
+                    e.preventDefault();
+
+                    localEl.scrollIntoView({ behavior: 'smooth' });
+
+                }
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+</body>
+</html>

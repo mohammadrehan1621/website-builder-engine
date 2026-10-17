@@ -1,0 +1,60 @@
+{
+  "quarantined_hashes": {
+    "85bfe642168d24f671347f3a9dc39cfb93dedb5928c9a58aa5e90cb0e4370029": {
+      "quarantined_at": "2026-10-17 11:53:59",
+      "context": "compiler_ast_parser",
+      "error_type": "ValueError",
+      "error_message": "AST Fatal Crash: Unhandled illegal token syntax in 'SELECT * FROM users WHERE '1'='"
+    },
+    "42e82902504f16a5e396c7ceab228f70b79c0abd7d6eb6e0ca1d1df1be8e71bc": {
+      "quarantined_at": "2026-10-17 11:54:01",
+      "context": "heavy_image_render_buffer",
+      "error_type": "MemoryError",
+      "error_message": "Simulated OutOfMemory: Task requested 500MB exceeding 150MB heap ceiling!"
+    },
+    "ddcb0ace97c5704824a4e6a1624cbedfd89afd84f67ef88f47fdf2f4c816bfed": {
+      "quarantined_at": "2026-10-17 11:54:01",
+      "context": "upstream_cloud_call",
+      "error_type": "ConnectionResetError",
+      "error_message": "503 Service Unavailable: Cloudflare Edge connection reset by peer"
+    },
+    "929cc80995be6ef122145b7c76b04ef9c0b34f1ccf06fd984d22c85a5aef64fa": {
+      "quarantined_at": "2026-10-17 12:09:15",
+      "context": "extreme_memory_pipeline",
+      "error_type": "MemoryError",
+      "error_message": "Simulated OutOfMemory: Requested 800MB exceeds maximum safety envelope!"
+    }
+  },
+  "circuit_breakers": {
+    "test_api_gateway_1792218241": {
+      "state": "CLOSED",
+      "consecutive_failures": 1,
+      "last_failure_time": 1792218241.458226,
+      "tripped_count": 0
+    },
+    "test_api_gateway_1792218271": {
+      "state": "OPEN",
+      "consecutive_failures": 3,
+      "last_failure_time": 1792218272.0284584,
+      "tripped_count": 1
+    },
+    "gemini_fleet_api": {
+      "state": "CLOSED",
+      "consecutive_failures": 1,
+      "last_failure_time": 1792223756.5345917,
+      "tripped_count": 0
+    },
+    "test_api_gateway_1792222047": {
+      "state": "OPEN",
+      "consecutive_failures": 3,
+      "last_failure_time": 1792222047.053219,
+      "tripped_count": 1
+    },
+    "test_api_gateway_1792223704": {
+      "state": "OPEN",
+      "consecutive_failures": 3,
+      "last_failure_time": 1792223704.7306855,
+      "tripped_count": 1
+    }
+  }
+}

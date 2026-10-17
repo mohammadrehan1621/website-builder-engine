@@ -1,0 +1,6 @@
+# Autonomous AI Studio - Search Engine Directives
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mohammadrehan.pages.dev/sitemap.xml
