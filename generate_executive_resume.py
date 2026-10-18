@@ -37,14 +37,14 @@ High-impact Software Architect and Operations Leader with 4+ years of hands-on e
 - **Step 4 (Aegis Post-Audit)**: Mathematical re-verification guaranteeing zero precision drift, zero race conditions, and 100% wallet profit retention.
 - **Step 5 (Perpetual Hardening)**: Continuous closed-loop iteration resulting in titanium immunity against unforeseen exchange and runtime anomalies.
 
-[PAGEBREAK]
-
 ### Indian Quant Options Sniper — Institutional Derivatives Execution Engine
 - Engineered an institutional-grade, multi-agent algorithmic options execution engine deployed on AWS Mumbai (ap-south-1) with sub-8ms deterministic fiber proximity to NSE co-location.
 - Implemented single direct atomic routing for <=24 lots (390 NIFTY qty), eliminating retail double-brokerage penalties and 500ms market-maker front-running lag.
 - Anchored dynamic stop-loss to NIFTY Spot 15m VWAP structure rather than option premium noise, backed by a 35% emergency disaster ceiling and a 30% capital reserve lock.
 - Automated a 13:30 IST Expiry Day Theta Filter to eliminate 0-DTE time decay slaughter, automatically routing breakout momentum to next-week contracts.
 - Secured live operations under 24/7 systemd autopilot (0.00 load average, 2GB swap protection) isolated behind an encrypted private WireGuard mesh (ZTNA).
+
+[PAGEBREAK]
 
 ### AegisOps: Autonomous AI Agent Operations SaaS — The Commercial Startup Platform
 - Commercialized The Holy Trinity resilience engine into a standalone multi-tenant B2B SaaS platform for developers and enterprises deploying autonomous AI agent swarms.
