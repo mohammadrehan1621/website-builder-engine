@@ -183,7 +183,10 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 <!-- MAIN CONTACT CONTENT -->
 <main class="flex-grow">
 <!-- Hero Section -->
-<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200 overflow-hidden">
+<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200 overflow-hidden" id="hero-section">
+<!-- Interactive Neural Network Constellation Canvas -->
+<canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
+
 <!-- Subtle Grid Texture -->
 <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
 
@@ -192,13 +195,21 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl relative z-10">
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-4 border border-emerald-200/80 shadow-sm animate-pulse-glow">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-3 border border-emerald-200/80 shadow-sm animate-pulse-glow">
 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
 <span>🟢 Available for Software Architecture, Tech Leadership &amp; High-Impact Roles</span>
 </div>
-<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+
+<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-2">
     Let’s Build <span class="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">Resilient, High-Impact Systems</span> Together.
 </h1>
+
+<!-- Dynamic Interactive Role Rotator -->
+<div class="h-8 flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-3">
+    <span id="contact-role-rotator">Software Architecture &amp; Tech Leadership</span>
+    <span class="inline-block w-0.5 h-4 bg-indigo-600 animate-pulse ml-1 align-middle"></span>
+</div>
+
 <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
     Architecting high-throughput distributed engines, institutional quant trading systems, enterprise web platforms, or resilient AI agent workflows? Reach out directly via the channels below or submit an inquiry through the verified portal.
 </p>
@@ -252,21 +263,45 @@ IST (UTC+5:30) / Edge
 </div>
 </div>
 </section>
+
 <!-- Contact Grid Section -->
 <section class="py-10 bg-slate-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-<!-- Left Column: Direct Contact Cards & Quick Copy -->
-<div class="lg:col-span-5 space-y-6">
-<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-<h2 class="text-xl font-bold text-slate-900">Direct Contact Information</h2>
+
+<!-- Interactive Section Layout Tabs -->
+<div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+  <button id="contact-tab-btn-all" onclick="switchContactTab('all')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5" data-lucide="layout-grid"></i>
+    <span>Combined View</span>
+  </button>
+  <button id="contact-tab-btn-direct" onclick="switchContactTab('direct')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="zap"></i>
+    <span>Direct Fast-Connect</span>
+  </button>
+  <button id="contact-tab-btn-form" onclick="switchContactTab('form')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="mail"></i>
+    <span>Send Proposal Form</span>
+  </button>
+  <button id="contact-tab-btn-sla" onclick="switchContactTab('sla')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5 text-amber-600" data-lucide="shield-check"></i>
+    <span>SLA &amp; Compliance Details</span>
+  </button>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start" id="contact-grid-container">
+
+<!-- Left Column: Direct Contact Cards & 3D Holographic Guarantee -->
+<div class="lg:col-span-5 space-y-6 transition-all duration-300" id="contact-col-direct">
+<div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+<h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+  Direct Contact Information
+</h2>
 <p class="text-sm text-slate-600 leading-relaxed">
-
-                                Prefer reaching out directly without filling out forms? Here are my verified direct communication channels:
-
-                            </p>
+    Prefer reaching out directly without filling out forms? Here are my verified direct communication channels:
+</p>
 <!-- Email Card with 1-Click Copy -->
-<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4 hover:border-slate-300 transition">
 <div class="flex items-center gap-3 overflow-hidden">
 <div class="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
 <i class="w-5 h-5" data-lucide="mail"></i>
@@ -278,11 +313,10 @@ IST (UTC+5:30) / Edge
 </div>
 <button class="px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" onclick="copyEmail()" title="Copy Email">
 <i class="w-3.5 h-3.5" data-lucide="copy"></i> Copy
-
-                                </button>
+</button>
 </div>
 <!-- Phone / WhatsApp Card -->
-<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4">
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4 hover:border-slate-300 transition">
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center flex-shrink-0">
 <i class="w-5 h-5" data-lucide="phone"></i>
@@ -294,8 +328,7 @@ IST (UTC+5:30) / Edge
 </div>
 <a class="px-3 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" href="https://wa.me/917091518548?text=Hello!%20I%20am%20reaching%20out%20from%20your%20portfolio." rel="noopener noreferrer" target="_blank">
 <i class="w-3.5 h-3.5" data-lucide="message-circle"></i> Chat
-
-                                </a>
+</a>
 </div>
 <!-- Location Card -->
 <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
@@ -308,27 +341,35 @@ IST (UTC+5:30) / Edge
 </div>
 </div>
 </div>
-<!-- Professional Guarantee Card -->
-<div class="bg-slate-900 text-white p-8 rounded-2xl shadow-xl space-y-4">
+
+<!-- 3D Holographic Professional Guarantee Card -->
+<div id="contact-tilt-card" class="bg-slate-900 text-white p-7 sm:p-8 rounded-2xl shadow-xl space-y-4 relative overflow-hidden transition-transform duration-200 ease-out will-change-transform border border-slate-800">
+<!-- Dynamic Cursor Light Glow Overlay -->
+<div id="contact-glow-overlay" class="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.22),transparent_70%)]"></div>
+
+<div class="flex items-center justify-between relative z-10">
 <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-emerald-400">
 <i class="w-5 h-5" data-lucide="shield-check"></i>
 </div>
-<h3 class="text-lg font-bold">Fast &amp; Transparent Communication</h3>
-<p class="text-xs text-slate-300 leading-relaxed">
-
-                                Whether you need a functional store website, inventory billing software, or retail consultation, expect clear timelines, clean code, and practical problem-solving.
-
-                            </p>
-<div class="pt-2">
-<a class="inline-flex items-center gap-2 text-xs font-bold text-white bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-xl transition" href="index.html#resume">
-<i class="w-4 h-4" data-lucide="download"></i> Download Full Resume (PDF)
-
-                                </a>
+<span class="text-[10px] font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Verified Channel</span>
+</div>
+<h3 class="text-lg font-bold relative z-10">Fast &amp; Transparent Communication</h3>
+<p class="text-xs text-slate-300 leading-relaxed relative z-10">
+Whether you need high-throughput distributed engines, institutional quant execution setups, or retail POS consultation, expect deterministic timelines, verified code, and zero capital leakage.
+</p>
+<div class="pt-2 relative z-10 flex items-center gap-3">
+<a class="inline-flex items-center gap-2 text-xs font-bold text-white bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-xl transition border border-white/10" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
+<i class="w-4 h-4 text-emerald-400" data-lucide="download"></i> Download Resume (PDF)
+</a>
+<a class="text-xs text-indigo-400 hover:text-indigo-300 transition flex items-center gap-1 font-semibold" href="projects.html">
+<span>View Architecture</span> <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
 </div>
 </div>
 </div>
+
 <!-- Right Column: Interactive Inquiry Form -->
-<div class="lg:col-span-7">
+<div class="lg:col-span-7 transition-all duration-300" id="contact-col-form">
 <div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm relative">
 <!-- Success Toast Notification (Hidden by default) -->
 <div class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3" id="form-success-toast">
@@ -389,6 +430,69 @@ IST (UTC+5:30) / Edge
 </form>
 </div>
 </div>
+
+<!-- Hidden Dedicated SLA & Production Compliance Panel (Activates via SLA Tab) -->
+<div class="hidden lg:col-span-12 max-w-4xl mx-auto w-full space-y-6 transition-all duration-300" id="contact-col-sla">
+  <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl space-y-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-2 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Verified Production SLA &amp; Zero-Trust Protocol</span>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 tracking-tight">Enterprise Architectural Engagement Standards</h3>
+      </div>
+      <div class="text-left sm:text-right font-mono text-xs text-slate-500">
+        <span class="block text-emerald-600 font-bold text-sm">Target SLA: &lt; 2 Hours</span>
+        <span>Patna (IST) &amp; Global Edge Remote</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+        <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+        </div>
+        <h4 class="font-bold text-slate-900 text-sm">Zero-Trust Network Access</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Production environments and architecture discussions are air-gapped behind private WireGuard mesh tunnels with strict ZTNA endpoint authentication.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+        <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center">
+          <i class="w-4 h-4" data-lucide="cpu"></i>
+        </div>
+        <h4 class="font-bold text-slate-900 text-sm">Deterministic Zero Leakage</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Nassim Taleb's Golden Rule of Resilience enforced across all client engagements: zero data loss, atomic single-route execution, and sub-50ms MTTR.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
+        <div class="w-9 h-9 rounded-xl bg-amber-600 text-white flex items-center justify-center">
+          <i class="w-4 h-4" data-lucide="clock"></i>
+        </div>
+        <h4 class="font-bold text-slate-900 text-sm">Rapid Direct Response</h4>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Immediate dispatch on verified direct WhatsApp (+91 70915 18548) and verified email. Full-time architectural leadership readiness.
+        </p>
+      </div>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-950 text-white border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="space-y-1">
+        <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Fastest Direct Route</span>
+        <p class="text-sm text-slate-200 font-medium">Have an urgent architectural role, quant engine review, or business platform proposal?</p>
+      </div>
+      <a class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs transition shadow-md whitespace-nowrap flex items-center gap-2" href="https://wa.me/917091518548?text=Hello%20Rehan,%20I%20am%20interested%20in%20an%20architectural%20engagement." rel="noopener noreferrer" target="_blank">
+        <i class="w-4 h-4" data-lucide="message-square"></i>
+        <span>Direct WhatsApp (+91 70915 18548)</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 </div>
 </div>
 </section>
@@ -777,43 +881,252 @@ IST (UTC+5:30) / Edge
 <script>
 
 // Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
-
 document.addEventListener('DOMContentLoaded', () => {
-
     document.querySelectorAll('a').forEach(link => {
-
         link.addEventListener('click', function(e) {
-
             const href = this.getAttribute('href');
-
             if (!href) return;
-
             if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
-
                 const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
-
                 const hashPart = href.includes('#') ? href.split('#')[1] : null;
-
                 const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
-
                 const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
-
                 if (localEl) {
-
                     e.preventDefault();
-
                     localEl.scrollIntoView({ behavior: 'smooth' });
-
                 }
-
             }
-
         });
+    });
+});
+</script>
 
+<script>
+// ==========================================
+// INTERACTIVE CONTACT SCRIPTS SUITE
+// ==========================================
+
+// 1. Interactive Neural Constellation Canvas
+(function initNeuralCanvas() {
+    const canvas = document.getElementById('neural-mesh-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = canvas.parentElement.offsetWidth;
+    let height = canvas.height = canvas.parentElement.offsetHeight;
+
+    window.addEventListener('resize', () => {
+        if (!canvas.parentElement) return;
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
     });
 
-});
+    const particles = [];
+    const count = Math.min(Math.floor((width * height) / 14000), 65);
+    const mouse = { x: null, y: null, maxDist: 150 };
 
+    window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+
+    window.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    for (let i = 0; i < count; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.7,
+            vy: (Math.random() - 0.5) * 0.7,
+            radius: Math.random() * 2 + 1.2
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(99, 102, 241, 0.45)';
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const p2 = particles[j];
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 110) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = `rgba(99, 102, 241, ${0.25 * (1 - dist / 110)})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+                }
+            }
+
+            if (mouse.x !== null && mouse.y !== null) {
+                const mdx = p.x - mouse.x;
+                const mdy = p.y - mouse.y;
+                const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                if (mdist < mouse.maxDist) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.45 * (1 - mdist / mouse.maxDist)})`;
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+})();
+
+// 2. Dynamic Role Typewriter / Text Rotator
+(function initContactRoleRotator() {
+    const el = document.getElementById('contact-role-rotator');
+    if (!el) return;
+    const roles = [
+        "Software Architecture & Tech Leadership",
+        "High-Throughput Distributed Systems",
+        "Institutional Quant Trading Engines",
+        "Autonomous Multi-Agent AI Swarms",
+        "Commercial Enterprise POS & Retail ERP",
+        "Immediate Availability & Rapid SLA"
+    ];
+    let roleIndex = 0;
+    let charIndex = roles[0].length;
+    let isDeleting = true;
+    let pauseCounter = 0;
+
+    function tick() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            if (pauseCounter > 0) {
+                pauseCounter--;
+                setTimeout(tick, 100);
+                return;
+            }
+            charIndex--;
+            el.textContent = currentRole.substring(0, charIndex);
+            if (charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(tick, 300);
+                return;
+            }
+            setTimeout(tick, 25);
+        } else {
+            charIndex++;
+            el.textContent = currentRole.substring(0, charIndex);
+            if (charIndex === currentRole.length) {
+                isDeleting = true;
+                pauseCounter = 25;
+                setTimeout(tick, 100);
+                return;
+            }
+            setTimeout(tick, 45);
+        }
+    }
+    pauseCounter = 20;
+    setTimeout(tick, 1000);
+})();
+
+// 3. 3D Holographic Card Tilt
+(function init3DContactTilt() {
+    const card = document.getElementById('contact-tilt-card');
+    const glow = document.getElementById('contact-glow-overlay');
+    if (!card) return;
+
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -6;
+        const rotateY = ((x - centerX) / centerX) * 6;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+        if (glow) {
+            glow.style.opacity = '1';
+            glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(99, 102, 241, 0.22), transparent 60%)`;
+        }
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        if (glow) glow.style.opacity = '0';
+    });
+})();
+
+// 4. Interactive Section Layout Tabs Switcher
+function switchContactTab(tabName) {
+    const btnAll = document.getElementById('contact-tab-btn-all');
+    const btnDirect = document.getElementById('contact-tab-btn-direct');
+    const btnForm = document.getElementById('contact-tab-btn-form');
+    const btnSla = document.getElementById('contact-tab-btn-sla');
+
+    const colDirect = document.getElementById('contact-col-direct');
+    const colForm = document.getElementById('contact-col-form');
+    const colSla = document.getElementById('contact-col-sla');
+
+    [btnAll, btnDirect, btnForm, btnSla].forEach(btn => {
+        if (!btn) return;
+        btn.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5";
+    });
+
+    if (tabName === 'all') {
+        if (btnAll) btnAll.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
+        if (colDirect) {
+            colDirect.classList.remove('hidden', 'lg:col-span-12', 'max-w-2xl', 'mx-auto');
+            colDirect.classList.add('lg:col-span-5');
+        }
+        if (colForm) {
+            colForm.classList.remove('hidden', 'lg:col-span-12', 'max-w-3xl', 'mx-auto');
+            colForm.classList.add('lg:col-span-7');
+        }
+        if (colSla) colSla.classList.add('hidden');
+    } else if (tabName === 'direct') {
+        if (btnDirect) btnDirect.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
+        if (colDirect) {
+            colDirect.classList.remove('hidden', 'lg:col-span-5');
+            colDirect.classList.add('lg:col-span-12', 'max-w-2xl', 'mx-auto');
+        }
+        if (colForm) colForm.classList.add('hidden');
+        if (colSla) colSla.classList.add('hidden');
+    } else if (tabName === 'form') {
+        if (btnForm) btnForm.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
+        if (colDirect) colDirect.classList.add('hidden');
+        if (colForm) {
+            colForm.classList.remove('hidden', 'lg:col-span-7');
+            colForm.classList.add('lg:col-span-12', 'max-w-3xl', 'mx-auto');
+        }
+        if (colSla) colSla.classList.add('hidden');
+    } else if (tabName === 'sla') {
+        if (btnSla) btnSla.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
+        if (colDirect) colDirect.classList.add('hidden');
+        if (colForm) colForm.classList.add('hidden');
+        if (colSla) colSla.classList.remove('hidden');
+    }
+
+    if (window.lucide && window.lucide.createIcons) {
+        window.lucide.createIcons();
+    }
+}
 </script>
 </body>
 </html>

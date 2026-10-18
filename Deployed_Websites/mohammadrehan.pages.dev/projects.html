@@ -210,27 +210,58 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 <!-- Main Content Area -->
 <main class="flex-grow">
 <!-- Page Header -->
-<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-white border-b border-slate-200 overflow-hidden">
+<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
+<!-- Interactive Neural Network Constellation Canvas -->
+<canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
+
 <!-- Subtle Grid Texture -->
 <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
 
+<!-- Ambient Glowing Orbs -->
+<div class="absolute top-0 left-1/4 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold mb-4 border border-slate-200">
-<i class="w-3.5 h-3.5 text-slate-900" data-lucide="folder-git-2"></i>
-<span>Production &amp; Experimental Systems Showcase</span>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-slate-700 text-xs font-semibold mb-3 border border-slate-200 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Production &amp; Autonomous Systems Showcase</span>
 </div>
-<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl mx-auto">
-Crafted Digital Solutions &amp; Business Software
+<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-4xl mx-auto mb-2">
+Architectural Engineering &amp; High-Throughput Systems
 </h1>
-<p class="mt-3 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-Explore live retail platforms, automated inventory concepts, AI-assisted trading software experiments, and modern web applications built with precision.
+
+<!-- Dynamic Interactive Role / Project Rotator -->
+<div class="h-8 flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-4">
+    <span id="projects-role-rotator">AegisOps — Autonomous AI Agent Operations SaaS</span>
+    <span class="inline-block w-0.5 h-4 bg-indigo-600 animate-pulse ml-1 align-middle"></span>
+</div>
+
+<p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6">
+Explore live autonomous self-healing swarms, sub-8ms quant options sniper engines, enterprise retail POS platforms, and edge web infrastructure.
 </p>
+
 <!-- Project Filter Buttons -->
-<div class="mt-6 flex flex-wrap justify-center gap-2.5">
-<button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-slate-900 text-white shadow-sm transition" onclick="filterProjects('all')">All Systems</button>
-<button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition" onclick="filterProjects('web')">Web Platforms</button>
-<button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition" onclick="filterProjects('software')">Business &amp; Billing Software</button>
-<button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 transition" onclick="filterProjects('ai')">AI &amp; Trading Tools</button>
+<div class="flex flex-wrap justify-center gap-2">
+<button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5" onclick="filterProjects('all')">
+    <i class="w-3.5 h-3.5" data-lucide="layout-grid"></i>
+    <span>All Systems (7)</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" onclick="filterProjects('resilience')">
+    <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield-check"></i>
+    <span>Antifragile Resilience &amp; SaaS (2)</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" onclick="filterProjects('ai')">
+    <i class="w-3.5 h-3.5 text-amber-600" data-lucide="cpu"></i>
+    <span>Quant Algorithmic &amp; AI (3)</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" onclick="filterProjects('retail')">
+    <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="receipt"></i>
+    <span>Enterprise Retail POS (2)</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5" onclick="filterProjects('web')">
+    <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="globe"></i>
+    <span>Luxury Web Edge (1)</span>
+</button>
 </div>
 </div>
 </section>
@@ -240,14 +271,14 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
             <!-- Project 0: The Holy Trinity: Aegis • Chaos • Phoenix (Autonomous Antifragile Resilience Framework) -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="software">
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="resilience software">
                 <div class="p-8">
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-semibold border border-amber-200">
                             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                             Antifragile Resilience Framework
                         </span>
-                        <span class="text-xs text-slate-400 font-medium">The Holy Trinity Architecture</span>
+                        <span class="text-xs text-slate-400 font-mono font-medium">The Holy Trinity Architecture</span>
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 tracking-tight">The Holy Trinity: Aegis • Chaos • Phoenix</h3>
                     <p class="text-xs font-mono text-indigo-600 font-bold mt-1">Autonomous Self-Healing Triad &amp; Level-5 Continuous Chaos Sentinel</p>
@@ -255,139 +286,156 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
                         An institutional-grade antifragile triad enforcing the <b>Golden Rule of Resilience</b>: software must auto-heal into a permanently evolved, stronger state rather than vulnerable status-quo recovery.
                     </p>
 
-                    <!-- The 3 Pillars of The Holy Trinity -->
-                    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-3">
-                        <div class="bg-indigo-50/60 border border-indigo-100 rounded-xl p-3.5 space-y-1.5">
-                            <div class="flex items-center gap-2">
-                                <span class="text-base">🛡️</span>
-                                <span class="text-xs font-bold text-indigo-900 tracking-tight">AEGIS: The Shield</span>
-                            </div>
-                            <p class="text-[11px] text-slate-600 leading-snug">
-                                Predictive Immunity &amp; ZTNA WireGuard mesh perimeter. Enforces dynamic AST poison quarantine and a hard 35% disaster drawdown ceiling.
-                            </p>
-                            <span class="inline-block text-[10px] font-mono bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-semibold">Zero-Trust Perimeter</span>
-                        </div>
+                    <!-- Interactive Architecture Explorer Sub-Tabs -->
+                    <div class="mt-5 flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl text-xs">
+                        <button id="trinity-tab-pillars" onclick="switchTrinityCardTab('pillars')" class="trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield"></i>
+                            <span>Triad Pillars</span>
+                        </button>
+                        <button id="trinity-tab-lifecycle" onclick="switchTrinityCardTab('lifecycle')" class="trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="refresh-cw"></i>
+                            <span>5-Step Lifecycle</span>
+                        </button>
+                        <button id="trinity-tab-traps" onclick="switchTrinityCardTab('traps')" class="trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="lock"></i>
+                            <span>1% Safeguards</span>
+                        </button>
+                    </div>
 
-                        <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-3.5 space-y-1.5">
-                            <div class="flex items-center gap-2">
-                                <span class="text-base">⚡</span>
-                                <span class="text-xs font-bold text-amber-900 tracking-tight">CHAOS: The Trial</span>
+                    <!-- Pane 1: The 3 Pillars of The Holy Trinity -->
+                    <div id="trinity-pane-pillars" class="trinity-pane mt-5 transition-all duration-200">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <div class="bg-indigo-50/60 border border-indigo-100 rounded-xl p-3.5 space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">🛡️</span>
+                                    <span class="text-xs font-bold text-indigo-900 tracking-tight">AEGIS: The Shield</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 leading-snug">
+                                    Predictive Immunity &amp; ZTNA WireGuard mesh perimeter. Enforces dynamic AST poison quarantine and a hard 35% disaster drawdown ceiling.
+                                </p>
+                                <span class="inline-block text-[10px] font-mono bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-semibold">Zero-Trust Perimeter</span>
                             </div>
-                            <p class="text-[11px] text-slate-600 leading-snug">
-                                Level-5 Doomsday Chaos Gauntlet: 50-thread concurrent stampedes, 800MB heap shockwaves, ReDoS bombs, and bitflips survived with 100% defense.
-                            </p>
-                            <span class="inline-block text-[10px] font-mono bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold">100% Certified Defense</span>
-                        </div>
 
-                        <div class="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3.5 space-y-1.5">
-                            <div class="flex items-center gap-2">
-                                <span class="text-base">🔥</span>
-                                <span class="text-xs font-bold text-emerald-900 tracking-tight">PHOENIX: The Rebirth</span>
+                            <div class="bg-amber-50/60 border border-amber-100 rounded-xl p-3.5 space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">⚡</span>
+                                    <span class="text-xs font-bold text-amber-900 tracking-tight">CHAOS: The Trial</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 leading-snug">
+                                    Level-5 Doomsday Chaos Gauntlet: 50-thread concurrent stampedes, 800MB heap shockwaves, ReDoS bombs, and bitflips survived with 100% defense.
+                                </p>
+                                <span class="inline-block text-[10px] font-mono bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold">100% Certified Defense</span>
                             </div>
-                            <p class="text-[11px] text-slate-600 leading-snug">
-                                Ash Ledger WAL micro-journaling guarantees zero state loss with sub-50ms MTTR hot process resurrection and EvolutionaryHardener (+25% stiffening).
-                            </p>
-                            <span class="inline-block text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">MTTR: 11ms–60ms</span>
+
+                            <div class="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3.5 space-y-1.5">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">🔥</span>
+                                    <span class="text-xs font-bold text-emerald-900 tracking-tight">PHOENIX: The Rebirth</span>
+                                </div>
+                                <p class="text-[11px] text-slate-600 leading-snug">
+                                    Ash Ledger WAL micro-journaling guarantees zero state loss with sub-50ms MTTR hot process resurrection and EvolutionaryHardener (+25% stiffening).
+                                </p>
+                                <span class="inline-block text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">MTTR: 11ms–60ms</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Why This Closed-Loop Works (The 5-Step Perpetual Hardening Lifecycle) -->
-                    <div class="mt-6 bg-slate-900 text-white rounded-xl p-5 border border-slate-800 space-y-4">
-                        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                            <div class="flex items-center gap-2">
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                <h4 class="text-xs font-bold tracking-tight text-white uppercase font-mono">Why This Closed-Loop Works: 5-Step Lifecycle</h4>
-                            </div>
-                            <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-semibold">$0.00 CAPITAL IMPACT</span>
-                        </div>
-
-                        <div class="space-y-2.5 text-xs">
-                            <!-- Step 1 -->
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">1</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
-                                        <span>🛡️ Step 1: Aegis Pre-Audit</span>
-                                        <span class="text-[10px] text-indigo-300 font-mono font-medium">(Static Health &amp; Contract Verification)</span>
-                                    </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Scans the codebase with AST inspection to guarantee zero syntax traps, zero unpacking mismatches (<code class="text-indigo-300 font-mono bg-slate-950 px-1 py-0.5 rounded">validate_order</code>), and verifies precision floor quantization.
-                                    </p>
+                    <!-- Pane 2: Why This Closed-Loop Works (The 5-Step Perpetual Hardening Lifecycle) -->
+                    <div id="trinity-pane-lifecycle" class="trinity-pane mt-5 transition-all duration-200 hidden">
+                        <div class="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 space-y-4">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    <h4 class="text-xs font-bold tracking-tight text-white uppercase font-mono">Why This Closed-Loop Works: 5-Step Lifecycle</h4>
                                 </div>
+                                <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-semibold">$0.00 CAPITAL IMPACT</span>
                             </div>
 
-                            <!-- Step 2 -->
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">2</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
-                                        <span>🌪️ Step 2: Chaos Gauntlet</span>
-                                        <span class="text-[10px] text-amber-300 font-mono font-medium">(Adversarial Shock Injection)</span>
+                            <div class="space-y-2.5 text-xs">
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">1</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
+                                            <span>🛡️ Step 1: Aegis Pre-Audit</span>
+                                            <span class="text-[10px] text-indigo-300 font-mono font-medium">(Static Health &amp; Contract Verification)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Scans the codebase with AST inspection to guarantee zero syntax traps, zero unpacking mismatches (<code class="text-indigo-300 font-mono bg-slate-950 px-1 py-0.5 rounded">validate_order</code>), and verifies precision floor quantization.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Deliberately bombards the system with 8 real exchange disasters: WebSocket severing, Binance HTTP 429 rate-limit spikes, -5% flash crashes, SQLite lock contention, and toxic wicks.
-                                    </p>
                                 </div>
-                            </div>
 
-                            <!-- Step 3 -->
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">3</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
-                                        <span>🔥 Step 3: Phoenix &amp; Antifragile Evolution</span>
-                                        <span class="text-[10px] text-emerald-300 font-mono font-medium">(Heal &amp; Mutate)</span>
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">2</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
+                                            <span>🌪️ Step 2: Chaos Gauntlet</span>
+                                            <span class="text-[10px] text-amber-300 font-mono font-medium">(Adversarial Shock Injection)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Deliberately bombards the system with 8 real exchange disasters: WebSocket severing, Binance HTTP 429 rate-limit spikes, -5% flash crashes, SQLite lock contention, and toxic wicks.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Phoenix detects stress, auto-heals any thread in &lt;500ms with $0.00 capital impact, and invokes the Antifragile Mutation Engine (<code class="text-emerald-300 font-mono bg-slate-950 px-1 py-0.5 rounded">cryptobot/antifragile.py</code>) to increment Genomic Generation and elevate Immunity Score.
-                                    </p>
                                 </div>
-                            </div>
 
-                            <!-- Step 4 -->
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">4</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
-                                        <span>🛡️ Step 4: Aegis Post-Audit</span>
-                                        <span class="text-[10px] text-cyan-300 font-mono font-medium">(Mathematical Re-Verification)</span>
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">3</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
+                                            <span>🔥 Step 3: Phoenix &amp; Antifragile Evolution</span>
+                                            <span class="text-[10px] text-emerald-300 font-mono font-medium">(Heal &amp; Mutate)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Phoenix detects stress, auto-heals any thread in &lt;500ms with $0.00 capital impact, and invokes the Antifragile Mutation Engine (<code class="text-emerald-300 font-mono bg-slate-950 px-1 py-0.5 rounded">cryptobot/antifragile.py</code>) to increment Genomic Generation and elevate Immunity Score.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Re-audits mutated parameters to mathematically guarantee that evolution caused zero precision drift, zero race conditions, and 100% wallet profit retention.
-                                    </p>
                                 </div>
-                            </div>
 
-                            <!-- Step 5 -->
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">5</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
-                                        <span>🔄 Step 5: Perpetual Hardening</span>
-                                        <span class="text-[10px] text-purple-300 font-mono font-medium">(Continuous Evolutionary Loop)</span>
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">4</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
+                                            <span>🛡️ Step 4: Aegis Post-Audit</span>
+                                            <span class="text-[10px] text-cyan-300 font-mono font-medium">(Mathematical Re-Verification)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Re-audits mutated parameters to mathematically guarantee that evolution caused zero precision drift, zero race conditions, and 100% wallet profit retention.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        The closed loop repeats perpetually. Every completed pass makes the engine systematically more resilient to unforeseen Binance and exchange anomalies.
-                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">5</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex flex-wrap items-center gap-1.5 text-xs">
+                                            <span>🔄 Step 5: Perpetual Hardening</span>
+                                            <span class="text-[10px] text-purple-300 font-mono font-medium">(Continuous Evolutionary Loop)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            The closed loop repeats perpetually. Every completed pass makes the engine systematically more resilient to unforeseen Binance and exchange anomalies.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- The 3 Critical Institutional Safeguards (The 1% Rule) -->
-                        <div class="border-t border-slate-800 pt-3 space-y-2">
+                    <!-- Pane 3: The 3 Critical Institutional Safeguards (The 1% Rule) -->
+                    <div id="trinity-pane-traps" class="trinity-pane mt-5 transition-all duration-200 hidden">
+                        <div class="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 space-y-3">
                             <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 font-mono">The 3 Institutional Traps Fortified (1% Rule)</span>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                                <div class="bg-slate-850/80 p-2.5 rounded-lg border border-slate-800">
-                                    <div class="text-[10px] font-bold text-slate-200">🔒 Trap 1: Paranoia Lockout</div>
-                                    <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Biological Envelope strictly clamps Confluence [88%, 95%] and Spread [0.08%, 0.25%], preventing self-lockout.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+                                <div class="bg-slate-850/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-xs font-bold text-slate-200">🔒 Trap 1: Paranoia Lockout</div>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-snug">Biological Envelope strictly clamps Confluence [88%, 95%] and Spread [0.08%, 0.25%], preventing self-lockout.</p>
                                 </div>
-                                <div class="bg-slate-850/80 p-2.5 rounded-lg border border-slate-800">
-                                    <div class="text-[10px] font-bold text-slate-200">🛡️ Trap 2: Air-Gapped Shock</div>
-                                    <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">SimulationRAM quarantine guarantees 0 live wire leaks and certified $0.00 capital contamination during chaos drills.</p>
+                                <div class="bg-slate-850/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-xs font-bold text-slate-200">🛡️ Trap 2: Air-Gapped Shock</div>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-snug">SimulationRAM quarantine guarantees 0 live wire leaks and certified $0.00 capital contamination during chaos drills.</p>
                                 </div>
-                                <div class="bg-slate-850/80 p-2.5 rounded-lg border border-slate-800">
-                                    <div class="text-[10px] font-bold text-slate-200">🕊️ Trap 3: Evolutionary Half-Life</div>
-                                    <p class="text-[10px] text-slate-400 mt-0.5 leading-snug">Calm-Regime mean reversion smoothly decays hardened parameters back to baseline Gen 1 after consecutive calm hours.</p>
+                                <div class="bg-slate-850/80 p-3 rounded-lg border border-slate-800">
+                                    <div class="text-xs font-bold text-slate-200">🕊️ Trap 3: Evolutionary Half-Life</div>
+                                    <p class="text-[11px] text-slate-400 mt-1 leading-snug">Calm-Regime mean reversion smoothly decays hardened parameters back to baseline Gen 1 after consecutive calm hours.</p>
                                 </div>
                             </div>
                         </div>
@@ -437,7 +485,7 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
             </div>
 
             <!-- Project 1: AegisOps: Autonomous AI Agent Operations SaaS (The Commercial Startup Platform / Option C) -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="software">
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="resilience software">
                 <div class="p-8">
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold border border-indigo-200">
@@ -454,99 +502,134 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
                         A multi-tenant AgentOps platform enforcing <strong>Nassim Taleb's Golden Rule of Resilience</strong>: Multi-agent systems must never recover to a vulnerable status quo—every auto-heal permanently hardens execution envelopes and advances Genomic Generations.
                     </p>
 
-                    <!-- Key Hard Metrics Grid -->
-                    <div class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                        <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
-                            <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">MTTR Latency</span>
-                            <span class="text-base font-bold font-mono text-indigo-600">&lt;10ms</span>
-                            <span class="text-[9px] text-slate-500 block">Hot-Resurrection</span>
-                        </div>
-                        <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
-                            <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Capital Impact</span>
-                            <span class="text-base font-bold font-mono text-emerald-600">$0.00</span>
-                            <span class="text-[9px] text-slate-500 block">Zero-Loss Guarantee</span>
-                        </div>
-                        <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
-                            <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Test Coverage</span>
-                            <span class="text-base font-bold font-mono text-slate-900">19/19</span>
-                            <span class="text-[9px] text-emerald-600 font-semibold block">100% Passed</span>
-                        </div>
-                        <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
-                            <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Architecture</span>
-                            <span class="text-xs font-bold font-mono text-slate-800">Python 3.12</span>
-                            <span class="text-[9px] text-slate-500 block">FastAPI + WAL</span>
-                        </div>
+                    <!-- Interactive AegisOps Explorer Sub-Tabs -->
+                    <div class="mt-5 flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl text-xs">
+                        <button id="aegis-tab-pillars" onclick="switchAegisCardTab('pillars')" class="aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="cpu"></i>
+                            <span>4 SaaS Pillars</span>
+                        </button>
+                        <button id="aegis-tab-metrics" onclick="switchAegisCardTab('metrics')" class="aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="activity"></i>
+                            <span>Key Metrics</span>
+                        </button>
+                        <button id="aegis-tab-stack" onclick="switchAegisCardTab('stack')" class="aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5">
+                            <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="layers"></i>
+                            <span>Architecture Stack</span>
+                        </button>
                     </div>
 
-                    <!-- Four Core Pillars of AegisOps SaaS -->
-                    <div class="mt-5 bg-slate-900 rounded-xl p-5 text-white border border-slate-800 space-y-3.5">
-                        <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-                            <span class="text-xs font-bold font-mono text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                                <span>🏢 Four Core Pillars of AegisOps Mission Control</span>
-                            </span>
-                            <span class="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-mono">MVP READY</span>
-                        </div>
-
-                        <div class="space-y-2.5">
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">1</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
-                                        <span>🖥️ Web Mission Control UI (:8510)</span>
-                                    </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Streamlit Mission Control Studio with real-time agent fleet observability, live health telemetry, cost &amp; token ceiling guards, and interactive chaos injection console.
-                                    </p>
-                                </div>
+                    <!-- Pane 1: Four Core Pillars of AegisOps SaaS -->
+                    <div id="aegis-pane-pillars" class="aegis-pane mt-5 transition-all duration-200">
+                        <div class="bg-slate-900 rounded-xl p-5 text-white border border-slate-800 space-y-3.5">
+                            <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                                <span class="text-xs font-bold font-mono text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                                    <span>🏢 Four Core Pillars of AegisOps Mission Control</span>
+                                </span>
+                                <span class="text-[10px] bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded font-mono">MVP READY</span>
                             </div>
 
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">2</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
-                                        <span>🤖 Multi-Agent Fleet Registry</span>
+                            <div class="space-y-2.5">
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">1</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
+                                            <span>🖥️ Web Mission Control UI (:8510)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Streamlit Mission Control Studio with real-time agent fleet observability, live health telemetry, cost &amp; token ceiling guards, and interactive chaos injection console.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Central supervisor monitoring swarms across states (Idle, Running, Stressed, Resurrecting, Immune), tracking genomic generations and self-healing epochs.
-                                    </p>
                                 </div>
-                            </div>
 
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">3</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
-                                        <span>⚡ Public High-Throughput REST API (:8000)</span>
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">2</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
+                                            <span>🤖 Multi-Agent Fleet Registry</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Central supervisor monitoring swarms across states (Idle, Running, Stressed, Resurrecting, Immune), tracking genomic generations and self-healing epochs.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        FastAPI REST endpoints for distributed task dispatching, heartbeat auditing, state verification, and write-ahead Ash Ledger SQLite micro-journaling.
-                                    </p>
                                 </div>
-                            </div>
 
-                            <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
-                                <div class="w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">4</div>
-                                <div class="space-y-0.5">
-                                    <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
-                                        <span>📦 Downloadable Python SDK (<code class="text-cyan-300">pip install aegisops</code>)</span>
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">3</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
+                                            <span>⚡ Public High-Throughput REST API (:8000)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            FastAPI REST endpoints for distributed task dispatching, heartbeat auditing, state verification, and write-ahead Ash Ledger SQLite micro-journaling.
+                                        </p>
                                     </div>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">
-                                        Drop-in client resilience library enabling any third-party agent to auto-heal from LLM rate limits (429), hallucinated JSON, and tool timeout hangs.
-                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-3 bg-slate-800/60 p-3 rounded-lg border border-slate-750">
+                                    <div class="w-6 h-6 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs shrink-0 font-mono">4</div>
+                                    <div class="space-y-0.5">
+                                        <div class="font-bold text-slate-100 flex items-center gap-1.5 text-xs">
+                                            <span>📦 Downloadable Python SDK (<code class="text-cyan-300">pip install aegisops</code>)</span>
+                                        </div>
+                                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                                            Drop-in client resilience library enabling any third-party agent to auto-heal from LLM rate limits (429), hallucinated JSON, and tool timeout hangs.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-5 space-y-2">
-                        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Architecture Stack</h4>
-                        <div class="flex flex-wrap gap-1.5">
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">Python 3.12</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">FastAPI REST API</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">SQLite WAL Micro-Journaling</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">Streamlit Mission Control Studio</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">Rich CLI Telemetry</span>
-                            <span class="px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 text-xs font-medium border border-indigo-200">The Holy Trinity</span>
+                    <!-- Pane 2: Key Hard Metrics Grid -->
+                    <div id="aegis-pane-metrics" class="aegis-pane mt-5 transition-all duration-200 hidden">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">MTTR Latency</span>
+                                <span class="text-base font-bold font-mono text-indigo-600">&lt;10ms</span>
+                                <span class="text-[9px] text-slate-500 block">Hot-Resurrection</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Capital Impact</span>
+                                <span class="text-base font-bold font-mono text-emerald-600">$0.00</span>
+                                <span class="text-[9px] text-slate-500 block">Zero-Loss Guarantee</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Test Coverage</span>
+                                <span class="text-base font-bold font-mono text-slate-900">19/19</span>
+                                <span class="text-[9px] text-emerald-600 font-semibold block">100% Passed</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl text-center">
+                                <span class="text-[10px] text-slate-400 uppercase tracking-wider font-mono font-semibold block">Architecture</span>
+                                <span class="text-xs font-bold font-mono text-slate-800">Python 3.12</span>
+                                <span class="text-[9px] text-slate-500 block">FastAPI + WAL</span>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-4 text-xs text-indigo-950 space-y-1.5">
+                            <div class="font-bold flex items-center gap-1.5">
+                                <i class="w-4 h-4 text-indigo-600" data-lucide="shield-check"></i>
+                                <span>Deterministic Fault Recovery Guarantee</span>
+                            </div>
+                            <p class="text-slate-600 leading-relaxed text-[11px]">
+                                Verified by 19 comprehensive Pytest suites: simulated thread termination, unhandled exceptions, and deadlocks are restored in sub-10ms with state reconstructed via Ash Ledger.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pane 3: Architecture Stack -->
+                    <div id="aegis-pane-stack" class="aegis-pane mt-5 transition-all duration-200 hidden">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Integrated Technology Stack</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-lg bg-white text-slate-800 text-xs font-medium border border-slate-200">Python 3.12</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white text-slate-800 text-xs font-medium border border-slate-200">FastAPI REST API</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white text-slate-800 text-xs font-medium border border-slate-200">SQLite WAL Micro-Journaling</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white text-slate-800 text-xs font-medium border border-slate-200">Streamlit Mission Control Studio</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white text-slate-800 text-xs font-medium border border-slate-200">Rich CLI Telemetry</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-indigo-100 text-indigo-800 text-xs font-medium border border-indigo-200 font-semibold">The Holy Trinity Antifragile Engine</span>
+                            </div>
+                            <p class="text-[11px] text-slate-500 leading-relaxed mt-2">
+                                Clean modular decoupling enables deploying as a standalone developer appliance, microservices mesh, or enterprise SaaS cluster.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -565,7 +648,7 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
             </div>
 
             <!-- Project 2: Indian Quant Options Sniper (Institutional Real-Capital Architecture) -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="ai">
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="ai quant">
                 <div class="p-8">
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold border border-indigo-200">
@@ -674,8 +757,8 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
                 </div>
             </div>
 
-            <!-- Project 2: Apex-Attendance-Vault -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="software">
+            <!-- Project 3: Apex-Attendance-Vault -->
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="retail software">
                 <div class="p-8">
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-200">
@@ -724,8 +807,8 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
                 </div>
             </div>
 
-            <!-- Project 3: FootwearBillingApp & footwear-sales-dashboard -->
-            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="software">
+            <!-- Project 4: FootwearBillingApp & footwear-sales-dashboard -->
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="retail software">
                 <div class="p-8">
                     <div class="flex items-center justify-between mb-4">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-semibold border border-purple-200">
@@ -1073,44 +1156,107 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
 
 
 
-        // Project Filter Logic
-
+        // Enhanced Project Filter Logic
         function filterProjects(category) {
-
             const cards = document.querySelectorAll('.project-card');
-
             const buttons = document.querySelectorAll('.filter-btn');
 
-
-
             buttons.forEach(btn => {
-
                 btn.classList.remove('bg-slate-900', 'text-white');
-
-                btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
-
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
             });
 
-            event.currentTarget.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
-
-            event.currentTarget.classList.add('bg-slate-900', 'text-white');
-
-
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                event.currentTarget.classList.add('bg-slate-900', 'text-white');
+            }
 
             cards.forEach(card => {
-
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-
+                const cats = (card.getAttribute('data-category') || '').split(' ');
+                if (category === 'all' || cats.includes(category)) {
                     card.style.display = 'flex';
-
                 } else {
-
                     card.style.display = 'none';
-
                 }
-
             });
 
+            if (window.lucide && window.lucide.createIcons) {
+                window.lucide.createIcons();
+            }
+        }
+
+        // The Holy Trinity Card Sub-Tabs Switcher
+        function switchTrinityCardTab(tabName) {
+            const btnPillars = document.getElementById('trinity-tab-pillars');
+            const btnLifecycle = document.getElementById('trinity-tab-lifecycle');
+            const btnTraps = document.getElementById('trinity-tab-traps');
+
+            const panePillars = document.getElementById('trinity-pane-pillars');
+            const paneLifecycle = document.getElementById('trinity-pane-lifecycle');
+            const paneTraps = document.getElementById('trinity-pane-traps');
+
+            const buttons = [btnPillars, btnLifecycle, btnTraps];
+            buttons.forEach(btn => {
+                if (!btn) return;
+                btn.className = "trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5";
+            });
+
+            const panes = [panePillars, paneLifecycle, paneTraps];
+            panes.forEach(pane => {
+                if (pane) pane.classList.add('hidden');
+            });
+
+            if (tabName === 'pillars') {
+                if (btnPillars) btnPillars.className = "trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (panePillars) panePillars.classList.remove('hidden');
+            } else if (tabName === 'lifecycle') {
+                if (btnLifecycle) btnLifecycle.className = "trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (paneLifecycle) paneLifecycle.classList.remove('hidden');
+            } else if (tabName === 'traps') {
+                if (btnTraps) btnTraps.className = "trinity-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (paneTraps) paneTraps.classList.remove('hidden');
+            }
+
+            if (window.lucide && window.lucide.createIcons) {
+                window.lucide.createIcons();
+            }
+        }
+
+        // AegisOps Card Sub-Tabs Switcher
+        function switchAegisCardTab(tabName) {
+            const btnPillars = document.getElementById('aegis-tab-pillars');
+            const btnMetrics = document.getElementById('aegis-tab-metrics');
+            const btnStack = document.getElementById('aegis-tab-stack');
+
+            const panePillars = document.getElementById('aegis-pane-pillars');
+            const paneMetrics = document.getElementById('aegis-pane-metrics');
+            const paneStack = document.getElementById('aegis-pane-stack');
+
+            const buttons = [btnPillars, btnMetrics, btnStack];
+            buttons.forEach(btn => {
+                if (!btn) return;
+                btn.className = "aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-medium text-slate-600 hover:text-slate-900 transition flex items-center justify-center gap-1.5";
+            });
+
+            const panes = [panePillars, paneMetrics, paneStack];
+            panes.forEach(pane => {
+                if (pane) pane.classList.add('hidden');
+            });
+
+            if (tabName === 'pillars') {
+                if (btnPillars) btnPillars.className = "aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (panePillars) panePillars.classList.remove('hidden');
+            } else if (tabName === 'metrics') {
+                if (btnMetrics) btnMetrics.className = "aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (paneMetrics) paneMetrics.classList.remove('hidden');
+            } else if (tabName === 'stack') {
+                if (btnStack) btnStack.className = "aegis-subtab-btn flex-1 py-1.5 px-3 rounded-lg font-semibold bg-white text-slate-900 shadow-xs transition flex items-center justify-center gap-1.5";
+                if (paneStack) paneStack.classList.remove('hidden');
+            }
+
+            if (window.lucide && window.lucide.createIcons) {
+                window.lucide.createIcons();
+            }
         }
 
 
@@ -1265,45 +1411,192 @@ Explore live retail platforms, automated inventory concepts, AI-assisted trading
         });
     </script>
 <script>
-
 // Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
-
 document.addEventListener('DOMContentLoaded', () => {
-
     document.querySelectorAll('a').forEach(link => {
-
         link.addEventListener('click', function(e) {
-
             const href = this.getAttribute('href');
-
             if (!href) return;
-
             if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
-
                 const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
-
                 const hashPart = href.includes('#') ? href.split('#')[1] : null;
-
                 const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
-
                 const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
-
                 if (localEl) {
-
                     e.preventDefault();
-
                     localEl.scrollIntoView({ behavior: 'smooth' });
-
                 }
-
             }
-
         });
-
     });
-
 });
 
+// 1. Interactive Neural Mesh Constellation Canvas
+(function initProjectsNeuralCanvas() {
+    const canvas = document.getElementById('neural-mesh-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    let mouse = { x: null, y: null, maxDist: 140 };
+
+    function resize() {
+        const hero = document.getElementById('hero-section');
+        width = canvas.width = hero ? hero.offsetWidth : window.innerWidth;
+        height = canvas.height = hero ? hero.offsetHeight : 450;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const heroEl = document.getElementById('hero-section');
+    if (heroEl) {
+        heroEl.addEventListener('mousemove', (e) => {
+            const rect = heroEl.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+        heroEl.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+    }
+
+    const particleCount = Math.min(Math.floor((width * height) / 9000), 75);
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.7,
+            vy: (Math.random() - 0.5) * 0.7,
+            radius: Math.random() * 2 + 1.2
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(99, 102, 241, 0.45)';
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const p2 = particles[j];
+                const dx = p.x - p2.x;
+                const dy = p.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 110) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = `rgba(99, 102, 241, ${0.25 * (1 - dist / 110)})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
+                }
+            }
+
+            if (mouse.x !== null && mouse.y !== null) {
+                const mdx = p.x - mouse.x;
+                const mdy = p.y - mouse.y;
+                const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                if (mdist < mouse.maxDist) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.45 * (1 - mdist / mouse.maxDist)})`;
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+                }
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    animate();
+})();
+
+// 2. Dynamic Projects Role / Title Typewriter
+(function initProjectsRoleRotator() {
+    const el = document.getElementById('projects-role-rotator');
+    if (!el) return;
+    const roles = [
+        "AegisOps — Autonomous AI Agent Operations SaaS",
+        "The Holy Trinity: Aegis • Chaos • Phoenix (<10ms MTTR)",
+        "Indian Quant Options Sniper (AWS Mumbai • Sub-8ms Routing)",
+        "Autonomous AI Shorts & Reels Studio (Multi-Modal Pipeline)",
+        "Apex-Attendance-Vault (Biometric Enterprise Security)",
+        "Footwear POS & Executive Sales Velocity Dashboard",
+        "Maison Ladies Zone — Haute Couture Digital Showcase"
+    ];
+    let roleIndex = 0;
+    let charIndex = roles[0].length;
+    let isDeleting = true;
+    let pauseCounter = 0;
+
+    function tick() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            if (pauseCounter > 0) {
+                pauseCounter--;
+                setTimeout(tick, 100);
+                return;
+            }
+            charIndex--;
+            el.textContent = currentRole.substring(0, charIndex);
+            if (charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(tick, 300);
+                return;
+            }
+            setTimeout(tick, 25);
+        } else {
+            charIndex++;
+            el.textContent = currentRole.substring(0, charIndex);
+            if (charIndex === currentRole.length) {
+                isDeleting = true;
+                pauseCounter = 25;
+                setTimeout(tick, 100);
+                return;
+            }
+            setTimeout(tick, 45);
+        }
+    }
+    pauseCounter = 20;
+    setTimeout(tick, 1000);
+})();
+
+// 3. 3D Holographic Card Tilt for Project Cards
+(function init3DProjectCardTilt() {
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+        card.style.transition = 'transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out';
+        card.style.willChange = 'transform';
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -4;
+            const rotateY = ((x - centerX) / centerX) * 4;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+    });
+})();
 </script>
 </body>
 </html>
