@@ -16,16 +16,22 @@ PDF_PATH = PORTFOLIO_DIR / "Mohammad_Rehan_Resume.pdf"
 
 resume_md = """
 ## Executive Summary
-High-impact AI Systems Architect and Operations Manager with 4+ years of hands-on leadership bridging commercial retail operations and fault-tolerant software engineering. Architect of institutional-grade algorithmic trading systems with zero capital leakage, autonomous self-healing engines with sub-50ms MTTR, multi-modal generative AI pipelines, and commercial enterprise POS architectures.
+High-impact Software Architect and Operations Leader with 4+ years of hands-on experience bridging commercial enterprise operations and fault-tolerant distributed systems. Architect of The Holy Trinity: Aegis, Chaos, Phoenix (autonomous antifragile resilience framework), institutional-grade algorithmic trading systems with zero capital leakage, and commercial enterprise POS architectures.
 
 ## Core Competencies & Architecture Stack
-- **Distributed Systems & Fault Tolerance**: Write-Ahead Logging (WAL) Micro-Journaling, Continuous Chaos Engineering, Sub-50ms Process Supervision, Dynamic AST Poison Quarantine, Circuit Breakers.
-- **Algorithmic Trading & FinTech**: Low-latency multi-agent derivatives execution (NIFTY/BANKNIFTY/SENSEX), Spot/15m VWAP structural stop-loss guards, 0-DTE theta decay shields, sub-8ms exchange proximity.
-- **Generative AI & Media Engineering**: Autonomous LLM agent routing, Neural TTS voice synthesis, FFmpeg programmatic video composition, ASS animated subtitle engines.
-- **Cloud Infrastructure & Security**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Zero-Trust Network Access (ZTNA) via Private WireGuard Mesh, Linux systemd real-time priority tuning (Nice=-10).
+- **The Holy Trinity Resilience Framework**: Aegis (Predictive Immunity, AST Poison Quarantine, WireGuard ZTNA, 35% Risk Drawdown Ceiling), Chaos (Level-5 Doomsday Gauntlet, 50-Thread Concurrent Stampedes, 800MB Heap Shockwaves, 100% Defense Certification), Phoenix (Ash Ledger WAL Micro-Journaling, Sub-50ms MTTR Hot Process Resurrection, EvolutionaryHardener Epoch Progression).
+- **Distributed Systems & Fault Tolerance**: Write-Ahead Logging (WAL) Micro-Journaling, Continuous Chaos Engineering, Sub-50ms Process Supervision, Dynamic AST Poison Quarantine, Multi-State Circuit Breakers.
+- **FinTech & Algorithmic Trading**: Low-latency multi-agent derivatives execution (NSE NIFTY/BANKNIFTY), Spot/15m VWAP structural stop-loss guards, 0-DTE theta decay shields, sub-8ms exchange proximity.
 - **Full-Stack & POS Development**: Python 3.12, AsyncIO, SQLite, Streamlit, HTML5/CSS3, Modern JavaScript, Thermal Printer Protocol, ReportLab PDF Engine.
+- **Cloud Infrastructure & Security**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Zero-Trust Network Access (ZTNA) via Private WireGuard Mesh, Linux systemd real-time priority tuning (Nice=-10).
 
 ## Key Production Systems & Architectures
+
+### The Holy Trinity: Aegis • Chaos • Phoenix — Autonomous Antifragile Resilience Framework & Sentinel
+- Architected an institutional-grade, antifragile self-healing triad enforcing the Golden Rule of Resilience: auto-healing into a permanently evolved, hardened state.
+- **Aegis (The Shield & Predictive Immunity)**: Deployed Zero-Trust Access (ZTNA) over WireGuard, dynamic AST poison quarantine, and mathematical capital/system risk ceilings (35% disaster drawdown limit, 30% untouched reserve).
+- **Chaos (The Trial & Continuous Proving Ground)**: Engineered Level-5 Doomsday Chaos Gauntlet withstanding 50-thread concurrent stampedes, 800MB heap shockwaves, ReDoS bombs, and disk sector bitflips with 100.0% defense certification.
+- **Phoenix (The Rebirth & Antifragile Evolution)**: Achieved sub-50ms MTTR (11ms–60ms) hot process resurrection powered by Ash Ledger write-ahead micro-journaling and EvolutionaryHardener (+25% adaptive parameter stiffening, Gen 1 -> Gen 2).
 
 ### Indian Quant Options Sniper — Institutional Derivatives Execution Engine
 - Engineered an institutional-grade, multi-agent algorithmic options execution engine deployed on AWS Mumbai (ap-south-1) with sub-8ms deterministic fiber proximity to NSE co-location.
@@ -34,15 +40,8 @@ High-impact AI Systems Architect and Operations Manager with 4+ years of hands-o
 - Automated a 13:30 IST Expiry Day Theta Filter to eliminate 0-DTE time decay slaughter, automatically routing breakout momentum to next-week contracts.
 - Secured live operations under 24/7 systemd autopilot (0.00 load average, 2GB swap protection) isolated behind an encrypted private WireGuard mesh (ZTNA).
 
-### Project Phoenix — Autonomous Fault-Tolerant Resilience Engine & 24/7 Chaos Sentinel
-- Architected an antifragile self-healing framework enforcing the Golden Rule of Resilience: auto-healing into a permanently evolved, stronger state rather than vulnerable status-quo recovery.
-- Implemented EvolutionaryHardener: automatic generation Epoch progression, SHA-256 perimeter signature quarantine, and +25% adaptive parameter stiffening.
-- Certified sub-50ms MTTR (11ms–60ms) hot process resurrection with Ash Ledger write-ahead micro-journaling preventing zero state loss.
-- Validated via automated Level-5 Doomsday Chaos Gauntlet: withstood 50-thread concurrent stampedes, 800MB heap shockwaves, ReDoS bombs, and disk sector corruption with 100.0% defense.
-- Operates as a permanent 24/7 background sentinel running autonomous hourly resilience drills.
-
-### Autonomous AI Shorts & Reels Studio — Multi-Modal Video Production Engine
-- Developed an end-to-end automated vertical video (9:16) production studio combining topic-to-script LLM generation, studio neural voiceover, and dynamic B-roll synchronization.
+### Autonomous Video & Content Studio — Multi-Modal Programmatic Engine
+- Developed an end-to-end automated vertical video (9:16) production studio combining topic-to-script agent workflows, studio neural voiceover, and dynamic B-roll synchronization.
 - Engineered a custom ASS subtitle engine compiling word-by-word colored animated subtitle cues (Hormozi style) with automatic background audio ducking.
 - Fortified rendering pipeline with Phoenix process supervision, preventing FFmpeg memory leaks and out-of-memory crashes during batch renders.
 - Autonomously outputs ready-to-publish 1080x1920 Full HD video packages complete with high-CTR titles, SEO descriptions, and tags.
@@ -75,7 +74,7 @@ def generate_pdf():
     pdf_buffer = create_styled_resume_pdf(
         resume_markdown=resume_md,
         candidate_name="Mohammad Rehan",
-        role_title="Senior AI Systems Architect & Tech Lead",
+        role_title="Software Architect & Tech Lead",
         contact_details={
             "email": "rehankhan20871621@gmail.com",
             "location": "Patna, Bihar, India",
