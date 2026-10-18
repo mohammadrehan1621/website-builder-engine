@@ -3,7 +3,7 @@ import re
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, KeepTogether
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, KeepTogether, PageBreak
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
@@ -373,10 +373,10 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
     doc = SimpleDocTemplate(
         buffer,
         pagesize=letter,
-        rightMargin=36,
-        leftMargin=36,
-        topMargin=36,
-        bottomMargin=36
+        rightMargin=30,
+        leftMargin=30,
+        topMargin=26,
+        bottomMargin=26
     )
 
     styles = getSampleStyleSheet()
@@ -395,41 +395,41 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
         'ResumeName',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=22,
-        leading=26,
+        fontSize=20,
+        leading=23,
         textColor=primary_color,
-        spaceAfter=3
+        spaceAfter=2
     )
 
     title_style = ParagraphStyle(
         'ResumeTitle',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=11.5,
-        leading=15,
+        fontSize=10.5,
+        leading=13.5,
         textColor=accent_color,
-        spaceAfter=6
+        spaceAfter=3
     )
 
     contact_style = ParagraphStyle(
         'ResumeContact',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.5,
-        leading=12,
+        fontSize=8,
+        leading=11,
         textColor=muted_color,
-        spaceAfter=8
+        spaceAfter=5
     )
 
     section_heading = ParagraphStyle(
         'ResumeSectionHeading',
         parent=styles['Heading2'],
         fontName='Helvetica-Bold',
-        fontSize=11.5,
-        leading=15,
+        fontSize=10.5,
+        leading=13.5,
         textColor=primary_color,
-        spaceBefore=10,
-        spaceAfter=4,
+        spaceBefore=6,
+        spaceAfter=2,
         keepWithNext=True
     )
 
@@ -437,11 +437,11 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
         'ResumeSubHeading',
         parent=styles['Heading3'],
         fontName='Helvetica-Bold',
-        fontSize=10,
-        leading=13,
+        fontSize=9.2,
+        leading=12,
         textColor=colors.HexColor("#1e293b"),
-        spaceBefore=6,
-        spaceAfter=2,
+        spaceBefore=3.5,
+        spaceAfter=1,
         keepWithNext=True
     )
 
@@ -449,11 +449,11 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
         'ResumeItemTitle',
         parent=styles['Heading4'],
         fontName='Helvetica-Bold',
-        fontSize=9.5,
-        leading=12.5,
+        fontSize=8.8,
+        leading=11.5,
         textColor=colors.HexColor("#0f172a"),
-        spaceBefore=5,
-        spaceAfter=2,
+        spaceBefore=3,
+        spaceAfter=1,
         keepWithNext=True
     )
 
@@ -461,30 +461,30 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
         'ResumeBody',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=9,
-        leading=13,
+        fontSize=8.3,
+        leading=11.2,
         textColor=text_color,
-        spaceAfter=4
+        spaceAfter=2
     )
 
     bullet_style = ParagraphStyle(
         'ResumeBullet',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=8.8,
-        leading=12.5,
+        fontSize=8.2,
+        leading=11.0,
         textColor=text_color,
-        leftIndent=14,
-        firstLineIndent=-8,
-        spaceAfter=2.5
+        leftIndent=12,
+        firstLineIndent=-7,
+        spaceAfter=1.2
     )
 
     callout_style = ParagraphStyle(
         'ResumeSummary',
         parent=styles['Normal'],
         fontName='Helvetica',
-        fontSize=9,
-        leading=13.5,
+        fontSize=8.3,
+        leading=11.5,
         textColor=colors.HexColor("#1e293b")
     )
 
@@ -509,25 +509,42 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
     # 2. Parse and render resume markdown content
     lines = resume_markdown.split('\n')
     summary_buffer = []
+    current_block = []
+
+    def flush_block():
+        nonlocal current_block
+        if current_block:
+            if len(current_block) == 1:
+                elements.append(current_block[0])
+            else:
+                elements.append(KeepTogether(current_block))
+            current_block = []
 
     for raw_line in lines:
         line = raw_line.strip()
         if not line:
             if summary_buffer:
+                flush_block()
                 valid_summary = [s for s in summary_buffer if s.strip()]
                 if valid_summary:
                     summary_text = "<br/>".join(valid_summary)
-                    t = Table([[Paragraph(summary_text, callout_style)]], colWidths=[540])
+                    t = Table([[Paragraph(summary_text, callout_style)]], colWidths=[544])
                     t.setStyle(TableStyle([
                         ('BACKGROUND', (0, 0), (-1, -1), card_bg),
                         ('BOX', (0, 0), (-1, -1), 0.75, border_color),
                         ('LINELEFT', (0, 0), (-1, -1), 3.5, accent_color),
-                        ('PADDING', (0, 0), (-1, -1), 8),
-                        ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+                        ('PADDING', (0, 0), (-1, -1), 6),
+                        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
                     ]))
                     elements.append(t)
-                    elements.append(Spacer(1, 4))
+                    elements.append(Spacer(1, 3))
                 summary_buffer = []
+            continue
+
+        # Check for explicit PageBreak tokens
+        if any(token in line.lower() for token in ["[pagebreak]", "<!-- pagebreak -->", "\\pagebreak"]):
+            flush_block()
+            elements.append(PageBreak())
             continue
 
         if line.startswith("```"):
@@ -539,8 +556,9 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
 
         # Check for Horizontal Rules (---, ***, ___)
         if re.match(r'^(\-{3,}|\*{3,}|_{3,}|\s*(\-\s*){3,})$', line.strip()):
-            elements.append(Spacer(1, 3))
-            elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceBefore=4, spaceAfter=6))
+            flush_block()
+            elements.append(Spacer(1, 2))
+            elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceBefore=3, spaceAfter=5))
             continue
 
         # Check for any markdown heading (# to ######)
@@ -564,19 +582,28 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
             is_major = (heading_level <= 2) or any(sec in heading_text.upper() for sec in major_sections)
 
             if is_major:
+                flush_block()
                 elements.append(Paragraph(f"<b>{heading_text.upper()}</b>", section_heading))
-                elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceAfter=4))
+                elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceAfter=3))
             elif heading_level == 3:
-                elements.append(Paragraph(f"<b>{heading_text}</b>", subheading_style))
+                flush_block()
+                current_block.append(Paragraph(f"<b>{heading_text}</b>", subheading_style))
             else:
-                elements.append(Paragraph(f"<b>{heading_text}</b>", item_title_style))
+                flush_block()
+                current_block.append(Paragraph(f"<b>{heading_text}</b>", item_title_style))
             continue
 
         if line.startswith("- ") or line.startswith("* "):
             bullet_text = "• " + clean_line.lstrip("-* ").strip()
-            elements.append(Paragraph(bullet_text, bullet_style))
+            if current_block:
+                current_block.append(Paragraph(bullet_text, bullet_style))
+            else:
+                elements.append(Paragraph(bullet_text, bullet_style))
         elif re.match(r'^\d+\.\s', line):
-            elements.append(Paragraph(clean_line, bullet_style))
+            if current_block:
+                current_block.append(Paragraph(clean_line, bullet_style))
+            else:
+                elements.append(Paragraph(clean_line, bullet_style))
         elif line.startswith(">"):
             c_val = clean_line.lstrip("> ").strip()
             if c_val:
@@ -584,25 +611,30 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
         else:
             clean_body = clean_line.lstrip("#").strip()
             if clean_body:
-                elements.append(Paragraph(clean_body, body_style))
+                if current_block:
+                    current_block.append(Paragraph(clean_body, body_style))
+                else:
+                    elements.append(Paragraph(clean_body, body_style))
+
+    flush_block()
 
     if summary_buffer:
         valid_summary = [s for s in summary_buffer if s.strip()]
         if valid_summary:
             summary_text = "<br/>".join(valid_summary)
-            t = Table([[Paragraph(summary_text, callout_style)]], colWidths=[540])
+            t = Table([[Paragraph(summary_text, callout_style)]], colWidths=[544])
             t.setStyle(TableStyle([
                 ('BACKGROUND', (0, 0), (-1, -1), card_bg),
                 ('BOX', (0, 0), (-1, -1), 0.75, border_color),
                 ('LINELEFT', (0, 0), (-1, -1), 3.5, accent_color),
-                ('PADDING', (0, 0), (-1, -1), 8),
-                ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+                ('PADDING', (0, 0), (-1, -1), 6),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
             ]))
             elements.append(t)
 
     # 3. Footer Note
-    elements.append(Spacer(1, 10))
-    elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceAfter=6))
+    elements.append(Spacer(1, 8))
+    elements.append(HRFlowable(width="100%", thickness=0.75, color=border_color, spaceAfter=5))
     footer_text = Paragraph(
         f"<i>{candidate_name} • Professional Resume &amp; Portfolio Dossier • Verified &amp; ATS-Optimized Format</i>",
         ParagraphStyle('ResumeFooter', parent=styles['Normal'], fontName='Helvetica-Oblique', fontSize=7.5, textColor=muted_color, alignment=1)
