@@ -350,7 +350,7 @@
         if (q.includes('contact') || q.includes('hire') || q.includes('whatsapp') || q.includes('phone') || q.includes('email') || q.includes('call') || q.includes('reach') || q.includes('message')) {
             return `You can connect with Mohammad Rehan directly:<br><br>
             - 📲 <strong>WhatsApp / Phone:</strong> <a href="https://wa.me/917091518548" target="_blank" class="text-emerald-400 font-mono underline">+91 70915 18548</a><br>
-            - ✉️ <strong>Email:</strong> <a href="mailto:rehankhan20871621@gmail.com" class="text-cyan-400 font-mono underline">rehankhan20871621@gmail.com</a><br>
+            - ✉️ <strong>Email:</strong> <a href="mailto:rehanquantlab@gmail.com" class="text-cyan-400 font-mono underline">rehanquantlab@gmail.com</a><br>
             - 📍 <strong>Location:</strong> Patna, Bihar, India<br><br>
             <div class="flex flex-wrap gap-2 pt-1">
                 <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] px-3.5 py-1.5 rounded-lg font-semibold flex items-center gap-1">📲 Chat on WhatsApp</a>
