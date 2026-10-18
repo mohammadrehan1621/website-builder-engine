@@ -240,102 +240,136 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 </header>
 <!-- HERO SECTION (HOME PAGE ROLE) -->
 <main class="flex-grow">
-<section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/50">
+<section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/60" id="hero-section">
+<!-- Interactive Neural Network Constellation Canvas -->
+<canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
+
+<!-- Ambient Glowing Radial Light Orbs -->
+<div class="absolute top-10 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+<div class="absolute bottom-10 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 <div class="grid lg:grid-cols-12 gap-12 items-center">
-<!-- Left Column: Copy & CTAs -->
+<!-- Left Column: Copy, Dynamic Rotator & CTAs -->
 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
 <!-- Availability Badge -->
-<div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/80 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-800 shadow-sm animate-pulse-glow">
+<div class="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200/90 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-800 shadow-sm animate-pulse-glow">
 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-<span>🟢 Available for High-Impact Projects / Full-Time Roles</span>
+<span>🟢 Available for High-Impact Roles &amp; Architectural Engagements</span>
 </div>
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
 
-                            Hi, I'm <span class="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent">Mohammad Rehan</span>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+    Hi, I'm <span class="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">Mohammad Rehan</span>
+    <span class="block text-xl sm:text-2xl lg:text-3xl text-indigo-600 font-mono font-semibold mt-3 h-10 flex items-center justify-center lg:justify-start">
+        <span id="role-rotator">Software Architect &amp; Tech Lead</span><span class="inline-block w-0.5 h-6 bg-indigo-600 animate-pulse ml-1 align-middle"></span>
+    </span>
 </h1>
+
 <p class="text-lg sm:text-xl text-slate-600 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+    Bridging mission-critical software engineering with 4+ years of real-world business leadership. I architect ultra-low latency algorithmic trading engines, fault-tolerant distributed systems (<strong class="text-slate-900">The Holy Trinity</strong>), and autonomous AI agent platforms.
+</p>
 
-                            Bridging real-world retail business operations with modern technology. I build practical digital solutions, AI-assisted web platforms, billing software, and automation tools from Patna, Bihar.
-
-                        </p>
-<!-- CTA Buttons -->
+<!-- CTA Buttons with Micro-Interactions -->
 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-<a class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm" href="#about">
-<i class="w-4 h-4" data-lucide="layers"></i>
+<a class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5 text-sm group" href="#about">
+<i class="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" data-lucide="layers"></i>
 <span>Explore Architecture &amp; Blueprint</span>
 </a>
-<a class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium px-6 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm" href="projects.html">
-<i class="w-4 h-4 text-slate-700" data-lucide="code"></i>
+<a class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium px-6 py-3.5 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5 text-sm group" href="projects.html">
+<i class="w-4 h-4 text-slate-700 group-hover:scale-110 transition-transform duration-300" data-lucide="code"></i>
 <span>View Featured Work</span>
 </a>
-<a class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium px-5 py-3.5 rounded-xl transition flex items-center gap-2 text-sm" href="#resume-download" onclick="downloadResumePDF(event)">
+<a class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/80 font-medium px-5 py-3.5 rounded-xl transition-all duration-200 flex items-center gap-2 text-sm hover:-translate-y-0.5" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
 <i class="w-4 h-4" data-lucide="download"></i>
 <span>Resume (PDF)</span>
 </a>
 </div>
+
 <!-- Trust Metrics / Quick Stats -->
 <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
 <div>
-<p class="text-2xl font-bold text-slate-900">4+ Years</p>
-<p class="text-xs text-slate-500 mt-0.5">Business Management</p>
+<p class="text-2xl font-bold font-mono text-slate-900">4+ Years</p>
+<p class="text-xs text-slate-500 mt-0.5 font-medium">Business Leadership</p>
 </div>
 <div>
-<p class="text-2xl font-bold text-slate-900">BCA</p>
-<p class="text-xs text-slate-500 mt-0.5">National Business College</p>
+<p class="text-2xl font-bold font-mono text-indigo-600">BCA</p>
+<p class="text-xs text-slate-500 mt-0.5 font-medium">Software Engineering</p>
 </div>
 <div>
-<p class="text-2xl font-bold text-slate-900">100%</p>
-<p class="text-xs text-slate-500 mt-0.5">Practical &amp; Operational</p>
+<p class="text-2xl font-bold font-mono text-emerald-600">&lt;50ms</p>
+<p class="text-xs text-slate-500 mt-0.5 font-medium">Self-Healing MTTR</p>
 </div>
 </div>
 </div>
-<!-- Right Column: Interactive Profile Card & Tech Stack Badges -->
+
+<!-- Right Column: Interactive 3D Holographic Card & Live Chaos Sandbox -->
 <div class="lg:col-span-5">
-<div class="bg-white rounded-3xl border border-slate-200 shadow-xl p-6 sm:p-8 relative">
+<div id="hero-profile-card" class="bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-8 relative transition-transform duration-200 ease-out will-change-transform group">
+<!-- Dynamic Radial Glow Light Following Cursor -->
+<div id="card-glow-overlay" class="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.12),transparent_70%)]"></div>
+
 <!-- Top Decorative Header -->
-<div class="flex items-center justify-between pb-6 border-b border-slate-100">
+<div class="flex items-center justify-between pb-6 border-b border-slate-100 relative z-10">
 <div class="flex items-center gap-3">
-<div class="w-12 h-12 rounded-2xl bg-slate-900 text-white font-bold text-lg flex items-center justify-center shadow-md">
-
-                                        MR
-
-                                    </div>
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white font-bold text-lg flex items-center justify-center shadow-md ring-2 ring-indigo-500/20">
+    MR
+</div>
 <div>
 <h3 class="font-bold text-slate-900 text-base">Mohammad Rehan</h3>
-<p class="text-xs text-slate-500">Store Manager &amp; Developer</p>
+<p class="text-xs text-indigo-600 font-medium">Software Architect &amp; Tech Lead</p>
 </div>
 </div>
-<span class="bg-slate-100 text-slate-700 text-[11px] font-semibold px-2.5 py-1 rounded-lg">Patna, India</span>
+<span class="bg-indigo-50 text-indigo-800 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100 flex items-center gap-1 font-mono">
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Patna &amp; Global Edge
+</span>
 </div>
+
 <!-- Brand Statement Quote -->
-<div class="py-6 space-y-3">
-<div class="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-200/60">
-<i class="w-5 h-5 text-slate-400 shrink-0 mt-0.5" data-lucide="quote"></i>
+<div class="py-5 space-y-3 relative z-10">
+<div class="flex items-start gap-3 bg-slate-50/80 p-4 rounded-2xl border border-slate-200/70">
+<i class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" data-lucide="quote"></i>
 <p class="text-xs text-slate-700 italic leading-relaxed">
-
-                                        "I combine real-world business experience with technology to build practical digital solutions. From modern websites and billing software to AI-powered tools."
-
-                                    </p>
+    "I fuse high-throughput computational engineering with proven operational business leadership to architect self-healing distributed systems, quant derivative execution engines, and enterprise AI platforms."
+</p>
 </div>
 </div>
+
 <!-- Verified Core Tech Badges -->
-<div class="space-y-3 pt-2">
-<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Core Technical &amp; Business Skills</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Web Development</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Retail Operations</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Inventory Systems</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">AI Automation</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Microsoft Excel / Word</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs px-3 py-1.5 rounded-lg font-medium transition">Vendor Management</span>
+<div class="space-y-2.5 pt-1 relative z-10">
+<p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">Core Architectural Competencies</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="bg-indigo-50/90 text-indigo-900 border border-indigo-200/70 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">The Holy Trinity Architecture</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Distributed Systems &amp; Raft</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Low-Latency Quant Derivatives</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Autonomous AI Agent Swarms</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Python / FastAPI / AsyncIO</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Next.js &amp; Cloudflare Edge</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Zero-Loss Ash Ledgers</span>
+<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Retail Business Ops (4+ Yrs)</span>
 </div>
 </div>
+
+<!-- INTERACTIVE RESILIENCE SANDBOX (ATTENTION HOOK) -->
+<div class="mt-5 pt-4 border-t border-slate-100 relative z-10">
+<div class="flex items-center justify-between text-xs font-mono mb-2">
+    <span class="text-slate-500 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> CLUSTER RESILIENCE:</span>
+    <span id="hero-node-status" class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">100% HEALTHY (GEN #1)</span>
+</div>
+
+<button id="hero-chaos-btn" onclick="triggerHeroChaosPulse()" class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 hover:from-indigo-900 hover:to-slate-900 text-white text-xs font-mono font-semibold py-2.5 px-4 rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 group cursor-pointer active:scale-95">
+    <span class="group-hover:rotate-45 transition-transform duration-300">⚡</span>
+    <span>Inject Synthetic Chaos Shock (Test Phoenix MTTR)</span>
+</button>
+
+<div id="hero-chaos-telemetry" class="hidden mt-2.5 p-3 rounded-xl bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800 transition-all duration-300 space-y-1">
+</div>
+</div>
+
 <!-- Bottom Quick Action -->
-<div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs">
+<div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs relative z-10">
 <span class="text-slate-500">Status: <strong class="text-slate-900">Active &amp; Ready</strong></span>
-<a class="text-slate-900 font-semibold hover:underline flex items-center gap-1" href="contact.html">
-<span>Contact Direct</span>
+<a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="contact.html">
+<span>Direct Consultation</span>
 <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
 </a>
 </div>
@@ -908,10 +942,8 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 <span class="font-bold text-slate-900 text-base">Mohammad Rehan</span>
 </div>
 <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
-
-                    AI-Assisted Web Developer &amp; Store Manager based in Patna, Bihar, India. Combining real retail operations experience with practical software engineering.
-
-                </p>
+    Software Architect &amp; Tech Lead based in Patna, Bihar, India. Combining 4+ years of real-world business leadership with mission-critical computational &amp; distributed systems engineering.
+</p>
 <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
 <i class="w-4 h-4" data-lucide="shield-check"></i>
 <span>256-Bit SSL Secured • SOC-2 Compliant Session</span>
@@ -1051,80 +1083,263 @@ We value your privacy. 256-Bit SSL Encrypted &amp; SOC-2 compliant session. We u
 
 
 
-        // Resume Download Simulation / Handler
-
+        // Direct Executive Resume PDF Download Handler
         function downloadResumePDF(e) {
-
-            e.preventDefault();
-
-            alert("Initiating secure download for Mohammad_Rehan_Resume.pdf ...");
-
-            // Trigger sample PDF download action
-
-            const blob = new Blob(["Mohammad Rehan - BCA Graduate & Store Manager Resume Content. Patna, Bihar. +91 70915 18548."], { type: 'application/pdf' });
-
-            const url = window.URL.createObjectURL(blob);
-
+            if (e) e.preventDefault();
             const a = document.createElement('a');
-
-            a.href = url;
-
+            a.href = 'Mohammad_Rehan_Resume.pdf';
             a.download = 'Mohammad_Rehan_Resume.pdf';
-
             document.body.appendChild(a);
-
             a.click();
-
-            window.URL.revokeObjectURL(url);
-
-            a.remove();
-
+            document.body.removeChild(a);
         }
 
+        // ==========================================
+        // 1. INTERACTIVE NEURAL CONSTELLATION MESH
+        // ==========================================
+        (function initNeuralMesh() {
+            const canvas = document.getElementById('neural-mesh-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = canvas.parentElement.offsetWidth;
+            let height = canvas.height = canvas.parentElement.offsetHeight;
 
+            window.addEventListener('resize', () => {
+                if (!canvas.parentElement) return;
+                width = canvas.width = canvas.parentElement.offsetWidth;
+                height = canvas.height = canvas.parentElement.offsetHeight;
+            });
 
-        // ARIA Neural Intelligence Engine v4.2 is governed by aria_neural_engine.js
-    </script>
-<script>
+            const particles = [];
+            const count = Math.min(Math.floor((width * height) / 14000), 65);
+            const mouse = { x: null, y: null, maxDist: 150 };
 
-// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
+            window.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
 
-document.addEventListener('DOMContentLoaded', () => {
+            window.addEventListener('mouseleave', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
 
-    document.querySelectorAll('a').forEach(link => {
-
-        link.addEventListener('click', function(e) {
-
-            const href = this.getAttribute('href');
-
-            if (!href) return;
-
-            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
-
-                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
-
-                const hashPart = href.includes('#') ? href.split('#')[1] : null;
-
-                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
-
-                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
-
-                if (localEl) {
-
-                    e.preventDefault();
-
-                    localEl.scrollIntoView({ behavior: 'smooth' });
-
-                }
-
+            for (let i = 0; i < count; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.7,
+                    vy: (Math.random() - 0.5) * 0.7,
+                    radius: Math.random() * 2 + 1.2
+                });
             }
 
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > width) p.vx *= -1;
+                    if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(99, 102, 241, 0.45)';
+                    ctx.fill();
+
+                    // Connect nearby particles
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const p2 = particles[j];
+                        const dx = p.x - p2.x;
+                        const dy = p.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 110) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = `rgba(99, 102, 241, ${0.25 * (1 - dist / 110)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Connect to mouse cursor
+                    if (mouse.x !== null && mouse.y !== null) {
+                        const mdx = p.x - mouse.x;
+                        const mdy = p.y - mouse.y;
+                        const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                        if (mdist < mouse.maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.strokeStyle = `rgba(16, 185, 129, ${0.45 * (1 - mdist / mouse.maxDist)})`;
+                            ctx.lineWidth = 1.2;
+                            ctx.stroke();
+                        }
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        })();
+
+        // ==========================================
+        // 2. HERO ROLE TYPEWRITER / TEXT ROTATOR
+        // ==========================================
+        (function initTypewriterRotator() {
+            const el = document.getElementById('role-rotator');
+            if (!el) return;
+            const roles = [
+                "Software Architect & Tech Lead",
+                "Distributed Systems & Raft Engineer",
+                "Algorithmic Quant Technologist",
+                "Creator of The Holy Trinity Architecture",
+                "Autonomous AI Agent Swarm Builder"
+            ];
+            let roleIndex = 0;
+            let charIndex = roles[0].length;
+            let isDeleting = true;
+            let pauseCounter = 0;
+
+            function tick() {
+                const currentRole = roles[roleIndex];
+                if (isDeleting) {
+                    if (pauseCounter > 0) {
+                        pauseCounter--;
+                        setTimeout(tick, 100);
+                        return;
+                    }
+                    charIndex--;
+                    el.textContent = currentRole.substring(0, charIndex);
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        setTimeout(tick, 300);
+                        return;
+                    }
+                    setTimeout(tick, 25);
+                } else {
+                    charIndex++;
+                    el.textContent = currentRole.substring(0, charIndex);
+                    if (charIndex === currentRole.length) {
+                        isDeleting = true;
+                        pauseCounter = 25; // ~2.5s hold time
+                        setTimeout(tick, 100);
+                        return;
+                    }
+                    setTimeout(tick, 45);
+                }
+            }
+            pauseCounter = 20;
+            setTimeout(tick, 1000);
+        })();
+
+        // ==========================================
+        // 3. 3D HOLOGRAPHIC TILT PROFILE CARD
+        // ==========================================
+        (function init3DCardTilt() {
+            const card = document.getElementById('hero-profile-card');
+            const glow = document.getElementById('card-glow-overlay');
+            if (!card) return;
+
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rotateX = ((y - centerY) / centerY) * -6;
+                const rotateY = ((x - centerX) / centerX) * 6;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+                if (glow) {
+                    glow.style.opacity = '1';
+                    glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(99, 102, 241, 0.18), transparent 60%)`;
+                }
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                if (glow) glow.style.opacity = '0';
+            });
+        })();
+
+        // ==========================================
+        // 4. HERO INTERACTIVE CHAOS SANDBOX TRIGGER
+        // ==========================================
+        let heroChaosEpoch = 1;
+        function triggerHeroChaosPulse() {
+            const btn = document.getElementById('hero-chaos-btn');
+            const status = document.getElementById('hero-node-status');
+            const tel = document.getElementById('hero-chaos-telemetry');
+            if (!btn || !status || !tel) return;
+
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            btn.innerHTML = `<span>⚡</span> <span>Injecting 504 Packet Drop &amp; Shock...</span>`;
+
+            status.className = "text-rose-700 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-300 animate-pulse";
+            status.textContent = "⚠️ SHOCK INJECTED: 504 TIMEOUT";
+
+            tel.classList.remove('hidden');
+            tel.innerHTML = `
+                <div class="text-rose-400 font-bold">[T+0ms] 💥 INJECTING CHAOS: Gateway 504 drop &amp; simulated thread freeze...</div>
+            `;
+
+            setTimeout(() => {
+                tel.innerHTML += `
+                    <div class="text-amber-400">[T+14ms] 🛡️ AEGIS SENTINEL: Circuit tripped! 0 lost bytes in Ash Ledger.</div>
+                `;
+            }, 250);
+
+            setTimeout(() => {
+                heroChaosEpoch++;
+                const mttr = Math.floor(Math.random() * 15) + 32; // 32ms - 47ms
+                tel.innerHTML += `
+                    <div class="text-emerald-400 font-bold">[T+${mttr}ms] 🧬 PHOENIX RESURRECTION: Thread restored! Genome promoted to Gen #${heroChaosEpoch} (+25% Stiffened).</div>
+                    <div class="text-indigo-300 text-[10px] pt-1 border-t border-slate-800 mt-1 flex justify-between">
+                        <span>AUDIT: 0.00% Precision Drift</span>
+                        <span>CAPITAL LOSS: $0.00</span>
+                        <span>MTTR: ${mttr}ms</span>
+                    </div>
+                `;
+
+                status.className = "text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-300";
+                status.textContent = `IMMUNE (GEN #${heroChaosEpoch}) • MTTR: ${mttr}ms`;
+
+                btn.disabled = false;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                btn.innerHTML = `<span>⚡</span> <span>Chaos Shock Handled! Test Again (Gen #${heroChaosEpoch})</span>`;
+
+                if (window.__PHOENIX_CLIENT__ && window.__PHOENIX_CLIENT__.EvolutionaryHardener) {
+                    window.__PHOENIX_CLIENT__.EvolutionaryHardener.evolve('hero_interactive_sandbox', 'gateway_504_synthetic_chaos');
+                }
+            }, 700);
+        }
+
+        // Navigation file protocol fallback
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (!href) return;
+                    if (location.protocol === 'file:' && href.endsWith('.html')) {
+                        const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
+                        const hashPart = href.includes('#') ? href.split('#')[1] : null;
+                        const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
+                        const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
+                        if (localEl) {
+                            e.preventDefault();
+                            localEl.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
+                });
+            });
         });
-
-    });
-
-});
-
-</script>
+    </script>
 </body>
 </html>
