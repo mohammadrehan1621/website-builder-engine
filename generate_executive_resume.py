@@ -28,10 +28,12 @@ High-impact Software Architect and Operations Leader with 4+ years of hands-on e
 ## Key Production Systems & Architectures
 
 ### The Holy Trinity: Aegis • Chaos • Phoenix — Autonomous Antifragile Resilience Framework & Sentinel
-- Architected an institutional-grade, antifragile self-healing triad enforcing the Golden Rule of Resilience: auto-healing into a permanently evolved, hardened state.
-- **Aegis (The Shield & Predictive Immunity)**: Deployed Zero-Trust Access (ZTNA) over WireGuard, dynamic AST poison quarantine, and mathematical capital/system risk ceilings (35% disaster drawdown limit, 30% untouched reserve).
-- **Chaos (The Trial & Continuous Proving Ground)**: Engineered Level-5 Doomsday Chaos Gauntlet withstanding 50-thread concurrent stampedes, 800MB heap shockwaves, ReDoS bombs, and disk sector bitflips with 100.0% defense certification.
-- **Phoenix (The Rebirth & Antifragile Evolution)**: Achieved sub-50ms MTTR (11ms–60ms) hot process resurrection powered by Ash Ledger write-ahead micro-journaling and EvolutionaryHardener (+25% adaptive parameter stiffening, Gen 1 -> Gen 2).
+- Architected an institutional-grade, 5-step closed-loop antifragile lifecycle enforcing the Golden Rule of Resilience: auto-healing into a permanently evolved, hardened state.
+- **Step 1 (Aegis Pre-Audit)**: Static AST contract and reflection audit scanning codebase to guarantee zero syntax traps, zero unpacking mismatches (validate_order), and precision floor quantization.
+- **Step 2 (Chaos Gauntlet)**: Continuous adversarial shock engine bombarding nodes with 8 real exchange disasters (WebSocket severing, Binance HTTP 429 rate-limit spikes, -5% flash crashes, SQLite lock contention, toxic wicks).
+- **Step 3 (Phoenix & Antifragile Evolution)**: Sub-500ms auto-heal with $0.00 capital impact, triggering Genomic Generation advancement (+25% adaptive parameter stiffening, Gen 1 -> Gen 2) and elevated Immunity Score.
+- **Step 4 (Aegis Post-Audit)**: Mathematical re-verification guaranteeing zero precision drift, zero race conditions, and 100% wallet profit retention.
+- **Step 5 (Perpetual Hardening)**: Continuous closed-loop iteration resulting in titanium immunity against unforeseen exchange and runtime anomalies.
 
 ### Indian Quant Options Sniper — Institutional Derivatives Execution Engine
 - Engineered an institutional-grade, multi-agent algorithmic options execution engine deployed on AWS Mumbai (ap-south-1) with sub-8ms deterministic fiber proximity to NSE co-location.
