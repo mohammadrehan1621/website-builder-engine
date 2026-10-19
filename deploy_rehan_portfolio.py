@@ -24,7 +24,7 @@ REGISTRY_FILE = BASE_DIR / "deployed_sites_registry.json"
 def deploy_portfolio():
     print("\n" + "═" * 70)
     print("🚀 DEPLOYING UPGRADED PORTFOLIO TO CLOUDFLARE PAGES")
-    print("   Project: Mohammadrehan | Domain: mohammadrehan.pages.dev")
+    print("   Project: Mohammadrehan | Domain: rehanquantlab.com (mohammadrehan.pages.dev)")
     print("═" * 70)
 
     if not PORTFOLIO_DIR.exists():
@@ -82,10 +82,11 @@ def deploy_portfolio():
         if REGISTRY_FILE.exists():
             registry = json.loads(REGISTRY_FILE.read_text(encoding="utf-8"))
         
-        registry["mohammadrehan.pages.dev"] = {
+        registry["rehanquantlab.com"] = {
             "project_name": "Mohammadrehan",
-            "domain": "mohammadrehan.pages.dev",
-            "live_url": "https://mohammadrehan.pages.dev",
+            "domain": "rehanquantlab.com",
+            "live_url": "https://rehanquantlab.com",
+            "fallback_url": "https://mohammadrehan.pages.dev",
             "last_deployed": time.strftime("%Y-%m-%d %H:%M:%S"),
             "pages": files_to_pack,
             "local_path": str(PORTFOLIO_DIR),
@@ -96,19 +97,20 @@ def deploy_portfolio():
     except Exception as e:
         print(f"Registry notice: {e}")
 
-    # Verify live HTTP response
+    # Verify live HTTP response on custom domain and pages.dev
     time.sleep(2)
-    try:
-        r = requests.get("https://mohammadrehan.pages.dev", timeout=10)
-        has_phoenix = "phoenix_sentinel.js" in r.text
-        has_infra_bar = "production infrastructure" in r.text.lower()
-        print("\n" + "─" * 70)
-        print(f"🌐 Live Edge Health Check: Status {r.status_code} ({len(r.text):,} bytes)")
-        print(f"   • Phoenix Sentinel Script Wired: {'🟢 YES' if has_phoenix else '🔴 NO'}")
-        print(f"   • Infrastructure Status Bar Live: {'🟢 YES' if has_infra_bar else '🔴 NO'}")
-        print("─" * 70 + "\n")
-    except Exception as e:
-        print(f"Edge check warning: {e}")
+    for target_url in ["https://rehanquantlab.com", "https://mohammadrehan.pages.dev"]:
+        try:
+            r = requests.get(target_url, timeout=10)
+            has_phoenix = "phoenix_sentinel.js" in r.text
+            has_infra_bar = "production infrastructure" in r.text.lower()
+            print("\n" + "─" * 70)
+            print(f"🌐 Live Edge Health Check [{target_url}]: Status {r.status_code} ({len(r.text):,} bytes)")
+            print(f"   • Phoenix Sentinel Script Wired: {'🟢 YES' if has_phoenix else '🔴 NO'}")
+            print(f"   • Infrastructure Status Bar Live: {'🟢 YES' if has_infra_bar else '🔴 NO'}")
+            print("─" * 70)
+        except Exception as e:
+            print(f"Edge check warning [{target_url}]: {e}")
 
     return res.get("success", False)
 

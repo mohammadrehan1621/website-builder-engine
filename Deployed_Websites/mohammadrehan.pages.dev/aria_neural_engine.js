@@ -329,7 +329,7 @@
 
         // 13. HOW THIS WEBSITE WORKS (Detailed Architecture Breakdown)
         if (q.includes('how this website work') || q.includes('how website work') || q.includes('website architecture') || q.includes('how does the website work') || q.includes('how did you build this site') || q.includes('how your website work')) {
-            return `<strong>How This Website (mohammadrehan.pages.dev) Works:</strong><br><br>
+            return `<strong>How This Website (rehanquantlab.com) Works:</strong><br><br>
             1. 🌐 <strong>Global Edge Distribution:</strong> Hosted on Cloudflare Pages edge CDN, delivering sub-50ms static assets across 300+ global data centers.<br>
             2. 🛡️ <strong>Client-Side Phoenix Sentinel (<code>phoenix_sentinel.js</code>):</strong> Every contact keystroke is pre-journaled to <code>localStorage</code> with SHA checksums. A browser crash or page refresh resurrects your draft instantly.<br>
             3. ⚡ <strong>Autonomous Circuit Breaker:</strong> Contact and inquiry dispatchers use a 3-state circuit breaker (<code>CLOSED</code>, <code>OPEN</code>, <code>HALF_OPEN</code>). If network fails, leads are spooled locally and flushed automatically on reconnection.<br>
