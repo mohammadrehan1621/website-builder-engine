@@ -1,9 +1,10 @@
 import io
 import re
+from pathlib import Path
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, KeepTogether, PageBreak
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable, KeepTogether, PageBreak, Image
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
@@ -491,19 +492,38 @@ def create_styled_resume_pdf(resume_markdown: str, candidate_name: str = "Mohamm
     elements = []
 
     # 1. Executive Top Header (Name + Title + Contact details)
-    c_email = (contact_details or {}).get("email", "rehankhan20871621@gmail.com")
+    c_email = (contact_details or {}).get("email", "founder@rehanquantlab.com")
     c_phone = (contact_details or {}).get("phone", "+91 70915 18548")
     c_loc = (contact_details or {}).get("location", "Patna, Bihar, India")
     c_linkedin = (contact_details or {}).get("linkedin", "linkedin.com/in/mohammad-rehan-tech")
-    c_github = (contact_details or {}).get("github", "github.com/mohammadrehan1621")
-    c_portfolio = (contact_details or {}).get("portfolio", "mohammadrehan.pages.dev")
+    c_github = (contact_details or {}).get("github", "github.com/rehanquantlab")
+    c_portfolio = (contact_details or {}).get("portfolio", "rehanquantlab.com")
+    c_logo = (contact_details or {}).get("logo_path")
 
     header_text = [
         Paragraph(f"<b>{candidate_name.upper()}</b>", name_style),
         Paragraph(role_title, title_style),
         Paragraph(f"<b>Email:</b> {c_email} &nbsp;•&nbsp; <b>Phone:</b> {c_phone} &nbsp;•&nbsp; <b>Location:</b> {c_loc}<br/><b>LinkedIn:</b> {c_linkedin} &nbsp;•&nbsp; <b>GitHub:</b> {c_github} &nbsp;•&nbsp; <b>Portfolio:</b> {c_portfolio}", contact_style)
     ]
-    elements.extend(header_text)
+
+    if c_logo and Path(c_logo).exists():
+        try:
+            logo_img = Image(str(c_logo), width=46, height=46)
+            header_table = Table([[header_text, logo_img]], colWidths=[500, 52])
+            header_table.setStyle(TableStyle([
+                ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+                ('ALIGN', (1, 0), (1, 0), 'RIGHT'),
+                ('LEFTPADDING', (0, 0), (-1, -1), 0),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+                ('TOPPADDING', (0, 0), (-1, -1), 0),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+            ]))
+            elements.append(header_table)
+        except Exception as e:
+            elements.extend(header_text)
+    else:
+        elements.extend(header_text)
+
     elements.append(HRFlowable(width="100%", thickness=1.5, color=accent_color, spaceAfter=5))
 
     # 2. Parse and render resume markdown content
