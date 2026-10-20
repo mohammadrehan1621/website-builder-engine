@@ -58,7 +58,7 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 - **Multi-Agent Fleet Registry**: Centralized supervisor managing agent lifecycles (Idle, Running, Stressed, Resurrecting, Immune), tracking self-healing epochs and parameter adaptations.
 - **High-Throughput Public REST API (:8000)**: Sub-millisecond endpoints for task dispatching, heartbeat reporting, and write-ahead Ash Ledger log synchronization.
 - **Downloadable Python SDK (`pip install aegisops`)**: Drop-in resilience client enabling external agents to auto-heal from LLM rate limits (429), hallucinated JSON, and tool hang crashes.
-- **Verified Benchmark Metrics**: Sub-10ms Hot-Resurrection MTTR (<10ms), $0.00 Zero-Loss Capital Guarantee, and 25/25 Pytest suites passed with 100% test coverage.
+- **Verified Benchmark Metrics**: Sub-10ms Hot-Resurrection MTTR (<10ms), $0.00 Zero-Loss Capital Guarantee, and 29/29 Pytest suites passed with 100% test coverage.
 
 ### Autonomous Video & Content Studio — Multi-Modal Programmatic Engine
 - Developed an end-to-end automated vertical video (9:16) production studio combining topic-to-script agent workflows, studio neural voiceover, and dynamic B-roll synchronization.
@@ -99,7 +99,7 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 - **Languages & Frameworks**: Python 3.12, AsyncIO, FastAPI, Streamlit, HTML5/CSS3, Modern JavaScript, Node.js, Shell Scripting.
 - **Databases & Protocols**: AegisDB (In-Memory Ring Buffers), SQLite (WAL micro-journaling), PostgreSQL, Redis, RESTful APIs, WebSocket, WireGuard/Tailscale VPN.
 - **Architectural Principles**: Antifragile Self-Healing, Zero Capital Leakage, Atomic Single-Route Execution, Adaptive Confluence Stiffening.
-- **DevOps & Infrastructure**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Linux systemd (Nice=-10), Git, Pytest (100% Passed).
+- **DevOps & Infrastructure**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Linux systemd (Nice=-10), Git, 200/200 Unit & Invariant Tests (100% Passed).
 """
 
 def generate_pdf():
