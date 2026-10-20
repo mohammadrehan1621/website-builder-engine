@@ -18,16 +18,16 @@ DESKTOP_PATH = Path("C:/Users/rehan/Desktop/Mohammad_Rehan_Resume.pdf")
 
 resume_md = """
 ## Executive Summary
-Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on experience bridging commercial retail operations and fault-tolerant distributed systems. Creator of AegisDB™ (2.54M ticks/sec @ 0.39µs via LMAX Disruptor cacheline alignment, 21.4M AVX2 SIMD invariant ops/sec @ 46.69ns across 10M operations with 0.000000000000% precision drift), Dynamic Spread-Clamping & Volatility-Adaptive Sizing (2.0x ATR scaling, automated entry lockout on spread widening), The Holy Trinity Framework (Aegis, Chaos, Phoenix: autonomous antifragile resilience loop with sub-15ms MTTR), and systematic options execution engines with zero capital leakage on AWS Mumbai.
+Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on experience bridging commercial retail operations and fault-tolerant distributed systems. Creator of AegisDB™ (2.54M ticks/sec @ 0.39µs via LMAX Disruptor cacheline alignment, 21.4M AVX2 SIMD invariant ops/sec @ 46.69ns across 10M operations with 0.000000000000% precision drift), Dynamic Spread-Clamping & Volatility-Adaptive Sizing (2.0x ATR scaling, automated entry lockout on spread widening), 3-AZ Multi-Node Quorum Architecture (sub-15ms MTTR crash recovery), and systematic options execution engines with zero capital leakage on AWS Mumbai.
 
 ## Core Competencies & Architecture Stack
-- **AegisDB™ In-Memory Engine**: LMAX Disruptor 64-byte cacheline-padded ring buffer (2.54M ticks/sec, 0.39µs latency, zero false sharing across CPU cores), bare-metal RDTSC JIT x86_64 machine code cycle counter (38.04 cycles/op), memory-mapped (mmap) LSM Ash Ledger WAL (3.56M syncs/sec, 0.28µs append, 3.02ms kill -9 hot recovery, ₹0.00 data loss).
+- **AegisDB™ In-Memory Engine**: LMAX Disruptor 64-byte cacheline-padded ring buffer (2.54M ticks/sec, 0.39µs latency, zero false sharing across CPU cores), bare-metal RDTSC JIT x86_64 machine code cycle counter (38.04 cycles/op), memory-mapped (mmap) LSM Write-Ahead Log (WAL) (3.56M syncs/sec, 0.28µs append, 3.02ms kill -9 hot recovery, ₹0.00 data loss).
 - **AVX2 SIMD Vectorized Invariant Engine**: High-throughput vectorized financial boundary evaluation across 10,000,000 operations (21.4M ops/sec, 46.69ns latency), enforcing 35% drawdown clamps, 30% untouchable cash reserve, and 0.000000000000% precision drift.
 - **Dynamic Volatility-Adaptive Sizing & Spread Filters**: Mathematically disciplined risk model: dynamic orderbook spread clamping (veto entries when spread >= ₹1.50), volatility-scaled sizing (exponential compression down to 25% exposure upon VIX surges before stop-loss touch), and orderbook liquidity collapse lockouts.
-- **7-Stage Multi-Factor Execution Tribunal**: Deterministic in-memory invariant evaluation (<10µs) coupled with Directional Toxicity Intelligence (VPIN volume-synchronized probability of toxicity + Cumulative Volume Delta supportive sweep validation vs hostile dump vetoes) and post-trade forensic audits.
-- **The Holy Trinity Resilience Framework**: Aegis (Static AST Contract Verification, Precision Floor Quantization, 35% Risk Drawdown Ceiling), Chaos Gauntlet (Adversarial Stress Injections: synthetic rate limits, timeouts, socket drops, database lock contention), Phoenix Engine (Ash Ledger WAL Micro-Journaling, Sub-15ms Hot Process Resurrection, Antifragile Parameter Hardening).
-- **FinTech & Algorithmic Trading**: Cloud-native systematic options execution (NSE NIFTY/BANKNIFTY), Spot/15m VWAP structural stop-loss guards, 13:30 IST 0-DTE theta decay shields, sub-50ms broker API roundtrip, Kotak Neo v3 orchestrator.
-- **Commercial SaaS & Multi-Agent Systems**: Autonomous Agent Supervision, Multi-Agent Fleet Registries, Web Mission Control Telemetry Dashboards, High-Throughput REST APIs, Python SDK distribution, Cost/Token ceiling budgeting.
+- **7-Stage Multi-Factor Execution Tribunal**: Deterministic in-memory invariant evaluation (<1µs compute / ~1.2ms broker wire transit) coupled with Directional Toxicity Intelligence (VPIN volume-synchronized probability of toxicity + Cumulative Volume Delta supportive sweep validation vs hostile dump vetoes) and post-trade forensic audits.
+- **Antifragile Triad Resilience Framework**: Aegis Contract Verification, Chaos Stress Injections (synthetic rate limits, timeouts, socket drops, database lock contention), and Autonomous Process Resurrection with Antifragile Parameter Hardening.
+- **FinTech & Algorithmic Trading**: Cloud-native systematic options execution (NSE NIFTY/BANKNIFTY), exchange-native Stop-Loss Limit orders with 1.5% protection buffer, Spot/15m VWAP structural stop-loss guards, 13:30 IST 0-DTE theta decay shields, sub-50ms broker API roundtrip, Kotak Neo v3 orchestrator.
+- **Commercial SaaS & Multi-Agent Systems**: Autonomous Agent Supervision, Multi-Agent Fleet Registries, Web Mission Control Telemetry Dashboards, High-Throughput REST APIs, Internal SDK distribution, Cost/Token ceiling budgeting.
 - **Cloud Infrastructure & Security**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Zero-Trust Network Access (ZTNA) via Private WireGuard/Tailscale Mesh, Linux systemd real-time priority tuning (Nice=-10).
 
 ## Key Production Systems & Architectures
@@ -36,7 +36,7 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 - Architected an ultra-low-latency in-memory state engine and circular tick ring buffer with 64-byte cacheline padding achieving 2,535,916 ticks/sec at 0.39µs latency with zero false sharing across CPU cores.
 - Implemented bare-metal x86_64 machine code JIT timing (RDTSC) reading physical CPU cycles directly in 38.04 cycles per operation.
 - Evaluated 10,000,000 extreme market operations in AVX2 SIMD vector chunks at 21,417,114 ops/sec (46.69ns per invariant check) with audited 0.000000000000% mathematical precision drift.
-- Built a zero-syscall memory-mapped (mmap) LSM append-only Ash Ledger achieving 3,559,925 syncs/sec (0.28µs append) and 3.02ms kill -9 hot replay recovery with ₹0.00 / 0 bytes data loss.
+- Built a zero-syscall memory-mapped (mmap) LSM append-only Write-Ahead Log (WAL) achieving 3,559,925 syncs/sec (0.28µs append) and 3.02ms kill -9 hot replay recovery with ₹0.00 / 0 bytes data loss.
 - Embedded distributed Raft consensus over UDP multicast with sub-millisecond term validation, surviving Jepsen split-brain partition torture with zero double-spend anomalies.
 
 ### Indian Quant Options Sniper — Institutional Derivatives Execution Engine
@@ -52,18 +52,18 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 [PAGEBREAK]
 
 ### AegisOps: Autonomous AI Agent Operations SaaS — Antifragile Mission Control
-- **Commercial Mission Control Platform**: Production multi-tenant B2B SaaS platform commercializing The Holy Trinity resilience engine for developer teams and enterprises deploying autonomous multi-agent systems.
+- **Commercial Mission Control Platform**: Production multi-tenant B2B SaaS platform commercializing the Antifragile Triad resilience engine for developer teams and enterprises deploying autonomous multi-agent systems.
 - **Philosophy**: Enforces Nassim Taleb's Golden Rule of Resilience: Multi-agent systems must never recover to a vulnerable status quo—every auto-heal permanently hardens execution envelopes and adapts operational parameters.
 - **Web Mission Control UI (:8510)**: Real-time agent fleet observability, live health telemetry, token/cost ceiling enforcement, and one-click synthetic chaos injection console.
 - **Multi-Agent Fleet Registry**: Centralized supervisor managing agent lifecycles (Idle, Running, Stressed, Resurrecting, Immune), tracking self-healing epochs and parameter adaptations.
-- **High-Throughput Public REST API (:8000)**: Sub-millisecond endpoints for task dispatching, heartbeat reporting, and write-ahead Ash Ledger log synchronization.
-- **Downloadable Python SDK (`pip install aegisops`)**: Drop-in resilience client enabling external agents to auto-heal from LLM rate limits (429), hallucinated JSON, and tool hang crashes.
+- **High-Throughput Public REST API (:8000)**: Sub-millisecond endpoints for task dispatching, heartbeat reporting, and write-ahead WAL state synchronization.
+- **Internal Resilience SDK**: Drop-in resilience client enabling external agents to auto-heal from LLM rate limits (429), hallucinated JSON, and tool hang crashes.
 - **Verified Benchmark Metrics**: Sub-10ms Hot-Resurrection MTTR (<10ms), $0.00 Zero-Loss Capital Guarantee, and 29/29 Pytest suites passed with 100% test coverage.
 
 ### Autonomous Video & Content Studio — Multi-Modal Programmatic Engine
 - Developed an end-to-end automated vertical video (9:16) production studio combining topic-to-script agent workflows, studio neural voiceover, and dynamic B-roll synchronization.
 - Engineered a custom ASS subtitle engine compiling word-by-word colored animated subtitle cues (Hormozi style) with automatic background audio ducking.
-- Fortified rendering pipeline with Phoenix process supervision, preventing FFmpeg memory leaks, out-of-memory crashes, and Zombie sub-processes during batch renders.
+- Fortified rendering pipeline with autonomous process supervision, preventing FFmpeg memory leaks, out-of-memory crashes, and Zombie sub-processes during batch renders.
 - Autonomously outputs ready-to-publish 1080x1920 Full HD video packages complete with high-CTR titles, SEO descriptions, and automated hashtag generation.
 
 ### Footwear Retail POS & High-Volume Inventory Ledger
@@ -76,11 +76,11 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 ### Founder & Lead Systems Architect
 **Rehan Quant Lab™ — Patna, Bihar, India (Remote Global)** *(January 2023 – Present)*
 - Direct independent systems research and software development for ultra-low-latency in-memory databases, autonomous AI swarms, and deterministic quantitative trading infrastructure.
-- Engineered AegisDB™, achieving 2.62M reads/sec (0.38µs) and sub-15ms Phoenix WAL crash resurrection with zero-heap garbage collection jitter.
+- Engineered AegisDB™, achieving 2.62M reads/sec (0.38µs) and sub-15ms WAL crash resurrection with zero-heap garbage collection jitter.
 - Architected and deployed the Indian Quant Options Sniper 24/7 on AWS EC2 Mumbai (ap-south-1) with connection-pooled WebSocket market feeds.
-- Built the Holy Trinity Antifragility Engine implementing Nassim Taleb's Golden Rule of Resilience with continuous evolutionary parameter adaptation.
+- Built the 3-AZ Fault-Tolerant Quorum Architecture implementing Nassim Taleb's Golden Rule of Resilience with continuous evolutionary parameter adaptation.
 
-### Store Manager & Lead Systems Architect
+### Store & Operations Manager
 **Ladies Zone Exclusive Showroom — Patna, Bihar, India** *(March 2021 – Present)*
 - Direct day-to-day operations, inventory replenishment, and customer relationship management for a high-volume retail fashion showroom in Patna, Bihar.
 - Architected and deployed in-house biometric attendance audit ledger, retail POS billing software, and custom business workflow automations.

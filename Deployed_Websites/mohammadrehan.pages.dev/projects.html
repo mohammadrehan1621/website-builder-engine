@@ -284,7 +284,7 @@ Explore live autonomous self-healing swarms, systematic quant options sniper eng
                     </div>
                     <h3 class="text-2xl font-bold text-slate-900 tracking-tight">AegisDB™ — Distributed In-Memory Engine & AVX2 Kernel</h3>
                     <p class="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-                        A purpose-built in-memory key-value and circular tick-buffer database engineered for ultra-high-frequency quantitative finance. Features a native C AVX2 SIMD sidecar kernel (21.4M ops/sec at 0.39µs latency), 2.62M reads/sec, Stoikov micro-price calculations, Group Commit Ash Ledger Write-Ahead Logging (WAL) with sub-15ms crash recovery, and storage-level invariant risk enforcement.
+                        A purpose-built in-memory key-value and circular tick-buffer database engineered for ultra-high-frequency quantitative finance. Features a native C AVX2 SIMD sidecar kernel (21.4M ops/sec at 0.39µs latency), 2.62M reads/sec, Stoikov micro-price calculations, Deterministic Group Commit Write-Ahead Logging (WAL) with sub-15ms crash recovery, and storage-level invariant risk enforcement.
                     </p>
                     <div class="mt-6 space-y-2">
                         <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Architectural Highlights</h4>
@@ -299,7 +299,7 @@ Explore live autonomous self-healing swarms, systematic quant options sniper eng
                             </li>
                             <li class="flex items-center gap-2">
                                 <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
-                                Ash Ledger WAL Group Commit (13.57ms MTTR)
+                                Deterministic WAL Group Commit (13.57ms MTTR)
                             </li>
                             <li class="flex items-center gap-2">
                                 <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
@@ -311,7 +311,7 @@ Explore live autonomous self-healing swarms, systematic quant options sniper eng
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Modern C++20 / C11</span>
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">AVX2 SIMD Intrinsics</span>
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Zero Heap GC Ring Buffer</span>
-                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Ash Ledger WAL</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Append-Only WAL Engine</span>
                     </div>
                 </div>
                 <div class="px-8 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
@@ -361,7 +361,7 @@ Explore live autonomous self-healing swarms, systematic quant options sniper eng
                     <div class="mt-6 flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">FastAPI :8000</span>
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Streamlit :8510</span>
-                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">pip install aegisops</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Internal Monorepo SDK</span>
                         <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200 font-mono">Docker Compose</span>
                     </div>
                 </div>
@@ -1266,7 +1266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!el) return;
     const roles = [
         "AegisOps — Autonomous AI Agent Operations SaaS",
-        "The Holy Trinity: Aegis • Chaos • Phoenix (<10ms MTTR)",
+        "Antifragile Triad: Aegis • Chaos • Phoenix (<10ms MTTR)",
         "Indian Quant Options Sniper (AWS Mumbai • Systematic Routing)",
         "Autonomous AI Shorts & Reels Studio (Multi-Modal Pipeline)",
         "Apex-Attendance-Vault (Biometric Enterprise Security)",
