@@ -38,6 +38,7 @@ def deploy_portfolio():
         "projects.html",
         "experience.html",
         "contact.html",
+        "legal.html",
         "Mohammad_Rehan_Resume.pdf",
         "emblem.jpg",
         "logo.jpg",
