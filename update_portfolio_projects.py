@@ -7,6 +7,55 @@ index_file = portfolio_dir / "index.html"
 
 # New Rich Projects HTML Cards for projects.html
 PROJECTS_CARDS = """
+            <!-- Project 0: Aegis Crypto Bot (Asynchronous Spot Microstructure Execution Engine) -->
+            <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="ai">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                            Production Microstructure Engine
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">Binance 24/7 Spot & Microsecond Telemetry</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 tracking-tight">Aegis Crypto Engine — Asynchronous Spot Microstructure Engine</h3>
+                    <p class="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        An asynchronous, ultra-low-latency spot execution engine engineered for continuous 24/7 Binance operation. Features zero-allocation in-memory ring buffers (0.97 µs trade print throughput), 20-level Weighted Order Book Imbalance (9.44 µs WOBI), a mathematically proven 1X Spot capital preservation invariant (0.00% liquidation risk), Brownian noise-filtered ATR stops, 20-minute Time-Decay scratch exits, and SQLite WAL zero-loss persistence.
+                    </p>
+                    <div class="mt-6 space-y-2">
+                        <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Architectural Highlights</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
+                                Microsecond Order Book WOBI (9.44 µs) & CVD (0.97 µs)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
+                                1X Pure Spot Model (Strict 0.00% Liquidation Risk)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
+                                Noise-Filtered Dynamic ATR Stops & 20-Min Time-Decay Scratch
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-slate-900 flex-shrink-0"></i>
+                                78/78 Passing Adversarial Invariants & Linux systemd Integration
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Python 3.11+ / AsyncIO</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Binance WebSocket API</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">SQLite WAL Engine</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Systemd Linux Daemon</span>
+                        <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Microstructure Math</span>
+                    </div>
+                </div>
+                <div class="px-8 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-xs text-slate-500 font-medium">Status: Live In-Production Engine</span>
+                    <span class="text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-lg">Proprietary Quant Engine</span>
+                </div>
+            </div>
+
             <!-- Project 1: Indian Trading Bot (Multi-Agent Quant Options Sniper) -->
             <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:border-slate-400 hover:shadow-md transition duration-300 flex flex-col justify-between" data-category="ai">
                 <div class="p-8">
@@ -272,11 +321,12 @@ else:
 
 # Update Aria response in projects.html & index.html
 new_aria_response = """response = `Mohammad Rehan has engineered an extraordinary production software suite:
-                1. <strong>Indian Trading Bot</strong>: Multi-agent quantitative options sniper with 5-pillar confluence and 4-account family fleet execution.<br>
-                2. <strong>Apex-Attendance-Vault</strong>: Biometric and camera attendance system with cryptographic integrity and automated PDF payroll reporting.<br>
-                3. <strong>Footwear POS & Sales Dashboard</strong>: Real-world retail inventory ledger, barcode billing, and sales analytics.<br>
-                4. <strong>Maison Ladies Zone (ladieszonepatna.in)</strong>: Luxury boutique digital showcase with 5-layer mathematical stealth armor and WhatsApp concierge.<br>
-                5. <strong>Autonomous AI Web Studio</strong>: Multi-model generation engine with AST self-healing and 1-click edge deployment.<br>
+                1. <strong>Aegis Crypto Engine</strong>: Asynchronous spot market microstructure execution engine on Binance with microsecond telemetry and 78 verified invariants.<br>
+                2. <strong>Indian Trading Bot</strong>: Multi-agent quantitative options sniper with 5-pillar confluence and 4-account family fleet execution.<br>
+                3. <strong>Apex-Attendance-Vault</strong>: Biometric and camera attendance system with cryptographic integrity and automated PDF payroll reporting.<br>
+                4. <strong>Footwear POS & Sales Dashboard</strong>: Real-world retail inventory ledger, barcode billing, and sales analytics.<br>
+                5. <strong>Maison Ladies Zone (ladieszonepatna.in)</strong>: Luxury boutique digital showcase with 5-layer mathematical stealth armor and WhatsApp concierge.<br>
+                6. <strong>Autonomous AI Web Studio</strong>: Multi-model generation engine with AST self-healing and 1-click edge deployment.<br>
                 <div class="pt-2"><a href="projects.html" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1.5 rounded-lg text-xs font-medium">View All Projects &rarr;</a></div>`;"""
 
 for f in [projects_file, index_file]:
