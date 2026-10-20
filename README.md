@@ -16,7 +16,7 @@ A full-stack, autonomous website builder and client acquisition suite that trans
    - **Security**: Content Security Policy (CSP) meta tags, XSS/anti-tamper form sanitization, 256-Bit SSL trust badges, and GDPR/CCPA cookie consent banners.
    - **Authentication**: Modern client-side Auth Modal (Sign In / Register), password visibility toggles, and dynamic user session portal in the navbar.
 
-3. **✨ Futuristic Holographic AI Mascot (Aria v2.5 // Neural Interface)**:
+3. **✨ Interactive Conversational AI Assistant (Aria)**:
    - Interactive cyberpunk anime mascot with glowing scan-lines, floating hologram capsule, particle glow, and instant neural FAQ responder.
 
 4. **🔄 Self-Healing Sentinel & 24/7 Watchdog Daemon**:
