@@ -174,7 +174,7 @@
         if (/^(hi|hello|hey|salam|assalam|namaste|hola|greetings|yo|sup)\b/i.test(q) || q === 'hi' || q === 'hello' || q === 'hey') {
             const visitor = (function() { try { return localStorage.getItem('__visitor_name__'); } catch(e){ return null; } })();
             const greeting = visitor ? `Hello, <strong>${escapeHtml(visitor)}</strong>! 👋` : `Hello! 👋`;
-            return `${greeting} I am <strong>Aria v4.2</strong>, Mohammad Rehan's neural interface companion.<br><br>
+            return `${greeting} I am <strong>Aria v4.2</strong>, Mohammad Rehan's autonomous systems assistant.<br><br>
             I can answer anything about Rehan's <strong>BCA background</strong>, his <strong>4+ years of retail store leadership</strong> in Patna, his <strong>Indian Quant Trading Bot</strong> on AWS Mumbai, or <strong>how his systems & website work</strong>.<br><br>
             What would you like to explore?`;
         }
@@ -182,14 +182,14 @@
         if (q.includes('how are you') || q.includes('how r u') || q.includes('how do you do') || q.includes("how's it going") || q.includes('whats up') || q.includes("what's up") || q.includes('how are things')) {
             return `All systems are operating at peak efficiency! 🟢<br><br>
             - <strong>Phoenix Sentinel:</strong> Active (MTTR &lt;50ms)<br>
-            - <strong>AWS Mumbai Quant Engine:</strong> Sub-8ms exchange proximity<br>
+            - <strong>AWS Mumbai Quant Engine:</strong> High-concurrency WebSocket streaming<br>
             - <strong>Edge Availability:</strong> 100% across global Cloudflare CDN<br>
             - <strong>Antifragile Hardening:</strong> Armed with the Golden Rule<br><br>
             How can I assist you with Mohammad Rehan's architecture or background today?`;
         }
 
         if (q.includes('who are you') || q.includes('what are you') || q.includes('your name') || q.includes('what is aria')) {
-            return `I am <strong>Aria (v4.2)</strong>, an autonomous neural assistant architected directly by <strong>Mohammad Rehan</strong>.<br><br>
+            return `I am <strong>Aria (v4.2)</strong>, an autonomous systems assistant architected directly by <strong>Mohammad Rehan</strong>.<br><br>
             My purpose is to provide immediate, deep technical intelligence to engineers, recruiters, and clients regarding Rehan's engineering capabilities, real-world business leadership, and live production deployments.`;
         }
 
@@ -213,7 +213,7 @@
             if (savedName) {
                 return `You introduced yourself as <strong>${escapeHtml(savedName)}</strong>! 😊 What would you like to explore in Rehan's systems today, ${escapeHtml(savedName)}?`;
             }
-            return `You haven't told me your name yet! Feel free to say <em>"My name is [your name]"</em> so I can remember you. In the meantime, I am <strong>Aria v4.2</strong>, Mohammad Rehan's neural intelligence interface.`;
+            return `You haven't told me your name yet! Feel free to say <em>"My name is [your name]"</em> so I can remember you. In the meantime, I am <strong>Aria v4.2</strong>, Mohammad Rehan's autonomous systems assistant.`;
         }
 
         // 2. Who is Mohammad Rehan? (Name, Bio, Identity)
@@ -251,7 +251,7 @@
         // 6. What We Do (Pillar 01)
         if (q.includes('what we do') || q.includes('what do you do') || q.includes('what does he do') || q.includes('capabilities') || q.includes('services') || q.includes('what do u do')) {
             return `<strong>What We Do (Frontier Systems):</strong><br><br>
-            1. 🎯 <strong>Institutional Quant Options Engines:</strong> AWS Mumbai sub-8ms execution systems with Spot/VWAP structural risk guards and 0-DTE theta shields.<br>
+            1. 🎯 <strong>Systematic Quant Options Engines:</strong> AWS Mumbai cloud execution systems with Spot/VWAP structural risk guards and 0-DTE theta shields.<br>
             2. 🎬 <strong>Autonomous AI Media Studios:</strong> Multi-modal pipelines generating scripted, voiced, edited, and subtitled 9:16 vertical short-form video autonomously.<br>
             3. 🏬 <strong>High-Volume Retail POS & Inventory:</strong> Offline-resilient GST billing and inventory reconciliation software.<br>
             4. 🌐 <strong>Fault-Tolerant Edge Web Platforms:</strong> Zero-downtime web platforms with self-healing DOM and Write-Ahead micro-journaling.`;
@@ -271,7 +271,7 @@
             return `<strong>How We Make It Possible (The Undeniable Rigor):</strong><br><br>
             - ⚡ <strong>The Permanent Chaos Gauntlet:</strong> Continuous synthetic fault injection (socket cuts, disk saturation, SIGKILL process terminates) to prove recovery <em>before</em> production capital is committed.<br>
             - 🏬 <strong>Dual-Domain Reality:</strong> 4+ years of physical showroom operations handling cash flow, inventory rushes, and real customer volume + BCA computer science theory.<br>
-            - 📐 <strong>Zero Marketing Hype:</strong> Everything is measured in deterministic metrics: &lt;50ms MTTR, sub-8ms exchange proximity, and zero capital leakage.`;
+            - 📐 <strong>Zero Marketing Hype:</strong> Everything is measured in deterministic metrics: &lt;50ms MTTR, &lt;10µs memory risk evaluation, and zero capital leakage.`;
         }
 
         // 9. Golden Rule of Resilience & Antifragile Evolution
@@ -303,7 +303,7 @@
         if (q.includes('trading bot') || q.includes('quant') || q.includes('options') || q.includes('stocks') || q.includes('algo') || q.includes('nse') || q.includes('nifty') || q.includes('banknifty') || q.includes('kotak')) {
             return `<strong>Indian Quant Options Sniper (Institutional Execution):</strong><br><br>
             - 📍 <strong>Hosting:</strong> AWS Mumbai (<code>ap-south-1</code>) on t3.small tuned instance.<br>
-            - ⚡ <strong>Proximity:</strong> Sub-8ms dedicated fiber proximity to NSE colocation.<br>
+            - ⚡ <strong>Execution:</strong> Persistent WebSocket feeds with sub-50ms broker API dispatching.<br>
             - 🛡️ <strong>Risk Guards:</strong> Stop-loss anchored to Nifty Spot 15m VWAP / Swing Low.<br>
             - ⏰ <strong>Theta Shield:</strong> Entries disabled after 13:30 IST on 0-DTE expiry days to prevent decay slaughter.<br>
             - 🔒 <strong>Security:</strong> Accessible strictly over private Tailscale WireGuard mesh (zero public web exposure).`;
@@ -373,7 +373,7 @@
 
         // 17. Intelligent Conversational Fallback
         return `I understand you are inquiring about "<strong>${escapeHtml(rawQuery)}</strong>".<br><br>
-        As Mohammad Rehan's neural interface, I can assist you with:<br>
+        As Mohammad Rehan's systems assistant, I can assist you with:<br>
         • 💼 <strong>Rehan's Background:</strong> 4+ yrs retail leadership + BCA degree<br>
         • ⚡ <strong>What We Do & How We Do It:</strong> Quant bots, AI video studio, Phoenix self-healing<br>
         • 🌐 <strong>How This Website Works:</strong> Cloudflare Edge + Ash Ledger write-ahead WAL<br>
