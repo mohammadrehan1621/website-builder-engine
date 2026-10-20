@@ -46,6 +46,7 @@ def deploy_portfolio():
         "og_preview.png",
         "phoenix_sentinel.js",
         "aria_neural_engine.js",
+        "rehan_kinetic_engine.js",
         "robots.txt",
         "sitemap.xml",
         "googlecb5b21d2c61033d5.html"
@@ -105,10 +106,12 @@ def deploy_portfolio():
             r = requests.get(target_url, timeout=10)
             has_phoenix = "phoenix_sentinel.js" in r.text
             has_infra_bar = "production infrastructure" in r.text.lower()
+            has_kinetic = "rehan_kinetic_engine.js" in r.text
             print("\n" + "─" * 70)
             print(f"🌐 Live Edge Health Check [{target_url}]: Status {r.status_code} ({len(r.text):,} bytes)")
             print(f"   • Phoenix Sentinel Script Wired: {'🟢 YES' if has_phoenix else '🔴 NO'}")
             print(f"   • Infrastructure Status Bar Live: {'🟢 YES' if has_infra_bar else '🔴 NO'}")
+            print(f"   • Kinetic Awwwards Engine Live:   {'🟢 YES' if has_kinetic else '🔴 NO'}")
             print("─" * 70)
         except Exception as e:
             print(f"Edge check warning [{target_url}]: {e}")
