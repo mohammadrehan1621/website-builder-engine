@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ExpressBill POS">
+    <title>ExpressBill Mobile POS™ - 100% Offline PWA</title>
+    <link rel="manifest" href="./manifest.json">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #0284c7;
+            --primary-light: #e0f2fe;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --border: #e2e8f0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --safe-bottom: env(safe-area-inset-bottom, 16px);
+        }
+        body {
+            background: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: calc(75px + var(--safe-bottom));
+        }
+        /* Top Header */
+        .top-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .brand-title { font-size: 17px; font-weight: 800; color: var(--text-main); }
+        .brand-subtitle { font-size: 11px; font-weight: 600; color: var(--text-muted); }
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--success-light);
+            color: var(--success);
+            padding: 5px 10px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .status-dot { width: 7px; height: 7px; background: var(--success); border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+        /* Tabs container */
+        .tab-content { display: none; padding: 16px; flex: 1; }
+        .tab-content.active { display: block; }
+
+        /* Metric Cards */
+        .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            box-shadow: var(--shadow);
+        }
+        .metric-card.hero {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #ffffff;
+            border: none;
+        }
+        .metric-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); }
+        .metric-card.hero .metric-label { color: #bae6fd; }
+        .metric-val { font-size: 24px; font-weight: 800; margin-top: 4px; }
+        .metric-val.green { color: var(--success); }
+
+        /* Search & Catalog */
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            gap: 10px;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 15px;
+            width: 100%;
+            color: var(--text-main);
+            background: transparent;
+        }
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.1s, border-color 0.15s;
+            position: relative;
+        }
+        .product-card:active { transform: scale(0.97); }
+        .product-name { font-size: 14px; font-weight: 700; line-height: 1.25; margin-bottom: 6px; color: var(--text-main); }
+        .product-stock { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+        .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+        .product-price { font-size: 16px; font-weight: 800; color: var(--primary); }
+        .add-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+        }
+        .in-cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--success);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        /* Floating Cart Pill */
+        .cart-pill {
+            position: fixed;
+            bottom: calc(76px + var(--safe-bottom));
+            left: 16px;
+            right: 16px;
+            background: #0f172a;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 14px 18px;
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            z-index: 50;
+            cursor: pointer;
+            animation: slideUp 0.25s ease-out;
+        }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .cart-pill-total { font-size: 17px; font-weight: 800; }
+        .cart-pill-btn {
+            background: var(--success);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Bottom Checkout Sheet */
+        .sheet-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            z-index: 99;
+            display: none;
+            align-items: flex-end;
+        }
+        .sheet {
+            background: #ffffff;
+            width: 100%;
+            border-radius: 24px 24px 0 0;
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            padding-bottom: calc(20px + var(--safe-bottom));
+            animation: slideSheet 0.25s ease-out;
+        }
+        @keyframes slideSheet { from { transform: translateY(100%); } to { transform: translateY(0); } }
+        .sheet-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+        .sheet-title { font-size: 18px; font-weight: 800; }
+        .sheet-close { background: none; border: none; font-size: 24px; color: var(--text-muted); cursor: pointer; }
+        .sheet-items { overflow-y: auto; flex: 1; margin: 14px 0; max-height: 35vh; }
+        .sheet-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+        .qty-controls { display: flex; align-items: center; gap: 8px; }
+        .qty-btn { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg-page); font-weight: 700; cursor: pointer; }
+
+        /* Payment Selector */
+        .pay-chips { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 12px 0; }
+        .pay-chip {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            background: var(--bg-page);
+        }
+        .pay-chip.active { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
+
+        /* Checkout Action Button */
+        .charge-btn {
+            background: var(--success);
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 16px;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        }
+
+        /* UPI QR Section */
+        .upi-qr-card {
+            display: none;
+            text-align: center;
+            padding: 14px;
+            background: var(--bg-page);
+            border-radius: 12px;
+            margin: 10px 0;
+            border: 1px dashed #cbd5e1;
+        }
+
+        /* Bottom Nav Bar */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            height: calc(64px + var(--safe-bottom));
+            background: #ffffff;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-top: 8px;
+            z-index: 45;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-muted);
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            width: 25%;
+        }
+        .nav-item.active { color: var(--primary); }
+        .nav-icon { font-size: 20px; }
+
+        /* Invoice History List */
+        .invoice-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* Receipt Modal */
+        .receipt-modal {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.7);
+            z-index: 100;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .receipt-card {
+            background: #ffffff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 360px;
+            padding: 20px;
+            text-align: center;
+        }
+        .receipt-text {
+            background: #f1f5f9;
+            padding: 14px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            text-align: left;
+            margin: 14px 0;
+            max-height: 250px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div>
+            <div class="brand-title">⚡ ExpressBill POS</div>
+            <div class="brand-subtitle" id="live-clock">...</div>
+        </div>
+        <div class="header-status">
+            <span class="status-dot"></span> <span>100% OFFLINE</span>
+        </div>
+    </header>
+
+    <!-- Tab 1: POS Billing Counter -->
+    <main class="tab-content active" id="tab-billing">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="catalog-search" placeholder="Search item or scan barcode..." oninput="filterCatalog()">
+        </div>
+
+        <div class="catalog-grid" id="catalog-container">
+            <!-- Dynamic catalog items -->
+        </div>
+    </main>
+
+    <!-- Tab 2: Sales History -->
+    <section class="tab-content" id="tab-invoices">
+        <div class="metrics-grid">
+            <div class="metric-card hero">
+                <div class="metric-label">Today's Sales Total</div>
+                <div class="metric-val" id="today-total-val">₹ 0.00</div>
+                <div style="font-size: 12px; margin-top: 4px;" id="today-bills-count">0 bills generated</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Cash Collected</div>
+                <div class="metric-val green" id="today-cash-val">₹ 0.00</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">UPI Payments</div>
+                <div class="metric-val" style="color: var(--primary);" id="today-upi-val">₹ 0.00</div>
+            </div>
+        </div>
+
+        <div style="font-weight: 800; font-size: 15px; margin-bottom: 10px;">Today's Invoices</div>
+        <div id="invoices-list-container">
+            <!-- Invoices list -->
+        </div>
+    </section>
+
+    <!-- Tab 3: Inventory Stock -->
+        <!-- Tab 3: Pro Inventory Stock & Valuation Hub -->
+    <section class="tab-content" id="tab-inventory">
+        <!-- 4 Full-Width KPI Stats Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px;">
+            <div class="metric-card">
+                <div class="metric-label">📦 Total Catalog SKUs</div>
+                <div class="metric-val" id="inv-total-skus">0 Items</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">📊 Current Total Stock</div>
+                <div class="metric-val" style="color: var(--primary);" id="inv-total-units">0 Units</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">💰 Total Stock Valuation</div>
+                <div class="metric-val" style="color: var(--success);" id="inv-total-valuation">₹ 0.00</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">⚠️ Low Stock Alerts</div>
+                <div class="metric-val" style="color: #10b981;" id="inv-low-alerts">0 (Healthy)</div>
+            </div>
+        </div>
+
+        <!-- Full-Width Pro Table Card -->
+        <div class="metric-card" style="padding: 16px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px;">
+                <div>
+                    <div style="font-weight: 800; font-size: 16px;">Product Stock & Inventory Valuation</div>
+                    <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Real-time inventory valuation and one-click rapid counter adjustments</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <input type="text" id="inv-search-input" placeholder="🔍 Search SKU, Product..." oninput="renderStockList()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; width: 240px; outline: none; background: var(--bg-card); color: var(--text-main);">
+                </div>
+            </div>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border); color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">
+                            <th style="padding: 10px 8px;">SKU</th>
+                            <th style="padding: 10px 8px;">Product Name</th>
+                            <th style="padding: 10px 8px; text-align: right;">Retail Price</th>
+                            <th style="padding: 10px 8px; text-align: right;">Stock Qty</th>
+                            <th style="padding: 10px 8px; text-align: right;">Stock Valuation</th>
+                            <th style="padding: 10px 8px; text-align: center;">GST</th>
+                            <th style="padding: 10px 8px; text-align: center;">Quick Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab 4: Sync & PWA -->
+    <section class="tab-content" id="tab-settings">
+        <div class="metric-card" style="margin-bottom: 16px;">
+            <div style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">📱 Progressive Web App (PWA)</div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.4;">
+                This app runs offline on your Android phone, iPhone, or iPad. Add it to your home screen for full-screen touch POS.
+            </p>
+            <button id="pwa-install-btn" style="background: var(--primary); color: #fff; border: none; padding: 12px 16px; border-radius: 10px; font-weight: 700; width: 100%; margin-top: 12px; cursor: pointer;">
+                📲 Install App on Phone
+            </button>
+        </div>
+
+        <div class="metric-card">
+            <div style="font-size: 15px; font-weight: 800; margin-bottom: 8px;">Desktop POS Link</div>
+            <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
+                Link to Laptop POS: <strong>http://192.168.1.20:8080</strong>
+            </div>
+            <button onclick="syncWithDesktop()" style="background: var(--bg-page); border: 1px solid var(--border); padding: 10px 14px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer;">
+                🔄 Test Laptop POS Sync
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating Cart Pill -->
+    <div class="cart-pill" id="cart-pill" onclick="openCheckoutSheet()">
+        <div>
+            <span style="font-size: 13px; opacity: 0.8;" id="cart-pill-count">0 items</span>
+            <div class="cart-pill-total" id="cart-pill-total">₹ 0.00</div>
+        </div>
+        <div class="cart-pill-btn">View Bill ➔</div>
+    </div>
+
+    <!-- Bottom Checkout Sheet -->
+    <div class="sheet-overlay" id="checkout-overlay">
+        <div class="sheet">
+            <div class="sheet-header">
+                <div class="sheet-title">🛒 Bill Summary</div>
+                <button class="sheet-close" onclick="closeCheckoutSheet()">&times;</button>
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-top: 10px;">
+                <input type="text" id="cust-name" placeholder="Customer Name (Optional)" style="flex: 1; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px;">
+                <input type="tel" id="cust-phone" placeholder="WhatsApp No." style="width: 120px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px;">
+            </div>
+
+            <div class="sheet-items" id="sheet-items-container">
+                <!-- Cart items -->
+            </div>
+
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Payment Method:</div>
+            <div class="pay-chips">
+                <div class="pay-chip active" id="chip-cash" onclick="selectPayment('Cash')">💵 Cash</div>
+                <div class="pay-chip" id="chip-upi" onclick="selectPayment('UPI')">📱 UPI</div>
+                <div class="pay-chip" id="chip-card" onclick="selectPayment('Card')">💳 Card</div>
+            </div>
+
+            <div class="upi-qr-card" id="upi-qr-box">
+                <div style="font-size: 12px; font-weight: 700; color: #0369a1; margin-bottom: 6px;">Customer Scans with GPay / PhonePe / Paytm</div>
+                <div id="upi-qr-img" style="margin: 0 auto; width: 140px; height: 140px; background: #fff; padding: 6px; border-radius: 8px;"></div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 4px;" id="upi-pay-text">UPI: store@upi</div>
+            </div>
+
+            <button class="charge-btn" onclick="submitInvoice()">
+                <span>Confirm & Generate Bill</span>
+                <span id="charge-total-btn">₹ 0.00</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div class="receipt-modal" id="receipt-modal">
+        <div class="receipt-card">
+            <div style="font-size: 28px;">🎉</div>
+            <div style="font-size: 18px; font-weight: 800; margin: 4px 0;" id="modal-bill-num">Invoice #INV-1001</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Recorded Successfully in Offline Storage</div>
+
+            <div class="receipt-text" id="modal-receipt-text">...</div>
+
+            <div style="display: flex; gap: 8px;">
+                <button onclick="shareWhatsApp()" style="flex: 1; background: #25d366; color: #fff; border: none; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer;">
+                    📲 WhatsApp
+                </button>
+                <button onclick="printReceipt()" style="flex: 1; background: #0284c7; color: #fff; border: none; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer;">
+                    🖨️ Print
+                </button>
+            </div>
+            <button onclick="closeReceiptModal()" style="margin-top: 10px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-weight: 700; cursor: pointer;">
+                Done (Next Bill)
+            </button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <div class="nav-item active" onclick="switchTab('billing', this)">
+            <div class="nav-icon">🛒</div>
+            <div>Counter</div>
+        </div>
+        <div class="nav-item" onclick="switchTab('invoices', this)">
+            <div class="nav-icon">📋</div>
+            <div>Bills</div>
+        </div>
+        <div class="nav-item" onclick="switchTab('inventory', this)">
+            <div class="nav-icon">📦</div>
+            <div>Stock</div>
+        </div>
+        <div class="nav-item" onclick="switchTab('settings', this)">
+            <div class="nav-icon">⚡</div>
+            <div>Sync</div>
+        </div>
+    </nav>
+
+    <script>
+        const CURRENCY = "₹";
+        let catalog = [
+            { sku: 'MILK-01', name: 'Fresh Milk 1L', price: '66.00', price_minor: 6600, tax_bp: 0, stock: '50 pcs' },
+            { sku: 'BREAD-01', name: 'Whole Wheat Bread', price: '45.00', price_minor: 4500, tax_bp: 0, stock: '30 pcs' },
+            { sku: 'TEA-01', name: 'Assam Gold Tea 250g', price: '140.00', price_minor: 14000, tax_bp: 500, stock: '40 pcs' },
+            { sku: 'RICE-01', name: 'Basmati Rice 1kg', price: '120.00', price_minor: 12000, tax_bp: 0, stock: '80 pcs' },
+            { sku: 'OIL-01', name: 'Sunflower Oil 1L', price: '165.00', price_minor: 16500, tax_bp: 500, stock: '25 pcs' },
+            { sku: 'SOAP-01', name: 'Bathing Bar 125g', price: '42.00', price_minor: 4200, tax_bp: 1800, stock: '60 pcs' },
+            { sku: 'SUGAR-01', name: 'Pure White Sugar 1kg', price: '48.00', price_minor: 4800, tax_bp: 500, stock: '100 pcs' },
+            { sku: 'ATTA-01', name: 'Chakki Fresh Atta 5kg', price: '215.00', price_minor: 21500, tax_bp: 0, stock: '35 pcs' }
+        ];
+
+        let cart = {};
+        let selectedPaymentMode = 'Cash';
+        let deferredPrompt = null;
+        let lastCreatedInvoice = null;
+
+        // Digital Clock
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('live-clock').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // PWA Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').catch(e => console.log('SW Note:', e));
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            const btn = document.getElementById('pwa-install-btn');
+            if (btn) btn.style.display = 'block';
+        });
+        document.getElementById('pwa-install-btn')?.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                await deferredPrompt.userChoice;
+                deferredPrompt = null;
+            } else {
+                alert("To install on iOS: Tap Share ➔ 'Add to Home Screen'.\nOn Android: Tap Menu (3 dots) ➔ 'Install App'.");
+            }
+        });
+
+        function switchTab(tabId, el) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.getElementById('tab-' + tabId).classList.add('active');
+            el.classList.add('active');
+
+            if (tabId === 'invoices') renderInvoicesHistory();
+            if (tabId === 'inventory') renderStockList();
+        }
+
+        function renderCatalog(items) {
+            const container = document.getElementById('catalog-container');
+            container.innerHTML = items.map(item => {
+                const inCart = cart[item.sku]?.qty || 0;
+                return `
+                    <div class="product-card" onclick="addToCart('${item.sku}')">
+                        ${inCart > 0 ? `<div class="in-cart-badge">${inCart}</div>` : ''}
+                        <div>
+                            <div class="product-name">${item.name}</div>
+                            <div class="product-stock">${item.stock}</div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">${CURRENCY} ${item.price}</div>
+                            <div class="add-btn">+</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterCatalog() {
+            const q = document.getElementById('catalog-search').value.toLowerCase();
+            const filtered = catalog.filter(it => it.name.toLowerCase().includes(q) || it.sku.toLowerCase().includes(q));
+            renderCatalog(filtered);
+        }
+
+        function addToCart(sku) {
+            if (navigator.vibrate) navigator.vibrate(30);
+            const item = catalog.find(i => i.sku === sku);
+            if (!item) return;
+
+            if (!cart[sku]) {
+                cart[sku] = { item, qty: 1 };
+            } else {
+                cart[sku].qty += 1;
+            }
+            updateCartUI();
+            renderCatalog(catalog);
+        }
+
+        function changeQty(sku, delta) {
+            if (!cart[sku]) return;
+            cart[sku].qty += delta;
+            if (cart[sku].qty <= 0) delete cart[sku];
+            updateCartUI();
+            renderSheetItems();
+            renderCatalog(catalog);
+        }
+
+        function updateCartUI() {
+            let count = 0;
+            let totalMinor = 0;
+            for (const sku in cart) {
+                count += cart[sku].qty;
+                totalMinor += cart[sku].qty * cart[sku].item.price_minor;
+            }
+
+            const pill = document.getElementById('cart-pill');
+            if (count > 0) {
+                pill.style.display = 'flex';
+                document.getElementById('cart-pill-count').innerText = count + ' items';
+                document.getElementById('cart-pill-total').innerText = CURRENCY + ' ' + (totalMinor / 100).toFixed(2);
+                document.getElementById('charge-total-btn').innerText = CURRENCY + ' ' + (totalMinor / 100).toFixed(2);
+            } else {
+                pill.style.display = 'none';
+                closeCheckoutSheet();
+            }
+        }
+
+        function openCheckoutSheet() {
+            renderSheetItems();
+            document.getElementById('checkout-overlay').style.display = 'flex';
+        }
+
+        function closeCheckoutSheet() {
+            document.getElementById('checkout-overlay').style.display = 'none';
+        }
+
+        function renderSheetItems() {
+            const container = document.getElementById('sheet-items-container');
+            const lines = Object.values(cart);
+            if (lines.length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 20px;">Cart is empty.</div>';
+                return;
+            }
+
+            container.innerHTML = lines.map(l => `
+                <div class="sheet-item">
+                    <div>
+                        <div style="font-weight: 700; font-size: 14px;">${l.item.name}</div>
+                        <div style="font-size: 12px; color: var(--text-muted);">${CURRENCY} ${l.item.price} each</div>
+                    </div>
+                    <div class="qty-controls">
+                        <button class="qty-btn" onclick="changeQty('${l.item.sku}', -1)">-</button>
+                        <span style="font-weight: 700; font-size: 14px; min-width: 20px; text-align: center;">${l.qty}</span>
+                        <button class="qty-btn" onclick="changeQty('${l.item.sku}', 1)">+</button>
+                    </div>
+                </div>
+            `).join('');
+
+            updateUPIQR();
+        }
+
+        function selectPayment(mode) {
+            selectedPaymentMode = mode;
+            ['cash', 'upi', 'card'].forEach(m => {
+                document.getElementById('chip-' + m).classList.remove('active');
+            });
+            document.getElementById('chip-' + mode.toLowerCase()).classList.add('active');
+
+            const qrBox = document.getElementById('upi-qr-box');
+            if (mode === 'UPI') {
+                qrBox.style.display = 'block';
+                updateUPIQR();
+            } else {
+                qrBox.style.display = 'none';
+            }
+        }
+
+        function updateUPIQR() {
+            let totalMinor = 0;
+            for (const sku in cart) totalMinor += cart[sku].qty * cart[sku].item.price_minor;
+            const amount = (totalMinor / 100).toFixed(2);
+            const upiUrl = `upi://pay?pa=store@upi&pn=RetailStore&am=${amount}&cu=INR`;
+            const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=${encodeURIComponent(upiUrl)}`;
+            document.getElementById('upi-qr-img').innerHTML = `<img src="${qrImgUrl}" width="130" height="130" style="border-radius: 6px;" alt="UPI QR">`;
+            document.getElementById('upi-pay-text').innerText = 'Pay ' + CURRENCY + ' ' + amount;
+        }
+
+        function submitInvoice() {
+            let totalMinor = 0;
+            const items = Object.values(cart).map(c => {
+                totalMinor += c.qty * c.item.price_minor;
+                return {
+                    name: c.item.name,
+                    qty: c.qty,
+                    price: c.item.price,
+                    total: ((c.qty * c.item.price_minor) / 100).toFixed(2)
+                };
+            });
+
+            const billNum = 'INV-' + (1000 + Math.floor(Math.random() * 9000));
+            const inv = {
+                number: billNum,
+                customer: document.getElementById('cust-name').value.trim() || 'Walk-in Customer',
+                phone: document.getElementById('cust-phone').value.trim(),
+                mode: selectedPaymentMode,
+                total: (totalMinor / 100).toFixed(2),
+                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                items: items
+            };
+
+            const history = JSON.parse(localStorage.getItem('expressbill_local_invoices') || '[]');
+            history.unshift(inv);
+            localStorage.setItem('expressbill_local_invoices', JSON.stringify(history));
+
+            lastCreatedInvoice = inv;
+            cart = {};
+            updateCartUI();
+            renderCatalog(catalog);
+            showReceiptModal(inv);
+        }
+
+        function showReceiptModal(inv) {
+            document.getElementById('modal-bill-num').innerText = 'Bill #' + inv.number;
+            let text = `================================\n       MY RETAIL STORE          \n================================\nBill No: ${inv.number}\nDate: ${new Date().toLocaleDateString()} ${inv.time}\nCustomer: ${inv.customer}\nPayment: ${inv.mode}\n--------------------------------\n`;
+            inv.items.forEach(it => {
+                text += `${it.name.padEnd(16)} x${it.qty}  ${CURRENCY}${it.total}\n`;
+            });
+            text += `--------------------------------\nGRAND TOTAL:        ${CURRENCY}${inv.total}\n================================\n    Thank you! Visit again.     `;
+            document.getElementById('modal-receipt-text').innerText = text;
+            document.getElementById('receipt-modal').style.display = 'flex';
+        }
+
+        function closeReceiptModal() {
+            document.getElementById('receipt-modal').style.display = 'none';
+        }
+
+        function shareWhatsApp() {
+            if (!lastCreatedInvoice) return;
+            const phone = lastCreatedInvoice.phone || '';
+            const msg = encodeURIComponent(`Hello ${lastCreatedInvoice.customer}!\nHere is your bill from My Retail Store:\nBill #${lastCreatedInvoice.number}\nAmount: ${CURRENCY} ${lastCreatedInvoice.total}\nPaid via: ${lastCreatedInvoice.mode}\nThank you! Visit again.`);
+            window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${msg}`, '_blank');
+        }
+
+        function printReceipt() {
+            window.print();
+        }
+
+        function renderInvoicesHistory() {
+            const history = JSON.parse(localStorage.getItem('expressbill_local_invoices') || '[]');
+            let total = 0, cash = 0, upi = 0;
+            history.forEach(inv => {
+                const amt = parseFloat(inv.total) || 0;
+                total += amt;
+                if (inv.mode === 'Cash') cash += amt;
+                if (inv.mode === 'UPI') upi += amt;
+            });
+
+            document.getElementById('today-total-val').innerText = CURRENCY + ' ' + total.toFixed(2);
+            document.getElementById('today-bills-count').innerText = history.length + ' bills recorded';
+            document.getElementById('today-cash-val').innerText = CURRENCY + ' ' + cash.toFixed(2);
+            document.getElementById('today-upi-val').innerText = CURRENCY + ' ' + upi.toFixed(2);
+
+            const container = document.getElementById('invoices-list-container');
+            if (history.length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: var(--text-muted); padding: 20px;">No bills recorded yet.</div>';
+                return;
+            }
+
+            container.innerHTML = history.map(inv => `
+                <div class="invoice-card" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div onclick='showReceiptModal(${JSON.stringify(inv)})' style="flex: 1; cursor: pointer;">
+                        <div style="font-weight: 800; font-size: 14px;">${inv.number}</div>
+                        <div style="font-size: 12px; color: var(--text-muted);">${inv.customer} • ${inv.time}</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="text-align: right; cursor: pointer;" onclick='showReceiptModal(${JSON.stringify(inv)})'>
+                            <div style="font-weight: 800; font-size: 15px; color: var(--primary);">${CURRENCY} ${inv.total}</div>
+                            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted);">${inv.mode}</div>
+                        </div>
+                        <button onclick="voidOfflineInvoice('${inv.number}')" style="background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;">
+                            🗑️ Void
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function voidOfflineInvoice(invNumber) {
+            const pin = prompt("🔒 ADMIN SECURITY AUTHORIZATION\nCustomer denied payment or refused bill.\nCashiers CANNOT delete bills.\nEnter 4-Digit Admin PIN (Default: 9999) to void:");
+            if (pin === null) return;
+            if (pin.trim() !== "9999") {
+                alert("❌ ACCESS DENIED!\nInvalid Admin PIN. Only the Store Admin can delete bills.");
+                return;
+            }
+
+            let history = JSON.parse(localStorage.getItem('expressbill_local_invoices') || '[]');
+            const target = history.find(i => i.number === invNumber);
+            history = history.filter(i => i.number !== invNumber);
+            localStorage.setItem('expressbill_local_invoices', JSON.stringify(history));
+
+            // Restore stock in local catalog
+            if (target && target.items) {
+                target.items.forEach(line => {
+                    const catItem = catalog.find(c => c.name === line.name);
+                    if (catItem) {
+                        const current = parseInt(catItem.stock) || 50;
+                        catItem.stock = (current + line.qty) + ' pcs';
+                    }
+                });
+            }
+
+            alert(`✅ Bill #${invNumber} VOIDED by Admin!\nItems returned to inventory stock.`);
+            renderInvoicesHistory();
+            renderStockList();
+            renderCatalog(catalog);
+        }
+
+        function renderStockList() {
+            const q = (document.getElementById('inv-search-input')?.value || '').toLowerCase();
+            const filtered = catalog.filter(it => !q || it.name.toLowerCase().includes(q) || it.sku.toLowerCase().includes(q));
+            
+            // Compute KPIs
+            const totalSkus = catalog.length;
+            const totalUnits = catalog.reduce((sum, it) => sum + (it.stock || 0), 0);
+            const totalValuation = catalog.reduce((sum, it) => sum + ((it.price || 0) * (it.stock || 0)), 0);
+            const lowCount = catalog.filter(it => (it.stock || 0) <= 10).length;
+
+            const skuEl = document.getElementById('inv-total-skus');
+            if (skuEl) skuEl.textContent = totalSkus + ' Items';
+            const unitsEl = document.getElementById('inv-total-units');
+            if (unitsEl) unitsEl.textContent = totalUnits.toLocaleString() + ' Units';
+            const valEl = document.getElementById('inv-total-valuation');
+            if (valEl) valEl.textContent = CURRENCY + ' ' + totalValuation.toLocaleString('en-IN', {minimumFractionDigits: 2});
+            const alertEl = document.getElementById('inv-low-alerts');
+            if (alertEl) {
+                if (lowCount > 0) {
+                    alertEl.textContent = lowCount + ' Need Restock';
+                    alertEl.style.color = '#ef4444';
+                } else {
+                    alertEl.textContent = '0 (All Healthy)';
+                    alertEl.style.color = '#10b981';
+                }
+            }
+
+            const tbody = document.getElementById('stock-table-body');
+            if (tbody) {
+                tbody.innerHTML = filtered.map(it => {
+                    const stockVal = (it.price || 0) * (it.stock || 0);
+                    const isLow = (it.stock || 0) <= 10;
+                    return `
+                        <tr style="border-bottom: 1px solid var(--border);">
+                            <td style="padding: 10px 8px; font-family: monospace; font-weight: 600; color: var(--text-muted);">${it.sku}</td>
+                            <td style="padding: 10px 8px; font-weight: 700;">${it.name}</td>
+                            <td style="padding: 10px 8px; text-align: right; font-weight: 700;">${CURRENCY} ${it.price.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            <td style="padding: 10px 8px; text-align: right;">
+                                <span style="display: inline-block; padding: 2px 8px; border-radius: 6px; font-weight: 700; font-size: 12px; background: ${isLow ? '#fee2e2' : '#dcfce7'}; color: ${isLow ? '#dc2626' : '#16a34a'};">
+                                    ${isLow ? '⚠️' : '✓'} ${it.stock}
+                                </span>
+                            </td>
+                            <td style="padding: 10px 8px; text-align: right; font-weight: 700; color: var(--text-main);">${CURRENCY} ${stockVal.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            <td style="padding: 10px 8px; text-align: center;"><span style="background: var(--bg-page); padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600;">${(it.tax_bp/100)}%</span></td>
+                            <td style="padding: 10px 8px; text-align: center;">
+                                <button onclick="adjustStock('${it.sku}', 1)" style="padding: 3px 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); cursor: pointer; font-weight: 700; margin-right: 4px;">+</button>
+                                <button onclick="adjustStock('${it.sku}', -1)" style="padding: 3px 8px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); cursor: pointer; font-weight: 700;">-</button>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+        }
+
+        function adjustStock(sku, delta) {
+            const item = catalog.find(i => i.sku === sku);
+            if (item) {
+                item.stock = Math.max(0, (item.stock || 0) + delta);
+                renderStockList();
+                renderCatalog(catalog);
+            }
+        }
+
+        async function syncWithDesktop() {
+            try {
+                const res = await fetch('http://192.168.1.20:8080/api/summary');
+                if (res.ok) {
+                    alert("✅ Connected to Laptop POS successfully!");
+                } else {
+                    alert("⚠️ Laptop responded with error. Check if ExpressBill Desktop is open.");
+                }
+            } catch(e) {
+                alert("ℹ️ Laptop POS offline or not reachable. Running 100% offline via phone storage!");
+            }
+        }
+
+        // Init
+        renderCatalog(catalog);
+    </script>
+
+        <!-- FLOATING COMMERCIAL CTA BANNER -->
+        <div style="position: fixed; bottom: 16px; left: 16px; right: 16px; z-index: 9999; max-width: 650px; margin: 0 auto; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(16px); border: 2px solid rgba(16, 185, 129, 0.5); border-radius: 18px; padding: 12px 18px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: space-between; gap: 12px; color: white;">
+            <div>
+                <div style="font-size: 11px; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">⚡ EXPRESSBILL POS™ — INTERACTIVE DEMO</div>
+                <div style="font-size: 13px; font-weight: 600; color: #f1f5f9;">Own the Perpetual License ($49 / &#8377;3,999)</div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button type="button" onclick="openUpiModal()" style="background: linear-gradient(135deg, #10b981, #0d9488); color: white; font-weight: 700; font-size: 12px; border: none; padding: 8px 14px; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">
+                    Claim License
+                </button>
+                <a href="../" style="background: rgba(255,255,255,0.1); color: #cbd5e1; font-weight: 600; font-size: 12px; text-decoration: none; padding: 8px 12px; border-radius: 12px; display: inline-flex; align-items: center;">
+                    Exit
+                </a>
+            </div>
+        </div>
+        
+
+<!-- 🔒 SECURE DUAL-CHECKOUT & UPI MODAL (VERIFIED PAYEE: 7091518548@pthdfc) -->
+<div id="secure-upi-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-slate-900 border-2 border-emerald-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl text-white relative max-h-[92vh] overflow-y-auto">
+        <!-- Close Button -->
+        <button onclick="closeUpiModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <div class="text-center space-y-3">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                🔒 Verified Direct Settlement &bull; Zero Platform Fee
+            </div>
+            
+            <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">ExpressBill POS™ Lifetime License</h3>
+            <p class="text-xs text-slate-300">Choose your preferred checkout method below:</p>
+
+            <!-- TRACK 1: GUMROAD INTERNATIONAL CARD / PAYPAL -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 text-left space-y-2 mt-2">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-300 uppercase font-mono tracking-wider">Option 1: International Checkout</span>
+                    <span class="text-xs font-bold text-sky-400 font-mono">$49 USD</span>
+                </div>
+                <p class="text-[11px] text-slate-400">Credit / Debit Cards, Apple Pay &amp; PayPal with instant automated ZIP delivery.</p>
+                <a href="https://quantify17.gumroad.com/l/ExpressBill" data-gumroad-single-product="true" class="gumroad-button block w-full text-center py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs font-mono transition shadow-md shadow-sky-600/20 btn-spring">
+                    💳 Pay $49 via Gumroad (Cards / PayPal)
+                </a>
+            </div>
+
+            <!-- TRACK 2: INDIA DOMESTIC DIRECT UPI (SAVINGS ACCOUNT 0% FEE) -->
+            <div class="bg-slate-950 border-2 border-emerald-500/40 rounded-2xl p-4 text-left space-y-3 mt-3">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-emerald-400 uppercase font-mono tracking-wider flex items-center gap-1">
+                        <span>Option 2: India Domestic UPI</span>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-[9px] px-1.5 py-0.5 rounded font-mono">0% Fee</span>
+                    </span>
+                    <span class="text-base font-bold text-emerald-400 font-mono">&#8377;3,999 <span class="text-xs line-through text-slate-500">&#8377;12,499</span></span>
+                </div>
+                <p class="text-[11px] text-slate-400">Scan with Google Pay, PhonePe, Paytm, or BHIM for instant 2-second bank activation.</p>
+
+                <!-- Cryptographic Static QR Code -->
+                <div class="bg-white p-3 rounded-2xl text-center shadow-lg border border-slate-200">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3D7091518548%40pthdfc%26pn%3DMohammad%2520Rehan%26am%3D3999%26cu%3DINR%26tn%3DExpressBill%2520POS%2520Lifetime%2520License" alt="ExpressBill UPI QR Code" class="w-44 h-44 mx-auto rounded-lg" loading="lazy" />
+                    <span class="text-[10px] text-slate-600 font-mono font-bold block mt-1">Scan with any UPI App (GPay / PhonePe / Paytm)</span>
+                </div>
+
+                <!-- Verified Payee VPA Box (Immutable) -->
+                <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800 flex items-center justify-between gap-2">
+                    <div>
+                        <div class="text-[9px] text-slate-400 uppercase font-mono">Verified Payee UPI ID (HDFC Bank)</div>
+                        <div class="text-xs font-bold text-emerald-300 font-mono select-all">7091518548@pthdfc</div>
+                    </div>
+                    <button type="button" onclick="copyUpiId('7091518548@pthdfc')" id="copy-upi-btn" class="text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg border border-slate-700 transition shrink-0 flex items-center gap-1 font-mono">
+                        <span>Copy UPI</span>
+                    </button>
+                </div>
+
+                <!-- Mobile 1-Click UPI Deep-link (Opens GPay/PhonePe directly on mobile) -->
+                <a href="upi://pay?pa=7091518548@pthdfc&pn=Mohammad%20Rehan&am=3999&cu=INR&tn=ExpressBill%20POS%20Lifetime%20License" class="md:hidden block w-full py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-center font-bold rounded-xl shadow-md text-xs font-mono transition">
+                    📲 Pay &#8377;3,999 on Mobile App
+                </a>
+
+                <!-- WhatsApp Verification Dispatch Button -->
+                <a href="https://wa.me/917091518548?text=Hi%20Rehan,%20I%20have%20paid%20Rs.%203999%20via%20UPI%20to%207091518548@pthdfc%20for%20ExpressBill%20POS%20Lifetime%20License.%20My%20payment%20UTR%20screenshot%20is%20attached.%20Please%20send%20my%20license%20key%20and%20download%20link." target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-center font-bold rounded-xl shadow-md text-xs font-mono transition flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.087.187-.173.289l-.26.309c-.087.087-.179.182-.077.357.101.174.451.744.968 1.205.666.594 1.228.777 1.402.864.174.087.275.073.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.072.044.419-.1.824z"/></svg>
+                    <span>Send Screenshot on WhatsApp (+91 70915 18548)</span>
+                </a>
+            </div>
+
+            <p class="text-[10px] text-slate-400 text-center">Encrypted &bull; Direct Settlement to Mohammad Rehan's verified HDFC Bank Account &bull; Zero Middleman Access</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function openUpiModal() {
+    const modal = document.getElementById('secure-upi-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+}
+function closeUpiModal() {
+    const modal = document.getElementById('secure-upi-modal');
+    if (modal) {
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+    }
+}
+function copyUpiId(upiId) {
+    navigator.clipboard.writeText(upiId).then(() => {
+        const btn = document.getElementById('copy-upi-btn');
+        if (btn) {
+            btn.innerHTML = '<span class="text-emerald-400">Copied!</span>';
+            setTimeout(() => { btn.innerHTML = '<span>Copy UPI</span>'; }, 2000);
+        }
+    });
+}
+</script>
+
+</body>
+</html>

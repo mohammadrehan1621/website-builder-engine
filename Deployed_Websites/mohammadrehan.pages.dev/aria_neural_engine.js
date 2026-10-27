@@ -606,29 +606,64 @@
     };
 
     // Project Filter Controller
-    window.filterProjects = function (category) {
-        playAriaBeep(700, 0.04);
-        const cards = document.querySelectorAll('[data-project-category]');
-        const buttons = document.querySelectorAll('.project-filter-btn');
-
+    window.filterProjects = function (category, triggerEl) {
+        if (typeof playAriaBeep === 'function') {
+            try { playAriaBeep(700, 0.04); } catch(e) {}
+        }
+        
+        const normCat = (category || 'all').toLowerCase();
+        
+        // Find all filter buttons across any page
+        const buttons = document.querySelectorAll('.project-filter-btn, .filter-btn');
         buttons.forEach(btn => {
-            if (btn.getAttribute('data-filter') === category) {
-                btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition';
+            const btnFilter = (btn.getAttribute('data-filter') || '').toLowerCase();
+            const isMatch = (triggerEl && btn === triggerEl) || (btnFilter && btnFilter === normCat);
+            
+            if (isMatch || (!triggerEl && !btnFilter && btn.textContent.toLowerCase().includes(normCat))) {
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
+            } else if (normCat === 'all' && (btnFilter === 'all' || btn.textContent.includes('All Systems'))) {
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
             } else {
-                btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition';
+                btn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
             }
         });
 
+        // Find all project cards across any page
+        const cards = document.querySelectorAll('.project-card, [data-project-category], [data-category]');
         cards.forEach(card => {
-            const cardCat = card.getAttribute('data-project-category');
-            if (category === 'all' || cardCat.includes(category)) {
+            const rawCat = (card.getAttribute('data-project-category') || card.getAttribute('data-category') || '').toLowerCase();
+            const cats = rawCat.split(/[\s,]+/);
+
+            let visible = false;
+            if (normCat === 'all') {
+                visible = true;
+            } else if (normCat === 'quant' || normCat === 'ai') {
+                visible = cats.includes('quant') || cats.includes('ai') || cats.includes('algo') || cats.includes('trading');
+            } else if (normCat === 'resilience' || normCat === 'phoenix') {
+                visible = cats.includes('resilience') || cats.includes('phoenix') || cats.includes('chaos') || cats.includes('sentinel') || cats.includes('network');
+            } else if (normCat === 'retail') {
+                visible = cats.includes('retail') || cats.includes('pos') || cats.includes('software');
+            } else if (normCat === 'web') {
+                visible = cats.includes('web');
+            } else {
+                visible = cats.includes(normCat);
+            }
+
+            if (visible) {
                 card.style.display = 'flex';
-                card.classList.remove('opacity-20');
-                card.classList.add('opacity-100');
+                card.classList.remove('hidden');
             } else {
                 card.style.display = 'none';
+                card.classList.add('hidden');
             }
         });
+
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            try { window.lucide.createIcons(); } catch(e) {}
+        }
     };
 
 })();

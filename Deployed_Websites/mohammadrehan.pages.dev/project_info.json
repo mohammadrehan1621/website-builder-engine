@@ -2,14 +2,16 @@
   "project_name": "Mohammadrehan",
   "domain": "mohammadrehan.pages.dev",
   "live_url": "https://mohammadrehan.pages.dev",
-  "last_deployed": "2026-10-20 18:04:10",
+  "last_deployed": "2026-10-27 12:23:04",
   "pages": [
+    "aegis.html",
     "contact.html",
     "experience.html",
     "googlecb5b21d2c61033d5.html",
     "index.html",
     "legal.html",
-    "projects.html"
+    "projects.html",
+    "react_portal.html"
   ],
-  "local_path": "C:\\Users\\rehan\\Desktop\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev"
+  "local_path": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev"
 }

@@ -1,0 +1,21 @@
+/*
+  # Anti-Clickjacking: Strictly deny iframe embedding
+  X-Frame-Options: DENY
+
+  # Anti-MIME-Sniffing: Prevent MIME-type sniffing away from declared content-type
+  X-Content-Type-Options: nosniff
+
+  # Cross-Site Scripting (XSS) Protection
+  X-XSS-Protection: 1; mode=block
+
+  # Referrer Policy: Send full URL on same-origin, domain-only for cross-origin HTTPS
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Strict Transport Security (HSTS): Enforce HTTPS for 1 Year + Preload + Subdomains
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Permissions Policy: Restrict invasive browser hardware & device APIs
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=*, usb=()
+
+  # Strict Content Security Policy (CSP): Enforce strict origins with safe Gumroad modal support
+  Content-Security-Policy: default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://gumroad.com https://*.gumroad.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com https://unpkg.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https: https://api.qrserver.com https://*.gumroad.com; connect-src 'self' https: wss: https://*.gumroad.com; frame-src 'self' https://gumroad.com https://*.gumroad.com; object-src 'none'; base-uri 'self';

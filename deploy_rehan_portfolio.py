@@ -69,6 +69,7 @@ def deploy_portfolio():
         "lively_motion.js",
         "react_live_engine.js",
         "_headers",
+        "public/_headers",
         "react_portal.html",
         "rql_wasm.js",
         "rql_wasm_engine.wasm",

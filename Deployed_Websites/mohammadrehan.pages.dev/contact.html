@@ -1,1055 +1,1019 @@
 <!DOCTYPE html>
-
 <html class="scroll-smooth" lang="en">
 <head>
 <style>
-
 #chatbot-modal *::-webkit-scrollbar, #aria-window *::-webkit-scrollbar, #chat-messages::-webkit-scrollbar, #aria-messages::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
-
 #chatbot-modal *::-webkit-scrollbar-track, #aria-window *::-webkit-scrollbar-track, #chat-messages::-webkit-scrollbar-track, #aria-messages::-webkit-scrollbar-track { background: transparent; }
-
 #chatbot-modal *::-webkit-scrollbar-thumb, #aria-window *::-webkit-scrollbar-thumb, #chat-messages::-webkit-scrollbar-thumb, #aria-messages::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.35); border-radius: 9999px; }
-
 .no-scrollbar::-webkit-scrollbar { display: none !important; width: 0 !important; height: 0 !important; }
-
 .no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
-
 #chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
+
+/* 🛡️ Institutional Typography & Zero-Break Protections */
+*, *::before, *::after {
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+}
+
+code, kbd, samp, pre, .font-mono, [class*="font-mono"] {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance !important;
+    hyphens: none !important;
+    word-break: keep-all !important;
+}
+
+p, li, span, a {
+    text-wrap: pretty;
+    hyphens: none !important;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap !important;
+}
 
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mohammad Rehan | Software Architect &amp; Tech Lead</title>
-<meta content="Get in touch with Mohammad Rehan for web development, business software, billing systems, and AI automation in Patna, Bihar, India." name="description"/>
-<link rel="icon" type="image/jpeg" href="emblem.jpg" />
-<link rel="apple-touch-icon" href="emblem.jpg" />
-<!-- Tailwind CSS CDN -->
+    <!-- 🛡️ Institutional Security & HTTPS Enforcement Headers -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Performance Optimization: Resource Hints for Ultra-Fast Initial Render -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://gumroad.com">
+
+<title>Contact Mohammad Rehan | Founder @ Rehan Quant Lab &amp; Systems Architect</title>
+<meta content="Get in touch with Mohammad Rehan for software architecture, tech leadership, distributed systems resilience, and institutional quant engineering." name="description"/>
+<link rel="icon" type="image/webp" href="emblem.webp" />
+<link rel="apple-touch-icon" href="emblem.webp" />
+<link href="https://rehanquantlab.com/contact.html" rel="canonical"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind CSS CDN & Lucide Icons -->
 <script src="https://cdn.tailwindcss.com"></script>
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<!-- Custom Tailwind Styling Extensions & Minimalist Theme Rules -->
+<script src="https://unpkg.com/lucide@latest" defer></script>
+
 <script>
-
-        tailwind.config = {
-
-            theme: {
-
-                extend: {
-
-                    colors: {
-
-                        slateCanvas: '#f8fafc',
-
-                        charcoalHeading: '#0f172a',
-
-                        neutralBody: '#475569',
-
-                    }
-
-                }
-
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                slateCanvas: '#f8fafc',
+                charcoalHeading: '#0f172a',
+                neutralBody: '#475569',
             }
-
         }
+    }
+}
+</script>
 
-    </script>
 <style>
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.glass-panel {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+@keyframes pulse-glow {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); }
+}
+.animate-pulse-glow { animation: pulse-glow 3s infinite ease-in-out; }
+</style>
 
-        /* Custom scrollbar & glassmorphism utilities */
+<meta content="website" property="og:type"/>
+<meta content="Contact Mohammad Rehan | Founder @ Rehan Quant Lab &amp; Systems Architect" property="og:title"/>
+<meta content="Get in touch with Mohammad Rehan for software architecture, tech leadership, distributed resilience, and quantitative engineering." property="og:description"/>
+<meta content="https://rehanquantlab.com/contact.html" property="og:url"/>
+<meta content="https://rehanquantlab.com/og_preview.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@rehanquantlab" name="twitter:creator"/>
 
-        ::-webkit-scrollbar { width: 6px; }
-
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-    </style>
-<link href="https://rehanquantlab.com/contact.html" rel="canonical"/><link crossorigin href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link crossorigin href="https://cdn.tailwindcss.com" rel="preconnect"/><link crossorigin href="https://unpkg.com" rel="preconnect"/><meta content="website" property="og:type"/><meta content="Mohammad Rehan | Software Architect &amp; Tech Lead" property="og:title"/><meta content="Get in touch with Mohammad Rehan for software architecture, tech leadership, distributed resilience, and modern full-stack systems in Patna, Bihar, India." property="og:description"/><meta content="https://rehanquantlab.com/contact.html" property="og:url"/><meta content="https://rehanquantlab.com/og_preview.png" property="og:image"/><meta content="https://rehanquantlab.com/og_preview.png" property="og:image:secure_url"/><meta content="image/png" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Contact Mohammad Rehan - Software Architect" property="og:image:alt"/><meta content="Mohammad Rehan" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="Mohammad Rehan | Software Architect &amp; Tech Lead" name="twitter:title"/><meta content="Get in touch with Mohammad Rehan for software architecture, tech leadership, distributed resilience, and modern full-stack systems in Patna, Bihar, India." name="twitter:description"/><meta content="https://rehanquantlab.com/og_preview.png" name="twitter:image"/><meta content="default-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' https: data:;" http-equiv="Content-Security-Policy"/><script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Mohammad Rehan",
-  "jobTitle": "Software Architect & Tech Lead",
-  "description": "Get in touch with Mohammad Rehan for software architecture, tech leadership, distributed resilience, and modern full-stack systems in Patna, Bihar, India.",
+  "jobTitle": "Founder & Lead Systems Architect",
   "url": "https://rehanquantlab.com/contact.html",
   "sameAs": [
+    "https://github.com/rehanquantlab",
     "https://github.com/mohammadrehan1621",
-    "https://www.linkedin.com/in/mohammad-rehan-tech/"
+    "https://www.linkedin.com/in/mohammad-rehan-tech/",
+    "https://x.com/rehanquantlab",
+    "https://rehanquantlab.substack.com"
   ]
-}</script>
-<script src="phoenix_sentinel.js"></script>
-<script src="aria_neural_engine.js"></script>
+}
+</script>
+<script src="phoenix_sentinel.js" defer></script>
+<script src="aria_neural_engine.js" defer></script>
+
+    <!-- 🎨 LIVELY MOTION & INSTITUTIONAL GUI STYLESHEET -->
+    <style>
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar { width: 7px; height: 7px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Glassmorphism Panels */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.94);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        /* Hardware-Accelerated Smooth Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-7px) rotate(0.4deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.35; transform: scale(1); filter: blur(50px); }
+            50% { opacity: 0.8; transform: scale(1.1); filter: blur(60px); }
+        }
+
+        @keyframes shimmerSweep {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            40%, 100% { transform: translateX(250%) skewX(-20deg); }
+        }
+
+        @keyframes subtleRadar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseBorder {
+            0%, 100% { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 0 15px rgba(16, 185, 129, 0.1); }
+            50% { border-color: rgba(56, 189, 248, 0.8); box-shadow: 0 0 25px rgba(56, 189, 248, 0.25); }
+        }
+
+        .animate-float-slow {
+            animation: floatSlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-border {
+            animation: pulseBorder 3s infinite ease-in-out;
+        }
+
+        /* Shimmer Glint on High-Priority CTAs & Badges */
+        .shimmer-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-badge::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmerSweep 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Fluid Scroll Reveal (Zero Jank, 60fps) */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Tilt, Lift & Luminous Hover Physics */
+        .project-card, .hover-lift-card {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+            will-change: transform, box-shadow;
+        }
+        .project-card:hover, .hover-lift-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 30px -5px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Button Hover Micro-Spring Physics */
+        .btn-spring {
+            transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+        }
+        .btn-spring:hover {
+            transform: translateY(-2.5px) scale(1.02);
+        }
+        .btn-spring:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        /* Ambient Glowing Background Orbs */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+
 </head>
-<body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
-<!-- Top Infrastructure Status Bar -->
-<div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 font-mono tracking-tight border-b border-slate-800">
-<div class="max-w-7xl mx-auto w-full flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-<span class="text-emerald-400 font-semibold uppercase">Production Infrastructure:</span>
-<span class="text-slate-300 hidden sm:inline">Fault-Tolerant Phoenix Mesh • 24/7 Chaos Verified • Zero Capital Leakage</span>
-<span class="text-slate-300 sm:hidden">Phoenix Mesh Active</span>
-</div>
-<div class="flex items-center gap-3 text-slate-400 text-xs font-sans">
-<span class="hidden md:inline font-mono text-emerald-400">MTTR: &lt;50ms</span>
-<span class="text-slate-700 hidden md:inline">|</span>
-<span>Patna &amp; Global Edge</span>
-</div>
-</div>
-<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock, Zero Collision) -->
-<div class="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 z-[70] max-w-2xl bg-slate-950/98 border border-slate-700/90 rounded-2xl p-4 sm:p-5 shadow-2xl backdrop-blur-2xl text-slate-100 transition-all duration-300 transform" id="cookie-banner">
-<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-<div class="flex items-center gap-3 text-left">
-<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
-<i class="w-5 h-5" data-lucide="shield-check"></i>
-</div>
-<div>
-<p class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
-<span>Data Privacy &amp; Cryptographic Security</span>
-<span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono font-semibold">TLS 1.3 &amp; AES-256</span>
-</p>
-<p class="text-xs text-slate-200 leading-relaxed mt-1 font-medium">
-We value your privacy. 256-Bit SSL encrypted session with zero tracking cookies or external third-party data collection.
-</p>
-</div>
-</div>
-<div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
-<button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
-<button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
-</div>
-</div>
-</div>
-<!-- STICKY NAVBAR -->
-<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-<!-- Brand Logo -->
-<a class="flex items-center gap-3 group" href="index.html">
-<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-10 h-10 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
-<div>
-<span class="font-bold text-slate-900 text-lg tracking-tight block">Mohammad Rehan</span>
-<span class="text-xs text-slate-500 font-medium block">Founder @ Rehan Quant Lab</span>
-</div>
-</a>
-<!-- Desktop Nav Links -->
-<nav class="hidden md:flex items-center gap-7 font-medium text-sm text-slate-600">
-<a class="hover:text-slate-900 transition" href="index.html">Home</a>
-<a class="hover:text-slate-900 transition" href="index.html#about">About</a>
-<a class="hover:text-slate-900 transition" href="projects.html">Projects</a>
-<a class="hover:text-slate-900 transition" href="experience.html">Experience</a>
-<a class="hover:text-slate-900 transition flex items-center gap-1 font-semibold text-indigo-600 hover:text-indigo-800" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer">Research <i class="w-3 h-3" data-lucide="external-link"></i></a>
-<a class="text-slate-900 font-semibold underline underline-offset-8" href="contact.html">Contact</a>
-</nav>
-<!-- Desktop CTAs -->
-<div class="hidden lg:flex items-center gap-2.5">
-<a class="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer" title="Follow Rehan Quant Lab on X (@rehanquantlab)">
-<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-</a>
-<a class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-4 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5" href="#schedule-briefing">
-<i class="w-3.5 h-3.5 text-emerald-300" data-lucide="calendar"></i> Schedule Briefing
-</a>
-<a class="px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition flex items-center gap-1.5" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
-<i class="w-3.5 h-3.5" data-lucide="message-square"></i> WhatsApp
-</a>
-<a class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white hover:bg-slate-800 shadow-sm transition flex items-center gap-1.5" href="Mohammad_Rehan_Resume.pdf" download>
-<i class="w-3.5 h-3.5" data-lucide="file-text"></i> Resume PDF
-</a>
-</div>
-<!-- Mobile Hamburger Button -->
-<button aria-label="Toggle Navigation" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition" id="mobile-menu-btn">
-<i class="w-6 h-6" data-lucide="menu"></i>
-</button>
-</div>
-<!-- Mobile Drawer Navigation -->
-<div class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl" id="mobile-menu">
-<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="index.html">Home</a>
-<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="index.html#about">About</a>
-<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="projects.html">Projects</a>
-<a class="block text-base font-medium text-slate-700 hover:text-slate-900" href="experience.html">Experience</a>
-<a class="block text-base font-semibold text-slate-900" href="contact.html">Contact</a>
-<div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
-<a class="w-full py-2.5 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 text-center flex items-center justify-center gap-2" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
-<i class="w-4 h-4" data-lucide="message-square"></i> Chat on WhatsApp
 
-                </a>
-<a class="w-full py-2.5 rounded-xl text-sm font-medium bg-slate-900 text-white text-center flex items-center justify-center gap-2" href="Mohammad_Rehan_Resume.pdf" download>
-<i class="w-4 h-4" data-lucide="file-text"></i> Download Resume PDF
+<body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
-                </a>
+
+<!-- Single Unified Institutional Status & Rotating Announcement Bar -->
+<div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
+        <div id="live-ticker-container" class="flex items-center gap-2 truncate">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span id="ticker-label" class="text-sky-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ NEW RELEASE:</span>
+            <span id="ticker-content" class="text-slate-200 text-xs truncate transition-opacity duration-300">
+                <strong>RQL Conduit Bonding Engine™</strong> &bull; Bare-Metal Rust Multi-WAN (<span class="text-sky-400 font-bold">$60 / &#8377;4,999</span>)
+            </span>
+        </div>
+        <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
+            <a id="ticker-action" href="https://quantify17.gumroad.com/l/RQLConduit" data-gumroad-single-product="true" class="gumroad-button text-sky-400 hover:text-sky-300 font-bold underline transition flex items-center gap-1 font-mono">
+                <span>Instant Checkout</span>
+                <i class="w-3 h-3" data-lucide="arrow-right"></i>
+            </a>
+            <span class="text-slate-700 hidden md:inline">|</span>
+            <span class="text-slate-400 hidden md:inline font-mono text-[11px]">Sub-3ms Failover &bull; 100% Local-First</span>
+        </div>
+    </div>
 </div>
-</div>
+<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 glass-panel bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a class="flex items-center gap-3 group shrink-0" href="index.html">
+            <img src="emblem.webp" loading="lazy" decoding="async" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50" />
+            <div>
+                <span class="font-bold text-slate-900 tracking-tight text-base block">Mohammad Rehan</span>
+                <span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+            </div>
+        </a>
+
+        <!-- Desktop Navigation Links (Clean, Balanced & Breathable) -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-7 text-sm font-medium text-slate-600">
+            <a class="hover:text-slate-900 transition font-semibold" href="index.html">Home</a>
+            <a class="hover:text-slate-900 transition" href="projects.html">Projects</a>
+
+            <!-- Interactive Products Dropdown (2-Column Sovereign Popover) -->
+            <div class="relative group">
+                <button class="flex items-center gap-1.5 text-slate-600 group-hover:text-slate-900 transition font-medium focus:outline-none py-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Products</span>
+                    <i class="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-600 transition group-hover:rotate-180 duration-200" data-lucide="chevron-down"></i>
+                </button>
+
+                <!-- Popover Menu (2-Column Desktop Grid, Scrollable on Small Viewports) -->
+                <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[590px] max-w-[94vw] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 ease-out z-50">
+                    <div class="bg-white/98 backdrop-blur-2xl rounded-2xl shadow-2xl border border-slate-200/90 p-3 max-h-[82vh] overflow-y-auto">
+                        <!-- Header inside Popover -->
+                        <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-100 px-1">
+                            <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Commercial Products (10 Systems)
+                            </span>
+                            <span class="text-[10px] font-mono text-emerald-600 font-bold bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded-full">⚡ Instant Gumroad &bull; UPI Direct</span>
+                        </div>
+
+                        <!-- 2-Column Grid: Fits all 10 products in 5 compact rows -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                            <!-- Col 1 / Product 1: Deterministic State Kernel -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-950 font-bold text-xs flex items-center justify-between transition border border-emerald-200/40" href="https://quantify17.gumroad.com/l/DeterministicStateKernel" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-emerald-600 shrink-0" data-lucide="cpu"></i>
+                                    <span class="truncate">Deterministic State Kernel™</span>
+                                </div>
+                                <span class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$149</span>
+                            </a>
+
+                            <!-- Col 2 / Product 6: Sovereign Suite Master Bundle -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-amber-50/80 hover:bg-amber-100/90 text-amber-950 font-bold text-xs flex items-center justify-between transition border border-amber-200/40" href="https://quantify17.gumroad.com/l/SovereignSuiteMasterBundle" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-amber-600 shrink-0" data-lucide="crown"></i>
+                                    <span class="truncate">Sovereign Suite™ Master</span>
+                                </div>
+                                <span class="bg-amber-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$499</span>
+                            </a>
+
+                            <!-- Col 1 / Product 2: RQL Aegis -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-cyan-50/80 hover:bg-cyan-100/90 text-cyan-950 font-bold text-xs flex items-center justify-between transition border border-cyan-200/40" href="https://quantify17.gumroad.com/l/RQLAegisRiskMiddleware" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-cyan-600 shrink-0" data-lucide="shield"></i>
+                                    <span class="truncate">RQL Aegis™ Risk Engine</span>
+                                </div>
+                                <span class="bg-cyan-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$199</span>
+                            </a>
+
+                            <!-- Col 2 / Product 7: ExpressBill POS -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-teal-50/80 hover:bg-teal-100/90 text-teal-950 font-bold text-xs flex items-center justify-between transition border border-teal-200/40" href="https://quantify17.gumroad.com/l/ExpressBillPOS" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-teal-600 shrink-0" data-lucide="receipt"></i>
+                                    <span class="truncate">ExpressBill POS™ Retail</span>
+                                </div>
+                                <span class="bg-teal-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$49</span>
+                            </a>
+
+                            <!-- Col 1 / Product 3: Veritas Dossier -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-purple-50/80 hover:bg-purple-100/90 text-purple-950 font-bold text-xs flex items-center justify-between transition border border-purple-200/40" href="https://quantify17.gumroad.com/l/VeritasDossierForensicAuditor" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-purple-600 shrink-0" data-lucide="file-check"></i>
+                                    <span class="truncate">Veritas Dossier™ Vault</span>
+                                </div>
+                                <span class="bg-purple-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$149</span>
+                            </a>
+
+                            <!-- Col 2 / Product 8: RQL TagMaster -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-sky-50/80 hover:bg-sky-100/90 text-sky-950 font-bold text-xs flex items-center justify-between transition border border-sky-200/40" href="https://quantify17.gumroad.com/l/RQLTagMaster" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-sky-600 shrink-0" data-lucide="tag"></i>
+                                    <span class="truncate">RQL TagMaster™ Barcode</span>
+                                </div>
+                                <span class="bg-sky-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$29</span>
+                            </a>
+
+                            <!-- Col 1 / Product 4: Industrial Fragility Sentinel -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-amber-50/80 hover:bg-amber-100/90 text-amber-950 font-bold text-xs flex items-center justify-between transition border border-amber-200/40" href="https://quantify17.gumroad.com/l/IndustrialFragilitySentinel" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-amber-600 shrink-0" data-lucide="factory"></i>
+                                    <span class="truncate">Industrial Sentinel™</span>
+                                </div>
+                                <span class="bg-amber-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$179</span>
+                            </a>
+
+                            <!-- Col 2 / Product 9: RQL DeskBroadcast -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-emerald-50/80 hover:bg-emerald-100/90 text-emerald-950 font-bold text-xs flex items-center justify-between transition border border-emerald-200/40" href="https://quantify17.gumroad.com/l/RQLDeskBroadcast" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-emerald-600 shrink-0" data-lucide="message-square"></i>
+                                    <span class="truncate">RQL DeskBroadcast™</span>
+                                </div>
+                                <span class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$49</span>
+                            </a>
+
+                            <!-- Col 1 / Product 5: RQL Conduit Engine -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-sky-50/80 hover:bg-sky-100/90 text-sky-950 font-bold text-xs flex items-center justify-between transition border border-sky-200/40" href="https://quantify17.gumroad.com/l/RQLConduitBondingEngine" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-sky-600 shrink-0" data-lucide="network"></i>
+                                    <span class="truncate">RQL Conduit Engine™</span>
+                                </div>
+                                <span class="bg-sky-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$59</span>
+                            </a>
+
+                            <!-- Col 2 / Product 10: RQL TaxMatrix -->
+                            <a class="gumroad-button py-2 px-2.5 rounded-lg bg-indigo-50/80 hover:bg-indigo-100/90 text-indigo-950 font-bold text-xs flex items-center justify-between transition border border-indigo-200/40" href="https://quantify17.gumroad.com/l/RQLTaxMatrix" data-gumroad-single-product="true">
+                                <div class="flex items-center gap-2 truncate pr-1">
+                                    <i class="w-3.5 h-3.5 text-indigo-600 shrink-0" data-lucide="calculator"></i>
+                                    <span class="truncate">RQL TaxMatrix™ GSTR-2B</span>
+                                </div>
+                                <span class="bg-indigo-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">$69</span>
+                            </a>
+                        </div>
+
+                        <!-- Footer inside Popover -->
+                        <div class="pt-2 mt-2 border-t border-slate-100 px-1 flex items-center justify-between text-[11px]">
+                            <a href="projects.html" class="text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1 transition">
+                                <span>Complete 22+ Systems Catalog</span>
+                                <i class="w-3 h-3" data-lucide="arrow-right"></i>
+                            </a>
+                            <span class="text-slate-400 font-mono text-[10px]">100% Offline-First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="hover:text-slate-900 transition" href="experience.html">Experience</a>
+            <a class="hover:text-indigo-600 transition flex items-center gap-1 text-slate-600" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer">
+                Research <i class="w-3 h-3" data-lucide="external-link"></i>
+            </a>
+            <a class="hover:text-slate-900 transition" href="contact.html">Contact</a>
+        </nav>
+
+        <!-- Right CTAs (Balanced & Light) -->
+        <div class="hidden lg:flex items-center gap-2.5 shrink-0">
+            <a class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer" title="Follow on X (@rehanquantlab)">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+
+            <!-- Resume Ghost Button -->
+            <a class="text-xs font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 rounded-xl hover:bg-slate-100 transition flex items-center gap-1.5" href="Mohammad_Rehan_Resume.pdf" download>
+                <i class="w-3.5 h-3.5 text-slate-500" data-lucide="file-down"></i>
+                <span>Resume</span>
+            </a>
+
+            <!-- Primary Action Button -->
+            <a class="inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2 rounded-xl transition shadow-xs group" href="contact.html#schedule-briefing">
+                <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="terminal"></i>
+                <span>Schedule Briefing</span>
+            </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation">
+            <i class="w-6 h-6" data-lucide="menu"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div class="hidden md:hidden border-t border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-5 space-y-2 shadow-xl" id="mobile-menu">
+        <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-800 font-semibold text-sm" href="index.html">Home</a>
+        <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-800 font-medium text-sm" href="projects.html">Projects</a>
+
+        <div class="pt-2 pb-1 px-3 text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">Commercial Products (Sovereign Suite)</div>
+        <a class="block py-2 px-3 rounded-lg bg-emerald-50 text-emerald-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/deterministic-state-kernel/ENTERPRISE?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-emerald-600" data-lucide="cpu"></i>
+                <span>Deterministic State Kernel&trade;</span>
+            </div>
+            <span class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$249</span>
+        </a>
+        <a class="block py-2 px-3 rounded-lg bg-cyan-50 text-cyan-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/rql-aegis/EARLYBIRD?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-cyan-600" data-lucide="shield"></i>
+                <span>RQL Aegis&trade;</span>
+            </div>
+            <span class="bg-cyan-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$125</span>
+        </a>
+        <a class="block py-2 px-3 rounded-lg bg-purple-50 text-purple-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/eucck/VERITAS?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-purple-600" data-lucide="file-check"></i>
+                <span>Veritas Dossier&trade;</span>
+            </div>
+            <span class="bg-purple-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$249</span>
+        </a>
+        <a class="block py-2 px-3 rounded-lg bg-amber-50 text-amber-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/ivyiwh/SENTINEL?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-amber-600" data-lucide="factory"></i>
+                <span>Industrial Fragility Sentinel&trade;</span>
+            </div>
+            <span class="bg-amber-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$299</span>
+        </a>
+        <a class="block py-2 px-3 rounded-lg bg-sky-50 text-sky-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/RQLConduit?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-sky-600" data-lucide="network"></i>
+                <span>RQL Conduit Engine&trade;</span>
+            </div>
+            <span class="bg-sky-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$60</span>
+        </a>
+        <a class="block py-2 px-3 rounded-lg bg-teal-50 text-teal-950 font-bold text-sm flex items-center justify-between" href="https://quantify17.gumroad.com/l/ExpressBill?wanted=true" target="_blank" rel="noopener noreferrer">
+            <div class="flex items-center gap-2">
+                <i class="w-4 h-4 text-teal-600" data-lucide="receipt"></i>
+                <span>ExpressBill POS&trade;</span>
+            </div>
+            <span class="bg-teal-600 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">$49</span>
+        </a>
+
+        <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-800 font-medium text-sm" href="experience.html">Experience</a>
+        <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-indigo-600 font-semibold text-sm flex items-center justify-between" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer">
+            <span>Technical Research (Substack)</span>
+            <i class="w-4 h-4" data-lucide="external-link"></i>
+        </a>
+        <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-800 font-medium text-sm" href="contact.html">Contact</a>
+
+        <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
+            <a class="flex-1 bg-slate-900 text-white text-center text-xs font-semibold py-2.5 rounded-xl shadow-xs" href="contact.html#schedule-briefing">Schedule Briefing</a>
+            <a class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 text-center text-xs font-semibold py-2.5 rounded-xl border border-slate-200" href="Mohammad_Rehan_Resume.pdf" download>Resume (PDF)</a>
+        </div>
+    </div>
 </header>
-<!-- MAIN CONTACT CONTENT -->
+
+<!-- MAIN CONTENT -->
 <main class="flex-grow">
-<!-- Hero Section -->
-<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-gradient-to-b from-white via-slate-50 to-white border-b border-slate-200 overflow-hidden" id="hero-section">
-<!-- Interactive Neural Network Constellation Canvas -->
-<canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
 
-<!-- Subtle Grid Texture -->
-<div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
+<!-- HERO SECTION: COHESIVE WITH HOME & PROJECTS -->
+<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-12 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
+    <!-- Interactive Neural Network Constellation Canvas -->
+    <canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
+    <!-- Subtle Grid Texture -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
 
-<!-- Ambient Light Orbs -->
-<div class="absolute top-0 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
-<div class="absolute bottom-0 right-1/4 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <!-- Live Indicator Pill Badge (Matching index.html) -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-slate-700 text-xs font-semibold mb-3 border border-slate-200 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Available for High-Impact Roles &amp; Architectural Engagements</span>
+        </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-4xl relative z-10">
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-3 border border-emerald-200/80 shadow-sm animate-pulse-glow">
-<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-<span>🟢 Available for Software Architecture, Tech Leadership &amp; High-Impact Roles</span>
-</div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-4xl mx-auto mb-3">
+            Let’s Build <span class="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">Resilient, High-Impact Systems</span> Together
+        </h1>
 
-<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight mb-2">
-    Let’s Build <span class="bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 bg-clip-text text-transparent">Resilient, High-Impact Systems</span> Together.
-</h1>
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6">
+            Architecting high-throughput distributed engines, institutional distributed cloud systems, enterprise web platforms, or resilient AI agent workflows? Reach out directly via the verified channels below.
+        </p>
 
-<!-- Dynamic Interactive Role Rotator -->
-<div class="h-8 flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-3">
-    <span id="contact-role-rotator">Software Architecture &amp; Tech Leadership</span>
-    <span class="inline-block w-0.5 h-4 bg-indigo-600 animate-pulse ml-1 align-middle"></span>
-</div>
+        <!-- 3 Precision Action Buttons (Matching index.html design language) -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+            <button onclick="openBriefingModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition flex items-center gap-2 cursor-pointer btn-spring">
+                <i class="w-4 h-4 text-emerald-300" data-lucide="calendar"></i>
+                <span>Schedule Technical Briefing (20 Min)</span>
+            </button>
+            <a class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2" href="https://wa.me/917091518548?text=Hello%20Rehan,%20I%20am%20reaching%20out%20from%20your%20portfolio." target="_blank" rel="noopener noreferrer">
+                <i class="w-4 h-4 text-emerald-600" data-lucide="message-square"></i>
+                <span>WhatsApp (+91 70915 18548)</span>
+            </a>
+            <button onclick="copyEmail()" class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-xs font-semibold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2 cursor-pointer">
+                <i class="w-4 h-4 text-slate-600" data-lucide="copy"></i>
+                <span>Copy Email (founder@rehanquantlab.com)</span>
+            </button>
+        </div>
 
-<p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto mb-6">
-    Architecting high-throughput distributed engines, institutional quant trading systems, enterprise web platforms, or resilient AI agent workflows? Reach out directly via the channels below or submit an inquiry through the verified portal.
-</p>
-
-<!-- Quick Direct Action Launchpad -->
-<div class="flex flex-wrap items-center justify-center gap-3 pt-1">
-<a class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition flex items-center gap-2 text-xs" href="#schedule-briefing" onclick="openBriefingModal()">
-<i class="w-4 h-4 text-emerald-300" data-lucide="calendar"></i>
-<span>Schedule Technical Briefing (20 Min)</span>
-</a>
-<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition flex items-center gap-2 text-xs" href="https://wa.me/917091518548?text=Hello%20Rehan,%20I%20am%20reaching%20out%20from%20your%20portfolio." rel="noopener noreferrer" target="_blank">
-<i class="w-4 h-4" data-lucide="message-square"></i>
-<span>WhatsApp (+91 70915 18548)</span>
-</a>
-<a class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition flex items-center gap-2 text-xs" href="https://linkedin.com/in/mohammad-rehan-tech" rel="noopener noreferrer" target="_blank">
-<i class="w-4 h-4" data-lucide="linkedin"></i>
-<span>LinkedIn Profile</span>
-</a>
-<a class="bg-black hover:bg-slate-900 text-white font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition flex items-center gap-2 text-xs" href="https://x.com/rehanquantlab" rel="noopener noreferrer" target="_blank">
-<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-<span>X (@rehanquantlab)</span>
-</a>
-<a class="bg-[#ff6719] hover:bg-[#e05813] text-white font-semibold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition flex items-center gap-2 text-xs" href="https://rehanquantlab.substack.com" rel="noopener noreferrer" target="_blank">
-<i class="w-4 h-4" data-lucide="book-open"></i>
-<span>Substack Publication</span>
-</a>
-<button class="bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-semibold px-4 py-2.5 rounded-xl shadow-sm transition flex items-center gap-2 text-xs" onclick="copyEmail()">
-<i class="w-4 h-4 text-slate-600" data-lucide="copy"></i>
-<span>Copy Email (founder@rehanquantlab.com)</span>
-</button>
-<a class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/80 font-semibold px-4 py-2.5 rounded-xl transition flex items-center gap-2 text-xs" download="Mohammad_Rehan_Resume.pdf" href="Mohammad_Rehan_Resume.pdf">
-<i class="w-4 h-4" data-lucide="download"></i>
-<span>Resume (PDF)</span>
-</a>
-</div>
-
-<!-- Live Telemetry / SLA Metrics Bar -->
-<div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto pt-6 border-t border-slate-200/70 text-left">
-<div class="bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-slate-200/70 shadow-sm">
-<span class="text-[10px] text-slate-500 uppercase font-mono block">Typical SLA</span>
-<span class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mt-0.5">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> &lt; 2 Hours
-</span>
-</div>
-<div class="bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-slate-200/70 shadow-sm">
-<span class="text-[10px] text-slate-500 uppercase font-mono block">Security Mode</span>
-<span class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mt-0.5">
-<i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield-check"></i> TLS 1.3 &amp; AES-256
-</span>
-</div>
-<div class="bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-slate-200/70 shadow-sm">
-<span class="text-[10px] text-slate-500 uppercase font-mono block">Availability</span>
-<span class="text-xs font-bold text-emerald-600 flex items-center gap-1.5 mt-0.5">
-Full-Time / Lead
-</span>
-</div>
-<div class="bg-white/80 backdrop-blur-sm p-3 rounded-xl border border-slate-200/70 shadow-sm">
-<span class="text-[10px] text-slate-500 uppercase font-mono block">Timezone</span>
-<span class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mt-0.5">
-IST (UTC+5:30) / Edge
-</span>
-</div>
-</div>
-</div>
+        <!-- Executive SLA & Node Telemetry Grid (Matching experience.html stats grid) -->
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto text-left">
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Typical SLA</span>
+                <span class="text-xs font-bold text-slate-900 flex items-center gap-1.5 mt-0.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> &lt; 2 Hours
+                </span>
+                <span class="text-[10px] text-slate-400 block mt-0.5">Verified Fast Dispatch</span>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Security Mode</span>
+                <span class="text-xs font-bold text-indigo-600 flex items-center gap-1.5 mt-0.5">
+                    <i class="w-3.5 h-3.5" data-lucide="shield-check"></i> TLS 1.3 &amp; AES-256
+                </span>
+                <span class="text-[10px] text-slate-400 block mt-0.5">Zero-Trust Encrypted</span>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Availability</span>
+                <span class="text-xs font-bold text-emerald-600 block mt-0.5">Full-Time / Lead</span>
+                <span class="text-[10px] text-slate-400 block mt-0.5">Architectural Readiness</span>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <span class="text-[10px] text-slate-500 uppercase font-mono block">Physical Node</span>
+                <span class="text-xs font-bold text-slate-900 block mt-0.5">Patna, Bihar 🇮🇳</span>
+                <span class="text-[10px] text-slate-400 block mt-0.5">IST (UTC+5:30) / Remote</span>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Contact Grid Section -->
-<section class="py-10 bg-slate-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- MAIN INTERACTIVE CONTACT SECTION -->
+<section class="py-12 bg-slateCanvas">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-<!-- Interactive Section Layout Tabs -->
-<div class="flex flex-wrap items-center justify-center gap-2 mb-8">
-  <button id="contact-tab-btn-all" onclick="switchContactTab('all')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5">
-    <i class="w-3.5 h-3.5" data-lucide="layout-grid"></i>
-    <span>Combined View</span>
-  </button>
-  <button id="contact-tab-btn-direct" onclick="switchContactTab('direct')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
-    <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="zap"></i>
-    <span>Direct Fast-Connect</span>
-  </button>
-  <button id="contact-tab-btn-form" onclick="switchContactTab('form')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
-    <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="mail"></i>
-    <span>Send Proposal Form</span>
-  </button>
-  <button id="contact-tab-btn-sla" onclick="switchContactTab('sla')" class="contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
-    <i class="w-3.5 h-3.5 text-amber-600" data-lucide="shield-check"></i>
-    <span>SLA &amp; Compliance Details</span>
-  </button>
-</div>
+            <!-- LEFT COLUMN: DIRECT CHANNELS & VIP BRIEFING (5 Cols) -->
+            <div class="lg:col-span-5 space-y-6">
 
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start" id="contact-grid-container">
+                <!-- VIP Schedule Technical Briefing Card -->
+                <div id="schedule-briefing" class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white p-6 sm:p-7 rounded-2xl border border-indigo-500/30 shadow-xl relative overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-44 h-44 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span class="font-mono text-xs font-bold text-emerald-300 uppercase tracking-wider">Direct Access • 20 Min Slot</span>
+                            </div>
+                            <span class="text-[10px] font-mono bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded border border-indigo-500/30">Founder &amp; Architect</span>
+                        </div>
 
-<!-- Left Column: Direct Contact Cards & 3D Holographic Guarantee -->
-<div class="lg:col-span-5 space-y-6 transition-all duration-300" id="contact-col-direct">
-<!-- VIP Schedule Technical Briefing Card (High Conversion) -->
-<div id="schedule-briefing" class="bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white p-7 sm:p-8 rounded-3xl border border-indigo-500/30 shadow-2xl relative overflow-hidden group">
-  <div class="absolute -right-12 -top-12 w-44 h-44 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute -left-12 -bottom-12 w-44 h-44 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
-  
-  <div class="relative z-10 space-y-4">
-    <div class="flex items-center justify-between pb-3 border-b border-slate-800">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-mono text-xs font-bold text-emerald-300 uppercase tracking-wider">Direct Access • 20 Min Slot</span>
-      </div>
-      <span class="text-[10px] font-mono bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-md border border-indigo-500/30">Founder &amp; Architect</span>
-    </div>
-
-    <div>
-      <h3 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
-        <i class="w-6 h-6 text-indigo-400" data-lucide="calendar"></i>
-        <span>Schedule Technical Briefing</span>
-      </h3>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
-        Book a direct 20-minute private briefing with Mohammad Rehan to discuss quantitative trading engines, AegisDB™ database architecture, high-impact tech roles, or custom systems engineering.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-      <!-- 1-Click Interactive Modal Trigger -->
-      <button onclick="openBriefingModal()" class="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold px-4 py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs group cursor-pointer">
-        <i class="w-4 h-4 text-emerald-300" data-lucide="clock"></i>
-        <span>Select Slot &amp; Topic</span>
-        <i class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" data-lucide="chevron-right"></i>
-      </button>
-
-      <!-- 1-Click WhatsApp VIP Fast-Track -->
-      <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20would%20like%20to%20schedule%20a%2020-minute%20Technical%20Briefing%20regarding%20systems%20architecture." target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs">
-        <i class="w-4 h-4" data-lucide="message-square"></i>
-        <span>WhatsApp Instant Booking</span>
-      </a>
-    </div>
-
-    <div class="pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between text-[11px] text-slate-400 font-mono">
-      <span>Typical Response: &lt; 2 Hours</span>
-      <span class="text-indigo-300">founder@rehanquantlab.com</span>
-    </div>
-  </div>
-</div>
-
-<div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
-<h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-  Direct Contact Information
-</h2>
-<p class="text-sm text-slate-600 leading-relaxed">
-    Prefer reaching out directly without filling out forms? Here are my verified direct communication channels:
-</p>
-<!-- Email Card with 1-Click Copy -->
-<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4 hover:border-slate-300 transition">
-<div class="flex items-center gap-3 overflow-hidden">
-<div class="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
-<i class="w-5 h-5" data-lucide="mail"></i>
-</div>
-<div class="truncate">
-<span class="text-xs text-slate-500 block font-medium">Primary Email</span>
-<span class="text-sm font-semibold text-slate-900 truncate block" id="email-text">founder@rehanquantlab.com</span>
-</div>
-</div>
-<button class="px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" onclick="copyEmail()" title="Copy Email">
-<i class="w-3.5 h-3.5" data-lucide="copy"></i> Copy
-</button>
-</div>
-<!-- Phone / WhatsApp Card -->
-<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-4 hover:border-slate-300 transition">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center flex-shrink-0">
-<i class="w-5 h-5" data-lucide="phone"></i>
-</div>
-<div>
-<span class="text-xs text-slate-500 block font-medium">Phone &amp; WhatsApp</span>
-<span class="text-sm font-semibold text-slate-900">+91 70915 18548</span>
-</div>
-</div>
-<a class="px-3 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-semibold transition flex items-center gap-1 flex-shrink-0" href="https://wa.me/917091518548?text=Hello!%20I%20am%20reaching%20out%20from%20your%20portfolio." rel="noopener noreferrer" target="_blank">
-<i class="w-3.5 h-3.5" data-lucide="message-circle"></i> Chat
-</a>
-</div>
-<!-- Location Card -->
-<div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
-<div class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center flex-shrink-0">
-<i class="w-5 h-5" data-lucide="map-pin"></i>
-</div>
-<div>
-<span class="text-xs text-slate-500 block font-medium">Location &amp; Region</span>
-<span class="text-sm font-semibold text-slate-900">Patna, Bihar 800006, India</span>
-</div>
-</div>
-</div>
-
-<!-- 3D Holographic Professional Guarantee Card -->
-<div id="contact-tilt-card" class="bg-slate-900 text-white p-7 sm:p-8 rounded-2xl shadow-xl space-y-4 relative overflow-hidden transition-transform duration-200 ease-out will-change-transform border border-slate-800">
-<!-- Dynamic Cursor Light Glow Overlay -->
-<div id="contact-glow-overlay" class="absolute inset-0 rounded-2xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.22),transparent_70%)]"></div>
-
-<div class="flex items-center justify-between relative z-10">
-<div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-emerald-400">
-<i class="w-5 h-5" data-lucide="shield-check"></i>
-</div>
-<span class="text-[10px] font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Verified Channel</span>
-</div>
-<h3 class="text-lg font-bold relative z-10">Fast &amp; Transparent Communication</h3>
-<p class="text-xs text-slate-300 leading-relaxed relative z-10">
-Whether you need high-throughput distributed engines, institutional quant execution setups, or retail POS consultation, expect deterministic timelines, verified code, and zero capital leakage.
-</p>
-<div class="pt-2 relative z-10 flex items-center gap-3">
-<a class="inline-flex items-center gap-2 text-xs font-bold text-white bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-xl transition border border-white/10" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
-<i class="w-4 h-4 text-emerald-400" data-lucide="download"></i> Download Resume (PDF)
-</a>
-<a class="text-xs text-indigo-400 hover:text-indigo-300 transition flex items-center gap-1 font-semibold" href="projects.html">
-<span>View Architecture</span> <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
-</a>
-</div>
-</div>
-</div>
-
-<!-- Right Column: Interactive Inquiry Form -->
-<div class="lg:col-span-7 transition-all duration-300" id="contact-col-form">
-<div class="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm relative">
-<!-- Success Toast Notification (Hidden by default) -->
-<div class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3" id="form-success-toast">
-<i class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" data-lucide="check-circle-2"></i>
-<div>
-<span class="font-bold block text-sm">Message Successfully Logged!</span>
-<span class="text-xs">Thank you for reaching out. Your inquiry has been processed. For immediate response, feel free to ping me on WhatsApp at +91 70915 18548.</span>
-</div>
-</div>
-<h2 class="text-2xl font-bold text-slate-900 mb-2">Send an Inquiry or Proposal</h2>
-<p class="text-sm text-slate-600 mb-8">
-
-                                Fill out the secure form below with your project details or job opportunity. All inputs are sanitized and handled securely.
-
+                        <div>
+                            <h3 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                                <i class="w-5 h-5 text-indigo-400" data-lucide="calendar"></i>
+                                <span>Schedule Technical Briefing</span>
+                            </h3>
+                            <p class="text-slate-300 text-xs leading-relaxed mt-2">
+                                Book a direct 20-minute private briefing with Mohammad Rehan to discuss distributed systems, AegisDB™ architecture, high-impact tech roles, or institutional quantitative setups.
                             </p>
-<form class="space-y-6" id="contact-form" onsubmit="handleFormSubmit(event)">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div>
-<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="name">Your Full Name *</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="name" placeholder="e.g. Rajesh Kumar" required="" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="email">Email Address *</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="email" placeholder="e.g. rajesh@company.com" required="" type="email"/>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-<div>
-<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="phone">Phone / WhatsApp Number</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
-</div>
-<div>
-<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="subject">Inquiry Type *</label>
-<select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 bg-white transition" id="subject" required="">
-<option value="">Select subject...</option>
-<option value="Full-Time Role / Job Opportunity">Full-Time Role / Job Opportunity</option>
-<option value="Website Development">Website Development</option>
-<option value="Billing &amp; Inventory Software">Billing &amp; Inventory Software</option>
-<option value="Retail Business Collaboration">Retail Business Collaboration</option>
-<option value="General Inquiry">General Inquiry</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" for="message">Project Details or Message *</label>
-<textarea class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition resize-none" id="message" placeholder="Describe your requirements, goals, or timeline..." required="" rows="5"></textarea>
-</div>
-<div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-<span class="text-xs text-slate-500 flex items-center gap-1.5">
-<i class="w-3.5 h-3.5 text-emerald-600" data-lucide="lock"></i> Secure &amp; Confidential
+                        </div>
 
-                                    </span>
-<button class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-sm transition flex items-center gap-2" type="submit">
-<span>Send Message</span>
-<i class="w-4 h-4" data-lucide="send"></i>
-</button>
-</div>
-</form>
-</div>
-</div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                            <button onclick="openBriefingModal()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
+                                <i class="w-4 h-4 text-emerald-300" data-lucide="clock"></i>
+                                <span>Select Slot &amp; Topic</span>
+                            </button>
+                            <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20would%20like%20to%20schedule%20a%2020-minute%20Technical%20Briefing%20regarding%20systems%20architecture." target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs btn-spring">
+                                <i class="w-4 h-4" data-lucide="message-square"></i>
+                                <span>WhatsApp VIP</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Hidden Dedicated SLA & Production Compliance Panel (Activates via SLA Tab) -->
-<div class="hidden lg:col-span-12 max-w-4xl mx-auto w-full space-y-6 transition-all duration-300" id="contact-col-sla">
-  <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl space-y-8">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold mb-2 border border-emerald-200">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Verified Production SLA &amp; Zero-Trust Protocol</span>
-        </div>
-        <h3 class="text-2xl font-bold text-slate-900 tracking-tight">Enterprise Architectural Engagement Standards</h3>
-      </div>
-      <div class="text-left sm:text-right font-mono text-xs text-slate-500">
-        <span class="block text-emerald-600 font-bold text-sm">Target SLA: &lt; 2 Hours</span>
-        <span>Patna (IST) &amp; Global Edge Remote</span>
-      </div>
-    </div>
+                <!-- Direct Contact Information Card -->
+                <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Direct Communication Channels
+                    </h3>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
-        <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
-          <i class="w-4 h-4" data-lucide="shield-check"></i>
-        </div>
-        <h4 class="font-bold text-slate-900 text-sm">Zero-Trust Network Access</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Production environments and architecture discussions are air-gapped behind private WireGuard mesh tunnels with strict ZTNA endpoint authentication.
-        </p>
-      </div>
+                    <!-- Email Card with Copy -->
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3 hover:border-slate-300 transition">
+                        <div class="flex items-center gap-3 overflow-hidden">
+                            <div class="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0">
+                                <i class="w-4 h-4" data-lucide="mail"></i>
+                            </div>
+                            <div class="truncate">
+                                <span class="text-[10px] text-slate-500 uppercase font-mono block">Primary Email</span>
+                                <span class="text-xs font-semibold text-slate-900 truncate block">founder@rehanquantlab.com</span>
+                            </div>
+                        </div>
+                        <button class="px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 text-xs font-medium transition flex items-center gap-1 shrink-0" onclick="copyEmail()" title="Copy Email">
+                            <i class="w-3.5 h-3.5" data-lucide="copy"></i> Copy
+                        </button>
+                    </div>
 
-      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
-        <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center">
-          <i class="w-4 h-4" data-lucide="cpu"></i>
-        </div>
-        <h4 class="font-bold text-slate-900 text-sm">Deterministic Zero Leakage</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Nassim Taleb's Golden Rule of Resilience enforced across all client engagements: zero data loss, atomic single-route execution, and sub-50ms MTTR.
-        </p>
-      </div>
+                    <!-- Phone & WhatsApp Card -->
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3 hover:border-slate-300 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                                <i class="w-4 h-4" data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-slate-500 uppercase font-mono block">Phone &amp; WhatsApp</span>
+                                <span class="text-xs font-semibold text-slate-900">+91 70915 18548</span>
+                            </div>
+                        </div>
+                        <a class="px-2.5 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 text-xs font-medium transition flex items-center gap-1 shrink-0" href="https://wa.me/917091518548?text=Hello!%20I%20am%20reaching%20out%20from%20your%20portfolio." target="_blank" rel="noopener noreferrer">
+                            <i class="w-3.5 h-3.5" data-lucide="message-circle"></i> Chat
+                        </a>
+                    </div>
 
-      <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-2">
-        <div class="w-9 h-9 rounded-xl bg-amber-600 text-white flex items-center justify-center">
-          <i class="w-4 h-4" data-lucide="clock"></i>
-        </div>
-        <h4 class="font-bold text-slate-900 text-sm">Rapid Direct Response</h4>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          Immediate dispatch on verified direct WhatsApp (+91 70915 18548) and verified email. Full-time architectural leadership readiness.
-        </p>
-      </div>
-    </div>
+                    <!-- Physical Location Card -->
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-indigo-600 text-white flex items-center justify-center shrink-0">
+                            <i class="w-4 h-4" data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] text-slate-500 uppercase font-mono block">Physical Node</span>
+                            <span class="text-xs font-semibold text-slate-900">Patna, Bihar 800006, India 🇮🇳</span>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="p-5 rounded-2xl bg-slate-950 text-white border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="space-y-1">
-        <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Fastest Direct Route</span>
-        <p class="text-sm text-slate-200 font-medium">Have an urgent architectural role, quant engine review, or business platform proposal?</p>
-      </div>
-      <a class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-xs transition shadow-md whitespace-nowrap flex items-center gap-2" href="https://wa.me/917091518548?text=Hello%20Rehan,%20I%20am%20interested%20in%20an%20architectural%20engagement." rel="noopener noreferrer" target="_blank">
-        <i class="w-4 h-4" data-lucide="message-square"></i>
-        <span>Direct WhatsApp (+91 70915 18548)</span>
-      </a>
-    </div>
-  </div>
-</div>
+                <!-- Verified Institutional Profiles -->
+                <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider font-mono">Institutional Profiles</h4>
+                    <div class="grid grid-cols-2 gap-2.5 pt-1">
+                        <a href="https://linkedin.com/in/mohammad-rehan-tech" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition flex items-center gap-2">
+                            <i class="w-4 h-4 text-blue-600" data-lucide="linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition flex items-center gap-2">
+                            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            <span>X (@rehanquantlab)</span>
+                        </a>
+                        <a href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition flex items-center gap-2">
+                            <i class="w-4 h-4 text-orange-600" data-lucide="book-open"></i>
+                            <span>Substack Journal</span>
+                        </a>
+                        <a href="https://github.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition flex items-center gap-2">
+                            <i class="w-4 h-4 text-slate-800" data-lucide="github"></i>
+                            <span>GitHub Org</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-</div>
-</div>
-</section>
-</main>
-<!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 py-12">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-<div class="space-y-4 md:col-span-2">
-<div class="flex items-center gap-3">
-<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
-<span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab™</span></span>
-</div>
-<p class="text-xs text-slate-500 leading-relaxed max-w-sm">
-Founder &amp; Lead Systems Architect. Combining real-world leadership with mission-critical computational &amp; distributed quantitative systems engineering.
-</p>
-<div class="flex items-center gap-2 text-xs text-emerald-600 font-medium">
-<i class="w-4 h-4" data-lucide="shield-check"></i> 256-Bit SSL Encrypted &amp; Zero-Trust Hardened Architecture
-</div>
-</div>
-<div class="space-y-3">
-<h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Quick Navigation</h4>
-<ul class="space-y-2 text-xs text-slate-600">
-<li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
-<li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Portfolio</a></li>
-<li><a class="hover:text-slate-900 transition" href="experience.html">Experience &amp; Resume</a></li>
-<li><a class="hover:text-slate-900 transition font-semibold text-slate-900" href="contact.html">Contact &amp; Hire</a></li>
-<li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="legal.html">Master SaaS Agreement ⚖️</a></li>
-</ul>
-</div>
-<div class="space-y-3">
-<h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Direct Connect</h4>
-<ul class="space-y-2 text-xs text-slate-600">
-<li><a class="hover:text-slate-900 transition flex items-center gap-1.5" href="mailto:founder@rehanquantlab.com"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="mail"></i> founder@rehanquantlab.com</a></li>
-<li><a class="hover:text-slate-900 transition flex items-center gap-1.5" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank"><i class="w-3.5 h-3.5 text-emerald-600" data-lucide="message-circle"></i> WhatsApp (+91 70915 18548)</a></li>
-<li><span class="text-slate-500 flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-slate-600" data-lucide="map-pin"></i> Patna, Bihar 800006</span></li>
-</ul>
-</div>
-</div>
+            <!-- RIGHT COLUMN: INTERACTIVE PROPOSAL / INQUIRY FORM (7 Cols) -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-7 sm:p-9 rounded-2xl border border-slate-200 shadow-sm relative">
+                    <!-- Success Toast Notification -->
+                    <div class="hidden mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 flex items-start gap-3" id="form-success-toast">
+                        <i class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" data-lucide="check-circle-2"></i>
+                        <div>
+                            <span class="font-bold block text-sm">Message Successfully Logged!</span>
+                            <span class="text-xs">Your inquiry has been stored securely with atomic checksum. For immediate priority reply, ping directly on WhatsApp at +91 70915 18548.</span>
+                        </div>
+                    </div>
 
-<!-- LEGAL & REGULATORY COMPLIANCE SHIELD -->
-<div class="mb-8">
-<div class="bg-slate-50 border border-slate-200/90 rounded-2xl p-5 text-slate-600 text-xs space-y-2">
-    <div class="flex items-center gap-2 font-bold text-slate-900 uppercase tracking-wider text-[11px]">
-        <i class="w-4 h-4 text-indigo-600" data-lucide="shield-alert"></i>
-        <span>Legal &amp; Regulatory Compliance Statement</span>
-        <span class="bg-indigo-100 text-indigo-700 text-[10px] px-2 py-0.5 rounded-full font-semibold">Technology &amp; R&amp;D Only</span>
-    </div>
-    <p class="leading-relaxed">
-        <strong>Rehan Quant Lab™</strong> is an independent quantitative research and software technology laboratory. We build mathematical models, low-latency database engines (including AegisDB™), and automated algorithmic infrastructure. We do not provide investment advice or financial advisory services.
-    </p>
-    <p class="text-slate-500 text-[11px] leading-relaxed">
-        <strong>Statutory Notice:</strong> Rehan Quant Lab™ is not registered with SEBI (Securities and Exchange Board of India) as an Investment Adviser (IA), Research Analyst (RA), or Portfolio Management Service (PMS). All software, automated execution pipelines, backtesting frameworks, and quantitative systems are developed solely for proprietary research, technological benchmarking, and software engineering demonstration. Nothing on this website or in our communications constitutes financial advice, trading recommendations, or an offer/solicitation to invest.
-    </p>
-</div>
-</div>
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-1">Send an Inquiry or Proposal</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
+                        Fill out the verified dispatch form below. Client inputs are journaled via client Ash Ledger with zero loss guarantee.
+                    </p>
 
-<div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-<p>© 2026 Mohammad Rehan. Rehan Quant Lab — Systems Architecture &amp; Quantitative Computing Research. Open-source under MIT / Apache 2.0.</p>
-<div class="flex items-center gap-6">
-<a href="legal.html" class="text-indigo-600 font-semibold hover:underline">Terms &amp; Risk Disclosures</a>
-<span class="hover:text-slate-900 cursor-pointer">Privacy Policy</span>
-<span class="hover:text-slate-900 cursor-pointer">Security Overview</span>
-</div>
-</div>
-</div>
-</footer>
-<!-- WHATSAPP FLOATING WIDGET -->
-<div class="fixed bottom-6 right-6 z-50">
-<a aria-label="Chat on WhatsApp" class="group flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-2xl transition transform hover:scale-110" href="https://wa.me/917091518548?text=Hello!%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
-<svg class="w-7 h-7 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
-<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-semibold">Chat with Me</span>
-</a>
-</div>
-<!-- HOLOGRAPHIC AI COMPANION (ARIA v4.0) -->
-<div class="fixed bottom-6 left-6 z-50">
-<!-- Floating Hologram Avatar Pill -->
-<button class="relative group flex items-center gap-3 bg-slate-900 text-white p-3.5 rounded-full shadow-2xl border border-indigo-500/30 hover:scale-105 transition" id="aria-toggle-btn" onclick="toggleAriaChat()">
-<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900 animate-ping"></span>
-<span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-900"></span>
-<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center font-bold text-xs shadow-inner">
+                    <form class="space-y-5" id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="name">Your Full Name *</label>
+                                <input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="name" placeholder="e.g. Dr. Aryan Mehta" required="" type="text"/>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="email">Work Email *</label>
+                                <input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="email" placeholder="e.g. aryan@fund.com" required="" type="email"/>
+                            </div>
+                        </div>
 
-                🔮
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="phone">Phone / WhatsApp</label>
+                                <input class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition" id="phone" placeholder="+91 XXXXX XXXXX" type="tel"/>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="subject">Engagement Type *</label>
+                                <select class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 bg-white transition" id="subject" required="">
+                                    <option value="">Select engagement type...</option>
+                                    <option value="Full-Time Tech Lead / Architect Role">Full-Time Tech Lead / Systems Architect</option>
+                                    <option value="Enterprise Distributed Systems Architecture">Enterprise Distributed Systems Architecture</option>
+                                    <option value="AegisDB / Distributed Engine Consulting">AegisDB / Distributed Engine Consulting</option>
+                                    <option value="Enterprise Web &amp; Agent Swarms">Enterprise Web Platforms &amp; Agent Swarms</option>
+                                    <option value="General Technical Inquiry">General Institutional Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5" for="message">Project Scope or Objective *</label>
+                            <textarea class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition resize-none" id="message" placeholder="Describe system architecture, performance requirements, or role specifications..." required="" rows="4"></textarea>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                            <span class="text-xs text-slate-500 flex items-center gap-1.5 font-mono">
+                                <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shield-check"></i> TLS 1.3 &amp; AES-256 Protected
+                            </span>
+                            <button class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs shadow-sm transition flex items-center gap-2 cursor-pointer btn-spring" type="submit">
+                                <span>Send Inquiry</span>
+                                <i class="w-3.5 h-3.5" data-lucide="send"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Architectural Engagement Standards Card -->
+                <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-xs font-bold text-slate-900 uppercase font-mono tracking-wider">Enterprise Engagement Standards</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">SLA: &lt; 2h</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="lock"></i> Zero-Trust
+                            </div>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">End-to-end encrypted comms with zero third-party telemetry tracking.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="cpu"></i> Deterministic
+                            </div>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">Sub-50ms MTTR, atomic single-route execution, and zero capital leakage.</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="font-bold text-slate-900 mb-1 flex items-center gap-1.5">
+                                <i class="w-3.5 h-3.5 text-amber-600" data-lucide="zap"></i> Direct Access
+                            </div>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">Direct 1-on-1 interaction with Founder &amp; Architect Mohammad Rehan.</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-<div class="text-left pr-2 hidden sm:block">
-<span class="text-xs font-bold block leading-tight">Aria v4.0 AI</span>
-<span class="text-[10px] text-emerald-400 block font-medium">Neural Assistant Online</span>
-</div>
-</button>
-<!-- Holographic HUD Terminal Window -->
-<div class="hidden absolute bottom-16 left-0 w-[380px] sm:w-[400px] h-[520px] bg-slate-900/95 backdrop-blur-xl border border-indigo-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-white z-50" id="aria-chat-window">
-<!-- Terminal Header -->
-<div class="bg-slate-800/90 px-4 py-3 border-b border-slate-700 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-<span class="text-xs font-mono font-bold tracking-wider text-indigo-300">ARIA // AUTONOMOUS SYSTEMS ASSISTANT v4.0</span>
-</div>
-<div class="flex items-center gap-2">
-<button aria-label="Minimize Aria" class="text-slate-400 hover:text-white p-1" onclick="toggleAriaChat()">
-<i class="w-4 h-4" data-lucide="minus"></i>
-</button>
-</div>
-</div>
-<!-- Scrollable Message Stream -->
-<div class="flex-grow p-4 overflow-y-auto space-y-4 text-xs font-mono" id="aria-messages">
-<div class="flex items-start gap-2">
-<div class="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-xs flex-shrink-0">🔮</div>
-<div class="bg-slate-800 p-3 rounded-xl border border-indigo-500/20 text-slate-200 leading-relaxed">
+        </div>
+    </div>
+</section>
 
-                        Hello! I am Aria v4.0, Mohammad Rehan's neural intelligence assistant. How can I help you explore his retail management background, web projects, or billing software today?
+</main>
 
-                    </div>
+<!-- FOOTER (Matching index.html) -->
+<footer class="bg-white border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-4 md:col-span-2">
+                <div class="flex items-center gap-3">
+                    <img src="emblem.webp" loading="lazy" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
+                    <span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab™</span></span>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed max-w-sm">
+                    Founder &amp; Lead Systems Architect. Combining real-world commercial operations leadership with mission-critical computational &amp; distributed quantitative engineering.
+                </p>
+                <div class="flex items-center gap-2 text-xs text-emerald-600 font-medium">
+                    <i class="w-4 h-4" data-lucide="shield-check"></i> 256-Bit SSL Encrypted &amp; Zero-Trust Hardened Architecture
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider font-mono">Navigation</h4>
+                <ul class="space-y-2 text-xs text-slate-600">
+                    <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
+                    <li><a class="hover:text-slate-900 transition" href="projects.html">Projects</a></li>
+                    <li><a class="hover:text-cyan-700 font-semibold transition" href="aegis.html">RQL Aegis™ Software</a></li>
+                    <li><a class="hover:text-slate-900 transition" href="experience.html">Experience</a></li>
+                    <li><a class="hover:text-indigo-600 transition" href="https://rehanquantlab.substack.com" target="_blank">Research Substack</a></li>
+                    <li><a class="text-slate-900 font-bold" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider font-mono">Direct Connect</h4>
+                <ul class="space-y-2 text-xs text-slate-600">
+                    <li><a class="hover:text-emerald-600 transition" href="https://wa.me/917091518548" target="_blank">WhatsApp Direct (+91 70915 18548)</a></li>
+                    <li><button onclick="copyEmail()" class="hover:text-slate-900 transition text-left">founder@rehanquantlab.com</button></li>
+                    <li><a class="hover:text-slate-900 transition" href="Mohammad_Rehan_Resume.pdf" download>Download Resume (PDF)</a></li>
+                    <li><a class="hover:text-slate-900 transition" href="legal.html">Legal &amp; Terms</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+            <div>
+                &copy; 2026 Mohammad Rehan. All rights reserved.
+            </div>
+            <div>
+                Patna Node • SHA-256 Checksum Verified • TLS 1.3
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- VIP TECHNICAL BRIEFING MODAL -->
+<div id="briefing-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 text-white rounded-3xl border border-slate-700 max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-mono text-xs text-emerald-300 uppercase tracking-wider font-bold">20-Min Technical Briefing</span>
+            </div>
+            <button onclick="closeBriefingModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition">
+                <i class="w-5 h-5" data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <div>
+                <label class="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Select Briefing Topic:</label>
+                <div class="space-y-2">
+                    <button onclick="selectBriefingTopic(this, 'Distributed Systems Engineering & Enterprise Software Architecture')" class="briefing-topic-btn text-left p-3 rounded-xl border border-indigo-500 bg-indigo-950/60 text-xs font-medium text-white transition flex items-center justify-between w-full cursor-pointer">
+                        <span>Quant Algorithmic Execution Setup</span>
+                        <i class="w-4 h-4 text-emerald-400 check-icon" data-lucide="check-circle-2"></i>
+                    </button>
+                    <button onclick="selectBriefingTopic(this, 'AegisDB In-Memory Architecture & SIMD Operations')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between w-full cursor-pointer">
+                        <span>AegisDB Database Architecture</span>
+                        <i class="w-4 h-4 text-slate-500 check-icon" data-lucide="circle"></i>
+                    </button>
+                    <button onclick="selectBriefingTopic(this, 'Full-Time Tech Lead / Software Architect Role')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between w-full cursor-pointer">
+                        <span>Full-Time Architectural Engagement</span>
+                        <i class="w-4 h-4 text-slate-500 check-icon" data-lucide="circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="space-y-2 pt-2 border-t border-slate-800">
+                <button onclick="dispatchBriefingEmail()" class="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs cursor-pointer">
+                    <i class="w-4 h-4" data-lucide="send"></i>
+                    <span>Send Calendar Invite via Email</span>
+                </button>
+                <button onclick="dispatchBriefingWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
+                    <i class="w-4 h-4" data-lucide="message-square"></i>
+                    <span>Confirm via Instant WhatsApp Direct</span>
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-<!-- Quick Action Chips -->
-<div class="px-3 py-2 bg-slate-800/50 border-t border-slate-700/50 flex gap-1.5 overflow-x-auto no-scrollbar">
-<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('Tell me about Mohammad Rehan\'s background')">💼 Background</button>
-<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('What projects has he built?')">🚀 Projects</button>
-<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('What is his tech stack?')">⚡ Tech Stack</button>
-<button class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-indigo-300 text-[10px] whitespace-nowrap border border-indigo-500/20 transition" onclick="sendAriaQuery('How can I contact him?')">📲 Contact &amp; WhatsApp</button>
-</div>
-<!-- Terminal Input Bar -->
-<div class="p-3 bg-slate-800 border-t border-slate-700 flex gap-2">
-<input class="flex-grow bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 font-sans" id="aria-input" onkeypress="handleAriaKeyPress(event)" placeholder="Ask Aria anything..." type="text"/>
-<button class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-2 rounded-xl text-xs font-bold transition flex items-center justify-center" onclick="submitAriaInput()">
-<i class="w-3.5 h-3.5" data-lucide="send"></i>
-</button>
-</div>
-</div>
-</div>
-<!-- GLOBAL JAVASCRIPT & INTERACTIVITY -->
+
 <script>
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            if (window.lucide) {
-
-                lucide.createIcons();
-
-            }
-
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-
-
-            // Mobile Menu Toggle
-
-            const mobileBtn = document.getElementById('mobile-menu-btn');
-
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileBtn && mobileMenu) {
-
-                mobileBtn.addEventListener('click', () => {
-
-                    mobileMenu.classList.toggle('hidden');
-
-                });
-
-            }
-
-        });
-
-
-
-        // 1-Click Email Copy Function
-        function copyEmail() {
-            const email = "founder@rehanquantlab.com";
-            navigator.clipboard.writeText(email).then(() => {
-                alert("Institutional email copied to clipboard: " + email);
-            }).catch(err => {
-                console.error("Failed to copy email: ", err);
-            });
-        }
-
-
-
-        // Contact Form Submission Handler with Toast
-
-        function handleFormSubmit(event) {
-
-            event.preventDefault();
-
-            const name = document.getElementById('name').value;
-
-            const email = document.getElementById('email').value;
-
-            const subject = document.getElementById('subject').value;
-
-            const message = document.getElementById('message').value;
-
-
-
-            if (!name || !email || !subject || !message) {
-
-                alert("Please fill in all required fields.");
-
-                return;
-
-            }
-
-
-
-            // Show success toast
-
-            const toast = document.getElementById('form-success-toast');
-
-            toast.classList.remove('hidden');
-
-            
-
-            // Reset form
-
-            document.getElementById('contact-form').reset();
-
-
-
-            // Scroll to toast
-
-            toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-
-
-            // Hide toast after 8 seconds
-
-            setTimeout(() => {
-
-                toast.classList.add('hidden');
-
-            }, 8000);
-
-        }
-
-
-
-        // Holographic AI Companion (Aria v4.0) Logic
-
-        let ariaOpen = false;
-
-        function toggleAriaChat() {
-
-            ariaOpen = !ariaOpen;
-
-            const win = document.getElementById('aria-chat-window');
-
-            if (ariaOpen) {
-
-                win.classList.remove('hidden');
-
-                document.getElementById('aria-input').focus();
-
-            } else {
-
-                win.classList.add('hidden');
-
-            }
-
-        }
-
-
-
-        function handleAriaKeyPress(e) {
-
-            if (e.key === 'Enter') {
-
-                submitAriaInput();
-
-            }
-
-        }
-
-
-
-        function submitAriaInput() {
-
-            const input = document.getElementById('aria-input');
-
-            const val = input.value.trim();
-
-            if (!val) return;
-
-            appendUserMessage(val);
-
-            input.value = '';
-
-            processAriaResponse(val);
-
-        }
-
-
-
-        function sendAriaQuery(q) {
-
-            appendUserMessage(q);
-
-            processAriaResponse(q);
-
-        }
-
-
-
-        function appendUserMessage(text) {
-
-            const container = document.getElementById('aria-messages');
-
-            const div = document.createElement('div');
-
-            div.className = "flex items-start justify-end gap-2";
-
-            div.innerHTML = `
-
-                <div class="bg-indigo-600 p-3 rounded-xl text-white max-w-[80%] leading-relaxed">${escapeHtml(text)}</div>
-
-                <div class="w-7 h-7 rounded-full bg-slate-700 flex items-center justify-center text-xs flex-shrink-0">👤</div>
-
-            `;
-
-            container.appendChild(div);
-
-            container.scrollTop = container.scrollHeight;
-
-        }
-
-
-
-        function appendAriaMessage(htmlContent) {
-
-            const container = document.getElementById('aria-messages');
-
-            const div = document.createElement('div');
-
-            div.className = "flex items-start gap-2";
-
-            div.innerHTML = `
-
-                <div class="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-xs flex-shrink-0">🔮</div>
-
-                <div class="bg-slate-800 p-3 rounded-xl border border-indigo-500/20 text-slate-200 leading-relaxed space-y-2">${htmlContent}</div>
-
-            `;
-
-            container.appendChild(div);
-
-            container.scrollTop = container.scrollHeight;
-
-        }
-
-
-
-        function processAriaResponse(query) {
-            setTimeout(() => {
-                let responseHtml = "";
-                if (window.generateAriaCognitiveResponse) {
-                    responseHtml = window.generateAriaCognitiveResponse(query);
-                } else {
-                    responseHtml = `Mohammad Rehan is a Software Architect & Tech Lead in Patna, Bihar. How can I assist you with his background, projects, or architecture?`;
-                }
-                appendAriaMessage(responseHtml);
-            }, 300);
-        }
-
-        // Cookie Banner Management
-        function acceptCookies() {
-            const banner = document.getElementById('cookie-banner');
-            if (banner) {
-                try { localStorage.setItem('cookie_consent_accepted', 'true'); } catch (e) {}
-                banner.style.opacity = '0';
-                banner.style.pointerEvents = 'none';
-                setTimeout(() => banner.remove(), 250);
-            }
-        }
-        function dismissCookies() { acceptCookies(); }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('cookie_consent_accepted') === 'true') {
-                const banner = document.getElementById('cookie-banner');
-                if (banner) banner.remove();
-            }
-        });
-
-        function escapeHtml(text) {
-            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
-
-            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-
-        }
-
-    </script>
-<script>
-
-// Universal Self-Healing Navigation Guard (Prevents ERR_FILE_NOT_FOUND)
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (!href) return;
-            if (href.endsWith('.html') && (location.protocol === 'file:' || !href.startsWith('http'))) {
-                const targetBase = href.split('#')[0].replace('.html', '').toLowerCase();
-                const hashPart = href.includes('#') ? href.split('#')[1] : null;
-                const targetId = hashPart || (targetBase === 'index' ? 'about' : targetBase);
-                const localEl = document.getElementById(targetId) || document.getElementById(targetBase);
-                if (localEl) {
-                    e.preventDefault();
-                    localEl.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
+// Lucide icons
+lucide.createIcons();
+
+// Mobile Menu Toggle
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
-});
-</script>
+}
 
-<script>
-// ==========================================
-// INTERACTIVE CONTACT SCRIPTS SUITE
-// ==========================================
+// Technical Briefing Modal Logic
+let selectedTopic = "Distributed Systems Engineering & Enterprise Software Architecture";
+function openBriefingModal() {
+    const modal = document.getElementById('briefing-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        if (window.lucide) window.lucide.createIcons();
+    }
+}
+function closeBriefingModal() {
+    const modal = document.getElementById('briefing-modal');
+    if (modal) modal.classList.add('hidden');
+}
+function selectBriefingTopic(btn, topic) {
+    selectedTopic = topic;
+    document.querySelectorAll('.briefing-topic-btn').forEach(b => {
+        b.className = "briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between w-full cursor-pointer";
+        const icon = b.querySelector('.check-icon');
+        if (icon) {
+            icon.setAttribute('data-lucide', 'circle');
+            icon.className = "w-4 h-4 text-slate-500 check-icon";
+        }
+    });
+    btn.className = "briefing-topic-btn text-left p-3 rounded-xl border border-indigo-500 bg-indigo-950/60 text-xs font-medium text-white transition flex items-center justify-between w-full cursor-pointer";
+    const icon = btn.querySelector('.check-icon');
+    if (icon) {
+        icon.setAttribute('data-lucide', 'check-circle-2');
+        icon.className = "w-4 h-4 text-emerald-400 check-icon";
+    }
+    if (window.lucide) window.lucide.createIcons();
+}
+function dispatchBriefingEmail() {
+    const subject = encodeURIComponent("Technical Briefing Request (20 Min) - " + selectedTopic);
+    const body = encodeURIComponent(
+        "Hi Mohammad Rehan,\n\nI would like to schedule a 20-minute Technical Briefing with you regarding:\n" +
+        "• Topic: " + selectedTopic + "\n\nLooking forward to speaking."
+    );
+    window.location.href = "mailto:founder@rehanquantlab.com?subject=" + subject + "&body=" + body;
+}
+function dispatchBriefingWhatsApp() {
+    const text = encodeURIComponent(
+        "Hello Mohammad Rehan,\nI would like to schedule a 20-minute Technical Briefing with you.\nTopic: " + selectedTopic
+    );
+    window.open("https://wa.me/917091518548?text=" + text, "_blank");
+}
 
-// 1. Interactive Neural Constellation Canvas
-(function initNeuralCanvas() {
+function copyEmail() {
+    navigator.clipboard.writeText("founder@rehanquantlab.com").then(() => {
+        alert("Email copied to clipboard: founder@rehanquantlab.com");
+    });
+}
+
+function handleFormSubmit(e) {
+    e.preventDefault();
+    const toast = document.getElementById('form-success-toast');
+    if (toast) toast.classList.remove('hidden');
+    document.getElementById('contact-form').reset();
+}
+
+// Constellation Neural Mesh Canvas Animation (Identical to Projects & Experience)
+(function() {
     const canvas = document.getElementById('neural-mesh-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let width = canvas.width = canvas.parentElement.offsetWidth;
     let height = canvas.height = canvas.parentElement.offsetHeight;
-
+    
     window.addEventListener('resize', () => {
         if (!canvas.parentElement) return;
         width = canvas.width = canvas.parentElement.offsetWidth;
         height = canvas.height = canvas.parentElement.offsetHeight;
     });
 
-    const particles = [];
-    const count = Math.min(Math.floor((width * height) / 14000), 65);
-    const mouse = { x: null, y: null, maxDist: 150 };
-
-    window.addEventListener('mousemove', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
-    });
-
-    window.addEventListener('mouseleave', () => {
-        mouse.x = null;
-        mouse.y = null;
-    });
-
-    for (let i = 0; i < count; i++) {
-        particles.push({
+    const numPoints = 25;
+    const points = [];
+    for (let i = 0; i < numPoints; i++) {
+        points.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.7,
-            vy: (Math.random() - 0.5) * 0.7,
-            radius: Math.random() * 2 + 1.2
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            radius: Math.random() * 1.5 + 1
         });
     }
 
     function animate() {
         ctx.clearRect(0, 0, width, height);
-        for (let i = 0; i < particles.length; i++) {
-            const p = particles[i];
+        ctx.fillStyle = "rgba(99, 102, 241, 0.4)";
+        ctx.strokeStyle = "rgba(99, 102, 241, 0.12)";
+
+        for (let i = 0; i < numPoints; i++) {
+            const p = points[i];
             p.x += p.vx;
             p.y += p.vy;
-
             if (p.x < 0 || p.x > width) p.vx *= -1;
             if (p.y < 0 || p.y > height) p.vy *= -1;
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(99, 102, 241, 0.45)';
             ctx.fill();
 
-            for (let j = i + 1; j < particles.length; j++) {
-                const p2 = particles[j];
-                const dx = p.x - p2.x;
-                const dy = p.y - p2.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 110) {
+            for (let j = i + 1; j < numPoints; j++) {
+                const p2 = points[j];
+                const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                if (dist < 120) {
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(99, 102, 241, ${0.25 * (1 - dist / 110)})`;
-                    ctx.lineWidth = 0.8;
-                    ctx.stroke();
-                }
-            }
-
-            if (mouse.x !== null && mouse.y !== null) {
-                const mdx = p.x - mouse.x;
-                const mdy = p.y - mouse.y;
-                const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
-                if (mdist < mouse.maxDist) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = `rgba(16, 185, 129, ${0.45 * (1 - mdist / mouse.maxDist)})`;
-                    ctx.lineWidth = 1.2;
                     ctx.stroke();
                 }
             }
@@ -1058,278 +1022,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animate();
 })();
-
-// 2. Dynamic Role Typewriter / Text Rotator
-(function initContactRoleRotator() {
-    const el = document.getElementById('contact-role-rotator');
-    if (!el) return;
-    const roles = [
-        "Software Architecture & Tech Leadership",
-        "High-Throughput Distributed Systems",
-        "Institutional Quant Trading Engines",
-        "Autonomous Multi-Agent AI Swarms",
-        "Commercial Enterprise POS & Retail ERP",
-        "Immediate Availability & Rapid SLA"
-    ];
-    let roleIndex = 0;
-    let charIndex = roles[0].length;
-    let isDeleting = true;
-    let pauseCounter = 0;
-
-    function tick() {
-        const currentRole = roles[roleIndex];
-        if (isDeleting) {
-            if (pauseCounter > 0) {
-                pauseCounter--;
-                setTimeout(tick, 100);
-                return;
-            }
-            charIndex--;
-            el.textContent = currentRole.substring(0, charIndex);
-            if (charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                setTimeout(tick, 300);
-                return;
-            }
-            setTimeout(tick, 25);
-        } else {
-            charIndex++;
-            el.textContent = currentRole.substring(0, charIndex);
-            if (charIndex === currentRole.length) {
-                isDeleting = true;
-                pauseCounter = 25;
-                setTimeout(tick, 100);
-                return;
-            }
-            setTimeout(tick, 45);
-        }
-    }
-    pauseCounter = 20;
-    setTimeout(tick, 1000);
-})();
-
-// 3. 3D Holographic Card Tilt
-(function init3DContactTilt() {
-    const card = document.getElementById('contact-tilt-card');
-    const glow = document.getElementById('contact-glow-overlay');
-    if (!card) return;
-
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -6;
-        const rotateY = ((x - centerX) / centerX) * 6;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
-        if (glow) {
-            glow.style.opacity = '1';
-            glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(99, 102, 241, 0.22), transparent 60%)`;
-        }
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-        if (glow) glow.style.opacity = '0';
-    });
-})();
-
-// 4. Interactive Section Layout Tabs Switcher
-function switchContactTab(tabName) {
-    const btnAll = document.getElementById('contact-tab-btn-all');
-    const btnDirect = document.getElementById('contact-tab-btn-direct');
-    const btnForm = document.getElementById('contact-tab-btn-form');
-    const btnSla = document.getElementById('contact-tab-btn-sla');
-
-    const colDirect = document.getElementById('contact-col-direct');
-    const colForm = document.getElementById('contact-col-form');
-    const colSla = document.getElementById('contact-col-sla');
-
-    [btnAll, btnDirect, btnForm, btnSla].forEach(btn => {
-        if (!btn) return;
-        btn.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5";
-    });
-
-    if (tabName === 'all') {
-        if (btnAll) btnAll.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
-        if (colDirect) {
-            colDirect.classList.remove('hidden', 'lg:col-span-12', 'max-w-2xl', 'mx-auto');
-            colDirect.classList.add('lg:col-span-5');
-        }
-        if (colForm) {
-            colForm.classList.remove('hidden', 'lg:col-span-12', 'max-w-3xl', 'mx-auto');
-            colForm.classList.add('lg:col-span-7');
-        }
-        if (colSla) colSla.classList.add('hidden');
-    } else if (tabName === 'direct') {
-        if (btnDirect) btnDirect.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
-        if (colDirect) {
-            colDirect.classList.remove('hidden', 'lg:col-span-5');
-            colDirect.classList.add('lg:col-span-12', 'max-w-2xl', 'mx-auto');
-        }
-        if (colForm) colForm.classList.add('hidden');
-        if (colSla) colSla.classList.add('hidden');
-    } else if (tabName === 'form') {
-        if (btnForm) btnForm.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
-        if (colDirect) colDirect.classList.add('hidden');
-        if (colForm) {
-            colForm.classList.remove('hidden', 'lg:col-span-7');
-            colForm.classList.add('lg:col-span-12', 'max-w-3xl', 'mx-auto');
-        }
-        if (colSla) colSla.classList.add('hidden');
-    } else if (tabName === 'sla') {
-        if (btnSla) btnSla.className = "contact-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5";
-        if (colDirect) colDirect.classList.add('hidden');
-        if (colForm) colForm.classList.add('hidden');
-        if (colSla) colSla.classList.remove('hidden');
-    }
-
-    if (window.lucide && window.lucide.createIcons) {
-        window.lucide.createIcons();
-    }
-}
 </script>
-
-<!-- INTERACTIVE TECHNICAL BRIEFING MODAL -->
-<div id="briefing-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md transition-opacity duration-300">
-  <div class="bg-slate-900 border border-slate-700/80 text-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative space-y-6">
-    <!-- Close Button -->
-    <button onclick="closeBriefingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-xl hover:bg-slate-800 transition cursor-pointer">
-      <i class="w-5 h-5" data-lucide="x"></i>
-    </button>
-
-    <!-- Header -->
-    <div class="space-y-1">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-mono font-semibold border border-indigo-500/30">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>20-Minute Private Technical Briefing</span>
-      </div>
-      <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white pt-1">Book a Session with Mohammad Rehan</h3>
-      <p class="text-xs text-slate-400">Founder &amp; Lead Systems Architect • Rehan Quant Lab™</p>
-    </div>
-
-    <!-- Interactive Topic Selection -->
-    <div class="space-y-2">
-      <label class="block text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">Select Briefing Topic:</label>
-      <div class="grid grid-cols-1 gap-2" id="briefing-topics">
-        <button type="button" onclick="selectBriefingTopic(this, 'Institutional Quantitative Execution & Options Sniper Engine')" class="briefing-topic-btn text-left p-3 rounded-xl border border-indigo-500 bg-indigo-950/60 text-xs font-medium text-white transition flex items-center justify-between cursor-pointer">
-          <span>🎯 Institutional Quant Trading &amp; Options Engine</span>
-          <i class="w-4 h-4 text-emerald-400 check-icon" data-lucide="check-circle-2"></i>
-        </button>
-        <button type="button" onclick="selectBriefingTopic(this, 'AegisDB: Sub-Millisecond In-Memory Storage & WAL Architecture')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between cursor-pointer">
-          <span>⚡ AegisDB™: 2.62M Ops/Sec In-Memory Storage</span>
-          <i class="w-4 h-4 text-slate-500 check-icon" data-lucide="circle"></i>
-        </button>
-        <button type="button" onclick="selectBriefingTopic(this, 'Autonomous AgentOps & Enterprise SaaS Architecture')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between cursor-pointer">
-          <span>🤖 Autonomous AgentOps Platform Architecture</span>
-          <i class="w-4 h-4 text-slate-500 check-icon" data-lucide="circle"></i>
-        </button>
-        <button type="button" onclick="selectBriefingTopic(this, 'Full-Time Architectural Role & High-Impact Tech Leadership')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between cursor-pointer">
-          <span>💼 Architectural Leadership &amp; High-Impact Roles</span>
-          <i class="w-4 h-4 text-slate-500 check-icon" data-lucide="circle"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Preferred Window Selection -->
-    <div class="space-y-2">
-      <label class="block text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">Preferred IST Time Window:</label>
-      <div class="grid grid-cols-3 gap-2" id="briefing-windows">
-        <button type="button" onclick="selectBriefingWindow(this, 'Morning (10:00 AM - 12:30 PM IST)')" class="briefing-window-btn p-2.5 rounded-xl border border-indigo-500 bg-indigo-950/60 text-center text-xs font-medium text-white hover:border-indigo-500 transition cursor-pointer">
-          10 AM - 12:30 PM
-        </button>
-        <button type="button" onclick="selectBriefingWindow(this, 'Afternoon (02:00 PM - 05:30 PM IST)')" class="briefing-window-btn p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-center text-xs font-medium text-slate-300 hover:border-indigo-500 transition cursor-pointer">
-          2 PM - 5:30 PM
-        </button>
-        <button type="button" onclick="selectBriefingWindow(this, 'Evening (07:00 PM - 09:30 PM IST)')" class="briefing-window-btn p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-center text-xs font-medium text-slate-300 hover:border-indigo-500 transition cursor-pointer">
-          7 PM - 9:30 PM
-        </button>
-      </div>
-    </div>
-
-    <!-- Action Triggers -->
-    <div class="space-y-3 pt-2 border-t border-slate-800">
-      <button onclick="dispatchBriefingEmail()" class="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs cursor-pointer">
-        <i class="w-4 h-4" data-lucide="send"></i>
-        <span>Send Calendar Invite via Email</span>
-      </button>
-      <button onclick="dispatchBriefingWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer">
-        <i class="w-4 h-4" data-lucide="message-square"></i>
-        <span>Confirm via Instant WhatsApp Direct</span>
-      </button>
-    </div>
-  </div>
-</div>
 
 <script>
-// Technical Briefing Modal State & Logic
-let selectedTopic = "Institutional Quantitative Execution & Options Sniper Engine";
-let selectedWindow = "Morning (10:00 AM - 12:30 PM IST)";
-
-function openBriefingModal() {
-    const modal = document.getElementById('briefing-modal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+// Smart Universal Email Handler (Copies to Clipboard + Opens Web Gmail)
+function handleSmartEmail(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    const email = "founder@rehanquantlab.com";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).catch(function() {});
     }
-}
-
-function closeBriefingModal() {
-    const modal = document.getElementById('briefing-modal');
-    if (modal) modal.classList.add('hidden');
-}
-
-function selectBriefingTopic(btn, topic) {
-    selectedTopic = topic;
-    document.querySelectorAll('.briefing-topic-btn').forEach(b => {
-        b.className = "briefing-topic-btn text-left p-3 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-indigo-500 text-xs font-medium text-slate-200 transition flex items-center justify-between cursor-pointer";
-        const icon = b.querySelector('.check-icon');
-        if (icon) {
-            icon.setAttribute('data-lucide', 'circle');
-            icon.className = "w-4 h-4 text-slate-500 check-icon";
-        }
-    });
-    btn.className = "briefing-topic-btn text-left p-3 rounded-xl border border-indigo-500 bg-indigo-950/60 text-xs font-medium text-white transition flex items-center justify-between cursor-pointer";
-    const icon = btn.querySelector('.check-icon');
-    if (icon) {
-        icon.setAttribute('data-lucide', 'check-circle-2');
-        icon.className = "w-4 h-4 text-emerald-400 check-icon";
+    
+    let toast = document.getElementById("email-copied-toast");
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "email-copied-toast";
+        toast.className = "fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-slate-900/95 text-white px-5 py-3 rounded-2xl shadow-2xl border border-indigo-500/40 flex items-center gap-3 text-xs font-semibold backdrop-blur-md transition-all";
+        document.body.appendChild(toast);
     }
-    if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
-}
-
-function selectBriefingWindow(btn, win) {
-    selectedWindow = win;
-    document.querySelectorAll('.briefing-window-btn').forEach(b => {
-        b.className = "briefing-window-btn p-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-center text-xs font-medium text-slate-300 hover:border-indigo-500 transition cursor-pointer";
-    });
-    btn.className = "briefing-window-btn p-2.5 rounded-xl border border-indigo-500 bg-indigo-950/60 text-center text-xs font-medium text-white hover:border-indigo-500 transition cursor-pointer";
-}
-
-function dispatchBriefingEmail() {
-    const subject = encodeURIComponent("Technical Briefing Request (20 Min) - " + selectedTopic);
-    const body = encodeURIComponent(
-        "Hi Mohammad Rehan,\n\n" +
-        "I would like to schedule a 20-minute Technical Briefing with you.\n\n" +
-        "• Organization / Name: \n" +
-        "• Selected Topic: " + selectedTopic + "\n" +
-        "• Preferred Window: " + selectedWindow + "\n" +
-        "• Meeting Format: Google Meet / Zoom\n\n" +
-        "Looking forward to the architectural discussion."
-    );
-    window.location.href = "mailto:founder@rehanquantlab.com?subject=" + subject + "&body=" + body;
-}
-
-function dispatchBriefingWhatsApp() {
-    const text = encodeURIComponent(
-        "Hello Mohammad Rehan,\nI would like to schedule a 20-minute Technical Briefing with you.\n\nTopic: " + selectedTopic + "\nPreferred Window: " + selectedWindow
-    );
-    window.open("https://wa.me/917091518548?text=" + text, "_blank");
+    toast.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span>Copied <strong>' + email + '</strong> to clipboard! Opening Gmail...</span>';
+    toast.style.display = "flex";
+    
+    setTimeout(function() {
+        if (toast) toast.style.display = "none";
+    }, 4500);
+    
+    const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email + "&su=" + encodeURIComponent("Inquiry via Rehan Quant Lab");
+    window.open(gmailUrl, "_blank");
 }
 </script>
+
+<script src="lively_motion.js" defer></script>
 </body>
 </html>
