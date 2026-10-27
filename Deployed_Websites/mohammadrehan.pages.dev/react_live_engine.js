@@ -164,7 +164,7 @@
             'div',
             {
                 className:
-                    'bg-slate-950/95 border border-slate-800/90 rounded-2xl p-3.5 shadow-xl backdrop-blur-md text-white flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 max-w-4xl mx-auto transition duration-300 hover:border-slate-700'
+                    'bg-slate-950 border border-slate-800/90 rounded-2xl p-3.5 shadow-xl  text-white flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 max-w-4xl mx-auto transition duration-300 hover:border-slate-700'
             },
             // Left: Telemetry & Status Badges
             e(

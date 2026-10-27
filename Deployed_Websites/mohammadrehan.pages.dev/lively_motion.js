@@ -140,11 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                header.classList.add('shadow-lg', 'bg-white/95');
-                header.classList.remove('bg-white/90');
+                header.classList.add('shadow-md');
             } else {
-                header.classList.remove('shadow-lg', 'bg-white/95');
-                header.classList.add('bg-white/90');
+                header.classList.remove('shadow-md');
             }
         }, { passive: true });
     }
