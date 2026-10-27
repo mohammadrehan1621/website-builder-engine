@@ -52,29 +52,29 @@ img, svg, video, canvas, audio, iframe, embed, object {
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-/* 🛡️ Institutional Typography & Zero-Break Protections */
-*, *::before, *::after {
-    hyphens: none !important;
-    -webkit-hyphens: none !important;
-    -ms-hyphens: none !important;
+/* 🛡️ Institutional Typography Protections */
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
 }
 
-code, kbd, samp, pre, .font-mono, [class*="font-mono"] {
-    white-space: nowrap !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    display: inline-block;
+*, *::before, *::after {
+    hyphens: none;
+    -webkit-hyphens: none;
+}
+
+code, kbd, samp, pre {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance !important;
-    hyphens: none !important;
-    word-break: keep-all !important;
+    text-wrap: balance;
+    hyphens: none;
 }
 
 p, li, span, a {
     text-wrap: pretty;
-    hyphens: none !important;
 }
 
 .whitespace-nowrap {
