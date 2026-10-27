@@ -1,0 +1,27 @@
+{
+  "name": "rql-react-portal",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Rehan Quant Lab Sovereign 3D React Portal with GSAP, Framer Motion, Three.js & Rust WebAssembly",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^10.16.4",
+    "gsap": "^3.12.5",
+    "three": "^0.160.0",
+    "lucide-react": "^0.300.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.12",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

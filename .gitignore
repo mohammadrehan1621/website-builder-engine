@@ -21,3 +21,10 @@ website_bundle.zip
 .idea/
 Thumbs.db
 .DS_Store
+
+# Rust and Node build artifacts
+target/
+rql_rust_engine/target/
+node_modules/
+dist/
+*.exe

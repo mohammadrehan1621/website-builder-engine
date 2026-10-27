@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Mobile — Authorized Smartphone Store & Exchange | Boring Road, Patna</title>
+    <meta name="description" content="Authorized smartphone retail showroom in Boring Road, Patna. Best in-store deals on Apple iPhone, Samsung Galaxy, OnePlus, Xiaomi, Vivo. 0% EMI & old phone exchange.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ali Mobile — Authorized Smartphone Store | Boring Road, Patna">
+    <meta property="og:description" content="Official retail showroom for Apple, Samsung, OnePlus & Xiaomi. In-store deals lower than online at Boring Road Chauraha, Patna.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Tailwind CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        heading: ['"Outfit"', '-apple-system', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        apple: {
+                            bg: '#f5f5f7',
+                            card: '#ffffff',
+                            text: '#1d1d1f',
+                            sub: '#86868b',
+                            blue: '#0071e3',
+                            blueHover: '#0077ed',
+                            border: '#d2d2d7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fbfbfd;
+            color: #1d1d1f;
+        }
+        .apple-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .apple-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+        .apple-badge {
+            background: #f5f5f7;
+            border: 1px solid #e5e5ea;
+            color: #1d1d1f;
+        }
+        .btn-apple-dark {
+            background: #1d1d1f;
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+        .btn-apple-dark:hover {
+            background: #000000;
+            transform: scale(1.02);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+        .btn-whatsapp:hover {
+            background: #20bd5a;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-apple-blue selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT STRIP (Apple Clean Style) -->
+    <div class="bg-[#f5f5f7] border-b border-[#e5e5ea] text-[#1d1d1f] text-xs py-2.5 px-4 font-medium">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>🔥 <strong>In-Store Walk-in Special:</strong> Better deals than online &amp; big retail stores on Apple, Samsung &amp; OnePlus flagships!</span>
+            </div>
+            <div class="hidden sm:flex items-center gap-4 text-[11px] font-mono text-[#86868b]">
+                <span>📍 Boring Road Chauraha, Patna</span>
+                <span>⏰ Open Daily: 10:30 AM – 9:30 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR (Apple / Samsung Flagship Minimalist Style) -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl bg-[#1d1d1f] text-white flex items-center justify-center font-black text-xl font-heading shadow-md group-hover:scale-105 transition">
+                    AM
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl sm:text-2xl font-black font-heading tracking-tight text-[#1d1d1f]">ALI MOBILE</span>
+                        <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-mono font-bold px-2 py-0.5 rounded-full">PATNA</span>
+                    </div>
+                    <p class="text-[11px] text-[#86868b] font-medium">Authorized Retailer &bull; Boring Road</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#1d1d1f]">
+                <a href="#phones" class="hover:text-apple-blue transition">Smartphones</a>
+                <a href="#exchange" class="hover:text-apple-blue transition">Phone Exchange</a>
+                <a href="#emi" class="hover:text-apple-blue transition">0% EMI</a>
+                <a href="#reviews" class="hover:text-apple-blue transition">Reviews (5.0★)</a>
+                <a href="#location" class="hover:text-apple-blue transition">Store Directions</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+919931610100" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#f5f5f7] border border-[#e5e5ea] hover:border-slate-400 text-xs font-bold text-[#1d1d1f] transition">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-600"></i>
+                    <span>+91 99316 10100</span>
+                </a>
+                <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20I%20am%20looking%20for%20a%20smartphone%20at%20your%20Boring%20Road%20store.%20What%20is%20today's%20best%20in-store%20deal?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-white font-bold text-xs font-mono shadow-md shadow-emerald-500/20">
+                    <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                    <span>Check Deals</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Apple / Samsung Flagship Clean Light Aesthetic) -->
+    <section class="relative pt-16 pb-20 overflow-hidden bg-gradient-to-b from-white via-[#f5f5f7] to-[#fbfbfd]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            
+            <!-- Store Trust Pill -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#d2d2d7] text-[#1d1d1f] text-xs font-semibold shadow-sm">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+                <span>100% Genuine Brand Stock &bull; 1-Year Official Warranty &bull; GST Invoice</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-heading tracking-tight text-[#1d1d1f] max-w-4xl mx-auto leading-tight">
+                Latest Flagships. <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-[#0071e3]">
+                    Better In-Store Prices.
+                </span>
+            </h1>
+
+            <p class="text-base sm:text-xl text-[#86868b] max-w-2xl mx-auto font-normal leading-relaxed">
+                Authorized retail destination for <strong>Apple, Samsung, OnePlus, Xiaomi, Vivo &amp; Oppo</strong>. Experience instant smartphone trade-ins, 0% interest EMI, and walk-in deals at our Boring Road Chauraha showroom.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+                <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20I%20am%20visiting%20your%20Boring%20Road%20store.%20Please%20share%20today's%20best%20in-store%20deal%20list." target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-7 py-3.5 rounded-2xl font-bold text-sm font-mono shadow-lg shadow-emerald-500/25 flex items-center gap-2">
+                    <i data-lucide="message-square" class="w-5 h-5 fill-white"></i>
+                    <span>Check Today's Price on WhatsApp</span>
+                </a>
+                <a href="#location" class="btn-apple-dark px-6 py-3.5 rounded-2xl font-bold text-sm flex items-center gap-2 shadow-md">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400"></i>
+                    <span>Visit Boring Road Store</span>
+                </a>
+            </div>
+
+            <!-- 4 Value Pillar Cards (Apple Clean Minimalism) -->
+            <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                        <i data-lucide="tag" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-bold text-base text-[#1d1d1f]">Better Than Online</div>
+                    <div class="text-xs text-[#86868b] mt-1">Exclusive in-store walk-in discounts on all premium models.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="w-10 h-10 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-3">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-bold text-base text-[#1d1d1f]">Top Phone Exchange</div>
+                    <div class="text-xs text-[#86868b] mt-1">Instant 5-minute trade-in evaluation for your old smartphone.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="w-10 h-10 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-3">
+                        <i data-lucide="credit-card" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-bold text-base text-[#1d1d1f]">0% Interest EMI</div>
+                    <div class="text-xs text-[#86868b] mt-1">Bajaj Finserv, HDFC, ICICI, TVS with zero downpayment.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-3">
+                        <i data-lucide="badge-check" class="w-5 h-5"></i>
+                    </div>
+                    <div class="font-bold text-base text-[#1d1d1f]">100% Brand Sealed</div>
+                    <div class="text-xs text-[#86868b] mt-1">Official Indian retail units with original bill and full warranty.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND PARTNERS BAR (Apple, Samsung, OnePlus, Xiaomi, Vivo, Oppo) -->
+    <div class="py-8 bg-white border-y border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-mono font-bold text-[#86868b] uppercase tracking-widest mb-6">AUTHORIZED BRANDS AVAILABLE IN STORE</p>
+            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 font-heading font-extrabold text-xl sm:text-2xl text-[#86868b]">
+                <span class="hover:text-[#1d1d1f] transition cursor-default"> Apple</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default tracking-widest">SAMSUNG</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default">1+ ONEPLUS</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default text-[#ff6900]">Xiaomi</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default text-blue-600">vivo</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default text-emerald-600">oppo</span>
+                <span class="hover:text-[#1d1d1f] transition cursor-default text-amber-500">realme</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SMARTPHONE SHOWCASE SECTION -->
+    <section id="phones" class="py-20 bg-[#fbfbfd]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-widest block mb-1">IN STOCK AT BORING ROAD</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#1d1d1f]">Featured Smartphones</h2>
+                    <p class="text-[#86868b] text-sm mt-1">Available today for instant unboxing at our Boring Road Chauraha counter.</p>
+                </div>
+                
+                <!-- Brand Filter Tabs (Apple Minimalist Pills) -->
+                <div class="flex flex-wrap items-center gap-1.5 bg-[#f5f5f7] p-1.5 rounded-2xl border border-[#e5e5ea] text-xs font-semibold">
+                    <button onclick="filterBrand('all')" class="brand-tab px-4 py-2 rounded-xl bg-[#1d1d1f] text-white font-bold transition shadow-sm">All Brands</button>
+                    <button onclick="filterBrand('apple')" class="brand-tab px-4 py-2 rounded-xl text-[#86868b] hover:text-[#1d1d1f] transition">Apple</button>
+                    <button onclick="filterBrand('samsung')" class="brand-tab px-4 py-2 rounded-xl text-[#86868b] hover:text-[#1d1d1f] transition">Samsung</button>
+                    <button onclick="filterBrand('oneplus')" class="brand-tab px-4 py-2 rounded-xl text-[#86868b] hover:text-[#1d1d1f] transition">OnePlus</button>
+                    <button onclick="filterBrand('xiaomi')" class="brand-tab px-4 py-2 rounded-xl text-[#86868b] hover:text-[#1d1d1f] transition">Xiaomi &amp; Vivo</button>
+                </div>
+            </div>
+
+            <!-- Phones Grid (Apple White Cards with Clean Shadows) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="phones-grid">
+
+                <!-- 1. iPhone 16 Pro Max -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="apple">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-bold border border-emerald-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#86868b]">Apple Flagship</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 16 Pro Max" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">Apple iPhone 16 Pro Max</h3>
+                        <p class="text-xs text-[#86868b] mt-1">Grade-5 Titanium &bull; A18 Pro Chip &bull; 48MP Fusion Camera</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹1,44,900</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-emerald-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-full border border-emerald-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20iPhone%2016%20Pro%20Max?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Samsung Galaxy S24 Ultra -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="samsung">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 text-[10px] font-mono font-bold border border-sky-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#86868b]">Galaxy AI Leader</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80" alt="Samsung Galaxy S24 Ultra" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">Samsung Galaxy S24 Ultra</h3>
+                        <p class="text-xs text-[#86868b] mt-1">200MP Camera &bull; Snapdragon 8 Gen 3 &bull; Built-in S-Pen</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹1,29,999</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-sky-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-sky-700 bg-sky-100/80 px-2.5 py-0.5 rounded-full border border-sky-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20Samsung%20Galaxy%20S24%20Ultra?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. OnePlus 12 5G -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="oneplus">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-red-50 text-red-700 text-[10px] font-mono font-bold border border-red-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#86868b]">Hasselblad Optics</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=600&q=80" alt="OnePlus 12" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">OnePlus 12 5G</h3>
+                        <p class="text-xs text-[#86868b] mt-1">100W SuperVOOC &bull; 5400mAh Battery &bull; 2K ProXDR</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹64,999</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-red-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-red-700 bg-red-100/80 px-2.5 py-0.5 rounded-full border border-red-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20OnePlus%2012?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. iPhone 15 -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="apple">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-bold border border-emerald-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#86868b]">Apple Bestseller</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 15" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">Apple iPhone 15</h3>
+                        <p class="text-xs text-[#86868b] mt-1">Dynamic Island &bull; 48MP Main Camera &bull; USB-C Charging</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹69,900</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-emerald-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-emerald-700 bg-emerald-100/80 px-2.5 py-0.5 rounded-full border border-emerald-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20iPhone%2015?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Xiaomi 14 / Redmi Note 13 Pro+ -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="xiaomi">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-orange-50 text-orange-700 text-[10px] font-mono font-bold border border-orange-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#ff6900]">Xiaomi Leica</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80" alt="Xiaomi 14" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">Xiaomi 14 5G</h3>
+                        <p class="text-xs text-[#86868b] mt-1">Leica Professional Optics &bull; Snapdragon 8 Gen 3 &bull; 90W HyperCharge</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹69,999</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-orange-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-orange-700 bg-orange-100/80 px-2.5 py-0.5 rounded-full border border-orange-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20Xiaomi%2014?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. OnePlus Nord 4 5G -->
+                <div class="phone-card apple-card rounded-3xl p-6 flex flex-col justify-between" data-brand="oneplus">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded-full bg-teal-50 text-teal-700 text-[10px] font-mono font-bold border border-teal-200">IN STOCK &bull; BORING ROAD</span>
+                            <span class="text-xs font-bold text-[#86868b]">Metal Unibody</span>
+                        </div>
+                        <div class="h-48 rounded-2xl bg-[#f5f5f7] flex items-center justify-center overflow-hidden mb-4 p-4 border border-[#e5e5ea]">
+                            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="OnePlus Nord 4" class="h-full object-contain hover:scale-105 transition duration-500" loading="lazy" />
+                        </div>
+                        <h3 class="text-xl font-bold font-heading text-[#1d1d1f]">OnePlus Nord 4 5G</h3>
+                        <p class="text-xs text-[#86868b] mt-1">Snapdragon 7+ Gen 3 &bull; 100W Charging &bull; 5500mAh</p>
+                        
+                        <div class="mt-4 p-3.5 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] space-y-1.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span class="text-[#86868b]">Online MRP:</span>
+                                <span class="line-through text-[#86868b] font-mono">₹29,999</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-teal-700 font-mono">In-Store Deal:</span>
+                                <span class="text-xs font-bold text-teal-700 bg-teal-100/80 px-2.5 py-0.5 rounded-full border border-teal-200">Better Than Online!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mt-4 border-t border-[#e5e5ea]">
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20your%20best%20in-store%20deal%20today%20for%20OnePlus%20Nord%204?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp w-full py-2.5 rounded-xl font-bold text-xs font-mono flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Check In-Store Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OLD PHONE EXCHANGE PROGRAM (Apple Trade In Style) -->
+    <section id="exchange" class="py-20 bg-white border-t border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="apple-card rounded-3xl p-8 sm:p-14 border border-[#e5e5ea]">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-4">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-mono font-bold border border-emerald-200">
+                            🔄 ALI MOBILE TRADE IN
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#1d1d1f] tracking-tight">
+                            Upgrade your phone.<br>It's easy with Trade In.
+                        </h2>
+                        <p class="text-[#86868b] text-base leading-relaxed">
+                            Bring any working smartphone (Apple, Samsung, OnePlus, Vivo, Oppo, Xiaomi) to our Boring Road store. Get instant counter valuation and put the credit toward your new smartphone right away.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-sm text-[#1d1d1f]">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                                <span><strong>Fair &amp; Honest Valuation</strong> based on device condition</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                                <span><strong>Free Data &amp; WhatsApp Transfer</strong> right at the counter</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                                <span><strong>Instant Bill Deduction</strong> &bull; Zero waiting for pickup delays</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20I%20want%20to%20exchange%20my%20old%20phone.%20Model:%20[Enter%20Model].%20What%20is%20the%20estimated%20exchange%20credit?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-xs font-mono shadow-md">
+                                <i data-lucide="calculator" class="w-4 h-4"></i>
+                                <span>Get Instant Trade-in Value on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3 Clean Step Cards -->
+                    <div class="space-y-3.5">
+                        <div class="bg-[#f5f5f7] p-5 rounded-2xl border border-[#e5e5ea] flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-[#1d1d1f] flex items-center justify-center font-bold text-base font-mono shrink-0 shadow-sm">1</div>
+                            <div>
+                                <h4 class="font-bold text-[#1d1d1f] text-sm">Bring Your Old Device</h4>
+                                <p class="text-xs text-[#86868b] mt-0.5">Visit our Boring Road store with your phone. Box and bill help get the highest value.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#f5f5f7] p-5 rounded-2xl border border-[#e5e5ea] flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-[#1d1d1f] flex items-center justify-center font-bold text-base font-mono shrink-0 shadow-sm">2</div>
+                            <div>
+                                <h4 class="font-bold text-[#1d1d1f] text-sm">5-Minute Physical Inspection</h4>
+                                <p class="text-xs text-[#86868b] mt-0.5">Bhaiya checks screen, camera, and battery health on the spot with complete honesty.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#f5f5f7] p-5 rounded-2xl border border-[#e5e5ea] flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-white text-[#1d1d1f] flex items-center justify-center font-bold text-base font-mono shrink-0 shadow-sm">3</div>
+                            <div>
+                                <h4 class="font-bold text-[#1d1d1f] text-sm">Direct Invoice Credit</h4>
+                                <p class="text-xs text-[#86868b] mt-0.5">The trade-in credit is immediately deducted from your new phone. Pay remaining balance via UPI, Cash, or 0% EMI!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 0% EMI SECTION -->
+    <section id="emi" class="py-20 bg-[#f5f5f7] border-t border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <span class="text-xs font-mono font-bold text-apple-blue uppercase tracking-widest block">FLEXIBLE FINANCING</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#1d1d1f]">0% Interest EMI Available</h2>
+            <p class="text-[#86868b] text-sm max-w-xl mx-auto">Take home your favorite smartphone today with easy monthly installments.</p>
+
+            <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="text-lg font-bold text-[#1d1d1f] font-heading">Bajaj Finserv</div>
+                    <div class="text-xs text-emerald-700 font-mono mt-1 font-bold">0% Interest &bull; Cardless</div>
+                    <div class="text-xs text-[#86868b] mt-2">Zero downpayment schemes on iPhone, Samsung &amp; OnePlus.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="text-lg font-bold text-[#1d1d1f] font-heading">HDFC &amp; ICICI</div>
+                    <div class="text-xs text-sky-700 font-mono mt-1 font-bold">Credit &amp; Debit Card EMI</div>
+                    <div class="text-xs text-[#86868b] mt-2">Instant swipe EMI up to 24 months with official brand cashbacks.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="text-lg font-bold text-[#1d1d1f] font-heading">TVS Credit</div>
+                    <div class="text-xs text-purple-700 font-mono mt-1 font-bold">No Credit Card Needed</div>
+                    <div class="text-xs text-[#86868b] mt-2">Bring Aadhaar &amp; PAN card for 10-minute on-counter approval.</div>
+                </div>
+
+                <div class="apple-card p-5 rounded-3xl">
+                    <div class="text-lg font-bold text-[#1d1d1f] font-heading">IDFC First Bank</div>
+                    <div class="text-xs text-amber-700 font-mono mt-1 font-bold">Paperless Instant EMI</div>
+                    <div class="text-xs text-[#86868b] mt-2">Quick OTP verification directly on your mobile screen.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL VERIFIED GOOGLE REVIEWS (Ultra-Fast, Zero-Lag, 100% Authentic) -->
+    <section id="reviews" class="py-20 bg-white border-t border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center space-y-3 mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 text-amber-900 text-xs font-mono font-bold border border-amber-200 shadow-sm">
+                    <svg class="w-4 h-4 text-[#4285F4]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                    </svg>
+                    <span>5.0 / 5.0 RATED ON GOOGLE MAPS &bull; VERIFIED LOCAL STORE</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#1d1d1f]">What Patna Shoppers Say</h2>
+                <p class="text-[#86868b] text-sm max-w-2xl mx-auto">Genuine customer reviews from verified buyers at our Boring Road showroom.</p>
+                
+                <!-- Trust Highlights -->
+                <div class="flex flex-wrap items-center justify-center gap-6 pt-2 text-xs font-medium text-[#1d1d1f]">
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                        <span>100% Original Indian Warranty</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="receipt" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Official GST Invoice on Every Phone</span>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Boring Road Chauraha, Patna</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Cards Grid (Clean, Lightweight, 60fps) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Real Review 1 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Got my Samsung Galaxy phone at the best price in Boring Road. Bhaiya's behavior is very polite, gave genuine Indian retail stock with bill and full warranty. Much better deal than online."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs shrink-0">RK</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Rahul Kumar <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Patna &bull; Samsung S-Series Buyer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Review 2 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Best mobile shop near Boring Road Chauraha. I bought my iPhone here and Bhaiya transferred all my photos, WhatsApp chats, and contacts from my old phone for free. Very honest service!"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-800 flex items-center justify-center font-bold text-xs shrink-0">AS</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Amit Sharma <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Boring Road &bull; iPhone Buyer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Review 3 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Very good exchange value for my old OnePlus. Better valuation than Cashify and online stores. Also got genuine 65W fast charger and back cover. 10/10 recommend Ali Mobile."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs shrink-0">MD</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Mohammad Danish <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Sri Krishna Puri &bull; OnePlus Trade-In</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Review 4 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Bought my first iPhone from Ali Mobile on my brother's recommendation. Bhaiya helped me set up Apple ID and data transfer without charging anything extra. The phone is 100% genuine sealed pack."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-800 flex items-center justify-center font-bold text-xs shrink-0">PV</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Priya Verma <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Kankarbagh / Patna &bull; iPhone 15</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Review 5 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Was searching for Xiaomi flagship everywhere in Patna, no store had ready stock. Bhaiya arranged genuine sealed piece within hours! Transparent billing and genuine price."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs shrink-0">VS</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Vikramaditya Singh <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Bailey Road &bull; Xiaomi Flagship</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Review 6 -->
+                <div class="apple-card p-6 rounded-3xl space-y-4 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 gap-0.5 text-sm">★★★★★</div>
+                            <span class="text-[11px] text-[#86868b] font-mono">Google Maps Verified</span>
+                        </div>
+                        <p class="text-[#1d1d1f] text-sm leading-relaxed">
+                            "Superb experience. 0% EMI done via debit card swipe in 10 minutes. Clean showroom, honest guidance, and best rates in Patna. Also bought original AirPods here."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-[#e5e5ea] flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-800 flex items-center justify-center font-bold text-xs shrink-0">AP</div>
+                        <div>
+                            <div class="text-xs font-bold text-[#1d1d1f] flex items-center gap-1">
+                                Anand Prakash <span class="text-[10px] text-emerald-600 font-normal">✓ Verified</span>
+                            </div>
+                            <div class="text-[11px] text-[#86868b]">Raja Bazar &bull; Vivo &amp; Audio</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Official Google Maps CTA Banner -->
+            <div class="mt-12 bg-[#f5f5f7] border border-[#e5e5ea] rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-2xl bg-white border border-[#e5e5ea] flex items-center justify-center shrink-0 shadow-sm text-amber-500 text-2xl">
+                        ⭐
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-[#1d1d1f] text-base">Read All Real Reviews on Google Maps</h4>
+                        <p class="text-xs text-[#86868b] mt-0.5">Ali Mobile is 5.0★ rated by real shoppers across Patna. Visit our Google business profile directly.</p>
+                    </div>
+                </div>
+                <a href="https://maps.app.goo.gl/n9KcwPUWWmccFfVJ9" target="_blank" rel="noopener noreferrer" 
+                   class="btn-apple-dark px-6 py-3 rounded-full text-xs font-bold font-mono tracking-wide flex items-center gap-2 shrink-0">
+                    <svg class="w-4 h-4 text-[#4285F4]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                    </svg>
+                    <span>Open in Google Maps</span>
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STORE LOCATION & GOOGLE MAPS -->
+    <section id="location" class="py-20 bg-[#f5f5f7] border-t border-[#e5e5ea]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <!-- Location Details -->
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-mono font-bold text-emerald-600 uppercase tracking-widest block mb-1">VISIT OUR STORE</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#1d1d1f]">Located at Boring Road Chauraha</h2>
+                        <p class="text-[#86868b] text-sm mt-2">Central location in Patna. Easy vehicle parking, 2 minutes walking distance from Boring Road crossing.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm text-[#1d1d1f]">
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-2xl bg-white border border-[#e5e5ea] text-emerald-600 flex items-center justify-center shrink-0 shadow-sm">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[#1d1d1f]">Showroom Address</div>
+                                <div class="text-xs text-[#86868b] mt-0.5 leading-relaxed">
+                                    <strong class="text-[#1d1d1f]">ALI MOBILE</strong><br>
+                                    Rahman Complex / Varma Centre, Sahdeo Mahto Marg<br>
+                                    (Opposite Satyanarayan Market, near Sri Krishna Puri)<br>
+                                    Boring Road Chauraha, Patna, Bihar — 800001
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-2xl bg-white border border-[#e5e5ea] text-sky-600 flex items-center justify-center shrink-0 shadow-sm">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[#1d1d1f]">Showroom Timings</div>
+                                <div class="text-xs text-[#86868b] mt-0.5">
+                                    Monday – Sunday: <strong class="text-[#1d1d1f]">10:30 AM – 9:30 PM</strong> (Open 7 Days a Week)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-2xl bg-white border border-[#e5e5ea] text-purple-600 flex items-center justify-center shrink-0 shadow-sm">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-[#1d1d1f]">Direct Store Contacts</div>
+                                <div class="text-xs text-[#86868b] mt-0.5 flex flex-wrap gap-3 font-mono">
+                                    <a href="tel:+919931610100" class="text-emerald-600 hover:underline font-bold">+91 99316 10100 (Primary &amp; WhatsApp)</a>
+                                    <span>&bull;</span>
+                                    <a href="tel:+919304430529" class="text-slate-600 hover:underline font-medium">+91 93044 30529 (Store Line)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Google Maps Action -->
+                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                        <a href="https://maps.app.goo.gl/n9KcwPUWWmccFfVJ9" target="_blank" rel="noopener noreferrer" class="btn-apple-dark px-6 py-3.5 rounded-2xl font-bold text-xs font-mono flex items-center gap-2 shadow-md">
+                            <i data-lucide="navigation" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Open in Google Maps (Get Directions)</span>
+                        </a>
+                        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20I%20am%20coming%20to%20your%20Boring%20Road%20store%20right%20now." target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-5 py-3.5 rounded-2xl font-bold text-xs font-mono flex items-center gap-2 shadow-md">
+                            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+                            <span>Message on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Frame (Clean Apple Border) -->
+                <div class="rounded-3xl overflow-hidden border border-[#d2d2d7] shadow-xl h-[400px] bg-white relative">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=25.6126551,85.1180611&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <!-- Location Pill Overlay -->
+                    <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl border border-[#e5e5ea] text-xs text-[#1d1d1f] flex items-center gap-2 shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="font-bold">Ali Mobile &bull; Boring Road, Patna</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Apple Minimalist Style) -->
+    <footer class="bg-white border-t border-[#e5e5ea] py-12 text-[#86868b] text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-[#1d1d1f]">ALI MOBILE</span>
+                <span>&bull;</span>
+                <span>Authorized Smartphone Showroom</span>
+                <span>&bull;</span>
+                <span>Boring Road, Patna, Bihar</span>
+            </div>
+            <div class="flex items-center gap-4 text-[#86868b]">
+                <span>100% Genuine Sealed Stock</span>
+                <span>&bull;</span>
+                <span>Official Warranty &amp; GST Bill</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE DOCK (Apple iOS Clean Style) -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-[#e5e5ea] p-3 flex items-center gap-2 shadow-2xl">
+        <a href="tel:+919931610100" class="flex-1 py-3 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] text-[#1d1d1f] font-bold text-xs flex items-center justify-center gap-1.5 font-mono shadow-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-emerald-600"></i>
+            <span>Call</span>
+        </a>
+        <a href="https://wa.me/919931610100?text=Hi%20Ali%20Mobile,%20what%20is%20today's%20best%20in-store%20deal%20for%20smartphones?" target="_blank" rel="noopener noreferrer" class="btn-whatsapp flex-1 py-3 rounded-2xl font-bold text-xs flex items-center justify-center gap-1.5 font-mono shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+            <span>WhatsApp Deal</span>
+        </a>
+        <a href="https://maps.app.goo.gl/n9KcwPUWWmccFfVJ9" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-2xl bg-[#f5f5f7] border border-[#e5e5ea] text-[#1d1d1f] flex items-center justify-center shrink-0 shadow-sm">
+            <i data-lucide="navigation" class="w-5 h-5 text-emerald-600"></i>
+        </a>
+    </div>
+
+    <!-- Script for Lucide Icons & Brand Filter -->
+    <script>
+        lucide.createIcons();
+
+        function filterBrand(brand) {
+            const tabs = document.querySelectorAll('.brand-tab');
+            tabs.forEach(t => {
+                t.classList.remove('bg-[#1d1d1f]', 'text-white', 'shadow-sm');
+                t.classList.add('text-[#86868b]');
+            });
+            event.target.classList.add('bg-[#1d1d1f]', 'text-white', 'shadow-sm');
+            event.target.classList.remove('text-[#86868b]');
+
+            const cards = document.querySelectorAll('.phone-card');
+            cards.forEach(card => {
+                if (brand === 'all' || card.dataset.brand === brand) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
