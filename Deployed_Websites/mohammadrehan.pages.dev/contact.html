@@ -2,6 +2,10 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <style>
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
+}
+
 #chatbot-modal *::-webkit-scrollbar, #aria-window *::-webkit-scrollbar, #chat-messages::-webkit-scrollbar, #aria-messages::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
 #chatbot-modal *::-webkit-scrollbar-track, #aria-window *::-webkit-scrollbar-track, #chat-messages::-webkit-scrollbar-track, #aria-messages::-webkit-scrollbar-track { background: transparent; }
 #chatbot-modal *::-webkit-scrollbar-thumb, #aria-window *::-webkit-scrollbar-thumb, #chat-messages::-webkit-scrollbar-thumb, #aria-messages::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.35); border-radius: 9999px; }
@@ -42,7 +46,7 @@ p, li, span, a {
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!-- 🛡️ Institutional Security & HTTPS Enforcement Headers -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:;">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/>
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">

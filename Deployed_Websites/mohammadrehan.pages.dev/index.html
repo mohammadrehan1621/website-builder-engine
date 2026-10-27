@@ -3,6 +3,10 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <style>
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
+}
+
 
 #chatbot-modal *::-webkit-scrollbar, #aria-window *::-webkit-scrollbar, #chat-messages::-webkit-scrollbar, #aria-messages::-webkit-scrollbar, .no-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
 
@@ -19,7 +23,7 @@
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="default-src 'self' https: http: 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https: data:;" http-equiv="Content-Security-Policy"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/>
 <title>Mohammad Rehan | Founder @ Rehan Quant Lab &amp; Systems Architect</title>
 <meta name="google-site-verification" content="googlecb5b21d2c61033d5" />
 <meta name="description" content="Founder &amp; Lead Systems Architect at Rehan Quant Lab. Developer of AegisDB (2.62M ops/sec), 3-AZ Fault-Tolerant Distributed Quorum, and Systematic Execution Engines on AWS Mumbai." />
