@@ -34,21 +34,50 @@ def deploy_portfolio():
     # Package files into zip bytes
     buf = io.BytesIO()
     files_to_pack = [
+        "01_RQL_Conduit_Cover_1080p.png",
+        "02_Deterministic_State_Kernel_Cover_1080p.png",
+        "03_RQL_Aegis_Cover_1080p.png",
+        "04_Veritas_Dossier_Cover_1080p.png",
+        "05_Industrial_Sentinel_Cover_1080p.png",
+        "06_ExpressBill_POS_Cover_1080p.png",
+        "07_Sovereign_Suite_Master_Cover_1080p.png",
+        "08_RQL_TagMaster_Cover_1080p.png",
+        "09_RQL_DeskBroadcast_Cover_1080p.png",
+        "10_RQL_TaxMatrix_Cover_1080p.png",
+        "11_RQL_LocalMesh_Cover_1080p.png",
+        "downloads/ExpressBill-Setup.exe",
         "index.html",
+        "aegis.html",
         "projects.html",
         "experience.html",
         "contact.html",
         "legal.html",
         "Mohammad_Rehan_Resume.pdf",
+        "RQL-Aegis-v1.0-Release.zip",
         "emblem.jpg",
         "logo.jpg",
+        "emblem.webp",
+        "logo.webp",
+        "05_rql_conduit_bonding_engine_1080p.png",
+        "05_rql_conduit_bonding_engine_1080p.webp",
+        "ExpressBill_POS_Commercial_Hero.jpg",
+        "ExpressBill_POS_Commercial_Hero.webp",
         "linkedin_banner.png",
         "og_preview.png",
         "phoenix_sentinel.js",
         "aria_neural_engine.js",
+        "lively_motion.js",
+        "react_live_engine.js",
+        "_headers",
+        "react_portal.html",
+        "rql_wasm.js",
+        "rql_wasm_engine.wasm",
         "robots.txt",
         "sitemap.xml",
-        "googlecb5b21d2c61033d5.html"
+        "googlecb5b21d2c61033d5.html",
+        "expressbill/index.html",
+        "expressbill/manifest.json",
+        "expressbill/sw.js"
     ]
 
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -59,6 +88,21 @@ def deploy_portfolio():
                 print(f"  • Packed: {fname:25} ({fpath.stat().st_size:,} bytes)")
             else:
                 print(f"  ⚠️ Warning: {fname} missing.")
+        assets_dir = PORTFOLIO_DIR / "assets"
+        if assets_dir.exists():
+            for afile in assets_dir.rglob("*"):
+                if afile.is_file():
+                    arc = afile.relative_to(PORTFOLIO_DIR).as_posix()
+                    zf.write(afile, arcname=arc)
+                    print(f"  • Packed Asset: {arc:25} ({afile.stat().st_size:,} bytes)")
+
+        media_dir = PORTFOLIO_DIR / "media"
+        if media_dir.exists():
+            for mfile in media_dir.rglob("*"):
+                if mfile.is_file():
+                    arc = mfile.relative_to(PORTFOLIO_DIR).as_posix()
+                    zf.write(mfile, arcname=arc)
+                    print(f"  • Packed Media: {arc:25} ({mfile.stat().st_size:,} bytes)")
 
     zip_bytes = buf.getvalue()
     zip_path = PORTFOLIO_DIR / "website_bundle.zip"
@@ -104,7 +148,7 @@ def deploy_portfolio():
         try:
             r = requests.get(target_url, timeout=10)
             has_phoenix = "phoenix_sentinel.js" in r.text
-            has_infra_bar = "production infrastructure" in r.text.lower()
+            has_infra_bar = "live-ticker-container" in r.text.lower() or "production infrastructure" in r.text.lower()
             print("\n" + "─" * 70)
             print(f"🌐 Live Edge Health Check [{target_url}]: Status {r.status_code} ({len(r.text):,} bytes)")
             print(f"   • Phoenix Sentinel Script Wired: {'🟢 YES' if has_phoenix else '🔴 NO'}")
