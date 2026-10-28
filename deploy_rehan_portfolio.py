@@ -3,7 +3,9 @@ import sys
 import io
 import time
 import json
+import shutil
 import zipfile
+import subprocess
 import requests
 from pathlib import Path
 
@@ -18,8 +20,25 @@ if sys.platform == "win32":
 from hosting_deployer import deploy_to_cloudflare_pages, resolve_cloudflare_credentials
 
 BASE_DIR = Path(__file__).resolve().parent
+SRC_REPO_DIR = Path(r"C:\Users\rehan\Desktop\Rehan_Quant_Lab\Website_RehanQuantLab")
 PORTFOLIO_DIR = BASE_DIR / "Deployed_Websites" / "mohammadrehan.pages.dev"
 REGISTRY_FILE = BASE_DIR / "deployed_sites_registry.json"
+
+
+def sync_from_source_repo():
+    """Syncs modified files from primary git repo to deployment staging directory."""
+    if not SRC_REPO_DIR.exists():
+        return
+    print(f"🔄 Syncing latest assets and code from {SRC_REPO_DIR.name}...")
+    for item in SRC_REPO_DIR.iterdir():
+        if item.name.startswith(".git"):
+            continue
+        dest = PORTFOLIO_DIR / item.name
+        if item.is_file():
+            shutil.copy2(item, dest)
+        elif item.is_dir():
+            shutil.copytree(item, dest, dirs_exist_ok=True)
+    print("✅ Staging directory synchronized with source repository.")
 
 def deploy_portfolio():
     print("\n" + "═" * 70)
@@ -30,6 +49,19 @@ def deploy_portfolio():
     if not PORTFOLIO_DIR.exists():
         print(f"Error: {PORTFOLIO_DIR} not found.")
         return False
+
+    # 1. Sync source repository files
+    sync_from_source_repo()
+
+    # 2. Run Autonomous SEO Compiler (dynamic sitemap, robots.txt, schema injection)
+    seo_compiler_path = BASE_DIR / "auto_seo_compiler.py"
+    if seo_compiler_path.exists():
+        try:
+            print("\n🤖 Running Inbuilt Autonomous SEO Compiler...")
+            subprocess.run([sys.executable, str(seo_compiler_path)], check=True)
+            print("✅ SEO compilation finished successfully.")
+        except Exception as e:
+            print(f"⚠️ SEO compilation notice: {e}")
 
     # Package files into zip bytes
     buf = io.BytesIO()
@@ -45,8 +77,25 @@ def deploy_portfolio():
         "09_RQL_DeskBroadcast_Cover_1080p.png",
         "10_RQL_TaxMatrix_Cover_1080p.png",
         "11_RQL_LocalMesh_Cover_1080p.png",
+        "12_RQL_StoreFlow_Cover_1080p.png",
+        "14_RQL_LedgerGuard_Cover_1080p.png",
+        "15_RQL_StockAudit_Cover_1080p.png",
+        "16_RQL_OmniDispatch_Cover_1080p.png",
+        "17_RQL_Nexus_Cover_1080p.png",
+        "18_RQL_DocumentShield_Cover_1080p.png",
+        "18_RQL_DocumentShield_Square_Thumbnail.png",
+        "Bundle_01_RQL_Retail_Master_Cover_1080p.png",
+        "Bundle_02_RQL_CA_Tax_Master_Cover_1080p.png",
+        "Bundle_03_RQL_Quant_Core_Master_Cover_1080p.png",
+        "favicon.svg",
+        "icons.svg",
         "downloads/ExpressBill-Setup.exe",
+        "downloads/RQL_StoreFlow_Workstation_Brochure.pdf",
+        "downloads/RQL_LedgerGuard_CA_Reconciler_Brochure.pdf",
+        "downloads/StoreFlow_Workstation_Brochure.pdf",
+        "downloads/LedgerGuard_CA_Reconciler_Brochure.pdf",
         "index.html",
+        "store.html",
         "aegis.html",
         "projects.html",
         "experience.html",
@@ -65,7 +114,7 @@ def deploy_portfolio():
         "linkedin_banner.png",
         "og_preview.png",
         "phoenix_sentinel.js",
-        "aria_neural_engine.js",
+        "rql_seo_engine.js",
         "lively_motion.js",
         "react_live_engine.js",
         "_headers",
@@ -145,7 +194,7 @@ def deploy_portfolio():
 
     # Verify live HTTP response on custom domain and pages.dev
     time.sleep(2)
-    for target_url in ["https://rehanquantlab.com", "https://mohammadrehan.pages.dev"]:
+    for target_url in ["https://rehanquantlab.com", "https://rehanquantlab.com/store.html", "https://rehanquantlab.com/sitemap.xml", "https://mohammadrehan.pages.dev"]:
         try:
             r = requests.get(target_url, timeout=10)
             has_phoenix = "phoenix_sentinel.js" in r.text
