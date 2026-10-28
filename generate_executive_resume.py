@@ -14,71 +14,62 @@ if sys.platform == "win32":
 BASE_DIR = Path(__file__).resolve().parent
 PORTFOLIO_DIR = BASE_DIR / "Deployed_Websites" / "mohammadrehan.pages.dev"
 PDF_PATH = PORTFOLIO_DIR / "Mohammad_Rehan_Resume.pdf"
+CODING_AGENTS_PATH = Path(r"C:\Users\rehan\Desktop\Coding Agents\Mohammad_Rehan_Resume.pdf")
+WEBSITE_REPO_PATH = Path(r"C:\Users\rehan\Desktop\Rehan_Quant_Lab\Website_RehanQuantLab\Mohammad_Rehan_Resume.pdf")
 DESKTOP_PATH = Path("C:/Users/rehan/Desktop/Mohammad_Rehan_Resume.pdf")
 
-resume_md = """
-## Executive Summary
-Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on experience bridging commercial retail operations and fault-tolerant distributed systems. Creator of AegisDB™ (2.54M ticks/sec @ 0.39µs via LMAX Disruptor cacheline alignment, 21.4M AVX2 SIMD invariant ops/sec @ 46.69ns across 10M operations with 0.000000000000% precision drift), Dynamic Spread-Clamping & Volatility-Adaptive Sizing (2.0x ATR scaling, automated entry lockout on spread widening), 3-AZ Multi-Node Quorum Architecture (sub-15ms MTTR crash recovery), and systematic options execution engines with zero capital leakage on AWS Mumbai.
+resume_md = """## Executive Summary
+Founder & Lead Systems Architect at Rehan Quant Lab with 4+ years of hands-on experience bridging mission-critical commercial operations, forensic cybersecurity, and fault-tolerant distributed systems. Creator of RQL DocumentShield™ (forensic destructive PDF redactor & court-admissible SHA-256 compliance vault), Deterministic State Kernel (bare-metal Rust engine with >240,000 writes/sec, 604ns reads, hardware SHA-256 WAL, and MCA Rule 11(g) compliance), and AegisDB (2.54M ticks/sec @ 0.39µs via LMAX Disruptor cacheline alignment, 21.4M AVX2 SIMD invariant ops/sec @ 46.69ns). Architect of 17 commercial air-gapped sovereign desktop software suites distributed globally on Gumroad with 78% US enterprise traffic.
 
 ## Core Competencies & Architecture Stack
-- **AegisDB™ In-Memory Engine**: LMAX Disruptor 64-byte cacheline-padded ring buffer (2.54M ticks/sec, 0.39µs latency, zero false sharing across CPU cores), bare-metal RDTSC JIT x86_64 machine code cycle counter (38.04 cycles/op), memory-mapped (mmap) LSM Write-Ahead Log (WAL) (3.56M syncs/sec, 0.28µs append, 3.02ms kill -9 hot recovery, ₹0.00 data loss).
+- **Enterprise Forensic Security & Air-Gapped Redaction**: True destructive vector/bytecode purging directly from PDF object streams (zero residual text, layer-peel immune), automated multi-pattern regex scanners (SSN, EIN, PAN, contact PII), XMP deep metadata stripping, and court-admissible SHA-256 Chain-of-Custody compliance certification (HIPAA Safe Harbor, EU GDPR Art. 17, ABA Formal Opinion 06-442).
+- **Deterministic State Kernel (Rust Bare-Metal Engine)**: 100% on-premises, air-gapped state invariants engine compiled into native C-ABI dynamic library (`dse_core.dll`) via Fat LTO. Delivers >240k writes/sec (4.69µs commit), 604ns cached reads (<1µs), hardware SHA-256 Write-Ahead Log (WAL), and cold crash replay of 25,000 frames in 76.99ms with zero cloud leaks.
+- **The Antifragile Triad & Invariant Principles**: Aegis Shield pre-audit contract verification, Chaos Gauntlet adversarial fault injection (8 market disaster simulations), and Phoenix Autonomous Recovery (<500ms self-healing with ₹0.00 capital loss). Dynamic orderbook spread clamping (veto entries when spread >= ₹1.50) and volatility-adaptive position sizing.
+- **AegisDB In-Memory Engine**: LMAX Disruptor 64-byte cacheline-padded ring buffer (2.54M ticks/sec, 0.39µs latency, zero false sharing across CPU cores), bare-metal RDTSC JIT x86_64 cycle counter (38.04 cycles/op), memory-mapped LSM WAL (3.56M syncs/sec, 3.02ms kill -9 hot recovery).
 - **AVX2 SIMD Vectorized Invariant Engine**: High-throughput vectorized financial boundary evaluation across 10,000,000 operations (21.4M ops/sec, 46.69ns latency), enforcing 35% drawdown clamps, 30% untouchable cash reserve, and 0.000000000000% precision drift.
-- **Dynamic Volatility-Adaptive Sizing & Spread Filters**: Mathematically disciplined risk model: dynamic orderbook spread clamping (veto entries when spread >= ₹1.50), volatility-scaled sizing (exponential compression down to 25% exposure upon VIX surges before stop-loss touch), and orderbook liquidity collapse lockouts.
-- **7-Stage Multi-Factor Execution Tribunal**: Deterministic in-memory invariant evaluation (<1µs compute / ~1.2ms broker wire transit) coupled with Directional Toxicity Intelligence (VPIN volume-synchronized probability of toxicity + Cumulative Volume Delta supportive sweep validation vs hostile dump vetoes) and post-trade forensic audits.
-- **Antifragile Triad Resilience Framework**: Aegis Contract Verification, Chaos Stress Injections (synthetic rate limits, timeouts, socket drops, database lock contention), and Autonomous Process Resurrection with Antifragile Parameter Hardening.
-- **FinTech & Algorithmic Trading**: Cloud-native systematic options execution (NSE NIFTY/BANKNIFTY), exchange-native Stop-Loss Limit orders with 1.5% protection buffer, Spot/15m VWAP structural stop-loss guards, 13:30 IST 0-DTE theta decay shields, sub-50ms broker API roundtrip, Kotak Neo v3 orchestrator.
-- **Commercial SaaS & Multi-Agent Systems**: Autonomous Agent Supervision, Multi-Agent Fleet Registries, Web Mission Control Telemetry Dashboards, High-Throughput REST APIs, Internal SDK distribution, Cost/Token ceiling budgeting.
+- **Commercial Desktop Software Architecture**: 1-Click Master Setup Wizards (`Setup.exe`), EULA contract acceptance, dedicated GUI Uninstallers registered in Windows Settings (`HKCU`), High-DPI ClearType UI typography, and 100% air-gapped machine privacy.
+- **FinTech & Algorithmic Trading**: Systematic options execution (NSE NIFTY/BANKNIFTY), exchange-native Stop-Loss Limit orders with 1.5% protection buffer, Spot/15m VWAP structural stop-loss guards, sub-50ms broker API roundtrip, Kotak Neo v3 orchestrator.
 - **Cloud Infrastructure & Security**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Zero-Trust Network Access (ZTNA) via Private WireGuard/Tailscale Mesh, Linux systemd real-time priority tuning (Nice=-10).
 
 ## Key Production Systems & Architectures
 
-### AegisDB™ — Distributed Antifragile In-Memory Database (Open-Source MIT)
-- Architected an ultra-low-latency in-memory state engine and circular tick ring buffer with 64-byte cacheline padding achieving 2,535,916 ticks/sec at 0.39µs latency with zero false sharing across CPU cores.
-- Implemented bare-metal x86_64 machine code JIT timing (RDTSC) reading physical CPU cycles directly in 38.04 cycles per operation.
-- Evaluated 10,000,000 extreme market operations in AVX2 SIMD vector chunks at 21,417,114 ops/sec (46.69ns per invariant check) with audited 0.000000000000% mathematical precision drift.
-- Built a zero-syscall memory-mapped (mmap) LSM append-only Write-Ahead Log (WAL) achieving 3,559,925 syncs/sec (0.28µs append) and 3.02ms kill -9 hot replay recovery with ₹0.00 / 0 bytes data loss.
-- Embedded distributed Raft consensus over UDP multicast with sub-millisecond term validation, surviving Jepsen split-brain partition torture with zero double-spend anomalies.
+### RQL DocumentShield™ — Enterprise Forensic PDF Redaction & Metadata Purge OS
+- Architected an enterprise air-gapped PDF forensic sanitizer physically destroying underlying bytecode, vector streams, and font glyphs from raw PDF cross-reference tables (XREF), rendering documents immune to copy-paste, OCR reconstruction, or layer-peeling attacks.
+- Engineered automated high-speed multi-pattern regex scanners detecting US Social Security Numbers (SSN), Credit Cards (16-digit PAN), Employer Identification Numbers (EIN), and confidential contact coordinates across high-volume document bundles.
+- Implemented deep metadata and XML XMP stream purges, stripping author credentials, modification histories, and hidden camera EXIF data.
+- Built automated SHA-256 cryptographic pre/post state hashing generating official, court-admissible Certificates of Forensic Sanitization aligned with US HIPAA Safe Harbor (45 CFR § 164.514), EU GDPR Art. 17, and ABA Formal Opinion 06-442. Packaged with custom 1-click Windows Master Setup and GUI Uninstaller.
+
+### Deterministic State Kernel — Sub-Microsecond Rust State & Risk Engine
+- Engineered a commercial bare-metal Rust state invariants engine compiled with Fat LTO (`opt-level = 3`, `codegen-units = 1`, `panic = "abort"`) producing a compact 1.06 MB C-ABI dynamic library (`dse_core.dll`) and 475 KB CLI (`dse-kernel-cli.exe`).
+- Benchmarked write throughput exceeding 240,000 writes/sec (4.69µs commit latency) and read throughput exceeding 1,570,000 reads/sec (604ns cached latency).
+- Implemented hardware SHA-256 Write-Ahead Logging with cold crash replay of 25,000 state frames in 76.99ms with zero data drift, satisfying MCA Rule 11(g) and SEBI quant audit trail requirements. Universal Python `ctypes` FFI bridge achieving >124,000 writes/sec without GIL contention.
+
+[PAGEBREAK]
 
 ### Indian Quant Options Sniper — Institutional Derivatives Execution Engine
 - Engineered a systematic algorithmic options execution engine deployed on AWS Mumbai (ap-south-1) with connection-pooled WebSocket market streaming and sub-50ms broker order dispatching.
 - Integrated Dynamic Volatility-Adaptive Sizing & Spread Clamping: Automated entry lockout on spread widening (>= ₹1.50) and position compression during volatility expansion.
-- Deployed 7-Stage Multi-Factor Execution Tribunal with Directional Toxicity Intelligence (VPIN/CVD) distinguishing aggressive momentum sweeps from hostile seller dumps.
-- Embedded AegisDB™ in-memory ring buffer for sub-microsecond (<0.39µs) tick ingestion and active trade state caching, eliminating SQLite lock contention.
-- Implemented single direct atomic routing for <=24 lots (390 NIFTY qty), eliminating retail double-brokerage penalties and execution lag.
-- Anchored dynamic stop-loss to NIFTY Spot 15m VWAP structure rather than option premium noise, backed by a 35% emergency disaster ceiling and a 30% capital reserve lock.
-- Secured live operations under 24/7 systemd autopilot (0.00 load average, 2GB swap protection) isolated behind an encrypted private Tailscale/WireGuard mesh.
-- **Broker Integration & Autopilot**: Kotak Neo API v3 multi-session orchestrator with automated TOTP session renewal, sub-5ms heartbeat telemetry, and real-time slippage modeling (<0.02%).
+- Deployed 7-Stage Multi-Factor Execution Tribunal with Directional Toxicity Intelligence (VPIN/CVD) distinguishing aggressive momentum sweeps from hostile seller dumps. Embedded `dse_core.dll` and AegisDB ring buffer for sub-microsecond (<0.39µs) tick ingestion.
+- Anchored dynamic stop-loss to NIFTY Spot 15m VWAP structure rather than option premium noise, backed by a 35% disaster ceiling and 30% capital reserve lock.
 
-[PAGEBREAK]
+### AegisDB — Distributed Antifragile In-Memory Database (Open-Source MIT)
+- Architected an ultra-low-latency in-memory state engine and circular tick ring buffer with 64-byte cacheline padding achieving 2,535,916 ticks/sec at 0.39µs latency with zero false sharing across CPU cores.
+- Implemented bare-metal x86_64 machine code JIT timing (RDTSC) reading physical CPU cycles directly in 38.04 cycles per operation.
+- Evaluated 10,000,000 extreme market operations in AVX2 SIMD vector chunks at 21,417,114 ops/sec (46.69ns per invariant check) with audited 0.000000000000% mathematical precision drift.
+- Built a zero-syscall memory-mapped (mmap) LSM append-only Write-Ahead Log (WAL) achieving 3,559,925 syncs/sec (0.28µs append) and 3.02ms kill -9 hot replay recovery with ₹0.00 / 0 bytes data loss.
 
-### AegisOps: Autonomous AI Agent Operations SaaS — Antifragile Mission Control
-- **Commercial Mission Control Platform**: Production multi-tenant B2B SaaS platform commercializing the Antifragile Triad resilience engine for developer teams and enterprises deploying autonomous multi-agent systems.
-- **Philosophy**: Enforces Nassim Taleb's Golden Rule of Resilience: Multi-agent systems must never recover to a vulnerable status quo—every auto-heal permanently hardens execution envelopes and adapts operational parameters.
-- **Web Mission Control UI (:8510)**: Real-time agent fleet observability, live health telemetry, token/cost ceiling enforcement, and one-click synthetic chaos injection console.
-- **Multi-Agent Fleet Registry**: Centralized supervisor managing agent lifecycles (Idle, Running, Stressed, Resurrecting, Immune), tracking self-healing epochs and parameter adaptations.
-- **High-Throughput Public REST API (:8000)**: Sub-millisecond endpoints for task dispatching, heartbeat reporting, and write-ahead WAL state synchronization.
-- **Internal Resilience SDK**: Drop-in resilience client enabling external agents to auto-heal from LLM rate limits (429), hallucinated JSON, and tool hang crashes.
-- **Verified Benchmark Metrics**: Sub-10ms Hot-Resurrection MTTR (<10ms), $0.00 Zero-Loss Capital Guarantee, and 29/29 Pytest suites passed with 100% test coverage.
-
-### Autonomous Video & Content Studio — Multi-Modal Programmatic Engine
-- Developed an end-to-end automated vertical video (9:16) production studio combining topic-to-script agent workflows, studio neural voiceover, and dynamic B-roll synchronization.
-- Engineered a custom ASS subtitle engine compiling word-by-word colored animated subtitle cues (Hormozi style) with automatic background audio ducking.
-- Fortified rendering pipeline with autonomous process supervision, preventing FFmpeg memory leaks, out-of-memory crashes, and Zombie sub-processes during batch renders.
-- Autonomously outputs ready-to-publish 1080x1920 Full HD video packages complete with high-CTR titles, SEO descriptions, and automated hashtag generation.
-
-### Footwear Retail POS & High-Volume Inventory Ledger
-- Built a commercial Point of Sale (POS) and inventory ledger managing retail store operations, barcode scanning, thermal printing, and GST compliance.
-- Features multi-counter SQLite WAL concurrency protection, inventory reorder forecasting, and real-time sales margin dashboards.
-- Engineered automated staff attendance logging and stock replenishment forecasting, reducing inventory holding costs by 30%.
+### Commercial Retail POS & High-Volume Inventory Ledger (StoreFlow™ & ExpressBill™)
+- Engineered commercial offline Point of Sale (POS) and inventory ledger managing retail store operations, thermal barcode generation, and multi-counter LAN synchronization.
+- Features multi-counter SQLite WAL concurrency protection, real-time margin analytics, and automated stock replenishment forecasting, reducing inventory holding costs by 30%.
 
 ## Professional Experience
 
 ### Founder & Lead Systems Architect
 **Rehan Quant Lab™ — Patna, Bihar, India (Remote Global)** *(January 2023 – Present)*
-- Direct independent systems research and software development for ultra-low-latency in-memory databases, autonomous AI swarms, and deterministic quantitative trading infrastructure.
-- Engineered AegisDB™, achieving 2.62M reads/sec (0.38µs) and sub-15ms WAL crash resurrection with zero-heap garbage collection jitter.
-- Architected and deployed the Indian Quant Options Sniper 24/7 on AWS EC2 Mumbai (ap-south-1) with connection-pooled WebSocket market feeds.
-- Built the 3-AZ Fault-Tolerant Quorum Architecture implementing Nassim Taleb's Golden Rule of Resilience with continuous evolutionary parameter adaptation.
+- Direct independent systems research and commercial software engineering across low-latency financial systems, deterministic kernels, and enterprise forensic cybersecurity suites.
+- Engineered and launched 17 commercial desktop software suites and 4 1-Click Master Setup Fleets on Gumroad (`quantify17.gumroad.com`), generating qualified organic traffic with 78% customer discovery from the United States.
+- Architected `RQL DocumentShield™` ($199–$799) and `Deterministic State Kernel` ($249) as standalone high-margin commercial releases.
+- Deployed Indian Quant Options Sniper 24/7 on AWS EC2 Mumbai (ap-south-1) with 3-AZ Fault-Tolerant Quorum Architecture and 0.00 load average.
 
 ### Store & Operations Manager
 **Ladies Zone Exclusive Showroom — Patna, Bihar, India** *(March 2021 – Present)*
@@ -86,7 +77,6 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 - Architected and deployed in-house biometric attendance audit ledger, retail POS billing software, and custom business workflow automations.
 - Bridged physical business requirements with automated software engineering to eliminate operational overhead and inventory discrepancies.
 - Managed vendor relations, staff scheduling, commercial margin analysis, and customer dispute resolution with 100% operational continuity.
-- Spearheaded inventory digital transformation, cutting dead-stock capital allocation by 25% through real-time stock turnover telemetry.
 
 ## Education & Academic Credentials
 
@@ -96,14 +86,15 @@ Founder & Lead Systems Architect at Rehan Quant Lab™ with 4+ years of hands-on
 - Capstone Project: Enterprise Retail Management System with Real-Time Inventory Tracking and POS Integration.
 
 ## Technical Environment & Production Safeguards
-- **Languages & Frameworks**: Python 3.12, AsyncIO, FastAPI, Streamlit, HTML5/CSS3, Modern JavaScript, Node.js, Shell Scripting.
-- **Databases & Protocols**: AegisDB (In-Memory Ring Buffers), SQLite (WAL micro-journaling), PostgreSQL, Redis, RESTful APIs, WebSocket, WireGuard/Tailscale VPN.
-- **Architectural Principles**: Antifragile Self-Healing, Zero Capital Leakage, Atomic Single-Route Execution, Adaptive Confluence Stiffening.
-- **DevOps & Infrastructure**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Linux systemd (Nice=-10), Git, 200/200 Unit & Invariant Tests (100% Passed).
+- **Languages & Core Systems**: Rust (Bare-Metal C-ABI FFI, Fat LTO), C (AVX2 SIMD), Python 3.14/3.12, PyMuPDF, AsyncIO, FastAPI, Streamlit, Modern JavaScript.
+- **Databases & Protocols**: AegisDB (In-Memory Ring Buffers), Deterministic State Kernel (Rust WAL), SQLite (WAL micro-journaling), RESTful APIs, WebSocket, WireGuard/Tailscale VPN.
+- **Architectural Principles**: Antifragile Triad (Aegis-Chaos-Phoenix), Zero Capital Leakage, True Destructive Redaction, 100% Air-Gapped Machine Sovereignty, Pure Native .EXE.
+- **DevOps & Infrastructure**: AWS Mumbai (ap-south-1), Cloudflare Pages Edge, Linux systemd (Nice=-10), Git, 250+ Unit & Invariant Tests (100% Passed).
 """
 
 def generate_pdf():
-    print(f"Generating Executive Resume PDF...")
+    print("Generating Executive Resume PDF...")
+    logo_path = str(PORTFOLIO_DIR / "emblem.jpg")
     pdf_buffer = create_styled_resume_pdf(
         resume_markdown=resume_md,
         candidate_name="Mohammad Rehan",
@@ -116,7 +107,7 @@ def generate_pdf():
             "portfolio": "rehanquantlab.com",
             "github": "github.com/rehanquantlab",
             "linkedin": "linkedin.com/in/mohammad-rehan-tech",
-            "logo_path": str(PORTFOLIO_DIR / "emblem.jpg")
+            "logo_path": logo_path if Path(logo_path).exists() else None
         }
     )
     
@@ -124,11 +115,12 @@ def generate_pdf():
     PDF_PATH.write_bytes(pdf_bytes)
     print(f"✅ Generated Portfolio PDF: {PDF_PATH} ({len(pdf_bytes):,} bytes)")
     
-    try:
-        shutil.copy2(PDF_PATH, DESKTOP_PATH)
-        print(f"✅ Synced to Desktop: {DESKTOP_PATH}")
-    except Exception as e:
-        print(f"Desktop sync notice: {e}")
+    for dest in [CODING_AGENTS_PATH, WEBSITE_REPO_PATH, DESKTOP_PATH]:
+        try:
+            dest.write_bytes(pdf_bytes)
+            print(f"✅ Synced to: {dest}")
+        except Exception as e:
+            print(f"Sync notice for {dest}: {e}")
 
 if __name__ == "__main__":
     generate_pdf()
