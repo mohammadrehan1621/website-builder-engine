@@ -1,1 +1,2417 @@
-﻿<!DOCTYPE html><html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/><meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"><meta http-equiv="X-Content-Type-Options" content="nosniff"><meta http-equiv="X-Frame-Options" content="DENY"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="https://cdn.tailwindcss.com"><link rel="dns-prefetch" href="https://unpkg.com"><link rel="dns-prefetch" href="https://gumroad.com"><title>RQL Aegis™ Process Supervisor | Rehan Quant Lab</title><meta name="description" content="High-availability deterministic process supervisor with continuous invariant monitoring and SHA-256 cryptographic Write-Ahead Logging."><meta name="keywords" content="RQL Aegis, high-availability process middleware, distributed systems fault tolerance, Unix Domain Sockets risk, ZeroMQ / gRPC, Shared Memory (IPC), Named Pipes, Rehan Quant Lab, Mohammad Rehan" /><link rel="canonical" href="https://rehanquantlab.com/aegis.html" /><link rel="icon" type="image/webp" href="emblem.webp" /><link rel="apple-touch-icon" href="emblem.webp" /><meta property="og:type" content="website" /><meta property="og:title" content="RQL Aegis™ — Deterministic High-Availability Process Supervisor" /><meta property="og:description" content="Deterministic local execution engine with Continuous Volatility Clamping (σ-Adaptive Sizing) and SHA-256 Cryptographic Write-Ahead Logging. 100% locally hosted. Zero network egress." /><meta property="og:url" content="https://rehanquantlab.com/aegis.html" /><meta property="og:image" content="https://rehanquantlab.com/og_preview.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="RQL Aegis™ — Deterministic High-Availability Process Supervisor" /><meta name="twitter:description" content="Deterministic local execution engine with Continuous Volatility Clamping (σ-Adaptive Sizing) and SHA-256 Cryptographic Write-Ahead Logging. Zero network egress." /><script src="https://cdn.tailwindcss.com"></script><script>tailwind.config = { theme: { extend: { colors: { slateCanvas: '#f8fafc', charcoalDark: '#0f172a', }, fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'], mono: ['JetBrains Mono', 'Fira Code', 'monospace'] } } } } </script><script src="https://unpkg.com/lucide@latest" defer></script><style>img, svg, video, canvas, audio, iframe, embed, object { max-width: 100%; } ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #f1f5f9; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; } ::-webkit-scrollbar-thumb:hover { background: #94a3b8; } .glass-panel { background: #ffffff !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; } /* Suppress Gumroad injected logo, forced sizing, and bloated CSS */ .logo-full, [class*="logo-full"], a .logo-full { display: none !important; visibility: hidden !important; width: 0 !important; height: 0 !important; opacity: 0 !important; pointer-events: none !important; } .gumroad-button, a.gumroad-button, header a[href*="gumroad.com"] { font-family: inherit !important; text-decoration: none !important; box-shadow: none !important; transform: none !important; } /* 🛡️ Institutional Typography Protections */ img, svg, video, canvas, audio, iframe, embed, object { max-width: 100%; } *, *::before, *::after { hyphens: none; -webkit-hyphens: none; } code, kbd, samp, pre { white-space: nowrap; word-break: normal; overflow-wrap: normal; } h1, h2, h3, h4, h5, h6 { text-wrap: balance; hyphens: none; } p, li, span, a { text-wrap: pretty; } .whitespace-nowrap { white-space: nowrap !important; } </style><script src="phoenix_sentinel.js" defer></script><script src="https://gumroad.com/js/gumroad.js" defer></script><style>/* Smooth Custom Scrollbar */ ::-webkit-scrollbar { width: 7px; height: 7px; } ::-webkit-scrollbar-track { background: #f8fafc; } ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; } ::-webkit-scrollbar-thumb:hover { background: #94a3b8; } /* Glassmorphism Panels */ .glass-panel { background: #ffffff !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; } .dark-glass { background: rgba(15, 23, 42, 0.94); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); } /* Hardware-Accelerated Smooth Animations */ @keyframes floatSlow { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-7px) rotate(0.4deg); } } @keyframes pulseGlow { 0%, 100% { opacity: 0.35; transform: scale(1); filter: blur(50px); } 50% { opacity: 0.8; transform: scale(1.1); filter: blur(60px); } } @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-20deg); } 40%, 100% { transform: translateX(250%) skewX(-20deg); } } @keyframes subtleRadar { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } } @keyframes pulseBorder { 0%, 100% { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 0 15px rgba(16, 185, 129, 0.1); } 50% { border-color: rgba(56, 189, 248, 0.8); box-shadow: 0 0 25px rgba(56, 189, 248, 0.25); } } .animate-float-slow { animation: floatSlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite; } .animate-pulse-glow { animation: pulseGlow 4s ease-in-out infinite; } .animate-pulse-border { animation: pulseBorder 3s infinite ease-in-out; } /* Shimmer Glint on High-Priority CTAs & Badges */ .shimmer-badge { position: relative; overflow: hidden; } .shimmer-badge::after { content: ''; position: absolute; top: 0; left: 0; width: 60%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: shimmerSweep 4s ease-in-out infinite; pointer-events: none; } /* Fluid Scroll Reveal (Zero Jank, 60fps) */ .reveal-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; } .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); } /* Card Tilt, Lift & Luminous Hover Physics */ .project-card, .hover-lift-card { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease; will-change: transform, box-shadow; } .project-card:hover, .hover-lift-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 30px -5px rgba(56, 189, 248, 0.2); } /* Button Hover Micro-Spring Physics */ .btn-spring { transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease; } .btn-spring:hover { transform: translateY(-2.5px) scale(1.02); } .btn-spring:active { transform: translateY(0px) scale(0.98); } /* Ambient Glowing Background Orbs */ .ambient-orb { position: absolute; border-radius: 9999px; pointer-events: none; z-index: 0; } </style><link rel="preconnect" href="https://quantify17.gumroad.com" crossorigin><link rel="dns-prefetch" href="https://quantify17.gumroad.com"><link rel="preconnect" href="https://assets.gumroad.com" crossorigin><script src="rql_seo_engine.js" defer></script><script type="application/ld+json">{ "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AegisDB & RQL Aegis™ Quant Engine", "operatingSystem": "Linux, Windows, macOS (Bare-Metal)", "applicationCategory": "FinancialApplication, DeveloperApplication", "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" }, "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.95", "reviewCount": "84" }, "description": "Deterministic quantitative orderbook risk kernel and high-throughput memory engine." } </script></head><body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen"><div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50"><div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4"><div id="live-ticker-container" class="flex items-center gap-2 truncate"><span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span><span id="ticker-label" class="text-sky-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ NEW RELEASE:</span><span id="ticker-content" class="text-slate-200 text-xs truncate transition-opacity duration-300"><strong>RQL Conduit Bonding Engine™</strong>&bull; Bare-Metal Rust Multi-WAN (<span class="text-sky-400 font-bold">$60 / &#8377;4,999</span>) </span></div><div class="flex items-center gap-3 shrink-0 text-xs font-sans"><a id="ticker-action" href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="gumroad-button text-sky-400 hover:text-sky-300 font-bold underline transition flex items-center gap-1 font-mono"><span>Instant Checkout</span><i class="w-3 h-3" data-lucide="arrow-right"></i></a><span class="text-slate-700 hidden md:inline">|</span><span class="text-slate-400 hidden md:inline font-mono text-[11px]">Sub-3ms Failover &bull; 100% Local-First</span></div></div></div><header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4"><a class="flex items-center gap-3 shrink-0 group" href="index.html"><img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50"><div class="whitespace-nowrap"><span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span><span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span></div></a><nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap"><a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a><a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 hover:text-rose-900 font-bold transition shadow-2xs group/store" href="store.html" title="2 Pure-Rust Sovereign Commercial Software Flagships on Gumroad"><span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span><span>Commercial Suites</span><span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">2</span></a><a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a><a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a><a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a></nav><div class="hidden sm:flex items-center gap-2.5 shrink-0 whitespace-nowrap"><a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i><span>Schedule Briefing</span></a><a href="Mohammad_Rehan_Resume.pdf" download class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono flex items-center gap-1.5 transition"><i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i><span>Resume</span></a></div><button class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation Menu"><i class="w-6 h-6" data-lucide="menu"></i></button></div><div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu"><a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a><a class="block py-2 px-3 rounded-lg bg-rose-50 text-rose-700 font-bold text-sm flex items-center justify-between" href="store.html"><span>Commercial Suites (2 Flagships)</span><span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span></a><a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a><a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="experience.html">Experience</a><a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="contact.html">Contact</a><div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-2"><a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-slate-900 text-white text-xs font-bold text-center">Schedule Briefing </a><a href="Mohammad_Rehan_Resume.pdf" download class="py-2 px-3 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold font-mono text-center">Resume (PDF) </a></div></div></header><main class="flex-grow"><section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/70 border-b border-slate-200/80"><div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"><div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center"><div class="lg:col-span-7 space-y-6 text-left"><div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 text-cyan-800 text-xs font-bold border border-cyan-200 shadow-2xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span>AIR-GAPPED HARDWARE LICENSED • V1.0 PRODUCTION READY</span></div><h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">RQL Aegis™ — Deterministic On-Premises<br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">High-Availability Process Middleware </span></h1><p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">Deterministic local execution daemon with<strong>Continuous Volatility Clamping (&sigma;-Adaptive Sizing)</strong>and<strong>SHA-256 Cryptographic Write-Ahead Logging</strong>. 100% locally hosted on your private workstation or bare-metal VPS. Zero network egress. Single perpetual license. </p><div class="flex flex-wrap items-center gap-3.5 pt-2"><a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-md shadow-cyan-600/20 transition flex items-center gap-2 btn-spring"><i class="w-4 h-4 text-cyan-200" data-lucide="zap"></i><span>Claim Early Pass — $125 / &#8377;11,820 (First 20 Only • 50% Off)</span></a><a href="RQL-Aegis-v1.0-Release.zip" download class="bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-xl border border-slate-300 shadow-2xs transition flex items-center gap-2"><i class="w-4 h-4 text-cyan-600" data-lucide="download"></i><span>Download Standalone v1.0 (ZIP)</span></a></div><div class="mt-4 p-3.5 rounded-xl bg-gradient-to-r from-red-50 via-slate-50 to-amber-50 border border-red-200/80 flex items-center gap-3 max-w-2xl shadow-2xs"><div class="w-8 h-8 rounded-lg bg-red-100 border border-red-300 text-red-600 flex items-center justify-center shrink-0 font-bold text-sm">🚨 </div><div class="text-xs"><span class="font-extrabold text-red-800">NEW: Standalone 1-Click Mechanical Emergency Handbrake Included</span><p class="text-slate-600 text-[11px] mt-0.5">Includes native Windows<code class="whitespace-nowrap">ManualEmergencyBrake.exe</code>&bull; Slams atomic gates and purges 100% of active execution threads across all IPC sockets on double-click.</p></div></div><div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 max-w-2xl"><div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs"><div class="text-cyan-700 font-extrabold text-sm">Zero Egress</div><div class="text-slate-500 text-[11px] mt-0.5">100% Local Compute</div></div><div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs"><div class="text-emerald-700 font-extrabold text-sm">&lt; 0.35ms IPC</div><div class="text-slate-500 text-[11px] mt-0.5">Sub-microsecond Engine</div></div><div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs"><div class="text-amber-700 font-extrabold text-sm">SHA-256 WAL</div><div class="text-slate-500 text-[11px] mt-0.5">Deterministic State</div></div><div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs"><div class="text-indigo-700 font-extrabold text-sm">Pay Once</div><div class="text-slate-500 text-[11px] mt-0.5">Own Forever</div></div></div></div><div class="lg:col-span-5"><div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-xl relative overflow-hidden"><div class="flex items-center justify-between pb-4 border-b border-slate-100"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 flex items-center justify-center shrink-0"><i class="w-5 h-5" data-lucide="shield-check"></i></div><div><h3 class="font-extrabold text-slate-900 text-sm tracking-tight">RQL Aegis™ Risk Shield</h3><span class="text-[11px] font-mono text-emerald-600 font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>v1.0-RELEASE (PRODUCTION) </span></div></div><span class="bg-slate-100 text-slate-700 text-[10px] font-mono px-2 py-1 rounded font-bold border border-slate-200">SHA-256 WAL</span></div><div class="grid grid-cols-2 gap-3 my-5 font-mono text-xs"><div class="bg-slate-50 border border-slate-200 rounded-xl p-3"><span class="text-slate-500 text-[10px] block uppercase">Binary Footprint</span><span class="text-slate-900 font-bold text-sm">9.2 MB Standalone</span></div><div class="bg-slate-50 border border-slate-200 rounded-xl p-3"><span class="text-slate-500 text-[10px] block uppercase">Process Latency</span><span class="text-emerald-600 font-bold text-sm">&lt; 0.35ms IPC</span></div><div class="bg-slate-50 border border-slate-200 rounded-xl p-3"><span class="text-slate-500 text-[10px] block uppercase">Crash Recovery</span><span class="text-indigo-600 font-bold text-sm">&lt; 3.2s Auto-Resurrect</span></div><div class="bg-slate-50 border border-slate-200 rounded-xl p-3"><span class="text-slate-500 text-[10px] block uppercase">Disk Persistence</span><span class="text-amber-600 font-bold text-sm">os.fsync Direct</span></div></div><div class="pt-2"><span class="text-[11px] text-slate-500 font-semibold uppercase tracking-wider block mb-2">Native IPC & RPC Connectors</span><div class="flex flex-wrap gap-1.5 text-xs font-medium"><span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Unix Domain Sockets</span><span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">ZeroMQ / gRPC</span><span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Shared Memory (IPC) HQ</span><span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Named Pipes API v3</span></div></div><div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between"><span class="text-[11px] text-slate-500">Air-gapped on your machine</span><a href="RQL-Aegis-v1.0-Release.zip" download class="text-xs font-bold text-cyan-700 hover:text-cyan-900 flex items-center gap-1"><span>Download ZIP</span><i class="w-3.5 h-3.5" data-lucide="arrow-right"></i></a></div></div></div></div></div></section><section class="py-14 bg-white border-b border-slate-200/80"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-10"><span class="text-xs font-bold uppercase tracking-widest text-cyan-800 bg-cyan-50 border border-cyan-200 px-3 py-1 rounded-full">Architectural Benchmarks</span><h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">Why Top Algorithmic Desks Reject Cloud SaaS</h2><p class="text-slate-600 text-sm max-w-2xl mx-auto mt-2">Your system state, operational telemetry, and private enterprise data should never touch a third-party shared cloud database.</p></div><div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm"><table class="w-full text-left text-sm border-collapse"><thead><tr class="border-b border-slate-200 text-xs uppercase tracking-wider bg-slate-50"><th class="py-4 px-6 text-slate-700 font-semibold">Architectural Vector</th><th class="py-4 px-6 text-rose-700 font-semibold bg-rose-50/50 border-x border-rose-100">Traditional Cloud SaaS (Vulnerable)</th><th class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/50">RQL Aegis™ (Deterministic Local Engine)</th></tr></thead><tbody class="divide-y divide-slate-100 text-xs font-mono"><tr><td class="py-4 px-6 text-slate-900 font-sans font-medium">Data Privacy &amp; Creds</td><td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Stored on their AWS servers (Risk of leak)</td><td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">Zero Egress: 100% Local Hardware Compute</td></tr><tr><td class="py-4 px-6 text-slate-900 font-sans font-medium">Economic Model</td><td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Endless $50–$100/mo subscription drain</td><td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">💎 Pay ONCE ($249), own perpetual license</td></tr><tr><td class="py-4 px-6 text-slate-900 font-sans font-medium">Execution Latency</td><td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Laggy web browser interface (25–100ms)</td><td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">⚡ Native binary runtime (&lt; 1ms sub-millisecond)</td></tr><tr><td class="py-4 px-6 text-slate-900 font-sans font-medium">Crash Amnesia Recovery</td><td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">In-memory state lost on process failure</td><td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">📜 Cryptographic SHA-256 State WAL</td></tr><tr><td class="py-4 px-6 text-slate-900 font-sans font-medium">Volatility Defense</td><td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Dumb static percentage stop-losses</td><td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">Continuous Volatility Clamping (&sigma;-Adaptive Bounds)</td></tr></tbody></table></div></div></section><section class="py-16 bg-slate-50/60 border-b border-slate-200/80"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><span class="text-xs font-bold uppercase tracking-widest text-indigo-700 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">Engineering Foundations</span><h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">The 4 Core Architectural &amp; Mathematical Invariants</h2><p class="text-slate-600 text-sm max-w-xl mx-auto mt-2">Every algorithmic parameter is mathematically bounded against variance spikes, thread crashes, and socket partitions.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-cyan-300"><div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 mb-4"><i class="w-5 h-5" data-lucide="shield"></i></div><h3 class="text-base font-bold text-slate-900 mb-2">1. Continuous Volatility Clamping (&sigma;-Adaptive Position Sizing)</h3><p class="text-slate-600 text-sm leading-relaxed">Standard static stop-losses fail during liquidity voids. RQL Aegis continuously evaluates realized variance &sigma; and dynamically dampens order exposure: </p><ul class="mt-3 space-y-1.5 text-xs text-slate-700 font-mono bg-slate-50 p-3 rounded-xl border border-slate-200"><li>•<span class="text-emerald-700 font-bold">&sigma; &lt; 15.0:</span>1.00&times; standard allocation capacity</li><li>•<span class="text-amber-700 font-bold">&sigma; 15.0–18.0:</span>Dynamic compression &kappa; = 0.75 (reduces sizing by 25% to offset spread widening)</li><li>•<span class="text-rose-700 font-bold">&sigma; &gt; 18.0:</span>Tail-risk dampening &kappa; = 0.50 (50% capacity cap &amp; rate-limiting)</li></ul></div><div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-amber-300"><div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-4"><i class="w-5 h-5" data-lucide="file-check"></i></div><h3 class="text-base font-bold text-slate-900 mb-2">2. Cryptographic SHA-256 Write-Ahead Logging (fsync Durability)</h3><p class="text-slate-600 text-sm leading-relaxed">Every process state transition, task dispatch, and checkpoint is cryptographically hashed with SHA-256 and committed with physical<code class="whitespace-nowrap text-amber-700 bg-amber-50 px-1 py-0.5 rounded font-mono text-xs">os.fsync</code>disk durability. </p><p class="mt-3 text-xs text-slate-500">If power fails during execution, the ledger verifies cryptographic chain integrity on boot and recovers in under 3.5 seconds. </p></div><div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-emerald-300"><div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-4"><i class="w-5 h-5" data-lucide="refresh-cw"></i></div><h3 class="text-base font-bold text-slate-900 mb-2">3. Deterministic Process Supervisor &amp; Idempotent Failover</h3><p class="text-slate-600 text-sm leading-relaxed">Continuous 100Hz heartbeat supervision daemon isolates unhandled OS signals (SIGKILL / SIGTERM) or network socket interruptions, re-establishing idempotent connection states in &lt;3.5s with zero orphaned child processes. </p></div><div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-indigo-300"><div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-4"><i class="w-5 h-5" data-lucide="lock"></i></div><h3 class="text-base font-bold text-slate-900 mb-2">4. Zero-Egress Local Architecture (Zero External Telemetry)</h3><p class="text-slate-600 text-sm leading-relaxed">Zero trade telemetry, zero external API analytics, and zero cloud dependency. Execution runs strictly peer-to-peer over localhost sockets directly to your enterprise microservices and private IPC message queues. </p></div></div></div></section><section class="py-14 bg-white border-b border-slate-200/80"><div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"><div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg"><div class="flex items-center gap-3 mb-4"><div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 shrink-0"><i class="w-5 h-5" data-lucide="cpu"></i></div><div><h3 class="text-xl font-bold text-slate-900">How Cryptographic Machine Activation Works</h3><p class="text-slate-500 text-xs mt-0.5">Hardware-locked license verification with Ed25519 cryptographic signing</p></div></div><p class="text-slate-600 text-sm leading-relaxed">When you first launch<code class="whitespace-nowrap text-cyan-800 bg-cyan-50 border border-cyan-200 px-1.5 py-0.5 rounded font-mono font-bold">RQL-Aegis.exe</code>, it computes an irreversible hardware hash of your CPU, motherboard, and disk: </p><div class="my-5 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950"><div class="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800"><div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span><span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span><span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span></div><span class="text-[11px] font-mono text-slate-400 font-semibold">Terminal: RQL-Aegis.exe (x86_64 Release)</span><span class="text-[10px] font-mono text-emerald-400 font-semibold">Air-Gapped</span></div><div class="p-5 font-mono text-xs text-slate-200 leading-relaxed overflow-x-auto"><span class="text-slate-600">======================================================================</span><br /><span class="text-cyan-400 font-bold">🏛️ REHAN QUANT LAB — RQL AEGIS ENTERPRISE PROCESS SUPERVISOR</span><br />&nbsp;&nbsp;&nbsp;On-Premises Execution &amp; Risk Protection Layer<br />&nbsp;&nbsp;&nbsp;Official Portal :<span class="text-blue-400 font-semibold">https://rehanquantlab.com</span><br />&nbsp;&nbsp;&nbsp;Support Desk&nbsp;&nbsp;&nbsp;&nbsp;:<span class="text-blue-400 font-semibold">founder@rehanquantlab.com</span><br /><span class="text-slate-600">======================================================================</span><br /><span class="text-amber-400 font-bold">🔒 RQL AEGIS MACHINE IDENTIFIER: [0B78F950D49FE5C5]</span><br />&nbsp;&nbsp;&nbsp;Status:<span class="text-amber-300 font-semibold">UNLICENSED HARDWARE (Trial / Evaluation Mode)</span><br />&nbsp;&nbsp;&nbsp;To acquire or activate a key, visit<span class="text-cyan-400">https://rehanquantlab.com</span><br />&nbsp;&nbsp;&nbsp;or email your Machine ID to:<span class="text-cyan-300 font-bold">founder@rehanquantlab.com</span></div></div><div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"><p class="text-xs text-slate-600 leading-relaxed">Email that Machine ID to<a class="text-indigo-600 font-semibold hover:underline cursor-pointer" onclick="handleSmartEmail(event)" href="mailto:founder@rehanquantlab.com" title="Click to copy & open in Gmail">founder@rehanquantlab.com</a>. Within minutes, you will receive an Ed25519-signed license key that permanently unlocks your copy on that workstation. </p><a href="mailto:founder@rehanquantlab.com?subject=RQL%20Aegis%20Machine%20ID%20Activation&body=Hi%20Rehan,%20Here%20is%20my%20Machine%20ID%20for%20activation:%20" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-lg shrink-0 transition">Email Machine ID </a></div></div></div></section><section class="py-16 bg-slate-50/70 border-b border-slate-200/80" id="pricing"><div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-12"><span class="text-xs font-bold uppercase tracking-widest text-cyan-800 bg-cyan-100/80 border border-cyan-300 px-3 py-1 rounded-full">Transparent Perpetual Pricing</span><h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">Choose Your Perpetual License</h2><p class="text-slate-600 text-sm max-w-xl mx-auto mt-2">Zero recurring subscriptions. Pay once, own perpetual operational rights forever.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"><div class="bg-white border-2 border-cyan-500 rounded-3xl p-8 relative flex flex-col justify-between shadow-xl shadow-cyan-500/10"><div class="absolute -top-3.5 right-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">Most Popular </div><div><h3 class="text-xl font-extrabold text-slate-900">Solo Quant Perpetual</h3><p class="text-slate-500 text-xs mt-1">For independent algorithmic traders and automated execution desks.</p><div class="my-6"><div class="flex items-baseline gap-2"><span class="text-4xl font-black text-slate-900">$249</span><span class="text-slate-500 text-sm font-semibold">/ ₹19,999</span></div><span class="text-xs text-emerald-600 font-bold block mt-1">One-time payment • Lifetime perpetual license</span></div><ul class="space-y-3 text-sm text-slate-600"><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Single-file native Windows executable (<code class="whitespace-nowrap text-cyan-800 font-mono text-xs bg-cyan-50 px-1 py-0.5 rounded">RQL-Aegis.exe</code>)</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i><span>1 Workstation Hardware-Locked Machine Key</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Unix Domain Sockets, ZeroMQ / gRPC, Shared Memory (IPC) &amp; Named Pipes connectors</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Continuous Volatility Clamping (&sigma;-Adaptive) &amp; SHA-256 WAL</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Direct email support from Founder (Mohammad Rehan)</span></li></ul></div><div class="pt-8"><div class="mb-3.5 text-center"><span class="text-amber-800 font-bold bg-amber-50 border border-amber-300 px-3 py-1 rounded-full text-xs inline-block">🔥 FIRST 20 BUYERS ONLY: 50% OFF (Code: EARLYBIRD)</span><div class="text-xs text-slate-500 mt-1.5 font-medium">Standard Base Price:<span class="line-through text-slate-400 font-semibold">$249 (&#8377;23,640)</span>&bull; Early Pass:<span class="text-emerald-700 font-bold">$125 / &#8377;11,820</span></div></div><a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3.5 px-6 rounded-xl transition text-center block shadow-md shadow-cyan-600/20 btn-spring">Claim Early Pass — $125 / &#8377;11,820 </a><span class="text-[11px] text-slate-500 block text-center mt-2">Instant automated email with download &amp; license key delivered via Gumroad upon payment</span></div></div><div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition shadow-sm"><div><h3 class="text-xl font-extrabold text-slate-900">Prop Desk &amp; Source License</h3><p class="text-slate-500 text-xs mt-1">For mission-critical enterprise systems, industrial IoT, and distributed infrastructure teams.</p><div class="my-6"><div class="flex items-baseline gap-2"><span class="text-4xl font-black text-slate-900">$599</span><span class="text-slate-500 text-sm font-semibold">/ ₹49,999</span></div><span class="text-xs text-indigo-600 font-bold block mt-1">Full source code included • Multi-workstation rights</span></div><ul class="space-y-3 text-sm text-slate-600"><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Everything in Solo Quant Perpetual</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span><strong>Full Unobfuscated Pure Native Rust Source Code Repository</strong></span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Up to 5 Hardware-Locked Workstations / Cloud Instances</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Multi-account risk aggregation &amp; portfolio-wide drawdowns</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span>AWS 1-Click Server Docker deployment script</span></li><li class="flex items-start gap-2.5"><i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i><span>Priority 1-on-1 systems integration consulting</span></li></ul></div><div class="pt-8"><a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-6 rounded-xl transition text-center block">Acquire Source License — $599 </a><span class="text-[11px] text-slate-500 block text-center mt-2">Secure checkout via Gumroad • Includes enterprise EULA contract &amp; private Git repository access</span></div></div></div></div></section></main><footer class="py-10 bg-slate-900 text-slate-400 text-xs border-t border-slate-800"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left"><div><span class="font-bold text-white block text-sm">Rehan Quant Lab (Mohammad Rehan)</span><span>Headquarters: Patna, Bihar, India • Official Support:<a class="text-indigo-600 font-semibold hover:underline cursor-pointer" onclick="handleSmartEmail(event)" href="mailto:founder@rehanquantlab.com" title="Click to copy & open in Gmail">founder@rehanquantlab.com</a></span></div><div class="flex items-center gap-5 text-sm"><a href="index.html" class="hover:text-white transition">Home</a><a href="projects.html" class="hover:text-white transition">Projects</a><a href="experience.html" class="hover:text-white transition">Experience</a><a href="legal.html" class="hover:text-white transition">Legal &amp; EULA</a><a href="contact.html" class="hover:text-white transition">Contact</a></div></div></footer><script>lucide.createIcons(); // Live Auto-Sync Clock function updateClock() { const el = document.getElementById('live-clock'); if (el) { const d = new Date(); el.textContent = d.toLocaleTimeString() + ' IST'; } } setInterval(updateClock, 1000); updateClock(); // Mobile menu toggle const btn = document.getElementById('mobile-menu-btn'); const menu = document.getElementById('mobile-menu'); if (btn && menu) { btn.addEventListener('click', () =>{ menu.classList.toggle('hidden'); }); } </script><script src="lively_motion.js" defer></script></body></html>
+﻿<!DOCTYPE html>
+
+
+
+<html class="scroll-smooth" lang="en">
+
+
+
+<head>
+
+
+
+<meta charset="utf-8"/>
+
+
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- 🛡️ Institutional Security & HTTPS Enforcement Headers -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/>
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Performance Optimization: Resource Hints for Ultra-Fast Initial Render -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://gumroad.com">
+
+
+
+
+
+
+
+
+<title>RQL Aegis™ Process Supervisor | Rehan Quant Lab</title>
+
+
+
+<meta name="description" content="High-availability deterministic process supervisor with continuous invariant monitoring and SHA-256 cryptographic Write-Ahead Logging.">
+
+
+
+<meta name="keywords" content="RQL Aegis, high-availability process middleware, distributed systems fault tolerance, Unix Domain Sockets risk, ZeroMQ / gRPC, Shared Memory (IPC), Named Pipes, Rehan Quant Lab, Mohammad Rehan" />
+
+
+
+<link rel="canonical" href="https://rehanquantlab.com/aegis.html" />
+
+
+
+<link rel="icon" type="image/webp" href="emblem.webp" />
+
+
+
+<link rel="apple-touch-icon" href="emblem.webp" />
+
+
+
+<meta property="og:type" content="website" />
+
+
+
+<meta property="og:title" content="RQL Aegis™ — Deterministic High-Availability Process Supervisor" />
+
+
+
+<meta property="og:description" content="Deterministic local execution engine with Continuous Volatility Clamping (σ-Adaptive Sizing) and SHA-256 Cryptographic Write-Ahead Logging. 100% locally hosted. Zero network egress." />
+
+
+
+<meta property="og:url" content="https://rehanquantlab.com/aegis.html" />
+
+
+
+<meta property="og:image" content="https://rehanquantlab.com/og_preview.png" />
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+<meta name="twitter:title" content="RQL Aegis™ — Deterministic High-Availability Process Supervisor" />
+
+
+
+<meta name="twitter:description" content="Deterministic local execution engine with Continuous Volatility Clamping (σ-Adaptive Sizing) and SHA-256 Cryptographic Write-Ahead Logging. Zero network egress." />
+
+
+
+<!-- Tailwind CSS CDN -->
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<script>
+
+
+
+    tailwind.config = {
+
+
+
+        theme: {
+
+
+
+            extend: {
+
+
+
+                colors: {
+
+
+
+                    slateCanvas: '#f8fafc',
+
+
+
+                    charcoalDark: '#0f172a',
+
+
+
+                },
+
+
+
+                fontFamily: {
+
+
+
+                    sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+
+
+
+                    mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+
+
+
+                }
+
+
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+
+</script>
+
+
+
+<!-- Lucide Icons -->
+
+
+
+<script src="https://unpkg.com/lucide@latest" defer></script>
+
+
+
+<style>
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
+}
+
+
+
+
+    ::-webkit-scrollbar { width: 6px; }
+
+
+
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+
+
+
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+
+
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+
+
+    
+
+
+
+    .glass-panel {
+            background: #ffffff !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+
+
+    
+
+
+
+    /* Suppress Gumroad injected logo, forced sizing, and bloated CSS */
+
+
+
+    .logo-full,
+
+
+
+    [class*="logo-full"],
+
+
+
+    a .logo-full {
+
+
+
+        display: none !important;
+
+
+
+        visibility: hidden !important;
+
+
+
+        width: 0 !important;
+
+
+
+        height: 0 !important;
+
+
+
+        opacity: 0 !important;
+
+
+
+        pointer-events: none !important;
+
+
+
+    }
+
+
+
+    
+
+
+
+    .gumroad-button,
+
+
+
+    a.gumroad-button,
+
+
+
+    header a[href*="gumroad.com"] {
+
+
+
+        font-family: inherit !important;
+
+
+
+        text-decoration: none !important;
+
+
+
+        box-shadow: none !important;
+
+
+
+        transform: none !important;
+
+
+
+    }
+
+
+
+
+/* 🛡️ Institutional Typography Protections */
+img, svg, video, canvas, audio, iframe, embed, object {
+    max-width: 100%;
+}
+
+*, *::before, *::after {
+    hyphens: none;
+    -webkit-hyphens: none;
+}
+
+code, kbd, samp, pre {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    hyphens: none;
+}
+
+p, li, span, a {
+    text-wrap: pretty;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap !important;
+}
+
+</style>
+
+
+
+<script src="phoenix_sentinel.js" defer></script>
+
+
+
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
+
+
+
+
+    <!-- 🎨 LIVELY MOTION & INSTITUTIONAL GUI STYLESHEET -->
+    <style>
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar { width: 7px; height: 7px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Glassmorphism Panels */
+        .glass-panel {
+            background: #ffffff !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.94);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        /* Hardware-Accelerated Smooth Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-7px) rotate(0.4deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.35; transform: scale(1); filter: blur(50px); }
+            50% { opacity: 0.8; transform: scale(1.1); filter: blur(60px); }
+        }
+
+        @keyframes shimmerSweep {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            40%, 100% { transform: translateX(250%) skewX(-20deg); }
+        }
+
+        @keyframes subtleRadar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseBorder {
+            0%, 100% { border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 0 15px rgba(16, 185, 129, 0.1); }
+            50% { border-color: rgba(56, 189, 248, 0.8); box-shadow: 0 0 25px rgba(56, 189, 248, 0.25); }
+        }
+
+        .animate-float-slow {
+            animation: floatSlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-border {
+            animation: pulseBorder 3s infinite ease-in-out;
+        }
+
+        /* Shimmer Glint on High-Priority CTAs & Badges */
+        .shimmer-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-badge::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmerSweep 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Fluid Scroll Reveal (Zero Jank, 60fps) */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card Tilt, Lift & Luminous Hover Physics */
+        .project-card, .hover-lift-card {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+            will-change: transform, box-shadow;
+        }
+        .project-card:hover, .hover-lift-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 30px -5px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Button Hover Micro-Spring Physics */
+        .btn-spring {
+            transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+        }
+        .btn-spring:hover {
+            transform: translateY(-2.5px) scale(1.02);
+        }
+        .btn-spring:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        /* Ambient Glowing Background Orbs */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 9999px;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://quantify17.gumroad.com" crossorigin>
+    <link rel="dns-prefetch" href="https://quantify17.gumroad.com">
+    <link rel="preconnect" href="https://assets.gumroad.com" crossorigin>
+  <script src="rql_seo_engine.js" defer></script>
+</head>
+
+
+
+
+
+
+
+<body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
+
+
+<!-- Single Unified Institutional Status & Rotating Announcement Bar -->
+<div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
+        <div id="live-ticker-container" class="flex items-center gap-2 truncate">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span id="ticker-label" class="text-sky-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ NEW RELEASE:</span>
+            <span id="ticker-content" class="text-slate-200 text-xs truncate transition-opacity duration-300">
+                <strong>RQL Conduit Bonding Engine™</strong> &bull; Bare-Metal Rust Multi-WAN (<span class="text-sky-400 font-bold">$60 / &#8377;4,999</span>)
+            </span>
+        </div>
+        <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
+            <a id="ticker-action" href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="gumroad-button text-sky-400 hover:text-sky-300 font-bold underline transition flex items-center gap-1 font-mono">
+                <span>Instant Checkout</span>
+                <i class="w-3 h-3" data-lucide="arrow-right"></i>
+            </a>
+            <span class="text-slate-700 hidden md:inline">|</span>
+            <span class="text-slate-400 hidden md:inline font-mono text-[11px]">Sub-3ms Failover &bull; 100% Local-First</span>
+        </div>
+    </div>
+</div>
+<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 shrink-0 group" href="index.html">
+<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
+<div class="whitespace-nowrap">
+<span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+</div>
+</a>
+
+<!-- Clean, Spacious Desktop Navigation (Zero Bloat, Zero Maxed-out spacing) -->
+<nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap">
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
+
+<!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 hover:text-rose-900 font-bold transition shadow-2xs group/store" href="store.html" title="2 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+<span>Commercial Suites</span>
+<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
+</a>
+
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a>
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a>
+</nav>
+
+<!-- Right Header Action CTAs (Sleek, Proportional, Guaranteed Breathing Room) -->
+<div class="hidden sm:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 flex items-center gap-1.5">
+<i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
+<span>Schedule Briefing</span>
+</a>
+
+<a href="Mohammad_Rehan_Resume.pdf" download class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono flex items-center gap-1.5 transition">
+<i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+<span>Resume</span>
+</a>
+</div>
+
+<!-- Mobile Menu Button -->
+<button class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+
+</div>
+
+<!-- Mobile Menu Dropdown -->
+<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a>
+<a class="block py-2 px-3 rounded-lg bg-rose-50 text-rose-700 font-bold text-sm flex items-center justify-between" href="store.html">
+<span>Commercial Suites (2 Flagships)</span>
+<span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
+</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="experience.html">Experience</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="contact.html">Contact</a>
+
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-slate-900 text-white text-xs font-bold text-center">
+Schedule Briefing
+</a>
+<a href="Mohammad_Rehan_Resume.pdf" download class="py-2 px-3 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold font-mono text-center">
+Resume (PDF)
+</a>
+</div>
+</div>
+</header>
+
+
+
+
+
+
+
+<main class="flex-grow">
+
+
+
+
+
+
+
+<!-- HERO SECTION: DUAL COLUMN INSTITUTIONAL LAYOUT -->
+
+
+
+<section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/70 border-b border-slate-200/80">
+
+
+
+    <!-- Subtle Tech Grid Canvas Texture -->
+
+
+
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+
+
+
+
+
+
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+
+
+            
+
+
+
+            <!-- Left Column: Value Proposition & CTAs -->
+
+
+
+            <div class="lg:col-span-7 space-y-6 text-left">
+
+
+
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 text-cyan-800 text-xs font-bold border border-cyan-200 shadow-2xs">
+
+
+
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+
+
+
+                    <span>AIR-GAPPED HARDWARE LICENSED • V1.0 PRODUCTION READY</span>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+
+
+
+                    RQL Aegis™ — Deterministic On-Premises<br />
+
+
+
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">
+
+
+
+                        High-Availability Process Middleware
+
+
+
+                    </span>
+
+
+
+                </h1>
+
+
+
+
+
+
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
+
+
+
+                    Deterministic local execution daemon with <strong>Continuous Volatility Clamping (&sigma;-Adaptive Sizing)</strong> and <strong>SHA-256 Cryptographic Write-Ahead Logging</strong>. 100% locally hosted on your private workstation or bare-metal VPS. Zero network egress. Single perpetual license.
+
+
+
+                </p>
+
+
+
+
+
+
+
+                <!-- Dual Action Buttons -->
+
+
+
+                <div class="flex flex-wrap items-center gap-3.5 pt-2">
+
+
+
+                    <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-md shadow-cyan-600/20 transition flex items-center gap-2 btn-spring">
+
+
+
+                        <i class="w-4 h-4 text-cyan-200" data-lucide="zap"></i>
+
+
+
+                        <span>Claim Early Pass — $125 / &#8377;11,820 (First 20 Only • 50% Off)</span>
+
+
+
+                    </a>
+
+
+
+                    <a href="RQL-Aegis-v1.0-Release.zip" download class="bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-xl border border-slate-300 shadow-2xs transition flex items-center gap-2">
+
+
+
+                        <i class="w-4 h-4 text-cyan-600" data-lucide="download"></i>
+
+
+
+                        <span>Download Standalone v1.0 (ZIP)</span>
+
+
+
+                    </a>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- 4 Quick Invariant Pills -->
+
+
+
+                <!-- Volvo Mechanical Emergency Handbrake Callout Banner -->
+
+                <div class="mt-4 p-3.5 rounded-xl bg-gradient-to-r from-red-50 via-slate-50 to-amber-50 border border-red-200/80 flex items-center gap-3 max-w-2xl shadow-2xs">
+
+                    <div class="w-8 h-8 rounded-lg bg-red-100 border border-red-300 text-red-600 flex items-center justify-center shrink-0 font-bold text-sm">
+
+                        🚨
+
+                    </div>
+
+                    <div class="text-xs">
+
+                        <span class="font-extrabold text-red-800">NEW: Standalone 1-Click Mechanical Emergency Handbrake Included</span>
+
+                        <p class="text-slate-600 text-[11px] mt-0.5">Includes native Windows <code class="whitespace-nowrap">ManualEmergencyBrake.exe</code> &bull; Slams atomic gates and purges 100% of active execution threads across all IPC sockets on double-click.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 max-w-2xl">
+
+
+
+                    <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs">
+
+
+
+                        <div class="text-cyan-700 font-extrabold text-sm">Zero Egress</div>
+
+
+
+                        <div class="text-slate-500 text-[11px] mt-0.5">100% Local Compute</div>
+
+
+
+                    </div>
+
+
+
+                    <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs">
+
+
+
+                        <div class="text-emerald-700 font-extrabold text-sm">&lt; 0.35ms IPC</div>
+
+
+
+                        <div class="text-slate-500 text-[11px] mt-0.5">Sub-microsecond Engine</div>
+
+
+
+                    </div>
+
+
+
+                    <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs">
+
+
+
+                        <div class="text-amber-700 font-extrabold text-sm">SHA-256 WAL</div>
+
+
+
+                        <div class="text-slate-500 text-[11px] mt-0.5">Deterministic State</div>
+
+
+
+                    </div>
+
+
+
+                    <div class="bg-white border border-slate-200 rounded-xl p-3 text-center shadow-2xs">
+
+
+
+                        <div class="text-indigo-700 font-extrabold text-sm">Pay Once</div>
+
+
+
+                        <div class="text-slate-500 text-[11px] mt-0.5">Own Forever</div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Right Column: Institutional System Spec Glass Card (Matching index.html) -->
+
+
+
+            <div class="lg:col-span-5">
+
+
+
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-xl relative overflow-hidden">
+
+
+
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+
+
+
+                        <div class="flex items-center gap-3">
+
+
+
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-600 flex items-center justify-center shrink-0">
+
+
+
+                                <i class="w-5 h-5" data-lucide="shield-check"></i>
+
+
+
+                            </div>
+
+
+
+                            <div>
+
+
+
+                                <h3 class="font-extrabold text-slate-900 text-sm tracking-tight">RQL Aegis™ Risk Shield</h3>
+
+
+
+                                <span class="text-[11px] font-mono text-emerald-600 font-semibold flex items-center gap-1">
+
+
+
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+
+
+
+                                    v1.0-RELEASE (PRODUCTION)
+
+
+
+                                </span>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <span class="bg-slate-100 text-slate-700 text-[10px] font-mono px-2 py-1 rounded font-bold border border-slate-200">SHA-256 WAL</span>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Live Hardware & Spec Metrics -->
+
+
+
+                    <div class="grid grid-cols-2 gap-3 my-5 font-mono text-xs">
+
+
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+
+
+
+                            <span class="text-slate-500 text-[10px] block uppercase">Binary Footprint</span>
+
+
+
+                            <span class="text-slate-900 font-bold text-sm">9.2 MB Standalone</span>
+
+
+
+                        </div>
+
+
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+
+
+
+                            <span class="text-slate-500 text-[10px] block uppercase">Process Latency</span>
+
+
+
+                            <span class="text-emerald-600 font-bold text-sm">&lt; 0.35ms IPC</span>
+
+
+
+                        </div>
+
+
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+
+
+
+                            <span class="text-slate-500 text-[10px] block uppercase">Crash Recovery</span>
+
+
+
+                            <span class="text-indigo-600 font-bold text-sm">&lt; 3.2s Auto-Resurrect</span>
+
+
+
+                        </div>
+
+
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3">
+
+
+
+                            <span class="text-slate-500 text-[10px] block uppercase">Disk Persistence</span>
+
+
+
+                            <span class="text-amber-600 font-bold text-sm">os.fsync Direct</span>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Supported IPC & Microservice Ecosystem -->
+
+
+
+                    <div class="pt-2">
+
+
+
+                        <span class="text-[11px] text-slate-500 font-semibold uppercase tracking-wider block mb-2">Native IPC & RPC Connectors</span>
+
+
+
+                        <div class="flex flex-wrap gap-1.5 text-xs font-medium">
+
+
+
+                            <span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Unix Domain Sockets</span>
+
+
+
+                            <span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">ZeroMQ / gRPC</span>
+
+
+
+                            <span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Shared Memory (IPC) HQ</span>
+
+
+
+                            <span class="bg-slate-100 text-slate-800 border border-slate-200 px-2.5 py-1 rounded-lg">Named Pipes API v3</span>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Direct Binary Action in Card -->
+
+
+
+                    <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
+
+
+
+                        <span class="text-[11px] text-slate-500">Air-gapped on your machine</span>
+
+
+
+                        <a href="RQL-Aegis-v1.0-Release.zip" download class="text-xs font-bold text-cyan-700 hover:text-cyan-900 flex items-center gap-1">
+
+
+
+                            <span>Download ZIP</span>
+
+
+
+                            <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+
+
+
+                        </a>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- COMPARISON TABLE: TRADITIONAL CLOUD SAAS VS RQL AEGIS -->
+
+
+
+<section class="py-14 bg-white border-b border-slate-200/80">
+
+
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+        <div class="text-center mb-10">
+
+
+
+            <span class="text-xs font-bold uppercase tracking-widest text-cyan-800 bg-cyan-50 border border-cyan-200 px-3 py-1 rounded-full">Architectural Benchmarks</span>
+
+
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">Why Top Algorithmic Desks Reject Cloud SaaS</h2>
+
+
+
+            <p class="text-slate-600 text-sm max-w-2xl mx-auto mt-2">Your system state, operational telemetry, and private enterprise data should never touch a third-party shared cloud database.</p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+
+
+            <table class="w-full text-left text-sm border-collapse">
+
+
+
+                <thead>
+
+
+
+                    <tr class="border-b border-slate-200 text-xs uppercase tracking-wider bg-slate-50">
+
+
+
+                        <th class="py-4 px-6 text-slate-700 font-semibold">Architectural Vector</th>
+
+
+
+                        <th class="py-4 px-6 text-rose-700 font-semibold bg-rose-50/50 border-x border-rose-100">Traditional Cloud SaaS (Vulnerable)</th>
+
+
+
+                        <th class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/50">RQL Aegis™ (Deterministic Local Engine)</th>
+
+
+
+                    </tr>
+
+
+
+                </thead>
+
+
+
+                <tbody class="divide-y divide-slate-100 text-xs font-mono">
+
+
+
+                    <tr>
+
+
+
+                        <td class="py-4 px-6 text-slate-900 font-sans font-medium">Data Privacy &amp; Creds</td>
+
+
+
+                        <td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Stored on their AWS servers (Risk of leak)</td>
+
+
+
+                        <td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">Zero Egress: 100% Local Hardware Compute</td>
+
+
+
+                    </tr>
+
+
+
+                    <tr>
+
+
+
+                        <td class="py-4 px-6 text-slate-900 font-sans font-medium">Economic Model</td>
+
+
+
+                        <td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Endless $50–$100/mo subscription drain</td>
+
+
+
+                        <td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">💎 Pay ONCE ($249), own perpetual license</td>
+
+
+
+                    </tr>
+
+
+
+                    <tr>
+
+
+
+                        <td class="py-4 px-6 text-slate-900 font-sans font-medium">Execution Latency</td>
+
+
+
+                        <td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Laggy web browser interface (25–100ms)</td>
+
+
+
+                        <td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">⚡ Native binary runtime (&lt; 1ms sub-millisecond)</td>
+
+
+
+                    </tr>
+
+
+
+                    <tr>
+
+
+
+                        <td class="py-4 px-6 text-slate-900 font-sans font-medium">Crash Amnesia Recovery</td>
+
+
+
+                        <td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">In-memory state lost on process failure</td>
+
+
+
+                        <td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">📜 Cryptographic SHA-256 State WAL</td>
+
+
+
+                    </tr>
+
+
+
+                    <tr>
+
+
+
+                        <td class="py-4 px-6 text-slate-900 font-sans font-medium">Volatility Defense</td>
+
+
+
+                        <td class="py-4 px-6 text-rose-700 bg-rose-50/30 border-x border-rose-100 font-sans">Dumb static percentage stop-losses</td>
+
+
+
+                        <td class="py-4 px-6 text-emerald-800 font-bold bg-emerald-50/30 font-sans">Continuous Volatility Clamping (&sigma;-Adaptive Bounds)</td>
+
+
+
+                    </tr>
+
+
+
+                </tbody>
+
+
+
+            </table>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- THE 4 CORE SOVEREIGN INVARIANTS (GRID) -->
+
+
+
+<section class="py-16 bg-slate-50/60 border-b border-slate-200/80">
+
+
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+        <div class="text-center mb-12">
+
+
+
+            <span class="text-xs font-bold uppercase tracking-widest text-indigo-700 bg-indigo-50 border border-indigo-200 px-3 py-1 rounded-full">Engineering Foundations</span>
+
+
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">The 4 Core Architectural &amp; Mathematical Invariants</h2>
+
+
+
+            <p class="text-slate-600 text-sm max-w-xl mx-auto mt-2">Every algorithmic parameter is mathematically bounded against variance spikes, thread crashes, and socket partitions.</p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+
+            <!-- Invariant 1 -->
+
+
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-cyan-300">
+
+
+
+                <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 mb-4">
+
+
+
+                    <i class="w-5 h-5" data-lucide="shield"></i>
+
+
+
+                </div>
+
+
+
+                <h3 class="text-base font-bold text-slate-900 mb-2">1. Continuous Volatility Clamping (&sigma;-Adaptive Position Sizing)</h3>
+
+
+
+                <p class="text-slate-600 text-sm leading-relaxed">
+
+
+
+                    Standard static stop-losses fail during liquidity voids. RQL Aegis continuously evaluates realized variance &sigma; and dynamically dampens order exposure:
+
+
+
+                </p>
+
+
+
+                <ul class="mt-3 space-y-1.5 text-xs text-slate-700 font-mono bg-slate-50 p-3 rounded-xl border border-slate-200">
+
+
+
+                    <li>• <span class="text-emerald-700 font-bold">&sigma; &lt; 15.0:</span> 1.00&times; standard allocation capacity</li>
+
+
+
+                    <li>• <span class="text-amber-700 font-bold">&sigma; 15.0–18.0:</span> Dynamic compression &kappa; = 0.75 (reduces sizing by 25% to offset spread widening)</li>
+
+
+
+                    <li>• <span class="text-rose-700 font-bold">&sigma; &gt; 18.0:</span> Tail-risk dampening &kappa; = 0.50 (50% capacity cap &amp; rate-limiting)</li>
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Invariant 2 -->
+
+
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-amber-300">
+
+
+
+                <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-4">
+
+
+
+                    <i class="w-5 h-5" data-lucide="file-check"></i>
+
+
+
+                </div>
+
+
+
+                <h3 class="text-base font-bold text-slate-900 mb-2">2. Cryptographic SHA-256 Write-Ahead Logging (fsync Durability)</h3>
+
+
+
+                <p class="text-slate-600 text-sm leading-relaxed">
+
+
+
+                    Every process state transition, task dispatch, and checkpoint is cryptographically hashed with SHA-256 and committed with physical <code class="whitespace-nowrap text-amber-700 bg-amber-50 px-1 py-0.5 rounded font-mono text-xs">os.fsync</code> disk durability.
+
+
+
+                </p>
+
+
+
+                <p class="mt-3 text-xs text-slate-500">
+
+
+
+                    If power fails during execution, the ledger verifies cryptographic chain integrity on boot and recovers in under 3.5 seconds.
+
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Invariant 3 -->
+
+
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-emerald-300">
+
+
+
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-4">
+
+
+
+                    <i class="w-5 h-5" data-lucide="refresh-cw"></i>
+
+
+
+                </div>
+
+
+
+                <h3 class="text-base font-bold text-slate-900 mb-2">3. Deterministic Process Supervisor &amp; Idempotent Failover</h3>
+
+
+
+                <p class="text-slate-600 text-sm leading-relaxed">
+
+
+
+                    Continuous 100Hz heartbeat supervision daemon isolates unhandled OS signals (SIGKILL / SIGTERM) or network socket interruptions, re-establishing idempotent connection states in &lt;3.5s with zero orphaned child processes.
+
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Invariant 4 -->
+
+
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition hover:border-indigo-300">
+
+
+
+                <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-4">
+
+
+
+                    <i class="w-5 h-5" data-lucide="lock"></i>
+
+
+
+                </div>
+
+
+
+                <h3 class="text-base font-bold text-slate-900 mb-2">4. Zero-Egress Local Architecture (Zero External Telemetry)</h3>
+
+
+
+                <p class="text-slate-600 text-sm leading-relaxed">
+
+
+
+                    Zero trade telemetry, zero external API analytics, and zero cloud dependency. Execution runs strictly peer-to-peer over localhost sockets directly to your enterprise microservices and private IPC message queues.
+
+
+
+                </p>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- HARDWARE MACHINE IDENTIFIER ACTIVATION (REDESIGNED INSTITUTIONAL TERMINAL) -->
+
+
+
+<section class="py-14 bg-white border-b border-slate-200/80">
+
+
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+        <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg">
+
+
+
+            <div class="flex items-center gap-3 mb-4">
+
+
+
+                <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 shrink-0">
+
+
+
+                    <i class="w-5 h-5" data-lucide="cpu"></i>
+
+
+
+                </div>
+
+
+
+                <div>
+
+
+
+                    <h3 class="text-xl font-bold text-slate-900">How Cryptographic Machine Activation Works</h3>
+
+
+
+                    <p class="text-slate-500 text-xs mt-0.5">Hardware-locked license verification with Ed25519 cryptographic signing</p>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+
+
+
+                When you first launch <code class="whitespace-nowrap text-cyan-800 bg-cyan-50 border border-cyan-200 px-1.5 py-0.5 rounded font-mono font-bold">RQL-Aegis.exe</code>, it computes an irreversible hardware hash of your CPU, motherboard, and disk:
+
+
+
+            </p>
+
+
+
+
+
+
+
+            <!-- macOS / Linux Terminal Window Frame -->
+
+
+
+            <div class="my-5 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+
+
+
+                <!-- Terminal Titlebar -->
+
+
+
+                <div class="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800">
+
+
+
+                    <div class="flex items-center gap-2">
+
+
+
+                        <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+
+
+
+                        <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+
+
+
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+
+
+
+                    </div>
+
+
+
+                    <span class="text-[11px] font-mono text-slate-400 font-semibold">Terminal: RQL-Aegis.exe (x86_64 Release)</span>
+
+
+
+                    <span class="text-[10px] font-mono text-emerald-400 font-semibold">Air-Gapped</span>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- Terminal Body -->
+
+
+
+                <div class="p-5 font-mono text-xs text-slate-200 leading-relaxed overflow-x-auto">
+
+
+
+                    <span class="text-slate-600">======================================================================</span><br />
+
+
+
+                    <span class="text-cyan-400 font-bold">🏛️ REHAN QUANT LAB — RQL AEGIS ENTERPRISE PROCESS SUPERVISOR</span><br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;On-Premises Execution &amp; Risk Protection Layer<br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;Official Portal : <span class="text-blue-400 font-semibold">https://rehanquantlab.com</span><br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;Support Desk&nbsp;&nbsp;&nbsp;&nbsp;: <span class="text-blue-400 font-semibold">founder@rehanquantlab.com</span><br />
+
+
+
+                    <span class="text-slate-600">======================================================================</span><br />
+
+
+
+                    <span class="text-amber-400 font-bold">🔒 RQL AEGIS MACHINE IDENTIFIER: [0B78F950D49FE5C5]</span><br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;Status: <span class="text-amber-300 font-semibold">UNLICENSED HARDWARE (Trial / Evaluation Mode)</span><br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;To acquire or activate a key, visit <span class="text-cyan-400">https://rehanquantlab.com</span><br />
+
+
+
+                    &nbsp;&nbsp;&nbsp;or email your Machine ID to: <span class="text-cyan-300 font-bold">founder@rehanquantlab.com</span>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+
+
+
+                <p class="text-xs text-slate-600 leading-relaxed">
+
+
+
+                    Email that Machine ID to <a class="text-indigo-600 font-semibold hover:underline cursor-pointer" onclick="handleSmartEmail(event)" href="mailto:founder@rehanquantlab.com" title="Click to copy & open in Gmail">founder@rehanquantlab.com</a>. Within minutes, you will receive an Ed25519-signed license key that permanently unlocks your copy on that workstation.
+
+
+
+                </p>
+
+
+
+                <a href="mailto:founder@rehanquantlab.com?subject=RQL%20Aegis%20Machine%20ID%20Activation&body=Hi%20Rehan,%20Here%20is%20my%20Machine%20ID%20for%20activation:%20" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-4 py-2 rounded-lg shrink-0 transition">
+
+
+
+                    Email Machine ID
+
+
+
+                </a>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PRICING & COMMERCIAL LICENSES (#pricing) -->
+
+
+
+<section class="py-16 bg-slate-50/70 border-b border-slate-200/80" id="pricing">
+
+
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
+        <div class="text-center mb-12">
+
+
+
+            <span class="text-xs font-bold uppercase tracking-widest text-cyan-800 bg-cyan-100/80 border border-cyan-300 px-3 py-1 rounded-full">Transparent Perpetual Pricing</span>
+
+
+
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">Choose Your Perpetual License</h2>
+
+
+
+            <p class="text-slate-600 text-sm max-w-xl mx-auto mt-2">Zero recurring subscriptions. Pay once, own perpetual operational rights forever.</p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+
+
+            <!-- Tier 1: Solo Quant Perpetual -->
+
+
+
+            <div class="bg-white border-2 border-cyan-500 rounded-3xl p-8 relative flex flex-col justify-between shadow-xl shadow-cyan-500/10">
+
+
+
+                <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+
+
+
+                    Most Popular
+
+
+
+                </div>
+
+
+
+                <div>
+
+
+
+                    <h3 class="text-xl font-extrabold text-slate-900">Solo Quant Perpetual</h3>
+
+
+
+                    <p class="text-slate-500 text-xs mt-1">For independent algorithmic traders and automated execution desks.</p>
+
+
+
+
+
+
+
+                    <div class="my-6">
+
+
+
+                        <div class="flex items-baseline gap-2">
+
+
+
+                            <span class="text-4xl font-black text-slate-900">$249</span>
+
+
+
+                            <span class="text-slate-500 text-sm font-semibold">/ ₹19,999</span>
+
+
+
+                        </div>
+
+
+
+                        <span class="text-xs text-emerald-600 font-bold block mt-1">One-time payment • Lifetime perpetual license</span>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Single-file native Windows executable (<code class="whitespace-nowrap text-cyan-800 font-mono text-xs bg-cyan-50 px-1 py-0.5 rounded">RQL-Aegis.exe</code>)</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>1 Workstation Hardware-Locked Machine Key</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Unix Domain Sockets, ZeroMQ / gRPC, Shared Memory (IPC) &amp; Named Pipes connectors</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Continuous Volatility Clamping (&sigma;-Adaptive) &amp; SHA-256 WAL</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Direct email support from Founder (Mohammad Rehan)</span>
+
+
+
+                        </li>
+
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="pt-8">
+
+                    <div class="mb-3.5 text-center">
+
+                        <span class="text-amber-800 font-bold bg-amber-50 border border-amber-300 px-3 py-1 rounded-full text-xs inline-block">🔥 FIRST 20 BUYERS ONLY: 50% OFF (Code: EARLYBIRD)</span>
+
+                        <div class="text-xs text-slate-500 mt-1.5 font-medium">Standard Base Price: <span class="line-through text-slate-400 font-semibold">$249 (&#8377;23,640)</span> &bull; Early Pass: <span class="text-emerald-700 font-bold">$125 / &#8377;11,820</span></div>
+
+                    </div>
+
+
+
+                    <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-3.5 px-6 rounded-xl transition text-center block shadow-md shadow-cyan-600/20 btn-spring">
+
+
+
+                        Claim Early Pass — $125 / &#8377;11,820
+
+
+
+                    </a>
+
+
+
+                    <span class="text-[11px] text-slate-500 block text-center mt-2">Instant automated email with download &amp; license key delivered via Gumroad upon payment</span>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Tier 2: Prop Desk & Source License -->
+
+
+
+            <div class="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition shadow-sm">
+
+
+
+                <div>
+
+
+
+                    <h3 class="text-xl font-extrabold text-slate-900">Prop Desk &amp; Source License</h3>
+
+
+
+                    <p class="text-slate-500 text-xs mt-1">For mission-critical enterprise systems, industrial IoT, and distributed infrastructure teams.</p>
+
+
+
+
+
+
+
+                    <div class="my-6">
+
+
+
+                        <div class="flex items-baseline gap-2">
+
+
+
+                            <span class="text-4xl font-black text-slate-900">$599</span>
+
+
+
+                            <span class="text-slate-500 text-sm font-semibold">/ ₹49,999</span>
+
+
+
+                        </div>
+
+
+
+                        <span class="text-xs text-indigo-600 font-bold block mt-1">Full source code included • Multi-workstation rights</span>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <ul class="space-y-3 text-sm text-slate-600">
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Everything in Solo Quant Perpetual</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span><strong>Full Unobfuscated Pure Native Rust Source Code Repository</strong></span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Up to 5 Hardware-Locked Workstations / Cloud Instances</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Multi-account risk aggregation &amp; portfolio-wide drawdowns</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>AWS 1-Click Server Docker deployment script</span>
+
+
+
+                        </li>
+
+
+
+                        <li class="flex items-start gap-2.5">
+
+
+
+                            <i class="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" data-lucide="check"></i>
+
+
+
+                            <span>Priority 1-on-1 systems integration consulting</span>
+
+
+
+                        </li>
+
+
+
+                    </ul>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="pt-8">
+
+
+
+                    <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20inquire%20about%20RQLAegisRiskMiddleware%20(Enterprise%20VIP%20Access)." target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-6 rounded-xl transition text-center block">
+
+
+
+                        Acquire Source License — $599
+
+
+
+                    </a>
+
+
+
+                    <span class="text-[11px] text-slate-500 block text-center mt-2">Secure checkout via Gumroad • Includes enterprise EULA contract &amp; private Git repository access</span>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- INSTITUTIONAL FOOTER (Matching index.html) -->
+
+
+
+<footer class="py-10 bg-slate-900 text-slate-400 text-xs border-t border-slate-800">
+
+
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+
+
+
+        <div>
+
+
+
+            <span class="font-bold text-white block text-sm">Rehan Quant Lab (Mohammad Rehan)</span>
+
+
+
+            <span>Headquarters: Patna, Bihar, India • Official Support: <a class="text-indigo-600 font-semibold hover:underline cursor-pointer" onclick="handleSmartEmail(event)" href="mailto:founder@rehanquantlab.com" title="Click to copy & open in Gmail">founder@rehanquantlab.com</a></span>
+
+
+
+        </div>
+
+
+
+        <div class="flex items-center gap-5 text-sm">
+
+
+
+            <a href="index.html" class="hover:text-white transition">Home</a>
+
+
+
+            <a href="projects.html" class="hover:text-white transition">Projects</a>
+
+
+
+            <a href="experience.html" class="hover:text-white transition">Experience</a>
+
+
+
+            <a href="legal.html" class="hover:text-white transition">Legal &amp; EULA</a>
+
+
+
+            <a href="contact.html" class="hover:text-white transition">Contact</a>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+
+    lucide.createIcons();
+
+
+
+    // Live Auto-Sync Clock
+
+
+
+    function updateClock() {
+
+
+
+        const el = document.getElementById('live-clock');
+
+
+
+        if (el) {
+
+
+
+            const d = new Date();
+
+
+
+            el.textContent = d.toLocaleTimeString() + ' IST';
+
+
+
+        }
+
+
+
+    }
+
+
+
+    setInterval(updateClock, 1000);
+
+
+
+    updateClock();
+
+
+
+
+
+
+
+    // Mobile menu toggle
+
+
+
+    const btn = document.getElementById('mobile-menu-btn');
+
+
+
+    const menu = document.getElementById('mobile-menu');
+
+
+
+    if (btn && menu) {
+
+
+
+        btn.addEventListener('click', () => {
+
+
+
+            menu.classList.toggle('hidden');
+
+
+
+        });
+
+
+
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+<script src="lively_motion.js" defer></script>
+</body>
+
+
+
+</html>

@@ -1,8 +1,8 @@
 {
   "timestamp": "2026-10-31",
-  "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
+  "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
   "total_html_files": 10,
-  "total_word_count": 7829,
+  "total_word_count": 6255,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
@@ -10,73 +10,73 @@
   "keyword_matrix": {
     "pos software": {
       "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
+      "count": 1,
+      "density_pct": 0.02
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 4,
+      "density_pct": 0.06
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 43,
+      "density_pct": 0.69
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 18,
+      "density_pct": 0.29
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 11,
+      "density_pct": 0.18
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 18,
+      "density_pct": 0.29
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.05
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 32,
+      "density_pct": 0.51
     },
     "sovereign computing": {
       "keyword": "sovereign computing",
       "count": 2,
       "density_pct": 0.03
     },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 6,
-      "density_pct": 0.08
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 6,
-      "density_pct": 0.08
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 9,
-      "density_pct": 0.11
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 1,
+      "density_pct": 0.02
     },
     "zero monthly fee": {
       "keyword": "zero monthly fee",
       "count": 2,
       "density_pct": 0.03
     },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 34,
-      "density_pct": 0.43
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 1,
+      "density_pct": 0.02
     },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 2,
-      "density_pct": 0.03
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 10,
-      "density_pct": 0.13
-    },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 4,
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 3,
       "density_pct": 0.05
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 43,
-      "density_pct": 0.55
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 21,
-      "density_pct": 0.27
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 30,
-      "density_pct": 0.38
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 14,
+      "density_pct": 0.22
     }
   },
   "meta_audits": [
@@ -104,9 +104,11 @@
       "desc_length": 134,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true,
+      "has_schema_engine": false,
       "has_og_tags": true,
-      "findings": []
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine"
+      ]
     },
     {
       "file": "contact.html",
@@ -139,8 +141,8 @@
       "title": "mohammad rehan | founder @ rehan quant lab &amp; systems architect",
       "title_length": 66,
       "title_valid": true,
-      "description": "founder & systems architect at rehan quant lab. architect of expressbill pos software, rql aegis, and sovereign computing desktop systems with zero monthly fee.",
-      "desc_length": 160,
+      "description": "founder & systems architect at rehan quant lab. creator of rql documentshield™, rql whispervault™, and bare-metal high-throughput distributed systems.",
+      "desc_length": 150,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -156,9 +158,10 @@
       "desc_length": 130,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true,
+      "has_schema_engine": false,
       "has_og_tags": false,
       "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
         "Missing OpenGraph social sharing meta tags"
       ]
     },
@@ -184,9 +187,10 @@
       "desc_length": 138,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true,
+      "has_schema_engine": false,
       "has_og_tags": false,
       "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
         "Missing OpenGraph social sharing meta tags"
       ]
     },
@@ -221,5 +225,5 @@
   "verdict": "TITANIUM A+ COMPLIANT",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 19836
+  "execution_micros": 19018
 }

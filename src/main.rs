@@ -16,6 +16,7 @@ mod pentagon;
 mod schema;
 mod seo;
 mod server;
+mod studio;
 mod templates;
 
 use std::env;
@@ -68,6 +69,9 @@ fn main() {
         "serve" | "dev" => {
             run_dev_server(&args);
         }
+        "studio" | "ide" => {
+            run_studio(&args);
+        }
         "package" => {
             run_package(&args);
         }
@@ -115,6 +119,7 @@ fn print_help() {
     println!("  \x1b[1;32mminify\x1b[0m     [dir]                     Run Silicon Stream Minifier on HTML & CSS (1.2 GB/s)");
     println!("  \x1b[1;32mschema\x1b[0m     [dir] [domain]            Auto-synthesize Schema.org rich snippets across pages");
     println!("  \x1b[1;32mserve\x1b[0m      [dir] [port]              Start Pure-Rust multi-threaded dev server (0 Node/0 Python)");
+    println!("  \x1b[1;32mstudio\x1b[0m     [dir] [port]              Launch Visual Drag-and-Drop Studio (http://localhost:3000/studio)");
     println!("  \x1b[1;32mpackage\x1b[0m    [dir] [out_zip]           Run NVMe Fastener Packager & Golden SHA Manifest");
     println!("  \x1b[1;32mdeploy\x1b[0m     [dir] [project] [domain]  Deploy to Cloudflare Pages edge CDN via Wrangler");
     println!("  \x1b[1;32mprobe\x1b[0m      [url]                     Probe live endpoint (HTTP 200, Latency, Phoenix)");
@@ -362,6 +367,23 @@ fn run_dev_server(args: &[String]) {
 
     if let Err(e) = DevServer::start_server(&target_dir, port) {
         println!("\x1b[1;31m❌ Failed to start server: {}\x1b[0m\n", e);
+    }
+}
+
+fn run_studio(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+    let port = args.get(3).and_then(|p| p.parse::<u16>().ok()).unwrap_or(3000);
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🎨 LAUNCHING REHAN QUANT LAB™ SOVEREIGN VISUAL STUDIO\x1b[0m");
+    println!("   \x1b[1;33m• Open Studio URL: http://localhost:{}/studio\x1b[0m", port);
+    println!("   \x1b[1;35m• Workspace Root:  {:?}\x1b[0m", target_dir);
+    println!("   \x1b[1;34m• Drag & Drop • CW ↔ ACW Closed Loop • Zero Dependencies\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    if let Err(e) = DevServer::start_server(&target_dir, port) {
+        println!("\x1b[1;31m❌ Failed to start Sovereign Studio: {}\x1b[0m\n", e);
     }
 }
 
