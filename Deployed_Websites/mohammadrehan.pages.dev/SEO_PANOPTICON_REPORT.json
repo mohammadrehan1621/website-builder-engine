@@ -1,13 +1,33 @@
 {
   "timestamp": "2026-10-31",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
-  "total_html_files": 9,
-  "total_word_count": 10639,
+  "total_html_files": 10,
+  "total_word_count": 10685,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 4,
+      "density_pct": 0.04
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 10,
+      "density_pct": 0.09
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 43,
+      "density_pct": 0.4
+    },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 1,
+      "density_pct": 0.01
+    },
     "quantitative": {
       "keyword": "quantitative",
       "count": 23,
@@ -15,43 +35,23 @@
     },
     "deterministic": {
       "keyword": "deterministic",
-      "count": 36,
-      "density_pct": 0.34
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 10,
-      "density_pct": 0.09
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 5,
-      "density_pct": 0.05
-    },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 12,
-      "density_pct": 0.11
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 2,
-      "density_pct": 0.02
+      "count": 37,
+      "density_pct": 0.35
     },
     "lifetime license": {
       "keyword": "lifetime license",
       "count": 22,
       "density_pct": 0.21
     },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 1,
-      "density_pct": 0.01
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 6,
+      "density_pct": 0.06
     },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 4,
-      "density_pct": 0.04
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 2,
+      "density_pct": 0.02
     },
     "sovereign computing": {
       "keyword": "sovereign computing",
@@ -63,23 +63,39 @@
       "count": 53,
       "density_pct": 0.5
     },
-    "offline billing": {
-      "keyword": "offline billing",
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
       "count": 2,
       "density_pct": 0.02
     },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 6,
-      "density_pct": 0.06
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 12,
+      "density_pct": 0.11
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 42,
-      "density_pct": 0.39
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 5,
+      "density_pct": 0.05
     }
   },
   "meta_audits": [
+    {
+      "file": "404.html",
+      "title": "404 — sovereign route not found | rehan quant lab",
+      "title_length": 49,
+      "title_valid": true,
+      "description": "the requested sovereign endpoint was not located on this node. redirecting to rehan quant lab headquarters.",
+      "desc_length": 107,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": false,
+      "has_og_tags": false,
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
+        "Missing OpenGraph social sharing meta tags"
+      ]
+    },
     {
       "file": "aegis.html",
       "title": "rql aegis™ process supervisor | rehan quant lab",
@@ -215,5 +231,5 @@
   "verdict": "TITANIUM A+ COMPLIANT",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 23807
+  "execution_micros": 25355
 }
