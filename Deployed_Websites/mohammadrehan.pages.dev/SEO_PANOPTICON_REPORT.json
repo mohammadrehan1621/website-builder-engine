@@ -1,143 +1,219 @@
 {
-  "timestamp": "2026-10-30",
-  "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
+  "timestamp": "2026-10-31",
+  "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
   "total_html_files": 9,
-  "total_word_count": 21470,
+  "total_word_count": 10639,
   "broken_links_count": 0,
   "broken_links": [],
+  "broken_assets_count": 0,
+  "broken_assets": [],
   "keyword_matrix": {
-    "offline billing": {
-      "count": 3,
-      "density_pct": 0.01
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 23,
+      "density_pct": 0.22
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 36,
+      "density_pct": 0.34
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 10,
+      "density_pct": 0.09
+    },
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 5,
+      "density_pct": 0.05
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 12,
+      "density_pct": 0.11
     },
     "zero monthly fee": {
+      "keyword": "zero monthly fee",
       "count": 2,
-      "density_pct": 0.01
+      "density_pct": 0.02
     },
     "lifetime license": {
+      "keyword": "lifetime license",
       "count": 22,
-      "density_pct": 0.1
-    },
-    "air-gapped": {
-      "count": 53,
-      "density_pct": 0.25
+      "density_pct": 0.21
     },
     "pos software": {
-      "count": 2,
+      "keyword": "pos software",
+      "count": 1,
       "density_pct": 0.01
     },
     "desktop software": {
-      "count": 6,
-      "density_pct": 0.03
-    },
-    "expressbill": {
-      "count": 15,
-      "density_pct": 0.07
-    },
-    "storeflow": {
-      "count": 6,
-      "density_pct": 0.03
-    },
-    "sovereign computing": {
-      "count": 2,
-      "density_pct": 0.01
-    },
-    "systems architect": {
-      "count": 15,
-      "density_pct": 0.07
-    },
-    "documentshield": {
-      "count": 8,
+      "keyword": "desktop software",
+      "count": 4,
       "density_pct": 0.04
     },
-    "rehan quant lab": {
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 2,
+      "density_pct": 0.02
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
       "count": 53,
-      "density_pct": 0.25
+      "density_pct": 0.5
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 2,
+      "density_pct": 0.02
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 6,
+      "density_pct": 0.06
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 42,
+      "density_pct": 0.39
     }
   },
   "meta_audits": [
     {
       "file": "aegis.html",
+      "title": "rql aegis™ process supervisor | rehan quant lab",
       "title_length": 47,
       "title_valid": true,
+      "description": "high-availability deterministic process supervisor with continuous invariant monitoring and sha-256 cryptographic write-ahead logging.",
       "desc_length": 134,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": false,
+      "has_og_tags": true,
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine"
+      ]
     },
     {
       "file": "contact.html",
+      "title": "contact mohammad rehan | founder @ rehan quant lab",
       "title_length": 50,
       "title_valid": true,
+      "description": "direct engineering contact and consultation with mohammad rehan, founder and lead systems architect at rehan quant lab.",
       "desc_length": 119,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "experience.html",
+      "title": "experience & career timeline | mohammad rehan",
       "title_length": 45,
       "title_valid": true,
+      "description": "engineering track record, systems architecture experience, and quantitative software milestones of mohammad rehan at rehan quant lab.",
       "desc_length": 133,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "index.html",
+      "title": "mohammad rehan | founder @ rehan quant lab &amp; systems architect",
       "title_length": 66,
       "title_valid": true,
+      "description": "founder & systems architect at rehan quant lab. architect of expressbill pos software, rql aegis, and sovereign computing desktop systems with zero monthly fee.",
       "desc_length": 160,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "legal.html",
+      "title": "legal & license agreement | rehan quant lab",
       "title_length": 43,
       "title_valid": true,
+      "description": "official master software license, saas terms of service, and statutory risk disclosures for rehan quant lab technology interfaces.",
       "desc_length": 130,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": false,
+      "has_og_tags": false,
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
+        "Missing OpenGraph social sharing meta tags"
+      ]
     },
     {
       "file": "projects.html",
+      "title": "enterprise software & projects | rehan quant lab",
       "title_length": 48,
       "title_valid": true,
+      "description": "portfolio of air-gapped desktop business suites, pos billing software, and high-availability quantitative engines developed by mohammad rehan.",
       "desc_length": 142,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "react_portal.html",
+      "title": "mohammad rehan | founder @ rehan quant lab — react 3d sovereign portal",
       "title_length": 70,
       "title_valid": true,
+      "description": "founder & lead systems architect @ rehan quant lab. powered by react, gsap, framer motion, three.js 3d webgl, and rust webassembly engine.",
       "desc_length": 138,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": false,
+      "has_og_tags": false,
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
+        "Missing OpenGraph social sharing meta tags"
+      ]
     },
     {
       "file": "store.html",
+      "title": "commercial desktop software store | rehan quant lab",
       "title_length": 51,
       "title_valid": true,
+      "description": "air-gapped desktop business software for retail, accounting, and quant institutions. zero monthly fees, lifetime licenses on gumroad.",
       "desc_length": 133,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": true,
+      "has_og_tags": false,
+      "findings": [
+        "Missing OpenGraph social sharing meta tags"
+      ]
     },
     {
       "file": "vault.html",
+      "title": "rql founder sovereign studio • cw & acw engine",
       "title_length": 46,
       "title_valid": true,
+      "description": "rehan quant lab founder cryptographic studio & cw/acw bi-directional sovereign license engine",
       "desc_length": 93,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": true
+      "has_schema_engine": false,
+      "has_og_tags": false,
+      "findings": [
+        "Missing Schema.org JSON-LD structured data engine",
+        "Missing OpenGraph social sharing meta tags"
+      ]
     }
   ],
   "seo_panopticon_score": 100,
-  "verdict": "TITANIUM A+ COMPLIANT"
+  "verdict": "TITANIUM A+ COMPLIANT",
+  "sitemap_generated": true,
+  "robots_generated": true,
+  "execution_micros": 23807
 }

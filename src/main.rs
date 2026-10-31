@@ -11,6 +11,7 @@ mod node3_atlas_sentinel;
 mod node4_rql_packager;
 mod node5_deploy_engine;
 mod pentagon;
+mod seo;
 mod templates;
 
 use std::env;
@@ -23,6 +24,7 @@ use node3_atlas_sentinel::AtlasSentinelEngine;
 use node4_rql_packager::RqlPackagerEngine;
 use node5_deploy_engine::DeployEngine;
 use pentagon::PentagonOrchestrator;
+use seo::SeoEngine;
 
 fn main() {
     print_banner();
@@ -42,6 +44,9 @@ fn main() {
         }
         "audit" => {
             run_sentinel_audit(&args);
+        }
+        "seo" | "panopticon" => {
+            run_seo_panopticon(&args);
         }
         "package" => {
             run_package(&args);
@@ -84,7 +89,8 @@ fn print_help() {
     println!("  \x1b[1;32mpentagon\x1b[0m   [dir] [project] [domain]  Execute Full 5-Node Closed Loop (CW -> ACW)");
     println!("  \x1b[1;32mcw\x1b[0m         [dir] [project] [domain]  Run Forward Velocity (Synthesis -> Packaging)");
     println!("  \x1b[1;32macw\x1b[0m        [dir] [project] [domain]  Run Reverse Defense (Manifest -> Chaos -> Edge)");
-    println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 8-Pillar Titanium Sentinel Quality Gate");
+    println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 9-Pillar Titanium Sentinel Quality Gate");
+    println!("  \x1b[1;32mseo\x1b[0m        [dir] [domain]            Run Pure-Rust Open-SEO Panopticon & Sitemaps");
     println!("  \x1b[1;32mpackage\x1b[0m    [dir] [out_zip]           Run NVMe Fastener Packager & Golden SHA Manifest");
     println!("  \x1b[1;32mdeploy\x1b[0m     [dir] [project] [domain]  Deploy to Cloudflare Pages edge CDN via Wrangler");
     println!("  \x1b[1;32mprobe\x1b[0m      [url]                     Probe live endpoint (HTTP 200, Latency, Phoenix)");
@@ -149,7 +155,7 @@ fn run_sentinel_audit(args: &[String]) {
     let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
     let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
 
-    println!("\x1b[1;35m🛡️ EXECUTING 8-PILLAR TITANIUM QUALITY AUDIT ON {:?}\x1b[0m\n", target_dir);
+    println!("\x1b[1;35m🛡️ EXECUTING 9-PILLAR TITANIUM QUALITY AUDIT ON {:?}\x1b[0m\n", target_dir);
     match AtlasSentinelEngine::audit_deployed_directory(&target_dir) {
         Ok(reports) => {
             for r in &reports {
@@ -170,6 +176,89 @@ fn run_sentinel_audit(args: &[String]) {
             );
         }
         Err(e) => println!("\x1b[1;31m❌ Audit error: {}\x1b[0m\n", e),
+    }
+}
+
+fn run_seo_panopticon(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+    let domain = args.get(3).cloned().unwrap_or_else(|| "rehanquantlab.com".to_string());
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🦀 OPEN-SEO PANOPTICON ENGINE (100% PURE NATIVE RUST)\x1b[0m");
+    println!("\x1b[1;33m   Target Directory: {:?}\x1b[0m", target_dir);
+    println!("\x1b[1;35m   Canonical Domain: https://{}\x1b[0m", domain);
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    match SeoEngine::execute_panopticon_suite(&target_dir, &domain) {
+        Ok(report) => {
+            // 1. SERP Viewport Table
+            println!("\x1b[1;34m1. SERP VIEWPORT & META INVARIANT (ZERO TRUNCATION GUARANTEE):\x1b[0m");
+            for m in &report.meta_audits {
+                let status_icon = if m.title_valid && m.desc_valid && m.has_canonical { "🟢" } else { "⚠️" };
+                println!(
+                    "   {} \x1b[1;36m{:<22}\x1b[0m | Title: {:>2}c ({}) | Desc: {:>3}c ({}) | Canon: {} | Schema: {}",
+                    status_icon,
+                    m.file,
+                    m.title_length,
+                    if m.title_valid { "PASS" } else { "CLIP" },
+                    m.desc_length,
+                    if m.desc_valid { "PASS" } else { "CLIP" },
+                    if m.has_canonical { "YES" } else { "NO" },
+                    if m.has_schema_engine { "YES" } else { "NO" }
+                );
+                for finding in &m.findings {
+                    println!("      \x1b[1;31m• {}\x1b[0m", finding);
+                }
+            }
+            println!();
+
+            // 2. Broken Link & Image Spider
+            println!("\x1b[1;34m2. RECURSIVE DISK SPIDER (ASSETS & LINKS):\x1b[0m");
+            if report.broken_links.is_empty() && report.broken_assets.is_empty() {
+                println!("   \x1b[1;32m🟢 100% INTACT: Zero broken links and zero missing assets detected.\x1b[0m\n");
+            } else {
+                for l in &report.broken_links {
+                    println!("   \x1b[1;31m• [BROKEN LINK]: {}\x1b[0m", l);
+                }
+                for a in &report.broken_assets {
+                    println!("   \x1b[1;31m• [BROKEN ASSET]: {}\x1b[0m", a);
+                }
+                println!();
+            }
+
+            // 3. Keyword Vector Density Matrix
+            println!("\x1b[1;34m3. HIGH-INTENT KEYWORD VECTOR DENSITY MATRIX (TOTAL WORDS: {}):\x1b[0m", report.total_word_count);
+            let mut kw_vec: Vec<_> = report.keyword_matrix.values().collect();
+            kw_vec.sort_by(|a, b| b.count.cmp(&a.count));
+            for kw in kw_vec {
+                if kw.count > 0 {
+                    println!(
+                        "   \x1b[1;33m• {:<24}\x1b[0m : {:>3} hits | Density: {:>5.2}%",
+                        kw.keyword, kw.count, kw.density_pct
+                    );
+                }
+            }
+            println!();
+
+            // 4. Sitemap & Robots
+            println!("\x1b[1;34m4. SEARCH ENGINE ASSET SYNCHRONIZATION:\x1b[0m");
+            println!("   • sitemap.xml:  {}", if report.sitemap_generated { "🟢 Generated & Synchronized (ISO 8601)" } else { "🔴 Failed" });
+            println!("   • robots.txt:   {}", if report.robots_generated { "🟢 Synchronized Directives" } else { "🔴 Failed" });
+            println!("   • JSON Report:  🟢 Written to SEO_PANOPTICON_REPORT.json");
+            println!();
+
+            // Telemetry & Verdict
+            println!("\x1b[1;32m====================================================================\x1b[0m");
+            println!(
+                "\x1b[1;32m🎯 PANOPTICON SCORE: {}/100 | VERDICT: {} ({:.2?} execution)\x1b[0m",
+                report.seo_panopticon_score,
+                report.verdict,
+                std::time::Duration::from_micros(report.execution_micros)
+            );
+            println!("\x1b[1;32m====================================================================\x1b[0m\n");
+        }
+        Err(e) => println!("\x1b[1;31m❌ SEO Panopticon Audit failed: {}\x1b[0m\n", e),
     }
 }
 

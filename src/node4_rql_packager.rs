@@ -13,6 +13,8 @@ use sha2::{Digest, Sha256};
 use zip::write::SimpleFileOptions;
 use zip::ZipWriter;
 
+use crate::seo::SeoEngine;
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ManifestFileRecord {
     pub path: String,
@@ -33,13 +35,27 @@ pub struct WebsiteReleaseManifest {
 pub struct RqlPackagerEngine;
 
 impl RqlPackagerEngine {
-    /// 🔄 CW: High-Speed NVMe Packaging & Golden Manifest Generation
+    /// 🔄 CW: High-Speed NVMe Packaging with Automatic SEO Panopticon Synchronization
     pub fn package_directory(
         source_dir: &Path,
         zip_output_path: &Path,
         manifest_output_path: &Path,
         project_name: &str,
     ) -> std::io::Result<WebsiteReleaseManifest> {
+        Self::package_directory_with_domain(source_dir, zip_output_path, manifest_output_path, project_name, "rehanquantlab.com")
+    }
+
+    /// 🔄 CW: High-Speed NVMe Packaging with explicit Domain SEO binding
+    pub fn package_directory_with_domain(
+        source_dir: &Path,
+        zip_output_path: &Path,
+        manifest_output_path: &Path,
+        project_name: &str,
+        domain: &str,
+    ) -> std::io::Result<WebsiteReleaseManifest> {
+        // Invariant: Auto-generate/update sitemap.xml, robots.txt, and SEO report before packaging
+        let _ = SeoEngine::execute_panopticon_suite(source_dir, domain);
+
         let zip_file = File::create(zip_output_path)?;
         let mut zip_writer = ZipWriter::new(zip_file);
         let options = SimpleFileOptions::default()
@@ -149,26 +165,31 @@ impl RqlPackagerEngine {
     fn collect_files_recursive(
         root: &Path,
         current: &Path,
-        out: &mut Vec<(String, PathBuf)>,
+        file_list: &mut Vec<(String, PathBuf)>,
     ) -> std::io::Result<()> {
         if current.is_dir() {
             for entry in fs::read_dir(current)? {
                 let entry = entry?;
                 let path = entry.path();
-                let fname = entry.file_name().to_string_lossy().to_string();
+                let fname = path.file_name().unwrap_or_default().to_string_lossy();
 
-                // Skip VCS, temporary build directories, and manifest file
-                if fname.starts_with(".git") || fname == "target" || fname == "node_modules" || fname.ends_with(".zip") || fname == "RQL_WEBSITE_MANIFEST.json" {
+                // Skip output bundle, git directory, and manifest itself to prevent circular hashing
+                if fname == "website_bundle.zip" 
+                    || fname == "RQL_WEBSITE_MANIFEST.json" 
+                    || fname == ".git" 
+                    || fname == ".wrangler" 
+                    || fname.ends_with(".tmp") {
                     continue;
                 }
 
                 if path.is_dir() {
-                    Self::collect_files_recursive(root, &path, out)?;
+                    Self::collect_files_recursive(root, &path, file_list)?;
                 } else if path.is_file() {
-                    if let Ok(rel) = path.strip_prefix(root) {
-                        let rel_str = rel.to_string_lossy().replace('\\', "/");
-                        out.push((rel_str, path));
-                    }
+                    let rel = path.strip_prefix(root).map_err(|e| {
+                        std::io::Error::new(std::io::ErrorKind::Other, e.to_string())
+                    })?;
+                    let rel_str = rel.to_string_lossy().replace('\\', "/");
+                    file_list.push((rel_str, path));
                 }
             }
         }

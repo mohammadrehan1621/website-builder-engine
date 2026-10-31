@@ -100,19 +100,19 @@ impl PentagonOrchestrator {
         self.recorder.record(
             "NODE_3_ATLAS_SENTINEL",
             "CW_FORWARD",
-            "8_PILLAR_TITANIUM_AUDIT",
+            "9_PILLAR_TITANIUM_AUDIT",
             b"SENTINEL_GATE_CHECK",
             d3,
             if all_passed { "CERTIFIED" } else { "DEGRADED" },
-            &format!("Audited {} documents. Certified: {}", sentinel_reports.len(), all_passed),
+            &format!("Audited {} documents against 9 Titanium Pillars. Certified: {}", sentinel_reports.len(), all_passed),
         );
-        println!("   \x1b[1;35m[Node 3: Sentinel]\x1b[0m 8-Pillar Titanium Audit in {:>8.2?} (Certified: {})", t3.elapsed(), all_passed);
+        println!("   \x1b[1;35m[Node 3: Sentinel]\x1b[0m 9-Pillar Titanium Audit in {:>8.2?} (Certified: {})", t3.elapsed(), all_passed);
 
-        // 4. Node 4: RQL Packager NVMe Streaming Assembly
+        // 4. Node 4: RQL Packager NVMe Streaming Assembly & Auto SEO Panopticon
         let t4 = Instant::now();
         let zip_out = source_dir.join("website_bundle.zip");
         let manifest_out = source_dir.join("RQL_WEBSITE_MANIFEST.json");
-        let manifest = RqlPackagerEngine::package_directory(source_dir, &zip_out, &manifest_out, project_name)
+        let manifest = RqlPackagerEngine::package_directory_with_domain(source_dir, &zip_out, &manifest_out, project_name, domain)
             .map_err(|e| e.to_string())?;
         let d4 = t4.elapsed().as_micros() as u64;
         self.recorder.record(
@@ -210,7 +210,7 @@ impl PentagonOrchestrator {
             b"PILLAR_SCAN",
             d3,
             if all_certified { "TITANIUM_SAFE" } else { "NON_COMPLIANT" },
-            &format!("All {} docs verified against 8 Pillars", sentinel_reports.len()),
+            &format!("All {} docs verified against 9 Titanium Pillars", sentinel_reports.len()),
         );
         println!("   \x1b[1;35m[Node 3 Reverse Sentinel]\x1b[0m Forensic Pillar Gate: {} in {:?}", 
             if all_certified { "TITANIUM APPROVED" } else { "ISSUES FOUND" }, t3.elapsed()

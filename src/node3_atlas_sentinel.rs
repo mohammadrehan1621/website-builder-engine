@@ -1,5 +1,5 @@
 // ============================================================================
-// REHAN QUANT LAB™ — NODE 3: ATLAS SENTINEL (8-PILLAR TITANIUM QUALITY GATE)
+// REHAN QUANT LAB™ — NODE 3: ATLAS SENTINEL (9-PILLAR TITANIUM QUALITY GATE)
 // "The Incorruptible Judge — 6-Second Deep Forensic Audit • Zero-Defect Gate"
 // Founder & Principal Systems Architect: Mohammad Rehan
 // ============================================================================
@@ -7,6 +7,8 @@
 use std::fs;
 use std::path::Path;
 use serde::{Deserialize, Serialize};
+
+use crate::seo::SeoEngine;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PillarAudit {
@@ -31,14 +33,24 @@ pub struct SentinelAuditReport {
 pub struct AtlasSentinelEngine;
 
 impl AtlasSentinelEngine {
-    /// 🔄 CW: 8-Pillar Titanium Quality Audit
+    /// 🔄 CW: 9-Pillar Titanium Quality Audit (Stand-alone string)
+    #[allow(dead_code)]
     pub fn audit_html_content(target_label: &str, html: &str) -> SentinelAuditReport {
-        let mut pillars = Vec::with_capacity(8);
+        Self::audit_html_content_with_base(target_label, html, None)
+    }
 
-        // Pillar 1: Zero Broken Assets & Links
+    /// 🔄 CW: 9-Pillar Titanium Quality Audit with Local Disk Spider
+    pub fn audit_html_content_with_base(
+        target_label: &str,
+        html: &str,
+        base_dir: Option<&Path>,
+    ) -> SentinelAuditReport {
+        let mut pillars = Vec::with_capacity(9);
+
+        // Pillar 1: Zero Broken Assets & Links (Spider Checked)
         let mut p1_findings = Vec::new();
         let mut p1_pass = true;
-        if html.contains("src=\"#\"") || html.contains("href=\"#\"") && !html.contains("href=\"#") {
+        if html.contains("src=\"#\"") || (html.contains("href=\"#\"") && !html.contains("href=\"#main")) {
             p1_findings.push("Detected placeholder link href='#'".to_string());
             p1_pass = false;
         }
@@ -46,9 +58,28 @@ impl AtlasSentinelEngine {
             p1_findings.push("Detected fake/broken asset paths".to_string());
             p1_pass = false;
         }
+
+        if let Some(dir) = base_dir {
+            let spider = SeoEngine::spider_broken_links_and_assets(dir, target_label, html);
+            if !spider.passed {
+                for b_link in &spider.broken_links {
+                    p1_findings.push(format!("Spider detected broken href: {}", b_link));
+                }
+                for b_asset in &spider.broken_assets {
+                    p1_findings.push(format!("Spider detected missing src: {}", b_asset));
+                }
+                p1_pass = false;
+            } else {
+                p1_findings.push(format!(
+                    "Spider verified {} links & {} local assets on disk intact",
+                    spider.total_links_checked, spider.total_assets_checked
+                ));
+            }
+        }
+
         pillars.push(PillarAudit {
             pillar_num: 1,
-            name: "Zero Broken Assets & Links".to_string(),
+            name: "Zero Broken Assets & Links Spider".to_string(),
             passed: p1_pass,
             score: if p1_pass { 100 } else { 40 },
             findings: p1_findings,
@@ -168,6 +199,24 @@ impl AtlasSentinelEngine {
             findings: p8_findings,
         });
 
+        // Pillar 9: Open-SEO Panopticon & SERP Viewport Invariant
+        let serp = SeoEngine::audit_serp_viewport(target_label, html);
+        let p9_pass = serp.title_valid && serp.desc_valid && serp.has_canonical;
+        let mut p9_findings = Vec::new();
+        p9_findings.push(format!("SERP Title: '{}' ({} chars, Valid: {})", serp.title, serp.title_length, serp.title_valid));
+        p9_findings.push(format!("SERP Desc:  '{}' ({} chars, Valid: {})", serp.description, serp.desc_length, serp.desc_valid));
+        p9_findings.push(format!("Canonical: {}, JSON-LD Schema: {}, OG: {}", serp.has_canonical, serp.has_schema_engine, serp.has_og_tags));
+        for finding in serp.findings {
+            p9_findings.push(format!("Notice: {}", finding));
+        }
+        pillars.push(PillarAudit {
+            pillar_num: 9,
+            name: "Open-SEO Panopticon & SERP Viewport".to_string(),
+            passed: p9_pass,
+            score: if p9_pass { 100 } else { 60 },
+            findings: p9_findings,
+        });
+
         let total = pillars.len();
         let passed = pillars.iter().filter(|p| p.passed).count();
         let avg_score = (pillars.iter().map(|p| p.score).sum::<u32>()) / (total as u32);
@@ -194,9 +243,13 @@ impl AtlasSentinelEngine {
                 for entry in entries.flatten() {
                     let path = entry.path();
                     if path.is_file() && path.extension().and_then(|e| e.to_str()) == Some("html") {
+                        let fname = path.file_name().unwrap_or_default().to_string_lossy().to_string();
+                        // Ignore third-party verification files like googlecb5b21...
+                        if fname.starts_with("google") {
+                            continue;
+                        }
                         if let Ok(content) = fs::read_to_string(&path) {
-                            let fname = path.file_name().unwrap_or_default().to_string_lossy().to_string();
-                            let report = Self::audit_html_content(&fname, &content);
+                            let report = Self::audit_html_content_with_base(&fname, &content, Some(dir));
                             reports.push(report);
                         }
                     }
