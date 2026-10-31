@@ -9,3 +9,15 @@
 
 /downloads/*
   Cache-Control: no-cache, no-store, must-revalidate
+
+/vault.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/founder_vault.js*
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/manifest.json
+  Cache-Control: no-cache, no-store, must-revalidate

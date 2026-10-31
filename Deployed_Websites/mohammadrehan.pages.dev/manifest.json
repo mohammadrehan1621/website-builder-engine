@@ -1,0 +1,25 @@
+{
+  "name": "RQL Founder Sovereign Studio",
+  "short_name": "RQL Studio",
+  "description": "Founder Cryptographic Authority & CW/ACW Bi-Directional Sovereign License Engine",
+  "start_url": "/vault.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0B0F19",
+  "theme_color": "#10B981",
+  "icons": [
+    {
+      "src": "/emblem.webp",
+      "sizes": "192x192 512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og_preview.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-10-30",
+  "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
+  "total_html_files": 9,
+  "total_word_count": 21470,
+  "broken_links_count": 0,
+  "broken_links": [],
+  "keyword_matrix": {
+    "offline billing": {
+      "count": 3,
+      "density_pct": 0.01
+    },
+    "zero monthly fee": {
+      "count": 2,
+      "density_pct": 0.01
+    },
+    "lifetime license": {
+      "count": 22,
+      "density_pct": 0.1
+    },
+    "air-gapped": {
+      "count": 53,
+      "density_pct": 0.25
+    },
+    "pos software": {
+      "count": 2,
+      "density_pct": 0.01
+    },
+    "desktop software": {
+      "count": 6,
+      "density_pct": 0.03
+    },
+    "expressbill": {
+      "count": 15,
+      "density_pct": 0.07
+    },
+    "storeflow": {
+      "count": 6,
+      "density_pct": 0.03
+    },
+    "sovereign computing": {
+      "count": 2,
+      "density_pct": 0.01
+    },
+    "systems architect": {
+      "count": 15,
+      "density_pct": 0.07
+    },
+    "documentshield": {
+      "count": 8,
+      "density_pct": 0.04
+    },
+    "rehan quant lab": {
+      "count": 53,
+      "density_pct": 0.25
+    }
+  },
+  "meta_audits": [
+    {
+      "file": "aegis.html",
+      "title_length": 47,
+      "title_valid": true,
+      "desc_length": 134,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "contact.html",
+      "title_length": 50,
+      "title_valid": true,
+      "desc_length": 119,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "experience.html",
+      "title_length": 45,
+      "title_valid": true,
+      "desc_length": 133,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "index.html",
+      "title_length": 66,
+      "title_valid": true,
+      "desc_length": 160,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "legal.html",
+      "title_length": 43,
+      "title_valid": true,
+      "desc_length": 130,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "projects.html",
+      "title_length": 48,
+      "title_valid": true,
+      "desc_length": 142,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "react_portal.html",
+      "title_length": 70,
+      "title_valid": true,
+      "desc_length": 138,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "store.html",
+      "title_length": 51,
+      "title_valid": true,
+      "desc_length": 133,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    },
+    {
+      "file": "vault.html",
+      "title_length": 46,
+      "title_valid": true,
+      "desc_length": 93,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true
+    }
+  ],
+  "seo_panopticon_score": 100,
+  "verdict": "TITANIUM A+ COMPLIANT"
+}
