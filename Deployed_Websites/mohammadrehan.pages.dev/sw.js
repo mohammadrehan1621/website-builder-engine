@@ -1,7 +1,6 @@
-// RQL Founder Sovereign Service Worker v2.6 (Network-First with Instant Offline Fallback)
-const CACHE_NAME = 'rql-founder-vault-v2.6';
+// RQL Sovereign Service Worker v3.1 (Network-First with Instant Cache Purge)
+const CACHE_NAME = 'rql-sovereign-v3.1';
 const ASSETS_TO_CACHE = [
-  '/vault.html',
   '/manifest.json',
   '/emblem.webp',
   '/favicon.svg',

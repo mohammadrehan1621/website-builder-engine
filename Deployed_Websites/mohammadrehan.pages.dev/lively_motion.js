@@ -14,35 +14,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tickerItems = [
         {
-            label: "⭐ NEW RELEASE:",
+            label: "\u2B50 NEW RELEASE:",
             labelColor: "text-emerald-400",
-            html: "<strong>RQL DocumentShield™</strong> &bull; Enterprise Forensic PDF Redactor (<span class='text-emerald-400 font-bold'>$199 / ₹16,500</span>)",
+            html: "<strong>RQL DocumentShield&trade;</strong> &bull; Enterprise Forensic PDF Redactor (<span class='text-emerald-400 font-bold'>$199 USD / &#8377;18,887</span>)",
             url: "https://quantify17.gumroad.com/l/rql-documentshield",
             actionText: "Instant Checkout",
             actionColor: "text-emerald-400"
         },
         {
-            label: "⭐ NEW RELEASE:",
+            label: "\u2B50 NEW RELEASE:",
             labelColor: "text-sky-400",
-            html: "<strong>RQL WhisperVault™</strong> &bull; Air-Gapped AI Speech Intelligence (<span class='text-sky-400 font-bold'>$199 / ₹16,500</span>)",
+            html: "<strong>RQL WhisperVault&trade;</strong> &bull; Air-Gapped AI Speech Intelligence (<span class='text-sky-400 font-bold'>$199 USD / &#8377;18,887</span>)",
             url: "https://quantify17.gumroad.com/l/rql-whispervault",
             actionText: "Instant Checkout",
             actionColor: "text-sky-400"
         },
         {
-            label: "SOVEREIGN TITAN:",
+            label: "\uD83D\uDC51 SOURCE CODE VIP:",
             labelColor: "text-amber-400",
-            html: "<strong>100% Air-Gapped Silicon</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop Ownership",
-            url: "store.html",
-            actionText: "Explore Suites",
+            html: "<strong>Enterprise Source Code Edition</strong> (&#8377;75,835) &bull; Direct Founder WhatsApp Onboarding",
+            url: "https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20Enterprise%20Source%20Code%20Edition%20(%E2%82%B975,835).%20Please%20assist%20with%20founder%20onboarding.",
+            actionText: "VIP WhatsApp",
             actionColor: "text-amber-400"
         },
         {
-            label: "DIRECT FOUNDER:",
+            label: "SOVEREIGN TITAN:",
             labelColor: "text-teal-400",
-            html: "<strong>VIP Onboarding & Support</strong> &bull; Direct WhatsApp +91 70915 18548",
-            url: "https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20learn%20more%20about%20RQL%20Sovereign%20Software%20Suites.",
-            actionText: "Chat on WhatsApp",
+            html: "<strong>100% Pure Native Rust</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop License",
+            url: "store.html",
+            actionText: "Commercial Suites (2)",
             actionColor: "text-teal-400"
         }
     ];

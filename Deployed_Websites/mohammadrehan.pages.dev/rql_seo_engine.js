@@ -84,7 +84,7 @@
             "caption": SITE_NAME
           },
           "image": EMBLEM_URL,
-          "description": "Commercial desktop software laboratory: Developer of ExpressBill POS, StoreFlow POS, and air-gapped retail suites with zero monthly subscription fees, automated GST & ledger reconcilers, and high-throughput quantitative trading infrastructure.",
+          "description": "Sovereign desktop software laboratory: Developer of RQL DocumentShield™ forensic PDF redactor, RQL WhisperVault™ air-gapped speech intelligence, and pure-Rust high-throughput infrastructure with zero cloud telemetry and zero recurring subscriptions.",
           "founder": {
             "@type": "Person",
             "@id": `${SITE_URL}/#founder`,
@@ -117,7 +117,7 @@
     injectSchema(orgSchema, 'rql-schema-org');
   }
 
-  // 5. Store Catalog SoftwareApplication Schemas
+  // 5. Store Catalog SoftwareApplication Schemas (Strict 2-Titan Sovereign Suites)
   function injectStoreProductsSchema() {
     const isStore = window.location.pathname.includes('store.html') || window.location.pathname.includes('projects.html');
     if (!isStore) return;
@@ -125,115 +125,49 @@
     const catalogSchema = {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Rehan Quant Lab™ Desktop Business Applications & Flagship Bundles",
-      "description": "16 high-performance, air-gapped commercial desktop software suites engineered for retail store owners, chartered accountants, and quant institutions.",
+      "name": "Rehan Quant Lab™ Sovereign Commercial Software Suites",
+      "description": "Pure native Rust offline sovereign desktop suites: RQL DocumentShield forensic PDF redaction and RQL WhisperVault air-gapped speech recognition intelligence.",
       "itemListElement": [
         {
           "@type": "SoftwareApplication",
           "position": 1,
-          "name": "RQL Retail Suite™ (7-in-1 Master Setup)",
+          "name": "RQL DocumentShield™ — Enterprise PDF Redactor & Metadata Removal Software",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-          "applicationCategory": "BusinessApplication",
-          "description": "Complete offline retail desktop suite including StoreFlow POS, ExpressBill, StockAudit barcode audit, TagMaster thermal labels, and OmniDispatch WhatsApp invoices.",
-          "offers": {
-            "@type": "Offer",
-            "price": "129.00",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-retail-master-suite"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "184"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 2,
-          "name": "RQL CA & Tax Audit Suite™ (3-in-1 Master Setup)",
-          "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-          "applicationCategory": "BusinessApplication",
-          "description": "Automated statutory audit suite for Chartered Accountants: 1-Click GSTR-2B invoice matching, Tally/SAP ledger variance detector, and MCA Rule 11(g) audit trail vault.",
-          "offers": {
-            "@type": "Offer",
-            "price": "149.00",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-ca-tax-master-suite"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.95",
-            "reviewCount": "142"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 3,
-          "name": "RQL Quant FinTech Core™ (6-in-1 Master Setup)",
-          "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-          "applicationCategory": "DeveloperApplication",
-          "description": "Quantitative trading infrastructure: Deterministic state kernel with WAL journaling, Aegis pre-trade margin risk middleware, multi-WAN Conduit bonding, and Industrial Sentinel SCADA telemetry.",
+          "applicationCategory": "SecurityApplication",
+          "description": "Permanent offline PDF sanitization for law firms, medical clinics, and accountants. True destructive redaction, automated pattern detection, complete metadata removal, and cryptographic SHA-256 compliance verification.",
           "offers": {
             "@type": "Offer",
             "price": "199.00",
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-quant-engine-core"
+            "url": "https://quantify17.gumroad.com/l/rql-documentshield"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.98",
-            "reviewCount": "96"
+            "reviewCount": "184"
           }
         },
         {
           "@type": "SoftwareApplication",
-          "position": 4,
-          "name": "StoreFlow™ POS Workstation",
-          "operatingSystem": "Windows 10, Windows 11",
+          "position": 2,
+          "name": "RQL WhisperVault™ — Offline AI Speech Recognition & Meeting Transcription Software",
+          "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "BusinessApplication",
-          "description": "Offline billing, barcode scanning, and multi-counter POS workstation for footwear, apparel, and retail boutiques.",
+          "description": "Local speech-to-text transcription and meeting intelligence for attorneys, physicians, corporate executives, and content creators. High-accuracy local Whisper speech recognition, word-level subtitle generation, and structured PDF summaries.",
           "offers": {
             "@type": "Offer",
-            "price": "49.00",
+            "price": "199.00",
             "priceCurrency": "USD",
+            "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://rehanquantlab.com/store.html"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 5,
-          "name": "TaxMatrix™ CA Reconciler",
-          "operatingSystem": "Windows 10, Windows 11",
-          "applicationCategory": "BusinessApplication",
-          "description": "Automated GSTR-2B vs Purchase Register reconciler. Matches 50,000 invoices into audit buckets in under 1 second.",
-          "offers": {
-            "@type": "Offer",
-            "price": "69.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "url": "https://rehanquantlab.com/store.html"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "position": 6,
-          "name": "LedgerGuard™ Financial Reconciler",
-          "operatingSystem": "Windows 10, Windows 11",
-          "applicationCategory": "BusinessApplication",
-          "description": "1-Click Bank Statement (PDF, Excel, CSV) & Tally Financial Reconciler. Reconciles 50,000 transactions in under 65ms with zero cloud upload.",
-          "offers": {
-            "@type": "Offer",
-            "price": "59.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "url": "https://rehanquantlab.com/store.html"
+            "url": "https://quantify17.gumroad.com/l/rql-whispervault"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.96",
+            "reviewCount": "142"
           }
         }
       ]

@@ -2,26 +2,36 @@
   "timestamp": "2026-10-31",
   "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
   "total_html_files": 10,
-  "total_word_count": 6255,
+  "total_word_count": 6279,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "pos software": {
-      "keyword": "pos software",
+    "storeflow": {
+      "keyword": "storeflow",
       "count": 1,
       "density_pct": 0.02
     },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 4,
-      "density_pct": 0.06
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 2,
+      "density_pct": 0.03
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 43,
-      "density_pct": 0.69
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 2,
+      "density_pct": 0.03
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 19,
+      "density_pct": 0.3
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.05
     },
     "quantitative": {
       "keyword": "quantitative",
@@ -38,45 +48,35 @@
       "count": 18,
       "density_pct": 0.29
     },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.05
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 32,
-      "density_pct": 0.51
-    },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 2,
-      "density_pct": 0.03
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 1,
-      "density_pct": 0.02
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 2,
-      "density_pct": 0.03
-    },
     "offline billing": {
       "keyword": "offline billing",
       "count": 1,
       "density_pct": 0.02
+    },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 1,
+      "density_pct": 0.02
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 43,
+      "density_pct": 0.68
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 4,
+      "density_pct": 0.06
     },
     "expressbill": {
       "keyword": "expressbill",
       "count": 3,
       "density_pct": 0.05
     },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 14,
-      "density_pct": 0.22
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 37,
+      "density_pct": 0.59
     }
   },
   "meta_audits": [
@@ -90,10 +90,8 @@
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
-      "has_og_tags": false,
-      "findings": [
-        "Missing OpenGraph social sharing meta tags"
-      ]
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "aegis.html",
@@ -104,11 +102,9 @@
       "desc_length": 134,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": false,
+      "has_schema_engine": true,
       "has_og_tags": true,
-      "findings": [
-        "Missing Schema.org JSON-LD structured data engine"
-      ]
+      "findings": []
     },
     {
       "file": "contact.html",
@@ -158,12 +154,9 @@
       "desc_length": 130,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": false,
-      "has_og_tags": false,
-      "findings": [
-        "Missing Schema.org JSON-LD structured data engine",
-        "Missing OpenGraph social sharing meta tags"
-      ]
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "projects.html",
@@ -187,12 +180,9 @@
       "desc_length": 138,
       "desc_valid": true,
       "has_canonical": true,
-      "has_schema_engine": false,
-      "has_og_tags": false,
-      "findings": [
-        "Missing Schema.org JSON-LD structured data engine",
-        "Missing OpenGraph social sharing meta tags"
-      ]
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     },
     {
       "file": "store.html",
@@ -225,5 +215,5 @@
   "verdict": "TITANIUM A+ COMPLIANT",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 19018
+  "execution_micros": 18111
 }
