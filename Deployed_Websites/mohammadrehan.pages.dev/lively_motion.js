@@ -15,43 +15,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const tickerItems = [
         {
             label: "⭐ NEW RELEASE:",
-            labelColor: "text-sky-400",
-            html: "<strong>RQL Conduit Bonding Engine™</strong> &bull; Bare-Metal Rust Multi-WAN (<span class='text-sky-400 font-bold'>$60 / ₹4,999</span>)",
-            url: "https://quantify17.gumroad.com/l/RQLConduitBondingEngine",
-            actionText: "Instant Checkout",
-            actionColor: "text-sky-400"
-        },
-        {
-            label: "⭐ NEW RELEASE:",
-            labelColor: "text-teal-400",
-            html: "<strong>ExpressBill POS™</strong> &bull; 100% Offline Retail Suite & Touch PWA (<span class='text-teal-400 font-bold'>$49 / ₹3,999</span>)",
-            url: "https://quantify17.gumroad.com/l/ExpressBillPOS",
-            actionText: "Instant Checkout",
-            actionColor: "text-teal-400"
-        },
-        {
-            label: "LIVE COMMERCIAL:",
             labelColor: "text-emerald-400",
-            html: "<strong>Deterministic State Kernel™</strong> &bull; Sub-Microsecond Deterministic Invariants (<span class='text-emerald-400 font-bold'>$249 / ₹19,999</span>)",
-            url: "https://quantify17.gumroad.com/l/DeterministicStateKernel",
+            html: "<strong>RQL DocumentShield™</strong> &bull; Enterprise Forensic PDF Redactor (<span class='text-emerald-400 font-bold'>$199 / ₹16,500</span>)",
+            url: "https://quantify17.gumroad.com/l/rql-documentshield",
             actionText: "Instant Checkout",
             actionColor: "text-emerald-400"
         },
         {
-            label: "COMMERCIAL RELEASE:",
-            labelColor: "text-cyan-400",
-            html: "<strong>RQL Aegis™ Risk Middleware</strong> &bull; Sub-50ns Risk Evaluation Engine (<span class='text-cyan-400 font-bold'>$199 / ₹14,999</span>)",
-            url: "https://quantify17.gumroad.com/l/RQLAegisRiskMiddleware",
+            label: "⭐ NEW RELEASE:",
+            labelColor: "text-sky-400",
+            html: "<strong>RQL WhisperVault™</strong> &bull; Air-Gapped AI Speech Intelligence (<span class='text-sky-400 font-bold'>$199 / ₹16,500</span>)",
+            url: "https://quantify17.gumroad.com/l/rql-whispervault",
             actionText: "Instant Checkout",
-            actionColor: "text-cyan-400"
+            actionColor: "text-sky-400"
         },
         {
-            label: "FORENSIC AUDITOR:",
-            labelColor: "text-purple-400",
-            html: "<strong>Veritas Dossier™</strong> &bull; Air-Gapped Private Compliance Vault (<span class='text-purple-400 font-bold'>$149 / ₹11,999</span>)",
-            url: "https://quantify17.gumroad.com/l/VeritasDossierForensicAuditor",
-            actionText: "Instant Checkout",
-            actionColor: "text-purple-400"
+            label: "SOVEREIGN TITAN:",
+            labelColor: "text-amber-400",
+            html: "<strong>100% Air-Gapped Silicon</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop Ownership",
+            url: "store.html",
+            actionText: "Explore Suites",
+            actionColor: "text-amber-400"
+        },
+        {
+            label: "DIRECT FOUNDER:",
+            labelColor: "text-teal-400",
+            html: "<strong>VIP Onboarding & Support</strong> &bull; Direct WhatsApp +91 70915 18548",
+            url: "https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20learn%20more%20about%20RQL%20Sovereign%20Software%20Suites.",
+            actionText: "Chat on WhatsApp",
+            actionColor: "text-teal-400"
         }
     ];
 

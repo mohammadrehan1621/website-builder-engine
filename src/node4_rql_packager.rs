@@ -53,7 +53,10 @@ impl RqlPackagerEngine {
         project_name: &str,
         domain: &str,
     ) -> std::io::Result<WebsiteReleaseManifest> {
-        // Invariant: Auto-generate/update sitemap.xml, robots.txt, and SEO report before packaging
+        // 1. Invariant: Auto-enrich all pages with Schema.org JSON-LD structured data
+        let _ = crate::schema::SchemaEngine::enrich_directory_with_schemas(source_dir, domain);
+
+        // 2. Invariant: Auto-generate/update sitemap.xml, robots.txt, and SEO report before packaging
         let _ = SeoEngine::execute_panopticon_suite(source_dir, domain);
 
         let zip_file = File::create(zip_output_path)?;

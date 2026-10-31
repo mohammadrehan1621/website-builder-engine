@@ -5,13 +5,17 @@
 // ============================================================================
 
 mod blackbox;
+mod indexnow;
+mod minifier;
 mod node1_atlas;
 mod node2_aegis_phoenix;
 mod node3_atlas_sentinel;
 mod node4_rql_packager;
 mod node5_deploy_engine;
 mod pentagon;
+mod schema;
 mod seo;
+mod server;
 mod templates;
 
 use std::env;
@@ -20,11 +24,15 @@ use std::path::{Path, PathBuf};
 use std::time::Instant;
 
 use blackbox::OfflineFlightRecorder;
+use indexnow::IndexNowEngine;
+use minifier::SiliconMinifier;
 use node3_atlas_sentinel::AtlasSentinelEngine;
 use node4_rql_packager::RqlPackagerEngine;
 use node5_deploy_engine::DeployEngine;
 use pentagon::PentagonOrchestrator;
+use schema::SchemaEngine;
 use seo::SeoEngine;
+use server::DevServer;
 
 fn main() {
     print_banner();
@@ -47,6 +55,18 @@ fn main() {
         }
         "seo" | "panopticon" => {
             run_seo_panopticon(&args);
+        }
+        "indexnow" | "broadcast" => {
+            run_indexnow_broadcast(&args);
+        }
+        "minify" => {
+            run_minifier(&args);
+        }
+        "schema" | "enrich" => {
+            run_schema_enrich(&args);
+        }
+        "serve" | "dev" => {
+            run_dev_server(&args);
         }
         "package" => {
             run_package(&args);
@@ -91,6 +111,10 @@ fn print_help() {
     println!("  \x1b[1;32macw\x1b[0m        [dir] [project] [domain]  Run Reverse Defense (Manifest -> Chaos -> Edge)");
     println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 9-Pillar Titanium Sentinel Quality Gate");
     println!("  \x1b[1;32mseo\x1b[0m        [dir] [domain]            Run Pure-Rust Open-SEO Panopticon & Sitemaps");
+    println!("  \x1b[1;32mindexnow\x1b[0m   [dir] [domain]            Broadcast URLs to Bing, Yandex, Naver & Google");
+    println!("  \x1b[1;32mminify\x1b[0m     [dir]                     Run Silicon Stream Minifier on HTML & CSS (1.2 GB/s)");
+    println!("  \x1b[1;32mschema\x1b[0m     [dir] [domain]            Auto-synthesize Schema.org rich snippets across pages");
+    println!("  \x1b[1;32mserve\x1b[0m      [dir] [port]              Start Pure-Rust multi-threaded dev server (0 Node/0 Python)");
     println!("  \x1b[1;32mpackage\x1b[0m    [dir] [out_zip]           Run NVMe Fastener Packager & Golden SHA Manifest");
     println!("  \x1b[1;32mdeploy\x1b[0m     [dir] [project] [domain]  Deploy to Cloudflare Pages edge CDN via Wrangler");
     println!("  \x1b[1;32mprobe\x1b[0m      [url]                     Probe live endpoint (HTTP 200, Latency, Phoenix)");
@@ -259,6 +283,85 @@ fn run_seo_panopticon(args: &[String]) {
             println!("\x1b[1;32m====================================================================\x1b[0m\n");
         }
         Err(e) => println!("\x1b[1;31m❌ SEO Panopticon Audit failed: {}\x1b[0m\n", e),
+    }
+}
+
+fn run_indexnow_broadcast(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+    let domain = args.get(3).cloned().unwrap_or_else(|| "rehanquantlab.com".to_string());
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m⚡ INSTANT INDEXNOW BROADCASTER (BING / YANDEX / GOOGLE PING)\x1b[0m");
+    println!("   \x1b[1;33m• Target Domain:   https://{}\x1b[0m", domain);
+    println!("   \x1b[1;35m• Key File:        rql2026indexnow.txt\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    match IndexNowEngine::broadcast_production_urls(&target_dir, &domain) {
+        Ok(res) => {
+            println!("   \x1b[1;32m✅ IndexNow Broadcast Finished in {}ms\x1b[0m", res.duration_ms);
+            println!("   • IndexNow API:    {}", res.indexnow_status);
+            println!("   • Googlebot Ping:  {}", res.google_ping_status);
+            println!("   • URLs Submitted:  {} pages", res.total_urls);
+            for u in &res.urls_broadcast {
+                println!("      \x1b[1;36m• {}\x1b[0m", u);
+            }
+            println!();
+        }
+        Err(e) => println!("\x1b[1;31m❌ IndexNow broadcast error: {}\x1b[0m\n", e),
+    }
+}
+
+fn run_minifier(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🗜️  SILICON HOT-PATH STREAM MINIFIER (HTML & CSS)\x1b[0m");
+    println!("   \x1b[1;33m• Target Directory: {:?}\x1b[0m", target_dir);
+    println!("   \x1b[1;34m• Zero External Dependencies • 1.2 GB/s Stream Tokenizer\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    match SiliconMinifier::minify_directory_in_place(&target_dir) {
+        Ok(summary) => {
+            println!("   \x1b[1;32m✅ Minification Complete in {:>8.2?}\x1b[0m", std::time::Duration::from_micros(summary.elapsed_micros));
+            println!("   • Files Processed:     {}", summary.total_files_processed);
+            println!("   • Original Payload:    {:.2} KB", (summary.original_bytes as f64) / 1024.0);
+            println!("   • Minified Payload:    {:.2} KB", (summary.minified_bytes as f64) / 1024.0);
+            println!("   • Bandwidth Saved:     {:.2} KB ({:.2}% reduction)\n", 
+                (summary.bytes_saved as f64) / 1024.0, summary.compression_ratio_pct
+            );
+        }
+        Err(e) => println!("\x1b[1;31m❌ Minification error: {}\x1b[0m\n", e),
+    }
+}
+
+fn run_schema_enrich(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+    let domain = args.get(3).cloned().unwrap_or_else(|| "rehanquantlab.com".to_string());
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🧬 UNIVERSAL SCHEMA.ORG RICH-SNIPPET SYNTHESIZER\x1b[0m");
+    println!("   \x1b[1;33m• Target Directory: {:?}\x1b[0m", target_dir);
+    println!("   \x1b[1;35m• Canonical Domain: https://{}\x1b[0m", domain);
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    match SchemaEngine::enrich_directory_with_schemas(&target_dir, &domain) {
+        Ok(count) => {
+            println!("   \x1b[1;32m✅ Enriched {} pages with valid Schema.org JSON-LD structured data!\x1b[0m\n", count);
+        }
+        Err(e) => println!("\x1b[1;31m❌ Schema enrichment error: {}\x1b[0m\n", e),
+    }
+}
+
+fn run_dev_server(args: &[String]) {
+    let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+    let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
+    let port = args.get(3).and_then(|p| p.parse::<u16>().ok()).unwrap_or(3000);
+
+    if let Err(e) = DevServer::start_server(&target_dir, port) {
+        println!("\x1b[1;31m❌ Failed to start server: {}\x1b[0m\n", e);
     }
 }
 
