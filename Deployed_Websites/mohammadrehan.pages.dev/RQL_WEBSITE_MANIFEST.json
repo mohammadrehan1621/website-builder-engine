@@ -1,10 +1,15 @@
 {
-  "project_name": "RQL_Release",
-  "generated_at": "2026-10-31T09:18:57.839999700+00:00",
-  "total_files": 133,
-  "total_size_bytes": 36109221,
-  "bundle_sha256": "28ce836af76f0a594fa7b8f22c4f59b4ca701e94b83644423b7379ba43ff3fda",
+  "project_name": "mohammadrehan",
+  "generated_at": "2026-10-31T15:32:46.228811+00:00",
+  "total_files": 75,
+  "total_size_bytes": 27395534,
+  "bundle_sha256": "f6775ba9bee32536d5070a81504beecc41195217bddab8c33c83b5f8bc4efe1b",
   "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 116,
+      "sha256_hash": "58d49d6013836254732e88634be24d909f2300888a5edf42a992d6920fd25422"
+    },
     {
       "path": "01_RQL_Conduit_Cover_1080p.png",
       "size_bytes": 165345,
@@ -29,16 +34,6 @@
       "path": "05_Industrial_Sentinel_Cover_1080p.png",
       "size_bytes": 168642,
       "sha256_hash": "1b8041d7c81203e26769facc9a060de92d5216b938841f55998cc38fe9c9d3ce"
-    },
-    {
-      "path": "05_rql_conduit_bonding_engine_1080p.png",
-      "size_bytes": 168747,
-      "sha256_hash": "af88bd22fa127035aa2b5d023b3d7cee196b24e608e5db1fd1eb0f700338c307"
-    },
-    {
-      "path": "05_rql_conduit_bonding_engine_1080p.webp",
-      "size_bytes": 146430,
-      "sha256_hash": "4824d4f4a40b2aff37ee2dc1b36ba7a4cf6095d39207ef423613343b44c3b76e"
     },
     {
       "path": "06_ExpressBill_POS_Cover_1080p.png",
@@ -101,19 +96,14 @@
       "sha256_hash": "be759be1dcdde7d9730498d4fa957c82f6f208e08828f9a0e8b1098864e242d0"
     },
     {
-      "path": "18_RQL_DocumentShield_Square_Thumbnail.png",
-      "size_bytes": 98726,
-      "sha256_hash": "e21b48b34e862ca86a27fc9c2d8e1868ef46c34875f391f5507ff8e51c4bbd00"
-    },
-    {
       "path": "19_RQL_WhisperVault_Cover_1080p.png",
       "size_bytes": 142828,
       "sha256_hash": "accc9ea55c2a14e0e75be681e16a3e5c1f63428177227237cbdf401d29b92c37"
     },
     {
-      "path": "19_RQL_WhisperVault_Square_Thumbnail.png",
-      "size_bytes": 68638,
-      "sha256_hash": "adfef482dcb943ae2a1962972ff23a07684f18a54f258d19183c6a79bf92d5c6"
+      "path": "404.html",
+      "size_bytes": 3552,
+      "sha256_hash": "b011fcf4bc5e3c711ca20cd4ff47ca7f19b6c6f557644877377cbab90c40fb7f"
     },
     {
       "path": "Bundle_01_RQL_Retail_Master_Cover_1080p.png",
@@ -131,11 +121,6 @@
       "sha256_hash": "0fa5a32853c7024986dd728469f8038857b7f8017799b633bde4ec62302a0c3c"
     },
     {
-      "path": "ExpressBill_POS_Commercial_Hero.jpg",
-      "size_bytes": 699284,
-      "sha256_hash": "7b400017c18853fa99a0a4a9c0f17d3fdac0c08ceb9317805b0b044a42145d68"
-    },
-    {
       "path": "ExpressBill_POS_Commercial_Hero.webp",
       "size_bytes": 94274,
       "sha256_hash": "e45c1b9493420f627000fb748917d1f5613b5fde36a893bd0e1c54cf64280c0e"
@@ -151,9 +136,14 @@
       "sha256_hash": "8b9ebac74286774f37c338ec7f3bf68aba9c03d8bc4b06974ec00e292bf06f6e"
     },
     {
+      "path": "RetailPOS_Cover_1080p.png",
+      "size_bytes": 141423,
+      "sha256_hash": "6ac27f0d7a179a98bb71c22047c5218e93b7f51a044cb42fb2f804905dacedc2"
+    },
+    {
       "path": "SEO_PANOPTICON_REPORT.json",
-      "size_bytes": 6866,
-      "sha256_hash": "6dd17b318a7a3b0d1ddf8b526a841c54966e5cb8314880be19564fc47a4c99be"
+      "size_bytes": 6840,
+      "sha256_hash": "a20c72979b0bc0e496784d984aa3ecb99ca3a22b93d78802c388b37c7f18634b"
     },
     {
       "path": "_headers",
@@ -162,8 +152,8 @@
     },
     {
       "path": "aegis.html",
-      "size_bytes": 54114,
-      "sha256_hash": "c73ac50ace9e79f89d6ae8322f4ba891ee0a75bcb2dc3a3b9160848795289cf7"
+      "size_bytes": 55116,
+      "sha256_hash": "3cc9582da010548f9cf4b95be9af3182adaf4439302cf997ecf83b251380a2ed"
     },
     {
       "path": "aria_neural_engine.js",
@@ -171,99 +161,9 @@
       "sha256_hash": "3cace86507e871ccf041eb2ddfa911352af1ccd86942cb29ade1b30c470a4539"
     },
     {
-      "path": "assets/index-DuanGE0R.js",
-      "size_bytes": 1010244,
-      "sha256_hash": "64f69321601772266d39b330008133fe022a4caf8188be8fc65e995ca9cd97d5"
-    },
-    {
-      "path": "assets/index-TJ5H15Aa.css",
-      "size_bytes": 3249,
-      "sha256_hash": "27e9629ce67e1c180a61f62a673b0272a488c8ad2a363e67cbce87f1f78d72d1"
-    },
-    {
-      "path": "assets/thumbnails/01_RQL_Conduit_Square_Thumbnail.png",
-      "size_bytes": 93761,
-      "sha256_hash": "e5e3a8f42ed12ebcaa323381c4f54b7d0e328e4cb73ad88205b779a2621839ae"
-    },
-    {
-      "path": "assets/thumbnails/02_Deterministic_State_Kernel_Square_Thumbnail.png",
-      "size_bytes": 89642,
-      "sha256_hash": "c7ce43a97bdfdf6308df0b960d1345dd1472f4e3a5ba3002bad93575d32ee756"
-    },
-    {
-      "path": "assets/thumbnails/03_RQL_Aegis_Square_Thumbnail.png",
-      "size_bytes": 94324,
-      "sha256_hash": "87e5c4e3d1a3b7988a6a2b9296b2c2a22643cf6c38636bc341ab006d4ace0688"
-    },
-    {
-      "path": "assets/thumbnails/04_Veritas_Dossier_Square_Thumbnail.png",
-      "size_bytes": 95594,
-      "sha256_hash": "61a2d32714be14c9cfe28496325fb18e05098519403c21e94ecfdae9836fcf7c"
-    },
-    {
-      "path": "assets/thumbnails/05_Industrial_Sentinel_Square_Thumbnail.png",
-      "size_bytes": 96468,
-      "sha256_hash": "96653d9d51903d1b8ed6602c5c52cc2f3f0b8345fb86ddc2ff41323fade4e7fa"
-    },
-    {
-      "path": "assets/thumbnails/06_ExpressBill_POS_Square_Thumbnail.png",
-      "size_bytes": 95280,
-      "sha256_hash": "d3b572fe9739cf98f61dc27b25b74ea22b4cbbf1b7a5cd54bc4e0d9157a293ed"
-    },
-    {
-      "path": "assets/thumbnails/07_Sovereign_Suite_Square_Thumbnail.png",
-      "size_bytes": 95772,
-      "sha256_hash": "8f728b242fa91de215a318de91e18b4d9601df7f7dec95cbe472cec63891b906"
-    },
-    {
-      "path": "assets/thumbnails/08_RQL_TagMaster_Square_Thumbnail.png",
-      "size_bytes": 101176,
-      "sha256_hash": "33c8aac428621b31b994dff886f4eacf9a77e602bdb246cc0c80209080763ca9"
-    },
-    {
-      "path": "assets/thumbnails/09_RQL_DeskBroadcast_Square_Thumbnail.png",
-      "size_bytes": 113402,
-      "sha256_hash": "28cd09d32723ff35751bca2307ad7067f5a2175142425a2fce0a330d75104057"
-    },
-    {
-      "path": "assets/thumbnails/10_RQL_TaxMatrix_Square_Thumbnail.png",
-      "size_bytes": 108251,
-      "sha256_hash": "1e8d5872150d9c50868feccd03cac0c7dab76c7d411ef92fc14d93ec85e85c4d"
-    },
-    {
-      "path": "assets/thumbnails/11_RQL_LocalMesh_Square_Thumbnail.png",
-      "size_bytes": 103877,
-      "sha256_hash": "ae3752ca2324bb977f9901db171fb2162e41c19e712d0f2c786e63adcffc7093"
-    },
-    {
-      "path": "assets/thumbnails/12_RQL_StoreFlow_Square_Thumbnail.png",
-      "size_bytes": 98424,
-      "sha256_hash": "2f67a0a67f4cd6c0cde5c3859a05634c1a495a8d2cc9766e13cd633e9d2f67e0"
-    },
-    {
-      "path": "assets/thumbnails/14_RQL_LedgerGuard_Square_Thumbnail.png",
-      "size_bytes": 91183,
-      "sha256_hash": "5a3463540e55a6ad6096c2729d64c0ce364e1a825421017cf6bcf6e6022c2118"
-    },
-    {
-      "path": "assets/thumbnails/15_RQL_StockAudit_Square_Thumbnail.png",
-      "size_bytes": 91116,
-      "sha256_hash": "a665ceba324a3015aaeddec71c7b747ea39e4b19a98744ac1699af58353485c6"
-    },
-    {
-      "path": "assets/thumbnails/16_RQL_OmniDispatch_Square_Thumbnail.png",
-      "size_bytes": 96863,
-      "sha256_hash": "7fbf36623b9636473a5ce4ad2498594094539db5590b023dddd29ccded91db95"
-    },
-    {
-      "path": "assets/thumbnails/17_RQL_Nexus_Square_Thumbnail.png",
-      "size_bytes": 89881,
-      "sha256_hash": "50765fc7bb5d06a0105bf4fcd25369e072338d837ce0618d553b8d6fcc51195b"
-    },
-    {
       "path": "contact.html",
-      "size_bytes": 53963,
-      "sha256_hash": "bd0c8c4424cba9bc9b16c86864efb817066be020f73cebeec014954dde0b92ff"
+      "size_bytes": 54016,
+      "sha256_hash": "2426494c274c275334dd874cf71b0524ac92bd4d85264418e8ed1d97c6e1916f"
     },
     {
       "path": "downloads/ExpressBill-Setup.exe",
@@ -302,8 +202,8 @@
     },
     {
       "path": "experience.html",
-      "size_bytes": 59326,
-      "sha256_hash": "ffb9334e5314529b261ac6496aae897532db8d040bae4bcfc9dc06121c40b527"
+      "size_bytes": 59391,
+      "sha256_hash": "0acb1e470e308ab4a650564a2af76a9d4cb9fc3b4cc10cb5f6ab8c043d85e784"
     },
     {
       "path": "expressbill/README_HOW_TO_USE.txt",
@@ -331,11 +231,6 @@
       "sha256_hash": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
     },
     {
-      "path": "founder_vault.js",
-      "size_bytes": 24065,
-      "sha256_hash": "b301d2186c14cd3bbcf031ab1bd159d5e519e7f1c9122278bf0d1883f0556b76"
-    },
-    {
       "path": "googlecb5b21d2c61033d5.html",
       "size_bytes": 55,
       "sha256_hash": "607ff72007ff60d1993f1fccae7261a254cb717e6271821ad7869f23a40a4a88"
@@ -347,13 +242,13 @@
     },
     {
       "path": "index.html",
-      "size_bytes": 127020,
-      "sha256_hash": "344e5af2a6f823d4897c53ec36d13f78cd36e779e80d132b5bdf767a2520d504"
+      "size_bytes": 7617,
+      "sha256_hash": "efdb4a2b38ff82543066b55741a5cf06a44e0872b571acbf18ae5497fd2a5aa7"
     },
     {
       "path": "legal.html",
-      "size_bytes": 58589,
-      "sha256_hash": "d8dc459769d33e3e168625d6dc2b4278a04fd8b9b7700a22fa109708260934c2"
+      "size_bytes": 61139,
+      "sha256_hash": "214603038e22af38958b5c2c8e19bb5d5d8e5c22b93f19be55dce5bf085934a6"
     },
     {
       "path": "linkedin_banner.png",
@@ -362,8 +257,8 @@
     },
     {
       "path": "lively_motion.js",
-      "size_bytes": 10563,
-      "sha256_hash": "a9365b39be2e7ed9af2693f3100ce7fdfd932dca98df3193c175e5d616898ba3"
+      "size_bytes": 10148,
+      "sha256_hash": "eeed2bbddb086d2b8a3659da8aa9df122f4b7e9fd18d07386195d5efd8f604cc"
     },
     {
       "path": "logo.jpg",
@@ -381,191 +276,6 @@
       "sha256_hash": "7998f0e03e730c6265876f0c184d8b6da83ae7fd315a13763a34577640974bba"
     },
     {
-      "path": "media/01_RQL_Conduit_Cover_1080p.png",
-      "size_bytes": 165345,
-      "sha256_hash": "44ea4abc695dde74094ef4303124cbeb363339d9382e04d4b7f04b6617852e8c"
-    },
-    {
-      "path": "media/01_RQL_Conduit_Square_Thumbnail.png",
-      "size_bytes": 93761,
-      "sha256_hash": "e5e3a8f42ed12ebcaa323381c4f54b7d0e328e4cb73ad88205b779a2621839ae"
-    },
-    {
-      "path": "media/02_Deterministic_State_Kernel_Cover_1080p.png",
-      "size_bytes": 169741,
-      "sha256_hash": "802594e389cd466a92feff84a42bd22bfb8acc45309428c2405865053bffb720"
-    },
-    {
-      "path": "media/02_Deterministic_State_Kernel_Square_Thumbnail.png",
-      "size_bytes": 89642,
-      "sha256_hash": "c7ce43a97bdfdf6308df0b960d1345dd1472f4e3a5ba3002bad93575d32ee756"
-    },
-    {
-      "path": "media/03_RQL_Aegis_Cover_1080p.png",
-      "size_bytes": 167239,
-      "sha256_hash": "f1222d35afb5bc9a56e531fec70a55bb6ea61209f5e5f016c162f8736866d937"
-    },
-    {
-      "path": "media/03_RQL_Aegis_Square_Thumbnail.png",
-      "size_bytes": 94324,
-      "sha256_hash": "87e5c4e3d1a3b7988a6a2b9296b2c2a22643cf6c38636bc341ab006d4ace0688"
-    },
-    {
-      "path": "media/04_Veritas_Dossier_Cover_1080p.png",
-      "size_bytes": 164799,
-      "sha256_hash": "77f3ed29e9b922b256fbe689d89b2996061606399ce7ee55864248e8b6fbb982"
-    },
-    {
-      "path": "media/04_Veritas_Dossier_Square_Thumbnail.png",
-      "size_bytes": 95594,
-      "sha256_hash": "61a2d32714be14c9cfe28496325fb18e05098519403c21e94ecfdae9836fcf7c"
-    },
-    {
-      "path": "media/05_Industrial_Sentinel_Cover_1080p.png",
-      "size_bytes": 168642,
-      "sha256_hash": "1b8041d7c81203e26769facc9a060de92d5216b938841f55998cc38fe9c9d3ce"
-    },
-    {
-      "path": "media/05_Industrial_Sentinel_Square_Thumbnail.png",
-      "size_bytes": 96468,
-      "sha256_hash": "96653d9d51903d1b8ed6602c5c52cc2f3f0b8345fb86ddc2ff41323fade4e7fa"
-    },
-    {
-      "path": "media/06_ExpressBill_POS_Cover_1080p.png",
-      "size_bytes": 177294,
-      "sha256_hash": "310a3e224ea9476b714f1925e79cd35250343ff7644654bbc5c0429d0c6bc3da"
-    },
-    {
-      "path": "media/06_ExpressBill_POS_Square_Thumbnail.png",
-      "size_bytes": 95280,
-      "sha256_hash": "d3b572fe9739cf98f61dc27b25b74ea22b4cbbf1b7a5cd54bc4e0d9157a293ed"
-    },
-    {
-      "path": "media/07_Sovereign_Suite_Master_Cover_1080p.png",
-      "size_bytes": 170101,
-      "sha256_hash": "de7a3fdae9f9f179dac8f095e5f0e426616b0b168135de728ff49f5ec4a60a33"
-    },
-    {
-      "path": "media/07_Sovereign_Suite_Square_Thumbnail.png",
-      "size_bytes": 94354,
-      "sha256_hash": "f912b08c7be9a6b9406568533db513a25372100002276dfae3ace0da2bdfa5b5"
-    },
-    {
-      "path": "media/08_RQL_TagMaster_Cover_1080p.png",
-      "size_bytes": 175638,
-      "sha256_hash": "37fa1b7ab4e005d72a58a54c341b913b15280d982de789d3ce2ddba8351ed6c4"
-    },
-    {
-      "path": "media/08_RQL_TagMaster_Square_Thumbnail.png",
-      "size_bytes": 101176,
-      "sha256_hash": "33c8aac428621b31b994dff886f4eacf9a77e602bdb246cc0c80209080763ca9"
-    },
-    {
-      "path": "media/09_RQL_DeskBroadcast_Cover_1080p.png",
-      "size_bytes": 191731,
-      "sha256_hash": "d81f3e3edde8eee12ae6ed2351c9e6d8a41fffd1dbdfd93602ebfc70158dcdbe"
-    },
-    {
-      "path": "media/09_RQL_DeskBroadcast_Square_Thumbnail.png",
-      "size_bytes": 113402,
-      "sha256_hash": "28cd09d32723ff35751bca2307ad7067f5a2175142425a2fce0a330d75104057"
-    },
-    {
-      "path": "media/10_RQL_TaxMatrix_Cover_1080p.png",
-      "size_bytes": 191500,
-      "sha256_hash": "186d9718fe5dab1137cccab1e12f66605475979fbb6d1ae41340f4cdd278b06d"
-    },
-    {
-      "path": "media/10_RQL_TaxMatrix_Square_Thumbnail.png",
-      "size_bytes": 108251,
-      "sha256_hash": "1e8d5872150d9c50868feccd03cac0c7dab76c7d411ef92fc14d93ec85e85c4d"
-    },
-    {
-      "path": "media/11_RQL_LocalMesh_Cover_1080p.png",
-      "size_bytes": 192356,
-      "sha256_hash": "452e93a58bf6bbc89e380a273a5190ceca13c2eff52e995e6a5ea65319d763ac"
-    },
-    {
-      "path": "media/11_RQL_LocalMesh_Square_Thumbnail.png",
-      "size_bytes": 103877,
-      "sha256_hash": "ae3752ca2324bb977f9901db171fb2162e41c19e712d0f2c786e63adcffc7093"
-    },
-    {
-      "path": "media/12_RQL_StoreFlow_Cover_1080p.png",
-      "size_bytes": 176272,
-      "sha256_hash": "0081a1a8187b583f1e1ab34a13b1d99ed9115598c3f54c3d72b5f30d64855c78"
-    },
-    {
-      "path": "media/12_RQL_StoreFlow_Square_Thumbnail.png",
-      "size_bytes": 98424,
-      "sha256_hash": "2f67a0a67f4cd6c0cde5c3859a05634c1a495a8d2cc9766e13cd633e9d2f67e0"
-    },
-    {
-      "path": "media/14_RQL_LedgerGuard_Cover_1080p.png",
-      "size_bytes": 150899,
-      "sha256_hash": "c390fe641e6d336d77d55f34646e113107bb48de80308ae870bbbe2b7c737447"
-    },
-    {
-      "path": "media/14_RQL_LedgerGuard_Square_Thumbnail.png",
-      "size_bytes": 91183,
-      "sha256_hash": "5a3463540e55a6ad6096c2729d64c0ce364e1a825421017cf6bcf6e6022c2118"
-    },
-    {
-      "path": "media/15_RQL_StockAudit_Cover_1080p.png",
-      "size_bytes": 150119,
-      "sha256_hash": "5b685fa01f4b0dfc1bddc1fdf2a2640bdbac2badc09a7cf14257de0dd6ae855b"
-    },
-    {
-      "path": "media/15_RQL_StockAudit_Square_Thumbnail.png",
-      "size_bytes": 91116,
-      "sha256_hash": "a665ceba324a3015aaeddec71c7b747ea39e4b19a98744ac1699af58353485c6"
-    },
-    {
-      "path": "media/16_RQL_OmniDispatch_Cover_1080p.png",
-      "size_bytes": 159244,
-      "sha256_hash": "3aa8167abf45bda816f482ec42b7dffbf7f9a8f5721881355970a11acb9a44fd"
-    },
-    {
-      "path": "media/16_RQL_OmniDispatch_Square_Thumbnail.png",
-      "size_bytes": 96863,
-      "sha256_hash": "7fbf36623b9636473a5ce4ad2498594094539db5590b023dddd29ccded91db95"
-    },
-    {
-      "path": "media/17_RQL_Nexus_Cover_1080p.png",
-      "size_bytes": 142485,
-      "sha256_hash": "bb4fd59309bc1a9f9f1349319b2d6ff5b6042e27423b0b4bc7df679368f87680"
-    },
-    {
-      "path": "media/17_RQL_Nexus_Square_Thumbnail.png",
-      "size_bytes": 89881,
-      "sha256_hash": "50765fc7bb5d06a0105bf4fcd25369e072338d837ce0618d553b8d6fcc51195b"
-    },
-    {
-      "path": "media/18_RQL_DocumentShield_Cover_1080p.png",
-      "size_bytes": 138073,
-      "sha256_hash": "be759be1dcdde7d9730498d4fa957c82f6f208e08828f9a0e8b1098864e242d0"
-    },
-    {
-      "path": "media/18_RQL_DocumentShield_Square_Thumbnail.png",
-      "size_bytes": 98726,
-      "sha256_hash": "e21b48b34e862ca86a27fc9c2d8e1868ef46c34875f391f5507ff8e51c4bbd00"
-    },
-    {
-      "path": "media/19_RQL_WhisperVault_Cover_1080p.png",
-      "size_bytes": 142828,
-      "sha256_hash": "accc9ea55c2a14e0e75be681e16a3e5c1f63428177227237cbdf401d29b92c37"
-    },
-    {
-      "path": "media/19_RQL_WhisperVault_Square_Thumbnail.png",
-      "size_bytes": 68638,
-      "sha256_hash": "adfef482dcb943ae2a1962972ff23a07684f18a54f258d19183c6a79bf92d5c6"
-    },
-    {
-      "path": "media/og_preview.png",
-      "size_bytes": 64409,
-      "sha256_hash": "cf4d7d8c0f5fed9dffab89714365481a8bcf5f530a1cad6c9ceac1b83c00c4a4"
-    },
-    {
       "path": "og_preview.png",
       "size_bytes": 64409,
       "sha256_hash": "cf4d7d8c0f5fed9dffab89714365481a8bcf5f530a1cad6c9ceac1b83c00c4a4"
@@ -579,6 +289,11 @@
       "path": "platform/favicon.svg",
       "size_bytes": 9522,
       "sha256_hash": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "path": "platform/founder_mobile_license_generator.html",
+      "size_bytes": 12924,
+      "sha256_hash": "17bddda76f0b281b9e47350775913ce9e08ab2fb4f302ab09d11860cfad4b266"
     },
     {
       "path": "platform/icons.svg",
@@ -597,33 +312,28 @@
     },
     {
       "path": "platform/index.html",
-      "size_bytes": 1230,
-      "sha256_hash": "9af46602ec6c2d7446a6fec9bb0eb7794ed5228bc1977920741cad69c5458a03"
+      "size_bytes": 1216,
+      "sha256_hash": "3a5d648fe91682362c71ffa9ac8c0518c462409b76f48457dd531984d7374d3b"
     },
     {
       "path": "project_info.json",
-      "size_bytes": 532,
-      "sha256_hash": "28973e8c3bdb7e06fdf9eaafc8054088900754bf4a5daaa0a97c605bdc496768"
+      "size_bytes": 513,
+      "sha256_hash": "8872ecfa7c04865de0401a17b0093be965c35d29e19ed124d9b0febc0783fbc7"
     },
     {
       "path": "projects.html",
-      "size_bytes": 180579,
-      "sha256_hash": "53ef3a57598f19f8489e6af68ba59b96c4702daea6cb7e26ddf3a1ee2f9830e6"
-    },
-    {
-      "path": "public/_headers",
-      "size_bytes": 727,
-      "sha256_hash": "21aba9b3c74aa72d9044aeecf8fe37c42456a05250c3a108205af9401fc4acd4"
+      "size_bytes": 66503,
+      "sha256_hash": "b8a759298ea95419affa8b05ccf8c7cb973261db7cab57386e5eda39c8abb167"
     },
     {
       "path": "react_live_engine.js",
-      "size_bytes": 11632,
-      "sha256_hash": "4a15681239b3579058f5173c886df8e6abb83d38fc6144c5893d3055e35e2bc0"
+      "size_bytes": 11588,
+      "sha256_hash": "7fee5cd7c8ccb672dc01b8981401e1531d8c0f95cd85f5acc16bc12bcfa7df2c"
     },
     {
       "path": "react_portal.html",
-      "size_bytes": 61058,
-      "sha256_hash": "0f6999670ea2f219a9a9265c79870fc34c7caa86630fc3275f1ec47fc572043a"
+      "size_bytes": 62221,
+      "sha256_hash": "0fc76746227f868101e255b9e9670da220051cc7d093afb285f2676f101655d8"
     },
     {
       "path": "robots.txt",
@@ -637,8 +347,8 @@
     },
     {
       "path": "rql_seo_engine.js",
-      "size_bytes": 10441,
-      "sha256_hash": "d6c2feede3f366762fd88b89ae51e8cf832a428c7139a24e683c7dd9aadceaea"
+      "size_bytes": 7513,
+      "sha256_hash": "07ebedd47e6ff5ff92d10ebe6767471f3a16f40999012eb1e99512e68f1a64fe"
     },
     {
       "path": "rql_wasm.js",
@@ -652,23 +362,23 @@
     },
     {
       "path": "sitemap.xml",
-      "size_bytes": 2665,
-      "sha256_hash": "b7a89853afe7b04ff25dfc7511d96ab4c2a30d83eb625e56c41a6c35797c214a"
+      "size_bytes": 2833,
+      "sha256_hash": "9c2fdd8cc06a6f2e02716841611b2c3c56bf9af7f619f87094268fb11f802843"
     },
     {
       "path": "store.html",
-      "size_bytes": 126295,
-      "sha256_hash": "aa67bd7eb56f1697faca63be59ba3adc878999a9d2e47f2c8105c641b1206d77"
+      "size_bytes": 40589,
+      "sha256_hash": "b6d111ee4252e251682746875b36f56af187081307a6460973c5d429e226868a"
     },
     {
       "path": "sw.js",
-      "size_bytes": 1293,
-      "sha256_hash": "403b4ad7efd4efc4491c61f83a19c7d01ab38352e374498d610e12a9d0543166"
+      "size_bytes": 1259,
+      "sha256_hash": "2a64c692be0081248247f4a4be08694a7b2f3a5b46c6f00a73306043b8796e1c"
     },
     {
       "path": "vault.html",
-      "size_bytes": 27816,
-      "sha256_hash": "bf83f017a9ce4a48ff68ffa67d2c1fd7f0e4b51a6615221d41211f1f86a86382"
+      "size_bytes": 28577,
+      "sha256_hash": "9f72c129d23a5601f0720ea81b263de0941a89ef4106595018a2fa4f46903e1a"
     }
   ]
 }
