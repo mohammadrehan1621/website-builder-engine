@@ -16,6 +16,9 @@ __pycache__/
 Generated_Website/
 website_bundle.zip
 
+# Wrangler cache
+.wrangler/
+
 # Rust builds & WAL
 target/
 *.wal
