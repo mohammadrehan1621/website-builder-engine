@@ -126,6 +126,45 @@ impl DevServer {
             return Self::send_response(stream, 200, "OK", res_json.as_bytes(), "application/json", false, t0.elapsed());
         }
 
+        // 3B. ROUTE: POST /api/leads/submit -> Offline Leads CRM Append-Only Ingestion
+        if method == "POST" && (decoded_path == "api/leads/submit" || decoded_path == "api/studio/leads") {
+            let body = &full_request[header_end..];
+            let leads_file = root.join("leads_vault.jsonl");
+            let mut line = body.trim().to_string();
+            if !line.is_empty() {
+                line.push('\n');
+                let _ = fs::OpenOptions::new().create(true).append(true).open(&leads_file)
+                    .and_then(|mut f| f.write_all(line.as_bytes()));
+            }
+            let res_json = r#"{"success":true,"message":"Lead securely sealed into Sovereign WAL"}"#;
+            return Self::send_response(stream, 200, "OK", res_json.as_bytes(), "application/json", false, t0.elapsed());
+        }
+
+        // 3C. ROUTE: GET /api/leads/export.csv -> Download Offline Leads as CSV
+        if (method == "GET" || is_head) && decoded_path == "api/leads/export.csv" {
+            let leads_file = root.join("leads_vault.jsonl");
+            let mut csv_data = String::from("timestamp,name,email,service,message\n");
+            if let Ok(content) = fs::read_to_string(&leads_file) {
+                for line in content.lines() {
+                    if let Ok(val) = serde_json::from_str::<serde_json::Value>(line) {
+                        let ts = val.get("timestamp").and_then(|v| v.as_str()).unwrap_or("");
+                        let name = val.get("name").and_then(|v| v.as_str()).unwrap_or("").replace(',', " ");
+                        let email = val.get("email").and_then(|v| v.as_str()).unwrap_or("").replace(',', " ");
+                        let service = val.get("service").and_then(|v| v.as_str()).unwrap_or("").replace(',', " ");
+                        let msg = val.get("message").and_then(|v| v.as_str()).unwrap_or("").replace(',', " ").replace('\n', " ");
+                        csv_data.push_str(&format!("{},{},{},{},{}\n", ts, name, email, service, msg));
+                    }
+                }
+            }
+            let headers = "HTTP/1.1 200 OK\r\nContent-Type: text/csv\r\nContent-Disposition: attachment; filename=\"rql_sovereign_leads.csv\"\r\nConnection: close\r\n\r\n";
+            let mut res = headers.as_bytes().to_vec();
+            if !is_head {
+                res.extend_from_slice(csv_data.as_bytes());
+            }
+            stream.write_all(&res)?;
+            return Ok(());
+        }
+
         if method != "GET" && !is_head {
             let res = "HTTP/1.1 405 Method Not Allowed\r\nContent-Length: 0\r\n\r\n";
             stream.write_all(res.as_bytes())?;
