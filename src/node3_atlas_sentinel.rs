@@ -156,7 +156,7 @@ impl AtlasSentinelEngine {
         let p6_pass = has_csp;
         let mut p6_findings = Vec::new();
         if !has_csp {
-            p6_findings.push("Recommend CSP meta header for titanium defense".to_string());
+            p6_findings.push("Recommend CSP meta header for security defense".to_string());
         }
         pillars.push(PillarAudit {
             pillar_num: 6,

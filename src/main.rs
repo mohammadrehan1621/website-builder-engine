@@ -119,7 +119,7 @@ fn print_help() {
     println!("  \x1b[1;32mpentagon\x1b[0m   [dir] [project] [domain]  Execute Full 5-Node Closed Loop (CW -> ACW)");
     println!("  \x1b[1;32mcw\x1b[0m         [dir] [project] [domain]  Run Forward Velocity (Synthesis -> Packaging)");
     println!("  \x1b[1;32macw\x1b[0m        [dir] [project] [domain]  Run Reverse Defense (Manifest -> Chaos -> Edge)");
-    println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 9-Pillar Titanium Sentinel Quality Gate");
+    println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 9-Pillar Quality Gate");
     println!("  \x1b[1;32mseo\x1b[0m        [dir] [domain]            Run Pure-Rust Open-SEO Panopticon & Sitemaps");
     println!("  \x1b[1;32mindexnow\x1b[0m   [dir] [domain]            Broadcast URLs to Bing, Yandex, Naver & Google");
     println!("  \x1b[1;32mminify\x1b[0m     [dir]                     Run Silicon Stream Minifier on HTML & CSS (1.2 GB/s)");
@@ -152,7 +152,7 @@ fn run_pentagon_cycle(args: &[String]) {
             println!("\x1b[1;32m🎉 PENTAGON CYCLE SUCCESSFUL!\x1b[0m");
             println!("   • Project:             {}", summary.project_name);
             println!("   • Domain:              {}", summary.domain);
-            println!("   • Titanium Certified:  {}", if summary.is_titanium_certified { "🟢 YES (100% INTACT)" } else { "🔴 DEGRADED" });
+            println!("   • Quality Certified:   {}", if summary.is_titanium_certified { "🟢 YES (100% INTACT)" } else { "🔴 DEGRADED" });
             println!("   • Total Cycle Time:    {:>8.2?}", std::time::Duration::from_micros(summary.total_duration_micros));
             println!("   • Flight Recorder:     Journaled to flight_recorder.wal with SHA-256 sealing\n");
         }
@@ -192,11 +192,11 @@ fn run_sentinel_audit(args: &[String]) {
     let default_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
     let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
 
-    println!("\x1b[1;35m🛡️ EXECUTING 9-PILLAR TITANIUM QUALITY AUDIT ON {:?}\x1b[0m\n", target_dir);
+    println!("\x1b[1;35m🛡️ EXECUTING 9-PILLAR QUALITY AUDIT ON {:?}\x1b[0m\n", target_dir);
     match AtlasSentinelEngine::audit_deployed_directory(&target_dir) {
         Ok(reports) => {
             for r in &reports {
-                println!("   \x1b[1;36m📄 File: {:<28}\x1b[0m | Score: {:>3}% | Titanium: {}", 
+                println!("   \x1b[1;36m📄 File: {:<28}\x1b[0m | Score: {:>3}% | Status: {}", 
                     r.target_path, r.overall_score, if r.is_titanium_certified { "🟢 PASS" } else { "⚠️ ISSUES" }
                 );
                 for p in &r.pillars {
@@ -208,7 +208,7 @@ fn run_sentinel_audit(args: &[String]) {
                 }
             }
             let all_ok = reports.iter().all(|r| r.is_titanium_certified);
-            println!("\n   \x1b[1;32mTotal Audited: {} files | Titanium Gate: {}\x1b[0m\n", 
+            println!("\n   \x1b[1;32mTotal Audited: {} files | Quality Gate: {}\x1b[0m\n", 
                 reports.len(), if all_ok { "APPROVED" } else { "HELD" }
             );
         }
@@ -550,7 +550,7 @@ fn run_security_audit(args: &[String]) {
     let target_dir = args.get(2).map(PathBuf::from).unwrap_or(default_dir);
 
     println!("\x1b[1;36m====================================================================\x1b[0m");
-    println!("\x1b[1;32m🛡️  TITANIUM OWASP & ZERO-TRUST SECURITY AUDITOR\x1b[0m");
+    println!("\x1b[1;32m🛡️  OWASP & ZERO-TRUST SECURITY AUDITOR\x1b[0m");
     println!("   \x1b[1;33mTarget Directory: {:?}\x1b[0m", target_dir);
     println!("\x1b[1;36m====================================================================\x1b[0m\n");
 
@@ -651,9 +651,9 @@ fn run_security_audit(args: &[String]) {
 
     println!("\x1b[1;32m====================================================================\x1b[0m");
     println!(
-        "\x1b[1;32m🎯 TITANIUM SECURITY SCORE: {}/100 | STATUS: {} ({:.2?} audit)\x1b[0m",
+        "\x1b[1;32m🎯 SECURITY SCORE: {}/100 | STATUS: {} ({:.2?} audit)\x1b[0m",
         score,
-        if score >= 90 { "🟢 TITANIUM CERTIFIED" } else { "⚠️ REMEDIATION REQUIRED" },
+        if score >= 90 { "🟢 CERTIFIED COMPLIANT" } else { "⚠️ REMEDIATION REQUIRED" },
         t0.elapsed()
     );
     println!("\x1b[1;32m====================================================================\x1b[0m\n");

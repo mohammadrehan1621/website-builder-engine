@@ -104,9 +104,9 @@ impl PentagonOrchestrator {
             b"SENTINEL_GATE_CHECK",
             d3,
             if all_passed { "CERTIFIED" } else { "DEGRADED" },
-            &format!("Audited {} documents against 9 Titanium Pillars. Certified: {}", sentinel_reports.len(), all_passed),
+            &format!("Audited {} documents against 9 Quality Pillars. Certified: {}", sentinel_reports.len(), all_passed),
         );
-        println!("   \x1b[1;35m[Node 3: Sentinel]\x1b[0m 9-Pillar Titanium Audit in {:>8.2?} (Certified: {})", t3.elapsed(), all_passed);
+        println!("   \x1b[1;35m[Node 3: Sentinel]\x1b[0m 9-Pillar Quality Audit in {:>8.2?} (Certified: {})", t3.elapsed(), all_passed);
 
         // 4. Node 4: RQL Packager NVMe Streaming Assembly & Auto SEO Panopticon
         let t4 = Instant::now();
@@ -209,11 +209,11 @@ impl PentagonOrchestrator {
             "FORENSIC_PILLAR_COUNTER_AUDIT",
             b"PILLAR_SCAN",
             d3,
-            if all_certified { "TITANIUM_SAFE" } else { "NON_COMPLIANT" },
-            &format!("All {} docs verified against 9 Titanium Pillars", sentinel_reports.len()),
+            if all_certified { "VERIFIED_SAFE" } else { "NON_COMPLIANT" },
+            &format!("All {} docs verified against 9 Quality Pillars", sentinel_reports.len()),
         );
         println!("   \x1b[1;35m[Node 3 Reverse Sentinel]\x1b[0m Forensic Pillar Gate: {} in {:?}", 
-            if all_certified { "TITANIUM APPROVED" } else { "ISSUES FOUND" }, t3.elapsed()
+            if all_certified { "VERIFIED PASS" } else { "ISSUES FOUND" }, t3.elapsed()
         );
 
         // 4. Node 2 Reverse: Chaos Gauntlet Inoculation
@@ -289,15 +289,15 @@ impl PentagonOrchestrator {
         self.recorder.record(
             "PENTAGON_MASTER_NUCLEUS",
             "CLOSED_LOOP_SEAL",
-            "TITANIUM_CYCLE_COMPLETE",
+            "CYCLE_COMPLETE",
             project_name.as_bytes(),
             total_micros,
-            "TITANIUM_SEALED",
+            "VERIFIED_SEALED",
             &format!("Full Closed-Loop cycle finished in {:.2?} with 100% invariant retention", loop_start.elapsed()),
         );
 
         println!("\x1b[1;32m====================================================================\x1b[0m");
-        println!("\x1b[1;32m🏛️ PENTAGON CLOSED LOOP 100% COMPLETE & TITANIUM SEALED ({:.2?})\x1b[0m", loop_start.elapsed());
+        println!("\x1b[1;32m🏛️ PENTAGON CLOSED LOOP 100% COMPLETE & VERIFIED ({:.2?})\x1b[0m", loop_start.elapsed());
         println!("\x1b[1;33m   CW Synthesis: {:.2?} | ACW Forensic Audit: {:.2?}\x1b[0m", 
             std::time::Duration::from_micros(cw_res.cw_duration_micros),
             std::time::Duration::from_micros(acw_res.acw_duration_micros)

@@ -406,7 +406,7 @@ impl SeoEngine {
         }
 
         let verdict = if score >= 95 && broken_total == 0 {
-            "TITANIUM A+ COMPLIANT".to_string()
+            "A+ COMPLIANT".to_string()
         } else if score >= 80 {
             "ACCEPTABLE WITH WARNINGS".to_string()
         } else {
