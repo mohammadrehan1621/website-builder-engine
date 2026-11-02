@@ -1,22 +1,52 @@
 {
   "timestamp": "2026-11-02",
-  "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
+  "base_directory": "C:\\Users\\rehan\\Desktop\\Rehan_Quant_Lab\\08_Build_Tools\\Website_RehanQuantLab",
   "total_html_files": 10,
-  "total_word_count": 8437,
+  "total_word_count": 8536,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 18,
+      "density_pct": 0.21
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 6,
+      "density_pct": 0.07
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 52,
+      "density_pct": 0.61
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 19,
+      "density_pct": 0.22
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
     "zero monthly fee": {
       "keyword": "zero monthly fee",
       "count": 3,
       "density_pct": 0.04
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 51,
-      "density_pct": 0.6
     },
     "sovereign computing": {
       "keyword": "sovereign computing",
@@ -28,55 +58,25 @@
       "count": 11,
       "density_pct": 0.13
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 18,
-      "density_pct": 0.21
-    },
     "deterministic": {
       "keyword": "deterministic",
       "count": 16,
       "density_pct": 0.19
-    },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 5,
-      "density_pct": 0.06
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 1,
-      "density_pct": 0.01
     },
     "lifetime license": {
       "keyword": "lifetime license",
       "count": 3,
       "density_pct": 0.04
     },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 19,
-      "density_pct": 0.23
-    },
     "air-gapped": {
       "keyword": "air-gapped",
       "count": 35,
       "density_pct": 0.41
     },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 1,
-      "density_pct": 0.01
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
     }
   },
   "meta_audits": [
@@ -215,5 +215,5 @@
   "verdict": "A+ COMPLIANT",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 19669
+  "execution_micros": 21698
 }

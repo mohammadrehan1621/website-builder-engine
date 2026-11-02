@@ -312,10 +312,10 @@
 
     <div class="card-title" style="margin-top: 6px;">
       <span>2. Select Software Suite</span>
-      <span style="font-size: 10.5px; color: var(--gold); font-weight: 700;">8 PRODUCTS + MASTER</span>
+      <span style="font-size: 10.5px; color: var(--gold); font-weight: 700;">8 SUITES ACTIVE</span>
     </div>
 
-    <!-- 8 PRODUCTS (01 TO 08) + ALL-SUITE MASTER -->
+    <!-- 8 PRODUCTS (01 TO 07 + UNIVERSAL MASTER) -->
     <div class="chip-grid" id="prod_chips">
       <div class="chip active" onclick="selectProduct(0, this)">
         <div class="chip-code">#01 PDF Redactor</div>
@@ -353,11 +353,6 @@
         <div class="chip-price">$79 Perpetual</div>
       </div>
       <div class="chip" onclick="selectProduct(7, this)">
-        <div class="chip-code">#08 Socket Binder</div>
-        <div class="chip-title">PortVault™</div>
-        <div class="chip-price">$59 Perpetual</div>
-      </div>
-      <div class="chip" onclick="selectProduct(8, this)">
         <div class="chip-code">👑 Master Access</div>
         <div class="chip-title">All-Suite Master</div>
         <div class="chip-price">$999 Universal</div>
@@ -440,7 +435,6 @@
       { id: "RQL_Conduit", name: "RQL Conduit™ (Multi-WAN Internet Bonding)", price: "$129", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "RQL_HashCheck", name: "RQL HashCheck™ (Cryptographic Checksum Verifier)", price: "$39", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "RQL_QRStudio", name: "RQL QRStudio™ (Vector QR & Barcode Studio)", price: "$79", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
-      { id: "RQL_PortVault", name: "RQL PortVault™ (Offline Socket Binder & Sentinel)", price: "$59", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "UNIVERSAL_MASTER", name: "RQL Sovereign Master Access (All-Suite Fleet Unlock)", price: "$999", tier: "Sovereign Master Fleet License (Universal Node Lock)" }
     ];
 
@@ -462,7 +456,7 @@
       const tierBadge = document.getElementById('tier_badge');
       const tierName = document.getElementById('tier_name');
 
-      if (idx === 8) {
+      if (idx === 7) {
         tierBadge.innerText = "[1 TIER MASTER FLEET]";
         tierBadge.style.color = "var(--gold)";
         tierBadge.style.background = "var(--gold-glow)";
