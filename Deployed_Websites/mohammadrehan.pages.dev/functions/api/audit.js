@@ -135,8 +135,8 @@ export async function onRequestPost(context) {
     }
 
     // Phase 3: Raw Server HTTP Headers Forensic Extraction
-    const isTargetActuallyCloudflare = (resp.headers.has("cf-cache-status") || 
-                                        asnNumber === "AS13335" || 
+    const isTargetActuallyCloudflare = (asnNumber === "AS13335" || 
+                                        asnNumber === "AS209242" || 
                                         primaryIp.startsWith("104.") || 
                                         primaryIp.startsWith("172.6") || 
                                         primaryIp.startsWith("172.7"));
@@ -308,10 +308,9 @@ export async function onRequestPost(context) {
       evidenceList.push("Detected Shopify liquid storefront CDN");
     }
 
-    const isGlobalEdge = (serverHeader.toLowerCase().includes("cloudflare") || 
-                          resp.headers.has("cf-cache-status") || 
+    const isGlobalEdge = (isTargetActuallyCloudflare || 
                           platforms.includes("Shopify") || 
-                          (latency_ms <= 300 && !serverHeader.toLowerCase().includes("apache") && !serverHeader.toLowerCase().includes("nginx")));
+                          (latency_ms <= 250 && !serverHeader.toLowerCase().includes("apache") && !serverHeader.toLowerCase().includes("origin") && !serverHeader.toLowerCase().includes("ats")));
 
     if (platforms.length === 0) {
       if (isGlobalEdge) {
