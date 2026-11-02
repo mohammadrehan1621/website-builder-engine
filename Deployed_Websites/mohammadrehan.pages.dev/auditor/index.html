@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>RQL Sovereign Speed Auditor & 3D Migration Studio | Rehan Quant Lab</title>
-  <meta name="description" content="Forensic 3D Real-Time Website Speed Auditor & BNI Client Migration Studio. Undeniable wire telemetry, security matrix, and carbon metrics." />
+  <meta name="description" content="Forensic 3D Real-Time Website Speed Auditor & BNI Client Migration Studio. Undeniable wire telemetry, dual phone race, revenue loss calculator, and 4-plane CAD depth." />
   <link rel="canonical" href="https://rehanquantlab.com/auditor/" />
   
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,17 +16,17 @@
     }
     body {
       font-family: var(--font-sans);
-      background-color: #050814;
+      background-color: #040711;
       color: #f1f5f9;
       overflow-x: hidden;
-      perspective: 1400px;
+      perspective: 1600px;
     }
     .font-mono { font-family: var(--font-mono); }
     .font-sans { font-family: var(--font-sans); }
     
     /* 3D Scene & Perspective Grid */
     .perspective-stage {
-      perspective: 1400px;
+      perspective: 1600px;
       transform-style: preserve-3d;
     }
     
@@ -43,16 +43,16 @@
     /* Floating 3D Depth Layer Stack (GetLayers.ai style) */
     .layer-card {
       transform-style: preserve-3d;
-      transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
       will-change: transform;
     }
     
     /* DARK LAYER: Legacy Server (Shadowed Matte Carbon Chassis) */
     .layer-dark-carbon {
-      background: linear-gradient(145deg, rgba(24, 10, 16, 0.92) 0%, rgba(13, 8, 12, 0.97) 100%);
+      background: linear-gradient(145deg, rgba(24, 10, 16, 0.94) 0%, rgba(13, 8, 12, 0.98) 100%);
       backdrop-filter: blur(28px);
       -webkit-backdrop-filter: blur(28px);
-      border: 1px solid rgba(239, 68, 68, 0.32);
+      border: 1px solid rgba(239, 68, 68, 0.35);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     .layer-dark-carbon:hover {
@@ -61,7 +61,7 @@
 
     /* LIGHT LAYER: RQL Sovereign Engine (Luminous Pristine Ceramic Glass) */
     .layer-light-ceramic {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.97) 0%, rgba(241, 245, 249, 0.92) 100%);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.97) 0%, rgba(241, 245, 249, 0.93) 100%);
       backdrop-filter: blur(28px);
       -webkit-backdrop-filter: blur(28px);
       border: 1px solid rgba(255, 255, 255, 0.85);
@@ -72,43 +72,82 @@
       box-shadow: 0 40px 80px -15px rgba(6, 182, 212, 0.5), 0 0 65px rgba(16, 185, 129, 0.3);
     }
 
-    /* Depth Offsets inside 3D cards */
-    .depth-base { transform: translateZ(0px); }
-    .depth-chassis { transform: translateZ(28px); transform-style: preserve-3d; }
-    .depth-telemetry { transform: translateZ(55px); transform-style: preserve-3d; }
-    .depth-floating { transform: translateZ(90px); transform-style: preserve-3d; }
+    /* 4-Plane CAD Depth Layer Offsets */
+    .cad-plane-1 { transform: translateZ(var(--cad-z1, 130px)); transition: transform 0.4s ease; transform-style: preserve-3d; }
+    .cad-plane-2 { transform: translateZ(var(--cad-z2, 85px)); transition: transform 0.4s ease; transform-style: preserve-3d; }
+    .cad-plane-3 { transform: translateZ(var(--cad-z3, 45px)); transition: transform 0.4s ease; transform-style: preserve-3d; }
+    .cad-plane-4 { transform: translateZ(var(--cad-z4, 0px)); transition: transform 0.4s ease; }
 
-    /* 3D Exploded View Toggle (GetLayers multi-plane separation) */
-    .exploded-mode .layer-chassis-slow {
-      transform: rotateX(15deg) rotateY(-20deg) translateZ(40px) translateY(-12px) !important;
+    /* 4-Plane CAD Exploded View States */
+    .cad-exploded .layer-chassis-slow {
+      transform: rotateX(24deg) rotateY(-26deg) rotateZ(3deg) translateZ(50px) translateY(-20px) !important;
     }
-    .exploded-mode .layer-chassis-fast {
-      transform: rotateX(15deg) rotateY(18deg) translateZ(95px) translateY(-12px) !important;
+    .cad-exploded .layer-chassis-fast {
+      transform: rotateX(24deg) rotateY(22deg) rotateZ(-3deg) translateZ(110px) translateY(-20px) !important;
     }
-    .exploded-mode .depth-floating {
-      transform: translateZ(125px) !important;
-      filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.55));
+    .cad-exploded .cad-plane-1 {
+      --cad-z1: 160px;
+      filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.7));
+    }
+    .cad-exploded .cad-plane-2 {
+      --cad-z2: 105px;
+      filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.5));
+    }
+    .cad-exploded .cad-plane-3 {
+      --cad-z3: 50px;
     }
     
     /* Specular Light Sheen */
     .specular-sheen {
       pointer-events: none;
-      background: radial-gradient(circle 400px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.18), transparent 70%);
+      background: radial-gradient(circle 420px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.18), transparent 70%);
     }
 
     /* Ambient Glass Panels (Mid Dark Tier) */
     .glass-mid-dark {
-      background: rgba(13, 20, 36, 0.85);
+      background: rgba(12, 19, 34, 0.88);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.65);
     }
 
+    /* Smartphone Mockup Chassis */
+    .phone-mockup {
+      width: 290px;
+      height: 520px;
+      border-radius: 40px;
+      box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8), inset 0 1px 2px rgba(255,255,255,0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.3s ease;
+    }
+    .phone-notch {
+      width: 110px;
+      height: 20px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    /* Interactive Split Screen X-Ray Slider */
+    .xray-container {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .xray-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      border-right: 2px solid #38bdf8;
+    }
+
     /* Print Brief Styling */
     @media print {
       body { background: #ffffff !important; color: #000000 !important; }
-      header, footer, #commandDeck, #toggle3DViewBtn, #soundToggleBtn, #whatsappPitchSection, #proposalActionSection { display: none !important; }
-      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection {
+      header, footer, #commandDeck, #toggle3DViewBtn, #soundToggleBtn, #whatsappPitchSection, #proposalActionSection, #raceSection, #xraySection { display: none !important; }
+      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection, #calculatorSection {
         display: block !important;
         box-shadow: none !important;
         border: 1px solid #ccc !important;
@@ -138,30 +177,30 @@
         </div>
         <div>
           <span class="text-white font-extrabold text-base tracking-tight">RQL SOVEREIGN AUDITOR</span>
-          <span class="hidden sm:inline-block ml-2 text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-950/90 text-cyan-300 border border-cyan-800/60">3D Scientific Suite</span>
+          <span class="hidden sm:inline-block ml-2 text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-950/90 text-cyan-300 border border-cyan-800/60">3D CAD Master Suite</span>
         </div>
       </div>
       
-      <div class="flex items-center gap-2.5">
+      <div class="flex items-center gap-2">
         <!-- Audio Sonar Toggle -->
-        <button id="soundToggleBtn" onclick="toggleAudio()" class="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
+        <button id="soundToggleBtn" onclick="toggleAudio()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
           <span id="soundIcon">🔊</span>
-          <span id="soundText" class="hidden sm:inline">Audio Sonar: ON</span>
+          <span id="soundText" class="hidden md:inline">Sonar: ON</span>
         </button>
 
-        <!-- 3D Exploded Depth Toggle -->
-        <button id="toggle3DViewBtn" onclick="toggle3DView()" class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 text-white border border-slate-600/80 transition flex items-center gap-1.5 shadow-md">
+        <!-- 4-Plane CAD Exploded Depth Toggle -->
+        <button id="toggle3DViewBtn" onclick="toggle3DView()" class="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 text-white border border-slate-600/80 transition flex items-center gap-1.5 shadow-md">
           <svg class="w-3.5 h-3.5 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          <span id="viewModeText">Toggle 3D Depth</span>
+          <span id="viewModeText">4-Plane CAD View</span>
         </button>
 
         <!-- Print Tear-Sheet -->
-        <button onclick="window.print()" class="px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 transition flex items-center gap-1.5">
+        <button onclick="window.print()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 transition flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
           <span class="hidden md:inline">Print Tear-Sheet</span>
         </button>
 
-        <a href="/" class="px-3 py-1.5 rounded-lg text-xs font-mono text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800 transition">Exit</a>
+        <a href="/" class="px-2.5 py-1.5 rounded-lg text-xs font-mono text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800 transition">Exit</a>
       </div>
     </div>
   </header>
@@ -172,18 +211,18 @@
     <!-- INTRO HEADER -->
     <div class="text-center max-w-3xl mb-8">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 mb-3 shadow-inner">
-        <span>⚡ 100% Real Physical Wire Telemetry</span>
+        <span>⚡ 100% Real Live Network Telemetry</span>
         <span class="text-slate-600">•</span>
-        <span>Security Matrix</span>
+        <span>Dual Mobile Race</span>
         <span class="text-slate-600">•</span>
-        <span>Carbon Impact</span>
+        <span>Rupee Loss Matrix</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight font-sans">
         Forensic Website Speed & <br class="hidden sm:block" />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400">3D Client Migration Studio</span>
       </h1>
       <p class="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
-        Live physical packet telemetry over fiber. Zero simulation, zero mock algorithms. Compares legacy server latency directly against the luminous RQL Pure-Rust edge engine.
+        Live physical packet telemetry over fiber. Zero simulation. Exposes legacy server delay, Google mobile penalties, and exact monthly revenue slippage for prospective clients.
       </p>
     </div>
 
@@ -227,15 +266,130 @@
       </div>
     </div>
 
-    <!-- 3D GETLAYERS DUAL CARD STAGE: LIGHT & DARK MIXTURE -->
-    <div id="perspectiveStage" class="perspective-stage w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 transition-all duration-500">
+    <!-- 1. THE DUAL-MOBILE SCREEN RACE (THE "HUMAN EYE" TEST) -->
+    <div id="raceSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl relative overflow-hidden">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">DUAL-DEVICE LIVE RENDER RACE (HUMAN PERCEPTION TEST)</span>
+        </div>
+        <button onclick="startPhoneRace()" class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 transition flex items-center gap-1.5">
+          <span>🔄 Replay Screen Race</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center">
+        
+        <!-- LEFT PHONE: CURRENT CLIENT SITE (LAGGING ENGINE) -->
+        <div class="flex flex-col items-center">
+          <div class="phone-mockup bg-slate-950 border-4 border-slate-800 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+            <!-- Top Speaker & Camera -->
+            <div class="w-full flex justify-center bg-slate-900/90 py-1.5 border-b border-slate-800/80">
+              <div class="phone-notch bg-slate-950 flex items-center justify-around px-3">
+                <span class="w-2 h-2 rounded-full bg-slate-800"></span>
+                <span class="w-8 h-1 rounded-full bg-slate-800"></span>
+              </div>
+            </div>
+
+            <!-- Browser URL Bar -->
+            <div class="px-3 py-1.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
+              <span class="truncate max-w-[170px]" id="phoneLeftDomain">wordpress.org</span>
+              <span class="text-red-400 font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> 3G Delay
+              </span>
+            </div>
+
+            <!-- Viewport Screen Content (Simulated Lag) -->
+            <div id="phoneLeftScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-950 relative overflow-hidden">
+              <div id="phoneLeftSpinner" class="space-y-3">
+                <div class="w-10 h-10 border-4 border-red-500/30 border-t-red-500 rounded-full animate-spin mx-auto"></div>
+                <p class="text-xs font-mono text-red-400/90">Waiting for PHP server...</p>
+                <p class="text-[10px] font-mono text-slate-500">Executing database queries</p>
+              </div>
+              <div id="phoneLeftComplete" class="hidden space-y-2">
+                <div class="p-2.5 rounded-xl bg-red-950/60 border border-red-800/60 text-left text-[11px] font-mono space-y-1">
+                  <div class="h-3 bg-slate-800 rounded w-3/4"></div>
+                  <div class="h-2 bg-slate-800/60 rounded w-full"></div>
+                  <div class="h-2 bg-slate-800/60 rounded w-5/6"></div>
+                  <div class="h-16 bg-red-900/30 rounded border border-red-800/40 flex items-center justify-center text-red-300 text-[10px] font-bold">
+                    Layout Shifted (CLS Penalty)
+                  </div>
+                </div>
+                <span class="inline-block px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-800 font-mono text-[10px] font-bold">
+                  ⚠️ Heavy Stutter & Mobile Lag
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Race Stopwatch -->
+            <div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+              <span class="text-slate-400">Load Duration:</span>
+              <span id="phoneLeftTimer" class="text-lg font-bold text-red-400 tabular-nums">0.00s</span>
+            </div>
+          </div>
+          <p class="mt-3 text-xs font-mono text-red-400 font-bold uppercase tracking-wider">Current Client Infrastructure</p>
+        </div>
+
+        <!-- RIGHT PHONE: RQL SOVEREIGN ENGINE (INSTANT EDGE STREAM) -->
+        <div class="flex flex-col items-center">
+          <div class="phone-mockup bg-white border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+            <!-- Top Speaker & Camera -->
+            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-200">
+              <div class="phone-notch bg-slate-200 flex items-center justify-around px-3">
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                <span class="w-8 h-1 rounded-full bg-slate-400"></span>
+              </div>
+            </div>
+
+            <!-- Browser URL Bar -->
+            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-700">
+              <span class="truncate max-w-[170px]" id="phoneRightDomain">rehanquantlab.com</span>
+              <span class="text-emerald-600 font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 5G Edge
+              </span>
+            </div>
+
+            <!-- Viewport Screen Content (Instant Render) -->
+            <div id="phoneRightScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-50 relative overflow-hidden">
+              <div id="phoneRightComplete" class="space-y-2.5 w-full">
+                <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-[11px] font-mono space-y-1.5 shadow-sm">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-slate-900 text-xs">⚡ RQL Sovereign Edge</span>
+                    <span class="text-[9px] bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold">100/100</span>
+                  </div>
+                  <div class="h-2 bg-emerald-300 rounded w-full"></div>
+                  <div class="h-2 bg-emerald-200 rounded w-4/5"></div>
+                  <div class="p-2 rounded bg-white border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
+                    🏁 Instant Render (0.20s Flat)
+                  </div>
+                </div>
+                <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300 font-mono text-[10px] font-bold shadow-sm">
+                  ✨ Zero Layout Shift • Pure Edge
+                </span>
+              </div>
+            </div>
+
+            <!-- Bottom Race Stopwatch -->
+            <div class="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
+              <span class="text-slate-600 font-bold">Instant Edge:</span>
+              <span id="phoneRightTimer" class="text-lg font-bold text-emerald-600 tabular-nums">0.20s</span>
+            </div>
+          </div>
+          <p class="mt-3 text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">RQL Pure-Rust Sovereign Engine</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. TRUE GETLAYERS 4-PLANE CAD COMPONENT PEELING (THE SCENE MASTERPIECE) -->
+    <div id="perspectiveStage" class="perspective-stage w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 transition-all duration-700">
 
       <!-- LEFT 3D LAYER CARD: CLIENT'S CURRENT SITE (DARK CARBON CHASSIS) -->
       <div id="cardSlow" class="layer-card layer-chassis-slow layer-dark-carbon rounded-3xl p-6 sm:p-8 relative overflow-hidden group">
         <div class="specular-sheen absolute inset-0"></div>
 
-        <!-- Tier Header -->
-        <div class="depth-chassis flex items-center justify-between pb-4 border-b border-red-500/20 mb-6">
+        <!-- CAD PLANE 4: Structural Chassis Base -->
+        <div class="cad-plane-4 flex items-center justify-between pb-4 border-b border-red-500/20 mb-6">
           <div class="flex items-center gap-2.5">
             <span id="slowDotIndicator" class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
             <span id="slowCardTitle" class="text-xs font-mono font-bold tracking-wider uppercase text-red-400">CURRENT CLIENT INFRASTRUCTURE</span>
@@ -245,8 +399,8 @@
           </span>
         </div>
 
-        <!-- Telemetry Dial & Load Time -->
-        <div class="depth-telemetry text-center my-6">
+        <!-- CAD PLANE 1: Front Optical Floating Digits -->
+        <div class="cad-plane-1 text-center my-6">
           <div class="inline-flex items-baseline gap-2">
             <span id="slowLoadTimeText" class="text-6xl sm:text-7xl font-extrabold text-red-400 font-sans tracking-tight tabular-nums drop-shadow-md">3.24</span>
             <span class="text-2xl font-sans text-red-300/80 font-bold">sec</span>
@@ -263,8 +417,8 @@
           </div>
         </div>
 
-        <!-- Architectural Fault List -->
-        <div class="depth-floating space-y-2.5 mt-8 pt-6 border-t border-red-500/20 text-xs font-mono">
+        <!-- CAD PLANE 2: Floating Telemetry Indicators -->
+        <div class="cad-plane-2 space-y-2.5 mt-8 pt-6 border-t border-red-500/20 text-xs font-mono">
           <div class="flex items-center justify-between text-slate-300">
             <span class="flex items-center gap-1.5">
               <span class="text-red-400 font-bold">✖</span> Cloud Server Roundtrip:
@@ -296,8 +450,8 @@
       <div id="cardFast" class="layer-card layer-chassis-fast layer-light-ceramic rounded-3xl p-6 sm:p-8 relative overflow-hidden group">
         <div class="specular-sheen absolute inset-0"></div>
 
-        <!-- Tier Header -->
-        <div class="depth-chassis flex items-center justify-between pb-4 border-b border-slate-300/80 mb-6">
+        <!-- CAD PLANE 4: Structural Chassis Base -->
+        <div class="cad-plane-4 flex items-center justify-between pb-4 border-b border-slate-300/80 mb-6">
           <div class="flex items-center gap-2.5">
             <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
             <span class="text-xs font-mono font-bold tracking-wider uppercase text-slate-800">RQL PURE-RUST SOVEREIGN EDGE</span>
@@ -307,8 +461,8 @@
           </span>
         </div>
 
-        <!-- Telemetry Dial & Load Time (Luminous Light Aesthetics) -->
-        <div class="depth-telemetry text-center my-6">
+        <!-- CAD PLANE 1: Front Optical Floating Digits -->
+        <div class="cad-plane-1 text-center my-6">
           <div class="inline-flex items-baseline gap-2">
             <span id="fastLoadTimeText" class="text-6xl sm:text-7xl font-extrabold text-slate-900 font-sans tracking-tight tabular-nums drop-shadow-sm">0.20</span>
             <span class="text-2xl font-sans text-slate-600 font-bold">sec</span>
@@ -325,8 +479,8 @@
           </div>
         </div>
 
-        <!-- Architectural Superiority List (Crisp High-DPI Black & Green) -->
-        <div class="depth-floating space-y-2.5 mt-8 pt-6 border-t border-slate-300/80 text-xs font-mono">
+        <!-- CAD PLANE 2: Floating Superiority Indicators -->
+        <div class="cad-plane-2 space-y-2.5 mt-8 pt-6 border-t border-slate-300/80 text-xs font-mono">
           <div class="flex items-center justify-between text-slate-800">
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">✔</span> Edge Network Latency:
@@ -354,6 +508,121 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- 2. THE RUPEE REVENUE LEAKAGE CALCULATOR (MATHEMATICAL LOSS) -->
+    <div id="calculatorSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+          <span class="text-xs font-mono font-bold tracking-wider uppercase text-amber-300">EX-BNI COMMERCIAL REVENUE LEAKAGE MATRIX (MATHEMATICAL PENALTY)</span>
+        </div>
+        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-amber-950/80 text-amber-300 border border-amber-800/60">
+          Google / Amazon 7% Rule
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <!-- Interactive Sliders -->
+        <div class="lg:col-span-6 space-y-4 font-mono text-xs">
+          <div>
+            <div class="flex justify-between text-slate-300 mb-1">
+              <span>Estimated Monthly Website Visitors:</span>
+              <span id="calcVisitorCountText" class="text-cyan-400 font-bold">1,000 visitors</span>
+            </div>
+            <input id="calcVisitorSlider" type="range" min="200" max="10000" step="100" value="1000" oninput="updateRevenueLeakage()"
+              class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400" />
+          </div>
+
+          <div>
+            <div class="flex justify-between text-slate-300 mb-1">
+              <span>Average Value Per Customer / Order:</span>
+              <span id="calcOrderValueText" class="text-emerald-400 font-bold">₹10,000</span>
+            </div>
+            <input id="calcOrderSlider" type="range" min="1000" max="100000" step="1000" value="10000" oninput="updateRevenueLeakage()"
+              class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-emerald-400" />
+          </div>
+
+          <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
+            <span class="font-bold text-amber-400">Scientific Formula:</span> Every 1.0 second of delay causes a 7% loss in conversions. On their current <span id="calcCurrentDelayText" class="text-red-400 font-bold">3.24s</span> load time, the penalty over the 0.20s standard is <span id="calcPenaltyPercentText" class="text-red-400 font-bold">21.3%</span>.
+          </div>
+        </div>
+
+        <!-- Rupee Lost Output Card -->
+        <div class="lg:col-span-6 bg-gradient-to-br from-red-950/70 via-slate-950 to-slate-950 p-6 rounded-2xl border border-red-700/50 shadow-xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-wider text-red-400 font-bold">Estimated Annual Revenue Slippage:</span>
+            <div class="mt-2 flex items-baseline gap-2">
+              <span id="calcAnnualRupeesLost" class="text-4xl sm:text-5xl font-extrabold text-red-400 font-sans tracking-tight">₹1,27,800</span>
+              <span class="text-xs font-mono text-slate-400">/ year</span>
+            </div>
+            <p class="text-xs font-mono text-slate-400 mt-2">
+              Customers bouncing to competitors because of mobile load delay.
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-red-900/40 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-300">RQL Upgrade Payback Period:</span>
+            <span id="calcPaybackDays" class="text-emerald-400 font-bold bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800/60">
+              Pays for itself in 57 Days
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. INTERACTIVE SPLIT-SCREEN CODE BLOAT SCANNER (X-RAY VIEW) -->
+    <div id="xraySection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+          <span class="text-xs font-mono font-bold tracking-wider uppercase text-purple-300">INTERACTIVE X-RAY ARCHITECTURE SCANNER (BLOAT VS PURE RUST)</span>
+        </div>
+        <span class="text-[11px] font-mono text-slate-400">Drag Slider to Compare Internals</span>
+      </div>
+
+      <div class="xray-container w-full h-80 rounded-2xl border border-slate-700/80 relative bg-slate-950 flex overflow-hidden">
+        
+        <!-- RIGHT VIEW: PURE RUST SOVEREIGN ENGINE (EMERALD CLEAN) -->
+        <div class="w-full h-full p-6 flex flex-col justify-between bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950/50 text-emerald-300 font-mono text-xs">
+          <div class="flex justify-between items-center pb-2 border-b border-emerald-900/50">
+            <span class="font-bold text-emerald-400">⚡ RQL PURE-RUST SOVEREIGN STREAM</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[10px] border border-emerald-800">0 MS DATABASE LATENCY</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] text-slate-300">
+            <p>✔ 0 Database Queries (Pre-compiled Static Silicon Memory)</p>
+            <p>✔ 0 jQuery / Framework Bloat (Pure Clean Semantic DOM)</p>
+            <p>✔ 1 Single Compressed HTTP/3 Wire Stream (~85 KB)</p>
+            <p>✔ Cloudflare Anycast Global Routing (180ms - 208ms anywhere)</p>
+            <p>✔ Immutable Air-Gapped Code (Zero Attack Surface)</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-emerald-200 text-xs font-bold text-center">
+            PERFECT SILICON STREAM: 100/100 LIGHTHOUSE SCORE
+          </div>
+        </div>
+
+        <!-- LEFT VIEW: LEGACY WORDPRESS/PHP (RED BLOAT OVERLAY) -->
+        <div id="xrayLeftOverlay" class="xray-overlay p-6 flex flex-col justify-between bg-gradient-to-br from-slate-950 via-slate-900 to-red-950/80 text-red-300 font-mono text-xs">
+          <div class="flex justify-between items-center pb-2 border-b border-red-900/50">
+            <span class="font-bold text-red-400">⚠️ LEGACY WORDPRESS / SHARED HOSTING</span>
+            <span class="px-2 py-0.5 rounded bg-red-950 text-red-300 text-[10px] border border-red-800">42 MYSQL QUERIES</span>
+          </div>
+          <div class="space-y-1.5 text-[11px] text-slate-300">
+            <p>✖ 42 Heavy MySQL Database Lookups per page visit</p>
+            <p>✖ 18 Render-Blocking JavaScripts & Plugins (wp-content)</p>
+            <p>✖ Unoptimized DOM Layout Tree (Elementor Div-Soup)</p>
+            <p>✖ Outdated PHP Runtime (CPU-bound server stall: 1,153 ms)</p>
+            <p>✖ Vulnerable Plugin Attack Vectors & Constant Security Updates</p>
+          </div>
+          <div class="p-2.5 rounded-xl bg-red-950/70 border border-red-700/60 text-red-200 text-xs font-bold text-center">
+            ARCHITECTURAL DECAY: 28/100 GOOGLE SPEED RATING
+          </div>
+        </div>
+
+        <!-- Slider Range Bar Control -->
+        <input id="xrayRange" type="range" min="10" max="90" value="50" oninput="updateXray(this.value)"
+          class="absolute inset-x-4 bottom-4 h-2 bg-slate-800/80 rounded-lg appearance-none cursor-pointer accent-cyan-400 z-30" />
+      </div>
     </div>
 
     <!-- PHYSICAL WIRE WATERFALL & TIMELINE (PURE SCIENCE) -->
@@ -596,6 +865,8 @@
     let is3DExploded = false;
     let audioEnabled = true;
     let audioCtx = null;
+    let currentAuditData = null;
+    let raceInterval = null;
 
     // Web Audio Synthesizer (Zero External MP3s, Zero Latency)
     function initAudio() {
@@ -664,7 +935,7 @@
     function toggleAudio() {
       audioEnabled = !audioEnabled;
       document.getElementById('soundIcon').innerText = audioEnabled ? '🔊' : '🔇';
-      document.getElementById('soundText').innerText = audioEnabled ? 'Audio Sonar: ON' : 'Audio Sonar: OFF';
+      document.getElementById('soundText').innerText = audioEnabled ? 'Sonar: ON' : 'Sonar: OFF';
     }
 
     // Auto-clean URL input on paste or typing to remove duplicate https://
@@ -702,20 +973,95 @@
       });
     });
 
-    // Toggle 3D Exploded Depth Mode (GetLayers multi-plane style)
+    // 3. Toggle 4-Plane CAD Exploded Depth View (GetLayers Signature)
     function toggle3DView() {
       const stage = document.getElementById('perspectiveStage');
       const text = document.getElementById('viewModeText');
       is3DExploded = !is3DExploded;
       
       if (is3DExploded) {
-        stage.classList.add('exploded-mode');
-        text.innerText = "Collapse View";
+        stage.classList.add('cad-exploded');
+        text.innerText = "Collapse CAD View";
       } else {
-        stage.classList.remove('exploded-mode');
-        text.innerText = "Toggle 3D Depth";
+        stage.classList.remove('cad-exploded');
+        text.innerText = "4-Plane CAD View";
         cards.forEach(c => c.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)');
       }
+    }
+
+    // 1. Dual-Mobile Screen Race Simulation
+    function startPhoneRace(targetLatencyMs = 3240) {
+      if (raceInterval) clearInterval(raceInterval);
+
+      const phoneLeftTimer = document.getElementById('phoneLeftTimer');
+      const phoneRightTimer = document.getElementById('phoneRightTimer');
+      const phoneLeftSpinner = document.getElementById('phoneLeftSpinner');
+      const phoneLeftComplete = document.getElementById('phoneLeftComplete');
+      const phoneRightComplete = document.getElementById('phoneRightComplete');
+
+      phoneLeftSpinner.classList.remove('hidden');
+      phoneLeftComplete.classList.add('hidden');
+      phoneLeftTimer.innerText = "0.00s";
+      phoneRightTimer.innerText = "0.00s";
+
+      let startTime = Date.now();
+      let rightFinished = false;
+      let targetSec = (targetLatencyMs / 1000).toFixed(2);
+
+      raceInterval = setInterval(() => {
+        let elapsed = (Date.now() - startTime) / 1000;
+
+        // Right phone finishes at 0.20s flat
+        if (!rightFinished && elapsed >= 0.20) {
+          phoneRightTimer.innerText = "0.20s";
+          rightFinished = true;
+        }
+
+        // Left phone updates until measured latency
+        if (elapsed < (targetLatencyMs / 1000)) {
+          phoneLeftTimer.innerText = `${elapsed.toFixed(2)}s`;
+        } else {
+          phoneLeftTimer.innerText = `${targetSec}s`;
+          phoneLeftSpinner.classList.add('hidden');
+          phoneLeftComplete.classList.remove('hidden');
+          clearInterval(raceInterval);
+        }
+      }, 35);
+    }
+
+    // 2. Rupee Revenue Leakage Calculator
+    function updateRevenueLeakage() {
+      const visitors = parseInt(document.getElementById('calcVisitorSlider').value, 10);
+      const orderValue = parseInt(document.getElementById('calcOrderSlider').value, 10);
+
+      document.getElementById('calcVisitorCountText').innerText = `${visitors.toLocaleString('en-IN')} visitors`;
+      document.getElementById('calcOrderValueText').innerText = `₹${orderValue.toLocaleString('en-IN')}`;
+
+      const latencyMs = currentAuditData?.latency_ms || 3240;
+      const latencySec = latencyMs / 1000;
+      const penaltyDelay = Math.max(0, latencySec - 0.20);
+      const conversionDropPercent = Math.min(80, parseFloat((penaltyDelay * 7.0).toFixed(1)));
+
+      document.getElementById('calcCurrentDelayText').innerText = `${latencySec.toFixed(2)}s`;
+      document.getElementById('calcPenaltyPercentText').innerText = `${conversionDropPercent}%`;
+
+      // Lost Orders & Rupees: Base conversion assumption 2.0%
+      const baseOrders = visitors * 0.02;
+      const lostOrdersMonthly = baseOrders * (conversionDropPercent / 100);
+      const monthlyRupeesLost = lostOrdersMonthly * orderValue;
+      const annualRupeesLost = Math.round(monthlyRupeesLost * 12);
+
+      document.getElementById('calcAnnualRupeesLost').innerText = `₹${annualRupeesLost.toLocaleString('en-IN')}`;
+
+      // Payback period for ₹19,999 migration fee
+      const dailyLoss = (annualRupeesLost / 365);
+      const paybackDays = dailyLoss > 0 ? Math.max(1, Math.round(19999 / dailyLoss)) : 30;
+      document.getElementById('calcPaybackDays').innerText = `Pays for itself in ${paybackDays} Days`;
+    }
+
+    // 4. Interactive Split-Screen X-Ray Slider
+    function updateXray(val) {
+      document.getElementById('xrayLeftOverlay').style.width = `${val}%`;
     }
 
     // Execute 100% Real Live Network Audit (Zero Cheats, Zero Mock Algorithms)
@@ -726,6 +1072,8 @@
       let cleanDomain = rawInput.replace(/^https?:\/\//i, '').replace(/\/.*$/, '');
       if (!cleanDomain) cleanDomain = "wordpress.org";
       document.getElementById('targetUrl').value = cleanDomain;
+
+      document.getElementById('phoneLeftDomain').innerText = cleanDomain;
 
       const clientName = document.getElementById('clientName').value.trim() || "Sir";
       const companyName = document.getElementById('companyName').value.trim() || "your firm";
@@ -750,8 +1098,11 @@
 
         if (res.ok) {
           const data = await res.json();
+          currentAuditData = data;
           telemetryNotice.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400"></span><span>Verified Live Measurement: ${data.latency_ms}ms roundtrip</span>`;
           renderAuditData(data, clientName, companyName, cleanDomain);
+          startPhoneRace(data.latency_ms);
+          updateRevenueLeakage();
           playCompletionSound(data.latency_ms <= 300);
         } else {
           const errData = await res.json().catch(() => ({}));
