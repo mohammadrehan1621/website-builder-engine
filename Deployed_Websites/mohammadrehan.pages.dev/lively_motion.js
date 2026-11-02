@@ -234,4 +234,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
         window.lucide.createIcons();
     }
+    const cookieBanner = document.getElementById('cookie-banner');
+    if (cookieBanner && localStorage.getItem('cookie_consent_accepted') === 'true') {
+        cookieBanner.remove();
+    }
 });
+
+window.acceptCookies = function() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        try {
+            localStorage.setItem('cookie_consent_accepted', 'true');
+        } catch (e) {}
+        banner.style.opacity = '0';
+        banner.style.pointerEvents = 'none';
+        setTimeout(() => banner.remove(), 250);
+    }
+};
+window.dismissCookies = function() {
+    window.acceptCookies();
+};

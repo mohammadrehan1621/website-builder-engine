@@ -21,3 +21,14 @@
 
 /manifest.json
   Cache-Control: no-cache, no-store, must-revalidate
+
+/*.zip
+  X-Robots-Tag: noindex, nofollow
+
+/.git*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/.env*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, no-store, must-revalidate

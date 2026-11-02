@@ -77,8 +77,9 @@
     <div class="chip-group" id="prod_chips">
       <div class="chip active" onclick="selectProduct(0, this)">01 DocumentShield</div>
       <div class="chip" onclick="selectProduct(1, this)">02 WhisperVault</div>
-      <div class="chip" onclick="selectProduct(2, this)">03 Retail POS</div>
-      <div class="chip" onclick="selectProduct(3, this)">👑 Master Access</div>
+      <div class="chip" onclick="selectProduct(2, this)">03 Retail POS ($199)</div>
+      <div class="chip" onclick="selectProduct(3, this)">04 StoreChain ($299)</div>
+      <div class="chip" onclick="selectProduct(4, this)" style="grid-column: span 2;">👑 Sovereign Master Access</div>
     </div>
 
     <!-- TIER SELECTOR FOR RETAIL POS -->
@@ -136,6 +137,7 @@
       { id: "RQL_DocumentShield", name: "RQL DocumentShield™ (Forensic PDF Redactor)" },
       { id: "RQL_WhisperVault", name: "RQL WhisperVault™ (AI Voice Intelligence)" },
       { id: "RQL_RetailPOS", name: "RQL Sovereign Retail POS™ (Single-Store Billing)" },
+      { id: "RQL_StoreChain", name: "RQL StoreChain™ (Multi-Counter & Branch POS Suite)" },
       { id: "UNIVERSAL_MASTER", name: "RQL Sovereign All-Suite Master Access" }
     ];
 
@@ -161,6 +163,10 @@
       const tierSec = document.getElementById('tier_section');
       if (idx === 2) {
         tierSec.style.display = 'block';
+        document.getElementById('tier_chips').innerHTML = '<div class="chip active">Single Store Standalone Edition ($199)</div>';
+      } else if (idx === 3) {
+        tierSec.style.display = 'block';
+        document.getElementById('tier_chips').innerHTML = '<div class="chip active">5-Till LAN & Multi-Branch Network ($299)</div>';
       } else {
         tierSec.style.display = 'none';
       }
@@ -191,8 +197,9 @@
       // Token
       let tokenPayload;
       if (selectedIdx === 2) {
-        const tier = RETAIL_TIERS[selectedTierIdx];
-        tokenPayload = `${OFFLINE_MASTER_SALT}:${tier.id}:${mid}`;
+        tokenPayload = `${OFFLINE_MASTER_SALT}:RQL_RetailPOS:${mid}`;
+      } else if (selectedIdx === 3) {
+        tokenPayload = `${OFFLINE_MASTER_SALT}:RQL_StoreChain:${mid}`;
       } else {
         const prod = PRODUCTS[selectedIdx];
         tokenPayload = `${OFFLINE_MASTER_SALT}:${prod.id}:${mid}`;
@@ -212,7 +219,9 @@
 
       let tierName = "Commercial Lifetime Perpetual (100% Offline)";
       if (selectedIdx === 2) {
-        tierName = RETAIL_TIERS[selectedTierIdx].name;
+        tierName = "Single Store Standalone Workstation (1 Machine • 100% Offline POS)";
+      } else if (selectedIdx === 3) {
+        tierName = "5-Till Multi-Counter LAN & Distributed Network License";
       }
 
       return `👑 *REHAN QUANT LAB (RQL) — COMMERCIAL LICENSE ACTIVATION* 🛡️\n\n` +

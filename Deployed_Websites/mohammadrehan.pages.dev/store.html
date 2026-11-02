@@ -105,6 +105,29 @@ tailwind.config = {
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
+<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock) -->
+<div class="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 z-[70] max-w-2xl bg-slate-950 border border-slate-700/90 rounded-2xl p-4 sm:p-5 shadow-2xl text-slate-100 transition-all duration-300 transform" id="cookie-banner">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-left">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="w-5 h-5" data-lucide="shield-check"></i>
+            </div>
+            <div>
+                <p class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
+                    <span>Data Privacy &amp; Cryptographic Security</span>
+                    <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono font-semibold">TLS 1.3 &amp; AES-256</span>
+                </p>
+                <p class="text-xs text-slate-200 leading-relaxed mt-1 font-medium">
+                    We value your privacy. 256-Bit SSL encrypted session with zero tracking cookies or external third-party data collection.
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
+            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
+        </div>
+    </div>
+</div>
 <!-- Top Unified Institutional Status Bar (Identical to Home & Experience) -->
 <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
   <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
@@ -112,7 +135,7 @@ tailwind.config = {
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
       <span class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ COMMERCIAL SUITES:</span>
       <span class="text-slate-200 text-xs truncate">
-        <strong>2 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
+        <strong>4 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
       </span>
     </div>
     <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
@@ -145,8 +168,7 @@ tailwind.config = {
 <!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
 <a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white font-bold transition shadow-xs group/store" href="store.html" title="2 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-<span>Commercial Suites</span>
-<span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
+<span>Commercial Suites</span>`r`n<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">2</span>
 </a>
 
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
@@ -178,7 +200,7 @@ tailwind.config = {
 <div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a>
 <a class="block py-2 px-3 rounded-lg bg-slate-900 text-white font-bold text-sm flex items-center justify-between" href="store.html">
-<span>Commercial Suites (3 Flagships)</span>
+<span>Commercial Suites (2 Flagships)</span>
 <span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
 </a>
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
@@ -233,7 +255,7 @@ Resume (PDF)
 
       <!-- Subtitle -->
       <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-        3 pure-rust sovereign computing suites engineered for confidential document redaction, offline AI speech recognition, and air-gapped business security. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
+        4 pure-rust sovereign computing suites engineered for confidential document redaction, offline AI speech recognition, single-store retail billing, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
       </p>
 
       <!-- 4 Stat Highlights (Clean White Cards matching Experience.html) -->
@@ -271,7 +293,7 @@ Resume (PDF)
             <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="package"></i>
             <span>Digital Releases</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">2 Flagships</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">4 Flagships</div>
           <div class="text-[11px] text-slate-500 font-mono mt-0.5">Live on Gumroad</div>
         </div>
 
@@ -297,7 +319,7 @@ Resume (PDF)
     </div>
 
     <!-- 2 Sovereign Product Cards -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 max-w-7xl mx-auto gap-7 mb-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto gap-6 mb-14">
 
       <!-- Product Card 1: RQL DocumentShield™ -->
       <div class="bg-white border-2 border-rose-300/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
@@ -315,9 +337,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between gap-1 text-[11px] font-mono text-slate-500">
-              <span class="text-rose-700 font-bold truncate pr-1" title="RQL_DocumentShield_Master_Setup.exe">RQL_DocumentShield_Master_Setup.exe</span>
-              <span class="shrink-0 bg-rose-100/70 text-rose-800 px-2 py-0.5 rounded text-[10px] font-bold">Air-Gapped OS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span class="text-rose-700 font-bold">RQL_DocumentShield_Master_Setup.exe</span>
+              <span>Air-Gapped OS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
               RQL DocumentShield™
@@ -371,9 +393,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between gap-1 text-[11px] font-mono text-slate-500">
-              <span class="text-sky-700 font-bold truncate pr-1" title="RQL_WhisperVault_Master_Setup.exe">RQL_WhisperVault_Master_Setup.exe</span>
-              <span class="shrink-0 bg-sky-100/70 text-sky-800 px-2 py-0.5 rounded text-[10px] font-bold">Air-Gapped OS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span class="text-sky-700 font-bold">RQL_WhisperVault_Master_Setup.exe</span>
+              <span>Air-Gapped OS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL WhisperVault™
@@ -428,9 +450,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between gap-1 text-[11px] font-mono text-slate-500">
-              <span class="text-amber-700 font-bold truncate pr-1" title="RQL_RetailPOS_Master_Setup.exe">RQL_RetailPOS_Master_Setup.exe</span>
-              <span class="shrink-0 bg-amber-100/70 text-amber-800 px-2 py-0.5 rounded text-[10px] font-bold">Air-Gapped POS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span class="text-amber-700 font-bold">RQL_RetailPOS_Master_Setup.exe</span>
+              <span>Air-Gapped POS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-amber-600 transition">
               RQL Sovereign Retail POS™
@@ -468,6 +490,60 @@ Resume (PDF)
         </div>
       </div>
 
+      <!-- Product Card 4: RQL StoreChain™ -->
+      <div class="bg-white border-2 border-orange-300/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+        <div class="absolute -top-3 left-6 bg-gradient-to-r from-orange-600 to-amber-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+          🌐 MULTI-COUNTER LAN &amp; BRANCH
+        </div>
+        <div>
+          <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
+            <img src="StoreChain_Cover_1080p.png" alt="RQL StoreChain™ Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
+              StoreChain v1.0
+            </div>
+            <div class="absolute top-3 right-3 bg-orange-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
+              5-Till LAN Mesh
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between gap-1 text-[11px] font-mono text-slate-500">
+              <span class="text-orange-700 font-bold truncate pr-1" title="RQL_StoreChain_Master_Setup.exe">RQL_StoreChain_Master_Setup.exe</span>
+              <span class="shrink-0 bg-orange-100/70 text-orange-800 px-2 py-0.5 rounded text-[10px] font-bold">Air-Gapped Network</span>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-orange-600 transition">
+              RQL StoreChain™
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Multi-Counter LAN &amp; Distributed Branch POS Suite: Connect up to 5 checkout registers over local in-store Wi-Fi/LAN without internet, with SHA-256 Merkle chain branch reconciliation.
+            </p>
+            <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>5-Till LocalMesh In-Store LAN (Sub-1ms, Zero Internet)</span></div>
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-Branch Store-and-Forward Merkle Chain Sync</span></div>
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Consolidated Multi-Counter Store Z-Reports &amp; Audits</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
+          <div class="p-3.5 rounded-2xl bg-orange-50/70 border border-orange-200 flex items-center justify-between">
+            <div>
+              <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">5-Counter LAN &amp; Multi-Branch License</div>
+              <div class="text-base font-extrabold text-slate-900 font-mono">$299 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;24,999</span></div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+              Pay Once, Own Forever
+            </span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <a href="https://quantify17.gumroad.com/l/rql-storechain" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+              <span>Buy on Gumroad</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20StoreChain%E2%84%A2%20Multi-Counter%20LAN%20Suite%20($299%20/%20%E2%82%B924,999).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Multi-Counter 5-Till Suite WhatsApp VIP">
+              <span>WhatsApp VIP</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Empty Search State -->
     <div id="store-empty-state" class="hidden text-center py-16 bg-slate-50 rounded-3xl border border-slate-200 p-8 my-8 shadow-xs">
@@ -523,7 +599,7 @@ Resume (PDF)
       <span class="font-bold text-slate-900 font-heading text-sm">REHAN QUANT LAB</span>
     </div>
     <p class="max-w-md mx-auto text-slate-500">
-      Independent computational systems and software laboratory. All 17 applications run offline without cloud subscriptions or vendor lock-in.
+      Independent computational systems and software laboratory. All flagship sovereign computing applications run offline without cloud subscriptions or vendor lock-in.
     </p>
     <div class="flex items-center justify-center gap-6 pt-2 font-mono text-[11px] text-slate-600">
       <a href="index.html" class="hover:text-slate-900 transition">Home</a>

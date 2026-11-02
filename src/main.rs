@@ -16,6 +16,7 @@ mod pentagon;
 mod schema;
 mod seo;
 mod server;
+mod slides;
 mod studio;
 mod templates;
 
@@ -34,6 +35,7 @@ use pentagon::PentagonOrchestrator;
 use schema::SchemaEngine;
 use seo::SeoEngine;
 use server::DevServer;
+use slides::SlideCompiler;
 
 fn main() {
     print_banner();
@@ -96,6 +98,9 @@ fn main() {
         "security" | "owasp" => {
             run_security_audit(&args);
         }
+        "slides" | "present" => {
+            run_slide_generator(&args);
+        }
         "help" | "--help" | "-h" => {
             print_help();
         }
@@ -133,7 +138,8 @@ fn print_help() {
     println!("  \x1b[1;32mregistry\x1b[0m                             Inspect all registered live domains & sites");
     println!("  \x1b[1;32mblackbox\x1b[0m   [export_path]             Inspect or export Offline Flight Recorder WAL");
     println!("  \x1b[1;32mleads\x1b[0m      [file]                    Inspect collected offline leads from Sovereign WAL");
-    println!("  \x1b[1;32msecurity\x1b[0m   [dir]                     Run 20-Point OWASP & Deep Security Hardening Audit\n");
+    println!("  \x1b[1;32msecurity\x1b[0m   [dir]                     Run 20-Point OWASP & Deep Security Hardening Audit");
+    println!("  \x1b[1;32mslides\x1b[0m     [input.md] [out_file]     Compile Markdown to Interactive HTML5 Presentation Deck\n");
 }
 
 fn resolve_default_paths(args: &[String]) -> (PathBuf, String, String) {
@@ -657,4 +663,43 @@ fn run_security_audit(args: &[String]) {
         t0.elapsed()
     );
     println!("\x1b[1;32m====================================================================\x1b[0m\n");
+}
+
+fn run_slide_generator(args: &[String]) {
+    let default_md = PathBuf::from("presentation.md");
+    let input_path = args.get(2).map(PathBuf::from).unwrap_or(default_md);
+
+    let default_out = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev/slides/index.html");
+    let output_path = args.get(3).map(PathBuf::from).unwrap_or(default_out);
+
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m📽️  SLIDE DECK COMPILER ENGINE\x1b[0m");
+    println!("   \x1b[1;33mInput Markdown: {:?}\x1b[0m", input_path);
+    println!("   \x1b[1;33mOutput Deck:    {:?}\x1b[0m", output_path);
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    let t0 = Instant::now();
+
+    // If input file does not exist, write default presentation template
+    if !input_path.exists() {
+        println!("   \x1b[1;33m[Generator]\x1b[0m Input file not found. Generating default presentation at {:?}", input_path);
+        let default_content = SlideCompiler::generate_default_deck();
+        if let Err(e) = fs::write(&input_path, default_content.as_bytes()) {
+            println!("\x1b[1;31m❌ Failed to write default deck: {}\x1b[0m\n", e);
+            return;
+        }
+    }
+
+    match SlideCompiler::compile_file(&input_path, &output_path) {
+        Ok(count) => {
+            let dur = t0.elapsed();
+            println!("   \x1b[1;32m✅ Slide Compilation Succeeded!\x1b[0m");
+            println!("   • Total Slides:       {}", count);
+            println!("   • Execution Time:     {:.2?}", dur);
+            println!("   • Output File:        {:?}\n", output_path);
+        }
+        Err(e) => {
+            println!("\x1b[1;31m❌ Slide compilation failed: {}\x1b[0m\n", e);
+        }
+    }
 }

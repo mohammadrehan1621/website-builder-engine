@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehan Quant Lab Enterprise Architecture — Presentation Deck</title>
+  <meta name="description" content="Rehan Quant Lab Enterprise Architecture presentation authored by Mohammad Rehan." />
+  <link rel="canonical" href="https://rehanquantlab.com/slides/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rehan Quant Lab Enterprise Architecture — Presentation Deck" />
+  <meta property="og:description" content="Rehan Quant Lab Enterprise Architecture presentation authored by Mohammad Rehan." />
+  <meta property="og:url" content="https://rehanquantlab.com/slides/" />
+  <meta property="og:image" content="https://rehanquantlab.com/emblem.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 26, 43, 0.85);
+      --border: rgba(148, 163, 184, 0.15);
+      --accent: #0ea5e9;
+      --accent-glow: rgba(14, 165, 233, 0.15);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --stage-w: 1920px;
+      --stage-h: 1080px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    #viewport {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.08) 0%, transparent 60%);
+    }
+    #stage {
+      position: relative;
+      width: var(--stage-w);
+      height: var(--stage-h);
+      transform-origin: center center;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.6) 0%, rgba(11, 15, 25, 0.95) 100%);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      padding: 96px 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 280ms ease, transform 280ms ease;
+      transform: scale(0.98);
+    }
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+    /* Typography */
+    .title-h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 84px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+    .slide-h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 54px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .slide-sub {
+      font-size: 24px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 36px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .slide-p {
+      font-size: 26px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      max-width: 1400px;
+    }
+    .slide-list {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .slide-list li {
+      font-size: 28px;
+      color: #e2e8f0;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .slide-list li::before {
+      content: '■';
+      color: var(--accent);
+      font-size: 18px;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .inline-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9em;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--border);
+      color: #38bdf8;
+      padding: 4px 10px;
+      border-radius: 8px;
+    }
+    /* Layouts */
+    .layout-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      flex-grow: 1;
+    }
+    .layout-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 48px;
+    }
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      backdrop-filter: blur(12px);
+    }
+    .metric-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      color: #38bdf8;
+      line-height: 1;
+    }
+    .metric-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .metric-detail {
+      font-size: 18px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .code-box {
+      background: #040711;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .code-box .keyword { color: #f43f5e; font-weight: bold; }
+    .code-box .fn { color: #38bdf8; }
+    .code-box .str { color: #34d399; }
+    /* Header & Footer */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .slide-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+    /* HUD Overlay Controls */
+    .hud-controls {
+      position: fixed;
+      bottom: 24px;
+      right: 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 9999px;
+    }
+    .hud-btn {
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: background 150ms;
+    }
+    .hud-btn:hover { background: rgba(255, 255, 255, 0.1); }
+    .progress-bar {
+      position: fixed;
+      bottom: 0; left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+      transition: width 200ms ease;
+      z-index: 200;
+    }
+    /* Grid Overview Modal */
+    #grid-overview {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.96);
+      backdrop-filter: blur(16px);
+      z-index: 300;
+      display: none;
+      padding: 64px;
+      overflow-y: auto;
+    }
+    #grid-overview.active { display: block; }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 32px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .grid-card {
+      aspect-ratio: 16 / 9;
+      background: #111827;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      cursor: pointer;
+      transition: transform 150ms, border-color 150ms;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .grid-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .grid-card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .grid-card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+    /* Print Stylesheet for High-Resolution PDF */
+    @media print {
+      body { background: #fff !important; overflow: visible !important; }
+      #viewport { display: block !important; height: auto !important; }
+      #stage {
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: none !important;
+      }
+      .slide {
+        position: relative !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 100vh !important;
+        color: #0f172a !important;
+      }
+      .title-h1, .slide-h2, .metric-label { color: #0f172a !important; }
+      .slide-p, .slide-list li { color: #334155 !important; }
+      .metric-card { background: #f8fafc !important; border: 1px solid #cbd5e1 !important; }
+      .code-box { background: #f1f5f9 !important; color: #0f172a !important; }
+      .hud-controls, .progress-bar, #grid-overview { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <div class="slide" id="slide-1" data-layout="title">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 01 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div style="margin-top: 120px;">
+  <h1 class="title-h1">Rehan Quant Lab</h1>
+  <div class="slide-sub">Air-Gapped Desktop Software &amp; Distributed Systems</div>
+  <div class="slide-p"><p class="slide-p">High-throughput sovereign software suites engineered for offline enterprise compliance, cryptographic immutability, and deterministic low-latency execution.</p>
+</div>
+</div>
+
+  <div class="slide-footer">
+    <div>Rehan Quant Lab</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+<div class="slide" id="slide-2" data-layout="metrics">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 02 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div>
+  <h2 class="slide-h2">Operational Performance</h2>
+  <div class="slide-sub">Deterministic Benchmark Telemetry</div>
+  <div><p class="slide-p">Physical measurements recorded on bare-metal x86_64 silicon:</p>
+</div>
+</div>
+<div class="layout-metrics">
+  <div class="metric-card">
+  <div class="metric-value">&lt;0.01ms</div>
+  <div class="metric-label">Native C-ABI Latency</div>
+  <div class="metric-detail">Pure-Rust execution without garbage collector jitter</div>
+</div><div class="metric-card">
+  <div class="metric-value">100%</div>
+  <div class="metric-label">Air-Gapped Integrity</div>
+  <div class="metric-detail">Complete isolation with zero telemetry packets</div>
+</div><div class="metric-card">
+  <div class="metric-value">$199</div>
+  <div class="metric-label">Perpetual License</div>
+  <div class="metric-detail">Perpetual license ownership with zero recurring fees</div>
+</div>
+</div>
+
+  <div class="slide-footer">
+    <div>Operational Performance</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+<div class="slide" id="slide-3" data-layout="split">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 03 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div>
+  <h2 class="slide-h2">Flagship Commercial Software</h2>
+  <div class="slide-sub">Verified Production Suites</div>
+</div>
+<div class="layout-split">
+  <div><h4 class="slide-h4">1. RQL DocumentShield™</h4>
+<ul class="slide-list">
+  <li>Forensic PDF redaction engine</li>
+  <li>Destructive vector &amp; text purge</li>
+  <li>Automated SSN, EIN &amp; card scanner</li>
+  <li>Court-admissible SHA-256 compliance audit</li>
+</ul>
+<h4 class="slide-h4">2. RQL WhisperVault™</h4>
+<ul class="slide-list">
+  <li>Offline voice intelligence &amp; transcription</li>
+  <li>Zero external cloud telemetry</li>
+  <li>Millisecond word-level subtitle generation (.SRT / .VTT)</li>
+</ul>
+</div>
+  <div><h4 class="slide-h4">3. RQL Sovereign Retail POS™</h4>
+<ul class="slide-list">
+  <li>High-speed retail billing workstation</li>
+  <li>80mm &amp; 58mm thermal receipt printing</li>
+  <li>Double-entry SQLite WAL shift ledger</li>
+  <li>Direct WhatsApp digital bill delivery</li>
+</ul>
+<h4 class="slide-h4">4. RQL Enterprise Core™</h4>
+<ul class="slide-list">
+  <li>Low-latency risk calculation</li>
+  <li>Multi-WAN link bonding engine</li>
+  <li>Automated GSTR tax ledger reconciliation</li>
+</ul>
+</div>
+</div>
+
+  <div class="slide-footer">
+    <div>Flagship Commercial Software</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+<div class="slide" id="slide-4" data-layout="code">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 04 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div>
+  <h2 class="slide-h2">Deterministic Process Supervision</h2>
+  <div class="slide-sub">AegisDB Continuous Invariant Verification</div>
+  <div class="slide-p"></div>
+</div>
+<div class="code-box"><div style="color: #64748b; font-size: 14px; margin-bottom: 12px; text-transform: uppercase;">Language: rust</div>pub struct ProcessSupervisor {
+    pub process_id: u32,
+    pub max_restarts: u32,
+    pub restart_count: u32,
+    pub state_hash: [u8; 32],
+}
+
+impl ProcessSupervisor {
+    pub fn verify_invariants(&amp;self) -&gt; bool {
+        // Enforce crash resilience and instant memory restoration
+        self.restart_count &lt;= self.max_restarts
+    }
+}
+</div>
+
+  <div class="slide-footer">
+    <div>Deterministic Process Supervision</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+<div class="slide" id="slide-5" data-layout="standard">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 05 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div>
+  <h2 class="slide-h2">Commercial Licensing Framework</h2>
+  <div class="slide-sub">Perpetual Sovereignty vs. Subscription Fatigue</div>
+</div>
+<div style="flex-grow: 1;">
+  <ul class="slide-list">
+  <li><strong>Perpetual Master License</strong>: $199 / ₹16,500 one-time payment.</li>
+  <li><strong>Complete Machine Ownership</strong>: Installs directly on local disk with 0 recurring subscriptions.</li>
+  <li><strong>Offline Integrity</strong>: Operates fully on isolated, air-gapped workstations without network access.</li>
+  <li><strong>Instant Delivery</strong>: Download wizard with signed cryptographic checksums.</li>
+</ul>
+
+</div>
+
+  <div class="slide-footer">
+    <div>Commercial Licensing Framework</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+<div class="slide" id="slide-6" data-layout="title">
+  <div class="slide-header">
+    <div class="slide-badge">SLIDE 06 / 06</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #64748b;">REHAN QUANT LAB™</div>
+  </div>
+
+  <div style="margin-top: 120px;">
+  <h1 class="title-h1">Conclusion &amp; Briefing</h1>
+  <div class="slide-sub">Rehan Quant Lab Headquarters</div>
+  <div class="slide-p"><p class="slide-p">Patna, Bihar, India • Direct Founder Contact: +91 7091518548</p>
+<p class="slide-p">Official Website: https://rehanquantlab.com</p>
+</div>
+</div>
+
+  <div class="slide-footer">
+    <div>Conclusion &amp; Briefing</div>
+    <div>Press Space or ➔ to advance • F for Fullscreen • O for Grid</div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="progress-bar" id="progress"></div>
+
+  <div class="hud-controls">
+    <button class="hud-btn" id="btn-prev" title="Previous Slide (← / Backspace)">◀</button>
+    <span class="hud-btn" id="hud-counter">1 / 6</span>
+    <button class="hud-btn" id="btn-next" title="Next Slide (→ / Space)">▶</button>
+    <button class="hud-btn" id="btn-grid" title="Overview Grid (O / Esc)">Grid</button>
+    <button class="hud-btn" id="btn-fs" title="Fullscreen (F)">FS</button>
+  </div>
+
+  <!-- Grid Overview Mode -->
+  <div id="grid-overview">
+    <div style="max-width: 1600px; margin: 0 auto 32px; display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: 32px; color: #fff;">Slide Index Overview</h2>
+      <button class="hud-btn" id="btn-close-grid" style="font-size: 18px; padding: 8px 18px;">Close (Esc)</button>
+    </div>
+    <div class="grid-container" id="grid-container"></div>
+  </div>
+
+  <script>
+    (function() {
+      const totalSlides = 6;
+      let currentSlide = 0;
+
+      // 1. Viewport Transform Scale Engine
+      function updateScale() {
+        const stage = document.getElementById('stage');
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        // Compute scale factor with uniform aspect ratio preservation
+        const scale = Math.min((w - 32) / 1920, (h - 32) / 1080);
+        stage.style.transform = `scale(${scale})`;
+      }
+      window.addEventListener('resize', updateScale);
+      updateScale();
+
+      // 2. Slide Navigation State Machine
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const counter = document.getElementById('hud-counter');
+      const progress = document.getElementById('progress');
+
+      function goToSlide(idx) {
+        if (idx < 0) idx = 0;
+        if (idx >= totalSlides) idx = totalSlides - 1;
+        currentSlide = idx;
+
+        slides.forEach((s, i) => {
+          if (i === currentSlide) {
+            s.classList.add('active');
+          } else {
+            s.classList.remove('active');
+          }
+        });
+
+        counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        progress.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+        window.location.hash = `#slide-${currentSlide + 1}`;
+      }
+
+      // Check hash on load
+      const hashMatch = window.location.hash.match(/#slide-(\d+)/);
+      if (hashMatch) {
+        const target = parseInt(hashMatch[1], 10) - 1;
+        if (target >= 0 && target < totalSlides) {
+          goToSlide(target);
+        } else {
+          goToSlide(0);
+        }
+      } else {
+        goToSlide(0);
+      }
+
+      // 3. Keyboard Controller
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+          goToSlide(currentSlide + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'Backspace' || e.key === 'PageUp') {
+          goToSlide(currentSlide - 1);
+        } else if (e.key === 'Home') {
+          goToSlide(0);
+        } else if (e.key === 'End') {
+          goToSlide(totalSlides - 1);
+        } else if (e.key === 'f' || e.key === 'F') {
+          toggleFullscreen();
+        } else if (e.key === 'o' || e.key === 'O' || e.key === 'Escape') {
+          toggleGrid();
+        }
+      });
+
+      // 4. Touch Navigation (Swipe gestures)
+      let touchStartX = 0;
+      window.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+      window.addEventListener('touchend', (e) => {
+        const deltaX = e.changedTouches[0].screenX - touchStartX;
+        if (deltaX < -50) goToSlide(currentSlide + 1);
+        if (deltaX > 50) goToSlide(currentSlide - 1);
+      }, false);
+
+      // HUD Click events
+      document.getElementById('btn-prev').addEventListener('click', () => goToSlide(currentSlide - 1));
+      document.getElementById('btn-next').addEventListener('click', () => goToSlide(currentSlide + 1));
+      document.getElementById('btn-fs').addEventListener('click', toggleFullscreen);
+
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      }
+
+      // 5. Grid Overview Mode
+      const grid = document.getElementById('grid-overview');
+      const gridContainer = document.getElementById('grid-container');
+
+      function buildGrid() {
+        gridContainer.innerHTML = '';
+        slides.forEach((s, idx) => {
+          const card = document.createElement('div');
+          card.className = 'grid-card';
+          const title = s.querySelector('.title-h1, .slide-h2')?.textContent || `Slide ${idx + 1}`;
+          card.innerHTML = `
+            <div class="grid-card-num">SLIDE ${String(idx + 1).padStart(2, '0')}</div>
+            <div class="grid-card-title">${title}</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #64748b;">${s.dataset.layout || 'standard'}</div>
+          `;
+          card.addEventListener('click', () => {
+            goToSlide(idx);
+            toggleGrid();
+          });
+          gridContainer.appendChild(card);
+        });
+      }
+      buildGrid();
+
+      function toggleGrid() {
+        grid.classList.toggle('active');
+      }
+      document.getElementById('btn-grid').addEventListener('click', toggleGrid);
+      document.getElementById('btn-close-grid').addEventListener('click', toggleGrid);
+    })();
+  </script>
+</body>
+</html>
