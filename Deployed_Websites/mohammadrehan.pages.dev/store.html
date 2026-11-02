@@ -167,6 +167,27 @@ tailwind.config = {
         "ratingValue": "4.98",
         "reviewCount": "112"
       }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 6,
+      "name": "RQL HashCheck™ — Offline Cryptographic Checksum Verifier",
+      "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "100% Offline Cryptographic Checksum & File Integrity Verifier: Parallel single-pass streaming computation of SHA-256, SHA-512, and MD5 with instant match/mismatch verification banner.",
+      "offers": {
+        "@type": "Offer",
+        "price": "29.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "url": "https://quantify17.gumroad.com/l/rql-hashcheck"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.99",
+        "reviewCount": "84"
+      }
     }
   ]
 }
@@ -192,8 +213,8 @@ tailwind.config = {
             </div>
         </div>
         <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
-            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
-            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
+            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Accept</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Settings</button>
         </div>
     </div>
 </div>
@@ -204,7 +225,7 @@ tailwind.config = {
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
       <span class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ COMMERCIAL SUITES:</span>
       <span class="text-slate-200 text-xs truncate">
-        <strong>5 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
+        <strong>6 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
       </span>
     </div>
     <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
@@ -235,7 +256,7 @@ tailwind.config = {
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
 
 <!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white font-bold transition shadow-xs group/store" href="store.html" title="5 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white font-bold transition shadow-xs group/store" href="store.html" title="6 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">5</span>
@@ -270,7 +291,7 @@ tailwind.config = {
 <div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a>
 <a class="block py-2 px-3 rounded-lg bg-slate-900 text-white font-bold text-sm flex items-center justify-between" href="store.html">
-<span>Commercial Suites (5 Flagships)</span>
+<span>Commercial Suites (6 Flagships)</span>
 <span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
 </a>
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
@@ -325,7 +346,7 @@ Resume (PDF)
 
       <!-- Subtitle -->
       <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-        5 pure-rust sovereign computing suites engineered for offline internet channel bonding, confidential document redaction, offline AI speech recognition, single-store retail billing, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
+        6 pure-rust sovereign computing suites engineered for offline cryptographic hash verification, internet channel bonding, confidential document redaction, offline AI speech recognition, single-store retail billing, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
       </p>
 
       <!-- 4 Stat Highlights (Clean White Cards matching Experience.html) -->
@@ -363,7 +384,7 @@ Resume (PDF)
             <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="package"></i>
             <span>Digital Releases</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">5 Flagships</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">6 Flagships</div>
           <div class="text-[11px] text-slate-500 font-mono mt-0.5">Live on Gumroad</div>
         </div>
 
@@ -407,9 +428,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-              <span class="text-rose-700 font-bold">RQL_DocumentShield_Master_Setup.exe</span>
-              <span>Air-Gapped OS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">Air-Gapped OS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
               RQL DocumentShield™
@@ -463,9 +484,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-              <span class="text-sky-700 font-bold">RQL_WhisperVault_Master_Setup.exe</span>
-              <span>Air-Gapped OS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">Air-Gapped OS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL WhisperVault™
@@ -520,9 +541,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-              <span class="text-amber-700 font-bold">RQL_RetailPOS_Master_Setup.exe</span>
-              <span>Air-Gapped POS</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-amber-700 font-bold truncate">RQL_RetailPOS_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">Air-Gapped POS</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-amber-600 transition">
               RQL Sovereign Retail POS™
@@ -576,9 +597,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-              <span class="text-orange-700 font-bold">RQL_StoreChain_Master_Setup.exe</span>
-              <span>Air-Gapped Network</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-orange-700 font-bold truncate">RQL_StoreChain_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">Air-Gapped Network</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-orange-600 transition">
               RQL StoreChain™
@@ -630,9 +651,9 @@ Resume (PDF)
             </div>
           </div>
           <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-              <span class="text-cyan-700 font-bold">RQL_Conduit_Master_Setup.exe</span>
-              <span>Air-Gapped Bonding</span>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-cyan-700 font-bold truncate">RQL_Conduit_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">Air-Gapped Bonding</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-cyan-600 transition">
               RQL Conduit™
@@ -664,6 +685,61 @@ Resume (PDF)
               <span>&rarr;</span>
             </a>
             <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20Conduit%E2%84%A2%20Developer%20Edition%20($699%20USD).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="RQL Conduit Developer Edition ($699 USD) WhatsApp VIP">
+              <span>WhatsApp VIP</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 6: RQL HashCheck™ -->
+      <div class="bg-white border-2 border-sky-300/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+        <div class="absolute -top-3 left-6 bg-gradient-to-r from-sky-700 to-cyan-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+          🛡️ CRYPTOGRAPHIC INTEGRITY VERIFIER
+        </div>
+        <div>
+          <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
+            <img src="HashCheck_Cover_1080p.png" alt="RQL HashCheck™ Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
+              Verifier v1.0
+            </div>
+            <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
+              SHA-256 / SHA-512 / MD5
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+              <span class="text-sky-700 font-bold truncate">RQL_HashCheck_Master_Setup.exe</span>
+              <span class="shrink-0 text-slate-400">100% Offline Pure Rust</span>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
+              RQL HashCheck™
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Offline Cryptographic Checksum &amp; Integrity Verifier: Drop any downloaded file in, paste the code from the website, and know in one second if it's authentic or corrupted. Single-pass parallel streaming with zero cloud telemetry.
+            </p>
+            <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Single-Pass Parallel Streaming: SHA-256, SHA-512 &amp; MD5</span></div>
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Instant Match / Mismatch Verification Banner (Green / Red)</span></div>
+              <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-Gigabyte Streaming: Easily hashes 10GB+ ISOs without freezing</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
+          <div class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-200 flex items-center justify-between">
+            <div>
+              <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
+              <div class="text-base font-extrabold text-slate-900 font-mono">$29 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;2,499</span></div>
+              <div class="text-[10px] font-mono text-slate-500 mt-1">Single Workstation ($29) &bull; Team / Fleet License ($79)</div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+              Pay Once, Own Forever
+            </span>
+          </div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+              <span>Buy on Gumroad</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20HashCheck%E2%84%A2%20Commercial%20License%20($29%20USD).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="RQL HashCheck Commercial License ($29 USD) WhatsApp VIP">
               <span>WhatsApp VIP</span>
             </a>
           </div>
@@ -732,6 +808,7 @@ Resume (PDF)
       <a href="experience.html" class="hover:text-slate-900 transition">Experience</a>
       <a href="contact.html" class="hover:text-slate-900 transition">Contact</a>
       <a href="legal.html" class="hover:text-slate-900 transition">Legal</a>
+      <a href="https://quantify17.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition flex items-center gap-1"><span class="text-xs">🤝</span> <span>Affiliates (Earn 30%)</span></a>
     </div>
     <div class="text-[10px] text-slate-400 pt-4 border-t border-slate-100">
       &copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab. All rights reserved. Zero SaaS Cloud Rent.

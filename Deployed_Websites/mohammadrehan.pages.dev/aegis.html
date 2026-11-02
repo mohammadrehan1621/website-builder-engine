@@ -508,8 +508,8 @@ p, li, span, a {
             </div>
         </div>
         <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
-            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="acceptCookies()">Accept</button>
-            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="dismissCookies()">Settings</button>
+            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Accept</button>
+            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Settings</button>
         </div>
     </div>
 </div>
@@ -550,10 +550,10 @@ p, li, span, a {
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
 
 <!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 hover:text-rose-900 font-bold transition shadow-2xs group/store" href="store.html" title="5 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 hover:text-rose-900 font-bold transition shadow-2xs group/store" href="store.html" title="6 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
 <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
-<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">5</span>
+<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">6</span>
 </a>
 
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
@@ -585,7 +585,7 @@ p, li, span, a {
 <div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a>
 <a class="block py-2 px-3 rounded-lg bg-rose-50 text-rose-700 font-bold text-sm flex items-center justify-between" href="store.html">
-<span>Commercial Suites (5 Flagships)</span>
+<span>Commercial Suites (6 Flagships)</span>
 <span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
 </a>
 <a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>

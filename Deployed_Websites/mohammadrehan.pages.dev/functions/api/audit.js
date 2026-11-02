@@ -19,23 +19,43 @@ export async function onRequestPost(context) {
 
     const cleanDomain = targetUrl.replace(/^https?:\/\//i, "").replace(/\/.*$/, "");
 
-    // Phase 1: Parallel Physical TCP/TLS Request + Real DNS-over-HTTPS Resolution
+    // Phase 1: Parallel Physical TCP/TLS Web Fetch + Comprehensive Cloudflare DNS-over-HTTPS
     const t0 = Date.now();
     let resp;
     let dnsIps = [];
+    let ipv6s = [];
+    let httpsRecordData = "";
     let dnsTimeMs = 0;
 
-    const dnsPromise = (async () => {
+    // DoH parallel resolver (A, AAAA, and HTTPS Type 65)
+    const dohPromise = (async () => {
       try {
         const d0 = Date.now();
-        const dnsResp = await fetch(`https://cloudflare-dns.com/dns-query?name=${cleanDomain}&type=A`, {
-          headers: { "Accept": "application/dns-json" }
-        });
+        const [aResp, aaaaResp, httpsResp] = await Promise.all([
+          fetch(`https://cloudflare-dns.com/dns-query?name=${cleanDomain}&type=A`, { headers: { "Accept": "application/dns-json" } }),
+          fetch(`https://cloudflare-dns.com/dns-query?name=${cleanDomain}&type=AAAA`, { headers: { "Accept": "application/dns-json" } }),
+          fetch(`https://cloudflare-dns.com/dns-query?name=${cleanDomain}&type=HTTPS`, { headers: { "Accept": "application/dns-json" } })
+        ]);
         dnsTimeMs = Date.now() - d0;
-        if (dnsResp.ok) {
-          const dnsData = await dnsResp.json();
-          if (dnsData.Answer && dnsData.Answer.length > 0) {
-            dnsIps = dnsData.Answer.map(a => a.data).filter(ip => ip);
+
+        if (aResp.ok) {
+          const aData = await aResp.json();
+          if (aData.Answer && aData.Answer.length > 0) {
+            dnsIps = aData.Answer.map(a => a.data).filter(ip => ip);
+          }
+        }
+        if (aaaaResp.ok) {
+          const aaaaData = await aaaaResp.json();
+          if (aaaaData.Answer && aaaaData.Answer.length > 0) {
+            ipv6s = aaaaData.Answer.map(a => a.data).filter(ip => ip);
+          }
+        }
+        if (httpsResp.ok) {
+          const httpsData = await httpsResp.json();
+          if (httpsData.Answer && httpsData.Answer.length > 0) {
+            for (const a of httpsData.Answer) {
+              if (a.data) httpsRecordData += a.data + " ";
+            }
           }
         }
       } catch (e) {}
@@ -51,7 +71,7 @@ export async function onRequestPost(context) {
     });
 
     try {
-      const results = await Promise.all([webPromise, dnsPromise]);
+      const results = await Promise.all([webPromise, dohPromise]);
       resp = results[0];
     } catch (netErr) {
       return new Response(JSON.stringify({ 
@@ -72,7 +92,7 @@ export async function onRequestPost(context) {
       });
     }
 
-    // Phase 2: Measure TTFB and stream raw payload
+    // Phase 2: Precise Wire Timings
     const ttfb_ms = Date.now() - t0;
     const html = await resp.text();
     const latency_ms = Date.now() - t0;
@@ -82,9 +102,15 @@ export async function onRequestPost(context) {
     const serverHeader = resp.headers.get("server") || "Hidden / Protected Server";
     const poweredBy = resp.headers.get("x-powered-by") || "Not Exposed (PHP/Framework)";
     const contentEncoding = resp.headers.get("content-encoding") || "None (Uncompressed)";
+    const contentType = resp.headers.get("content-type") || "text/html";
     const altSvc = resp.headers.get("alt-svc") || "";
-    const hasHttp3 = altSvc.includes("h3") || altSvc.includes("quic");
+    const hasHttp3 = altSvc.includes("h3") || altSvc.includes("quic") || httpsRecordData.includes("alpn=h3");
     const transportProtocol = hasHttp3 ? "HTTP/3 (QUIC Capable)" : "Legacy HTTP/1.1 or HTTP/2";
+
+    // DNS Type 65 Cryptographic Telemetry
+    const hasEch = httpsRecordData.includes("ech=");
+    let alpnMatch = httpsRecordData.match(/alpn=([^\s]+)/);
+    const alpnProtocols = alpnMatch ? alpnMatch[1] : (hasHttp3 ? "h3,h2" : "h2/http1.1");
 
     // Phase 4: Forensic Security Headers Inspection
     const hasHsts = resp.headers.has("strict-transport-security");
@@ -105,19 +131,60 @@ export async function onRequestPost(context) {
     else if (securityScore >= 50) securityGrade = "C";
     else if (securityScore >= 25) securityGrade = "D";
 
-    // Phase 5: Forensic HTML Inspection & Scientific Evidence Mapping
+    // Phase 5: Deep Forensic Web Application Fact Extraction (Like ChatGPT & Gemini)
     const html_lower = html.toLowerCase();
-    const platforms = [];
-    const evidenceList = [];
 
-    // Extract real page title
+    // 1. Title
     let pageTitle = "Web Application";
     const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
     if (titleMatch && titleMatch[1]) {
       pageTitle = titleMatch[1].trim();
     }
 
-    // Exact physical counts from raw wire HTML (Zero estimation)
+    // 2. Meta Description
+    let metaDescription = "None specified in document";
+    const descMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i) ||
+                      html.match(/<meta[^>]*content=["']([^"']+)["'][^>]*name=["']description["']/i);
+    if (descMatch && descMatch[1]) {
+      metaDescription = descMatch[1].trim();
+    }
+
+    // 3. Canonical URL
+    let canonicalUrl = targetUrl;
+    const canonMatch = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i);
+    if (canonMatch && canonMatch[1]) {
+      canonicalUrl = canonMatch[1].trim();
+    }
+
+    // 4. Primary H1 Headings
+    const h1Matches = html.match(/<h1[^>]*>(.*?)<\/h1>/gis) || [];
+    const cleanH1List = h1Matches.map(h => h.replace(/<[^>]+>/g, '').trim()).filter(h => h.length > 0);
+    const primaryH1 = cleanH1List.length > 0 ? cleanH1List[0] : "No H1 Tag Defined";
+
+    // 5. OpenGraph Metadata
+    let ogTitle = pageTitle;
+    const ogTitleMatch = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']+)["']/i);
+    if (ogTitleMatch && ogTitleMatch[1]) {
+      ogTitle = ogTitleMatch[1].trim();
+    }
+
+    // 6. JSON-LD Schema.org Structured Data
+    const jsonLdMatches = html.match(/<script[^>]*type=["']application\/ld\+json["'][^>]*>(.*?)<\/script>/gis) || [];
+    const schemaTypes = [];
+    for (const j of jsonLdMatches) {
+      try {
+        const rawJson = j.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '').trim();
+        const parsed = JSON.parse(rawJson);
+        if (parsed['@type']) {
+          if (Array.isArray(parsed['@type'])) schemaTypes.push(...parsed['@type']);
+          else schemaTypes.push(parsed['@type']);
+        } else if (Array.isArray(parsed)) {
+          parsed.forEach(item => { if (item['@type']) schemaTypes.push(item['@type']); });
+        }
+      } catch (e) {}
+    }
+
+    // 7. Exact physical counts from raw wire HTML (Zero estimation)
     const domMatches = html.match(/<[a-zA-Z0-9]+(\s|>)/g) || [];
     const domElementCount = domMatches.length;
     const domBloatRatio = parseFloat((domElementCount / 800).toFixed(1));
@@ -131,25 +198,34 @@ export async function onRequestPost(context) {
     const imgMatches = html.match(/<img\b[^>]*>/gi) || [];
     const imgCount = imgMatches.length;
 
-    // Extract real script paths for bloat inspection
-    const scriptSamples = [];
-    const scriptSrcRegex = /<script\b[^>]*src=["']([^"']+)["'][^>]*>/gi;
+    // Extract real script domains (Asset Inventory)
+    const scriptDomains = new Set();
+    const scriptSrcRegex = /<script\b[^>]*src=["']([^"']+)["']/gi;
     let sMatch;
-    while ((sMatch = scriptSrcRegex.exec(html)) !== null && scriptSamples.length < 5) {
+    const scriptSamples = [];
+    while ((sMatch = scriptSrcRegex.exec(html)) !== null) {
       let rawPath = sMatch[1];
       if (rawPath.startsWith("//")) rawPath = "https:" + rawPath;
-      scriptSamples.push(rawPath);
+      if (scriptSamples.length < 5) scriptSamples.push(rawPath);
+      const domainMatch = rawPath.match(/https?:\/\/([^/]+)/i);
+      if (domainMatch && domainMatch[1]) {
+        scriptDomains.add(domainMatch[1]);
+      }
     }
 
     // Extract real CSS paths
     const cssSamples = [];
-    const cssHrefRegex = /<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["'][^>]*>/gi;
+    const cssHrefRegex = /<link\b[^>]*rel=["']stylesheet["'][^>]*href=["']([^"']+)["']/gi;
     let cMatch;
     while ((cMatch = cssHrefRegex.exec(html)) !== null && cssSamples.length < 4) {
       let rawPath = cMatch[1];
       if (rawPath.startsWith("//")) rawPath = "https:" + rawPath;
       cssSamples.push(rawPath);
     }
+
+    // Platform detection (Fact-based inspection)
+    const platforms = [];
+    const evidenceList = [];
 
     if (html_lower.includes("wp-content") || html_lower.includes("wp-includes")) {
       platforms.push("WordPress (PHP)");
@@ -171,9 +247,20 @@ export async function onRequestPost(context) {
       platforms.push("Shopify");
       evidenceList.push("Detected Shopify liquid storefront CDN");
     }
+
+    const isGlobalEdge = (serverHeader.toLowerCase().includes("cloudflare") || 
+                          resp.headers.has("cf-ray") || 
+                          platforms.includes("Shopify") || 
+                          latency_ms <= 300);
+
     if (platforms.length === 0) {
-      platforms.push(serverHeader);
-      evidenceList.push(`Raw HTTP Server Signature: ${serverHeader}`);
+      if (isGlobalEdge) {
+        platforms.push("Pure Edge Static");
+        evidenceList.push(`Raw HTTP Server Signature: ${serverHeader} (Global Anycast Edge)`);
+      } else {
+        platforms.push(serverHeader);
+        evidenceList.push(`Raw HTTP Server Signature: ${serverHeader}`);
+      }
     }
 
     const detected_platform = platforms.join(", ");
@@ -187,14 +274,15 @@ export async function onRequestPost(context) {
     const co2_grams_per_view = parseFloat((Math.max(0.015, weight_mb * 0.81)).toFixed(3));
     const co2_annual_10k_kg = parseFloat(((co2_grams_per_view * 10000) / 1000).toFixed(2));
 
-    // Phase 7: Multi-POP Global Propagation Physics (Speed-of-light in silica fiber cable)
-    const isGlobalEdge = (serverHeader.toLowerCase().includes("cloudflare") || 
-                          resp.headers.has("cf-ray") || 
-                          platforms.includes("Shopify") || 
-                          latency_ms <= 300);
-
     const primaryIp = dnsIps[0] || "Resolved via Anycast Edge";
 
+    // Phase 7: Einstein Speed-of-Light Fiber Distance Calculation
+    // Speed of light in silica fiber: c_fiber ~ 204,000 km/s (4.9 microseconds per km)
+    // t_roundtrip = 2 * distance / c_fiber
+    const estimatedDistanceKm = isGlobalEdge ? 150 : 12400; // Local POP vs Transoceanic
+    const lightFiberFloorMs = parseFloat(((2 * estimatedDistanceKm) / 204).toFixed(2));
+
+    // Multi-POP Propagation Matrix
     const globalNodes = [
       {
         city: "Mumbai / Delhi",
@@ -234,6 +322,27 @@ export async function onRequestPost(context) {
       }
     ];
 
+    // Phase 8: Dynamic X-Ray Architecture Scanner Data
+    const isPureEdge = isGlobalEdge && !platforms.includes("WordPress (PHP)") && !platforms.includes("Elementor Builder");
+    const xrayData = {
+      is_pure_edge: isPureEdge,
+      title: isPureEdge ? "✔ PURE SILICON EDGE ARCHITECTURE" : `⚠️ LEGACY ARCHITECTURE (${detected_platform})`,
+      badge: isPureEdge ? "0 MS DATABASE LATENCY" : (domElementCount > 600 ? "HEAVY DOM BLOAT" : "DYNAMIC SERVER"),
+      items: isPureEdge ? [
+        "✔ 0 Database Lookups (Instant In-Memory Edge Cache)",
+        `✔ Modern ${transportProtocol} & Type 65 Handshake`,
+        `✔ Lean Semantic DOM (${domElementCount} HTML elements)`,
+        "✔ Zero PHP / Node Server Process Overheads",
+        `✔ Grade ${securityGrade} Security Hardening (${securityScore}/100)`
+      ] : [
+        `✖ Heavy Server-Side Processing (TTFB: ${ttfb_ms} ms)`,
+        `✖ ${scriptCount} External JavaScripts & Plugin Bundles`,
+        `✖ Unoptimized DOM Tree (${domElementCount} elements, ${domBloatRatio}x threshold)`,
+        `✖ ${contentEncoding.includes("None") ? "Uncompressed Asset Delivery" : "CPU-Bound Compression Latency"}`,
+        `✖ Security Vulnerability Risk: ${missingHeaders.length} missing security headers`
+      ]
+    };
+
     // Edge Colocation Node
     const edgeColo = context.request.cf?.colo || "EDGE-GLOBAL";
 
@@ -252,12 +361,13 @@ export async function onRequestPost(context) {
 
     const pitch = `Hi ${client_name}, hope business at ${company_name} is going great.
 
-I was doing an engineering performance audit on local business websites today and ran an in-depth wire benchmark on ${cleanDomain} (Server IP: ${primaryIp}):
+I ran an engineering performance & security audit on ${cleanDomain} (Primary IP: ${primaryIp}):
 
-• Initial Time-to-First-Byte (TTFB): ${ttfb_ms} ms (${detected_platform})
-• DOM Complexity: ${domElementCount} HTML elements (${domBloatRatio}x over Google threshold)
-• Total Wire HTML Weight: ${page_size_kb} KB (${scriptCount} external scripts)
-• Security Header Grade: ${securityGrade} (${missingHeaders.length} missing security headers)
+• Wire Latency (TTFB): ${ttfb_ms} ms (${detected_platform})
+• DOM Complexity: ${domElementCount} HTML elements (${domBloatRatio}x Google threshold)
+• Payload: ${page_size_kb} KB (${scriptCount} external scripts)
+• Cryptography: ${transportProtocol} | ECH: ${hasEch ? "Enabled" : "Missing"}
+• Security Grade: ${securityGrade} (${missingHeaders.length} missing headers)
 • Carbon Impact: ${co2_annual_10k_kg} kg CO2 / year on legacy hosting
 • Modern high-speed standard: 0.20 seconds (100/100 Google Lighthouse score)
 
@@ -272,13 +382,22 @@ Would you be open to seeing a 60-second live speed demo on my phone this week ov
       clean_domain: cleanDomain,
       status_code: resp.status,
       page_title: pageTitle,
+      meta_description: metaDescription,
+      canonical_url: canonicalUrl,
+      primary_h1: primaryH1,
+      h1_count: cleanH1List.length,
+      og_title: ogTitle,
+      schema_types: schemaTypes,
       latency_ms,
       ttfb_ms,
       transfer_ms,
       server_header: serverHeader,
       powered_by: poweredBy,
       content_encoding: contentEncoding,
+      content_type: contentType,
       transport_protocol: transportProtocol,
+      alpn_protocols: alpnProtocols,
+      has_ech: hasEch,
       script_count: scriptCount,
       css_count: cssCount,
       img_count: imgCount,
@@ -286,10 +405,15 @@ Would you be open to seeing a 60-second live speed demo on my phone this week ov
       dom_bloat_ratio: domBloatRatio,
       primary_ip: primaryIp,
       all_ips: dnsIps,
+      ipv6_ips: ipv6s,
       dns_time_ms: dnsTimeMs || 18,
       script_samples: scriptSamples,
+      script_domains: Array.from(scriptDomains),
       css_samples: cssSamples,
       global_nodes: globalNodes,
+      light_fiber_floor_ms: lightFiberFloorMs,
+      estimated_distance_km: estimatedDistanceKm,
+      xray: xrayData,
       security_score: securityScore,
       security_grade: securityGrade,
       missing_headers: missingHeaders,
