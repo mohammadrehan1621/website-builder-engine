@@ -18,12 +18,32 @@ export async function onRequestPost(context) {
     }
 
     const t0 = Date.now();
-    const resp = await fetch(targetUrl, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      redirect: "follow"
-    });
+    let resp;
+    try {
+      resp = await fetch(targetUrl, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        },
+        redirect: "follow"
+      });
+    } catch (netErr) {
+      return new Response(JSON.stringify({ 
+        error: `Could not resolve host or establish network connection to ${targetUrl}: ${netErr.message}` 
+      }), {
+        status: 502,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+
+    // Verify HTTP Success - Reject dead/unresolved domains
+    if (!resp.ok || resp.status >= 400) {
+      return new Response(JSON.stringify({ 
+        error: `Target server returned error status HTTP ${resp.status} (Domain offline or DNS failed)` 
+      }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
 
     const latency_ms = Date.now() - t0;
     const html = await resp.text();

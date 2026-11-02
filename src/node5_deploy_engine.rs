@@ -234,7 +234,11 @@ impl DeployEngine {
         if let Ok(out) = curl_output {
             let res_str = String::from_utf8_lossy(&out.stdout).to_string();
             let is_200 = res_str.contains("HTTP/1.1 200") || res_str.contains("HTTP/2 200") || res_str.contains("200 OK");
-            let status_code = if is_200 { 200 } else { 400 };
+            if !is_200 {
+                // Reject dead domains, unresolvable DNS, or 404/500 errors
+                return None;
+            }
+            let status_code = 200;
 
             let mut platforms = Vec::new();
             let lower = res_str.to_lowercase();
