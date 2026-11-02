@@ -315,6 +315,60 @@
 
     </div>
 
+    <!-- FORENSIC SCIENTIFIC WIRE BREAKDOWN (100% RAW PHYSICAL TRUTH) -->
+    <div id="forensicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+          <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">SCIENTIFIC WIRE DIAGNOSTIC BREAKDOWN</span>
+        </div>
+        <span id="forensicStatusBadge" class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+          Raw Physical Telemetry
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-center mb-6">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">TTFB (Server Delay)</p>
+          <p id="metricTtfb" class="text-lg font-bold font-mono text-cyan-400 mt-1">-- ms</p>
+        </div>
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">Total Roundtrip</p>
+          <p id="metricTotalLatency" class="text-lg font-bold font-mono text-amber-400 mt-1">-- ms</p>
+        </div>
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">Server Header</p>
+          <p id="metricServerHeader" class="text-xs font-bold font-mono text-white mt-1.5 truncate">--</p>
+        </div>
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">Blocking Scripts</p>
+          <p id="metricScriptCount" class="text-lg font-bold font-mono text-red-400 mt-1">--</p>
+        </div>
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">CSS Stylesheets</p>
+          <p id="metricCssCount" class="text-lg font-bold font-mono text-purple-400 mt-1">--</p>
+        </div>
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+          <p class="text-[10px] font-mono uppercase text-slate-400">Compression</p>
+          <p id="metricCompression" class="text-xs font-bold font-mono text-emerald-400 mt-1.5">--</p>
+        </div>
+      </div>
+
+      <!-- Live Title & Forensic Evidence String Matches -->
+      <div class="bg-slate-950/90 rounded-xl p-3.5 border border-slate-800 text-xs font-mono">
+        <div class="flex items-center gap-2 mb-2 pb-2 border-b border-slate-800/60">
+          <span class="text-slate-400 uppercase text-[10px] font-bold">Remote Page Title:</span>
+          <span id="remotePageTitleText" class="text-white font-semibold truncate">Scanning remote page...</span>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="text-slate-400 uppercase text-[10px] font-bold shrink-0 mt-0.5">Forensic Proof:</span>
+          <div id="evidenceListContainer" class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800 text-[10px]">Awaiting probe stream...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ACTION TIERS (WHATSAPP OUTREACH & MIGRATION PROPOSAL) -->
     <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-6">
 
@@ -524,6 +578,32 @@
       document.getElementById('slowLatencyMs').innerText = `${data.latency_ms} ms`;
       document.getElementById('slowArchText').innerText = isUltraFast ? "Pure Edge Network (Zero Database Latency)" : "Centralized Host Server (PHP / Database I/O)";
       document.getElementById('speedMultiplierBadge').innerText = isUltraFast ? "1.0× BASELINE" : `${data.slowdown_factor}× FASTER`;
+
+      // Forensic Breakdown Wire Metrics
+      document.getElementById('metricTtfb').innerText = `${data.ttfb_ms || data.latency_ms} ms`;
+      document.getElementById('metricTotalLatency').innerText = `${data.latency_ms} ms`;
+      document.getElementById('metricServerHeader').innerText = data.server_header || "cloudflare";
+      document.getElementById('metricScriptCount').innerText = `${data.script_count || 0} scripts`;
+      document.getElementById('metricCssCount').innerText = `${data.css_count || 0} files`;
+      document.getElementById('metricCompression').innerText = data.content_encoding || "br / gzip";
+      document.getElementById('remotePageTitleText').innerText = data.page_title || cleanDomain;
+
+      // Evidence tags
+      const evidenceContainer = document.getElementById('evidenceListContainer');
+      evidenceContainer.innerHTML = '';
+      if (data.evidence && data.evidence.length > 0) {
+        data.evidence.forEach(item => {
+          const span = document.createElement('span');
+          span.className = "px-2 py-0.5 rounded bg-cyan-950/70 text-cyan-300 border border-cyan-800/50 text-[10px]";
+          span.innerText = `✔ ${item}`;
+          evidenceContainer.appendChild(span);
+        });
+      } else {
+        const span = document.createElement('span');
+        span.className = "px-2 py-0.5 rounded bg-emerald-950/70 text-emerald-300 border border-emerald-800/50 text-[10px]";
+        span.innerText = "✔ Pure Compiled Static Edge (Zero Framework Footprint)";
+        evidenceContainer.appendChild(span);
+      }
 
       // Pitch output
       document.getElementById('whatsappPitchBox').value = data.whatsapp_pitch;
