@@ -83,6 +83,9 @@ fn main() {
         "probe" => {
             run_probe(&args);
         }
+        "audit-url" | "bni-audit" | "audit-client" => {
+            run_audit_url(&args);
+        }
         "benchmark" => {
             run_benchmark();
         }
@@ -134,6 +137,7 @@ fn print_help() {
     println!("  \x1b[1;32mpackage\x1b[0m    [dir] [out_zip]           Run NVMe Fastener Packager & Golden SHA Manifest");
     println!("  \x1b[1;32mdeploy\x1b[0m     [dir] [project] [domain]  Deploy to Cloudflare Pages edge CDN via Wrangler");
     println!("  \x1b[1;32mprobe\x1b[0m      [url]                     Probe live endpoint (HTTP 200, Latency, Phoenix)");
+    println!("  \x1b[1;32maudit-url\x1b[0m  [url] [name] [comp]       Pure-Rust Speed & CMS Audit with BNI WhatsApp Pitch Studio");
     println!("  \x1b[1;32mbenchmark\x1b[0m                            Run pure raw silicon performance benchmark");
     println!("  \x1b[1;32mregistry\x1b[0m                             Inspect all registered live domains & sites");
     println!("  \x1b[1;32mblackbox\x1b[0m   [export_path]             Inspect or export Offline Flight Recorder WAL");
@@ -450,6 +454,40 @@ fn run_probe(args: &[String]) {
     println!("   • Phoenix Sentinel:  {}", if res.has_phoenix_sentinel { "🟢 DETECTED" } else { "⚪ Not Found" });
     println!("   • Infrastructure Bar:{}", if res.has_infrastructure_bar { "🟢 DETECTED" } else { "⚪ Not Found" });
     println!("   • Health Verdict:    {}\n", if res.is_healthy { "🟢 100% OPERATIONAL" } else { "🔴 UNHEALTHY" });
+}
+
+fn run_audit_url(args: &[String]) {
+    let raw_url = args.get(2).map(|s| s.as_str()).unwrap_or("rehanquantlab.com");
+    let name = args.get(3).map(|s| s.as_str()).unwrap_or("Sir");
+    let company = args.get(4).map(|s| s.as_str()).unwrap_or("your company");
+
+    println!("\n\x1b[1;36m============================================================\x1b[0m");
+    println!("\x1b[1;36m🏛️  RQL SOVEREIGN SPEED AUDITOR — AUDITING: {}\x1b[0m", raw_url);
+    println!("\x1b[1;36m============================================================\x1b[0m\n");
+
+    match DeployEngine::audit_prospective_client(raw_url, name, company) {
+        Some(rep) => {
+            println!("\x1b[1;32m📊 LIVE AUDIT RESULTS:\x1b[0m");
+            println!("  • Target URL:         {}", rep.url);
+            println!("  • HTTP Response:      {} OK", rep.status_code);
+            println!("  • Detected Platform:  \x1b[1;33m{}\x1b[0m", rep.detected_platform);
+            println!("  • HTML Payload Size:  {:.1} KB", rep.page_size_kb);
+            println!("  • Initial Load Time:  \x1b[1;31m{} ms ({:.2} seconds)\x1b[0m", rep.latency_ms, (rep.latency_ms as f64) / 1000.0);
+            println!("  • RQL Rust Benchmark: \x1b[1;32m208.0 ms (0.21 seconds)\x1b[0m");
+            if rep.slowdown_factor > 1.2 {
+                println!("  • Performance Gap:    \x1b[1;31mCurrent site is {:.1}x SLOWER than RQL Edge\x1b[0m", rep.slowdown_factor);
+            } else {
+                println!("  • Performance:        \x1b[1;32mUltra-fast (RQL-grade speed)\x1b[0m");
+            }
+            println!("------------------------------------------------------------");
+            println!("\n\x1b[1;35m📱 READY-TO-SEND WHATSAPP OUTREACH MESSAGE:\x1b[0m\n");
+            println!("{}", rep.whatsapp_pitch);
+            println!("\n\x1b[1;36m============================================================\x1b[0m\n");
+        }
+        None => {
+            println!("\x1b[1;31m❌ Could not connect or audit: {}\x1b[0m", raw_url);
+        }
+    }
 }
 
 fn run_benchmark() {
