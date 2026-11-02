@@ -105,6 +105,14 @@ impl DevServer {
             return Self::send_response(stream, 200, "OK", studio_html.as_bytes(), "text/html; charset=utf-8", is_head, t0.elapsed());
         }
 
+        // 1B. ROUTE: GET /auditor -> Serve Sovereign 3D Speed Auditor & Migration Studio
+        if (method == "GET" || is_head) && (decoded_path == "auditor" || decoded_path == "auditor/") {
+            let auditor_path = root.join("auditor").join("index.html");
+            if let Ok(auditor_html) = fs::read_to_string(&auditor_path) {
+                return Self::send_response(stream, 200, "OK", auditor_html.as_bytes(), "text/html; charset=utf-8", is_head, t0.elapsed());
+            }
+        }
+
         // 2. ROUTE: POST /api/studio/compile -> Compile Visual Page via Pentagon Loop
         if method == "POST" && decoded_path == "api/studio/compile" {
             let body = &full_request[header_end..];
@@ -114,6 +122,29 @@ impl DevServer {
                     Err(e) => format!(r#"{{"success":false,"error":"{}"}}"#, e),
                 },
                 Err(e) => format!(r#"{{"success":false,"error":"Invalid JSON: {}"}}"#, e),
+            };
+            return Self::send_response(stream, 200, "OK", res_json.as_bytes(), "application/json", false, t0.elapsed());
+        }
+
+        // 2B. ROUTE: POST /api/audit -> Live Pure-Rust Speed & CMS Audit
+        if method == "POST" && decoded_path == "api/audit" {
+            let body = &full_request[header_end..];
+            #[derive(serde::Deserialize)]
+            struct AuditRequest {
+                url: String,
+                client_name: Option<String>,
+                company_name: Option<String>,
+            }
+            let res_json = match serde_json::from_str::<AuditRequest>(body) {
+                Ok(req) => {
+                    let name = req.client_name.as_deref().unwrap_or("Sir");
+                    let comp = req.company_name.as_deref().unwrap_or("your company");
+                    match crate::node5_deploy_engine::DeployEngine::audit_prospective_client(&req.url, name, comp) {
+                        Some(rep) => serde_json::to_string(&rep).unwrap_or_default(),
+                        None => r#"{"error":"Could not audit target URL"}"#.to_string(),
+                    }
+                }
+                Err(e) => format!(r#"{{"error":"Invalid JSON: {}"}}"#, e),
             };
             return Self::send_response(stream, 200, "OK", res_json.as_bytes(), "application/json", false, t0.elapsed());
         }

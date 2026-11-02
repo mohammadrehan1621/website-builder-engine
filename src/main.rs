@@ -86,6 +86,24 @@ fn main() {
         "audit-url" | "bni-audit" | "audit-client" => {
             run_audit_url(&args);
         }
+        "auditor" | "speed" => {
+            let port = args.get(2).and_then(|p| p.parse::<u16>().ok()).unwrap_or(3000);
+            let root_dir = PathBuf::from("Deployed_Websites/mohammadrehan.pages.dev");
+            println!("\x1b[1;36m====================================================================\x1b[0m");
+            println!("\x1b[1;32m🌐 RQL SOVEREIGN SPEED AUDITOR & 3D MIGRATION STUDIO (GetLayers.ai Mode)\x1b[0m");
+            println!("   \x1b[1;33m• Localhost URL:   http://localhost:{}/auditor\x1b[0m", port);
+            println!("   \x1b[1;34m• Zero Node.js     • Zero Python    • 100% Pure Native Rust\x1b[0m");
+            println!("   \x1b[1;32m• Status:          LISTENING & READY (Press Ctrl+C to stop)\x1b[0m");
+            println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+            #[cfg(target_os = "windows")]
+            {
+                let _ = std::process::Command::new("cmd")
+                    .args(["/C", "start", &format!("http://localhost:{}/auditor", port)])
+                    .spawn();
+            }
+            let _ = DevServer::start_server(&root_dir, port);
+        }
         "benchmark" => {
             run_benchmark();
         }
