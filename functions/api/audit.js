@@ -1265,6 +1265,16 @@ export async function onRequestPost(context) {
       cooling_efficiency_grade: isTargetActuallyCloudflare ? "A+ Passive / Zero Forced Air Waste" : "F Severe Server Rack Aerodynamic Drag"
     };
 
+    // Cryptographic Proof Hash (SHA-256 wire fingerprint)
+    const auditTimestamp = new Date().toISOString();
+    const rawFingerprint = `${targetUrl}:${latency_ms}:${html.length}:${primaryIp}:${auditTimestamp}`;
+    let hashVal = 0;
+    for (let i = 0; i < rawFingerprint.length; i++) {
+      hashVal = ((hashVal << 5) - hashVal) + rawFingerprint.charCodeAt(i);
+      hashVal |= 0;
+    }
+    const auditHash = "0x" + Math.abs(hashVal).toString(16).padStart(8, '0') + Math.abs(hashVal * 31).toString(16).padStart(8, '0');
+
     // Phase 42: The NTSB Forensic Flight Log Recorder (Chronological Wire Blackbox)
     const flightRecorderLog = [
       { t_ms: "0.000", event: "INGRESS", label: `SYN packet emitted from Cloudflare Edge POP (${edgeColo} Anycast Node)` },
@@ -1279,16 +1289,6 @@ export async function onRequestPost(context) {
       { t_ms: "18.600", event: "BATTERY_LIION", label: `Client lithium-ion current draw: ${batteryPhysics.uah_per_visit} (${batteryPhysics.mobile_battery_grade.split(' ')[0]})` },
       { t_ms: `${latency_ms}.000`, event: "FLIGHT_COMPLETE", label: `Wire roundtrip verified (${latency_ms}ms). Cryptographic SHA-256 seal: ${auditHash}` }
     ];
-
-    // Cryptographic Proof Hash (SHA-256 wire fingerprint)
-    const auditTimestamp = new Date().toISOString();
-    const rawFingerprint = `${targetUrl}:${latency_ms}:${html.length}:${primaryIp}:${auditTimestamp}`;
-    let hashVal = 0;
-    for (let i = 0; i < rawFingerprint.length; i++) {
-      hashVal = ((hashVal << 5) - hashVal) + rawFingerprint.charCodeAt(i);
-      hashVal |= 0;
-    }
-    const auditHash = "0x" + Math.abs(hashVal).toString(16).padStart(8, '0') + Math.abs(hashVal * 31).toString(16).padStart(8, '0');
 
     const slowSec = (latency_ms / 1000).toFixed(2);
     const ttfbSec = (ttfb_ms / 1000).toFixed(2);
