@@ -147,7 +147,7 @@
     @media print {
       body { background: #ffffff !important; color: #000000 !important; }
       header, footer, #commandDeck, #toggle3DViewBtn, #soundToggleBtn, #whatsappPitchSection, #proposalActionSection, #raceSection, #xraySection, #certModal { display: none !important; }
-      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection, #calculatorSection, #globalRadarSection, #payloadSection, #deepFactsSection, #googleVitalsSection, #cableTrackerSection, #packetLadderSection {
+      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection, #calculatorSection, #globalRadarSection, #payloadSection, #deepFactsSection, #googleVitalsSection, #cableTrackerSection, #packetLadderSection, #devicePhysicsSection, #endpointExposureSection {
         display: block !important;
         box-shadow: none !important;
         border: 1px solid #ccc !important;
@@ -1063,15 +1063,23 @@
       </div>
 
       <div class="space-y-4">
-        <!-- Submarine Metadata Banner -->
-        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-wrap items-center justify-between gap-3 text-[11px]">
+        <!-- Submarine & Telecom Metadata Banner -->
+        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[11px]">
           <div>
             <span class="text-slate-400 text-[10px] uppercase block font-bold">Undersea Cable Trunk System:</span>
-            <span id="routeCablesText" class="text-white font-bold">Domestic Terrestrial Silica Fiber (Zero Undersea Transit)</span>
+            <span id="routeCablesText" class="text-white font-bold">Domestic Terrestrial Silica Fiber</span>
           </div>
           <div>
             <span class="text-slate-400 text-[10px] uppercase block font-bold">Cable Landing Station:</span>
-            <span id="routeLandingStationText" class="text-emerald-400 font-bold">Local Edge Ingress (DEL Anycast)</span>
+            <span id="routeLandingStationText" class="text-emerald-400 font-bold">Local Edge Ingress</span>
+          </div>
+          <div>
+            <span class="text-slate-400 text-[10px] uppercase block font-bold">Tier-1 Telecom Transit:</span>
+            <span id="routeTier1Text" class="text-cyan-300 font-bold">Direct Anycast Fabric</span>
+          </div>
+          <div>
+            <span class="text-slate-400 text-[10px] uppercase block font-bold">Origin Datacenter Geo:</span>
+            <span id="routeDatacenterGeoText" class="text-purple-300 font-bold">Local Point of Presence</span>
           </div>
         </div>
 
@@ -1128,6 +1136,67 @@
       </div>
     </div>
 
+    <!-- 15. PHYSICAL MOBILE RAM & CHROMIUM V8 HEAP ALLOCATION (DEVICE PHYSICS) -->
+    <div id="devicePhysicsSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">PHYSICAL MOBILE RAM &amp; CHROMIUM V8 HEAP ALLOCATION (DEVICE HARDWARE PHYSICS)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="mobileRamGradeBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">A+ Ultra-Lean</span>
+          <span id="batteryDrainBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Negligible Battery Drain</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Metric 1: V8 DOM Heap Memory -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">V8 DOM Heap Memory:</span>
+          <div id="deviceV8HeapText" class="text-2xl font-bold text-white tabular-nums">0.24 MB</div>
+          <span id="deviceDomSubtext" class="text-[10px] text-slate-400 block">1.4 KB / DOM Node in Memory</span>
+        </div>
+
+        <!-- Metric 2: Estimated Mobile RAM Allocation -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Physical Mobile RAM Consumed:</span>
+          <div id="deviceTotalRamText" class="text-2xl font-bold text-cyan-300 tabular-nums">18.4 MB</div>
+          <span class="text-[10px] text-slate-400 block">Android / iOS App Context Footprint</span>
+        </div>
+
+        <!-- Metric 3: Main Thread CPU Lockup -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">CPU Main Thread Freeze:</span>
+          <div id="deviceThreadLockText" class="text-2xl font-bold text-emerald-400 tabular-nums">12 ms</div>
+          <span class="text-[10px] text-slate-400 block">Touch Responsiveness Stall Window</span>
+        </div>
+
+        <!-- Metric 4: Script Execution Complexity -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Execution Pressure:</span>
+          <div id="deviceExecutionComplexityText" class="text-2xl font-bold text-purple-300 tabular-nums">Zero Bloat</div>
+          <span id="deviceScriptCountText" class="text-[10px] text-slate-400 block">0 External Scripts Active</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. ZERO-DAMAGE SENSITIVE ENDPOINT & RECON SHIELD (LAYER 7 AUDIT) -->
+    <div id="endpointExposureSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-amber-300">ZERO-DAMAGE SENSITIVE ENDPOINT &amp; ATTACK SURFACE RECON (LAYER 7 PROBE)</span>
+        </div>
+        <span id="exposureRiskBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">
+          All Sensitive Probes Clean
+        </span>
+      </div>
+
+      <div id="endpointProbesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <!-- Dynamically populated 5 Probes -->
+      </div>
+    </div>
+
     <!-- SECURITY MATRIX & CARBON IMPACT (DUAL ENTERPRISE GAUGES) -->
     <div id="securityMatrixSection" class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
       
@@ -1158,6 +1227,10 @@
           <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
             <span class="text-slate-300">X-Content-Type-Options (MIME)</span>
             <span id="shieldXContent" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Missing)</span>
+          </div>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
+            <span class="text-slate-300">DNSSEC Cryptographic Chain (RFC 4034)</span>
+            <span id="shieldDnssec" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Unsigned)</span>
           </div>
         </div>
         <p class="text-[11px] font-mono text-slate-500 mt-3">
@@ -1193,6 +1266,18 @@
             <div class="flex justify-between">
               <span class="text-slate-400">Transport Protocol:</span>
               <span id="metricTransportProtocol" class="font-bold text-white">HTTP/1.1 or HTTP/2</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Regional Power Grid Intensity:</span>
+              <span id="metricPowerGridText" class="font-bold text-cyan-300">50 g CO₂/kWh (Renewable)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Datacenter PUE Efficiency Ratio:</span>
+              <span id="metricPueText" class="font-bold text-emerald-400">1.08 PUE</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Physical Origin Server Wattage:</span>
+              <span id="metricServerWattageText" class="font-bold text-purple-300">12W (Silicon Memory)</span>
             </div>
           </div>
         </div>
@@ -2170,6 +2255,110 @@
             quicStepsContainer.appendChild(qDiv);
           });
         }
+      }
+
+      // 8. Tier-1 Telecom Transit & Interconnect Exchange Population
+      if (data.telecom_transit) {
+        const tt = data.telecom_transit;
+        const tier1El = document.getElementById('routeTier1Text');
+        if (tier1El) tier1El.innerText = tt.tier1_provider || "Direct Anycast Fabric";
+        
+        const geoEl = document.getElementById('routeDatacenterGeoText');
+        if (geoEl) geoEl.innerText = `${tt.origin_city}, ${tt.origin_region} (${tt.origin_country})`;
+      }
+
+      // 9. Mobile Device RAM & Chromium V8 Heap Allocation Population
+      if (data.device_physics) {
+        const dp = data.device_physics;
+        const v8El = document.getElementById('deviceV8HeapText');
+        if (v8El) v8El.innerText = `${dp.dom_heap_mb} MB`;
+
+        const totalRamEl = document.getElementById('deviceTotalRamText');
+        if (totalRamEl) totalRamEl.innerText = dp.estimated_mobile_ram_usage;
+
+        const lockEl = document.getElementById('deviceThreadLockText');
+        if (lockEl) lockEl.innerText = `${dp.v8_thread_lock_ms} ms`;
+
+        const gradeBadge = document.getElementById('mobileRamGradeBadge');
+        if (gradeBadge) {
+          gradeBadge.innerText = dp.mobile_ram_grade;
+          gradeBadge.className = dp.dom_heap_mb < 8 ? "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold" : "text-[10px] px-2.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800/50 font-bold";
+        }
+
+        const batteryBadge = document.getElementById('batteryDrainBadge');
+        if (batteryBadge) batteryBadge.innerText = dp.battery_drain_index;
+
+        const domSubtext = document.getElementById('deviceDomSubtext');
+        if (domSubtext) domSubtext.innerText = `${dp.dom_nodes} DOM Elements Active in Heap`;
+
+        const scriptSubtext = document.getElementById('deviceScriptCountText');
+        if (scriptSubtext) scriptSubtext.innerText = `${dp.script_count} External JavaScript Files`;
+
+        const compText = document.getElementById('deviceExecutionComplexityText');
+        if (compText) {
+          compText.innerText = dp.v8_thread_lock_ms > 300 ? "Heavy Freeze" : (dp.v8_thread_lock_ms > 100 ? "Noticeable Lag" : "Instant 60 FPS");
+          compText.className = dp.v8_thread_lock_ms > 300 ? "text-2xl font-bold text-red-400 tabular-nums" : "text-2xl font-bold text-emerald-400 tabular-nums";
+        }
+      }
+
+      // 10. Zero-Damage Sensitive Endpoint & Attack Surface Recon Population
+      if (data.endpoint_exposure && data.endpoint_exposure.length > 0) {
+        const probesContainer = document.getElementById('endpointProbesGrid');
+        if (probesContainer) {
+          probesContainer.innerHTML = '';
+          let exposedCount = 0;
+          data.endpoint_exposure.forEach(probe => {
+            if (probe.is_exposed) exposedCount++;
+            const pDiv = document.createElement('div');
+            pDiv.className = "p-3 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between space-y-2";
+            
+            let badgeClass = "bg-emerald-950 text-emerald-300 border-emerald-800";
+            if (probe.is_exposed) {
+              badgeClass = "bg-red-950 text-red-300 border-red-800 animate-pulse";
+            } else if (probe.status.includes("SHIELDED")) {
+              badgeClass = "bg-amber-950 text-amber-300 border-amber-800";
+            } else if (probe.status.includes("PRESENT")) {
+              badgeClass = "bg-cyan-950 text-cyan-300 border-cyan-800";
+            }
+
+            pDiv.innerHTML = `
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-white text-[11px]">${probe.label}</span>
+                <span class="text-[9px] px-2 py-0.5 rounded font-bold border ${badgeClass}">${probe.status}</span>
+              </div>
+              <p class="text-[10px] text-slate-400">${probe.risk}</p>
+              <div class="text-[9px] text-slate-500 font-mono">Probe: ${probe.path} (HTTP ${probe.status_code || 0})</div>
+            `;
+            probesContainer.appendChild(pDiv);
+          });
+
+          const expRiskBadge = document.getElementById('exposureRiskBadge');
+          if (expRiskBadge) {
+            if (exposedCount > 0) {
+              expRiskBadge.innerText = `⚠️ ${exposedCount} Sensitive Attack Surface(s) Exposed!`;
+              expRiskBadge.className = "text-[10px] px-2.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800/60 font-bold";
+            } else {
+              expRiskBadge.innerText = "✔ All Sensitive Probes Clean (Grade A)";
+              expRiskBadge.className = "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold";
+            }
+          }
+        }
+      }
+
+      // 11. DNSSEC & Power Grid Shield Update
+      if (data.dnssec) {
+        setShield('shieldDnssec', data.dnssec.enabled);
+      }
+      if (data.power_grid) {
+        const pg = data.power_grid;
+        const gridEl = document.getElementById('metricPowerGridText');
+        if (gridEl) gridEl.innerText = `${pg.grid_co2_factor} g CO₂/kWh (${pg.grid_region})`;
+
+        const pueEl = document.getElementById('metricPueText');
+        if (pueEl) pueEl.innerText = pg.pue_ratio;
+
+        const wattEl = document.getElementById('metricServerWattageText');
+        if (wattEl) wattEl.innerText = pg.server_wattage;
       }
 
       // Evidence tags
