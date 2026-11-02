@@ -147,7 +147,7 @@
     @media print {
       body { background: #ffffff !important; color: #000000 !important; }
       header, footer, #commandDeck, #toggle3DViewBtn, #soundToggleBtn, #whatsappPitchSection, #proposalActionSection, #raceSection, #xraySection, #certModal { display: none !important; }
-      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection, #calculatorSection, #globalRadarSection, #payloadSection, #deepFactsSection, #googleVitalsSection, #cableTrackerSection, #packetLadderSection, #devicePhysicsSection, #endpointExposureSection, #quantumCryptoSection, #subdomainDiscoverySection {
+      #perspectiveStage, #forensicSection, #securityMatrixSection, #waterfallSection, #calculatorSection, #globalRadarSection, #payloadSection, #deepFactsSection, #googleVitalsSection, #cableTrackerSection, #packetLadderSection, #devicePhysicsSection, #endpointExposureSection, #quantumCryptoSection, #subdomainDiscoverySection, #kernelNetworkSection, #thermodynamicSection, #entropyCdnSection {
         display: block !important;
         box-shadow: none !important;
         border: 1px solid #ccc !important;
@@ -1271,6 +1271,138 @@
         </div>
         <div id="discoveredSubdomainsContainer" class="flex flex-wrap gap-2 pt-1">
           <!-- Dynamically populated subdomain tags -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 19. LINUX KERNEL BBR CONGESTION ENGINE & PHYSICAL ROUTER TTL PHYSICS (LAYER 3 & 4) -->
+    <div id="kernelNetworkSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-cyan-300">LINUX KERNEL BBR CONGESTION ENGINE &amp; PHYSICAL ROUTER TTL PHYSICS (LAYER 3 &amp; 4)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="bbrBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">Google BBRv2 Active</span>
+          <span id="ttlHopsBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold">3 Hops Direct Mesh</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Metric 1: TCP/QUIC Congestion Engine -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Kernel Congestion Control:</span>
+          <div id="bbrAlgoText" class="text-xs font-bold text-white truncate">Google BBRv2</div>
+          <span id="bbrLossText" class="text-[10px] text-emerald-400 block font-semibold truncate">0% Cut on Jitter</span>
+        </div>
+
+        <!-- Metric 2: Pacing & Bufferbloat Mitigation -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Pacing &amp; Buffer Control:</span>
+          <div id="bbrPacingText" class="text-xs font-bold text-cyan-300 truncate">2.885x Max Pacing Rate</div>
+          <span id="bbrBufferText" class="text-[10px] text-slate-400 block truncate">Zero Bufferbloat Queue</span>
+        </div>
+
+        <!-- Metric 3: IP Packet TTL Decay -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">IP Packet TTL Decay:</span>
+          <div id="ttlReceivedText" class="text-xs font-bold text-amber-300 truncate">TTL: 61/64 (3 Chassis)</div>
+          <span id="ttlCleanlinessText" class="text-[10px] text-slate-400 block truncate">Direct Tier-1 Silicon Mesh</span>
+        </div>
+
+        <!-- Metric 4: Core Chassis Architecture -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Routing Chassis Topology:</span>
+          <div id="ttlChassisText" class="text-xs font-bold text-purple-300 truncate">Leaf-Spine BGP Anycast</div>
+          <span id="ttlDecayRatioText" class="text-[10px] text-slate-400 block truncate">4.7% TTL Attenuation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20. THERMODYNAMIC HEAT DISSIPATION & MOBILE OLED BATTERY DRAIN (LANDAUER'S PRINCIPLE) -->
+    <div id="thermodynamicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-amber-300">THERMODYNAMIC HEAT DISSIPATION &amp; MOBILE OLED BATTERY DRAIN (LANDAUER'S PRINCIPLE)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="thermoBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">0.0018 J (Cold RAM)</span>
+          <span id="batteryBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold">0.42 µAh (Cool Silicon)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Metric 1: Joules per Pageview -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Silicon Thermal Dissipation:</span>
+          <div id="joulesPerViewText" class="text-xs font-bold text-white truncate">0.0018 Joules / view</div>
+          <span id="landauerStateText" class="text-[10px] text-emerald-400 block font-semibold truncate">Minimal Transistor Switching</span>
+        </div>
+
+        <!-- Metric 2: 100k Thermal Cumulative -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">100k Visits Cumulative Heat:</span>
+          <div id="heatDissipatedText" class="text-xs font-bold text-amber-300 truncate">180 Joules Total</div>
+          <span id="entropyRateText" class="text-[10px] text-slate-400 block truncate">5.657e-6 J/K Entropy Rate</span>
+        </div>
+
+        <!-- Metric 3: Mobile Li-Ion Battery Drain -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Mobile Battery Consumption:</span>
+          <div id="batteryUahText" class="text-xs font-bold text-cyan-300 truncate">0.42 µAh / visit</div>
+          <span id="batteryGradeText" class="text-[10px] text-emerald-400 block font-semibold truncate">A+ Near-Zero Battery Drain</span>
+        </div>
+
+        <!-- Metric 4: OLED Panel Draw & Silicon Feel -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">OLED Display &amp; Silicon Feel:</span>
+          <div id="oledDrawText" class="text-xs font-bold text-purple-300 truncate">Optimized Dark Subpixel</div>
+          <span id="batteryThermalFeelText" class="text-[10px] text-slate-400 block truncate">Cool Silicon (Zero Warming)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21. SHANNON CRYPTOGRAPHIC ENTROPY & GLOBAL CDN RAM EVICTION HALF-LIFE (LRU PHYSICS) -->
+    <div id="entropyCdnSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">SHANNON CRYPTOGRAPHIC ENTROPY &amp; GLOBAL CDN RAM EVICTION HALF-LIFE (LRU PHYSICS)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="entropyBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">7.992 Bits/Byte TRNG</span>
+          <span id="cdnLruBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-800/50 font-bold">72+ Hours LRU Half-Life</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Metric 1: Shannon Entropy -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Public Key Shannon Entropy:</span>
+          <div id="shannonEntropyText" class="text-xs font-bold text-white truncate">7.989 bits/byte (Max 8.0)</div>
+          <span id="entropyQualityText" class="text-[10px] text-emerald-400 block font-semibold truncate">Hardware TRNG (RDRAND Noise)</span>
+        </div>
+
+        <!-- Metric 2: PRNG Factorization Defense -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Factorization Vulnerability:</span>
+          <div id="factorizationRiskText" class="text-xs font-bold text-emerald-400 truncate">ZERO Factorization Risk</div>
+          <span id="keyDistributionText" class="text-[10px] text-slate-400 block truncate">Uniform Modulus Dispersion</span>
+        </div>
+
+        <!-- Metric 3: CDN LRU Cache Half-Life -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">Edge LRU Eviction Half-Life:</span>
+          <div id="evictionHalfLifeText" class="text-xs font-bold text-cyan-300 truncate">72+ Hours Warm Cache</div>
+          <span id="lruGradeText" class="text-[10px] text-slate-400 block truncate">Tier-1 Permanent RAM Resident</span>
+        </div>
+
+        <!-- Metric 4: RAM Slab Allocation Tier -->
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">RAM Memory Slab Allocation:</span>
+          <div id="ramTierText" class="text-xs font-bold text-purple-300 truncate">L1 In-Memory Fast Slab</div>
+          <span id="memoryFootprintText" class="text-[10px] text-slate-400 block truncate">Lean Worker Footprint</span>
         </div>
       </div>
     </div>
@@ -2574,6 +2706,128 @@
             container.innerHTML = '<span class="text-emerald-400 text-[10px]">✔ Minimal Exposed Shadow Subdomains in CT Logs</span>';
           }
         }
+      }
+
+      // 15. Linux Kernel Congestion Control & Router TTL Physics
+      if (data.congestion_control) {
+        const cc = data.congestion_control;
+        const bbrBadge = document.getElementById('bbrBadge');
+        if (bbrBadge) {
+          bbrBadge.innerText = cc.is_bbr ? "Google BBRv2 Active" : "Legacy CUBIC Backoff";
+          bbrBadge.className = cc.is_bbr 
+            ? "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold" 
+            : "text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/50 font-bold";
+        }
+        const algoEl = document.getElementById('bbrAlgoText');
+        if (algoEl) algoEl.innerText = cc.algorithm;
+        const lossEl = document.getElementById('bbrLossText');
+        if (lossEl) {
+          lossEl.innerText = cc.loss_penalty;
+          lossEl.className = cc.is_bbr ? "text-[10px] text-emerald-400 block font-semibold truncate" : "text-[10px] text-red-400 block font-semibold truncate";
+        }
+        const pacingEl = document.getElementById('bbrPacingText');
+        if (pacingEl) pacingEl.innerText = `${cc.pacing_gain} Pacing Gain`;
+        const bufEl = document.getElementById('bbrBufferText');
+        if (bufEl) bufEl.innerText = cc.bufferbloat_mitigation;
+      }
+
+      if (data.ttl_telemetry) {
+        const ttl = data.ttl_telemetry;
+        const ttlBadge = document.getElementById('ttlHopsBadge');
+        if (ttlBadge) {
+          ttlBadge.innerText = `${ttl.estimated_hops} Hops (${ttl.path_cleanliness.split(' ')[0]})`;
+          ttlBadge.className = ttl.estimated_hops <= 5
+            ? "text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold"
+            : (ttl.estimated_hops <= 12 
+                ? "text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800 font-bold"
+                : "text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/50 font-bold");
+        }
+        const recvEl = document.getElementById('ttlReceivedText');
+        if (recvEl) recvEl.innerText = `TTL: ${ttl.received_ttl}/${ttl.initial_ttl} (${ttl.estimated_hops} Chassis)`;
+        const cleanEl = document.getElementById('ttlCleanlinessText');
+        if (cleanEl) cleanEl.innerText = ttl.path_cleanliness;
+        const chassisEl = document.getElementById('ttlChassisText');
+        if (chassisEl) chassisEl.innerText = ttl.chassis_architecture;
+        const decayEl = document.getElementById('ttlDecayRatioText');
+        if (decayEl) decayEl.innerText = ttl.hop_attenuation_ratio;
+      }
+
+      // 16. Thermodynamic Energy Dissipation & Mobile OLED Battery Drain
+      if (data.thermodynamics) {
+        const th = data.thermodynamics;
+        const thermoBadge = document.getElementById('thermoBadge');
+        if (thermoBadge) {
+          thermoBadge.innerText = `${th.joules_per_view} (${th.thermal_cpu_load.split(' ')[0]})`;
+          thermoBadge.className = parseFloat(th.joules_per_view) < 0.05
+            ? "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold"
+            : "text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/50 font-bold";
+        }
+        const jEl = document.getElementById('joulesPerViewText');
+        if (jEl) jEl.innerText = `${th.joules_per_view} / visit`;
+        const landEl = document.getElementById('landauerStateText');
+        if (landEl) {
+          landEl.innerText = th.landauer_entropy_state;
+          landEl.className = parseFloat(th.joules_per_view) < 0.05 
+            ? "text-[10px] text-emerald-400 block font-semibold truncate" 
+            : "text-[10px] text-amber-400 block font-semibold truncate";
+        }
+        const heatEl = document.getElementById('heatDissipatedText');
+        if (heatEl) heatEl.innerText = `${th.heat_dissipated_100k_joules} (100k views)`;
+        const entEl = document.getElementById('entropyRateText');
+        if (entEl) entEl.innerText = th.entropy_dissipation_rate;
+      }
+
+      if (data.battery_physics) {
+        const bp = data.battery_physics;
+        const batBadge = document.getElementById('batteryBadge');
+        if (batBadge) {
+          batBadge.innerText = `${bp.uah_per_visit} (${bp.mobile_battery_grade.split(' ')[0]})`;
+          batBadge.className = parseFloat(bp.uah_per_visit) < 1.0
+            ? "text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold"
+            : "text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/50 font-bold";
+        }
+        const batEl = document.getElementById('batteryUahText');
+        if (batEl) batEl.innerText = `${bp.uah_per_visit} (${bp.peak_current_ma} peak)`;
+        const batGradeEl = document.getElementById('batteryGradeText');
+        if (batGradeEl) {
+          batGradeEl.innerText = bp.mobile_battery_grade;
+          batGradeEl.className = parseFloat(bp.uah_per_visit) < 1.0 
+            ? "text-[10px] text-emerald-400 block font-semibold truncate" 
+            : "text-[10px] text-amber-400 block font-semibold truncate";
+        }
+        const oledEl = document.getElementById('oledDrawText');
+        if (oledEl) oledEl.innerText = bp.oled_panel_draw;
+        const thermEl = document.getElementById('batteryThermalFeelText');
+        if (thermEl) thermEl.innerText = bp.thermal_feel;
+      }
+
+      // 17. Shannon Cryptographic Entropy & CDN LRU Eviction Half-Life
+      if (data.entropy_telemetry) {
+        const ent = data.entropy_telemetry;
+        const entBadge = document.getElementById('entropyBadge');
+        if (entBadge) entBadge.innerText = `${ent.shannon_entropy} (TRNG)`;
+        const shannonEl = document.getElementById('shannonEntropyText');
+        if (shannonEl) shannonEl.innerText = `${ent.shannon_entropy} (Max: ${ent.max_theoretical})`;
+        const qualityEl = document.getElementById('entropyQualityText');
+        if (qualityEl) qualityEl.innerText = ent.prng_quality;
+        const factEl = document.getElementById('factorizationRiskText');
+        if (factEl) factEl.innerText = ent.factorization_risk;
+        const distEl = document.getElementById('keyDistributionText');
+        if (distEl) distEl.innerText = ent.key_distribution;
+      }
+
+      if (data.cdn_lru) {
+        const lru = data.cdn_lru;
+        const lruBadge = document.getElementById('cdnLruBadge');
+        if (lruBadge) lruBadge.innerText = lru.eviction_half_life.split(' ')[0] + " LRU Half-Life";
+        const evictEl = document.getElementById('evictionHalfLifeText');
+        if (evictEl) evictEl.innerText = lru.eviction_half_life;
+        const lruGradeEl = document.getElementById('lruGradeText');
+        if (lruGradeEl) lruGradeEl.innerText = lru.lru_cache_grade;
+        const ramTierEl = document.getElementById('ramTierText');
+        if (ramTierEl) ramTierEl.innerText = lru.ram_tier;
+        const memFootEl = document.getElementById('memoryFootprintText');
+        if (memFootEl) memFootEl.innerText = `${lru.memory_footprint} • ${lru.cache_invalidation_risk}`;
       }
 
       // Evidence tags
