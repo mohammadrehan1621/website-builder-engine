@@ -2,81 +2,81 @@
   "timestamp": "2026-11-02",
   "base_directory": "C:\\Users\\rehan\\Desktop\\projects\\website_builder\\Deployed_Websites\\mohammadrehan.pages.dev",
   "total_html_files": 10,
-  "total_word_count": 8101,
+  "total_word_count": 8100,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 3,
-      "density_pct": 0.04
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 11,
-      "density_pct": 0.14
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 19,
-      "density_pct": 0.23
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 51,
-      "density_pct": 0.63
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 16,
-      "density_pct": 0.2
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 40,
-      "density_pct": 0.49
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 3,
-      "density_pct": 0.04
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 5,
+      "density_pct": 0.06
     },
     "quantitative": {
       "keyword": "quantitative",
       "count": 18,
       "density_pct": 0.22
     },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 16,
+      "density_pct": 0.2
     },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 4,
-      "density_pct": 0.05
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 3,
+      "density_pct": 0.04
     },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 1,
+      "density_pct": 0.01
     },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 5,
-      "density_pct": 0.06
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 11,
+      "density_pct": 0.14
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 51,
+      "density_pct": 0.63
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 19,
+      "density_pct": 0.23
     },
     "expressbill": {
       "keyword": "expressbill",
       "count": 1,
       "density_pct": 0.01
     },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 1,
-      "density_pct": 0.01
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 35,
+      "density_pct": 0.43
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.04
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.04
     }
   },
   "meta_audits": [
@@ -215,5 +215,5 @@
   "verdict": "A+ COMPLIANT",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 21772
+  "execution_micros": 24107
 }
