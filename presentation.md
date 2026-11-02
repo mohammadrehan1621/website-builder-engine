@@ -3,14 +3,17 @@ title: "Rehan Quant Lab Enterprise Architecture"
 author: "Mohammad Rehan"
 date: "2026-11-02"
 theme: "dark"
+autoplay: 0
 ---
 <!-- layout: title -->
+<!-- notes: Welcome attendees. Highlight our sovereign desktop focus, air-gapped security models, and deterministic execution. -->
 # Rehan Quant Lab
 ## Air-Gapped Desktop Software & Distributed Systems
 High-throughput sovereign software suites engineered for offline enterprise compliance, cryptographic immutability, and deterministic low-latency execution.
 
 ---
 <!-- layout: metrics -->
+<!-- notes: Present the raw silicon benchmarks. Emphasize sub-microsecond latency and zero external dependencies. -->
 # Operational Performance
 ## Deterministic Benchmark Telemetry
 Physical measurements recorded on bare-metal x86_64 silicon:
@@ -21,6 +24,7 @@ Physical measurements recorded on bare-metal x86_64 silicon:
 
 ---
 <!-- layout: split -->
+<!-- notes: Walk through the 4 flagship suites. DocumentShield for legal, WhisperVault for voice, RetailPOS for counters, and StoreChain for multi-store sync. -->
 # Flagship Commercial Software
 ## Verified Production Suites
 ::: left
@@ -41,17 +45,18 @@ Physical measurements recorded on bare-metal x86_64 silicon:
 - Double-entry SQLite WAL shift ledger
 - Direct WhatsApp digital bill delivery
 
-### 4. RQL Enterprise Core™
-- Low-latency risk calculation
-- Multi-WAN link bonding engine
-- Automated GSTR tax ledger reconciliation
+### 4. RQL StoreChain™
+- 5-till local mesh Wi-Fi network
+- Store-and-forward Merkle branch sync
+- Zero monthly cloud subscriptions
 :::
 
 ---
 <!-- layout: code -->
+<!-- notes: Explain the invariant checking mechanism. Emphasize lines 4 through 7 where memory state hash is verified. -->
 # Deterministic Process Supervision
 ## AegisDB Continuous Invariant Verification
-```rust
+```rust {4-7}
 pub struct ProcessSupervisor {
     pub process_id: u32,
     pub max_restarts: u32,
@@ -69,15 +74,21 @@ impl ProcessSupervisor {
 
 ---
 <!-- layout: standard -->
-# Commercial Licensing Framework
-## Perpetual Sovereignty vs. Subscription Fatigue
-- **Perpetual Master License**: $199 / ₹16,500 one-time payment.
-- **Complete Machine Ownership**: Installs directly on local disk with 0 recurring subscriptions.
-- **Offline Integrity**: Operates fully on isolated, air-gapped workstations without network access.
-- **Instant Delivery**: Download wizard with signed cryptographic checksums.
+<!-- notes: Explain the mathematical bounds on latency and memory footprint to technical auditors. -->
+# Mathematical Invariants
+## Formal Bounds on Execution Latency
+Total execution latency $T(n)$ adheres to the linear pipeline model:
+
+$$T(n) = \frac{\text{Payload Size}}{\text{Bus Bandwidth}} + \sum_{i=1}^{k} \tau_i$$
+
+- **Computational Bound**: Time complexity remains $\mathcal{O}(1)$ for hot state retrieval.
+- **Memory Invariant**: Peak resident memory footprint $\le 32\text{ MB}$ across all execution cycles.
+- **Cryptographic Sealing**: Every transaction journals an append-only hash:
+  $$H_{t} = \text{SHA-256}(H_{t-1} \parallel \text{Entry}_t)$$
 
 ---
 <!-- layout: title -->
+<!-- notes: Open for questions and discuss licensing terms. -->
 # Conclusion & Briefing
 ## Rehan Quant Lab Headquarters
 Patna, Bihar, India • Direct Founder Contact: +91 7091518548

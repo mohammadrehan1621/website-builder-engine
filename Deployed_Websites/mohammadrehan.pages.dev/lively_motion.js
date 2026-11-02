@@ -30,19 +30,43 @@ document.addEventListener('DOMContentLoaded', () => {
             actionColor: "text-sky-400"
         },
         {
-            label: "\uD83D\uDC51 SOURCE CODE VIP:",
+            label: "\u2B50 NEW RELEASE:",
             labelColor: "text-amber-400",
+            html: "<strong>RQL Sovereign Retail POS&trade;</strong> &bull; Offline Barcode &amp; Thermal Billing (<span class='text-amber-400 font-bold'>$199 USD / &#8377;16,500</span>)",
+            url: "https://quantify17.gumroad.com/l/rql-retailpos",
+            actionText: "Instant Checkout",
+            actionColor: "text-amber-400"
+        },
+        {
+            label: "\u2B50 NEW RELEASE:",
+            labelColor: "text-orange-400",
+            html: "<strong>RQL StoreChain&trade;</strong> &bull; 5-Till LAN Mesh &amp; Branch Sync (<span class='text-orange-400 font-bold'>$299 USD / &#8377;24,999</span>)",
+            url: "https://quantify17.gumroad.com/l/rql-storechain",
+            actionText: "Instant Checkout",
+            actionColor: "text-orange-400"
+        },
+        {
+            label: "\u2B50 NEW RELEASE:",
+            labelColor: "text-cyan-400",
+            html: "<strong>RQL Conduit&trade;</strong> &bull; Pure-Rust Offline Internet Bonding &amp; Failover (<span class='text-cyan-400 font-bold'>From $99 USD</span>)",
+            url: "https://quantify17.gumroad.com/l/rql-conduit",
+            actionText: "Instant Checkout",
+            actionColor: "text-cyan-400"
+        },
+        {
+            label: "\uD83D\uDC51 SOURCE CODE VIP:",
+            labelColor: "text-purple-400",
             html: "<strong>Enterprise Source Code Edition</strong> (&#8377;75,835) &bull; Direct Founder WhatsApp Onboarding",
             url: "https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20Enterprise%20Source%20Code%20Edition%20(%E2%82%B975,835).%20Please%20assist%20with%20founder%20onboarding.",
             actionText: "VIP WhatsApp",
-            actionColor: "text-amber-400"
+            actionColor: "text-purple-400"
         },
         {
             label: "SOVEREIGN TITAN:",
             labelColor: "text-teal-400",
             html: "<strong>100% Pure Native Rust</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop License",
             url: "store.html",
-            actionText: "Commercial Suites (2)",
+            actionText: "Commercial Suites (5)",
             actionColor: "text-teal-400"
         }
     ];
