@@ -457,6 +457,35 @@ impl WebsiteCompiler {
         // Build Schema.org JSON-LD
         let schema_json = Self::generate_schema_json(profile);
 
+        // Calibrate SERP Title (Strict 30-70 char boundary for SSS+ Panopticon Tier)
+        let raw_title = format!("{} | {} in {}", profile.name, profile.category, profile.city);
+        let serp_title = if raw_title.chars().count() > 68 {
+            let candidate = format!("{} | {}", profile.name, profile.city);
+            if candidate.chars().count() > 68 {
+                let sub: String = candidate.chars().take(65).collect();
+                format!("{}...", sub.trim_end())
+            } else if candidate.chars().count() < 30 {
+                format!("{} | {} Clinic", candidate, profile.city)
+            } else {
+                candidate
+            }
+        } else if raw_title.chars().count() < 30 {
+            format!("{} | Best Care in {}", raw_title, profile.city)
+        } else {
+            raw_title
+        };
+
+        // Calibrate SERP Meta Description (Strict 50-160 char boundary for SSS+ Panopticon Tier)
+        let raw_desc = format!("{}: {} in {}, {}. Call {}.", profile.name, profile.tagline, profile.city, profile.state, profile.phone);
+        let serp_desc = if raw_desc.chars().count() > 160 {
+            let sub: String = raw_desc.chars().take(157).collect();
+            format!("{}...", sub.trim_end())
+        } else if raw_desc.chars().count() < 50 {
+            format!("{} Leading clinic providing expert patient care in {}, {}.", raw_desc, profile.city, profile.state)
+        } else {
+            raw_desc
+        };
+
         // Render Master HTML
         format!(
             r###"<!DOCTYPE html>
@@ -464,20 +493,22 @@ impl WebsiteCompiler {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{bus_name} | Premier {category} in {city}</title>
-  <meta name="description" content="{bus_name} in {city}, {state}. {tagline}. Call {phone} or book on WhatsApp." />
+  <title>{serp_title}</title>
+  <meta name="description" content="{serp_desc}" />
   <link rel="canonical" href="https://{slug}.pages.dev/" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="{accent_primary}" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
 
-  <!-- OpenGraph Semantic Cards -->
+  <!-- OpenGraph Semantic Cards (SSS+ Transcendent Invariant) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="{bus_name} | Premier {category} in {city}" />
-  <meta property="og:description" content="{tagline} Contact: {phone} • {address}" />
+  <meta property="og:title" content="{serp_title}" />
+  <meta property="og:description" content="{serp_desc}" />
   <meta property="og:url" content="https://{slug}.pages.dev/" />
   <meta property="og:site_name" content="{bus_name}" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{serp_title}" />
+  <meta name="twitter:description" content="{serp_desc}" />
 
   <!-- Schema.org JSON-LD (Physical Semantic Ring Invariant) -->
   <script type="application/ld+json">
@@ -865,6 +896,8 @@ impl WebsiteCompiler {
 </body>
 </html>"###,
             bus_name = profile.name,
+            serp_title = serp_title,
+            serp_desc = serp_desc,
             tagline = profile.tagline,
             category = profile.category,
             city = profile.city,

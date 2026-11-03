@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-11-03",
+  "base_directory": "Deployed_Websites/sharma-ortho-patna.pages.dev",
+  "total_html_files": 1,
+  "total_word_count": 573,
+  "broken_links_count": 0,
+  "broken_links": [],
+  "broken_assets_count": 0,
+  "broken_assets": [],
+  "keyword_matrix": {
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 0,
+      "density_pct": 0.0
+    }
+  },
+  "meta_audits": [
+    {
+      "file": "index.html",
+      "title": "sharma orthopedic & joint reconstruction clinic | patna",
+      "title_length": 55,
+      "title_valid": true,
+      "description": "sharma orthopedic & joint reconstruction clinic: pioneering pain-free mobility & robotic knee replacement in bihar in patna, bihar. call +91 98350 28410.",
+      "desc_length": 153,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
+    }
+  ],
+  "seo_panopticon_score": 100,
+  "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
+  "sitemap_generated": true,
+  "robots_generated": true,
+  "execution_micros": 1719
+}
