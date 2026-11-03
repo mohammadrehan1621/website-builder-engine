@@ -1,0 +1,109 @@
+{
+  "name": "Sharma Orthopedic & Joint Reconstruction Clinic",
+  "tagline": "Pioneering Pain-Free Mobility & Robotic Knee Replacement in Bihar",
+  "category": "Orthopedic Hospital & Surgical Center",
+  "city": "Patna",
+  "state": "Bihar",
+  "country": "India",
+  "pincode": "800001",
+  "address": "Opposite Pillar 54, Bailey Road, Patna",
+  "phone": "+91 98350 28410",
+  "email": "care@sharmaorthoclinic.com",
+  "whatsapp": "919835028410",
+  "working_hours": "Mon - Sat: 09:00 AM - 08:00 PM",
+  "theme": "obsidian",
+  "slug": "sharma-ortho-patna",
+  "services": [
+    {
+      "name": "Robotic Total Knee Replacement",
+      "description": "3D CT-guided navigation ensuring zero muscular damage, sub-millimeter implant fit, and walking within 24 hours of surgery.",
+      "price": "₹1,45,000 all-inclusive",
+      "tag": "Most Popular",
+      "icon": "🦾"
+    },
+    {
+      "name": "Minimally Invasive Hip Arthroscopy",
+      "description": "Advanced keyhole surgical intervention for labral tears, impingement, and cartilage preservation with zero stitches.",
+      "price": "₹1,15,000 all-inclusive",
+      "tag": "Zero-Incision",
+      "icon": "🦴"
+    },
+    {
+      "name": "Endoscopic Spine Disc Decompression",
+      "description": "Targeted laser and micro-endoscopic relief for sciatica, herniated lumbar discs, and spinal stenosis without general anesthesia.",
+      "price": "₹85,000 all-inclusive",
+      "tag": "Same-Day Discharge",
+      "icon": "⚡"
+    },
+    {
+      "name": "Sports Ligament (ACL/PCL) Reconstruction",
+      "description": "High-tension bio-composite graft reconstruction returning athletes to competitive contact sport in record time.",
+      "price": "₹72,000 all-inclusive",
+      "tag": "Sports Medicine",
+      "icon": "🏃"
+    }
+  ],
+  "testimonials": [
+    {
+      "client_name": "Ramakant Jha (68 Yrs)",
+      "role_or_city": "Kankarbagh, Patna",
+      "review": "I could not walk 50 steps without excruciating knee pain for 4 years. Dr. Sharma performed robotic bilateral knee replacement. On Day 2, I walked to the bathroom myself without a walker. Truly a miracle.",
+      "rating": 5,
+      "date": "October 2026"
+    },
+    {
+      "client_name": "Pooja Verma (34 Yrs)",
+      "role_or_city": "Danapur, Patna",
+      "review": "Suffered a complete ACL tear during badminton practice. The endoscopic repair was so clean that within 6 weeks I was back to jogging. The hospital staff and transparent billing were unmatched.",
+      "rating": 5,
+      "date": "September 2026"
+    },
+    {
+      "client_name": "Vikramaditya Singh (52 Yrs)",
+      "role_or_city": "Muzaffarpur",
+      "review": "Traveled from Muzaffarpur for chronic sciatica. Discharged the same evening after micro-endoscopic decompression. No back pain since. Highly recommend Sharma Clinic.",
+      "rating": 5,
+      "date": "August 2026"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long after robotic knee surgery can I walk?",
+      "answer": "Over 95% of our patients take their first supported steps within 12 to 24 hours of surgery. With robotic 3D navigation, quadricep muscles are spared, allowing rapid mobilization and home discharge in 48 hours."
+    },
+    {
+      "question": "Is cashless medical insurance accepted?",
+      "answer": "Yes. We offer 100% cashless hospitalization across all major TPAs, Star Health, HDFC ERGO, ICICI Lombard, Ayushman Bharat PM-JAY, and corporate panels with 45-minute desk pre-authorization."
+    },
+    {
+      "question": "What is the difference between conventional and robotic surgery?",
+      "answer": "Conventional surgery relies on manual mechanical cutting blocks with a 3mm margin of error. Our robotic arm creates an exact 3D virtual bone map, cutting with 0.2mm precision and extending implant lifespan past 30 years."
+    },
+    {
+      "question": "How can I book an urgent outpatient consultation?",
+      "answer": "You can click the 'WhatsApp Concierge' button on this site for an instant appointment slot, or call our direct clinical desk at the number above. OPD hours are 09:00 AM to 08:00 PM."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Successful Surgeries",
+      "value": "14,500+",
+      "subtext": "99.4% Joint Stability Record"
+    },
+    {
+      "label": "Years of Excellence",
+      "value": "22+ Yrs",
+      "subtext": "Chief Surgeon Ex-AIIMS"
+    },
+    {
+      "label": "Patient Satisfaction",
+      "value": "4.95 / 5",
+      "subtext": "2,400+ Verified Patient Reviews"
+    },
+    {
+      "label": "Robotic Precision",
+      "value": "0.2 mm",
+      "subtext": "Sub-Millimeter Alignment Accuracy"
+    }
+  ]
+}

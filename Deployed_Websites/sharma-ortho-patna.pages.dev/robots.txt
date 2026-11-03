@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharma-ortho-patna.pages.dev/sitemap.xml
