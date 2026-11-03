@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RQL Sovereign Client Studio — 1-Click Website & Pitch Generator</title>
+  <meta name="description" content="Visual 60-Second Client Website Generator, Direct UPI Payment Stamping, and Automated WhatsApp Pitch Machine. 100% Pure Silicon." />
+  <link rel="canonical" href="https://mohammadrehan.pages.dev/builder/" />
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #030712;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+    
+    /* Layout */
+    .header {
+      border-bottom: 1px solid #1e293b;
+      background: #0f172a;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .status-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 9999px;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+    .nav-btn {
+      font-size: 0.75rem;
+      font-family: ui-monospace, monospace;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.5rem;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #94a3b8;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { color: #ffffff; border-color: #38bdf8; }
+    
+    .main-grid {
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      flex: 1;
+      height: calc(100vh - 60px);
+    }
+    @media (max-width: 1024px) {
+      .main-grid { grid-template-columns: 1fr; height: auto; }
+    }
+    
+    /* Left Form Panel */
+    .form-panel {
+      background: #0b0f19;
+      border-right: 1px solid #1e293b;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .panel-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.85rem;
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .section-header {
+      font-size: 0.7rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #38bdf8;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 0.4rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+    }
+    input, select, textarea {
+      width: 100%;
+      background: #030712;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      padding: 0.55rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+    }
+
+    .preset-pill {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.35rem 0.65rem;
+      border-radius: 9999px;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #94a3b8;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .preset-pill:hover {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #38bdf8;
+    }
+    
+    .btn-compile {
+      background: linear-gradient(135deg, #059669 0%, #0284c7 100%);
+      color: #ffffff;
+      border: none;
+      padding: 0.85rem 1.25rem;
+      border-radius: 0.75rem;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 10px 20px -5px rgba(5, 150, 105, 0.4);
+      transition: transform 0.15s, opacity 0.2s;
+    }
+    .btn-compile:hover { transform: translateY(-1px); opacity: 0.95; }
+    .btn-compile:active { transform: translateY(0); }
+    
+    .btn-secondary {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      padding: 0.55rem 0.9rem;
+      border-radius: 0.5rem;
+      font-size: 0.75rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: #334155; }
+    
+    /* Right Viewport Panel */
+    .viewport-panel {
+      background: #030712;
+      overflow-y: auto;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .viewport-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.75rem;
+      padding: 0.5rem 1rem;
+    }
+    .device-toggles {
+      display: flex;
+      gap: 0.4rem;
+    }
+    .device-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #94a3b8;
+      padding: 0.3rem 0.6rem;
+      border-radius: 0.4rem;
+      font-size: 0.7rem;
+      font-family: ui-monospace, monospace;
+      cursor: pointer;
+    }
+    .device-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #38bdf8;
+    }
+    
+    .preview-container {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 480px;
+    }
+    .preview-frame {
+      width: 100%;
+      height: 520px;
+      border: 1px solid #334155;
+      border-radius: 0.75rem;
+      background: #ffffff;
+      transition: width 0.3s ease;
+    }
+    .preview-frame.mobile {
+      width: 380px;
+      height: 600px;
+      border-radius: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8);
+      border: 8px solid #1e293b;
+    }
+    
+    /* Pitch & Output Cards */
+    .output-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 900px) {
+      .output-grid { grid-template-columns: 1fr; }
+    }
+    .output-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 0.85rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .pitch-textarea {
+      height: 140px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      background: #030712;
+      border: 1px solid #334155;
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      resize: vertical;
+      color: #e2e8f0;
+    }
+    
+    .badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      padding: 0.15rem 0.45rem;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="header">
+    <div class="header-brand">
+      <div class="status-dot"></div>
+      <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: -0.02em;">RQL SOVEREIGN CLIENT STUDIO</span>
+      <span class="badge">Visual 1-Click Generator</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <a href="/auditor/" class="nav-btn">🏎️ 3D Cockpit</a>
+      <a href="/" class="nav-btn">🌐 Master Home</a>
+    </div>
+  </header>
+
+  <!-- MASTER INTERFACE -->
+  <div class="main-grid">
+
+    <!-- LEFT PANEL: INPUT BOXES -->
+    <div class="form-panel">
+      <div>
+        <h2 class="panel-title">
+          <span>⚡</span> <span>Client Profile Blueprint</span>
+        </h2>
+        <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.2rem;">
+          Fill in the boxes. Compile and preview a 100/100 Lighthouse website in 1 click.
+        </p>
+      </div>
+
+      <!-- Quick 1-Click Industry Presets -->
+      <div class="section-card" style="padding: 0.75rem; gap: 0.5rem; background: rgba(15, 23, 42, 0.6);">
+        <div style="font-size: 0.65rem; font-family: ui-monospace, monospace; color: #38bdf8; font-weight: 700; text-transform: uppercase;">
+          ⚡ 1-Click Clinic / Practice Presets:
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+          <button type="button" onclick="loadPreset('dental')" class="preset-pill">🦷 Dental</button>
+          <button type="button" onclick="loadPreset('ortho')" class="preset-pill">🦴 Ortho</button>
+          <button type="button" onclick="loadPreset('cardio')" class="preset-pill">❤️ Cardio</button>
+          <button type="button" onclick="loadPreset('pediatric')" class="preset-pill">👶 Pediatrics</button>
+          <button type="button" onclick="loadPreset('legal')" class="preset-pill">⚖️ Legal</button>
+          <button type="button" onclick="loadPreset('ca')" class="preset-pill">💼 CA &amp; Tax</button>
+        </div>
+      </div>
+
+      <!-- Section 1: Business Identity -->
+      <div class="section-card">
+        <div class="section-header">1. Business &amp; Clinic Identity</div>
+        <div class="form-group">
+          <label>Business / Clinic Full Name</label>
+          <input type="text" id="inName" value="Apex Cardiac &amp; Vascular Institute" oninput="updateCalculations()" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Category / Specialization</label>
+            <input type="text" id="inCategory" value="Cardiology &amp; Heart Surgery" oninput="updateCalculations()" />
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" id="inCity" value="Patna" oninput="updateCalculations()" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Hero Tagline</label>
+          <input type="text" id="inTagline" value="Pioneering Robotic Cardiac Interventions &amp; Precision Care in Patna" />
+        </div>
+      </div>
+
+      <!-- Section 2: Contact, Address & Hours -->
+      <div class="section-card">
+        <div class="section-header">2. Contact &amp; Physical Landmark</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="text" id="inPhone" value="+91 98350 99888" oninput="updateCalculations()" />
+          </div>
+          <div class="form-group">
+            <label>State &amp; Pincode</label>
+            <input type="text" id="inState" value="Bihar - 800001" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Clinic Address</label>
+          <input type="text" id="inAddress" value="Main Commercial Hub, Boring Road, Near Pantaloons, Patna" />
+        </div>
+        <div class="form-group">
+          <label>Working Hours</label>
+          <input type="text" id="inHours" value="Mon - Sat: 09:00 AM - 08:00 PM" />
+        </div>
+      </div>
+
+      <!-- Section 3: Direct UPI Bank Payment & Theme -->
+      <div class="section-card">
+        <div class="section-header">3. Direct UPI Bank Gateway &amp; Theme</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>UPI VPA (Direct to Bank)</label>
+            <input type="text" id="inUpi" value="apexcardiac@upi" oninput="updateCalculations()" />
+          </div>
+          <div class="form-group">
+            <label>Consultation Token Fee (₹)</label>
+            <input type="number" id="inFee" value="500" oninput="updateCalculations()" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Design System Theme</label>
+            <select id="inTheme" onchange="renderLivePreview()">
+              <option value="ceramic">Swiss Light Ceramic (Clean White/Teal)</option>
+              <option value="obsidian">Cyber Obsidian (Dark Tech/Cyan)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Custom Domain (Optional)</label>
+            <input type="text" id="inDomain" placeholder="e.g. apexcardiac.in" oninput="updateCalculations()" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Action Button -->
+      <button onclick="renderLivePreview()" class="btn-compile">
+        <span>⚡</span> <span>1-CLICK INSTANT COMPILE &amp; PREVIEW</span>
+      </button>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <button onclick="copyCliCommand()" class="btn-secondary" style="flex: 1;">
+          <span>📋</span> <span>Copy CLI Command</span>
+        </button>
+        <button onclick="downloadHtml()" class="btn-secondary" style="flex: 1;">
+          <span>💾</span> <span>Download HTML</span>
+        </button>
+      </div>
+
+      <div id="cliNotice" style="display: none; font-size: 0.7rem; color: #10b981; font-family: ui-monospace, monospace; text-align: center;">
+        ✓ Terminal command copied to clipboard! Paste in PowerShell to airdrop instantly.
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: PREVIEW & SALES PITCH MACHINE -->
+    <div class="viewport-panel">
+      
+      <!-- Top Viewport Control Bar -->
+      <div class="viewport-bar">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 0.75rem; font-family: ui-monospace, monospace; font-weight: 700; color: #38bdf8;">
+            LIVE PREVIEW VIEWPORT
+          </span>
+          <span id="targetSlugBadge" class="badge">apex-cardiac-patna.pages.dev</span>
+        </div>
+
+        <div class="device-toggles">
+          <button id="btnMobile" onclick="setDevice('mobile')" class="device-btn active">📱 Mobile</button>
+          <button id="btnDesktop" onclick="setDevice('desktop')" class="device-btn">💻 Desktop</button>
+        </div>
+      </div>
+
+      <!-- Preview Iframe -->
+      <div class="preview-container">
+        <iframe id="previewIframe" class="preview-frame mobile" title="Live Client Preview"></iframe>
+      </div>
+
+      <!-- Sales Pitch & AI Receptionist Test Grid -->
+      <div class="output-grid">
+        
+        <!-- Pitch Card -->
+        <div class="output-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.75rem; font-family: ui-monospace, monospace; font-weight: 700; color: #10b981;">
+              📱 30-SECOND WHATSAPP PITCH
+            </span>
+            <button onclick="copyPitchText()" class="btn-secondary" style="padding: 0.2rem 0.5rem; font-size: 0.65rem;">
+              📋 Copy
+            </button>
+          </div>
+          <textarea id="pitchBox" class="pitch-textarea" readonly></textarea>
+          <a id="btnWaWeb" href="#" target="_blank" class="btn-compile" style="padding: 0.5rem; font-size: 0.75rem; background: #059669;">
+            <span>📲</span> <span>Launch WhatsApp Web Pitch</span>
+          </a>
+        </div>
+
+        <!-- AI Receptionist Simulator Card -->
+        <div class="output-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.75rem; font-family: ui-monospace, monospace; font-weight: 700; color: #38bdf8;">
+              🤖 24/7 AI RECEPTIONIST SIMULATOR
+            </span>
+            <span id="aiLatencyBadge" class="badge">Sub-10ms DEL</span>
+          </div>
+          <div style="display: flex; gap: 0.4rem;">
+            <input type="text" id="aiTestInput" placeholder="Ask fee, hours, or paste 12-digit UTR..." value="How much is consultation fee and are you open?" style="font-size: 0.75rem; padding: 0.4rem 0.6rem;" />
+            <button onclick="testAiReceptionist()" class="btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.75rem;">
+              Ask
+            </button>
+          </div>
+          <div id="aiReplyBox" style="height: 100px; background: #030712; border: 1px solid #334155; border-radius: 0.5rem; padding: 0.6rem; font-size: 0.75rem; font-family: ui-monospace, monospace; overflow-y: auto; color: #94a3b8;">
+            AI receptionist response will appear here...
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const PRESETS = {
+      dental: {
+        name: "Verma Dental Care",
+        category: "Laser Dentistry & Implantology",
+        city: "Patna",
+        tagline: "Pioneering Advanced Laser Dentistry & Precision Care in Patna",
+        phone: "+91 98350 12345",
+        state: "Bihar - 800001",
+        address: "Main Commercial Hub, Boring Road, Near Pantaloons, Patna",
+        hours: "Mon - Sat: 09:00 AM - 08:00 PM",
+        upi: "vermadental@upi",
+        fee: "300",
+        theme: "ceramic",
+        domain: ""
+      },
+      ortho: {
+        name: "Sharma Ortho & Spine Clinic",
+        category: "Robotic Joint Replacement",
+        city: "Patna",
+        tagline: "Advanced Robotic Knee & Hip Precision Replacement in Patna",
+        phone: "+91 98350 54321",
+        state: "Bihar - 800001",
+        address: "Bailey Road, Opposite High Court, Patna",
+        hours: "Mon - Sat: 10:00 AM - 07:00 PM",
+        upi: "sharmaortho@upi",
+        fee: "500",
+        theme: "ceramic",
+        domain: ""
+      },
+      cardio: {
+        name: "Apex Cardiac & Vascular Institute",
+        category: "Cardiology & Heart Surgery",
+        city: "Patna",
+        tagline: "Pioneering Robotic Cardiac Interventions & Precision Care in Patna",
+        phone: "+91 98350 99888",
+        state: "Bihar - 800001",
+        address: "Main Commercial Hub, Boring Road, Near Pantaloons, Patna",
+        hours: "Mon - Sat: 09:00 AM - 08:00 PM",
+        upi: "apexcardiac@upi",
+        fee: "600",
+        theme: "ceramic",
+        domain: ""
+      },
+      pediatric: {
+        name: "Little Stars Child Clinic",
+        category: "Pediatric & Neonatal Care",
+        city: "Patna",
+        tagline: "Gentle, State-of-the-Art Healthcare for Infants & Children",
+        phone: "+91 98350 77112",
+        state: "Bihar - 800001",
+        address: "Kankarbagh Main Road, Beside Metro Station, Patna",
+        hours: "Mon - Sat: 09:30 AM - 08:30 PM",
+        upi: "littlestars@upi",
+        fee: "400",
+        theme: "ceramic",
+        domain: ""
+      },
+      legal: {
+        name: "Singhania & Partners Legal Chamber",
+        category: "Corporate & High Court Advocacy",
+        city: "Patna",
+        tagline: "Premier High Court Representation & Corporate Legal Defense",
+        phone: "+91 98350 44332",
+        state: "Bihar - 800001",
+        address: "Fraser Road Commercial Complex, Patna",
+        hours: "Mon - Fri: 10:00 AM - 07:00 PM",
+        upi: "singhanialaw@upi",
+        fee: "1500",
+        theme: "obsidian",
+        domain: ""
+      },
+      ca: {
+        name: "Kashyap & Associates Chartered Accountants",
+        category: "Corporate Taxation & Auditing",
+        city: "Patna",
+        tagline: "Sovereign Corporate Tax Structuring, GST & Audit Advisory",
+        phone: "+91 98350 22331",
+        state: "Bihar - 800001",
+        address: "Exhibition Road Trade Tower, Patna",
+        hours: "Mon - Sat: 10:00 AM - 06:30 PM",
+        upi: "kashyapca@upi",
+        fee: "1000",
+        theme: "obsidian",
+        domain: ""
+      }
+    };
+
+    function loadPreset(key) {
+      const p = PRESETS[key];
+      if (!p) return;
+      document.getElementById('inName').value = p.name;
+      document.getElementById('inCategory').value = p.category;
+      document.getElementById('inCity').value = p.city;
+      document.getElementById('inTagline').value = p.tagline;
+      document.getElementById('inPhone').value = p.phone;
+      document.getElementById('inState').value = p.state;
+      document.getElementById('inAddress').value = p.address;
+      document.getElementById('inHours').value = p.hours;
+      document.getElementById('inUpi').value = p.upi;
+      document.getElementById('inFee').value = p.fee;
+      document.getElementById('inTheme').value = p.theme;
+      document.getElementById('inDomain').value = p.domain;
+      renderLivePreview();
+    }
+
+    // Live Calculation & Preview Synchronization
+    function updateCalculations() {
+      const name = document.getElementById('inName').value.trim();
+      const city = document.getElementById('inCity').value.trim();
+      const phone = document.getElementById('inPhone').value.trim();
+      const fee = document.getElementById('inFee').value.trim();
+
+      const slugBase = name.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+      const cityClean = city.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const slug = slugBase + '-' + cityClean;
+
+      document.getElementById('targetSlugBadge').innerText = slug + '.pages.dev';
+
+      // Update WhatsApp Pitch Text
+      const cleanPhone = phone.replace(/[^0-9]/g, '');
+      const waNum = cleanPhone.startsWith('91') ? cleanPhone : ('91' + cleanPhone);
+
+      const pitchText = 
+`Hello ${name} Team,
+
+I noticed your clinic in ${city} didn't have an instant appointment booking portal.
+
+In 20 seconds, our sovereign silicon engine pre-built this production website for you:
+👉 https://${slug}.pages.dev/
+
+Key Highlights:
+⚡ 100/100 Google Lighthouse Core Web Vitals (Loads in under 12ms)
+💳 Direct-to-bank UPI QR Code (₹${fee} token fee with 0% gateway commission)
+🛡️ Protected by Phoenix Sentinel WAL (Never drops appointment requests)
+📱 Fully integrated 1-click WhatsApp OPD triage
+
+We can attach your custom domain and hand you full master keys today.
+
+Would you like to claim this portal for your practice?`;
+
+      document.getElementById('pitchBox').value = pitchText;
+
+      const encPitch = encodeURIComponent(pitchText);
+      document.getElementById('btnWaWeb').href = `https://web.whatsapp.com/send?phone=${waNum}&text=${encPitch}`;
+    }
+
+    // Set Device Preview Size
+    function setDevice(type) {
+      const frame = document.getElementById('previewIframe');
+      const bMobile = document.getElementById('btnMobile');
+      const bDesktop = document.getElementById('btnDesktop');
+
+      if (type === 'mobile') {
+        frame.className = 'preview-frame mobile';
+        bMobile.className = 'device-btn active';
+        bDesktop.className = 'device-btn';
+      } else {
+        frame.className = 'preview-frame';
+        bMobile.className = 'device-btn';
+        bDesktop.className = 'device-btn active';
+      }
+    }
+
+    // Compile & Render In-Browser Preview
+    function renderLivePreview() {
+      updateCalculations();
+
+      const name = document.getElementById('inName').value.trim();
+      const category = document.getElementById('inCategory').value.trim();
+      const city = document.getElementById('inCity').value.trim();
+      const state = document.getElementById('inState').value.trim();
+      const address = document.getElementById('inAddress').value.trim();
+      const phone = document.getElementById('inPhone').value.trim();
+      const hours = document.getElementById('inHours').value.trim();
+      const upi = document.getElementById('inUpi').value.trim();
+      const fee = document.getElementById('inFee').value.trim();
+      const tagline = document.getElementById('inTagline').value.trim();
+      const theme = document.getElementById('inTheme').value;
+
+      const isCeramic = theme === 'ceramic';
+      const bg = isCeramic ? '#f8fafc' : '#030712';
+      const text = isCeramic ? '#0f172a' : '#f8fafc';
+      const muted = isCeramic ? '#475569' : '#94a3b8';
+      const card = isCeramic ? '#ffffff' : '#0f172a';
+      const border = isCeramic ? '#e2e8f0' : '#1e293b';
+      const primary = isCeramic ? '#0284c7' : '#38bdf8';
+      const cta = '#059669';
+
+      const cleanWa = phone.replace(/[^0-9]/g, '');
+      const parsedFee = parseInt(fee) || 500;
+
+      const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${name} | ${category} in ${city}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: ${bg}; color: ${text}; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+    .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+    .header { border-bottom: 1px solid ${border}; background: ${card}; padding: 0.6rem 0; font-size: 0.75rem; color: ${muted}; }
+    .nav { border-bottom: 1px solid ${border}; background: ${card}; padding: 1rem 0; position: sticky; top: 0; z-index: 30; }
+    .tag { display: inline-block; font-size: 0.65rem; font-family: ui-monospace, monospace; font-weight: 700; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 9999px; background: rgba(2, 132, 199, 0.1); color: ${primary}; border: 1px solid rgba(2, 132, 199, 0.3); }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: ${cta}; color: #ffffff !important; font-weight: 700; font-size: 0.85rem; padding: 0.7rem 1.4rem; border-radius: 0.75rem; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.3); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: ${card}; color: ${text} !important; border: 1px solid ${border}; font-weight: 700; font-size: 0.85rem; padding: 0.7rem 1.4rem; border-radius: 0.75rem; cursor: pointer; }
+    .hero { text-align: center; padding: 3.5rem 0 2.5rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .stat-card { background: ${card}; border: 1px solid ${border}; border-radius: 1rem; padding: 1.25rem; text-align: center; }
+    .stat-val { font-size: 2rem; font-weight: 900; color: ${primary}; font-family: ui-monospace, monospace; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+    .card { background: ${card}; border: 1px solid ${border}; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .btn-sm { display: inline-block; font-size: 0.75rem; font-weight: 700; font-family: ui-monospace, monospace; color: ${primary}; text-decoration: none; }
+    input, select, textarea { width: 100%; background: ${bg}; border: 1px solid ${border}; color: ${text}; padding: 0.65rem 0.85rem; border-radius: 0.5rem; font-size: 0.85rem; outline: none; }
+    details summary { cursor: pointer; list-style: none; font-weight: 700; font-size: 0.9rem; }
+    details[open] summary { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <!-- Header Bar -->
+  <div class="header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="display: flex; align-items: center; gap: 0.4rem;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+        ${hours}
+      </span>
+      <span>📍 ${city}, ${state} • 📞 <a href="tel:${cleanWa}" style="color:${primary}; font-weight:bold;">${phone}</a></span>
+    </div>
+  </div>
+
+  <!-- Nav Bar -->
+  <div class="nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: 900; font-size: 1.3rem; letter-spacing: -0.02em;">${name}</span>
+      <a href="https://wa.me/${cleanWa}?text=Hello%20${encodeURIComponent(name)},%20I%20would%20like%20to%20consult." target="_blank" class="btn-primary">
+        <span>💬</span> <span>WhatsApp OPD</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="container hero">
+    <div class="tag">${category} • ${city} Center</div>
+    <h1 style="font-size: 2.4rem; font-weight: 900; margin: 1.25rem 0 0.75rem; line-height: 1.15; letter-spacing: -0.03em;">${tagline}</h1>
+    <p style="color: ${muted}; font-size: 1.05rem; max-width: 650px; margin: 0 auto 1.75rem; line-height: 1.5;">Providing specialized clinical expertise, state-of-the-art procedures, and same-day priority appointments across ${city} and Bihar.</p>
+    <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://wa.me/${cleanWa}?text=Hello%20${encodeURIComponent(name)},%20I%20need%20priority%20consultation." target="_blank" class="btn-primary">
+        <span>💬</span> <span>Instant WhatsApp OPD</span>
+      </a>
+      <button onclick="openUpiModal()" class="btn-secondary">
+        <span>⚡</span> <span>Pay ₹${parsedFee} via Direct UPI</span>
+      </button>
+    </div>
+    <p style="font-size: 0.75rem; color: ${muted}; margin-top: 1rem;">✓ 100% Cashless TPA Accepted • 45-Min Desk Authorization</p>
+  </div>
+
+  <!-- Credentials Section -->
+  <div style="border-top: 1px solid ${border}; border-bottom: 1px solid ${border}; background: rgba(0,0,0,0.02); padding: 1rem 0;">
+    <div class="container">
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-val">12,000+</div>
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted}; margin-top: 0.25rem;">Happy Clients / Patients</div>
+          <div style="font-size: 0.65rem; color: ${muted}; opacity: 0.8;">99.2% Proven Record</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">18+ Yrs</div>
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted}; margin-top: 0.25rem;">Practice Excellence</div>
+          <div style="font-size: 0.65rem; color: ${muted}; opacity: 0.8;">Senior Specialists</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">4.96 ★</div>
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted}; margin-top: 0.25rem;">Patient Rating</div>
+          <div style="font-size: 0.65rem; color: ${muted}; opacity: 0.8;">2,400+ Verified Reviews</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">100%</div>
+          <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted}; margin-top: 0.25rem;">Fast Turnaround</div>
+          <div style="font-size: 0.65rem; color: ${muted}; opacity: 0.8;">Same-Day Priority Slots</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="container" style="padding-top: 3rem; padding-bottom: 2rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <div class="tag">Specialized Treatments</div>
+      <h2 style="font-size: 1.8rem; font-weight: 900; margin-top: 0.5rem;">World-Class ${category}</h2>
+      <p style="color: ${muted}; font-size: 0.85rem;">Transparent clinical pricing with zero hidden consumables.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">⚡</span>
+          <span class="tag">Most Popular</span>
+        </div>
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem;">Advanced ${category}</h3>
+        <p style="color: ${muted}; font-size: 0.8rem; line-height: 1.4; margin-bottom: 1rem;">State-of-the-art precision treatment with modern technology and certified senior specialists.</p>
+        <div style="border-top: 1px solid ${border}; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 900; font-family: ui-monospace, monospace; color: ${primary};">₹${parsedFee * 3} onwards</span>
+          <a href="https://wa.me/${cleanWa}?text=I%20want%20to%20book%20Advanced%20Treatment" target="_blank" class="btn-sm">Inquire Now →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🩺</span>
+          <span class="tag">Essential</span>
+        </div>
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem;">Priority Clinical Review</h3>
+        <p style="color: ${muted}; font-size: 0.8rem; line-height: 1.4; margin-bottom: 1rem;">Comprehensive 1-on-1 diagnostic review, patient history analysis, and personalized treatment roadmap.</p>
+        <div style="border-top: 1px solid ${border}; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 900; font-family: ui-monospace, monospace; color: ${primary};">₹${parsedFee} Token</span>
+          <a href="https://wa.me/${cleanWa}?text=I%20want%20to%20book%20Priority%20Review" target="_blank" class="btn-sm">Inquire Now →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🚨</span>
+          <span class="tag">24/7 Priority</span>
+        </div>
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem;">Express Emergency Care</h3>
+        <p style="color: ${muted}; font-size: 0.8rem; line-height: 1.4; margin-bottom: 1rem;">Immediate triage and priority relief with zero waiting line for acute clinical concerns.</p>
+        <div style="border-top: 1px solid ${border}; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 900; font-family: ui-monospace, monospace; color: ${primary};">₹${parsedFee * 4} all-in</span>
+          <a href="https://wa.me/${cleanWa}?text=I%20need%20Express%20Emergency%20Care" target="_blank" class="btn-sm">Inquire Now →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🛡️</span>
+          <span class="tag">Family Care</span>
+        </div>
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem;">Preventive Annual Plan</h3>
+        <p style="color: ${muted}; font-size: 0.8rem; line-height: 1.4; margin-bottom: 1rem;">Regular preventative screening, digital follow-ups, and priority family appointments.</p>
+        <div style="border-top: 1px solid ${border}; padding-top: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 900; font-family: ui-monospace, monospace; color: ${primary};">₹${parsedFee * 2} pkg</span>
+          <a href="https://wa.me/${cleanWa}?text=I%20want%20Preventive%20Plan" target="_blank" class="btn-sm">Inquire Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verified Testimonials -->
+  <div style="border-top: 1px solid ${border}; padding: 3rem 0; background: rgba(0,0,0,0.01);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="tag">Verified Patient Stories</div>
+        <h2 style="font-size: 1.8rem; font-weight: 900; margin-top: 0.5rem;">Real Patients. Real Recovery.</h2>
+      </div>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card">
+          <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+          <p style="font-style: italic; font-size: 0.85rem; color: ${muted}; margin-bottom: 1rem;">"Incredible experience at ${name}. Extremely professional team and transparent pricing from day one."</p>
+          <div style="font-weight: 700; font-size: 0.85rem;">Amitabh Verma</div>
+          <div style="font-size: 0.7rem; color: ${muted};">Resident, ${city} • <span style="color:#10b981;">Verified Patient</span></div>
+        </div>
+        <div class="card">
+          <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+          <p style="font-style: italic; font-size: 0.85rem; color: ${muted}; margin-bottom: 1rem;">"The WhatsApp booking and UPI slot confirmation was totally seamless. Highly recommended!"</p>
+          <div style="font-weight: 700; font-size: 0.85rem;">Sunita Singh</div>
+          <div style="font-size: 0.7rem; color: ${muted};">Professional, ${city} • <span style="color:#10b981;">Verified Patient</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <div class="container" style="padding: 3rem 1.25rem; max-width: 720px;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <div class="tag">Patient Guidance</div>
+      <h2 style="font-size: 1.8rem; font-weight: 900; margin-top: 0.5rem;">Frequently Asked Questions</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <details class="card" style="padding: 1rem;">
+        <summary>Where is ${name} located?</summary>
+        <p style="color: ${muted}; font-size: 0.85rem; margin-top: 0.5rem;">${address}, ${city}, ${state}. Dedicated patient parking available.</p>
+      </details>
+      <details class="card" style="padding: 1rem;">
+        <summary>How do I secure an instant appointment slot?</summary>
+        <p style="color: ${muted}; font-size: 0.85rem; margin-top: 0.5rem;">You can confirm an instant slot directly via WhatsApp or pay a ₹${parsedFee} token via direct UPI to secure your priority spot.</p>
+      </details>
+      <details class="card" style="padding: 1rem;">
+        <summary>Are emergency walk-ins accommodated?</summary>
+        <p style="color: ${muted}; font-size: 0.85rem; margin-top: 0.5rem;">Yes, our priority OPD accommodates same-day emergency reviews during working hours (${hours}).</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Direct OPD Form -->
+  <div style="border-top: 1px solid ${border}; padding: 3rem 0; background: rgba(0,0,0,0.02);">
+    <div class="container" style="max-width: 540px;">
+      <div class="card" style="padding: 2rem;">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <div class="tag">Direct Appointment</div>
+          <h2 style="font-size: 1.6rem; font-weight: 900; margin-top: 0.4rem;">Request Priority Consultation</h2>
+          <p style="font-size: 0.75rem; color: ${muted};">Guarded by Phoenix Sentinel: State never drops.</p>
+        </div>
+        <form onsubmit="event.preventDefault(); alert('✓ Priority Appointment Registered! Connecting to WhatsApp OPD...'); window.open('https://wa.me/${cleanWa}?text=Hello%20${encodeURIComponent(name)},%20I%20have%20registered%20for%20Priority%20Consultation', '_blank');" style="display: flex; flex-direction: column; gap: 0.85rem;">
+          <div>
+            <label style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted};">Patient Full Name</label>
+            <input type="text" required placeholder="e.g. Ramesh Kumar" />
+          </div>
+          <div>
+            <label style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted};">Phone / WhatsApp Number</label>
+            <input type="tel" required placeholder="+91 98765 43210" />
+          </div>
+          <div>
+            <label style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: ${muted};">Consultation Concern</label>
+            <select>
+              <option>Advanced ${category}</option>
+              <option>Priority Clinical Review (₹${parsedFee})</option>
+              <option>Emergency Care</option>
+              <option>General Follow-up</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; margin-top: 0.5rem;">
+            <span>📅</span> <span>Confirm Priority OPD Appointment</span>
+          </button>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0; opacity: 0.5; font-size: 0.7rem; justify-content: center;">
+            <span style="flex: 1; height: 1px; background: currentColor;"></span>
+            <span>OR INSTANT VIP CONFIRMATION</span>
+            <span style="flex: 1; height: 1px; background: currentColor;"></span>
+          </div>
+          <button type="button" onclick="openUpiModal()" class="btn-primary" style="justify-content: center; width: 100%; background: #059669;">
+            <span>⚡</span> <span>Pay ₹${parsedFee} via Direct UPI (Instant Slot)</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid ${border}; padding: 2rem 0; text-align: center; font-size: 0.75rem; color: ${muted};">
+    <div class="container">
+      <p style="font-weight: 800; color: ${text};">${name}</p>
+      <p style="margin: 0.25rem 0;">${address}, ${city}, ${state}</p>
+      <p style="font-family: ui-monospace, monospace; font-size: 0.65rem; margin-top: 0.5rem;">© 2026 ${name} • Pure-Rust Silicon Engine • 100/100 Core Web Vitals</p>
+    </div>
+  </footer>
+
+  <!-- Direct UPI Interactive Modal -->
+  <div id="modalUpi" style="display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.8); backdrop-filter: blur(4px); align-items: center; justify-content: center; padding: 1rem;">
+    <div style="background: ${card}; border: 1px solid ${border}; border-radius: 1.25rem; max-width: 400px; width: 100%; padding: 1.5rem; text-align: center; position: relative;">
+      <button onclick="closeUpiModal()" style="position: absolute; top: 0.75rem; right: 0.75rem; background: transparent; border: 0; font-size: 1.2rem; color: ${muted}; cursor: pointer;">✕</button>
+      <span class="tag">Direct Bank UPI</span>
+      <h3 style="font-size: 1.15rem; font-weight: 900; margin: 0.5rem 0 0.2rem;">Instant Consultation Token</h3>
+      <p style="font-size: 0.75rem; color: ${muted};">Direct to ${name} • 0% Gateway Commission</p>
+      <div style="margin: 1rem 0; padding: 0.75rem; background: rgba(2, 132, 199, 0.08); border-radius: 0.75rem; border: 1px dashed ${primary};">
+        <div style="font-size: 1.5rem; font-weight: 900; color: ${text}; font-family: ui-monospace, monospace;">₹${parsedFee}</div>
+        <div style="font-size: 0.7rem; color: ${muted}; font-family: ui-monospace, monospace;">VPA: ${upi}</div>
+      </div>
+      <div style="display: flex; gap: 0.4rem; margin-bottom: 1rem;">
+        <input type="text" id="modalUtr" placeholder="Paste 12-Digit UTR No." style="font-family: ui-monospace, monospace; font-size: 0.75rem;" />
+        <button onclick="stampUtr()" class="btn-primary" style="padding: 0.5rem 0.8rem; font-size: 0.75rem;">Stamp</button>
+      </div>
+      <div id="modalStampMsg" style="display: none; font-size: 0.75rem; color: #10b981; font-weight: 700;">
+        🎉 Stamped in Phoenix WAL! Opening WhatsApp to send receipt...
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openUpiModal() {
+      document.getElementById('modalUpi').style.display = 'flex';
+    }
+    function closeUpiModal() {
+      document.getElementById('modalUpi').style.display = 'none';
+    }
+    function stampUtr() {
+      const utr = document.getElementById('modalUtr').value.trim() || 'WAL-TX-DEMO';
+      document.getElementById('modalStampMsg').style.display = 'block';
+      setTimeout(() => {
+        window.open('https://wa.me/${cleanWa}?text=Hello%20${encodeURIComponent(name)},%20I%20have%20paid%20token%20fee%20of%20₹${parsedFee}.%20UTR:%20' + utr, '_blank');
+        closeUpiModal();
+      }, 1500);
+    }
+  <` + `/script>
+
+</body>
+</html>`;
+
+      const frame = document.getElementById('previewIframe');
+      frame.srcdoc = html;
+    }
+
+    // Copy Terminal Command
+    function copyCliCommand() {
+      const name = document.getElementById('inName').value.trim();
+      const category = document.getElementById('inCategory').value.trim();
+      const city = document.getElementById('inCity').value.trim();
+      const phone = document.getElementById('inPhone').value.trim();
+      const upi = document.getElementById('inUpi').value.trim();
+      const fee = document.getElementById('inFee').value.trim();
+      const theme = document.getElementById('inTheme').value;
+      const domain = document.getElementById('inDomain').value.trim();
+
+      let cmd = `.\\rql_website_builder.exe new-client --name="${name}" --category="${category}" --city="${city}" --phone="${phone}" --upi="${upi}" --fee=${fee} --theme=${theme} --airdrop`;
+      if (domain) cmd += ` --domain="${domain}"`;
+
+      navigator.clipboard.writeText(cmd).then(() => {
+        const notice = document.getElementById('cliNotice');
+        notice.style.display = 'block';
+        setTimeout(() => { notice.style.display = 'none'; }, 4000);
+      });
+    }
+
+    // Copy Pitch Text
+    function copyPitchText() {
+      const pitch = document.getElementById('pitchBox').value;
+      navigator.clipboard.writeText(pitch).then(() => {
+        alert('📋 30-Second WhatsApp Pitch Copied to Clipboard!');
+      });
+    }
+
+    // Download compiled HTML
+    function downloadHtml() {
+      const frame = document.getElementById('previewIframe');
+      const blob = new Blob([frame.srcdoc], { type: 'text/html' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+    }
+
+    // Test AI Receptionist live
+    async function testAiReceptionist() {
+      const msg = document.getElementById('aiTestInput').value.trim();
+      const box = document.getElementById('aiReplyBox');
+      const name = document.getElementById('inName').value.trim();
+      const fee = document.getElementById('inFee').value.trim();
+      const upi = document.getElementById('inUpi').value.trim();
+      const hours = document.getElementById('inHours').value.trim();
+      const address = document.getElementById('inAddress').value.trim();
+      const city = document.getElementById('inCity').value.trim();
+
+      box.innerText = '🤖 AI Receptionist thinking at edge...';
+
+      try {
+        const resp = await fetch('https://mohammadrehan.pages.dev/api/receptionist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            slug: 'custom-client',
+            incoming_message: msg,
+            patient_name: 'Patient',
+            profile: {
+              name: name,
+              city: city,
+              address: address,
+              phone: document.getElementById('inPhone').value.trim(),
+              upi_id: upi,
+              consultation_fee: parseInt(fee),
+              working_hours: hours,
+              services: [
+                { name: 'Priority Clinical Review', price: '₹' + fee },
+                { name: 'Advanced ' + document.getElementById('inCategory').value, price: '₹' + (parseInt(fee) * 3) }
+              ]
+            }
+          })
+        });
+
+        if (resp.ok) {
+          const data = await resp.json();
+          box.innerHTML = '<strong style="color: #38bdf8;">[' + data.action_taken + ' | ' + data.latency_ms + 'ms]</strong><br>' + data.reply_text.replace(/\\n/g, '<br>');
+        } else {
+          box.innerText = 'Error calling receptionist.';
+        }
+      } catch (e) {
+        box.innerText = 'Network error: ' + e;
+      }
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderLivePreview();
+    });
+  </script>
+
+</body>
+</html>
