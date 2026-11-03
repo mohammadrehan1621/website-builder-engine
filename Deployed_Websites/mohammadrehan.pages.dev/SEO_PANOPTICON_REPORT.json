@@ -2,7 +2,7 @@
   "timestamp": "2026-11-03",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
   "total_html_files": 12,
-  "total_word_count": 9812,
+  "total_word_count": 9820,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
@@ -13,23 +13,18 @@
       "count": 1,
       "density_pct": 0.01
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 22,
-      "density_pct": 0.22
-    },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 3,
-      "density_pct": 0.03
-    },
     "air-gapped": {
       "keyword": "air-gapped",
       "count": 42,
       "density_pct": 0.43
     },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "sovereign computing": {
+      "keyword": "sovereign computing",
       "count": 3,
       "density_pct": 0.03
     },
@@ -38,40 +33,45 @@
       "count": 6,
       "density_pct": 0.06
     },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 18,
-      "density_pct": 0.18
-    },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 1,
-      "density_pct": 0.01
-    },
     "documentshield": {
       "keyword": "documentshield",
       "count": 21,
       "density_pct": 0.21
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 60,
+      "density_pct": 0.61
     },
     "pos software": {
       "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 61,
-      "density_pct": 0.62
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 13,
+      "density_pct": 0.13
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.03
     },
     "desktop software": {
       "keyword": "desktop software",
       "count": 8,
       "density_pct": 0.08
     },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 13,
-      "density_pct": 0.13
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 20,
+      "density_pct": 0.2
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 18,
+      "density_pct": 0.18
     },
     "offline billing": {
       "keyword": "offline billing",
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 659895
+  "execution_micros": 25071
 }

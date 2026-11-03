@@ -7,7 +7,7 @@ User-agent: *
 Allow: /
 
 # Sitemap Index Declaration
-Sitemap: https://mohammadrehan.pages.dev/sitemap.xml
+Sitemap: https://rehanquantlab.com/sitemap.xml
 
 # Friendly Bot Optimizations
 User-agent: Googlebot
