@@ -51,6 +51,9 @@ fn main() {
         "new-client" | "new" | "wizard" => {
             run_client_wizard(&args);
         }
+        "receptionist" | "desk" | "concierge" | "ai" => {
+            run_receptionist_cli(&args);
+        }
         "pitch" | "sales" | "script" => {
             run_pitch_generator(&args);
         }
@@ -1317,6 +1320,82 @@ fn run_google_indexing(args: &[String]) {
         }
         Err(e) => {
             println!("\x1b[1;31m❌ Search broadcast failed: {}\x1b[0m\n", e);
+        }
+    }
+}
+
+fn run_receptionist_cli(args: &[String]) {
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🤖 PHOENIX AUTONOMOUS EDGE RECEPTIONIST & UTR VERIFIER\x1b[0m");
+    println!("   \x1b[1;34m• 24/7 Zero-Database Clinical Concierge • Sub-10ms Edge AI\x1b[0m");
+    println!("   \x1b[1;34m• Strict Grounding Invariant • Direct Bank UPI Stamping\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    let parse_flag = |prefix: &str| -> Option<String> {
+        args.iter().find(|a| a.starts_with(prefix)).map(|a| a.trim_start_matches(prefix).to_string())
+    };
+
+    let slug = parse_flag("--slug=").unwrap_or_else(|| {
+        args.get(2).cloned().unwrap_or_else(|| "verma-dental-care-patna".to_string())
+    });
+
+    let message = parse_flag("--msg=").or_else(|| parse_flag("--message=")).unwrap_or_else(|| {
+        args.get(3).cloned().unwrap_or_else(|| "Hi, how much is the laser dentistry consultation fee?".to_string())
+    });
+
+    let patient_name = parse_flag("--name=").unwrap_or_else(|| "Patient".to_string());
+    let phone = parse_flag("--phone=").unwrap_or_default();
+
+    println!("   \x1b[1;33m📍 Clinic Slug:   {}\x1b[0m", slug);
+    println!("   \x1b[1;33m👤 Patient:       {}\x1b[0m", patient_name);
+    println!("   \x1b[1;36m💬 Incoming Msg:  \"{}\"\x1b[0m\n", message);
+    println!("   \x1b[1;35m⚡ Dispatching to Edge Receptionist (https://mohammadrehan.pages.dev/api/receptionist)...\x1b[0m");
+
+    let t0 = Instant::now();
+    let body = serde_json::json!({
+        "slug": slug,
+        "incoming_message": message,
+        "patient_name": patient_name,
+        "patient_phone": phone
+    });
+
+    let client = std::process::Command::new("curl")
+        .args([
+            "-s",
+            "-X", "POST",
+            "https://mohammadrehan.pages.dev/api/receptionist",
+            "-H", "Content-Type: application/json",
+            "-d", &body.to_string(),
+        ])
+        .output();
+
+    let elapsed = t0.elapsed();
+
+    match client {
+        Ok(out) => {
+            let resp_str = String::from_utf8_lossy(&out.stdout);
+            if let Ok(v) = serde_json::from_str::<serde_json::Value>(&resp_str) {
+                let reply = v["reply_text"].as_str().unwrap_or("No reply");
+                let action = v["action_taken"].as_str().unwrap_or("UNKNOWN");
+                let token = v["opd_token"].as_str().unwrap_or("None");
+                let sha256 = v["sha256"].as_str().unwrap_or("Unknown");
+                let edge_node = v["edge_node"].as_str().unwrap_or("ANYCAST");
+
+                println!("\x1b[1;32m────────────────────────────────────────────────────────────────────\x1b[0m");
+                println!("\x1b[1;32m🤖 RECEPTIONIST EDGE RESPONSE ({} | {:.2?} | Node: {}):\x1b[0m", action, elapsed, edge_node);
+                println!("\x1b[1;32m────────────────────────────────────────────────────────────────────\x1b[0m");
+                println!("{}", reply);
+                println!("\x1b[1;32m────────────────────────────────────────────────────────────────────\x1b[0m");
+                println!("   • Action:          {}", action);
+                println!("   • OPD Token:       {}", token);
+                println!("   • SHA-256 Seal:    {}", sha256);
+                println!("   • Suggested:       {:?}\n", v["suggested_actions"]);
+            } else {
+                println!("   \x1b[1;31m⚠️ Raw Edge Output:\x1b[0m {}", resp_str);
+            }
+        }
+        Err(e) => {
+            println!("\x1b[1;31m❌ Failed to reach receptionist: {}\x1b[0m\n", e);
         }
     }
 }
