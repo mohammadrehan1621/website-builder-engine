@@ -48,6 +48,13 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <meta name="twitter:title" content="Mohammad Rehan | Software Architect &amp; Tech Lead" />
 <meta name="twitter:description" content="Founder & Systems Architect at Rehan Quant Lab. Creator of RQL DocumentShield™, RQL WhisperVault™, and bare-metal high-throughput distributed systems." />
 <meta name="twitter:image" content="https://rehanquantlab.com/og_preview.png" />
+<!-- Sub-16ms Edge Preconnect & DNS Pre-fetch -->
+<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -79,8 +86,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
         }
 
     </script>
-<!-- Lucide Icons -->
-<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Lucide Icons (Deferred for Zero Render Blocking) -->
+<script src="https://unpkg.com/lucide@latest" defer></script>
 <style>
 
         /* Custom Slim Scrollbar & Minimalist aesthetics */
@@ -270,18 +277,6 @@ img, svg, video, canvas, audio, iframe, embed, object {
             "price": "79.00",
             "priceCurrency": "USD",
             "url": "https://quantify17.gumroad.com/l/rql-qrstudio"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "SoftwareApplication",
-              "name": "RQL PortVault™",
-              "operatingSystem": "Windows 10, Windows 11",
-              "applicationCategory": "SecurityApplication"
-            },
-            "price": "59.00",
-            "priceCurrency": "USD",
-            "url": "https://quantify17.gumroad.com/l/rql-portvault"
           }
         ]
       }
@@ -289,26 +284,17 @@ img, svg, video, canvas, audio, iframe, embed, object {
   ]
 }
 </script>
-<script src="phoenix_sentinel.js"></script>
-<!-- Rust WASM Engine, Three.js, GSAP & Confetti -->
-<script src="rql_wasm.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
-
-<!-- Gumroad Single Checkout Engine -->
-<script src="https://gumroad.com/js/gumroad.js"></script>
-
-<!-- React 18 + ReactDOM UMD & Zero-Lag Live Motion Engine -->
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="react_live_engine.js" defer></script>
+<script src="phoenix_sentinel.js" defer></script>
+<!-- Native Silicon Scripts (100% Defer, Zero Render-Blocking) -->
+<script src="rql_wasm.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js" defer></script>
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
 <script src="lively_motion.js" defer></script>
+<script src="rql_seo_engine.js" defer></script>
 
     <link rel="preconnect" href="https://quantify17.gumroad.com" crossorigin>
     <link rel="dns-prefetch" href="https://quantify17.gumroad.com">
     <link rel="preconnect" href="https://assets.gumroad.com" crossorigin>
-  <script src="rql_seo_engine.js" defer></script>
 
 <link rel="me" href="https://github.com/rehanquantlab" />
 <link rel="me" href="https://www.linkedin.com/in/mohammad-rehan-tech/" />
@@ -325,7 +311,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
             <span id="ticker-label" class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ NEW RELEASES:</span>
             <span id="ticker-content" class="text-slate-200 text-xs truncate transition-opacity duration-300">
-                <strong>8 Sovereign Commercial Suites Live:</strong> PortVault&trade;, QRStudio&trade;, HashCheck&trade;, Conduit&trade;, DocumentShield&trade;, WhisperVault&trade;, Retail POS&trade; &amp; StoreChain&trade; (<span class="text-emerald-400 font-bold">From $39 USD</span>)
+                <strong>7 Sovereign Commercial Suites Live:</strong> QRStudio&trade;, HashCheck&trade;, Conduit&trade;, DocumentShield&trade;, WhisperVault&trade;, Retail POS&trade; &amp; StoreChain&trade; (<span class="text-emerald-400 font-bold">From $39 USD</span>)
             </span>
         </div>
         <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
@@ -375,25 +361,32 @@ We value your privacy. 256-Bit SSL encrypted session with zero tracking cookies 
 </a>
 
 <!-- Clean, Spacious Desktop Navigation (Zero Bloat, Zero Maxed-out spacing) -->
-<nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap">
+<nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs xl:text-sm whitespace-nowrap">
 <a class="text-slate-900 font-semibold transition py-1" href="index.html">Home</a>
-
-<!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 hover:text-rose-900 font-bold transition shadow-2xs group/store" href="store.html" title="8 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
-<span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-<span>Commercial Suites</span>
-<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">8</span></a>
-
-<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-50 text-cyan-800 border border-cyan-200 hover:bg-cyan-100 font-bold text-xs transition shadow-2xs" href="auditor/" title="Forensic Website Speed &amp; 3D Migration Studio">
-<span class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span>
-<span>Speed Auditor</span>
-</a>
-<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 font-bold text-xs transition shadow-2xs" href="builder/" title="1-Click Client Website Studio &amp; WhatsApp Pitch Machine">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-<span>Client Studio</span>
-</a>
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a>
+
+<!-- Sovereign Commercial Suites (Sleek Slate Pill with Live Count) -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-medium text-xs transition shadow-2xs group" href="store.html" title="7 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+<span>Commercial Suites</span>
+<span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">7</span></a>
+
+<!-- Speed Auditor Tab -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-medium text-xs transition shadow-2xs" href="auditor/" title="Forensic Website Speed &amp; 3D Migration Studio">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+<span>Speed Auditor</span>
+<span class="text-[10px] text-cyan-700 font-mono font-bold">16ms</span>
+</a>
+
+<!-- Client Studio Tab -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-medium text-xs transition shadow-2xs" href="builder/" title="1-Click Client Website Studio &amp; WhatsApp Pitch Machine">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span>Client Studio</span>
+<span class="text-[10px] text-emerald-700 font-mono font-bold">1-Click</span>
+</a>
+
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="research/">Research</a>
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a>
 </nav>
 
@@ -418,23 +411,24 @@ We value your privacy. 256-Bit SSL encrypted session with zero tracking cookies 
 </div>
 
 <!-- Mobile Menu Dropdown -->
-<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
+<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2 shadow-xl" id="mobile-menu">
 <a class="block py-2 px-3 rounded-lg bg-slate-100 text-slate-900 font-semibold text-sm" href="index.html">Home</a>
-<a class="block py-2 px-3 rounded-lg bg-rose-50 text-rose-700 font-bold text-sm flex items-center justify-between" href="store.html">
-<span>Commercial Suites (8 Flagships)</span>
-<span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="projects.html">Projects &amp; Systems</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="experience.html">Professional Experience</a>
+<a class="block py-2 px-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 font-medium text-sm flex items-center justify-between" href="store.html">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>Commercial Suites</span>
+<span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">7 Flagships</span>
 </a>
-<a class="block py-2 px-3 rounded-lg bg-cyan-50 text-cyan-800 font-bold text-sm flex items-center justify-between" href="auditor/">
-<span>🏎️ Forensic Speed Auditor</span>
-<span class="bg-cyan-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">16ms Live</span>
+<a class="block py-2 px-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 font-medium text-sm flex items-center justify-between" href="auditor/">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span>Forensic Speed Auditor</span>
+<span class="text-cyan-700 text-[10px] font-mono font-bold">16ms Sub-Silicon</span>
 </a>
-<a class="block py-2 px-3 rounded-lg bg-emerald-50 text-emerald-800 font-bold text-sm flex items-center justify-between" href="builder/">
-<span>⚡ Visual Client Studio</span>
-<span class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">1-Click</span>
+<a class="block py-2 px-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 font-medium text-sm flex items-center justify-between" href="builder/">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Sovereign Client Studio</span>
+<span class="text-emerald-700 text-[10px] font-mono font-bold">1-Click AirDrop</span>
 </a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="experience.html">Experience</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="contact.html">Contact</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="research/">Research &amp; Engineering Codex</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="contact.html">Contact &amp; Hire</a>
 
 <div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
 <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-slate-900 text-white text-xs font-bold text-center">
@@ -597,7 +591,7 @@ Resume (PDF)
       <div class="space-y-3 max-w-3xl">
         <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/20 border border-rose-400/40 text-rose-200 text-xs font-mono font-bold tracking-wider uppercase">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>8 Flagship Commercial Suites &bull; Instant Gumroad Delivery</span>
+          <span>7 Flagship Commercial Suites &bull; Instant Gumroad Delivery</span>
         </div>
 
         <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white tracking-tight leading-tight">
@@ -605,7 +599,7 @@ Resume (PDF)
         </h2>
 
         <p class="text-xs sm:text-sm text-rose-100/90 leading-relaxed font-normal">
-          8 pure-rust sovereign computing suites engineered for permanent vector QR &amp; barcode design, offline cryptographic hash verification, internet channel bonding, forensic PDF redaction, AI transcription, single-store retail POS, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
+          7 pure-rust sovereign computing suites engineered for permanent vector QR &amp; barcode design, offline cryptographic hash verification, internet channel bonding, forensic PDF redaction, AI transcription, single-store retail POS, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
         </p>
 
         <!-- 4 Stats in Deep Red Chrome Style -->
@@ -616,7 +610,7 @@ Resume (PDF)
           <span>&bull;</span>
           <span class="flex items-center gap-1.5"><strong class="text-amber-400">&#8377;0 / Mo</strong> Cloud Rent</span>
           <span>&bull;</span>
-          <span class="flex items-center gap-1.5"><strong class="text-white">8 Flagships</strong> Live</span>
+          <span class="flex items-center gap-1.5"><strong class="text-white">7 Flagships</strong> Live</span>
         </div>
       </div>
 
@@ -625,7 +619,7 @@ Resume (PDF)
           href="store.html"
           class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs font-mono tracking-wider shadow-lg transition hover:scale-105 flex items-center justify-center gap-2 uppercase"
         >
-          <span>Explore 8 Flagship Suites</span>
+          <span>Explore 7 Flagship Suites</span>
           <span>➔</span>
         </a>
 
@@ -912,13 +906,13 @@ Resume (PDF)
       </div>
       <div class="flex items-center gap-2 shrink-0">
         <a class="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-900 bg-white border border-slate-300 hover:bg-slate-100 px-4 py-2.5 rounded-xl transition shadow-2xs" href="store.html">
-          <span>Explore 8 Flagship Suites</span>
+          <span>Explore 7 Flagship Suites</span>
           <span class="text-rose-600 font-bold">&rarr;</span>
         </a>
       </div>
     </div>
 
-    <!-- 8 Flagship Master Bundles (Clean 3-Column Responsive Grid) -->
+    <!-- 7 Flagship Master Bundles (Clean 3-Column Responsive Grid) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- MASTER SUITE 1: RQL DocumentShield™ Forensic Redaction OS -->
@@ -1307,61 +1301,6 @@ Resume (PDF)
         </div>
 
 
-        <!-- MASTER SUITE 8: RQL PortVault™ (Offline TCP/UDP Socket & Port Inspector) -->
-        <div class="bg-gradient-to-b from-white to-cyan-50/20 border-2 border-cyan-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
-          <div class="absolute -top-3 left-6 bg-gradient-to-r from-cyan-700 to-teal-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-            🌐 NETWORK SOCKET INSPECTOR
-          </div>
-          <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-              <img src="PortVault_Cover_1080p.png" alt="RQL PortVault™ Commercial Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-              <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-                PortVault v1.0
-              </div>
-              <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-                Win32 IP Helper FFI
-              </div>
-            </div>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
-                <span class="text-cyan-700 font-bold truncate">RQL_PortVault_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">100% Offline Pure Rust</span>
-              </div>
-              <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-cyan-600 transition">
-                RQL PortVault™
-              </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Sovereign Network Port &amp; Active Socket Panopticon: Monitors all active TCP/UDP listening ports and sockets locally, binds connections directly to process PIDs, and terminates rogue listeners in 1 click.
-              </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
-                <div>✓ Sub-10ms Win32 Kernel Socket &amp; Port Enumeration</div>
-                <div>✓ Instant Process PID-to-Socket Attribution &amp; 1-Click Process Kill</div>
-                <div>✓ 100% Air-Gapped Physical Workstation Silicon (Zero Cloud Telemetry)</div>
-              </div>
-            </div>
-          </div>
-          <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
-            <div class="p-3 rounded-2xl bg-cyan-50/70 border border-cyan-200 flex items-center justify-between">
-              <div>
-                <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-                <div class="text-sm font-extrabold text-slate-900 font-mono">$59 <span class="text-xs text-slate-500 font-normal">/ ₹4,850</span></div>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
-                Pay Once, Own Forever
-              </span>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="https://quantify17.gumroad.com/l/rql-portvault" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-                <span>Buy Setup</span>
-                <span>↗</span>
-              </a>
-              <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20PortVault%E2%84%A2%20Commercial%20License%20($59%20USD%20/%20%E2%82%B94,850).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
-                <span>WhatsApp VIP</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
     </div>
 
     <!-- Clean Bottom Directory Banner -->
@@ -1384,23 +1323,18 @@ Resume (PDF)
 
   </div>
 </section>
-<!-- CALL TO ACTION BANNER (SWISS LIGHT HIGH-PERFORMANCE STYLE) -->
-<section id="contact-cta" class="py-20 sm:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-t border-b border-slate-200/90 text-slate-900 scroll-mt-24 relative overflow-hidden">
+<!-- CALL TO ACTION BANNER -->
+<section id="contact-cta" class="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider">
-<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-<span>Direct Founder Engineering Desk</span>
-</div>
-<h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">Ready to collaborate or discuss a project?</h2>
-<p class="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-Whether you need a sub-12ms business website, offline retail billing software, or sovereign computational architecture, let's connect directly.
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-heading">Ready to collaborate or deploy sovereign systems?</h2>
+<p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+Whether you require sub-12ms Anycast web architectures, air-gapped desktop computing suites, or custom quantitative systems engineering, let's connect.
 </p>
 <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
-<a class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-3.5 rounded-xl transition text-sm shadow-md hover:shadow-lg flex items-center justify-center gap-2" href="contact.html">
-<span>Contact Mohammad Rehan</span>
-<span class="text-emerald-400 font-bold">&rarr;</span>
+<a class="bg-white hover:bg-slate-100 text-slate-900 font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm" href="contact.html">
+Contact Mohammad Rehan
 </a>
-<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl transition text-sm shadow-md hover:shadow-lg flex items-center justify-center gap-2" href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer">
+<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm flex items-center gap-2" href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20am%20interested%20in%20your%20services." rel="noopener noreferrer" target="_blank">
 <i class="w-4 h-4" data-lucide="message-circle"></i>
 <span>Chat on WhatsApp</span>
 </a>
@@ -1409,49 +1343,75 @@ Whether you need a sub-12ms business website, offline retail billing software, o
 </section>
 </main>
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
-<div class="space-y-3 md:col-span-2">
-<div class="flex items-center gap-2.5">
-<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
-<span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab™</span></span>
-</div>
-<p class="text-xs text-slate-500 max-w-sm leading-relaxed">
-    Founder &amp; Lead Systems Architect. Combining real-world leadership with mission-critical computational &amp; distributed quantitative systems engineering.
-</p>
+<footer class="bg-white border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <!-- Col 1: Identity & Architecture -->
+  <div class="space-y-3.5">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-700/40">
+      <div class="leading-tight">
+        <span class="font-bold text-slate-900 text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-indigo-600">Rehan Quant Lab™</span>
+      </div>
+    </div>
+    <p class="text-xs text-slate-500 leading-relaxed">
+      Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
+    </p>
+    <div class="pt-1 text-xs text-slate-500 space-y-1">
+      <div><span class="font-semibold text-slate-700">HQ:</span> Patna, Bihar 800006</div>
+      <div><span class="font-semibold text-slate-700">Email:</span> <a class="text-indigo-600 font-medium hover:underline" href="mailto:founder@rehanquantlab.com">founder@rehanquantlab.com</a></div>
+      <div class="flex items-center gap-1.5 text-emerald-700 font-semibold pt-0.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        <span>Verified Institutional Architect</span>
+      </div>
+    </div>
+  </div>
 
-</div>
-<div>
-<h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
-<ul class="space-y-2 text-xs">
-<li><a class="hover:text-slate-900 transition text-slate-600" href="index.html">Home</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="projects.html">Projects &amp; Systems</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="experience.html">Professional Experience</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="store.html">Commercial Software (8 Flagships) 🛍️</a></li>
-<li><a class="hover:text-cyan-700 transition text-slate-600 font-medium flex items-center justify-between" href="auditor/"><span>⚡ Forensic Speed Auditor</span><span class="text-[10px] font-mono text-cyan-600 font-bold">16ms</span></a></li>
-<li><a class="hover:text-emerald-700 transition text-slate-600 font-medium flex items-center justify-between" href="builder/"><span>🛠️ Sovereign Client Studio</span><span class="text-[10px] font-mono text-emerald-600 font-bold">1-Click</span></a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="contact.html">Contact &amp; Hire</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="https://quantify17.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer">Affiliate Program (30% Commission) ↗</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer">Research Publication (Substack) ↗</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="demo.html">Interactive Demos 🚀</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="changelog.html">System Changelog &amp; Releases ⚡</a></li>
-<li><a class="hover:text-slate-900 transition text-slate-600" href="legal.html">Master SaaS &amp; Licensing Terms ⚖️</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Official Channels</h4>
-<ul class="space-y-2 text-xs">
-<li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
-<li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer"><i class="w-3.5 h-3.5 text-orange-600" data-lucide="book-open"></i> <span>Substack Publication</span></a></li>
-<li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" href="https://quantify17.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer"><span class="text-xs">🤝</span> <span>Affiliate Program (Earn 30%)</span></a></li>
-<li><span class="text-slate-500">Headquarters:</span> Patna, Bihar 800006</li>
-<li><span class="text-slate-500">Email:</span> <a class="text-indigo-600 font-medium hover:underline" href="mailto:founder@rehanquantlab.com">founder@rehanquantlab.com</a></li>
-<li><a class="text-emerald-600 font-semibold hover:underline" href="https://wa.me/917091518548" rel="noopener noreferrer" target="_blank">WhatsApp Direct →</a></li>
-</ul>
-</div>
+  <!-- Col 2: Sovereign Suites (Commercial) -->
+  <div>
+    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+      <span>Commercial Suites</span>
+      <span class="bg-rose-100 text-rose-700 text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">7</span>
+    </h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-documentshield"><span>RQL DocumentShield™</span><span class="text-slate-400 font-mono">$179</span></a></li>
+      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-whispervault"><span>RQL WhisperVault™</span><span class="text-slate-400 font-mono">$149</span></a></li>
+      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-retailpos"><span>RQL Sovereign Retail POS™</span><span class="text-slate-400 font-mono">$169</span></a></li>
+      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-storechain"><span>RQL StoreChain™ Enterprise</span><span class="text-slate-400 font-mono">$299</span></a></li>
+      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-conduit"><span>RQL Conduit™</span><span class="text-slate-400 font-mono">$129</span></a></li>
+      <li><a class="text-rose-600 font-semibold hover:underline flex items-center gap-1 pt-1" href="store.html">Explore All 7 Suites →</a></li>
+    </ul>
+  </div>
+
+  <!-- Col 3: Platforms & R&D Codex -->
+  <div>
+    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="hover:text-slate-950 transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="hover:text-slate-950 transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-cyan-700 hover:text-cyan-900 font-medium transition flex items-center gap-1.5" href="auditor/"><span>Forensic Speed Auditor</span><span class="text-[10px] font-mono bg-cyan-50 px-1 rounded border border-cyan-200">16ms</span></a></li>
+      <li><a class="text-emerald-700 hover:text-emerald-900 font-medium transition flex items-center gap-1.5" href="builder/"><span>Sovereign Client Studio</span><span class="text-[10px] font-mono bg-emerald-50 px-1 rounded border border-emerald-200">1-Click</span></a></li>
+      <li><a class="text-indigo-600 hover:text-indigo-800 font-medium transition flex items-center gap-1" href="research/"><span>Research Codex (Sub-12ms Rust)</span><span class="text-[10px]">📖</span></a></li>
+      <li><a class="hover:text-slate-950 transition" href="demo.html">Interactive Systems Demos</a></li>
+      <li><a class="hover:text-slate-950 transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+    </ul>
+  </div>
+
+  <!-- Col 4: Governance & Connect -->
+  <div>
+    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="hover:text-slate-950 transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="hover:text-slate-950 transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing ↗</a></li>
+      <li><a class="text-slate-700 hover:text-slate-950 transition flex items-center gap-1.5" href="legal.html"><span>Master SaaS &amp; Licensing Terms</span> ⚖️</a></li>
+      <li><a class="text-violet-600 hover:text-violet-800 font-semibold transition flex items-center gap-1" href="https://quantify17.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer"><span>Affiliate Program (Earn 30%)</span> ↗</a></li>
+      <li><a class="hover:text-slate-950 transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
+      <li><a class="text-emerald-600 font-semibold hover:underline flex items-center gap-1" href="https://wa.me/917091518548" target="_blank" rel="noopener noreferrer"><span>WhatsApp Direct Channel →</span></a></li>
+    </ul>
+  </div>
 </div>
 
-<!-- LEGAL & REGULATORY COMPLIANCE SHIELD -->
+<!-- SOFTWARE ENGINEERING & TECHNOLOGY LICENSING STATEMENT -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
 <div class="bg-slate-50 border border-slate-200/90 rounded-2xl p-5 text-slate-600 text-xs space-y-2">
     <div class="flex items-center gap-2 font-bold text-slate-900 uppercase tracking-wider text-[11px]">
@@ -1496,9 +1456,15 @@ Whether you need a sub-12ms business website, offline retail billing software, o
 <script>
 
         // Initialize Lucide Icons & Cookie Consent Persistence
+        function initIcons() {
+            if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                window.lucide.createIcons();
+            }
+        }
         document.addEventListener('DOMContentLoaded', () => {
-            if (window.lucide) lucide.createIcons();
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+            initIcons();
+            const yearEl = document.getElementById('current-year');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
 
             // Check if cookie consent was already granted
             if (localStorage.getItem('cookie_consent_accepted') === 'true') {
@@ -1506,6 +1472,7 @@ Whether you need a sub-12ms business website, offline retail billing software, o
                 if (banner) banner.remove();
             }
         });
+        window.addEventListener('load', initIcons);
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');

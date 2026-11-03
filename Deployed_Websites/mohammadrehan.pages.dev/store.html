@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -209,27 +209,6 @@ tailwind.config = {
         "ratingValue": "4.99",
         "reviewCount": "92"
       }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "position": 8,
-      "name": "RQL PortVault™ (Offline TCP/UDP Socket & Port Inspector)",
-      "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-      "applicationCategory": "SecurityApplication",
-      "description": "100% Offline TCP/UDP Socket & Port Inspector: Sub-10ms Win32 IP Helper enumeration, real-time PID attribution, and rogue socket termination.",
-      "offers": {
-        "@type": "Offer",
-        "price": "59.00",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2027-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://quantify17.gumroad.com/l/rql-portvault"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.99",
-        "reviewCount": "88"
-      }
     }
   ]
 }
@@ -294,17 +273,32 @@ tailwind.config = {
 </a>
 
 <!-- Clean, Spacious Desktop Navigation (Zero Bloat, Zero Maxed-out spacing) -->
-<nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap">
+<nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs xl:text-sm whitespace-nowrap">
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
-
-<!-- Dedicated Commercial Suites Tab (Glowing Pill with Live Count) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white font-bold transition shadow-xs group/store" href="store.html" title="8 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
-<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-<span>Commercial Suites</span>
-<span class="bg-rose-700 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">8</span></a>
-
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a>
+
+<!-- Sovereign Commercial Suites (Active) -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900 text-white font-medium text-xs transition shadow-2xs group" href="store.html" title="7 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+<span>Commercial Suites</span>
+<span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">7</span></a>
+
+<!-- Speed Auditor Tab -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-medium text-xs transition shadow-2xs" href="auditor/" title="Forensic Website Speed &amp; 3D Migration Studio">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+<span>Speed Auditor</span>
+<span class="text-[10px] text-cyan-700 font-mono font-bold">16ms</span>
+</a>
+
+<!-- Client Studio Tab -->
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-medium text-xs transition shadow-2xs" href="builder/" title="1-Click Client Website Studio &amp; WhatsApp Pitch Machine">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span>Client Studio</span>
+<span class="text-[10px] text-emerald-700 font-mono font-bold">1-Click</span>
+</a>
+
+<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="research/">Research</a>
 <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a>
 </nav>
 
@@ -329,15 +323,24 @@ tailwind.config = {
 </div>
 
 <!-- Mobile Menu Dropdown -->
-<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2.5 shadow-xl" id="mobile-menu">
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="index.html">Home</a>
-<a class="block py-2 px-3 rounded-lg bg-slate-900 text-white font-bold text-sm flex items-center justify-between" href="store.html">
-<span>Commercial Suites (8 Flagships)</span>
-<span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded-full font-mono">Instant Gumroad</span>
+<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2 shadow-xl" id="mobile-menu">
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="index.html">Home</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="projects.html">Projects &amp; Systems</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="experience.html">Professional Experience</a>
+<a class="block py-2 px-3 rounded-lg bg-slate-900 text-white font-medium text-sm flex items-center justify-between" href="store.html">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>Commercial Suites</span>
+<span class="bg-rose-500 text-white text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">7 Flagships</span>
 </a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="projects.html">Projects</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="experience.html">Experience</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-600 font-medium text-sm" href="contact.html">Contact</a>
+<a class="block py-2 px-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 font-medium text-sm flex items-center justify-between" href="auditor/">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-500"></span>Forensic Speed Auditor</span>
+<span class="text-cyan-700 text-[10px] font-mono font-bold">16ms Sub-Silicon</span>
+</a>
+<a class="block py-2 px-3 rounded-lg bg-slate-50 border border-slate-200 text-slate-800 font-medium text-sm flex items-center justify-between" href="builder/">
+<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Sovereign Client Studio</span>
+<span class="text-emerald-700 text-[10px] font-mono font-bold">1-Click AirDrop</span>
+</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="research/">Research &amp; Engineering Codex</a>
+<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="contact.html">Contact &amp; Hire</a>
 
 <div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
 <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-slate-900 text-white text-xs font-bold text-center">
@@ -425,7 +428,7 @@ Resume (PDF)
             <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="package"></i>
             <span>Digital Releases</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">8 Flagships</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">7 Flagships</div>
           <div class="text-[11px] text-slate-500 font-mono mt-0.5">Live on Gumroad</div>
         </div>
 
@@ -450,7 +453,7 @@ Resume (PDF)
       </p>
     </div>
 
-    <!-- 8 Sovereign Product Cards -->
+    <!-- 7 Sovereign Product Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6 mb-14">
 
       <!-- Product Card 1: RQL DocumentShield™ -->
@@ -472,6 +475,9 @@ Resume (PDF)
             <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
               <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+            </div>
+                        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
               RQL DocumentShield™
@@ -536,6 +542,9 @@ Resume (PDF)
               <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
             </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL WhisperVault™
             </h3>
@@ -593,6 +602,9 @@ Resume (PDF)
               <span class="text-amber-700 font-bold truncate">RQL_RetailPOS_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped POS</span>
             </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-amber-600 transition">
               RQL Sovereign Retail POS™
             </h3>
@@ -649,6 +661,9 @@ Resume (PDF)
               <span class="text-orange-700 font-bold truncate">RQL_StoreChain_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">Air-Gapped Network</span>
             </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-orange-600 transition">
               RQL StoreChain™
             </h3>
@@ -702,6 +717,9 @@ Resume (PDF)
             <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
               <span class="text-cyan-700 font-bold truncate">RQL_Conduit_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">Air-Gapped Bonding</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-cyan-600 transition">
               RQL Conduit™
@@ -758,6 +776,9 @@ Resume (PDF)
               <span class="text-sky-700 font-bold truncate">RQL_HashCheck_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">100% Offline Pure Rust</span>
             </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL HashCheck™
             </h3>
@@ -813,6 +834,9 @@ Resume (PDF)
               <span class="text-violet-700 font-bold truncate">RQL_QRStudio_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Infinite Vector SVG</span>
             </div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
+              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-violet-600 transition">
               RQL QRStudio™
             </h3>
@@ -854,98 +878,111 @@ Resume (PDF)
             </a>
           </div>
         </div>
-      </div>
+      </div></div>
+    <!-- /7 Sovereign Product Cards Grid -->
 
-      <!-- Product Card 8: RQL PortVault™ -->
-      <div class="bg-white border-2 border-cyan-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group store-product-card" data-category="security" data-name="rql portvault socket inspector network port monitor">
-        <div class="absolute -top-3 left-6 bg-gradient-to-r from-cyan-700 to-teal-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-          🌐 NETWORK SOCKET INSPECTOR
+    <!-- 🛡️ 14-DAY UNCONDITIONAL SOVEREIGN GUARANTEE -->
+    <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-emerald-950/10 border-2 border-emerald-500/40 text-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-600 flex items-center justify-center shrink-0">
+          <i class="w-6 h-6" data-lucide="shield-check"></i>
         </div>
-
-        <div>
-          <!-- Thumbnail with subtle hover zoom -->
-          <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-            <img
-              src="PortVault_Cover_1080p.png"
-              alt="RQL PortVault™ Commercial Setup"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-            <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-              PortVault v1.0
-            </div>
-            <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-              Win32 IP Helper FFI
-            </div>
+        <div class="space-y-1 text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-800 text-[10px] font-mono font-extrabold uppercase tracking-wider">
+            🛡️ 100% Zero-Risk Protection
           </div>
-
-          <!-- Product Meta -->
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
-              <span class="text-cyan-700 font-bold truncate">RQL_PortVault_Master_Setup.exe</span>
-              <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">100% Offline Pure Rust</span>
-            </div>
-
-            <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-cyan-600 transition">
-              RQL PortVault™
-            </h3>
-
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Sovereign Network Port &amp; Active Socket Panopticon: Monitors all active TCP/UDP listening ports (0..65535) and sockets locally, binds connections directly to process PIDs, and terminates rogue listeners in 1 click.
-            </p>
-
-            <!-- Key Feature Bullet Points -->
-            <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
-              <div>✓ Sub-10ms Win32 Kernel Socket &amp; Port Enumeration</div>
-              <div>✓ Instant Process PID-to-Socket Attribution &amp; 1-Click Process Kill</div>
-              <div>✓ 100% Air-Gapped Physical Workstation Silicon (Zero Cloud Telemetry)</div>
-            </div>
-            <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs font-mono font-bold flex items-center justify-between">
-              <span>⚡ STRICTLY LIMITED MINT:</span>
-              <span class="text-amber-800 font-extrabold">CAPPED AT 999,999</span>
-            </div>
-            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
-              Batch 1: Founder Pioneer Edition (#000,001 – #001,000). Once sealed, lifetime licenses are locked forever.
-            </p>
-          </div>
-        </div>
-
-        <!-- Pricing & Action -->
-        <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
-          <div class="p-3 rounded-2xl bg-cyan-50/70 border border-cyan-200 flex items-center justify-between">
-            <div>
-              <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-              <div class="text-sm font-extrabold text-slate-900 font-mono">$59 <span class="text-xs text-slate-500 font-normal">/ ₹4,850</span></div>
-            </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
-              Pay Once, Own Forever
-            </span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-2">
-            <a
-              href="https://quantify17.gumroad.com/l/rql-portvault"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102"
-            >
-              <span>Buy Setup</span>
-              <span>↗</span>
-            </a>
-            <a
-              href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20PortVault%E2%84%A2%20Commercial%20License%20($59%20USD%20/%20%E2%82%B94,850).%20Please%20assist%20with%20founder%20onboarding."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102"
-            >
-              <span>WhatsApp VIP</span>
-            </a>
-          </div>
+          <h4 class="text-lg sm:text-xl font-bold font-heading text-slate-900">
+            The 14-Day Unconditional Sovereign Guarantee
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+            Install any RQL workstation engine on your physical machine. If it does not boot in under 1 second, or fails to eliminate your recurring SaaS expenses, email Founder Mohammad Rehan directly at <a href="mailto:rehanquantlab@gmail.com" class="text-emerald-700 underline font-bold font-mono">rehanquantlab@gmail.com</a> within 14 days for an immediate 100% refund. Zero questions asked. You risk nothing.
+          </p>
         </div>
       </div>
-
+      <div class="shrink-0 flex items-center gap-3">
+        <a href="mailto:rehanquantlab@gmail.com?subject=Sovereign%20Guarantee%20Inquiry" class="px-5 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs shadow-md transition hover:scale-105 whitespace-nowrap">
+          Email Founder Direct ↗
+        </a>
+      </div>
     </div>
-    <!-- /8 Sovereign Product Cards Grid -->
+
+    <!-- 📊 3-YEAR CLIENT BALANCE SHEET (SAAS ELIMINATION AUDIT) -->
+    <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 text-white shadow-xl">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-bold">
+            <span>📊 CAPITAL PRESERVATION AUDIT</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold font-heading text-white mt-2">
+            The 3-Year Sovereign Client Balance Sheet
+          </h3>
+          <p class="text-xs text-slate-400 mt-1">
+            Compare recurring monthly corporate cloud rent vs 100% offline pure Rust workstation ownership.
+          </p>
+        </div>
+        <div class="px-4 py-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-right">
+          <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Total 3-Yr Cash Returned to Client</div>
+          <div class="text-xl sm:text-2xl font-black font-mono text-emerald-400">+$3,493.00 USD <span class="text-xs font-normal text-slate-400">(₹2,89,000)</span></div>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto mt-6">
+        <table class="w-full text-left text-xs font-mono">
+          <thead>
+            <tr class="text-slate-400 border-b border-slate-800">
+              <th class="pb-3 font-semibold">RQL Sovereign Titan</th>
+              <th class="pb-3 font-semibold">Corporate SaaS Victim &amp; Rent</th>
+              <th class="pb-3 font-semibold">RQL Sovereign Price</th>
+              <th class="pb-3 font-semibold text-right text-emerald-400">Your 3-Year Net Profit</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr>
+              <td class="py-3 font-bold text-white">01. RQL DocumentShield™</td>
+              <td class="py-3 text-slate-400">Adobe Acrobat Pro ($23.99/mo &bull; $288/yr)</td>
+              <td class="py-3 text-rose-400 font-bold">$179 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$685 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">02. RQL WhisperVault™</td>
+              <td class="py-3 text-slate-400">Otter.ai Pro ($16.99/mo &bull; $204/yr)</td>
+              <td class="py-3 text-violet-400 font-bold">$149 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$463 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">03. RQL RetailPOS™</td>
+              <td class="py-3 text-slate-400">Square Retail Plus ($20.00/mo &bull; $240/yr)</td>
+              <td class="py-3 text-emerald-400 font-bold">$169 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$551 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">04. RQL StoreChain™</td>
+              <td class="py-3 text-slate-400">Cloud Multi-Till SaaS ($35.00/mo &bull; $420/yr)</td>
+              <td class="py-3 text-indigo-400 font-bold">$299 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$961 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">05. RQL Conduit™</td>
+              <td class="py-3 text-slate-400">Speedify Teams ($14.99/mo &bull; $180/yr)</td>
+              <td class="py-3 text-sky-400 font-bold">$129 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$411 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">06. RQL HashCheck™</td>
+              <td class="py-3 text-slate-400">HashTab / Cloud SFV ($5.00/mo &bull; $60/yr)</td>
+              <td class="py-3 text-teal-400 font-bold">$39 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$141 Saved</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold text-white">07. RQL QRStudio™</td>
+              <td class="py-3 text-slate-400">Bitly / QR Tiger Cloud ($9.99/mo &bull; $120/yr)</td>
+              <td class="py-3 text-amber-400 font-bold">$79 Once</td>
+              <td class="py-3 text-right font-bold text-emerald-400">+$281 Saved</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
     <!-- Empty Search State -->
     <div id="store-empty-state" class="hidden text-center py-16 bg-slate-50 rounded-3xl border border-slate-200 p-8 my-8 shadow-xs">
@@ -962,10 +999,10 @@ Resume (PDF)
           <span>👑 ENTERPRISE ALL-IN-ONE BUNDLE</span>
         </div>
         <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
-          Acquire All Eight Sovereign Workstation Flagships Under One Single Enterprise License.
+          Acquire All Seven Sovereign Workstation Flagships Under One Single Enterprise License.
         </h3>
         <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-          Complete commercial bundle for all 8 sovereign desktop applications with unlimited offline machine activations, Ed25519 hardware key generator, full source code access, and direct founder architecture onboarding.
+          Complete commercial bundle for all 7 sovereign desktop applications with unlimited offline machine activations, Ed25519 hardware key generator, full source code access, and direct founder architecture onboarding.
         </p>
       </div>
 
@@ -979,7 +1016,7 @@ Resume (PDF)
           View Full Gumroad Catalog ↗
         </a>
         <a
-          href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20Complete%20Sovereign%20Enterprise%20Master%20Bundle%20(All%208%20Commercial%20Suites)%20for%20my%20organization.%20Please%20assist%20with%20founder%20onboarding."
+          href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20Complete%20Sovereign%20Enterprise%20Master%20Bundle%20(All%207%20Commercial%20Suites)%20for%20my%20organization.%20Please%20assist%20with%20founder%20onboarding."
           target="_blank"
           rel="noopener noreferrer"
           class="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs font-mono border border-slate-700 transition hover:scale-105"
@@ -1005,7 +1042,7 @@ Resume (PDF)
         </p>
         <div class="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-mono text-violet-200">
           <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">✓ 30% Commission Per Sale</span>
-          <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">✓ All 8 Sovereign Suites</span>
+          <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">✓ All 7 Sovereign Suites</span>
           <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">✓ Instant Direct Gumroad Payouts</span>
         </div>
       </div>
