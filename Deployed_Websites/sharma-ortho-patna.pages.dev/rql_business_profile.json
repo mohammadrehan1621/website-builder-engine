@@ -13,6 +13,8 @@
   "working_hours": "Mon - Sat: 09:00 AM - 08:00 PM",
   "theme": "ceramic",
   "slug": "sharma-ortho-patna",
+  "upi_id": "9835028410@okbizaxis",
+  "consultation_fee": 500,
   "services": [
     {
       "name": "Robotic Total Knee Replacement",

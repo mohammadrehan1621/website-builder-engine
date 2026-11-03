@@ -347,23 +347,23 @@ impl WebsiteCompiler {
         // Theme Variables
         let (bg_body, text_main, text_muted, surface_card, border_card, accent_primary, accent_cta) = if is_ceramic {
             (
-                "###f8fafc",      // body bg (Swiss Light Ceramic)
-                "###0f172a",      // text main
-                "###475569",      // text muted
-                "###ffffff",      // card surface
-                "###e2e8f0",      // card border
-                "###0284c7",      // primary brand blue/cyan
-                "###059669"       // CTA green
+                "#f8fafc",      // body bg (Swiss Light Ceramic)
+                "#0f172a",      // text main
+                "#475569",      // text muted
+                "#ffffff",      // card surface
+                "#e2e8f0",      // card border
+                "#0284c7",      // primary brand blue/cyan
+                "#059669"       // CTA green
             )
         } else {
             (
-                "###030712",      // body bg (Cyber Obsidian)
-                "###f8fafc",      // text main
-                "###94a3b8",      // text muted
-                "###0f172a",      // card surface
-                "###1e293b",      // card border
-                "###38bdf8",      // primary brand cyan
-                "###10b981"       // CTA green
+                "#030712",      // body bg (Cyber Obsidian)
+                "#f8fafc",      // text main
+                "#94a3b8",      // text muted
+                "#0f172a",      // card surface
+                "#1e293b",      // card border
+                "#38bdf8",      // primary brand cyan
+                "#10b981"       // CTA green
             )
         };
 
@@ -402,7 +402,7 @@ impl WebsiteCompiler {
                 sibling_links.push_str(" • ");
             }
             sibling_links.push_str(&format!(
-                r###"<a href="##{anchor_id}" class="hover:underline">{name}</a>"###,
+                r###"<a href="#{anchor_id}" class="hover:underline">{name}</a>"###,
                 anchor_id = anchor_id,
                 name = s.name
             ));
@@ -467,6 +467,18 @@ impl WebsiteCompiler {
                 a = faq.answer
             ));
         }
+
+        // Generate Dynamic Treatment Consultation Options
+        let mut treatment_options = String::new();
+        for s in &profile.services {
+            let opt_val = s.name.to_lowercase().replace(' ', "-");
+            treatment_options.push_str(&format!(
+                r#"<option value="{opt_val}">{name}</option>"#,
+                opt_val = opt_val,
+                name = s.name
+            ));
+        }
+        treatment_options.push_str(r#"<option value="general">General Priority Consultation</option>"#);
 
         // Build Schema.org JSON-LD
         let schema_json = Self::generate_schema_json(profile);
@@ -544,10 +556,97 @@ impl WebsiteCompiler {
       line-height: 1.6;
       overflow-x: hidden;
     }}
+    a {{ color: inherit; text-decoration: none; }}
     .container {{ width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }}
     .text-muted {{ color: {text_muted}; }}
     .text-accent {{ color: {accent_primary}; }}
     .border-subtle {{ border-color: {border_card}; }}
+    .border-b {{ border-bottom: 1px solid {border_card}; }}
+    .border-t {{ border-top: 1px solid {border_card}; }}
+    .border-y {{ border-top: 1px solid {border_card}; border-bottom: 1px solid {border_card}; }}
+    .bg-card {{ background-color: {surface_card}; }}
+    
+    /* Layout & Flexbox */
+    .flex {{ display: flex; }}
+    .inline-flex {{ display: inline-flex; }}
+    .flex-col {{ flex-direction: column; }}
+    .flex-row {{ flex-direction: row; }}
+    .items-center {{ align-items: center; }}
+    .justify-between {{ justify-content: space-between; }}
+    .justify-center {{ justify-content: center; }}
+    .gap-1 {{ gap: 0.25rem; }}
+    .gap-2 {{ gap: 0.5rem; }}
+    .gap-4 {{ gap: 1rem; }}
+    .gap-6 {{ gap: 1.5rem; }}
+    .grid {{ display: grid; }}
+    .grid-cols-2 {{ grid-template-columns: repeat(2, 1fr); }}
+
+    /* Sizing & Spacing */
+    .w-full {{ width: 100%; }}
+    .w-2 {{ width: 0.5rem; }}
+    .h-2 {{ height: 0.5rem; }}
+    .max-w-md {{ max-width: 28rem; }}
+    .max-w-xl {{ max-width: 36rem; }}
+    .max-w-2xl {{ max-width: 42rem; }}
+    .max-w-3xl {{ max-width: 48rem; }}
+    .max-w-4xl {{ max-width: 56rem; }}
+    .mx-auto {{ margin-left: auto; margin-right: auto; }}
+    .ml-auto {{ margin-left: auto; }}
+    .py-2 {{ padding-top: 0.5rem; padding-bottom: 0.5rem; }}
+    .py-2\.5 {{ padding-top: 0.625rem; padding-bottom: 0.625rem; }}
+    .py-4 {{ padding-top: 1rem; padding-bottom: 1rem; }}
+    .py-8 {{ padding-top: 2rem; padding-bottom: 2rem; }}
+    .py-12 {{ padding-top: 3rem; padding-bottom: 3rem; }}
+    .py-16 {{ padding-top: 4rem; padding-bottom: 4rem; }}
+    .p-3 {{ padding: 0.75rem; }}
+    .p-4 {{ padding: 1rem; }}
+    .p-5 {{ padding: 1.25rem; }}
+    .p-6 {{ padding: 1.5rem; }}
+    .p-8 {{ padding: 2rem; }}
+    .pt-3 {{ padding-top: 0.75rem; }}
+    .pt-4 {{ padding-top: 1rem; }}
+    .mb-1 {{ margin-bottom: 0.25rem; }}
+    .mb-2 {{ margin-bottom: 0.5rem; }}
+    .mb-3 {{ margin-bottom: 0.75rem; }}
+    .mb-4 {{ margin-bottom: 1rem; }}
+    .mb-6 {{ margin-bottom: 1.5rem; }}
+    .mb-8 {{ margin-bottom: 2rem; }}
+    .mb-10 {{ margin-bottom: 2.5rem; }}
+    .mb-12 {{ margin-bottom: 3rem; }}
+    .mt-0\.5 {{ margin-top: 0.125rem; }}
+    .mt-1 {{ margin-top: 0.25rem; }}
+    .mt-2 {{ margin-top: 0.5rem; }}
+    .mt-3 {{ margin-top: 0.75rem; }}
+    .mt-4 {{ margin-top: 1rem; }}
+
+    /* Typography */
+    .text-xs {{ font-size: 0.75rem; line-height: 1rem; }}
+    .text-sm {{ font-size: 0.875rem; line-height: 1.25rem; }}
+    .text-base {{ font-size: 1rem; line-height: 1.5rem; }}
+    .text-lg {{ font-size: 1.125rem; line-height: 1.75rem; }}
+    .text-xl {{ font-size: 1.25rem; line-height: 1.75rem; }}
+    .text-2xl {{ font-size: 1.5rem; line-height: 2rem; }}
+    .text-3xl {{ font-size: 1.875rem; line-height: 2.25rem; }}
+    .text-4xl {{ font-size: 2.25rem; line-height: 2.5rem; }}
+    .font-medium {{ font-weight: 500; }}
+    .font-bold {{ font-weight: 700; }}
+    .font-extrabold {{ font-weight: 800; }}
+    .font-black {{ font-weight: 900; }}
+    .font-mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }}
+    .tracking-tight {{ letter-spacing: -0.025em; }}
+    .tracking-wider {{ letter-spacing: 0.05em; }}
+    .leading-tight {{ line-height: 1.25; }}
+    .leading-relaxed {{ line-height: 1.625; }}
+    .text-center {{ text-align: center; }}
+    .italic {{ font-style: italic; }}
+    .uppercase {{ text-transform: uppercase; }}
+    .select-none {{ user-select: none; }}
+    .cursor-pointer {{ cursor: pointer; }}
+    .opacity-80 {{ opacity: 0.8; }}
+    .hover\:underline:hover {{ text-decoration: underline; }}
+    .hover\:text-accent:hover {{ color: {accent_primary} !important; }}
+
+    /* Cards & Components */
     .card {{
       background-color: {surface_card};
       border: 1px solid {border_card};
@@ -561,6 +660,7 @@ impl WebsiteCompiler {
     .stat-card {{
       background-color: {surface_card};
       border: 1px solid {border_card};
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     }}
     .tag {{
       display: inline-block;
@@ -579,7 +679,7 @@ impl WebsiteCompiler {
       align-items: center;
       gap: 0.5rem;
       background-color: {accent_cta};
-      color: #ffffff;
+      color: #ffffff !important;
       font-weight: 700;
       font-size: 0.875rem;
       padding: 0.75rem 1.5rem;
@@ -594,7 +694,7 @@ impl WebsiteCompiler {
       align-items: center;
       gap: 0.5rem;
       background-color: {surface_card};
-      color: {text_main};
+      color: {text_main} !important;
       border: 1px solid {border_card};
       font-weight: 700;
       font-size: 0.875rem;
@@ -630,6 +730,34 @@ impl WebsiteCompiler {
     input:focus, textarea:focus, select:focus {{
       border-color: {accent_primary};
     }}
+    .rounded-xl {{ border-radius: 0.75rem; }}
+    .rounded-2xl {{ border-radius: 1rem; }}
+    .rounded-3xl {{ border-radius: 1.5rem; }}
+    .rounded-full {{ border-radius: 9999px; }}
+    .sticky {{ position: sticky; }}
+    .top-0 {{ top: 0; }}
+    .z-40 {{ z-index: 40; }}
+    .hidden {{ display: none; }}
+    .block {{ display: block; }}
+    .inline-block {{ display: inline-block; }}
+
+    /* Responsive */
+    @media (min-width: 640px) {{
+      .sm\:flex {{ display: flex !important; }}
+      .sm\:flex-row {{ flex-direction: row !important; }}
+      .sm\:text-base {{ font-size: 1rem !important; }}
+      .sm\:text-xl {{ font-size: 1.25rem !important; }}
+      .sm\:text-3xl {{ font-size: 1.875rem !important; }}
+      .sm\:text-4xl {{ font-size: 2.25rem !important; }}
+      .sm\:text-5xl {{ font-size: 3rem !important; line-height: 1.15 !important; }}
+      .sm\:py-20 {{ padding-top: 5rem !important; padding-bottom: 5rem !important; }}
+      .sm\:py-24 {{ padding-top: 6rem !important; padding-bottom: 6rem !important; }}
+    }}
+    @media (min-width: 768px) {{
+      .md\:text-6xl {{ font-size: 3.75rem !important; line-height: 1.1 !important; }}
+      .md\:grid-cols-4 {{ grid-template-columns: repeat(4, 1fr) !important; }}
+    }}
+
     /* Sovereign Live-Editor Toolbar */
     #rql-live-editor-bar {{
       position: fixed;
@@ -669,17 +797,17 @@ impl WebsiteCompiler {
   <!-- 2. MAIN NAVIGATION -->
   <nav class="border-b border-subtle sticky top-0 z-40 bg-card" style="background-color: {surface_card};">
     <div class="container py-4 flex justify-between items-center">
-      <a href="##" class="flex items-center gap-2 text-decoration-none">
+      <a href="#" class="flex items-center gap-2 text-decoration-none">
         <span class="font-black text-xl tracking-tight" style="color: {text_main}">{bus_name}</span>
       </a>
       <div class="hidden sm:flex items-center gap-6 text-sm font-medium">
-        <a href="##services" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Treatments</a>
-        <a href="##credentials" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Why Us</a>
-        <a href="##reviews" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Patient Stories</a>
-        <a href="##faqs" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">FAQs</a>
-        <a href="##contact" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Contact</a>
+        <a href="#services" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Treatments</a>
+        <a href="#credentials" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Why Us</a>
+        <a href="#reviews" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Patient Stories</a>
+        <a href="#faqs" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">FAQs</a>
+        <a href="#contact" class="hover:text-accent" style="color: {text_main}; text-decoration: none;">Contact</a>
       </div>
-      <a href="https://wa.me/{wa}?text=Hello%20{bus_name},%20I%20would%20like%20to%20consult%20Dr.%20Sharma." class="btn-primary" aria-label="WhatsApp Appointment Concierge">
+      <a href="https://wa.me/{wa}?text=Hello%20{bus_name},%20I%20would%20like%20to%20consult%20{bus_name}." class="btn-primary" aria-label="WhatsApp Appointment Concierge">
         <span>💬</span> <span>WhatsApp OPD</span>
       </a>
     </div>
@@ -688,9 +816,9 @@ impl WebsiteCompiler {
   <!-- 3. PHYSICAL SEMANTIC RING: BREADCRUMBS BAR -->
   <aside class="py-2.5 text-xs text-muted border-b border-subtle" aria-label="Breadcrumbs">
     <div class="container flex items-center gap-2">
-      <a href="##" class="text-accent hover:underline">Home</a>
+      <a href="#" class="text-accent hover:underline">Home</a>
       <span>/</span>
-      <a href="##services" class="text-accent hover:underline">{category}</a>
+      <a href="#services" class="text-accent hover:underline">{category}</a>
       <span>/</span>
       <span>{city} Center</span>
       <span class="ml-auto text-[11px] font-mono text-muted">100/100 Google Lighthouse Core</span>
@@ -706,7 +834,7 @@ impl WebsiteCompiler {
           {tagline}
         </h1>
         <p class="text-base sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-8">
-          Delivering advanced sub-millimeter robotic precision, painless recovery protocols, and same-day mobility for patients across Bihar and Eastern India.
+          Delivering state-of-the-art {category} solutions, trusted clinical expertise, and same-day priority appointments for clients across {city} and {state}.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
           <a href="https://wa.me/{wa}?text=Hello%20{bus_name},%20I%20need%20an%20urgent%20consultation." class="btn-primary justify-center">
@@ -734,7 +862,7 @@ impl WebsiteCompiler {
       <div class="container">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <div class="tag mb-2">Specialized Treatments</div>
-          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">World-Class Robotic Joint &amp; Spine Care</h2>
+          <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">World-Class {category} &amp; Specialized Care</h2>
           <p class="text-sm text-muted mt-2">Transparent clinical pricing with zero hidden post-operative consumables.</p>
         </div>
         <div class="grid gap-6 mb-8" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -754,7 +882,7 @@ impl WebsiteCompiler {
         <div class="text-center max-w-2xl mx-auto mb-12">
           <div class="tag mb-2">Verified Testimonials</div>
           <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Real Patients. Real Recovery.</h2>
-          <p class="text-sm text-muted mt-2">Over 2,400+ verified Google and clinical reviews across Bihar.</p>
+          <p class="text-sm text-muted mt-2">Over 2,400+ verified client and clinical reviews across {city} and {state}.</p>
         </div>
         <div class="grid gap-6" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
           {reviews_html}
@@ -794,18 +922,14 @@ impl WebsiteCompiler {
               <input type="tel" id="patientPhone" name="patientPhone" required placeholder="+91 98765 43210" />
             </div>
             <div>
-              <label for="patientTreatment" class="block text-xs font-bold uppercase tracking-wider text-muted mb-1">Primary Orthopedic Concern</label>
+              <label for="patientTreatment" class="block text-xs font-bold uppercase tracking-wider text-muted mb-1">Primary Treatment / Consultation Concern</label>
               <select id="patientTreatment" name="patientTreatment">
-                <option value="knee">Robotic Knee Replacement</option>
-                <option value="hip">Hip Joint Reconstruction</option>
-                <option value="spine">Endoscopic Spine &amp; Disc</option>
-                <option value="sports">Sports Injury / Ligament</option>
-                <option value="general">General Joint Pain Consultation</option>
+                {treatment_options}
               </select>
             </div>
             <div>
               <label for="patientNotes" class="block text-xs font-bold uppercase tracking-wider text-muted mb-1">Brief Symptoms / Medical History</label>
-              <textarea id="patientNotes" name="patientNotes" rows="3" placeholder="Describe pain duration, prior MRI/X-ray reports..."></textarea>
+              <textarea id="patientNotes" name="patientNotes" rows="3" placeholder="Describe symptoms, duration, prior reports..."></textarea>
             </div>
             <button type="submit" class="btn-primary justify-center w-full" style="width: 100%;">
               <span>📅</span> <span>Confirm Priority OPD Appointment</span>
@@ -835,13 +959,13 @@ impl WebsiteCompiler {
         <p>{address}, {city}, {state} - {pincode}</p>
       </div>
       <div class="flex items-center gap-4 font-mono text-[11px]">
-        <a href="##services" class="hover:underline">Treatments</a>
+        <a href="#services" class="hover:underline">Treatments</a>
         <span>•</span>
-        <a href="##credentials" class="hover:underline">Credentials</a>
+        <a href="#credentials" class="hover:underline">Credentials</a>
         <span>•</span>
-        <a href="##reviews" class="hover:underline">Reviews</a>
+        <a href="#reviews" class="hover:underline">Reviews</a>
         <span>•</span>
-        <a href="##" class="hover:underline">Back to Top ↑</a>
+        <a href="#" class="hover:underline">Back to Top ↑</a>
       </div>
       <p class="font-mono text-[10px]">
         © 2026 {bus_name} • Pure-Rust Silicon Engine
@@ -1128,6 +1252,7 @@ impl WebsiteCompiler {
             sibling_links = sibling_links,
             reviews_html = reviews_html,
             faqs_html = faqs_html,
+            treatment_options = treatment_options,
             schema_json = schema_json,
             sentinel_js = Self::PHOENIX_SENTINEL_MINIFIED
         )
