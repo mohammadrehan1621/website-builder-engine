@@ -16,6 +16,7 @@ mod node5_deploy_engine;
 mod pentagon;
 mod schema;
 mod seo;
+mod seo_engine;
 mod server;
 mod slides;
 mod studio;
@@ -29,6 +30,7 @@ use std::time::Instant;
 use blackbox::OfflineFlightRecorder;
 use builder::{BusinessProfile, WebsiteCompiler};
 use indexnow::IndexNowEngine;
+use seo_engine::AutonomousSeoEngine;
 use minifier::SiliconMinifier;
 use node3_atlas_sentinel::AtlasSentinelEngine;
 use node4_rql_packager::RqlPackagerEngine;
@@ -48,6 +50,12 @@ fn main() {
     match command {
         "build" | "compile" | "builder" => {
             run_website_builder(&args);
+        }
+        "seo-gap" | "rival-gap" => {
+            run_seo_gap(&args);
+        }
+        "google-index" | "g-index" => {
+            run_google_indexing(&args);
         }
         "pentagon" | "run" => {
             run_pentagon_cycle(&args);
@@ -147,8 +155,10 @@ fn print_banner() {
 
 fn print_help() {
     println!("\x1b[1;34mCOMMANDS AVAILABLE:\x1b[0m");
-    println!("  \x1b[1;32mbuild\x1b[0m      [profile.json] [--airdrop] Instant <15ms Pure-Rust Website Builder (100/100 Lighthouse)");
-    println!("  \x1b[1;32mpentagon\x1b[0m   [dir] [project] [domain]  Execute Full 5-Node Closed Loop (CW -> ACW)");
+    println!("  \x1b[1;32mbuild\x1b[0m        [profile.json] [--airdrop] Instant <15ms Pure-Rust Website Builder (100/100 Lighthouse)");
+    println!("  \x1b[1;32mseo-gap\x1b[0m      [rival.html] [target.html] Competitor Heading Scraper & Closed-Loop Semantic Ring Gap");
+    println!("  \x1b[1;32mgoogle-index\x1b[0m [domain]                   Broadcast URLs to Google Indexing API & IndexNow");
+    println!("  \x1b[1;32mpentagon\x1b[0m     [dir] [project] [domain]    Execute Full 5-Node Closed Loop (CW -> ACW)");
     println!("  \x1b[1;32mcw\x1b[0m         [dir] [project] [domain]  Run Forward Velocity (Synthesis -> Packaging)");
     println!("  \x1b[1;32macw\x1b[0m        [dir] [project] [domain]  Run Reverse Defense (Manifest -> Chaos -> Edge)");
     println!("  \x1b[1;32maudit\x1b[0m      [dir]                     Run 9-Pillar Quality Gate");
@@ -855,6 +865,119 @@ fn run_website_builder(args: &[String]) {
         }
         Err(e) => {
             println!("\x1b[1;31m❌ Compilation halted: {}\x1b[0m\n", e);
+        }
+    }
+}
+
+fn run_seo_gap(args: &[String]) {
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m⚔️  RQL AUTONOMOUS SEO ENGINE — COMPETITOR SEMANTIC GAP PANOPTICON\x1b[0m");
+    println!("   \x1b[1;34m• Heading Hierarchy Extraction (H1/H2/H3) • TF-IDF Entity Density\x1b[0m");
+    println!("   \x1b[1;34m• Closed-Loop Semantic Ring Alignment • 100% Pure Native Rust\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    let rival_arg = args.get(2).map(|s| s.as_str()).unwrap_or("sample_rival.html");
+    let target_arg = args.get(3).map(|s| s.as_str()).unwrap_or("Deployed_Websites/sharma-ortho-patna.pages.dev/index.html");
+
+    // Load or generate sample competitor HTML
+    let rival_html = if Path::new(rival_arg).exists() {
+        println!("   \x1b[1;33m📂 Ingesting competitor content from: {}\x1b[0m", rival_arg);
+        fs::read_to_string(rival_arg).unwrap_or_default()
+    } else {
+        println!("   \x1b[1;33mℹ️ '{}' not found. Simulating live competitor (Apollo Ortho Patna)...\x1b[0m", rival_arg);
+        r#"
+            <!DOCTYPE html>
+            <html>
+            <head><title>Apollo Orthopedic Hospital Patna | Robotic Joint Replacement</title></head>
+            <body>
+                <h1>Apollo Orthopedic Excellence Center Patna</h1>
+                <h2>Robotic Knee Replacement & Arthroscopy</h2>
+                <p>We provide advanced robotic knee surgery, arthroscopy, joint reconstruction and cartilage repair with rapid rehabilitation.</p>
+                <h2>Micro-Endoscopic Spine Surgery</h2>
+                <p>Endoscopic discectomy, sciatica decompression, cervical disc herniation and minimally invasive spine stabilization.</p>
+                <h2>Sports Medicine & Ligament Clinic</h2>
+                <p>ACL tear repair, shoulder dislocation arthroscopy, meniscus reconstruction and sports physiotherapy in Patna.</p>
+            </body>
+            </html>
+        "#.to_string()
+    };
+
+    let target_html = if Path::new(target_arg).exists() {
+        println!("   \x1b[1;33m📂 Ingesting target client content from: {}\x1b[0m\n", target_arg);
+        fs::read_to_string(target_arg).unwrap_or_default()
+    } else {
+        println!("   \x1b[1;33mℹ️ '{}' not found. Using Sharma Clinic demo build...\x1b[0m\n", target_arg);
+        WebsiteCompiler::render_html(&BusinessProfile::default_demo())
+    };
+
+    let competitor_analysis = AutonomousSeoEngine::analyze_html("https://apollo-ortho-patna-sample.com", &rival_html);
+    let gap_report = AutonomousSeoEngine::compute_semantic_gap("https://sharma-ortho-patna.pages.dev/", &target_html, &competitor_analysis);
+
+    println!("\x1b[1;32m📊 COMPETITOR SEMANTIC FOOTPRINT:\x1b[0m");
+    println!("   • Competitor Title:        {}", competitor_analysis.title);
+    println!("   • Competitor H1:           {:?}", competitor_analysis.headings_h1);
+    println!("   • Competitor H2 Subheads:  {:?}", competitor_analysis.headings_h2);
+    println!("   • Competitor Word Count:   {} words", competitor_analysis.word_count);
+    println!("   • Top Keyword Entities:    {:?}\n", competitor_analysis.top_keywords.iter().take(6).map(|(k, c, d)| format!("{} ({}x, {}%)", k, c, d)).collect::<Vec<_>>());
+
+    println!("\x1b[1;33m⚔️ CLOSED-LOOP SEMANTIC GAP AUDIT:\x1b[0m");
+    println!("   • Semantic Coverage Score: \x1b[1;32m{}/100\x1b[0m", gap_report.semantic_coverage_score);
+    println!("   • Tactical Verdict:        {}", gap_report.tactical_verdict);
+
+    if !gap_report.missing_high_value_keywords.is_empty() {
+        println!("\n   \x1b[1;31m⚠️ High-Value Semantic Deficits (Competitor Entities Missing in Client):\x1b[0m");
+        for kw in gap_report.missing_high_value_keywords.iter().take(6) {
+            println!("      - [{}] '{}' — Competitor: {}x ({:.1}%) vs Client: {}x ({:.1}%)",
+                kw.priority, kw.keyword, kw.competitor_count, kw.competitor_density_pct, kw.target_count, kw.target_density_pct
+            );
+        }
+    }
+
+    if !gap_report.recommended_headings.is_empty() {
+        println!("\n   \x1b[1;36m💡 Recommended Sibling Headings to Inject into Semantic Ring:\x1b[0m");
+        for h in &gap_report.recommended_headings {
+            println!("      + H2: \"{}\"", h);
+        }
+    }
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+}
+
+fn run_google_indexing(args: &[String]) {
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m🚀 RQL GOOGLE INDEXING API & INDEXNOW DUAL BROADCAST PIPELINE\x1b[0m");
+    println!("   \x1b[1;34m• Sub-180s Googlebot Ingestion • RFC IndexNow Protocol\x1b[0m");
+    println!("   \x1b[1;34m• Multi-Engine Broadcast (Google, Bing, Yandex, Naver)\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    let domain = args.get(2).map(|s| s.as_str()).unwrap_or("sharma-ortho-patna.pages.dev");
+    let target_dir = PathBuf::from(format!("Deployed_Websites/{}", domain));
+
+    let mut urls = vec![format!("https://{}/", domain)];
+    if target_dir.exists() {
+        if let Ok(entries) = fs::read_dir(&target_dir) {
+            for entry in entries.flatten() {
+                let p = entry.path();
+                if p.is_file() && p.extension().and_then(|e| e.to_str()) == Some("html") {
+                    let fname = p.file_name().unwrap_or_default().to_string_lossy();
+                    if fname != "index.html" && !fname.starts_with("404") {
+                        urls.push(format!("https://{}/{}", domain, fname));
+                    }
+                }
+            }
+        }
+    }
+
+    match AutonomousSeoEngine::broadcast_urls(domain, &urls) {
+        Ok(res) => {
+            println!("\x1b[1;32m🎉 SEARCH ENGINE BROADCAST DISPATCHED ({:.2?})!\x1b[0m", std::time::Duration::from_millis(res.broadcast_duration_ms));
+            println!("   • URLs Submitted:          {:?}", res.urls_submitted);
+            println!("   • Google Indexing API:     {}", res.google_indexing_status);
+            println!("   • IndexNow Protocol:       {}", res.indexnow_status);
+            println!("   • Global Sitemap Ping:     {}", res.sitemap_ping_status);
+            println!("\x1b[1;36m====================================================================\x1b[0m\n");
+        }
+        Err(e) => {
+            println!("\x1b[1;31m❌ Search broadcast failed: {}\x1b[0m\n", e);
         }
     }
 }
