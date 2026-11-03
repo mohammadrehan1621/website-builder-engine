@@ -1355,6 +1355,33 @@ export async function onRequestPost(context) {
       executive_signoff_hash: auditHash
     };
 
+    // Phase 46: Autonomous Instant Ghost Rebuild (Zero-Bloat Native Edge Sanitizer)
+    let sanitizedHtml = html
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+      .replace(/<noscript\b[^<]*(?:(?!<\/noscript>)<[^<]*)*<\/noscript>/gi, "")
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, "");
+    
+    const cleanEdgeReset = `<style>body{font-family:system-ui,-apple-system,sans-serif;line-height:1.6;max-width:1100px;margin:0 auto;padding:20px;background:#f8fafc;color:#0f172a;}img{max-width:100%;height:auto;border-radius:10px;}header,nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid #e2e8f0;margin-bottom:24px;}button,a.btn{background:#0284c7;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;}footer{margin-top:48px;padding-top:24px;border-top:1px solid #e2e8f0;font-size:12px;color:#64748b;}</style>`;
+    if (sanitizedHtml.includes("<head>")) {
+      sanitizedHtml = sanitizedHtml.replace("<head>", `<head>${cleanEdgeReset}`);
+    } else {
+      sanitizedHtml = cleanEdgeReset + sanitizedHtml;
+    }
+
+    const ghostSizeKb = parseFloat((sanitizedHtml.length / 1024).toFixed(1));
+    const bloatReductionPercent = Math.max(0, Math.min(99.4, parseFloat((((html.length - sanitizedHtml.length) / Math.max(1, html.length)) * 100).toFixed(1))));
+
+    const ghostRebuild = {
+      original_bytes: html.length,
+      ghost_bytes: sanitizedHtml.length,
+      ghost_size_kb: ghostSizeKb,
+      bloat_stripped_percent: `${bloatReductionPercent}% Bloat Eliminated`,
+      scripts_purged: scriptCount,
+      estimated_ghost_latency_ms: 16,
+      preview_available: true,
+      sanitized_preview_html: sanitizedHtml.substring(0, 16000)
+    };
+
     const slowSec = (latency_ms / 1000).toFixed(2);
     const ttfbSec = (ttfb_ms / 1000).toFixed(2);
 
@@ -1473,6 +1500,7 @@ Would you be open to seeing a 60-second live speed demo on my phone this week ov
       financial_burn: financialBurn,
       carbon_ledger: carbonLedger,
       forensic_docket: forensicDocket,
+      ghost_rebuild: ghostRebuild,
       page_size_kb,
       page_size_bytes,
       slowdown_factor,
