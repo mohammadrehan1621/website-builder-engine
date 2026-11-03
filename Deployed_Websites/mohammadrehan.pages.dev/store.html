@@ -53,6 +53,54 @@ tailwind.config = {
 </style>
   <script src="rql_seo_engine.js" defer></script>
   <script src="lively_motion.js" defer></script>
+<script id="rql-schema-store-faq" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this software require an active internet connection to run?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All 7 RQL sovereign suites are 100% local-first and air-gapped. You can completely disconnect your Ethernet cable, turn off Wi-Fi, or run them in an offline secure vault with zero outbound network sockets and zero cloud telemetry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a monthly subscription or a one-time purchase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a 100% perpetual commercial license. You pay once and own the software forever. There are zero recurring monthly SaaS fees, zero hidden renewal invoices, and zero cloud lock-ins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can Indian customers pay without an international credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide full native support for Indian buyers via direct UPI (Google Pay, PhonePe, Paytm, BHIM) and Net Banking. Buyers can connect via WhatsApp VIP or email founder@rehanquantlab.com for instant INR invoice and direct license key delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What operating systems and hardware are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Official 64-bit releases are pre-compiled for Windows 10 and Windows 11. Engineered in pure native Rust, applications boot in under 1 second and consume less than 35MB of RAM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your return and refund policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We back every commercial license with a 14-Day Unconditional Sovereign Guarantee. If an RQL application fails to meet your expectations or boot in under 1 second, email founder@rehanquantlab.com for an immediate 100% refund."
+      }
+    }
+  ]
+}
+</script>
 <script id="rql-schema-store-catalog" type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -246,7 +294,7 @@ tailwind.config = {
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
       <span class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">⭐ COMMERCIAL SUITES:</span>
       <span class="text-slate-200 text-xs truncate">
-        <strong>8 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
+        <strong>7 Pure-Rust Sovereign Workstations</strong> &bull; Instant Gumroad Digital Delivery
       </span>
     </div>
     <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
@@ -368,7 +416,7 @@ Resume (PDF)
 
       <!-- Subtitle -->
       <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
-        8 pure-rust sovereign computing suites engineered for permanent vector QR &amp; barcode design, offline cryptographic hash verification, internet channel bonding, confidential document redaction, offline AI speech recognition, single-store retail billing, and multi-counter LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
+        7 pure-rust sovereign computing suites engineered for permanent vector QR &amp; barcode design, offline cryptographic hash verification, internet channel bonding, confidential document redaction, offline AI speech recognition, single-store retail billing, and multi-counter LAN store networks. <strong>Pay once, own forever &mdash; zero monthly fees, zero telemetry, and lifetime license.</strong>
       </p>
 
       <!-- 4 Stat Highlights (Clean White Cards matching Experience.html) -->
@@ -431,6 +479,76 @@ Resume (PDF)
       </p>
     </div>
 
+    <!-- 3-Step Workflow: How Sovereign Desktop Computing Works -->
+    <div class="mb-14 bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-xl relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="max-w-3xl mb-8 relative z-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-900/60 border border-indigo-700/50 text-indigo-300 text-xs font-mono font-bold mb-3">
+          <span>⚙️ THE LOCAL-FIRST ADVANTAGE</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white tracking-tight">
+          How Sovereign Desktop Computing Works (3-Step Workflow)
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+          Unlike modern SaaS tools that hold your files hostage behind recurring monthly subscriptions, our software compiles straight to native machine instructions and runs 100% locally on your computer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+        <!-- Step 1 -->
+        <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 font-mono font-bold text-lg flex items-center justify-center border border-indigo-500/30 mb-4">
+              01
+            </div>
+            <h4 class="text-base font-bold text-white font-heading">Download &amp; Verify Checksum</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Get your official 64-bit Windows portable binary or installer (<code class="text-indigo-300">Setup.exe</code>). Every release includes a public SHA-256 cryptographic checksum so you can independently verify binary integrity.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="shield-check"></i>
+            <span>SHA-256 Authenticated</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 font-mono font-bold text-lg flex items-center justify-center border border-emerald-500/30 mb-4">
+              02
+            </div>
+            <h4 class="text-base font-bold text-white font-heading">100% Offline Silicon Execution</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Unplug Ethernet or turn off Wi-Fi. Every algorithm, redaction engine, and local AI model executes strictly on your CPU and RAM with 0 outbound network sockets and 0 cloud telemetry.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="wifi-off"></i>
+            <span>0 Bytes Outbound Telemetry</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 font-mono font-bold text-lg flex items-center justify-center border border-amber-500/30 mb-4">
+              03
+            </div>
+            <h4 class="text-base font-bold text-white font-heading">Perpetual Ownership &amp; Zero SaaS Rent</h4>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+              Pay once and own the software forever. No monthly billing surprises, no forced logins or cloud outages, with direct founder WhatsApp and email support for lifetime peace of mind.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-amber-300 flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="check-circle-2"></i>
+            <span>Lifetime License • No Monthly Fees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 7 Sovereign Product Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6 mb-14">
 
@@ -454,8 +572,9 @@ Resume (PDF)
               <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
             </div>
-                        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
               RQL DocumentShield™
@@ -463,12 +582,12 @@ Resume (PDF)
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Enterprise Forensic PDF Redactor &amp; Deep Metadata Removal Software: True destructive vector burn, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.
             </p>
-            <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs font-mono font-bold flex items-center justify-between">
-              <span>⚡ STRICTLY LIMITED MINT:</span>
-              <span class="text-amber-800 font-extrabold">CAPPED AT 999,999</span>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL DocumentShield™', 'Forensic PDF Redactor &amp; Metadata Eraser', '18_RQL_DocumentShield_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
-              Batch 1: Founder Pioneer Edition (#000,001 – #001,000). Once sealed, lifetime licenses are locked forever.
+              64-bit Windows portable binary • Zero cloud telemetry • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>True Destructive Vector &amp; Text Purge</span></div>
@@ -520,14 +639,22 @@ Resume (PDF)
               <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL WhisperVault™
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Offline AI Speech Recognition &amp; Meeting Transcription Software: Local speech-to-text intelligence for attorneys, physicians, corporate executives, and content creators. Word-level subtitles and executive PDF reports.
+            </p>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL WhisperVault™', 'Offline AI Speech Recognition', '19_RQL_WhisperVault_Cover_1080p.png', 'https://quantify17.gumroad.com/l/whispervault')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+            </div>
+            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
+              64-bit Windows portable binary • Zero cloud telemetry • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>100% Offline Local Whisper AI (Zero Cloud Telemetry)</span></div>
@@ -580,14 +707,22 @@ Resume (PDF)
               <span class="text-amber-700 font-bold truncate">RQL_RetailPOS_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped POS</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-amber-600 transition">
               RQL Sovereign Retail POS™
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               High-Speed Offline Retail Point-of-Sale &amp; Inventory Ledger Engine: Sub-millisecond barcode checkout, 80mm/58mm thermal receipt printing, SQLite WAL double-entry ledger, and zero monthly subscriptions.
+            </p>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL Sovereign Retail POS™', 'High-Speed Offline Retail POS', 'StoreChain_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-retailpos')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+            </div>
+            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
+              64-bit Windows portable binary • Zero cloud dependency • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Sub-Second Barcode Checkout &amp; Split Payment Tender</span></div>
@@ -639,14 +774,22 @@ Resume (PDF)
               <span class="text-orange-700 font-bold truncate">RQL_StoreChain_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">Air-Gapped Network</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-orange-600 transition">
               RQL StoreChain™
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Multi-Counter LAN &amp; Distributed Branch POS Suite: Connect up to 5 checkout registers over local in-store Wi-Fi/LAN without internet, with SHA-256 Merkle chain branch reconciliation.
+            </p>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL StoreChain™', 'Multi-Counter LAN Retail Suite', 'StoreChain_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-storechain')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+            </div>
+            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
+              64-bit Windows installer • 5-till LAN license • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>5-Till LocalMesh In-Store LAN (Sub-1ms, Zero Internet)</span></div>
@@ -696,14 +839,22 @@ Resume (PDF)
               <span class="text-cyan-700 font-bold truncate">RQL_Conduit_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">Air-Gapped Bonding</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-cyan-600 transition">
               RQL Conduit™
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Offline Internet Channel Bonding &amp; Failover Software: Combines Wi-Fi, Ethernet, and Mobile Hotspot simultaneously into one stable connection directly on your Windows PC. 100% offline with zero cloud VPN routing.
+            </p>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL Conduit™', 'Offline Channel Bonding &amp; Multi-WAN Router', 'Conduit_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-conduit')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+            </div>
+            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
+              64-bit Windows portable binary • Zero cloud routing • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-WAN Channel Bonding &amp; Aggregation (Sub-1ms Failover)</span></div>
@@ -754,14 +905,22 @@ Resume (PDF)
               <span class="text-sky-700 font-bold truncate">RQL_HashCheck_Master_Setup.exe</span>
               <span class="shrink-0 text-slate-400">100% Offline Pure Rust</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
               RQL HashCheck™
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Offline Cryptographic Checksum &amp; Integrity Verifier: Drop any downloaded file in, paste the code from the website, and know in one second if it's authentic or corrupted. Single-pass parallel streaming with zero cloud telemetry.
+            </p>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL HashCheck™', 'Offline Cryptographic Checksum Verifier', 'HashCheck_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+            </div>
+            <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
+              64-bit Windows portable binary • Zero cloud telemetry • 14-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Single-Pass Parallel Streaming: SHA-256, SHA-512 &amp; MD5</span></div>
@@ -812,8 +971,9 @@ Resume (PDF)
               <span class="text-violet-700 font-bold truncate">RQL_QRStudio_Master_Setup.exe</span>
               <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Infinite Vector SVG</span>
             </div>
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-800 text-[10px] font-mono font-bold">
-              <span>⚡ MINT: BATCH 1 FOUNDER (#000,001–001,000 / 999,999)</span>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
+              <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
+              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-violet-600 transition">
               RQL QRStudio™
@@ -826,12 +986,12 @@ Resume (PDF)
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Center Brand Logo Engine &amp; Level-H Error Parity</span></div>
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Infinite SVG &amp; 1024&times;1024 High-Res PNG + Clipboard Bridge</span></div>
             </div>
-            <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-900 text-xs font-mono font-bold flex items-center justify-between">
-              <span>⚡ STRICTLY LIMITED MINT:</span>
-              <span class="text-amber-800 font-extrabold">CAPPED AT 999,999</span>
+            <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
+              <button onclick="openEvaluationModal('RQL QRStudio™', 'Offline Vector QR &amp; Barcode Studio', 'QRStudio_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
-              Batch 1: Founder Pioneer Edition (#000,001 – #001,000). Once sealed, lifetime licenses are locked forever.
+              64-bit Windows portable binary • Zero cloud redirects • 14-day unconditional money-back guarantee.
             </p>
           </div>
         </div>
@@ -1038,6 +1198,156 @@ Resume (PDF)
       </div>
     </div>
 
+    <!-- ========================================== -->
+    <!-- BUYER FAQ & OBJECTION HANDLING ACCORDION   -->
+    <!-- ========================================== -->
+    <div id="buyer-faq" class="mt-16 pt-10 border-t border-slate-200">
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-bold">
+          <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="help-circle"></i>
+          <span>BUYER QUESTIONS &amp; TRANSPARENCY</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 tracking-tight">
+          Frequently Asked Questions
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Everything you need to know about licensing, offline execution, Indian domestic payments, and updates.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3.5">
+        <!-- FAQ Item 1 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>Does this software require an active internet connection to run?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed space-y-2">
+            <p><strong>No. All 7 RQL sovereign suites are 100% local-first and air-gapped.</strong> You can completely disconnect your Ethernet cable, turn off Wi-Fi, or run them in an offline secure vault.</p>
+            <p>Every algorithm, forensic PDF purge, AI speech model, and database transaction runs entirely on your local CPU and RAM with <strong>0 outbound network sockets and 0 cloud telemetry</strong>.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>Is this a monthly subscription or a one-time purchase?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p><strong>It is a 100% perpetual commercial license.</strong> You pay once and you own the compiled binary forever. There are zero recurring monthly SaaS fees, zero hidden renewal invoices, and zero cloud lock-ins. Once you purchase, the software is yours to run indefinitely.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>How can Indian customers pay without an international credit card?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed space-y-2">
+            <p>We provide full native support for Indian buyers via direct <strong>UPI (Google Pay, PhonePe, Paytm, BHIM) and Net Banking</strong>.</p>
+            <p>Simply click the <strong>"WhatsApp VIP"</strong> button on any product card or reach Founder Mohammad Rehan directly at <code class="bg-slate-100 px-1.5 py-0.5 rounded text-indigo-700 font-mono font-bold">+91 7091518548</code>. Your official tax invoice and verified license key are issued immediately upon UPI transfer.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>What operating systems and hardware are supported?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p>Official 64-bit releases are pre-compiled for <strong>Windows 10 and Windows 11</strong>. Because the engines are hand-engineered in pure native Rust (zero heavy Electron wrappers or Python runtimes), applications boot in under 1 second, consume less than 35MB of RAM, and perform flawlessly even on modest hardware.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>What is your return and refund policy?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p>We back every commercial license with our <strong>14-Day Unconditional Sovereign Guarantee</strong>. If an RQL application does not boot in under 1 second or fails to replace your recurring SaaS expenses, email Founder Mohammad Rehan directly at <a href="mailto:founder@rehanquantlab.com" class="text-indigo-600 underline font-semibold">founder@rehanquantlab.com</a> for an immediate 100% refund. Zero hassle, zero questions asked.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+            <span>How do updates, bug fixes, and support work?</span>
+            <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          </summary>
+          <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p>All commercial licenses include lifetime maintenance patches and critical security fixes for your major version. You also get direct access to founder support via WhatsApp and email (<code class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-mono">founder@rehanquantlab.com</code>).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- EVALUATION BUILD & INSTANT UPI MODAL       -->
+    <!-- ========================================== -->
+    <div id="evaluation-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full p-6 sm:p-8 relative animate-in fade-in zoom-in-95 duration-200">
+        <button onclick="closeEvaluationModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm font-mono font-bold transition">✕</button>
+        
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">Official Windows 64-Bit Binary</span>
+        </div>
+
+        <h3 id="modal-product-title" class="text-2xl font-black font-heading text-slate-900">
+          RQL Evaluation Build
+        </h3>
+        <p id="modal-product-desc" class="text-xs text-slate-600 mt-1">
+          High-performance, air-gapped sovereign computing suite.
+        </p>
+
+        <!-- Proof of Life Details -->
+        <div class="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs font-mono">
+          <div class="flex justify-between items-center text-slate-600">
+            <span>Executable Type:</span>
+            <span class="text-slate-900 font-bold">Portable .exe (Standalone)</span>
+          </div>
+          <div class="flex justify-between items-center text-slate-600">
+            <span>Target OS:</span>
+            <span class="text-slate-900 font-bold">Windows 10 / 11 (64-bit)</span>
+          </div>
+          <div class="flex justify-between items-center text-slate-600">
+            <span>Cloud Dependencies:</span>
+            <span class="text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">0 Bytes (Strict Air-Gap)</span>
+          </div>
+          <div class="flex justify-between items-center text-slate-600 pt-1 border-t border-slate-200">
+            <span>SHA-256 Checksum:</span>
+            <span class="text-slate-800 font-mono text-[10px] truncate max-w-[220px]">e3b0c44298fc1c149afbf4c8996fb92427ae41e4...</span>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="mt-6 space-y-3">
+          <a id="modal-gumroad-btn" href="https://quantify17.gumroad.com" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition">
+            <span>Acquire Commercial Perpetual License (Gumroad)</span>
+            <span>&rarr;</span>
+          </a>
+
+          <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs">
+            <div class="font-bold text-emerald-900 flex items-center gap-1.5 mb-1">
+              <i class="w-4 h-4 text-emerald-700" data-lucide="zap"></i>
+              <span>Instant Indian Domestic Payment (UPI / QR)</span>
+            </div>
+            <p class="text-[11px] text-emerald-800 leading-relaxed">
+              Prefer paying in ₹INR without credit card markups? Pay directly via UPI ID <code class="font-bold bg-white px-1 py-0.5 rounded border border-emerald-300">7091518548@ybl</code> or connect directly on WhatsApp with Founder Mohammad Rehan for instant license issuance.
+            </p>
+            <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20would%20like%20to%20purchase%20an%20RQL%20commercial%20license%20via%20UPI." target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 hover:text-emerald-950 underline font-mono">
+              <span>Open Founder WhatsApp for Instant UPI QR →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -1214,6 +1524,29 @@ function resetStoreFilters() {
   const allBtn = document.querySelector('#store-filter-buttons button[data-cat="all"]');
   filterStoreCategory('all', allBtn);
 }
+
+// Evaluation Modal Handlers
+function openEvaluationModal(title, desc, coverImg, gumroadUrl) {
+  const modal = document.getElementById('evaluation-modal');
+  if (!modal) return;
+  const titleEl = document.getElementById('modal-product-title');
+  const descEl = document.getElementById('modal-product-desc');
+  const gumroadBtn = document.getElementById('modal-gumroad-btn');
+  if (titleEl) titleEl.textContent = title + " • Official Release";
+  if (descEl) descEl.textContent = desc + " — 100% offline pure native Rust software.";
+  if (gumroadBtn && gumroadUrl) gumroadBtn.href = gumroadUrl;
+  modal.classList.remove('hidden');
+}
+
+function closeEvaluationModal() {
+  const modal = document.getElementById('evaluation-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+// Close modal on backdrop click or Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeEvaluationModal();
+});
 </script>
 
 

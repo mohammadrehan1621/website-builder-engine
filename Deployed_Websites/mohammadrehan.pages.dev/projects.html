@@ -1570,6 +1570,192 @@ Resume (PDF)
 </div>
 </section>
 
+<!-- ======================================================== -->
+<!-- OPERATIONAL CASE STUDIES & REAL-WORLD FIELD DEPLOYMENTS -->
+<!-- ======================================================== -->
+<section id="case-studies" class="py-20 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+  <div class="absolute -top-32 -right-32 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold">
+        <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="shield-check"></i>
+        <span>AUTHENTIC FIELD EVIDENCE &bull; PRODUCTION VERIFIED</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
+        Operational Client Case Studies
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Real software solving concrete, high-stakes problems in the field—from high-volume supermarket counters in Bihar to sub-12ms Anycast web architectures.
+      </p>
+    </div>
+
+    <!-- 2 Deep-Dive Case Studies -->
+    <div class="space-y-12 max-w-5xl mx-auto">
+      
+      <!-- CASE STUDY 1: PATNA MULTI-COUNTER RETAIL POS -->
+      <div id="case-study-patna" class="bg-slate-950/80 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-slate-800">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Patna, Bihar &bull; Retail Production</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white">
+              Multi-Counter Offline Retail POS &amp; LAN Distributed Billing
+            </h3>
+          </div>
+          <div class="text-right">
+            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs border border-slate-700">
+              Live Production System
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+          <!-- Col 1: Problem & Constraints -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold flex items-center gap-1.5">
+              <span>01. THE PROBLEM</span>
+            </h4>
+            <div class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <p>A busy multi-counter grocery &amp; retail outlet in Patna, Bihar was plagued by daily optical fiber broadband dropouts lasting 30&ndash;90 minutes during peak rush hours.</p>
+              <p>Their cloud-based POS would freeze, blocking barcode checkouts, creating long customer queues, and losing sales. Furthermore, they were paying ₹3,500/month (₹42,000/yr) in mandatory SaaS subscription fees.</p>
+            </div>
+          </div>
+
+          <!-- Col 2: The Sovereign Architecture -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+              <span>02. THE ARCHITECTURE</span>
+            </h4>
+            <div class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <p>Engineered a 100% offline, pure-native Rust POS engine (<strong class="text-white">RQL StoreChain™ LocalMesh</strong>) operating over the store's local Wi-Fi router with zero internet connection required.</p>
+              <p>Equipped with sub-millisecond SQLite WAL double-entry transaction commits, ESC/POS hardware thermal printer drivers, dynamic UPI QR code generation on bill prints, and peer-to-peer inventory reconciliation.</p>
+            </div>
+          </div>
+
+          <!-- Col 3: Verified Outcomes -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-1.5">
+              <span>03. VERIFIED OUTCOMES</span>
+            </h4>
+            <div class="space-y-2.5">
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-emerald-400">₹45,00,000+</div>
+                <div class="text-[11px] text-slate-400">Offline sales processed with 100% uptime</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-white">&lt; 0.4 Seconds</div>
+                <div class="text-[11px] text-slate-400">Thermal receipt print &amp; barcode scan latency</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-emerald-400">₹0 / Month</div>
+                <div class="text-[11px] text-slate-400">Cloud SaaS rent eliminated (₹42k/yr returned)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+          <div class="flex flex-wrap items-center gap-2 text-slate-400">
+            <span class="text-slate-500">Tech Stack:</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">Pure Native Rust</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">SQLite WAL</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">Local Wi-Fi Mesh</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">ESC/POS 80mm</span>
+          </div>
+          <a href="store.html" class="text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-1">
+            <span>Explore RQL StoreChain™ Suite</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 2: 14MS ANYCAST STATIC WEB MIGRATION -->
+      <div id="case-study-anycast" class="bg-slate-950/80 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-slate-800">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">Global Anycast Web &bull; Speed Optimization</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold font-heading text-white">
+              Sub-12ms Anycast Web Architecture &amp; Core Web Vitals Purge
+            </h3>
+          </div>
+          <div class="text-right">
+            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 font-mono text-xs border border-slate-700">
+              Lighthouse 100/100
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+          <!-- Col 1: Problem & Constraints -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-rose-400 font-bold flex items-center gap-1.5">
+              <span>01. THE PROBLEM</span>
+            </h4>
+            <div class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <p>A corporate client's website was severely bloated with 28 WordPress plugins, Elementor render-blocking styles, and uncompressed analytics scripts totaling 2.8MB per initial visit.</p>
+              <p>Page load time averaged 4.1 seconds on 4G mobile devices. Google Search Console flagged failing Core Web Vitals (LCP: 3.9s, CLS: 0.28), causing organic search traffic to crater by 35%.</p>
+            </div>
+          </div>
+
+          <!-- Col 2: The Sovereign Architecture -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+              <span>02. THE ARCHITECTURE</span>
+            </h4>
+            <div class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <p>Executed forensic site re-engineering: eradicated all dynamic PHP backend overhead and replaced with pre-compiled semantic HTML5, inline critical CSS, and deferred script hydration.</p>
+              <p>Deployed across Cloudflare's 300+ city Anycast edge nodes with Tiered Cache, Brotli compression, and lossless WebP asset pipelines. Zero external tracker tags on initial paint.</p>
+            </div>
+          </div>
+
+          <!-- Col 3: Verified Outcomes -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-1.5">
+              <span>03. VERIFIED OUTCOMES</span>
+            </h4>
+            <div class="space-y-2.5">
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-emerald-400">100 / 100</div>
+                <div class="text-[11px] text-slate-400">Lighthouse Performance &amp; Core Web Vitals</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-white">14ms TTFB</div>
+                <div class="text-[11px] text-slate-400">Time to first byte across Indian edge nodes</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                <div class="text-lg font-mono font-bold text-indigo-400">+44% Growth</div>
+                <div class="text-[11px] text-slate-400">Organic impressions rebound within 60 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+          <div class="flex flex-wrap items-center gap-2 text-slate-400">
+            <span class="text-slate-500">Tech Stack:</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">Static Anycast Edge</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">Brotli (br)</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">Inline Critical CSS</span>
+            <span class="bg-slate-900 px-2 py-0.5 rounded text-slate-300 border border-slate-800">WebP Lossless</span>
+          </div>
+          <a href="websites/" class="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-1">
+            <span>Audit Your Site With Speed Studio</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
     <!-- What I Build & Deliver Section -->
 
 
