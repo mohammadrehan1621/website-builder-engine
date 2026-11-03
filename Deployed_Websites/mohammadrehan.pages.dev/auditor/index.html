@@ -5462,10 +5462,10 @@ CORE SUPERPOWER: "Turn any URL into cold physical evidence that sells high-speed
       }
       if (typeof renderFlirCanvas === 'function') renderFlirCanvas();
     }
-    // Auto-restore user theme preference
+    // Default to Swiss Light Ceramic institutional theme
     (function initTheme() {
       const saved = localStorage.getItem('rql_theme');
-      if (saved === 'light') {
+      if (saved !== 'dark') {
         document.body.classList.add('theme-light');
         const btn = document.getElementById('themeToggleBtn');
         if (btn) btn.innerHTML = '<span>🌙</span> <span class="hidden sm:inline">Obsidian Dark</span>';
