@@ -260,7 +260,12 @@ impl WebsiteCompiler {
         fs::write(&sitemap_path, sitemap_content)
             .map_err(|e| format!("Failed to write sitemap.xml: {}", e))?;
 
-        // 8. Write profile snapshot for reproducible closed-loop builds
+        // 8. Write IndexNow RFC ownership verification key
+        let indexnow_path = target_dir.join("rql2026indexnow.txt");
+        fs::write(&indexnow_path, "rql2026indexnow")
+            .map_err(|e| format!("Failed to write rql2026indexnow.txt: {}", e))?;
+
+        // 9. Write profile snapshot for reproducible closed-loop builds
         let profile_json = serde_json::to_string_pretty(profile)
             .map_err(|e| format!("Failed to serialize profile snapshot: {}", e))?;
         let snapshot_path = target_dir.join("rql_business_profile.json");
@@ -269,7 +274,7 @@ impl WebsiteCompiler {
 
         let elapsed_micros = t0.elapsed().as_micros() as u64;
 
-        // 9. Optional One-Click Edge Air-Drop to Cloudflare Pages
+        // 10. Optional One-Click Edge Air-Drop to Cloudflare Pages
         let mut airdropped = false;
         let mut live_url = None;
         if airdrop {
@@ -305,6 +310,7 @@ impl WebsiteCompiler {
                 "_routes.json".to_string(),
                 "robots.txt".to_string(),
                 "sitemap.xml".to_string(),
+                "rql2026indexnow.txt".to_string(),
                 "rql_business_profile.json".to_string(),
             ],
             airdropped_to_edge: airdropped,
@@ -1066,6 +1072,7 @@ mod tests {
         assert!(target_dir.join("_headers").exists());
         assert!(target_dir.join("sitemap.xml").exists());
         assert!(target_dir.join("robots.txt").exists());
+        assert!(target_dir.join("rql2026indexnow.txt").exists());
 
         // Clean up test output
         let _ = fs::remove_dir_all(&target_dir);

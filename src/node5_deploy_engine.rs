@@ -114,11 +114,52 @@ impl DeployEngine {
         cmd.env("CLOUDFLARE_API_TOKEN", &creds.api_token);
 
         println!("   \x1b[1;36m⚡ Dispatching to Cloudflare Pages edge: {}\x1b[0m", project_name);
-        let output = cmd.output()?;
+        let mut output = cmd.output()?;
 
-        let stdout = String::from_utf8_lossy(&output.stdout).to_string();
-        let stderr = String::from_utf8_lossy(&output.stderr).to_string();
-        let success = output.status.success() || stdout.contains("Success") || stdout.contains("Deployment complete");
+        let mut stdout = String::from_utf8_lossy(&output.stdout).to_string();
+        let mut stderr = String::from_utf8_lossy(&output.stderr).to_string();
+        let mut success = output.status.success() || stdout.contains("Success") || stdout.contains("Deployment complete");
+
+        // Auto-provision Pages project if it does not exist yet
+        if !success && (stdout.contains("does not exist") || stderr.contains("does not exist")) {
+            println!("   \x1b[1;33m⚠️ Pages project '{}' does not exist yet. Auto-provisioning on Cloudflare Edge...\x1b[0m", project_name);
+            let mut create_cmd = Command::new(npx);
+            create_cmd.args([
+                "wrangler",
+                "pages",
+                "project",
+                "create",
+                project_name,
+                "--production-branch=main",
+            ]);
+            create_cmd.env("CLOUDFLARE_ACCOUNT_ID", &creds.account_id);
+            create_cmd.env("CLOUDFLARE_API_TOKEN", &creds.api_token);
+            let create_res = create_cmd.output();
+            if let Ok(c_out) = create_res {
+                let c_stdout = String::from_utf8_lossy(&c_out.stdout);
+                if c_stdout.contains("Successfully created") || c_out.status.success() {
+                    println!("   \x1b[1;32m✓ Pages project '{}' auto-provisioned! Retrying deployment...\x1b[0m", project_name);
+                    let mut retry_cmd = Command::new(npx);
+                    retry_cmd.args([
+                        "wrangler",
+                        "pages",
+                        "deploy",
+                        &source_dir.to_string_lossy(),
+                        &format!("--project-name={}", project_name),
+                        "--branch=main",
+                        "--commit-dirty=true",
+                    ]);
+                    retry_cmd.env("CLOUDFLARE_ACCOUNT_ID", &creds.account_id);
+                    retry_cmd.env("CLOUDFLARE_API_TOKEN", &creds.api_token);
+                    if let Ok(r_out) = retry_cmd.output() {
+                        output = r_out;
+                        stdout = String::from_utf8_lossy(&output.stdout).to_string();
+                        stderr = String::from_utf8_lossy(&output.stderr).to_string();
+                        success = output.status.success() || stdout.contains("Success") || stdout.contains("Deployment complete");
+                    }
+                }
+            }
+        }
 
         let log = format!("{}\n{}", stdout, stderr);
 
@@ -144,7 +185,16 @@ impl DeployEngine {
             HashMap::new()
         };
 
-        let domain = custom_domain.unwrap_or(project_name);
+        let domain = match custom_domain {
+            Some(d) => d.to_string(),
+            None => {
+                if project_name.ends_with(".pages.dev") {
+                    project_name.to_string()
+                } else {
+                    format!("{}.pages.dev", project_name)
+                }
+            }
+        };
         let live_url = format!("https://{}", domain);
 
         let mut pages = Vec::new();
