@@ -405,15 +405,36 @@ impl SeoEngine {
             score = score.saturating_sub(title_pen + desc_pen + canon_pen + broken_pen);
         }
 
-        let verdict = if score >= 95 && broken_total == 0 {
-            "A+ COMPLIANT".to_string()
-        } else if score >= 80 {
-            "ACCEPTABLE WITH WARNINGS".to_string()
-        } else {
-            "NEEDS REMEDIATION".to_string()
-        };
-
         let elapsed_micros = t0.elapsed().as_micros() as u64;
+
+        let all_schemas = meta_audits.iter().all(|m| m.has_schema_engine);
+        let all_og = meta_audits.iter().all(|m| m.has_og_tags);
+        let all_canon = meta_audits.iter().all(|m| m.has_canonical);
+
+        // Sovereign Apex Rating Ladder (D -> C -> B -> A -> A+ -> S -> S+ -> SS -> SS+ -> SSS -> SSS+)
+        let verdict = if score == 100 && broken_total == 0 && sitemap_ok && robots_ok && all_schemas && all_og && all_canon {
+            "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)".to_string()
+        } else if score == 100 && broken_total == 0 && sitemap_ok && robots_ok && all_schemas && all_og {
+            "SSS (SUPREME ARCHITECT TIER)".to_string()
+        } else if score == 100 && broken_total == 0 && sitemap_ok && robots_ok && all_schemas {
+            "SS+ (ULTRA-FORTIFIED QUANTUM)".to_string()
+        } else if score == 100 && broken_total == 0 && sitemap_ok && robots_ok {
+            "SS (TITANIUM CITADEL GRADE)".to_string()
+        } else if score == 100 && broken_total == 0 {
+            "S+ (HIGH SOVEREIGN GRADE)".to_string()
+        } else if score == 100 {
+            "S (SOVEREIGN STANDARD)".to_string()
+        } else if score >= 95 && broken_total == 0 {
+            "A+ COMPLIANT".to_string()
+        } else if score >= 90 {
+            "A (HIGH INTEGRITY)".to_string()
+        } else if score >= 80 {
+            "B (ACCEPTABLE WITH WARNINGS)".to_string()
+        } else if score >= 70 {
+            "C (SUB-OPTIMAL INDEXABILITY)".to_string()
+        } else {
+            "D (CRITICAL REMEDIATION REQUIRED)".to_string()
+        };
 
         let report = SeoPanopticonReport {
             timestamp: Utc::now().format("%Y-%m-%d").to_string(),

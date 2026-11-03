@@ -314,14 +314,34 @@ fn run_seo_panopticon(args: &[String]) {
             println!();
 
             // Telemetry & Verdict
-            println!("\x1b[1;32m====================================================================\x1b[0m");
-            println!(
-                "\x1b[1;32m🎯 PANOPTICON SCORE: {}/100 | VERDICT: {} ({:.2?} execution)\x1b[0m",
-                report.seo_panopticon_score,
-                report.verdict,
-                std::time::Duration::from_micros(report.execution_micros)
-            );
-            println!("\x1b[1;32m====================================================================\x1b[0m\n");
+            if report.verdict.starts_with("SSS+") {
+                println!("\x1b[1;33m====================================================================\x1b[0m");
+                println!(
+                    "\x1b[1;33m👑 PANOPTICON SCORE: {}/100 | VERDICT: {} ({:.2?} execution)\x1b[0m",
+                    report.seo_panopticon_score,
+                    report.verdict,
+                    std::time::Duration::from_micros(report.execution_micros)
+                );
+                println!("\x1b[1;33m====================================================================\x1b[0m\n");
+            } else if report.verdict.starts_with("S") {
+                println!("\x1b[1;36m====================================================================\x1b[0m");
+                println!(
+                    "\x1b[1;36m⚡ PANOPTICON SCORE: {}/100 | VERDICT: {} ({:.2?} execution)\x1b[0m",
+                    report.seo_panopticon_score,
+                    report.verdict,
+                    std::time::Duration::from_micros(report.execution_micros)
+                );
+                println!("\x1b[1;36m====================================================================\x1b[0m\n");
+            } else {
+                println!("\x1b[1;32m====================================================================\x1b[0m");
+                println!(
+                    "\x1b[1;32m🎯 PANOPTICON SCORE: {}/100 | VERDICT: {} ({:.2?} execution)\x1b[0m",
+                    report.seo_panopticon_score,
+                    report.verdict,
+                    std::time::Duration::from_micros(report.execution_micros)
+                );
+                println!("\x1b[1;32m====================================================================\x1b[0m\n");
+            }
         }
         Err(e) => println!("\x1b[1;31m❌ SEO Panopticon Audit failed: {}\x1b[0m\n", e),
     }
