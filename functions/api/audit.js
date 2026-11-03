@@ -1,10 +1,22 @@
-export async function onRequestPost(context) {
+export async function onRequest(context) {
   try {
-    const body = await context.request.json();
-    const url = body.url;
-    const competitor_url = body.competitor_url;
-    const client_name = body.client_name || "Sir";
-    const company_name = body.company_name || "your firm";
+    let url, competitor_url, client_name, company_name;
+    if (context.request.method === "POST") {
+      try {
+        const body = await context.request.json();
+        url = body.url;
+        competitor_url = body.competitor_url;
+        client_name = body.client_name || "Sir";
+        company_name = body.company_name || "your firm";
+      } catch (e) {}
+    }
+    if (!url) {
+      const urlObj = new URL(context.request.url);
+      url = urlObj.searchParams.get("url");
+      competitor_url = competitor_url || urlObj.searchParams.get("competitor_url");
+      client_name = client_name || urlObj.searchParams.get("client_name") || "Sir";
+      company_name = company_name || urlObj.searchParams.get("company_name") || "your firm";
+    }
 
     if (!url) {
       return new Response(JSON.stringify({ error: "Missing URL to audit" }), { 
@@ -1593,3 +1605,6 @@ Would you be open to seeing a 60-second live speed demo on my phone this week ov
     });
   }
 }
+
+export const onRequestPost = onRequest;
+export const onRequestGet = onRequest;

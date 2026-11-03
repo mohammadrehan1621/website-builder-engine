@@ -127,89 +127,167 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
     </style>
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Mohammad Rehan",
-    "jobTitle": "Founder & Principal Systems Architect",
-    "description": "Founder & Principal Systems Architect at Rehan Quant Lab™. Specializing in offline-first desktop business software, air-gapped sovereign computing suites, pure native Rust desktop software (DocumentShield™ & WhisperVault™), and high-availability distributed systems.",
-    "url": "https://rehanquantlab.com",
-    "image": "https://rehanquantlab.com/og_preview.png",
-    "worksFor": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://rehanquantlab.com/#mohammad-rehan",
+      "name": "Mohammad Rehan",
+      "jobTitle": "Founder & Principal Systems Architect",
+      "description": "Founder & Principal Systems Architect at Rehan Quant Lab™. Specializing in 100% pure native Rust air-gapped sovereign computing suites, deterministic distributed systems, Win32 kernel socket panopticons, and low-latency financial software.",
+      "url": "https://rehanquantlab.com",
+      "image": "https://rehanquantlab.com/og_preview.png",
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "knowsAbout": [
+        "Sovereign Air-Gapped Computing",
+        "Pure Native Rust Systems Architecture",
+        "Win32 Kernel Socket Programming",
+        "Cryptographic Streaming Hash Engines",
+        "Deterministic Distributed Ledgers",
+        "Multi-WAN Network Channel Bonding",
+        "Offline AI Speech Intelligence"
+      ],
+      "sameAs": [
+        "https://github.com/rehanquantlab",
+        "https://www.linkedin.com/in/mohammad-rehan-tech/",
+        "https://x.com/rehanquantlab",
+        "https://quantify17.gumroad.com",
+        "https://rehanquantlab.substack.com",
+        "https://wa.me/917091518548",
+        "https://crunchbase.com/person/mohammad-rehan"
+      ],
+      "worksFor": {
+        "@id": "https://rehanquantlab.com/#organization"
+      }
+    },
+    {
       "@type": "Organization",
-      "name": "Rehan Quant Lab",
-      "url": "https://quantify17.gumroad.com/l/rql-documentshield",
-      "logo": "https://rehanquantlab.com/og_preview.png",
+      "@id": "https://rehanquantlab.com/#organization",
+      "name": "Rehan Quant Lab™",
+      "legalName": "Rehan Quant Lab",
+      "url": "https://rehanquantlab.com",
+      "logo": "https://rehanquantlab.com/logo.jpg",
+      "founder": {
+        "@id": "https://rehanquantlab.com/#mohammad-rehan"
+      },
+      "foundingDate": "2024",
+      "description": "Sovereign computing research lab and commercial software vendor engineering bare-metal, air-gapped, zero-telemetry desktop workstations in pure native Rust.",
       "sameAs": [
         "https://quantify17.gumroad.com",
+        "https://github.com/rehanquantlab",
         "https://www.linkedin.com/company/rehanquantlab",
         "https://x.com/rehanquantlab",
         "https://rehanquantlab.substack.com"
-      ]
-    },
-    "sameAs": [
-      "https://quantify17.gumroad.com",
-      "https://www.linkedin.com/in/mohammad-rehan-tech/",
-      "https://x.com/rehanquantlab",
-      "https://rehanquantlab.substack.com",
-      "https://wa.me/917091518548"
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RQL DocumentShield™ — Enterprise Forensic PDF Redactor & Metadata Removal Software",
-    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-    "applicationCategory": "SecurityApplication",
-    "applicationSubCategory": "Point of Sale (POS) & Retail Inventory",
-    "softwareVersion": "2.0.0-PROD",
-    "description": "Enterprise Forensic PDF Redactor & Deep Metadata Removal Software: True destructive vector burn, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.",
-    "offers": {
-      "@type": "Offer",
-      "price": "179.00",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2030-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://quantify17.gumroad.com/l/rql-documentshield"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "28"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Mohammad Rehan"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Sovereign Commercial Software Workstations",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL DocumentShield™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "SecurityApplication"
+            },
+            "price": "179.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-documentshield"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL WhisperVault™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "MultimediaApplication"
+            },
+            "price": "149.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-whispervault"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL Sovereign Retail POS™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "BusinessApplication"
+            },
+            "price": "169.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-retailpos"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL StoreChain™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "BusinessApplication"
+            },
+            "price": "299.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-storechain"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL Conduit™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "UtilitiesApplication"
+            },
+            "price": "129.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-conduit"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL HashCheck™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "UtilitiesApplication"
+            },
+            "price": "39.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-hashcheck"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL QRStudio™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "DesignApplication"
+            },
+            "price": "79.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-qrstudio"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "SoftwareApplication",
+              "name": "RQL PortVault™",
+              "operatingSystem": "Windows 10, Windows 11",
+              "applicationCategory": "SecurityApplication"
+            },
+            "price": "59.00",
+            "priceCurrency": "USD",
+            "url": "https://quantify17.gumroad.com/l/rql-portvault"
+          }
+        ]
+      }
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RQL Retail Suite™ — Complete Offline Retail Master Bundle",
-    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-    "applicationCategory": "SecurityApplication",
-    "softwareVersion": "2.0.0-PROD",
-    "description": "Complete 7-application sovereign desktop workstation suite for retail stores: POS billing, thermal barcode printing, multi-counter LAN mesh, inventory variance audit, and khata customer credit management.",
-    "offers": {
-      "@type": "Offer",
-      "price": "129.00",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2030-12-31",
-      "availability": "https://schema.org/InStock",
-      "url": "https://quantify17.gumroad.com/l/rql-documentshield"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "ratingCount": "19"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Rehan Quant Lab"
-    }
-  }
-]
+  ]
+}
 </script>
 <script src="phoenix_sentinel.js"></script>
 <!-- Rust WASM Engine, Three.js, GSAP & Confetti -->
@@ -231,6 +309,13 @@ img, svg, video, canvas, audio, iframe, embed, object {
     <link rel="dns-prefetch" href="https://quantify17.gumroad.com">
     <link rel="preconnect" href="https://assets.gumroad.com" crossorigin>
   <script src="rql_seo_engine.js" defer></script>
+
+<link rel="me" href="https://github.com/rehanquantlab" />
+<link rel="me" href="https://www.linkedin.com/in/mohammad-rehan-tech/" />
+<link rel="me" href="https://x.com/rehanquantlab" />
+<link rel="me" href="https://quantify17.gumroad.com" />
+<link rel="me" href="https://rehanquantlab.substack.com" />
+
 </head>
 <body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 <!-- Single Unified Institutional Status & Rotating Announcement Bar (Gumroad Live Banner) -->
@@ -1329,6 +1414,8 @@ Resume (PDF)
 <li><a class="hover:text-slate-900 transition" href="contact.html">Contact &amp; Hire</a></li>
 <li><a class="text-violet-600 font-semibold hover:underline flex items-center gap-1" href="https://quantify17.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer">Affiliate Program (30% Commission) ↗</a></li>
 <li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer">Research (Substack) ↗</a></li>
+<li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="demo.html">Interactive Demos 🚀</a></li>
+<li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="changelog.html">System Changelog &amp; Releases ⚡</a></li>
 <li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="legal.html">Master SaaS Agreement ⚖️</a></li>
 </ul>
 </div>

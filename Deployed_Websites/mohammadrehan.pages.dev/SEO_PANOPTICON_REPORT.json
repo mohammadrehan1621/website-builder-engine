@@ -1,82 +1,82 @@
 {
-  "timestamp": "2026-11-02",
+  "timestamp": "2026-11-03",
   "base_directory": "C:\\Users\\rehan\\Desktop\\Rehan_Quant_Lab\\08_Build_Tools\\Website_RehanQuantLab",
-  "total_html_files": 10,
-  "total_word_count": 8820,
+  "total_html_files": 12,
+  "total_word_count": 9789,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 16,
-      "density_pct": 0.18
-    },
     "offline billing": {
       "keyword": "offline billing",
       "count": 0,
       "density_pct": 0.0
     },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 38,
-      "density_pct": 0.43
-    },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 6,
-      "density_pct": 0.07
-    },
     "lifetime license": {
       "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.03
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 52,
-      "density_pct": 0.59
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 18,
-      "density_pct": 0.2
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 19,
-      "density_pct": 0.22
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 3,
-      "density_pct": 0.03
+      "count": 5,
+      "density_pct": 0.05
     },
     "storeflow": {
       "keyword": "storeflow",
       "count": 1,
       "density_pct": 0.01
     },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 11,
-      "density_pct": 0.12
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 3,
+      "density_pct": 0.03
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 8,
+      "density_pct": 0.08
     },
     "expressbill": {
       "keyword": "expressbill",
       "count": 1,
       "density_pct": 0.01
     },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 13,
+      "density_pct": 0.13
+    },
     "pos software": {
       "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
     },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 21,
+      "density_pct": 0.21
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 18,
+      "density_pct": 0.18
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
       "count": 3,
       "density_pct": 0.03
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 22,
+      "density_pct": 0.22
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 42,
+      "density_pct": 0.43
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 61,
+      "density_pct": 0.62
     }
   },
   "meta_audits": [
@@ -107,12 +107,38 @@
       "findings": []
     },
     {
+      "file": "changelog.html",
+      "title": "changelog &amp; releases | rehan quant lab™",
+      "title_length": 43,
+      "title_valid": true,
+      "description": "official release history and changelog for rehan quant lab. track pure-rust sovereign workstation updates, win32 kernels, and security patches.",
+      "desc_length": 143,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
+    },
+    {
       "file": "contact.html",
       "title": "contact mohammad rehan | founder @ rehan quant lab",
       "title_length": 50,
       "title_valid": true,
       "description": "direct engineering contact and consultation with mohammad rehan, founder and lead systems architect at rehan quant lab.",
       "desc_length": 119,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
+    },
+    {
+      "file": "demo.html",
+      "title": "interactive demos | rehan quant lab™",
+      "title_length": 36,
+      "title_valid": true,
+      "description": "test pure-rust sovereign software directly in your browser. live cryptographic sha-256 hash verifier and permanent vector qr studio.",
+      "desc_length": 132,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -212,8 +238,8 @@
     }
   ],
   "seo_panopticon_score": 100,
-  "verdict": "A+ COMPLIANT",
+  "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 22532
+  "execution_micros": 27939
 }

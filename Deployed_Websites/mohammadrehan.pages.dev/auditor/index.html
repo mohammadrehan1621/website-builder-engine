@@ -5270,7 +5270,11 @@ CORE SUPERPOWER: "Turn any URL into cold physical evidence that sells high-speed
       }
 
       try {
-        const resp = await fetch(`/api/audit?url=${encodeURIComponent(targetUrl)}&competitor_url=${encodeURIComponent(competitorUrl)}`);
+        const resp = await fetch('/api/audit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: targetUrl, competitor_url: competitorUrl })
+        });
         const json = await resp.json();
         if (json && json.competitive_battle) {
           populateBattleData(json.competitive_battle, json.latency_ms, json.ttfb_ms);
