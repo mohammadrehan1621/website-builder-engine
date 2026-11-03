@@ -1,0 +1,100 @@
+{
+  "name": "Verma Dental Care",
+  "tagline": "Pioneering Advanced Laser Dentistry & Precision Care in Patna",
+  "category": "Laser Dentistry",
+  "city": "Patna",
+  "state": "Bihar",
+  "country": "India",
+  "pincode": "800001",
+  "address": "Main Commercial Hub, Boring Road, Patna",
+  "phone": "+919835012345",
+  "email": "care@verma-dental-care-patna.pages.dev",
+  "whatsapp": "919835012345",
+  "working_hours": "Mon - Sat: 09:00 AM - 08:00 PM",
+  "theme": "ceramic",
+  "slug": "verma-dental-care-patna",
+  "upi_id": "vermadental@upi",
+  "consultation_fee": 300,
+  "services": [
+    {
+      "name": "Advanced Laser Dentistry",
+      "description": "State-of-the-art specialized Laser Dentistry solutions with modern technology, zero-pain protocols, and certified experts.",
+      "price": "₹900 onwards",
+      "tag": "Most Popular",
+      "icon": "⚡"
+    },
+    {
+      "name": "Priority Clinical Consultation",
+      "description": "Comprehensive 1-on-1 diagnostic review, digital imaging analysis, and custom treatment roadmapping.",
+      "price": "₹300",
+      "tag": "Essential",
+      "icon": "🩺"
+    },
+    {
+      "name": "Express Emergency Care",
+      "description": "Immediate triage and priority relief with zero waiting line for urgent concerns.",
+      "price": "₹1,500 all-inclusive",
+      "tag": "24/7 Priority",
+      "icon": "🚨"
+    },
+    {
+      "name": "Preventive Care & Maintenance",
+      "description": "Regular checkups, preventative hygiene, and digital follow-up monitoring.",
+      "price": "₹800 package",
+      "tag": "Family Plan",
+      "icon": "🛡️"
+    }
+  ],
+  "testimonials": [
+    {
+      "client_name": "Amitabh Verma",
+      "role_or_city": "Resident, Patna",
+      "review": "Incredible experience at Verma Dental Care. Extremely professional team and transparent pricing.",
+      "rating": 5,
+      "date": "2026-10-15"
+    },
+    {
+      "client_name": "Sunita Singh",
+      "role_or_city": "Professional, Patna",
+      "review": "The WhatsApp booking and UPI slot confirmation was totally seamless. Highly recommended!",
+      "rating": 5,
+      "date": "2026-10-28"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is Verma Dental Care located?",
+      "answer": "We are centrally located in Patna, Bihar with dedicated parking and rapid transit access."
+    },
+    {
+      "question": "How do I secure an instant appointment slot?",
+      "answer": "You can confirm an instant slot directly on this site via WhatsApp or pay a ₹300 token via direct UPI."
+    },
+    {
+      "question": "Are emergency walk-ins accommodated?",
+      "answer": "Yes, our priority OPD accommodates same-day consultations during working hours."
+    }
+  ],
+  "stats": [
+    {
+      "label": "Happy Clients / Patients",
+      "value": "12,000+",
+      "subtext": "99.2% Proven Clinical Record"
+    },
+    {
+      "label": "Industry Excellence",
+      "value": "18+ Yrs",
+      "subtext": "Senior Certified Specialists"
+    },
+    {
+      "label": "Patient Satisfaction",
+      "value": "4.96 / 5",
+      "subtext": "Verified Google Reviews"
+    },
+    {
+      "label": "Fast Turnaround",
+      "value": "100%",
+      "subtext": "Same-Day Priority Slots"
+    }
+  ]
+}

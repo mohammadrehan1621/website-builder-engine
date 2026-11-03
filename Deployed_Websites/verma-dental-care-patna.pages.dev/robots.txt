@@ -1,0 +1,26 @@
+# ====================================================================
+# 🌐 Rehan Quant Lab™ — Search Engine Optimization Directives
+# Generated Deterministically by Bare-Metal Rust Engine on 2026-11-03
+# ====================================================================
+
+User-agent: *
+Allow: /
+
+# Sitemap Index Declaration
+Sitemap: https://verma-dental-care-patna.pages.dev/sitemap.xml
+
+# Friendly Bot Optimizations
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
