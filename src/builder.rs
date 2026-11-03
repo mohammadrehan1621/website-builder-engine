@@ -1023,13 +1023,55 @@ impl WebsiteCompiler {
   </div>
 
   <script>
-    // Booking Form Submission Flow
+    // Booking Form Submission Flow (Phoenix WAL & Edge Dispatch)
     const bForm = document.getElementById('appointmentForm');
     if (bForm) {{
       bForm.addEventListener('submit', function(e) {{
         e.preventDefault();
-        const conf = document.getElementById('bookingConfirmation');
-        if (conf) conf.style.display = 'block';
+        const pName = document.getElementById('patientName') ? document.getElementById('patientName').value.trim() : 'Patient';
+        const pPhone = document.getElementById('patientPhone') ? document.getElementById('patientPhone').value.trim() : '';
+        const pTreatment = document.getElementById('patientTreatment') ? document.getElementById('patientTreatment').value : 'Consultation';
+        const pNotes = document.getElementById('patientNotes') ? document.getElementById('patientNotes').value.trim() : '';
+
+        const record = {{
+          type: 'APPOINTMENT_REQUEST',
+          slug: '{slug}',
+          business_name: '{bus_name}',
+          clinic_phone: '{phone}',
+          patient_name: pName,
+          patient_phone: pPhone,
+          service: pTreatment,
+          amount: '0',
+          notes: pNotes,
+          timestamp: new Date().toISOString()
+        }};
+
+        // Local Phoenix WAL backup
+        try {{
+          const walKey = 'rql_phoenix_contact_wal_v3';
+          const existing = JSON.parse(localStorage.getItem(walKey) || '[]');
+          existing.push(record);
+          localStorage.setItem(walKey, JSON.stringify(existing));
+        }} catch (err) {{}}
+
+        // Cloudflare Edge Lead Dispatcher
+        fetch('/api/lead_dispatch', {{
+          method: 'POST',
+          headers: {{ 'Content-Type': 'application/json' }},
+          body: JSON.stringify(record)
+        }}).then(r => r.json()).then(data => {{
+          const conf = document.getElementById('bookingConfirmation');
+          if (conf && data && data.doctor_whatsapp_url) {{
+            conf.innerHTML = '✓ Priority Appointment Registered!<br><a href="' + data.doctor_whatsapp_url + '" target="_blank" style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; background:#059669; color:#ffffff; padding:8px 16px; border-radius:8px; font-weight:bold; font-size:12px; text-decoration:none;">📲 Alert Clinic Doctor on WhatsApp Immediately →</a>';
+            conf.style.display = 'block';
+          }} else if (conf) {{
+            conf.style.display = 'block';
+          }}
+        }}).catch(() => {{
+          const conf = document.getElementById('bookingConfirmation');
+          if (conf) conf.style.display = 'block';
+        }});
+
         bForm.reset();
       }});
     }}
@@ -1204,10 +1246,13 @@ impl WebsiteCompiler {
       const record = {{
         type: 'UPI_TOKEN_PAYMENT',
         slug: upiSlug,
+        business_name: upiBusName,
+        clinic_phone: '{phone}',
         amount: upiAmount,
         utr: utr || ('WAL-TX-' + Date.now().toString(36)),
         patient_name: pName,
         patient_phone: pPhone,
+        service: 'Instant Priority OPD Token',
         timestamp: new Date().toISOString()
       }};
 
@@ -1218,9 +1263,25 @@ impl WebsiteCompiler {
         localStorage.setItem(walKey, JSON.stringify(existing));
       }} catch (e) {{}}
 
-      const msg = document.getElementById('upiSuccessMsg');
-      if (msg) msg.style.display = 'block';
-      setTimeout(() => {{ closeUpiModal(); }}, 2500);
+      // Dispatch to Edge Lead Gateway
+      fetch('/api/lead_dispatch', {{
+        method: 'POST',
+        headers: {{ 'Content-Type': 'application/json' }},
+        body: JSON.stringify(record)
+      }}).then(r => r.json()).then(data => {{
+        const msg = document.getElementById('upiSuccessMsg');
+        if (msg && data && data.doctor_whatsapp_url) {{
+          msg.innerHTML = '🎉 Token Stamped in Phoenix WAL!<br><a href="' + data.doctor_whatsapp_url + '" target="_blank" style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; background:#059669; color:#ffffff; padding:8px 16px; border-radius:8px; font-weight:bold; font-size:12px; text-decoration:none;">📲 Send UTR Receipt to Doctor on WhatsApp →</a>';
+          msg.style.display = 'block';
+        }} else if (msg) {{
+          msg.style.display = 'block';
+          setTimeout(() => {{ closeUpiModal(); }}, 2500);
+        }}
+      }}).catch(() => {{
+        const msg = document.getElementById('upiSuccessMsg');
+        if (msg) msg.style.display = 'block';
+        setTimeout(() => {{ closeUpiModal(); }}, 2500);
+      }});
     }}
   </script>
 </body>

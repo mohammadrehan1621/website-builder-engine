@@ -583,5 +583,10 @@ impl SeoEngine {
             || l.starts_with("intent:")
             || l.starts_with("javascript:")
             || l.starts_with("data:")
+            || l.starts_with('\'')
+            || l.starts_with('"')
+            || l.starts_with("blob:")
+            || l.contains("data.")
+            || l.contains('+')
     }
 }

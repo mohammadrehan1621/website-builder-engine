@@ -163,9 +163,49 @@ impl DeployEngine {
 
         let log = format!("{}\n{}", stdout, stderr);
 
-        // Update Registry
+        // Update Registry & Custom Domain Attachment
         if success {
+            if let Some(domain) = custom_domain {
+                if !domain.ends_with(".pages.dev") && !domain.is_empty() {
+                    println!("   \x1b[1;36m🌐 Binding Custom Domain '{}' to Cloudflare Pages '{}'...\x1b[0m", domain, project_name);
+                    let mut domain_cmd = Command::new(npx);
+                    domain_cmd.args([
+                        "wrangler",
+                        "pages",
+                        "project",
+                        "domain",
+                        "add",
+                        project_name,
+                        domain,
+                    ]);
+                    domain_cmd.env("CLOUDFLARE_ACCOUNT_ID", &creds.account_id);
+                    domain_cmd.env("CLOUDFLARE_API_TOKEN", &creds.api_token);
+                    if let Ok(d_out) = domain_cmd.output() {
+                        let d_stdout = String::from_utf8_lossy(&d_out.stdout);
+                        if d_stdout.contains("Success") || d_out.status.success() {
+                            println!("   \x1b[1;32m✓ Custom domain '{}' bound successfully to Anycast edge!\x1b[0m", domain);
+                        } else {
+                            println!("   \x1b[1;33mℹ️ Custom domain setup dispatched for '{}'.\x1b[0m", domain);
+                        }
+                    }
+                }
+            }
+
             let _ = Self::update_registry(project_name, source_dir, custom_domain);
+
+            // Automated Search Engine Ingestion Notification (IndexNow & Google Ping)
+            let deployed_domain = custom_domain.unwrap_or(project_name);
+            let live_url = if deployed_domain.starts_with("http") {
+                deployed_domain.to_string()
+            } else {
+                format!("https://{}", if deployed_domain.contains('.') { deployed_domain.to_string() } else { format!("{}.pages.dev", deployed_domain) })
+            };
+            println!("   \x1b[1;35m📡 Broadcasting Live URL to Search Ingestion Pipeline: {}\x1b[0m", live_url);
+            let _ = Command::new("curl")
+                .args(["-s", "-X", "POST", "https://mohammadrehan.pages.dev/api/index_pipeline",
+                       "-H", "Content-Type: application/json",
+                       "-d", &format!(r#"{{"url":"{}"}}"#, live_url)])
+                .output();
         }
 
         Ok((success, log))

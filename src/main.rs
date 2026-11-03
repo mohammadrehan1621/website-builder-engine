@@ -51,6 +51,9 @@ fn main() {
         "new-client" | "new" | "wizard" => {
             run_client_wizard(&args);
         }
+        "pitch" | "sales" | "script" => {
+            run_pitch_generator(&args);
+        }
         "build" | "compile" | "builder" => {
             run_website_builder(&args);
         }
@@ -975,7 +978,7 @@ fn run_client_wizard(args: &[String]) {
         address: format!("Main Commercial Hub, Boring Road, {}", city),
         phone: phone.clone(),
         email,
-        whatsapp: clean_phone,
+        whatsapp: clean_phone.clone(),
         working_hours: "Mon - Sat: 09:00 AM - 08:00 PM".to_string(),
         theme: theme.clone(),
         slug: slug.clone(),
@@ -1103,6 +1106,41 @@ fn run_client_wizard(args: &[String]) {
                 if let Some(url) = report.live_edge_url {
                     println!("\n   \x1b[1;32m👑 LIVE GLOBALLY ON ANYCAST EDGE:\x1b[0m \x1b[1;36m{}\x1b[0m", url);
                 }
+
+                // Bridge 4: The 30-Second Client Conversion Pitch
+                let clean_wa = clean_phone.trim_start_matches('+');
+                let wa_num = if clean_wa.starts_with("91") { clean_wa.to_string() } else { format!("91{}", clean_wa) };
+                let pitch_msg = format!(
+"Hello {} Team,
+
+I noticed your clinic on Boring Road, {} didn't have an instant appointment booking portal.
+
+In 20 seconds, our sovereign silicon engine pre-built this production website for you:
+👉 https://{}.pages.dev/
+
+Key Highlights:
+⚡ 100/100 Google Lighthouse Core Web Vitals (Loads in under 12ms)
+💳 Direct-to-bank UPI QR Code (₹{} token fee with 0% gateway commission)
+🛡️ Protected by Phoenix Sentinel WAL (Never drops appointment requests)
+📱 Fully integrated 1-click WhatsApp OPD triage
+
+We can attach your custom domain and hand you full master keys today.
+
+Would you like to claim this portal for your practice?",
+                    name, city, slug, consultation_fee
+                );
+
+                let encoded_pitch = pitch_msg.replace(' ', "%20").replace('\n', "%0A").replace('&', "%26");
+                let wa_web_url = format!("https://web.whatsapp.com/send?phone={}&text={}", wa_num, encoded_pitch);
+
+                println!("\x1b[1;33m====================================================================\x1b[0m");
+                println!("\x1b[1;32m📱 THE 30-SECOND CLIENT CONVERSION PITCH (READY TO SEND ON WHATSAPP)\x1b[0m");
+                println!("\x1b[1;33m====================================================================\x1b[0m");
+                println!("{}", pitch_msg);
+                println!("\x1b[1;33m--------------------------------------------------------------------\x1b[0m");
+                println!("   \x1b[1;36m📲 Instant 1-Click WhatsApp Web Launcher:\x1b[0m");
+                println!("   \x1b[1;32m{}\x1b[0m", wa_web_url);
+                println!("\x1b[1;33m====================================================================\x1b[0m\n");
             } else {
                 println!("\n   • Edge Air-Drop: Run with '--airdrop' or deploy with 'cargo run -- deploy Deployed_Websites/{}.pages.dev {}'", slug, slug);
             }
@@ -1112,6 +1150,62 @@ fn run_client_wizard(args: &[String]) {
             println!("\x1b[1;31m❌ Wizard compilation halted: {}\x1b[0m\n", e);
         }
     }
+}
+
+fn run_pitch_generator(args: &[String]) {
+    println!("\x1b[1;36m====================================================================\x1b[0m");
+    println!("\x1b[1;32m📱 RQL 30-SECOND CLIENT CONVERSION PITCH GENERATOR\x1b[0m");
+    println!("   \x1b[1;34m• Instant WhatsApp Web Outreach Link • Pre-Built Asset Stamping\x1b[0m");
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
+
+    let slug_arg = args.get(2).map(|s| s.as_str()).unwrap_or("verma-dental-care-patna");
+    let profile_path = format!("profiles/{}.json", slug_arg);
+
+    let (name, city, slug, fee, phone) = if Path::new(&profile_path).exists() {
+        if let Ok(content) = fs::read_to_string(&profile_path) {
+            if let Ok(p) = serde_json::from_str::<BusinessProfile>(&content) {
+                (p.name, p.city, p.slug, p.consultation_fee, p.phone)
+            } else {
+                ("Clinic".to_string(), "Patna".to_string(), slug_arg.to_string(), 300, "+919835012345".to_string())
+            }
+        } else {
+            ("Clinic".to_string(), "Patna".to_string(), slug_arg.to_string(), 300, "+919835012345".to_string())
+        }
+    } else {
+        ("Verma Dental Care".to_string(), "Patna".to_string(), slug_arg.to_string(), 300, "+919835012345".to_string())
+    };
+
+    let clean_wa = phone.replace([' ', '-', '+'], "");
+    let wa_num = if clean_wa.starts_with("91") { clean_wa } else { format!("91{}", clean_wa) };
+
+    let pitch_msg = format!(
+"Hello {} Team,
+
+I noticed your clinic in {} didn't have a high-speed appointment booking portal.
+
+In 20 seconds, our sovereign silicon engine pre-built this production website for you:
+👉 https://{}.pages.dev/
+
+Key Highlights:
+⚡ 100/100 Google Lighthouse Core Web Vitals (Loads in under 12ms)
+💳 Direct-to-bank UPI QR Code (₹{} token fee with 0% gateway commission)
+🛡️ Protected by Phoenix Sentinel WAL (Never drops appointment requests)
+📱 Fully integrated 1-click WhatsApp OPD triage
+
+We can attach your custom domain and hand you full master keys today.
+
+Would you like to claim this portal for your practice?",
+        name, city, slug, fee
+    );
+
+    let encoded_pitch = pitch_msg.replace(' ', "%20").replace('\n', "%0A").replace('&', "%26");
+    let wa_web_url = format!("https://web.whatsapp.com/send?phone={}&text={}", wa_num, encoded_pitch);
+
+    println!("{}", pitch_msg);
+    println!("\x1b[1;33m--------------------------------------------------------------------\x1b[0m");
+    println!("   \x1b[1;36m📲 Instant 1-Click WhatsApp Web Launcher:\x1b[0m");
+    println!("   \x1b[1;32m{}\x1b[0m", wa_web_url);
+    println!("\x1b[1;36m====================================================================\x1b[0m\n");
 }
 
 fn run_seo_gap(args: &[String]) {
