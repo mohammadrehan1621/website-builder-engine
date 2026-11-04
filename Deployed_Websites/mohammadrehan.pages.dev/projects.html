@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 
 
@@ -924,7 +924,7 @@ Resume (PDF)
       </h3>
 
       <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-        Explore <strong>RQL HashCheck&trade;</strong>, <strong>RQL QRStudio&trade;</strong>, <strong>RQL Conduit&trade;</strong>, <strong>RQL DocumentShield&trade;</strong>, <strong>RQL WhisperVault&trade;</strong>, <strong>RQL Sovereign Retail POS&trade;</strong>, and <strong>RQL StoreChain&trade;</strong> on our dedicated commercial store tab with instant Gumroad delivery.
+        Explore <strong>RQL DocumentShield&trade;</strong>, <strong>RQL WhisperVault&trade;</strong>, <strong>RQL TextDiff&trade;</strong>, <strong>RQL Sovereign Retail POS&trade;</strong>, <strong>RQL StoreChain&trade;</strong>, <strong>RQL Conduit&trade;</strong>, <strong>RQL HashCheck&trade;</strong>, and <strong>RQL QRStudio&trade;</strong> on our dedicated commercial store tab with instant Gumroad delivery.
       </p>
     </div>
 
@@ -1045,596 +1045,294 @@ Resume (PDF)
 
 
 
-<p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6">Explore our 7 flagship 100% pure native Rust desktop software suites: permanent vector QR &amp; custom barcode design, cryptographic checksum verification, offline internet channel bonding, confidential document redaction, offline AI speech intelligence, air-gapped retail POS billing, and 5-till LocalMesh LAN store chains.</p>
+<p class="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6">Explore the systems engineering, algorithmic invariants, and production implementations behind Rehan Quant Lab. All 8 commercial desktop workstations are engineered with 100% pure native Rust, zero cloud telemetry, sub-millisecond execution times, and lifetime binary ownership.</p>
 
-
-
-
-
-
-
-<!-- Project Filter Buttons -->
-<div class="flex flex-wrap justify-center gap-2">
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5 btn-spring cursor-pointer" data-filter="all" onclick="filterProjects('all', this)">
-    <i class="w-3.5 h-3.5" data-lucide="layout-grid"></i>
-    <span>All Flagships (7)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="security" onclick="filterProjects('security', this)">
-    <i class="w-3.5 h-3.5 text-rose-600" data-lucide="shield-check"></i>
-    <span>Forensic Redaction &amp; Security (1)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="ai" onclick="filterProjects('ai', this)">
-    <i class="w-3.5 h-3.5 text-sky-600" data-lucide="mic"></i>
-    <span>Offline AI &amp; Speech (1)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="retail" onclick="filterProjects('retail', this)">
-    <i class="w-3.5 h-3.5 text-amber-600" data-lucide="shopping-cart"></i>
-    <span>Retail POS &amp; LAN StoreChain (2)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="crypto" onclick="filterProjects('crypto', this)">
+<!-- Systems Architecture Navigation Anchor Bar -->
+<div class="flex flex-wrap justify-center gap-2 mb-4">
+  <a href="#systems-matrix" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 text-white shadow-sm transition flex items-center gap-1.5 btn-spring">
+    <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="cpu"></i>
+    <span>Systems Architecture Matrix (8)</span>
+  </a>
+  <a href="#case-studies" class="px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shield-check"></i>
+    <span>Operational Case Studies (2)</span>
+  </a>
+  <a href="#rust-engines" class="px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
+    <i class="w-3.5 h-3.5 text-amber-600" data-lucide="zap"></i>
+    <span>Sub-Millisecond Rust Engines</span>
+  </a>
+  <a href="#invariants" class="px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5">
     <i class="w-3.5 h-3.5 text-sky-600" data-lucide="binary"></i>
-    <span>Cryptographic Verifier (1)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="bonding" onclick="filterProjects('bonding', this)">
-    <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="network"></i>
-    <span>Internet Bonding &amp; Failover (1)</span>
-</button>
-<button class="project-filter-btn filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition flex items-center gap-1.5 cursor-pointer" data-filter="vector" onclick="filterProjects('vector', this)">
-    <i class="w-3.5 h-3.5 text-violet-600" data-lucide="qr-code"></i>
-    <span>Vector &amp; QR Studio (1)</span>
-</button>
+    <span>Mathematical Invariants</span>
+  </a>
+  <a href="store.html" class="px-4 py-2 rounded-xl text-xs font-semibold bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100 transition flex items-center gap-1.5 font-bold">
+    <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+    <span>Commercial Store &rarr;</span>
+  </a>
 </div>
 </div>
 </section>
 
+<!-- Systems Architecture & Technical Invariants Directory -->
+<section class="py-12 sm:py-16 bg-slate-50 border-b border-slate-200" id="systems-matrix">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-bold mb-2">
+          <span>ðŸ›ï¸ Pure-Rust Silicon &amp; Local Operating Systems</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
+          Systems Architecture &amp; Engineering Matrix
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed">
+          Technical specifications, cryptographic guarantees, and isolation boundaries of our 8 deterministic software engines.
+        </p>
+      </div>
+      <div class="shrink-0">
+        <a href="store.html" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition shadow-2xs">
+          <span>Commercial Store Setup</span>
+          <span class="text-emerald-400 font-bold">&rarr;</span>
+        </a>
+      </div>
+    </div>
 
+    <!-- 8 Engineering System Cards (Clean Responsive Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-<!-- Projects Grid Section -->
-<section class="py-10 sm:py-14 bg-slate-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- SYSTEM 1: RQL DocumentShieldâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200 font-bold">Flagship 01</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL DocumentShield&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Forensic PDF Redactor &amp; Deep Metadata Purge: True destructive vector burn, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Memory:</strong> &lt; 24MB Resident</div>
+            <div>â€¢ <strong class="text-slate-700">Audit:</strong> Court-Admissible SHA-256</div>
+            <div>â€¢ <strong class="text-slate-700">Telemetry:</strong> 100% Air-Gapped</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">HIPAA / GDPR</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
 
-  <!-- FLAGSHIP 1: RQL DocumentShieldâ„¢ -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-rose-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="security forensic">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 text-rose-700 text-xs font-semibold border border-rose-400/40 font-mono">
+      <!-- SYSTEM 2: RQL WhisperVaultâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200 font-bold">Flagship 02</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL WhisperVault&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Air-Gapped AI Voice Intelligence &amp; Meeting Transcription OS: Powered by local Whisper ONNX inference with word-level SRT/VTT subtitle generation.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Inference:</strong> AVX2 CPU Local ONNX</div>
+            <div>â€¢ <strong class="text-slate-700">Subtitles:</strong> Millisecond SRT / VTT</div>
+            <div>â€¢ <strong class="text-slate-700">Telemetry:</strong> Zero Cloud API Keys</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">Offline AI</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 3: RQL Sovereign Retail POSâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200 font-bold">Flagship 03</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL Sovereign Retail POS&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Offline Single-Store POS &amp; Inventory Billing OS: Sub-0.4s barcode scanning, native ESC/POS thermal receipts, and atomic SQLite WAL shift ledger.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Latency:</strong> &lt; 0.4s Receipt Print</div>
+            <div>â€¢ <strong class="text-slate-700">Storage:</strong> Double-Entry SQLite WAL</div>
+            <div>â€¢ <strong class="text-slate-700">Hardware:</strong> Direct ESC/POS Driver</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <a href="#case-study-patna" class="text-[11px] font-mono text-indigo-600 hover:underline">Patna Field Case</a>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 4: RQL StoreChainâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-orange-50 text-orange-700 border border-orange-200 font-bold">Flagship 04</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL StoreChain&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            5-Till LocalMesh LAN Distributed Retail OS: Peer-to-peer inventory synchronization and distributed checkout with zero cloud subscription fees.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Topology:</strong> 5-Till Local Wi-Fi Mesh</div>
+            <div>â€¢ <strong class="text-slate-700">Sync:</strong> Zero-Cloud LAN Replication</div>
+            <div>â€¢ <strong class="text-slate-700">Fault:</strong> Automatic Offline Partition</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <a href="#case-study-patna" class="text-[11px] font-mono text-indigo-600 hover:underline">Patna Field Case</a>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 5: RQL Conduitâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-700 border border-cyan-200 font-bold">Flagship 05</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL Conduit&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Offline Internet Bonding &amp; Failover Multiplexer: Seamlessly combines fiber and 4G/5G cellular channels with zero dropped socket connections.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Switching:</strong> Sub-Millisecond Ping Probing</div>
+            <div>â€¢ <strong class="text-slate-700">Bonding:</strong> Dual Socket Striping</div>
+            <div>â€¢ <strong class="text-slate-700">Telemetry:</strong> 100% On-Premises</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">Zero Dropped TCP</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 6: RQL HashCheckâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-200 font-bold">Flagship 06</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL HashCheck&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            SIMD Cryptographic Checksum Engine: High-throughput SHA-256, SHA-512, MD5, and BLAKE3 integrity validation with zero memory leakage.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Throughput:</strong> 14.8 GB/s SIMD Stream</div>
+            <div>â€¢ <strong class="text-slate-700">Algorithms:</strong> SHA2/BLAKE3/MD5/CRC32</div>
+            <div>â€¢ <strong class="text-slate-700">Collision:</strong> Bit-Accurate Detection</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">Deterministic</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 7: RQL QRStudioâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-violet-50 text-violet-700 border border-violet-200 font-bold">Flagship 07</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL QRStudio&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Permanent Offline Vector QR &amp; Barcode Studio: Infinite-resolution vector SVG/EPS/PDF generation with pure geometric algorithms and zero URL redirects.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Resolution:</strong> Lossless Vector SVG / EPS</div>
+            <div>â€¢ <strong class="text-slate-700">Standards:</strong> ISO/IEC 18004 Compliant</div>
+            <div>â€¢ <strong class="text-slate-700">Expiry:</strong> Permanent Direct Payload</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">No Dynamic Links</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SYSTEM 8: RQL TextDiffâ„¢ -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 border border-indigo-200 font-bold">Flagship 08</span>
+            <span class="text-slate-400">Pure Rust</span>
+          </div>
+          <h3 class="font-bold font-heading text-slate-900 text-base">RQL TextDiff&trade;</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Sovereign Offline Visual File &amp; Code Comparator: Sub-millisecond Myers vector diff, character-level alteration tracking, and court-admissible audit reports.
+          </p>
+          <div class="pt-2 border-t border-slate-100 space-y-1 text-[11px] font-mono text-slate-500">
+            <div>â€¢ <strong class="text-slate-700">Algorithm:</strong> Myers Graph Vector Diff</div>
+            <div>â€¢ <strong class="text-slate-700">Granularity:</strong> Sub-Token Character Level</div>
+            <div>â€¢ <strong class="text-slate-700">Export:</strong> Audit-Grade Legal Reports</div>
+          </div>
+        </div>
+        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-emerald-600 font-semibold">Myers Algorithm</span>
+          <a href="store.html" class="text-xs font-bold font-mono text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+            <span>Store Spec</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Commercial Store Single Source of Truth Callout Banner -->
+    <div class="mt-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-850 to-indigo-950 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono font-bold">
           <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-          Pure-Rust Forensic Desktop OS
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline</span>
+          <span>Commercial Single Source of Truth</span>
         </div>
+        <h3 class="text-2xl sm:text-3xl font-black font-heading tracking-tight text-white">
+          Acquire Commercial Licenses in Sovereign Store
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          Need 1-click Windows Setup Wizards (<code class="bg-slate-800 px-1.5 py-0.5 rounded text-slate-300 font-mono text-xs">Setup.exe</code>), desktop shortcuts, perpetual machine licenses, or founder VIP onboarding? Commercial orders are fulfilled through our verified Gumroad storefront.
+        </p>
       </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="18_RQL_DocumentShield_Cover_1080p.png" alt="RQL DocumentShieldâ„¢ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Forensic OS v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-rose-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          HIPAA &amp; GDPR
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-              <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
-              <span class="shrink-0 text-slate-400">Air-Gapped OS</span>
-            </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL DocumentShield&trade;</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Enterprise Forensic PDF Redactor &amp; Deep Metadata Removal Software: True destructive vector burn, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate. 100% offline local execution with zero cloud telemetry.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>True Destructive Vector &amp; Text Purge (No hidden layers)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Automated SSN, Tax EIN, Card &amp; Phone Scanner</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Court-Admissible SHA-256 Compliance Certificate</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-rose-50/70 border border-rose-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Single Workstation Commercial License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$179 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;14,900</span></div>
-          <div class="text-[10px] font-mono text-rose-700 mt-1 font-semibold">⚡ Replaces Adobe Pro ($288/yr) &bull; Save $685+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20DocumentShield%E2%84%A2%20Commercial%20License%20($179%20USD%20/%20%E2%82%B914,900).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Commercial License Direct Founder Onboarding WhatsApp VIP">
-          <span>Source Code VIP</span>
+      <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+        <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm font-heading shadow-lg hover:shadow-rose-600/20 transition hover:scale-102">
+          <span>Open Commercial Store (8 Flagships)</span>
+          <span class="font-mono text-base">&rarr;</span>
         </a>
       </div>
     </div>
+
   </div>
-
-  <!-- FLAGSHIP 2: RQL WhisperVaultâ„¢ -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-sky-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="ai voice speech">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 text-sky-700 text-xs font-semibold border border-sky-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
-          Pure-Rust AI Speech Intelligence OS
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline AI</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="19_RQL_WhisperVault_Cover_1080p.png" alt="RQL WhisperVaultâ„¢ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          AI Speech OS v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-sky-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Zero Cloud Uploads
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-              <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
-              <span class="shrink-0 text-slate-400">Air-Gapped OS</span>
-            </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL WhisperVault&trade;</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Offline AI Speech Recognition &amp; Meeting Transcription Software: Local speech-to-text intelligence for attorneys, physicians, corporate executives, and content creators. Word-level subtitles and executive PDF reports with zero cloud telemetry.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>100% Offline Local Whisper AI (Zero Cloud Telemetry)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Millisecond Word-Level Subtitles (.SRT / .VTT)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Executive PDF Meeting Summaries &amp; SHA-256 Hash Vault</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Single Workstation Professional License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$149 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;12,450</span></div>
-          <div class="text-[10px] font-mono text-sky-700 mt-1 font-semibold">⚡ Replaces Otter.ai ($204/yr) &bull; Save $463+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-whispervault" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20WhisperVault%E2%84%A2%20Commercial%20License%20($149%20USD%20/%20%E2%82%B912,450).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Commercial License Direct Founder Onboarding WhatsApp VIP">
-          <span>Source Code VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 3: RQL Sovereign Retail POS™ -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-amber-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="retail pos single">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 text-xs font-semibold border border-amber-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-          Pure-Rust Retail Billing OS
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline POS</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="RetailPOS_Cover_1080p.png" alt="RQL Sovereign Retail POS™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Retail POS v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-amber-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Air-Gapped Vault
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-              <span class="text-amber-700 font-bold truncate">RQL_RetailPOS_Master_Setup.exe</span>
-              <span class="shrink-0 text-slate-400">Air-Gapped POS</span>
-            </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL Sovereign Retail POS™</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        High-Speed Offline Retail Point-of-Sale &amp; Inventory Ledger Engine: Sub-millisecond barcode checkout, 80mm/58mm thermal receipt printing, SQLite WAL double-entry ledger, and zero monthly subscriptions.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Sub-Second Barcode Checkout &amp; Split Payment Tender</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Hardware ESC/POS 80mm &amp; 58mm Thermal Bill Generation</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Double-Entry SQLite WAL Ledger &amp; Shift Audits (X/Z Reports)</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Single Workstation Commercial License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$169 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;14,000</span></div>
-          <div class="text-[10px] font-mono text-amber-700 mt-1 font-semibold">⚡ Replaces POS SaaS ($240/yr) &bull; Save $551+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-retailpos" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20Sovereign%20Retail%20POS%E2%84%A2%20Single%20Store%20License%20($169%20USD%20/%20%E2%82%B914,000).%20Please%20assist%20with%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Single Store Commercial License WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 4: RQL StoreChain™ -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-orange-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="retail pos chain network">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-500/10 text-orange-700 text-xs font-semibold border border-orange-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-          Multi-Counter LAN &amp; Branch Suite
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">5-Till LAN Mesh</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="StoreChain_Cover_1080p.png" alt="RQL StoreChain™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          StoreChain v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-orange-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Sub-1ms LAN Mesh
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-              <span class="text-orange-700 font-bold truncate">RQL_StoreChain_Master_Setup.exe</span>
-              <span class="shrink-0 text-slate-400">Air-Gapped Network</span>
-            </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL StoreChain™</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Multi-Counter LAN &amp; Distributed Branch POS Suite: Connect up to 5 checkout registers over local in-store Wi-Fi/LAN without internet, with SHA-256 Merkle chain branch reconciliation.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>5-Till LocalMesh In-Store LAN (Sub-1ms, Zero Internet)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-Branch Store-and-Forward Merkle Chain Sync</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Consolidated Multi-Counter Store Z-Reports &amp; Audits</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-orange-50/70 border border-orange-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">5-Counter LAN &amp; Multi-Branch License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$299 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;24,999</span></div>
-          <div class="text-[10px] font-mono text-slate-500 mt-1">5-Till LAN License &bull; Multi-Branch Chain Sync &bull; Zero Monthly SaaS Rent</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-storechain" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20StoreChain%E2%84%A2%20Multi-Counter%20LAN%20Suite%20($299%20USD%20/%20%E2%82%B924,999).%20Please%20assist%20with%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Multi-Counter 5-Till Suite WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 5: RQL Conduit™ (Offline Internet Bonding & Failover) -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-cyan-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="bonding network">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-700 text-xs font-semibold border border-cyan-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
-          Pure-Rust Network Bonding OS
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="Conduit_Cover_1080p.png" alt="RQL Conduit™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Bonding OS v2.0
-        </div>
-        <div class="absolute top-3 right-3 bg-cyan-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Zero-Cloud VPN
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-              <span class="text-cyan-700 font-bold truncate">RQL_Conduit_Master_Setup.exe</span>
-              <span class="shrink-0 text-slate-400">Bonding &amp; Failover</span>
-            </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL Conduit™</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Offline Internet Channel Bonding &amp; Automatic Failover Software: Combines Wi-Fi, Ethernet, and Mobile Hotspot simultaneously for unbreakable connection stability. 100% offline with zero cloud VPN routing.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-WAN Channel Bonding &amp; Aggregation (Sub-1ms Failover)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>100% Local-First: Zero Cloud VPN Servers, Zero Third-Party Telemetry</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Lightweight Native Rust Kernel with Live Adapter Bandwidth Telemetry</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-cyan-50/70 border border-cyan-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">4 Perpetual License Tiers Available</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$129 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;10,750</span></div>
-          <div class="text-[10px] font-mono text-cyan-700 mt-1 font-semibold">⚡ Replaces Speedify ($180/yr) &bull; Save $411+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-conduit" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20Conduit%E2%84%A2%20Multi-WAN%20Bonding%20License%20($129%20USD%20/%20%E2%82%B910,750).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="Developer Edition ($699 USD) WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 6: RQL HashCheck™ (Offline Cryptographic Checksum Verifier) -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-sky-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="crypto security">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 text-sky-700 text-xs font-semibold border border-sky-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
-          Pure-Rust Cryptographic Verifier
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="HashCheck_Cover_1080p.png" alt="RQL HashCheck™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Verifier v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          SHA-256 / SHA-512 / MD5
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-        <span class="text-sky-700 font-bold truncate">RQL_HashCheck_Master_Setup.exe</span>
-        <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">100% Offline Pure Rust</span>
-      </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL HashCheck™</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Offline Cryptographic Checksum &amp; Integrity Verifier: Drop any file in, paste the verification hash, and know in 1 second if it's authentic or corrupted. Single-pass parallel streaming with zero cloud telemetry.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Single-Pass Parallel Streaming: SHA-256, SHA-512 &amp; MD5</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Instant Match / Mismatch Verification Banner (Green / Red)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Multi-Gigabyte Streaming: Easily hashes 10GB+ ISOs without freezing</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-sky-50/70 border border-sky-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$39 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;3,250</span></div>
-          <div class="text-[10px] font-mono text-sky-700 mt-1 font-semibold">⚡ Replaces Cloud Tools ($60/yr) &bull; Save $141+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20HashCheck%E2%84%A2%20Commercial%20License%20($39%20USD%20/%20%E2%82%B93,250).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="RQL HashCheck Commercial License ($39 USD) WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 7: RQL QRStudio™ (Permanent Offline Vector QR Code & Custom Barcode Studio) -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-violet-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="vector qr graphics">
-    <div class="p-6 sm:p-8">
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-500/10 text-violet-700 text-xs font-semibold border border-violet-400/40 font-mono">
-          <span class="w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span>
-          Pure-Rust Vector QR &amp; Barcode Studio
-        </span>
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded font-bold">100% Offline</span>
-        </div>
-      </div>
-
-      <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="QRStudio_Cover_1080p.png" alt="RQL QRStudio™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Vector Studio v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Zero Expire QR
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden mb-1">
-        <span class="text-violet-700 font-bold truncate">RQL_QRStudio_Master_Setup.exe</span>
-        <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Infinite Vector SVG</span>
-      </div>
-
-      <h3 class="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-        <span>RQL QRStudio™</span>
-      </h3>
-
-      <p class="text-sm text-slate-600 leading-relaxed mt-2">
-        Permanent Offline Vector QR Code &amp; Custom Barcode Studio: Infinite-resolution SVG vector exports, center brand logo engine, 9 multi-protocol presets (URL, Wi-Fi, vCard, UPI), and zero expiring cloud redirects.
-      </p>
-
-      <div class="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono text-slate-700">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Permanent ISO/IEC 18004 Vector QR Codes (Zero Link-Rot)</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Center Brand Logo Engine &amp; Level-H Error Parity</span></div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Infinite SVG &amp; 1024&times;1024 High-Res PNG + Clipboard Bridge</span></div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 pt-0 mt-auto border-t border-slate-100 space-y-3">
-      <div class="p-3.5 rounded-2xl bg-violet-50/70 border border-violet-200 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$79 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;6,500</span></div>
-          <div class="text-[10px] font-mono text-violet-700 mt-1 font-semibold">⚡ Replaces QR Cloud SaaS ($420/yr) &bull; Save $1,181+ over 3 yrs</div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200 shrink-0">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy on Gumroad</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20QRStudio%E2%84%A2%20Commercial%20License%20($79%20USD%20/%20%E2%82%B96,500).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="RQL QRStudio Commercial License ($79 USD) WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FLAGSHIP 8: RQL TextDiff™ (Sovereign Offline Visual File & Code Comparison Engine) -->
-  <div class="project-card hover-lift-card bg-white rounded-3xl border-2 border-indigo-300/80 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between" data-category="text diff developer legal">
-    <div class="p-6 sm:p-8">
-      <div class="flex items-center justify-between mb-4">
-        <span class="px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-extrabold bg-indigo-100 text-indigo-800 border border-indigo-200">
-          🛡️ LIVE OFFICIAL RELEASE
-        </span>
-        <span class="text-xs font-mono text-emerald-600 font-bold flex items-center gap-1">
-          <i class="w-3.5 h-3.5" data-lucide="shield-check"></i> 100% OFFLINE
-        </span>
-      </div>
-
-      <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-5">
-        <img src="TextDiff_Cover_1080p.png" alt="RQL TextDiff™ Master Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-        <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
-          Myers Diff v1.0
-        </div>
-        <div class="absolute top-3 right-3 bg-indigo-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
-          Legal &amp; Code
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
-        <span class="text-indigo-700 font-bold">RQL_TextDiff_Master_Setup.exe</span>
-        <span class="text-slate-400">Windows x64 Portable</span>
-      </div>
-
-      <h3 class="text-2xl font-bold font-heading text-slate-900 mb-2 flex items-center justify-between">
-        <span>RQL TextDiff™</span>
-      </h3>
-
-      <p class="text-slate-600 text-sm leading-relaxed mb-6">
-        Sovereign Offline Visual File &amp; Code Comparison Engine: Sub-millisecond Myers vector diff, side-by-side contract alteration auditing, and court-admissible PDF reports.
-      </p>
-
-      <div class="space-y-2 border-t border-slate-100 pt-4 mb-6 text-xs font-mono text-slate-600">
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Sub-Millisecond Myers Vector Diff Engine</div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Side-by-Side Word &amp; Character Alteration Audit</div>
-        <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Court-Admissible PDF Comparison Certificates</div>
-      </div>
-    </div>
-
-    <div class="p-6 sm:p-8 bg-slate-50/50 border-t border-slate-100">
-      <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-200 mb-4 flex items-center justify-between">
-        <div>
-          <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-          <div class="text-base font-extrabold text-slate-900 font-mono">$99 USD <span class="text-xs text-slate-500 font-normal">/ ₹8,200</span></div>
-        </div>
-        <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
-          Pay Once, Own Forever
-        </span>
-      </div>
-
-      <div class="grid grid-cols-2 gap-2.5">
-        <a href="https://quantify17.gumroad.com/l/rql-textdiff" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
-          <span>Buy Setup</span>
-          <span>↗</span>
-        </a>
-        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20TextDiff%E2%84%A2%20Commercial%20License%20($99%20USD%20/%20%E2%82%B98,200).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102" title="RQL TextDiff Commercial License ($99 USD) WhatsApp VIP">
-          <span>WhatsApp VIP</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-
-
-</div>
-</div>
 </section>
-
 <!-- ======================================================== -->
 <!-- OPERATIONAL CASE STUDIES & REAL-WORLD FIELD DEPLOYMENTS -->
 <!-- ======================================================== -->
