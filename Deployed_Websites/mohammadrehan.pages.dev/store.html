@@ -583,7 +583,7 @@ Resume (PDF)
               HIPAA &amp; GDPR
             </div>
             <!-- Video Walkthrough Play Overlay Button -->
-            <button onclick="openVideoWalkthroughModal('videos/rql_documentshield_walkthrough.mp4', 'RQL DocumentShield™ — 100% Offline Forensic Redaction Walkthrough (2:00)')" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-slate-950/85 hover:bg-rose-600 text-white border-2 border-white/50 flex items-center justify-center shadow-2xl transition-all duration-200 hover:scale-110 cursor-pointer group-hover/media:scale-105" title="Watch 2-Minute Installation &amp; Redaction Walkthrough">
+            <button onclick="openVideoWalkthroughModal('videos/rql_documentshield_walkthrough.mp4', 'RQL DocumentShield™ — 100% Offline Forensic Redaction Walkthrough (2:00)', 'https://youtu.be/AA9Dk5JPDn4', 'https://quantify17.gumroad.com/l/rql-documentshield', 'Acquire Commercial License ($179) →')" class="absolute inset-0 m-auto w-14 h-14 rounded-full bg-slate-950/85 hover:bg-rose-600 text-white border-2 border-white/50 flex items-center justify-center shadow-2xl transition-all duration-200 hover:scale-110 cursor-pointer group-hover/media:scale-105" title="Watch 2-Minute Installation &amp; Redaction Walkthrough">
               <svg class="w-6 h-6 ml-0.5 fill-current text-white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </button>
             <div class="absolute bottom-2.5 left-3 bg-slate-950/85 backdrop-blur-xs px-2.5 py-1 rounded-lg text-[10px] font-mono text-emerald-400 border border-slate-700/80 flex items-center gap-1.5 pointer-events-none">
@@ -607,7 +607,7 @@ Resume (PDF)
               Enterprise Forensic PDF Redactor &amp; Deep Metadata Removal Software: True destructive vector burn, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.
             </p>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between gap-2">
-              <button onclick="openVideoWalkthroughModal('videos/rql_documentshield_walkthrough.mp4', 'RQL DocumentShield™ — 100% Offline Forensic Redaction Walkthrough (2:00)')" class="text-rose-600 hover:text-rose-800 font-bold flex items-center gap-1.5 cursor-pointer text-[11px]">
+              <button onclick="openVideoWalkthroughModal('videos/rql_documentshield_walkthrough.mp4', 'RQL DocumentShield™ — 100% Offline Forensic Redaction Walkthrough (2:00)', 'https://youtu.be/AA9Dk5JPDn4', 'https://quantify17.gumroad.com/l/rql-documentshield', 'Acquire Commercial License ($179) →')" class="text-rose-600 hover:text-rose-800 font-bold flex items-center gap-1.5 cursor-pointer text-[11px]">
                 <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
                 <span>Watch Walkthrough (2m) ▶</span>
               </button>
@@ -1412,11 +1412,11 @@ Resume (PDF)
             <span class="text-indigo-400">User-Space Isolated</span>
           </div>
           <div class="flex items-center gap-2.5">
-            <a href="https://youtu.be/AA9Dk5JPDn4" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-medium transition text-xs border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
+            <a id="walkthrough-youtube-btn" href="https://youtu.be/AA9Dk5JPDn4" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-medium transition text-xs border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
               <span class="text-red-500 font-bold">▶</span> Watch on YouTube ↗
             </a>
-            <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold font-heading transition text-xs shadow-md">
-              Acquire Commercial License ($179) &rarr;
+            <a id="walkthrough-gumroad-btn" href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold font-heading transition text-xs shadow-md">
+              <span id="walkthrough-gumroad-label">Acquire Commercial License ($179) &rarr;</span>
             </a>
           </div>
         </div>
@@ -1620,12 +1620,18 @@ function closeEvaluationModal() {
 }
 
 // Live Video Walkthrough Modal Handlers
-function openVideoWalkthroughModal(videoSrc, title) {
+function openVideoWalkthroughModal(videoSrc, title, youtubeUrl, gumroadUrl, gumroadLabel) {
   const modal = document.getElementById('video-walkthrough-modal');
   const player = document.getElementById('walkthrough-video-player');
   const titleEl = document.getElementById('walkthrough-video-title');
+  const ytBtn = document.getElementById('walkthrough-youtube-btn');
+  const grBtn = document.getElementById('walkthrough-gumroad-btn');
+  const grLabel = document.getElementById('walkthrough-gumroad-label');
   if (!modal || !player) return;
   if (title && titleEl) titleEl.textContent = title;
+  if (ytBtn) ytBtn.href = youtubeUrl || 'https://www.youtube.com/channel/UCf1-IOclsbG8QHI2HKuac0A';
+  if (grBtn && gumroadUrl) grBtn.href = gumroadUrl;
+  if (grLabel && gumroadLabel) grLabel.textContent = gumroadLabel;
   if (videoSrc) {
     const srcEl = player.querySelector('source');
     if (srcEl && srcEl.src !== videoSrc) {

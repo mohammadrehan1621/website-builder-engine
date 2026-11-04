@@ -13,20 +13,20 @@
       "count": 11,
       "density_pct": 0.1
     },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 4,
-      "density_pct": 0.04
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
     },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 23,
-      "density_pct": 0.2
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
     },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 1,
-      "density_pct": 0.01
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 17,
+      "density_pct": 0.15
     },
     "lifetime license": {
       "keyword": "lifetime license",
@@ -38,45 +38,45 @@
       "count": 13,
       "density_pct": 0.12
     },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 23,
+      "density_pct": 0.2
+    },
     "rehan quant lab": {
       "keyword": "rehan quant lab",
       "count": 60,
       "density_pct": 0.53
     },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 3,
-      "density_pct": 0.03
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 46,
-      "density_pct": 0.41
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 17,
-      "density_pct": 0.15
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 19,
+      "density_pct": 0.17
     },
     "storeflow": {
       "keyword": "storeflow",
       "count": 1,
       "density_pct": 0.01
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 19,
-      "density_pct": 0.17
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 4,
+      "density_pct": 0.04
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 46,
+      "density_pct": 0.41
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.03
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
     }
   },
   "meta_audits": [
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 915259
+  "execution_micros": 27984
 }
