@@ -8,41 +8,6 @@
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 63,
-      "density_pct": 0.57
-    },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 21,
-      "density_pct": 0.19
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 21,
-      "density_pct": 0.19
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 43,
-      "density_pct": 0.39
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 4,
-      "density_pct": 0.04
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 1,
-      "density_pct": 0.01
-    },
     "systems architect": {
       "keyword": "systems architect",
       "count": 17,
@@ -53,10 +18,15 @@
       "count": 0,
       "density_pct": 0.0
     },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 1,
-      "density_pct": 0.01
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.03
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 43,
+      "density_pct": 0.39
     },
     "desktop software": {
       "keyword": "desktop software",
@@ -73,10 +43,40 @@
       "count": 24,
       "density_pct": 0.22
     },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 3,
-      "density_pct": 0.03
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 63,
+      "density_pct": 0.57
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 21,
+      "density_pct": 0.19
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 21,
+      "density_pct": 0.19
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 4,
+      "density_pct": 0.04
+    },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
     }
   },
   "meta_audits": [
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 32001
+  "execution_micros": 31727
 }
