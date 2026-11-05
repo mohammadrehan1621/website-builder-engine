@@ -1,82 +1,82 @@
 {
   "timestamp": "2026-11-05",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
-  "total_html_files": 12,
-  "total_word_count": 11880,
+  "total_html_files": 13,
+  "total_word_count": 12474,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 49,
-      "density_pct": 0.41
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 24,
-      "density_pct": 0.2
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 4,
-      "density_pct": 0.03
-    },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.02
     },
     "desktop software": {
       "keyword": "desktop software",
       "count": 10,
       "density_pct": 0.08
     },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 1,
-      "density_pct": 0.01
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 54,
+      "density_pct": 0.43
     },
     "sovereign computing": {
       "keyword": "sovereign computing",
       "count": 4,
       "density_pct": 0.03
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 21,
-      "density_pct": 0.18
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 21,
-      "density_pct": 0.18
-    },
     "storeflow": {
       "keyword": "storeflow",
       "count": 1,
       "density_pct": 0.01
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 63,
-      "density_pct": 0.53
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 3,
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 4,
       "density_pct": 0.03
     },
     "systems architect": {
       "keyword": "systems architect",
-      "count": 17,
+      "count": 18,
       "density_pct": 0.14
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 26,
+      "density_pct": 0.21
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 68,
+      "density_pct": 0.55
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 21,
+      "density_pct": 0.17
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 21,
+      "density_pct": 0.17
     }
   },
   "meta_audits": [
@@ -211,6 +211,19 @@
       "findings": []
     },
     {
+      "file": "security.html",
+      "title": "institutional trust &amp; security registry | rehan quant lab",
+      "title_length": 61,
+      "title_valid": true,
+      "description": "official cryptographic sha-256 trust registry for rehan quant lab sovereign desktop workstations. 100% air-gapped rust binaries whitelisted by microsoft wdsi.",
+      "desc_length": 158,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
+    },
+    {
       "file": "store.html",
       "title": "commercial desktop software store | rehan quant lab",
       "title_length": 51,
@@ -241,5 +254,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 41017
+  "execution_micros": 31084
 }

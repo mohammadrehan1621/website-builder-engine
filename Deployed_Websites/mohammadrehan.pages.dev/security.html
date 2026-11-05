@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Institutional Trust &amp; Security Registry | Rehan Quant Lab</title>
+  <meta name="description" content="Official cryptographic SHA-256 trust registry for Rehan Quant Lab sovereign desktop workstations. 100% air-gapped Rust binaries whitelisted by Microsoft WDSI.">
+  <link rel="canonical" href="https://rehanquantlab.com/security.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/>
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Institutional Trust &amp; Security Registry | Rehan Quant Lab">
+  <meta property="og:description" content="Official cryptographic SHA-256 trust registry for Rehan Quant Lab sovereign desktop workstations. 100% air-gapped Rust binaries whitelisted by Microsoft WDSI.">
+  <meta property="og:url" content="https://rehanquantlab.com/security.html">
+  <meta property="og:image" content="https://rehanquantlab.com/og_preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Institutional Trust &amp; Security Registry | Rehan Quant Lab">
+  <meta name="twitter:description" content="Official cryptographic SHA-256 trust registry for Rehan Quant Lab sovereign desktop workstations. 100% air-gapped Rust binaries whitelisted by Microsoft WDSI.">
+  <meta name="twitter:image" content="https://rehanquantlab.com/og_preview.png">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/jpeg" href="emblem.jpg">
+  <link rel="apple-touch-icon" href="emblem.jpg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: local('JetBrains Mono'), local('Consolas'), local('Courier New'), monospace;
+    }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .hash-cell { font-family: 'JetBrains Mono', monospace; font-size: 11px; word-break: break-all; }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: #0f172a;
+      color: #fff;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 9999;
+      border: 1px solid #334155;
+    }
+    .toast.show { display: block; animation: fadeIn 0.2s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Institutional Trust & Security Registry",
+    "description": "Official cryptographic SHA-256 trust registry for Rehan Quant Lab sovereign desktop workstations. 100% air-gapped Rust binaries whitelisted by Microsoft WDSI.",
+    "url": "https://rehanquantlab.com/security.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rehan Quant Lab",
+      "url": "https://rehanquantlab.com",
+      "logo": "https://rehanquantlab.com/emblem.jpg"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "12 Sovereign Desktop Workstations Cryptographic Verification Registry",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "RQL DocumentShield™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "SecurityApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-documentshield"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 2,
+          "name": "RQL WhisperVault™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-whispervault"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 3,
+          "name": "RQL RetailPOS™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-retailpos"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 4,
+          "name": "RQL StoreChain™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-storechain"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 5,
+          "name": "RQL Conduit™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "UtilitiesApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-conduit"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 6,
+          "name": "RQL HashCheck™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "SecurityApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-hashcheck"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 7,
+          "name": "RQL QRStudio™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "DesignApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-qrstudio"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 8,
+          "name": "RQL TextDiff™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "DeveloperApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-textdiff"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 9,
+          "name": "RQL Renamer™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "UtilitiesApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-renamer"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 10,
+          "name": "RQL TagEditor™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "MultimediaApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-tageditor"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 11,
+          "name": "RQL FontViewer™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "DesignApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-fontviewer"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 12,
+          "name": "RQL DPDPShield™",
+          "operatingSystem": "Windows 10, Windows 11",
+          "applicationCategory": "SecurityApplication",
+          "downloadUrl": "https://rehanquantlab.com/store.html#rql-dpdpshield"
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+  <!-- Single Unified Institutional Status & Rotating Announcement Bar -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
+      <div id="live-ticker-container" class="flex items-center gap-2 truncate">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+        <span id="ticker-label" class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">&#9889; SECURITY REGISTRY:</span>
+        <span id="ticker-content" class="text-slate-200 text-xs truncate transition-opacity duration-300">
+          <strong>12/12 Sovereign Suites Audited:</strong> 100% Clean Microsoft Defender WDSI Whitelist &bull; Zero Outbound Sockets
+        </span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
+        <a href="store.html" class="text-emerald-400 hover:text-emerald-300 font-bold underline transition flex items-center gap-1 font-mono">
+          <span>Commercial Store &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-3 shrink-0 group" href="index.html">
+        <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
+        <div class="whitespace-nowrap">
+          <span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
+          <span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap">
+        <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
+
+        <!-- Commercial Suites Tab -->
+        <a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="12 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+          <span>Commercial Suites</span>
+          <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">12</span>
+        </a>
+
+        <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
+        <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a>
+        <a class="text-emerald-700 font-semibold transition py-1 flex items-center gap-1" href="security.html">
+          <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shield-check"></i>
+          <span>Security</span>
+        </a>
+        <a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Right Action CTAs -->
+      <div class="hidden sm:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+        <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 flex items-center gap-1.5">
+          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
+          <span>Schedule Briefing</span>
+        </a>
+
+        <a href="Mohammad_Rehan_Resume.pdf" download class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono flex items-center gap-1.5 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+          <span>Resume</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+        <i class="w-6 h-6" data-lucide="menu"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="hidden lg:hidden border-t border-slate-200/80 bg-white/98 backdrop-blur-md px-4 py-4 space-y-3 shadow-lg" id="mobile-menu">
+      <a class="block py-2 text-slate-900 font-semibold text-sm hover:text-emerald-600 transition" href="index.html">Home</a>
+      <a class="block py-2 text-rose-700 font-bold text-sm flex items-center justify-between" href="store.html">
+        <span>Commercial Suites (12 Flagships)</span>
+        <span class="bg-rose-100 text-rose-800 text-[10px] px-2 py-0.5 rounded-full font-mono">Gumroad Live</span>
+      </a>
+      <a class="block py-2 text-slate-700 font-medium text-sm hover:text-emerald-600 transition" href="projects.html">Projects</a>
+      <a class="block py-2 text-slate-700 font-medium text-sm hover:text-emerald-600 transition" href="experience.html">Experience</a>
+      <a class="block py-2 text-emerald-700 font-bold text-sm flex items-center gap-1.5" href="security.html">
+        <i class="w-4 h-4" data-lucide="shield-check"></i>
+        <span>Trust &amp; Security Registry</span>
+      </a>
+      <a class="block py-2 text-slate-700 font-medium text-sm hover:text-emerald-600 transition" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 w-full">
+
+    <!-- PAGE HERO -->
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold mb-4 shadow-2xs">
+        <i class="w-4 h-4 text-emerald-600" data-lucide="shield-check"></i>
+        <span>TRUST &amp; CRYPTOGRAPHIC INTEGRITY REGISTRY</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heading text-slate-900 tracking-tight leading-tight">
+        100% Air-Gapped Sovereign Software &bull; Cryptographically Audited by Microsoft Security Intelligence
+      </h1>
+      <p class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed mt-4 max-w-2xl mx-auto">
+        Every executable published by Rehan Quant Lab is engineered strictly in native 64-bit Rust (Win32), operates with zero cloud telemetry, and is whitelisted clean by Microsoft Defender.
+      </p>
+
+      <!-- 4 Key Invariants Cards -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
+            <span>WDSI Status</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">12 / 12</div>
+          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Whitelisted Clean</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="wifi-off"></i>
+            <span>Telemetry</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">0 KB</div>
+          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Zero Network Sockets</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="cpu"></i>
+            <span>Architecture</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">Pure Rust</div>
+          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Native Win32 PE64</div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="fingerprint"></i>
+            <span>Verification</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">SHA-256</div>
+          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Bit-Accurate Hash</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12-TITAN CRYPTOGRAPHIC VERIFICATION TABLE -->
+    <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-sm mb-12">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold font-heading text-slate-900 tracking-tight">
+            12-Titan Cryptographic Verification Table
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Authoritative, immutable SHA-256 checksums matching official production Gumroad releases.
+          </p>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 text-white font-mono text-[11px] font-bold shrink-0">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>12 Master Binaries Verified</span>
+        </div>
+      </div>
+
+      <!-- Responsive Table Container -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 text-[11px] font-mono uppercase tracking-wider text-slate-500 bg-slate-50/80">
+              <th class="py-3 px-3 text-center w-12 font-bold">#</th>
+              <th class="py-3 px-4 font-bold">Product Suite</th>
+              <th class="py-3 px-4 font-bold">Master Executable</th>
+              <th class="py-3 px-4 font-bold">Cryptographic SHA-256 Hash</th>
+              <th class="py-3 px-4 text-center font-bold">Microsoft WDSI Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-xs font-sans">
+
+            <!-- 01 DocumentShield -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">01</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-documentshield" class="hover:text-indigo-600 transition">RQL DocumentShield&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_DocumentShield_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735</span>
+                  <button onclick="copyHash('E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 02 WhisperVault -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">02</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-whispervault" class="hover:text-indigo-600 transition">RQL WhisperVault&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_WhisperVault_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E</span>
+                  <button onclick="copyHash('8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 03 RetailPOS -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">03</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-retailpos" class="hover:text-indigo-600 transition">RQL RetailPOS&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_RetailPOS_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C</span>
+                  <button onclick="copyHash('1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 04 StoreChain -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">04</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-storechain" class="hover:text-indigo-600 transition">RQL StoreChain&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_StoreChain_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731</span>
+                  <button onclick="copyHash('05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 05 Conduit -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">05</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-conduit" class="hover:text-indigo-600 transition">RQL Conduit&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_Conduit_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A</span>
+                  <button onclick="copyHash('8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 06 HashCheck -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">06</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-hashcheck" class="hover:text-indigo-600 transition">RQL HashCheck&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_HashCheck_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A</span>
+                  <button onclick="copyHash('47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 07 QRStudio -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">07</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-qrstudio" class="hover:text-indigo-600 transition">RQL QRStudio&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_QRStudio_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA</span>
+                  <button onclick="copyHash('DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 08 TextDiff -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">08</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-textdiff" class="hover:text-indigo-600 transition">RQL TextDiff&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_TextDiff_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6</span>
+                  <button onclick="copyHash('FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 09 Renamer -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">09</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-renamer" class="hover:text-indigo-600 transition">RQL Renamer&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_Renamer_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42</span>
+                  <button onclick="copyHash('0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 10 TagEditor -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">10</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-tageditor" class="hover:text-indigo-600 transition">RQL TagEditor&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_TagEditor_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735</span>
+                  <button onclick="copyHash('14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 11 FontViewer -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">11</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-fontviewer" class="hover:text-indigo-600 transition">RQL FontViewer&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_FontViewer_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A</span>
+                  <button onclick="copyHash('33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+            <!-- 12 DPDPShield -->
+            <tr class="hover:bg-slate-50/70 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">12</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">
+                <a href="store.html#rql-dpdpshield" class="hover:text-indigo-600 transition">RQL DPDPShield&trade;</a>
+              </td>
+              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+                <code>RQL_DPDPShield_Master_Setup.exe</code>
+              </td>
+              <td class="py-3.5 px-4">
+                <div class="flex items-center gap-2 group">
+                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5</span>
+                  <button onclick="copyHash('6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                    <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+                  </button>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 text-center">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-mono font-bold">
+                  <span>Completed</span>
+                  <span class="text-xs">&#128994;</span>
+                </span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- INDEPENDENT VERIFICATION GUIDE FOR ENTERPRISE BUYERS -->
+    <div class="bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-xl mb-12">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 text-xs font-mono font-bold mb-2">
+            <i class="w-3.5 h-3.5" data-lucide="terminal"></i>
+            <span>INDEPENDENT VERIFICATION PROTOCOL</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
+            How to Independently Verify Any RQL Binary on Windows
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm mt-1 max-w-2xl leading-relaxed">
+            Enterprise buyers, security officers, and compliance auditors can cryptographically audit any downloaded installer prior to execution.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3.5 py-2 rounded-xl">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+          <span>Zero External Trust Required</span>
+        </div>
+      </div>
+
+      <!-- Verification Steps -->
+      <div class="mt-6 space-y-4">
+        <p class="text-xs sm:text-sm text-slate-300">
+          Open <strong>Windows PowerShell</strong> and execute the built-in cryptographic cmdlet:
+        </p>
+
+        <!-- Command Code Snippet -->
+        <div class="relative bg-slate-950 rounded-2xl p-4 sm:p-5 border border-slate-800 font-mono text-xs sm:text-sm text-emerald-300 flex items-center justify-between gap-4 overflow-x-auto shadow-inner">
+          <code id="cmd-snippet">Get-FileHash -Path &lt;filename.exe&gt; -Algorithm SHA256</code>
+          <button onclick="copySnippet()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-mono flex items-center gap-1.5 transition shrink-0 border border-slate-700" title="Copy PowerShell Command">
+            <i class="w-3.5 h-3.5" data-lucide="copy"></i>
+            <span>Copy Cmdlet</span>
+          </button>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 text-xs sm:text-sm text-slate-300 space-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-emerald-400 font-bold">&#10003;</span>
+            <span><strong>Character-by-Character Comparison:</strong> Compare the output hash character-by-character with the official cryptographic registry table above.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-emerald-400 font-bold">&#10003;</span>
+            <span><strong>Tamper-Proof Guarantee:</strong> If even a single byte has been altered by a proxy, mirror, or corrupted download, the SHA-256 hash will be completely different.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-emerald-400 font-bold">&#10003;</span>
+            <span><strong>Air-Gapped Operation:</strong> Verification runs 100% offline using your CPU's native crypto instructions. No internet handshake is required.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECT PDF DOWNLOAD BUTTONS -->
+    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-mono font-bold border border-slate-200">
+          <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="file-text"></i>
+          <span>OFFICIAL GOVERNANCE &amp; ARCHITECTURAL DOCUMENTS</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-bold font-heading text-slate-900">
+          Download Institutional Compliance &amp; Architecture Dossiers
+        </h3>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+          Download digitally signed PDF certificates and full architectural specs for vendor onboarding and corporate audits.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
+        <!-- Button 1 -->
+        <a
+          href="/downloads/RQL_Institutional_Security_And_Integrity_Certificate.pdf"
+          target="_blank"
+          download
+          class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm font-heading flex items-center justify-center gap-2 shadow-md transition hover:scale-102 border border-slate-800 text-center"
+        >
+          <i class="w-4 h-4 text-emerald-400" data-lucide="file-check"></i>
+          <span>Download Institutional Security Certificate (PDF)</span>
+          <span>&darr;</span>
+        </a>
+
+        <!-- Button 2 -->
+        <a
+          href="/downloads/RQL_53_TITANS_MASTER_ARCHITECTURAL_CODEX.pdf"
+          target="_blank"
+          download
+          class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-200 font-bold text-xs sm:text-sm font-heading flex items-center justify-center gap-2 shadow-xs transition hover:scale-102 text-center"
+        >
+          <i class="w-4 h-4 text-emerald-700" data-lucide="book-open"></i>
+          <span>Download 53 Titans Master Codex (PDF)</span>
+          <span>&darr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ENTERPRISE INTEGRATION CALLOUT -->
+    <div class="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 text-center md:text-left">
+      <div class="space-y-2">
+        <h4 class="text-lg sm:text-xl font-bold font-heading text-white">
+          Require Custom Vendor Security Questionnaires or Enterprise Fleet Keys?
+        </h4>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+          Connect directly with Founder Mohammad Rehan for vendor security assessments, SOC/ISO compliance mapping, or air-gapped hardware fleet licensing.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+        <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20am%20reviewing%20the%20RQL%20Trust%20%26%20Security%20Registry%20and%20would%20like%20to%20discuss%20enterprise%20licensing." target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs font-mono uppercase shadow-md transition hover:scale-105">
+          Founder WhatsApp &rarr;
+        </a>
+        <a href="contact.html" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs font-mono border border-slate-700 transition hover:scale-105">
+          Schedule Briefing
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
+      <div class="space-y-3 md:col-span-2">
+        <div class="flex items-center gap-2.5">
+          <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
+          <span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab&trade;</span></span>
+        </div>
+        <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
+          Founder &amp; Principal Systems Architect. Mission-critical computational &amp; distributed sovereign systems engineering.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+          <span>100% Air-Gapped Sovereign Software &bull; Zero Cloud Telemetry</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
+          <li><a class="hover:text-slate-900 transition" href="store.html">Commercial Store (12 Suites)</a></li>
+          <li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Systems</a></li>
+          <li><a class="hover:text-slate-900 transition" href="experience.html">Professional Experience</a></li>
+          <li><a class="text-emerald-700 font-bold hover:underline flex items-center gap-1" href="security.html">Trust &amp; Security Registry 🛡️</a></li>
+          <li><a class="hover:text-slate-900 transition" href="contact.html">Contact &amp; Hire</a></li>
+          <li><a class="hover:text-slate-900 transition" href="legal.html">Master SaaS Agreement ⚖️</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Official Channels</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a class="hover:text-emerald-700 transition flex items-center gap-1" href="https://wa.me/917091518548" target="_blank" rel="noopener noreferrer">WhatsApp Direct: +91 70915 18548</a></li>
+          <li><a class="hover:text-indigo-600 transition" href="https://github.com/mohammadrehan1621" target="_blank" rel="noopener noreferrer">GitHub Enterprise Track</a></li>
+          <li><a class="hover:text-indigo-600 transition" href="https://quantify17.gumroad.com" target="_blank" rel="noopener noreferrer">Gumroad Sovereign Store</a></li>
+          <li><a class="hover:text-indigo-600 transition" href="vault.html">Founder Cryptographic Studio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade;. All rights reserved. Zero SaaS Cloud Rent.</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline text-emerald-600 font-semibold" href="security.html">Security Registry</a>
+        <span>&bull;</span>
+        <a class="hover:underline" href="legal.html">Legal Agreement</a>
+        <span>&bull;</span>
+        <a class="hover:underline" href="sitemap.xml">Sitemap (ISO 8601)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Element -->
+  <div id="toast" class="toast">✓ SHA-256 Hash Copied!</div>
+
+  <!-- JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    if (window.lucide) { lucide.createIcons(); }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Toast helper
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      if (t) {
+        t.innerText = msg;
+        t.classList.add('show');
+        if (navigator.vibrate) navigator.vibrate(30);
+        setTimeout(() => { t.classList.remove('show'); }, 2000);
+      }
+    }
+
+    // Copy Hash
+    function copyHash(hash) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(hash).then(() => {
+          showToast('✓ SHA-256 Hash Copied to Clipboard!');
+        });
+      }
+    }
+
+    // Copy PowerShell Cmdlet Snippet
+    function copySnippet() {
+      const snippet = 'Get-FileHash -Path <filename.exe> -Algorithm SHA256';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(snippet).then(() => {
+          showToast('✓ Cmdlet Copied: Get-FileHash -Path <filename.exe> -Algorithm SHA256');
+        });
+      }
+    }
+  </script>
+</body>
+</html>

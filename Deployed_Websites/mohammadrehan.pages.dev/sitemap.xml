@@ -61,6 +61,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://rehanquantlab.com/security.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://rehanquantlab.com/store.html</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>daily</changefreq>
@@ -80,6 +86,18 @@
   </url>
   <url>
     <loc>https://rehanquantlab.com/downloads/LedgerGuard_CA_Reconciler_Brochure.pdf</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rehanquantlab.com/downloads/RQL_53_TITANS_MASTER_ARCHITECTURAL_CODEX.pdf</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://rehanquantlab.com/downloads/RQL_Institutional_Security_And_Integrity_Certificate.pdf</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>

@@ -246,6 +246,7 @@ impl SeoEngine {
                 "index.html" => ("", "1.00", "weekly"),
                 "store.html" => ("store.html", "1.00", "daily"),
                 "projects.html" => ("projects.html", "0.90", "weekly"),
+                "security.html" => ("security.html", "0.90", "weekly"),
                 "aegis.html" => ("aegis.html", "0.85", "monthly"),
                 "experience.html" => ("experience.html", "0.80", "monthly"),
                 "contact.html" => ("contact.html", "0.80", "monthly"),
