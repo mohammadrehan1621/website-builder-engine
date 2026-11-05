@@ -45,6 +45,10 @@
 /*.zip
   X-Robots-Tag: noindex, nofollow
 
+/*.exe
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache, no-store, must-revalidate
+
 /.git*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-cache, no-store, must-revalidate

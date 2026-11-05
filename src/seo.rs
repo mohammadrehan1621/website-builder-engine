@@ -348,8 +348,10 @@ impl SeoEngine {
                 for entry in entries.flatten() {
                     let p = entry.path();
                     if p.is_file() {
-                        let fname = p.file_name().unwrap_or_default().to_string_lossy().to_string();
-                        download_files.push(format!("downloads/{}", fname));
+                        if p.extension().map(|e| e == "pdf").unwrap_or(false) {
+                            let fname = p.file_name().unwrap_or_default().to_string_lossy().to_string();
+                            download_files.push(format!("downloads/{}", fname));
+                        }
                     }
                 }
             }
