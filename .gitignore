@@ -23,6 +23,9 @@ website_bundle.zip
 target/
 *.wal
 *.jsonl
+scratch/
+src/bin/
+keep.txt
 
 # OS / IDE
 .vscode/

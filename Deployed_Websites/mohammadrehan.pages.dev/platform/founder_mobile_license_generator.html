@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>RQL Founder Mobile Studio v3.0</title>
+  <title>RQL Founder Mobile Studio v3.5</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="RQL Studio">
@@ -297,7 +297,7 @@
 
   <div class="header">
     <div class="brand-badge">👑 REHAN QUANT LAB</div>
-    <h1>Founder Mobile Studio v3.0</h1>
+    <h1>Founder Mobile Studio v3.5</h1>
     <div class="subtitle">100% Offline Cryptographic Key Authority • Single-Tier Standard</div>
   </div>
 
@@ -312,10 +312,10 @@
 
     <div class="card-title" style="margin-top: 6px;">
       <span>2. Select Software Suite</span>
-      <span style="font-size: 10.5px; color: var(--gold); font-weight: 700;">8 PRODUCTS + MASTER</span>
+      <span style="font-size: 10.5px; color: var(--gold); font-weight: 700;">11 PRODUCTS + MASTER</span>
     </div>
 
-    <!-- 8 PRODUCTS (01 TO 08) + ALL-SUITE MASTER -->
+    <!-- 11 PRODUCTS (01 TO 11) + ALL-SUITE MASTER -->
     <div class="chip-grid" id="prod_chips">
       <div class="chip active" onclick="selectProduct(0, this)">
         <div class="chip-code">#01 PDF Redactor</div>
@@ -353,11 +353,26 @@
         <div class="chip-price">$79 Perpetual</div>
       </div>
       <div class="chip" onclick="selectProduct(7, this)">
-        <div class="chip-code">#08 Socket Binder</div>
-        <div class="chip-title">PortVault™</div>
-        <div class="chip-price">$59 Perpetual</div>
+        <div class="chip-code">#08 Code Diff</div>
+        <div class="chip-title">TextDiff™</div>
+        <div class="chip-price">$99 Perpetual</div>
       </div>
       <div class="chip" onclick="selectProduct(8, this)">
+        <div class="chip-code">#09 Bulk Renamer</div>
+        <div class="chip-title">Renamer™</div>
+        <div class="chip-price">$49 Perpetual</div>
+      </div>
+      <div class="chip" onclick="selectProduct(9, this)">
+        <div class="chip-code">#10 Audio Tags</div>
+        <div class="chip-title">TagEditor™</div>
+        <div class="chip-price">$59 Perpetual</div>
+      </div>
+      <div class="chip" onclick="selectProduct(10, this)">
+        <div class="chip-code">#11 Typography</div>
+        <div class="chip-title">FontViewer™</div>
+        <div class="chip-price">$49 Perpetual</div>
+      </div>
+      <div class="chip" onclick="selectProduct(11, this)">
         <div class="chip-code">👑 Master Access</div>
         <div class="chip-title">All-Suite Master</div>
         <div class="chip-price">$999 Universal</div>
@@ -458,7 +473,10 @@
       { id: "RQL_Conduit", name: "RQL Conduit™ (Multi-WAN Internet Bonding)", price: "$129", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "RQL_HashCheck", name: "RQL HashCheck™ (Cryptographic Checksum Verifier)", price: "$39", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "RQL_QRStudio", name: "RQL QRStudio™ (Vector QR & Barcode Studio)", price: "$79", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
-      { id: "RQL_PortVault", name: "RQL PortVault™ (Offline Socket Binder & Sentinel)", price: "$59", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
+      { id: "RQL_TextDiff", name: "RQL TextDiff™ (Visual File & Code Comparator)", price: "$99", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
+      { id: "RQL_Renamer", name: "RQL Renamer™ (High-Speed Bulk File Reorganizer)", price: "$49", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
+      { id: "RQL_TagEditor", name: "RQL TagEditor™ (Lossless Audio Metadata & Artwork)", price: "$59", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
+      { id: "RQL_FontViewer", name: "RQL FontViewer™ (Sovereign Typography Workstation)", price: "$49", tier: "Lifetime Perpetual Commercial License (1 PC Node Hardware Lock)" },
       { id: "UNIVERSAL_MASTER", name: "RQL Sovereign Master Access (All-Suite Fleet Unlock)", price: "$999", tier: "Sovereign Master Fleet License (Universal Node Lock)" }
     ];
 
@@ -480,7 +498,7 @@
       const tierBadge = document.getElementById('tier_badge');
       const tierName = document.getElementById('tier_name');
 
-      if (idx === 8) {
+      if (prod.id === 'UNIVERSAL_MASTER') {
         tierBadge.innerText = "[1 TIER MASTER FLEET]";
         tierBadge.style.color = "var(--gold)";
         tierBadge.style.background = "var(--gold-glow)";
