@@ -291,11 +291,15 @@ impl SeoEngine {
 
         format!(
             "# ====================================================================\n\
-             # 🌐 Rehan Quant Lab™ — Search Engine Optimization Directives\n\
+             # Rehan Quant Lab (RQL) - Search Engine Optimization Directives\n\
              # Generated Deterministically by Bare-Metal Rust Engine on {}\n\
              # ====================================================================\n\n\
              User-agent: *\n\
-             Allow: /\n\n\
+             Allow: /\n\
+             Disallow: /vault.html\n\
+             Disallow: /vault\n\
+             Disallow: /platform/\n\
+             Disallow: /downloads/\n\n\
              # Sitemap Index Declaration\n\
              Sitemap: https://{}/sitemap.xml\n\n\
              # Friendly Bot Optimizations\n\
