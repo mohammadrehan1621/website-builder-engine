@@ -24,7 +24,9 @@ target/
 *.wal
 *.jsonl
 scratch/
-src/bin/
+src/bin/*
+!src/bin/verify_prelaunch_checklist.rs
+!src/bin/purge_all_cdns_and_boms.rs
 keep.txt
 
 # OS / IDE
