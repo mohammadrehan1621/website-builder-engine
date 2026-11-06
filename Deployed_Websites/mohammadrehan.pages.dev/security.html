@@ -329,6 +329,60 @@
       </div>
     </div>
 
+    <!-- TECHNICAL TRANSPARENCY: WINDOWS DEFENDER SMARTSCREEN & EV CODE SIGNING -->
+    <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 mb-10 border border-slate-800 shadow-xl">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+        <div class="space-y-2 max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-bold">
+            <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="shield-alert"></i>
+            <span>TRANSPARENCY REPORT &bull; WINDOWS DEFENDER SMARTSCREEN</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+            Why does Windows SmartScreen show an "Unrecognized App" prompt?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            As an independent software laboratory, our binaries are compiled directly from pure Rust source code and are not yet signed with a commercial Extended Validation (EV) hardware token, which costs $400&ndash;$500 annually. Microsoft Defender SmartScreen flags any newly compiled executable as "unrecognized" until it establishes a download reputation across thousands of machines.
+          </p>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 shrink-0 text-center font-mono text-xs min-w-[200px]">
+          <span class="text-slate-400 block text-[10px] uppercase">Independent Indie Lab</span>
+          <span class="text-emerald-400 font-bold text-sm block mt-1">100% Clean Source</span>
+          <span class="text-slate-500 text-[10px] mt-1 block">Zero Telemetry &bull; Zero Trojans</span>
+        </div>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="space-y-3 text-xs text-slate-300">
+          <p class="font-semibold text-white text-sm">How to independently verify binary authenticity before running:</p>
+          <p>
+            You do not have to take our word for it. Open Windows PowerShell and run this one-line command against your downloaded setup file to compute its cryptographic SHA-256 digest:
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 font-mono text-xs text-emerald-400 select-all overflow-x-auto">
+            Get-FileHash -Algorithm SHA256 .\RQL_DocumentShield_Master_Setup.exe
+          </div>
+          <p class="text-slate-400 text-[11px]">
+            Compare the resulting hash against the official cryptographic registry table below. If the 64-character hash matches bit-for-bit, the binary is 100% authentic, tamper-free, and safe to execute.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-xs font-mono space-y-2">
+          <span class="text-slate-400 block text-[10px] uppercase tracking-wider">How to proceed past SmartScreen:</span>
+          <div class="flex items-start gap-2.5 text-slate-300">
+            <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center shrink-0 font-bold text-[10px]">1</span>
+            <span>Click <strong>"More info"</strong> on the blue SmartScreen dialog.</span>
+          </div>
+          <div class="flex items-start gap-2.5 text-slate-300">
+            <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center shrink-0 font-bold text-[10px]">2</span>
+            <span>Click <strong>"Run anyway"</strong> to launch the installation.</span>
+          </div>
+          <div class="flex items-start gap-2.5 text-slate-300">
+            <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-200 flex items-center justify-center shrink-0 font-bold text-[10px]">3</span>
+            <span>Enjoy lifetime local execution with 0 bytes of cloud telemetry.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- 13-TITAN CRYPTOGRAPHIC VERIFICATION TABLE -->
     <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-sm mb-12">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">

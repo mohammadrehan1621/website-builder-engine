@@ -40,6 +40,9 @@ We engineer 100% air-gapped, sovereign desktop workstations and institutional qu
     - Run the pure-Rust SEO Panopticon: `cargo run --release --bin rql_website_builder -- seo`. Must report **100/100 SSS+ Sovereign Apex**.
     - Verify with real live network checks (`curl.exe -I`), never assumptions.
     - Confirm zero non-ASCII mojibake corruption across all primary HTML pages.
+11. **The Harper & Presenton Rule (The One-Sentence Superpower Invariant)**:
+    Every tool, flagship, system, and page MUST describe its core superpower in ONE single clear, human, buzzword-free sentence. (Just like Harper: *"A grammar checker that runs in your browser without sending your text to a server"*, and Presenton: *"Turn raw markdown into slide presentations in seconds"*).
+    Never hide behind paragraphs of jargon or AI buzzwords ("Pentagon Closed Loop", "Liquid-Diamond", "Omni-Sovereign Umbrella"). If an ordinary developer cannot understand the core superpower in one sentence, it is slop. Strip the slop, state the concrete utility, and prove it with real specs.
 
 ---
 
