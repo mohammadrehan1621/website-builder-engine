@@ -43,6 +43,21 @@ We engineer 100% air-gapped, sovereign desktop workstations and institutional qu
 11. **The Harper & Presenton Rule (The One-Sentence Superpower Invariant)**:
     Every tool, flagship, system, and page MUST describe its core superpower in ONE single clear, human, buzzword-free sentence. (Just like Harper: *"A grammar checker that runs in your browser without sending your text to a server"*, and Presenton: *"Turn raw markdown into slide presentations in seconds"*).
     Never hide behind paragraphs of jargon or AI buzzwords ("Pentagon Closed Loop", "Liquid-Diamond", "Omni-Sovereign Umbrella"). If an ordinary developer cannot understand the core superpower in one sentence, it is slop. Strip the slop, state the concrete utility, and prove it with real specs.
+12. **The Master "AI-Slop to Humanized Translation Matrix" (Inviolable Language Codex)**:
+    All AI agents, copywriters, documentation, and client-facing interfaces must adhere strictly to this translation matrix:
+    - ❌ *"Pentagon Closed Loop / Military-grade"* &rarr; ✅ **"100% offline, physical local execution"**
+    - ❌ *"Omni-Sovereign Umbrella / Sovereign Fleet"* &rarr; ✅ **"Single-binary portable Windows desktop tools in pure Rust"**
+    - ❌ *"AI Systems Architect & Tech Lead"* &rarr; ✅ **"Systems Software Engineer & Founder"**
+    - ❌ *"Antifragile Evolutionary Hardener / Client Sentinel"* &rarr; ✅ **"Local draft auto-save & crash recovery"**
+    - ❌ *"Liquid-Diamond UX / Hyper-Tactile Quantum Glass"* &rarr; ✅ **"Clean, fast, high-contrast native interface"**
+    - ❌ *"Stoikov Quantum Micro-Pricing Arbitrage"* &rarr; ✅ **"Deterministic limit order pricing & queue simulation"**
+    - ❌ *"Zero Cloud Outage Guarantee"* &rarr; ✅ **"Runs completely offline without internet connectivity"**
+    - ❌ *"Next-Gen AI Deep-Learning Sanitizer"* &rarr; ✅ **"Local deterministic regex & OCR text replacement"**
+    - ❌ *"State-of-the-Art Neural Acoustic Transcriber"* &rarr; ✅ **"Embedded Whisper engine running on local CPU/GPU"**
+    - ❌ *"I got tired of bloated SaaS subscriptions so I built..."* &rarr; ✅ **"I build native Windows desktop tools that run offline and don't charge a monthly subscription."**
+    - ❌ *"Battle-tested 53-Titan Ecosystem"* &rarr; ✅ **"53 focused single-purpose desktop tools and quantitative modules"**
+    - ❌ *"Cryptographic Panopticon Audit"* &rarr; ✅ **"Automated pre-deployment checklist & SEO validator"**
+    - ❌ *"Unbreachable Hardware Vault"* &rarr; ✅ **"Encrypted on-disk SQLite database with zero cloud sync"**
 
 ---
 
@@ -77,10 +92,12 @@ We engineer 100% air-gapped, sovereign desktop workstations and institutional qu
 * `0002-universal-route-obfuscation-shield.md`: In-memory cryptographic route hydration.
 * `0003-zero-cloud-air-gapped-workstations.md`: Hardware-level elimination of cloud data leaks.
 * `0004-sovereign-patna-legal-jurisdiction.md`: 53-Titan Master Legal Codex & Patna arbitration seat.
+* `0005-ai-slop-to-humanized-matrix.md`: AI-Slop to Humanized Translation Matrix & Harper & Presenton Rule.
 
 ---
 
-## 6. Runbooks Index (`/docs/runbooks/`)
+## 6. Runbooks & Portfolios Index
 * `deploy.md`: Step-by-step production edge deployment and header verification.
 * `rollback.md`: Instant deployment rollback procedure on Cloudflare Pages.
 * `security-audit.md`: Threat model, binary integrity checks, WDSI whitelist protocol.
+* `docs/titans-53-superpowers.md`: Complete Harper & Presenton 1-sentence superpowers for all 53 Titans.
