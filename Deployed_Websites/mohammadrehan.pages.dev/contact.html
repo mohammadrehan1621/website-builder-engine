@@ -373,10 +373,8 @@ Resume (PDF)
 
 <!-- HERO SECTION: COHESIVE WITH HOME & PROJECTS -->
 <section class="relative pt-10 pb-8 sm:pt-14 sm:pb-12 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
-    <!-- Interactive Neural Network Constellation Canvas -->
-    <canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
-    <!-- Subtle Grid Texture -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
+<!-- Clean High-Performance Static Engineering Grid -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <!-- Live Indicator Pill Badge (Matching index.html) -->
@@ -840,63 +838,7 @@ function handleFormSubmit(e) {
     document.getElementById('contact-form').reset();
 }
 
-// Constellation Neural Mesh Canvas Animation (Identical to Projects & Experience)
-(function() {
-    const canvas = document.getElementById('neural-mesh-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let width = canvas.width = canvas.parentElement.offsetWidth;
-    let height = canvas.height = canvas.parentElement.offsetHeight;
-    
-    window.addEventListener('resize', () => {
-        if (!canvas.parentElement) return;
-        width = canvas.width = canvas.parentElement.offsetWidth;
-        height = canvas.height = canvas.parentElement.offsetHeight;
-    });
-
-    const numPoints = 25;
-    const points = [];
-    for (let i = 0; i < numPoints; i++) {
-        points.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: (Math.random() - 0.5) * 0.4,
-            radius: Math.random() * 1.5 + 1
-        });
-    }
-
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = "rgba(99, 102, 241, 0.4)";
-        ctx.strokeStyle = "rgba(99, 102, 241, 0.12)";
-
-        for (let i = 0; i < numPoints; i++) {
-            const p = points[i];
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < 0 || p.x > width) p.vx *= -1;
-            if (p.y < 0 || p.y > height) p.vy *= -1;
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fill();
-
-            for (let j = i + 1; j < numPoints; j++) {
-                const p2 = points[j];
-                const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-                if (dist < 120) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.stroke();
-                }
-            }
-        }
-        requestAnimationFrame(animate);
-    }
-    animate();
-})();
+// Static Engineering Grid Active: zero CPU particle loop overhead
 </script>
 
 <script>

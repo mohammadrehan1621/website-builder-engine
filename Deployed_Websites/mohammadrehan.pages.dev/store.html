@@ -527,11 +527,8 @@ Resume (PDF)
   <!-- Hero Section (Light Luminous Modern Theme matching Experience & Home) -->
   <section class="relative pt-12 pb-10 sm:pt-16 sm:pb-14 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
     
-    <!-- Interactive Neural Mesh Constellation Canvas -->
-    <canvas id="neural-mesh-canvas" class="absolute inset-0 pointer-events-none z-0 w-full h-full opacity-60"></canvas>
-
-    <!-- Subtle Grid Texture -->
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f025_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f025_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none"></div>
+<!-- Clean High-Performance Static Engineering Grid -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
 
     <!-- Ambient Glowing Orbs -->
     
@@ -2083,82 +2080,7 @@ if (mobileBtn && mobileMenu) {
   });
 }
 
-// Interactive Neural Mesh Constellation Canvas (Exact same as Experience & Home)
-(function initNeuralCanvas() {
-  const canvas = document.getElementById('neural-mesh-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let particles = [];
-  let mouse = { x: null, y: null, maxDist: 140 };
-
-  function resize() {
-    const hero = document.getElementById('hero-section');
-    width = canvas.width = hero ? hero.offsetWidth : window.innerWidth;
-    height = canvas.height = hero ? hero.offsetHeight : 450;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  const heroEl = document.getElementById('hero-section');
-  if (heroEl) {
-    heroEl.addEventListener('mousemove', (e) => {
-      const rect = heroEl.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    });
-    heroEl.addEventListener('mouseleave', () => {
-      mouse.x = null;
-      mouse.y = null;
-    });
-  }
-
-  const particleCount = Math.min(Math.floor((window.innerWidth * 450) / 12000), 55);
-  for (let i = 0; i < particleCount; i++) {
-    particles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.55,
-      vy: (Math.random() - 0.5) * 0.55,
-      radius: Math.random() * 1.8 + 1
-    });
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, width, height);
-
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 110) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(16, 185, 129, ${0.18 * (1 - dist / 110)})`;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
-    }
-
-    particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > width) p.vx *= -1;
-      if (p.y < 0 || p.y > height) p.vy *= -1;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(16, 185, 129, 0.45)';
-      ctx.fill();
-    });
-
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
+// Static Engineering Grid Active: zero CPU particle loop overhead
 
 // Client-Side Zero-Lag Instant Filter
 function filterStoreCategory(category, buttonEl) {
