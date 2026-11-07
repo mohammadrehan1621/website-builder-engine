@@ -448,6 +448,9 @@ tailwind.config = {
 </div>
 
 <!-- Header (Spacious, Clean Redesign) -->
+<!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
+<!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
+<!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
 <header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
@@ -460,66 +463,601 @@ tailwind.config = {
 </div>
 </a>
 
-<!-- Clean, Spacious Desktop Navigation (Zero Bloat, Zero Maxed-out spacing) -->
-<nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm whitespace-nowrap">
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="index.html">Home</a>
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="projects.html">Projects</a>
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="experience.html">Experience</a>
+<!-- Clean Spacious 3-Flagship Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-5 lg:gap-7 text-sm whitespace-nowrap">
+<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
 
-<!-- Sovereign Commercial Suites (Active) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 text-white font-semibold text-xs transition shadow-2xs group" href="store.html" title="13 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
-<span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+<!-- Sovereign Commercial Suites (Sleek Pill with Live Count 13) -->
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 text-rose-800 border-2 border-rose-300 font-bold transition shadow-2xs group" href="store.html" title="13 Pure-Rust Sovereign Commercial Software Flagships on Gumroad">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">13</span></a>
 
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="security.html">Security</a>
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="research/">Research</a>
-<a class="text-slate-600 hover:text-slate-950 font-medium transition py-1" href="contact.html">Contact</a>
+<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="projects.html">Projects</a>
 </nav>
 
-<!-- Right Header Action CTAs (Sleek, Proportional, Guaranteed Breathing Room) -->
-<div class="hidden sm:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
-<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 flex items-center gap-1.5">
+<!-- Right Header Action CTAs + Side Drawer Trigger -->
+<div class="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 items-center gap-1.5">
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
 </a>
 
-<a href="Mohammad_Rehan_Resume.pdf" download class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono flex items-center gap-1.5 transition">
+<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
 <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
 <span>Resume</span>
 </a>
-</div>
 
-<!-- Mobile Menu Button -->
-<button class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
-<i class="w-6 h-6" data-lucide="menu"></i>
+<!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+<i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
+<span class="font-heading font-bold text-slate-900">Menu</span>
 </button>
-
 </div>
 
-<!-- Mobile Menu Dropdown -->
-<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-5 space-y-2 shadow-xl" id="mobile-menu">
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="index.html">Home</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="projects.html">Projects &amp; Systems</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="experience.html">Professional Experience</a>
-<a class="block py-2 px-3 rounded-lg bg-slate-900 text-white font-medium text-sm flex items-center justify-between" href="store.html">
-<span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>Commercial Suites</span>
-<span class="bg-rose-500 text-white text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">13 Flagships</span>
-</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="security.html">Trust &amp; Security Registry</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="research/">Research &amp; Engineering Codex</a>
-<a class="block py-2 px-3 rounded-lg hover:bg-slate-50 text-slate-700 font-medium text-sm" href="contact.html">Contact &amp; Hire</a>
-
-<div class="pt-2 border-t border-slate-100 flex items-center justify-between gap-2">
-<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 px-3 rounded-lg bg-slate-900 text-white text-xs font-bold text-center">
-Schedule Briefing
-</a>
-<a href="Mohammad_Rehan_Resume.pdf" download class="py-2 px-3 rounded-lg bg-slate-100 text-slate-800 text-xs font-semibold font-mono text-center">
-Resume (PDF)
-</a>
-</div>
 </div>
 </header>
+
+<!-- ========================================== -->
+<!-- SOVEREIGN SLIDE-OUT NAVIGATION DRAWER      -->
+<!-- ========================================== -->
+<div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+  <!-- Drawer Top Bar -->
+  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+      <div>
+        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10px] text-slate-500 font-mono">Institutional Navigation Codex</div>
+      </div>
+    </div>
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+      <i class="w-4 h-4" data-lucide="x"></i>
+    </button>
+  </div>
+
+  <!-- Drawer Body -->
+  <div class="p-5 space-y-6 flex-grow">
+    <!-- Flagship Systems & Portals -->
+    <div>
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
+      <nav class="space-y-1.5">
+        <!-- Home -->
+        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
+              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Commercial Suites (13) -->
+        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-100/90 font-bold text-rose-950 border-2 border-rose-300 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
+            <div>
+              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+                <span>Commercial Suites</span>
+                <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">13 Live</span>
+              </div>
+              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Projects -->
+        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-500">13 system cards, AegisDB &amp; mathematical invariants</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Professional Experience -->
+        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Security & Trust Registry -->
+        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Research & Engineering Codex -->
+        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Engineering Codex</div>
+              <div class="text-[11px] text-slate-500">Systems monographs on zero-bloat &amp; edge distribution</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Contact & Hire -->
+        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Institutional Ledger & Legal -->
+    <div class="pt-4 border-t border-slate-100">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+      <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+          <span>Legal Codex</span>
+        </a>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+          <span>Changelog</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Footer Actions -->
+  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
+      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+      <span>Schedule Technical Briefing</span>
+    </a>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
+      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+      <span>Download Resume (PDF)</span>
+    </a>
+  </div>
+</aside>
+
+<script>
+// Sovereign Side Navigation Drawer Controller
+function toggleSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  const isOpen = !drawer.classList.contains('translate-x-full');
+  if (isOpen) {
+    closeSideDrawer();
+  } else {
+    openSideDrawer();
+  }
+}
+
+function openSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-0', 'pointer-events-none');
+  backdrop.classList.add('opacity-100', 'pointer-events-auto');
+  drawer.classList.remove('translate-x-full');
+  drawer.classList.add('translate-x-0');
+  document.body.style.overflow = 'hidden';
+  if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+}
+
+function closeSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+  backdrop.classList.add('opacity-0', 'pointer-events-none');
+  drawer.classList.remove('translate-x-0');
+  drawer.classList.add('translate-x-full');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeSideDrawer();
+});
+</script>
+
+
+<!-- ========================================== -->
+<!-- SOVEREIGN SLIDE-OUT NAVIGATION DRAWER      -->
+<!-- ========================================== -->
+<div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+  <!-- Drawer Top Bar -->
+  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+      <div>
+        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10px] text-slate-500 font-mono">Institutional Navigation Codex</div>
+      </div>
+    </div>
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+      <i class="w-4 h-4" data-lucide="x"></i>
+    </button>
+  </div>
+
+  <!-- Drawer Body -->
+  <div class="p-5 space-y-6 flex-grow">
+    <!-- Flagship Systems & Portals -->
+    <div>
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
+      <nav class="space-y-1.5">
+        <!-- Home -->
+        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
+              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Commercial Suites (13) -->
+        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-100/90 font-bold text-rose-950 border-2 border-rose-300 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
+            <div>
+              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+                <span>Commercial Suites</span>
+                <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">13 Live</span>
+              </div>
+              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Projects -->
+        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-500">13 system cards, AegisDB &amp; mathematical invariants</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Professional Experience -->
+        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Security & Trust Registry -->
+        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Research & Engineering Codex -->
+        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Engineering Codex</div>
+              <div class="text-[11px] text-slate-500">Systems monographs on zero-bloat &amp; edge distribution</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Contact & Hire -->
+        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Institutional Ledger & Legal -->
+    <div class="pt-4 border-t border-slate-100">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+      <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+          <span>Legal Codex</span>
+        </a>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+          <span>Changelog</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Footer Actions -->
+  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
+      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+      <span>Schedule Technical Briefing</span>
+    </a>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
+      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+      <span>Download Resume (PDF)</span>
+    </a>
+  </div>
+</aside>
+
+<script>
+// Sovereign Side Navigation Drawer Controller
+function toggleSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  const isOpen = !drawer.classList.contains('translate-x-full');
+  if (isOpen) {
+    closeSideDrawer();
+  } else {
+    openSideDrawer();
+  }
+}
+
+function openSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-0', 'pointer-events-none');
+  backdrop.classList.add('opacity-100', 'pointer-events-auto');
+  drawer.classList.remove('translate-x-full');
+  drawer.classList.add('translate-x-0');
+  document.body.style.overflow = 'hidden';
+  if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+}
+
+function closeSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+  backdrop.classList.add('opacity-0', 'pointer-events-none');
+  drawer.classList.remove('translate-x-0');
+  drawer.classList.add('translate-x-full');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeSideDrawer();
+});
+</script>
+
+
+<!-- ========================================== -->
+<!-- SOVEREIGN SLIDE-OUT NAVIGATION DRAWER      -->
+<!-- ========================================== -->
+<div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+  <!-- Drawer Top Bar -->
+  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+      <div>
+        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10px] text-slate-500 font-mono">Institutional Navigation Codex</div>
+      </div>
+    </div>
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+      <i class="w-4 h-4" data-lucide="x"></i>
+    </button>
+  </div>
+
+  <!-- Drawer Body -->
+  <div class="p-5 space-y-6 flex-grow">
+    <!-- Flagship Systems & Portals -->
+    <div>
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
+      <nav class="space-y-1.5">
+        <!-- Home -->
+        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
+              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Commercial Suites (13) -->
+        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-100/90 font-bold text-rose-950 border-2 border-rose-300 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
+            <div>
+              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+                <span>Commercial Suites</span>
+                <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">13 Live</span>
+              </div>
+              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Projects -->
+        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-500">13 system cards, AegisDB &amp; mathematical invariants</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Professional Experience -->
+        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Security & Trust Registry -->
+        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Research & Engineering Codex -->
+        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Engineering Codex</div>
+              <div class="text-[11px] text-slate-500">Systems monographs on zero-bloat &amp; edge distribution</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Contact & Hire -->
+        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Institutional Ledger & Legal -->
+    <div class="pt-4 border-t border-slate-100">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+      <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+          <span>Legal Codex</span>
+        </a>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
+          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+          <span>Changelog</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Footer Actions -->
+  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
+      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+      <span>Schedule Technical Briefing</span>
+    </a>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
+      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+      <span>Download Resume (PDF)</span>
+    </a>
+  </div>
+</aside>
+
+<script>
+// Sovereign Side Navigation Drawer Controller
+function toggleSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  const isOpen = !drawer.classList.contains('translate-x-full');
+  if (isOpen) {
+    closeSideDrawer();
+  } else {
+    openSideDrawer();
+  }
+}
+
+function openSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-0', 'pointer-events-none');
+  backdrop.classList.add('opacity-100', 'pointer-events-auto');
+  drawer.classList.remove('translate-x-full');
+  drawer.classList.add('translate-x-0');
+  document.body.style.overflow = 'hidden';
+  if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+}
+
+function closeSideDrawer() {
+  const drawer = document.getElementById('side-drawer');
+  const backdrop = document.getElementById('side-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+  backdrop.classList.add('opacity-0', 'pointer-events-none');
+  drawer.classList.remove('translate-x-0');
+  drawer.classList.add('translate-x-full');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeSideDrawer();
+});
+</script>
+
 
 <!-- Main Page Content -->
 <main class="flex-grow">
