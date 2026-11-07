@@ -1,14 +1,10 @@
 # ====================================================================
-# Rehan Quant Lab (RQL) - Search Engine Optimization Directives
+# 🌐 Rehan Quant Lab™ — Search Engine Optimization Directives
 # Generated Deterministically by Bare-Metal Rust Engine on 2026-11-07
 # ====================================================================
 
 User-agent: *
 Allow: /
-Disallow: /vault.html
-Disallow: /vault
-Disallow: /platform/
-Disallow: /downloads/
 
 # Sitemap Index Declaration
 Sitemap: https://rehanquantlab.com/sitemap.xml
