@@ -430,6 +430,64 @@ p, li, span, a {
 <link rel="me" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" />
 <link rel="me" href="https://rehanquantlab.substack.com" />
 
+<style>
+/* START: RQL_AMBIENT_AURORA_STYLES */
+@keyframes aurora-drift-1 {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.20; }
+  50% { transform: translate3d(80px, 40px, 0) scale(1.15); opacity: 0.35; }
+  100% { transform: translate3d(-50px, 60px, 0) scale(0.92); opacity: 0.20; }
+}
+@keyframes aurora-drift-2 {
+  0% { transform: translate3d(0, 0, 0) scale(1.1); opacity: 0.16; }
+  50% { transform: translate3d(-70px, -50px, 0) scale(0.90); opacity: 0.30; }
+  100% { transform: translate3d(60px, -20px, 0) scale(1.1); opacity: 0.16; }
+}
+@keyframes aurora-drift-3 {
+  0% { transform: translate3d(0, 0, 0) scale(0.95); opacity: 0.14; }
+  50% { transform: translate3d(60px, -40px, 0) scale(1.18); opacity: 0.26; }
+  100% { transform: translate3d(-50px, 30px, 0) scale(0.95); opacity: 0.14; }
+}
+
+.aurora-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.aurora-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(85px);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.aurora-orb-1 {
+  top: -100px;
+  left: 12%;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.45) 0%, rgba(16, 185, 129, 0.08) 65%, transparent 100%);
+  animation: aurora-drift-1 18s ease-in-out infinite alternate;
+}
+.aurora-orb-2 {
+  top: 10%;
+  right: 8%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.40) 0%, rgba(79, 70, 229, 0.06) 65%, transparent 100%);
+  animation: aurora-drift-2 22s ease-in-out infinite alternate;
+}
+.aurora-orb-3 {
+  bottom: 0%;
+  left: 32%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.38) 0%, rgba(6, 182, 212, 0.05) 65%, transparent 100%);
+  animation: aurora-drift-3 26s ease-in-out infinite alternate;
+}
+/* END: RQL_AMBIENT_AURORA_STYLES */
+</style>
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 <!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock, Zero Collision) -->
@@ -719,6 +777,13 @@ document.addEventListener('keydown', function(e) {
 <!-- Page Header -->
 <section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
 <!-- Clean High-Performance Static Engineering Grid -->
+<!-- START: RQL_AMBIENT_AURORA -->
+<div class="aurora-container" aria-hidden="true">
+  <div class="aurora-orb aurora-orb-1"></div>
+  <div class="aurora-orb aurora-orb-2"></div>
+  <div class="aurora-orb aurora-orb-3"></div>
+</div>
+<!-- END: RQL_AMBIENT_AURORA -->
     <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
 
 <!-- Ambient Glowing Orbs -->

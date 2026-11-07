@@ -137,6 +137,64 @@ p, li, span, a {
     }
 }
 </style>
+<style>
+/* START: RQL_AMBIENT_AURORA_STYLES */
+@keyframes aurora-drift-1 {
+  0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.20; }
+  50% { transform: translate3d(80px, 40px, 0) scale(1.15); opacity: 0.35; }
+  100% { transform: translate3d(-50px, 60px, 0) scale(0.92); opacity: 0.20; }
+}
+@keyframes aurora-drift-2 {
+  0% { transform: translate3d(0, 0, 0) scale(1.1); opacity: 0.16; }
+  50% { transform: translate3d(-70px, -50px, 0) scale(0.90); opacity: 0.30; }
+  100% { transform: translate3d(60px, -20px, 0) scale(1.1); opacity: 0.16; }
+}
+@keyframes aurora-drift-3 {
+  0% { transform: translate3d(0, 0, 0) scale(0.95); opacity: 0.14; }
+  50% { transform: translate3d(60px, -40px, 0) scale(1.18); opacity: 0.26; }
+  100% { transform: translate3d(-50px, 30px, 0) scale(0.95); opacity: 0.14; }
+}
+
+.aurora-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.aurora-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(85px);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.aurora-orb-1 {
+  top: -100px;
+  left: 12%;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.45) 0%, rgba(16, 185, 129, 0.08) 65%, transparent 100%);
+  animation: aurora-drift-1 18s ease-in-out infinite alternate;
+}
+.aurora-orb-2 {
+  top: 10%;
+  right: 8%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.40) 0%, rgba(79, 70, 229, 0.06) 65%, transparent 100%);
+  animation: aurora-drift-2 22s ease-in-out infinite alternate;
+}
+.aurora-orb-3 {
+  bottom: 0%;
+  left: 32%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.38) 0%, rgba(6, 182, 212, 0.05) 65%, transparent 100%);
+  animation: aurora-drift-3 26s ease-in-out infinite alternate;
+}
+/* END: RQL_AMBIENT_AURORA_STYLES */
+</style>
 </head>
 <body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
 
@@ -402,6 +460,15 @@ document.addEventListener('keydown', function(e) {
 
 <!-- MAIN CONTENT WRAPPER -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+<div class="relative overflow-hidden">
+<!-- START: RQL_AMBIENT_AURORA -->
+<div class="aurora-container" aria-hidden="true">
+  <div class="aurora-orb aurora-orb-1"></div>
+  <div class="aurora-orb aurora-orb-2"></div>
+  <div class="aurora-orb aurora-orb-3"></div>
+</div>
+<!-- END: RQL_AMBIENT_AURORA -->
+
 
     <!-- FORMAL LAW FIRM HERO HEADER -->
     <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xs mb-8">
@@ -433,7 +500,11 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- FORMAL DOCUMENT METADATA RECORD -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs font-mono">
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-6 text-xs font-mono">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                <span class="text-slate-400 block text-[10px] uppercase tracking-wider mb-1">Entity Standing</span>
+                <span class="text-emerald-700 font-bold truncate block">Govt. MSME (Udyam)</span>
+            </div>
             <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                 <span class="text-slate-400 block text-[10px] uppercase tracking-wider mb-1">Document ID</span>
                 <span class="text-slate-900 font-bold">RQL-LEGAL-2026-v2.2</span>
@@ -594,6 +665,10 @@ document.addEventListener('keydown', function(e) {
                     </p>
                     <p>
                         <strong>   1.2 Self-Directed Deterministic Computational Tooling:</strong> All algorithms, stop-loss ratchets, Stoikov micro-pricing models, order book reconstruction daemons, and air-gapped commercial desktop workstations across all five (5) operational classes &mdash; Class I: Quant Research, Class II: Forensics &amp; Compliance, Class III: Retail POS &amp; Barcode Engineering, Class IV: Multi-WAN Network Tunnels, and Class V: Media &amp; Systems Utilities &mdash; are delivered strictly as self-directed, deterministic computational tools.
+                    </p>
+                    <p class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 font-medium">
+                        <p>
+                        <strong>   1.4 Enterprise Registration &amp; MSME Standing:</strong> Rehan Quant Lab is an enterprise officially registered under the Micro, Small and Medium Enterprises Development Act, 2006 (MSMED Act, 2006), Ministry of Micro, Small and Medium Enterprises, Government of India (Udyam Registration), with headquarters situated in Patna, Bihar, India.
                     </p>
                     <p class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 font-medium">
                         <strong>   1.3 Disclaimer of Advisory Intent:</strong> No calculation, signal, telemetry payload, diagnostic log, or analytical metric generated by the Software constitutes financial advice, tax planning, securities recommendation, chartered accountancy certification, legal counsel, or financial portfolio management solicitation.
@@ -949,6 +1024,7 @@ document.addEventListener('keydown', function(e) {
         </div>
     </div>
 
+</div>
 </main>
 
 <!-- FOOTER -->
