@@ -696,7 +696,7 @@ document.addEventListener('keydown', function(e) {
 <!-- HERO SECTION (HOME PAGE ROLE) -->
 <main class="flex-grow">
 <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/60" id="hero-section">
-<!-- Interactive Neural Network Constellation Canvas -->
+<!-- Interactive Network Constellation Canvas -->
 <!-- Calm Clean Background Grid -->
 <!-- START: RQL_AMBIENT_AURORA -->
 <div class="aurora-container" aria-hidden="true">
@@ -815,12 +815,12 @@ document.addEventListener('keydown', function(e) {
     <span id="hero-node-status" class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">100% OFFLINE VERIFIED</span>
 </div>
 
-<button id="hero-chaos-btn" onclick="triggerHeroChaosPulse()" class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 hover:from-indigo-900 hover:to-slate-900 text-white text-xs font-mono font-semibold py-2.5 px-4 rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 group cursor-pointer active:scale-95">
+<button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 hover:from-indigo-900 hover:to-slate-900 text-white text-xs font-mono font-semibold py-2.5 px-4 rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 group cursor-pointer active:scale-95">
     <i class="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
     <span>Run Memory &amp; Air-Gap Diagnostic</span>
 </button>
 
-<div id="hero-chaos-telemetry" class="hidden mt-2.5 p-3 rounded-xl bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800 transition-all duration-300 space-y-1">
+<div id="hero-diagnostic-telemetry" class="hidden mt-2.5 p-3 rounded-xl bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800 transition-all duration-300 space-y-1">
 </div>
 </div>
 
@@ -1823,10 +1823,10 @@ Contact Mohammad Rehan
         // 4. REAL LOCAL HARDWARE & AIR-GAP VERIFICATION (BROWSER-NATIVE)
         // ========================================================
         let heroVerifyCycle = 1;
-        async function triggerHeroChaosPulse() {
-            const btn = document.getElementById('hero-chaos-btn');
+        async function triggerHeroDiagnosticPulse() {
+            const btn = document.getElementById('hero-diagnostic-btn');
             const status = document.getElementById('hero-node-status');
-            const tel = document.getElementById('hero-chaos-telemetry');
+            const tel = document.getElementById('hero-diagnostic-telemetry');
             if (!btn || !status || !tel) return;
 
             btn.disabled = true;
@@ -1942,7 +1942,7 @@ function filterProjects(category, triggerEl) {
         } else if (normCat === 'retail') {
             visible = cats.includes('retail') || cats.includes('pos') || cats.includes('software') || cats.includes('client');
         } else if (normCat === 'resilience' || normCat === 'phoenix') {
-            visible = cats.includes('resilience') || cats.includes('phoenix') || cats.includes('chaos') || cats.includes('sentinel') || cats.includes('security');
+            visible = cats.includes('resilience') || cats.includes('resilience') || cats.includes('monitoring') || cats.includes('security') || cats.includes('security');
         } else {
             visible = cats.includes(normCat);
         }
