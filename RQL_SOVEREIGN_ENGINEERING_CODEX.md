@@ -1,4 +1,4 @@
-﻿# ??? THE SOVEREIGN ENGINEERING CODEX
+# ??? THE SOVEREIGN ENGINEERING CODEX
 ## The 20 Sovereign Titan Principles & Master Construction Laws
 
 > ### 🏹 THE SUPREME LAW OF CITADEL POWER:
@@ -656,7 +656,7 @@ Software complexity is non-linear. Building monolithic systems from scratch lead
 | **11** | **RQL FontViewer™** | Renders and previews thousands of TTF, OTF, and WOFF typography glyphs instantly with zero system lag or font cache bloat. | RightFont / Typeface<br>($5.00/mo  $60/yr) | **$45**<br>*(8.5 mo anchor)* | **+$135** | **BUILDING IN MAIN CHAT ⚡** |
 | **12** | **RQL DPDPShield™** | Destructively scrubs Aadhaar, PAN, and banking identifiers from client PDFs with 1-click DPDP Act 2023 court-admissible audit certification. | Adobe Acrobat / Cloud Redact<br>(₹24,000/yr ≈ /yr) | **₹4,999 / **<br>*(8.0 mo anchor)* | **+₹58,000** | **NEXT IN LINE 🎯** |
 | **13** | **RQL PriceTag™** | Generates batch retail shelf labels and price stickers with barcodes in seconds, eliminating handwriting errors on store shelves. | Labeljoy Retail Cloud<br>(.00/mo  /yr) | ****<br>*(8.5 mo anchor)* | **+** | Queued |
-| **14** | **RQL BarcodePrint** | Formats misaligned barcode sticker grids to fit standard A4 office printers with millimeter barcode-scanner readability. | BarTender Starter<br>($12.00/mo  $144/yr) | **$89**<br>*(8.0 mo anchor)* | **+$343** | Queued |
+| **14** | **RQL InvoiceGen™** | Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal POS receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry. | Zoho Invoice / FreshBooks<br>($15.00/mo  $180/yr) | **$89** (&#8377;7,499)<br>*(6.0 mo anchor)* | **+$451** | Staged &bull; Ready |
 | **15** | **RQL CSVFormat** | Deduplicates, sanitizes, and splits million-row CSV files in seconds without Excel freezing or cloud upload limits. | Gigasheet Cloud<br>($12.00/mo  $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
 | **16** | **RQL MarkdownPad** | Delivers a distraction-free, instantaneous offline Markdown desk with real-time vector preview and zero cloud syncing interruptions. | Ulysses / Bear Pro<br>($6.00/mo  $72/yr) | **$49**<br>*(8.5 mo anchor)* | **+$167** | Queued |
 
@@ -675,7 +675,7 @@ Software complexity is non-linear. Building monolithic systems from scratch lead
 | **20** | **RQL AudioExtract** | Rips pristine lossless audio tracks from large video files in one click without launching heavy editing software. | CloudConvert Pro<br>($7.00/mo  $84/yr) | **$49**<br>*(8.5 mo anchor)* | **+$203** | Queued |
 | **21** | **RQL SubtitleSync** | Adjusts video subtitle timing with millisecond offset shifting and converts SRT/VTT formats offline without monthly SaaS subscriptions. | HappyScribe / Subly<br>($12.00/mo  $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
 | **22** | **RQL SpaceMap** | Visualizes disk storage with interactive high-speed treemaps to expose hidden gigabyte bloat and solve "Disk Full" errors instantly. | TreeSize / CleanMyPC<br>($5.00/mo  $60/yr) | **$39**<br>*(8.5 mo anchor)* | **+$141** | Queued |
-| **23** | **RQL InvoiceGen** | Creates polished professional PDF tax invoices with automated calculations and QR codes offline without paying monthly billing SaaS rent. | Invoice Ninja / FreshBooks<br>($12.00/mo  $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
+| **23** | **RQL DocProtect™** | Locks confidential PDFs with authenticated AES-256 encryption, granular printing permissions, and dynamic watermarks offline. | Adobe Protect / Safeguard<br>($5.00/mo  $60/yr) | **$49**<br>*(8.5 mo anchor)* | **+$131** | Queued |
 | **24** | **RQL CashDrawer** | Reconciles opening cash, shift payouts, and closing registers to stop register shortages and counter employee theft. | POS Cash Control SaaS<br>($12.00/mo  $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
 | **25** | **RQL ReceiptPrinter** | Tests and visualizes 58mm/80mm USB thermal receipt formatting directly against ESC/POS hardware with zero broken alignment. | Hardware Test Suites<br>($8.00/mo  $96/yr) | **$59**<br>*(8.5 mo anchor)* | **+$229** | Queued |
 

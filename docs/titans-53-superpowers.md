@@ -39,7 +39,7 @@
 | **11** | **RQL FontViewer™** | Tier 1: Atomic Surgical | $49 | Renders and previews thousands of TTF, OTF, and WOFF typography glyphs instantly with zero system lag or font cache bloat. |
 | **12** | **RQL DPDPShield™** | Tier 1: Atomic Surgical | $89 | Destructively scrubs Aadhaar, PAN, and banking identifiers from client PDFs with 1-click DPDP Act 2023 court-admissible audit certification. |
 | **13** | **RQL PriceTag™** | Tier 1: Atomic Surgical | $79 | Generates batch retail shelf labels and price stickers with barcodes in seconds, eliminating handwriting errors on store shelves. |
-| **14** | **RQL BarcodePrint™** | Tier 1: Atomic Surgical | $89 | Formats misaligned barcode sticker grids to fit standard A4 office printers with millimeter barcode-scanner readability. |
+| **14** | **RQL InvoiceGen™** | Tier 1: Atomic Surgical | $89 | Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry. |
 | **15** | **RQL CSVFormat™** | Tier 1: Atomic Surgical | $89 | Deduplicates, sanitizes, and splits million-row CSV files in seconds without Excel freezing or cloud upload limits. |
 | **16** | **RQL MarkdownPad™** | Tier 2: Document & Privacy | $49 | Delivers a distraction-free, instantaneous offline Markdown desk with real-time vector preview and zero cloud syncing interruptions. |
 | **17** | **RQL PDFMerge™** | Tier 2: Document & Privacy | $69 | Merges, splits, and reorders confidential legal PDFs offline in seconds without exposing private client files to sketchy online converters. |
@@ -49,7 +49,7 @@
 | **21** | **RQL AudioExtract™** | Tier 2: Document & Privacy | $49 | Rips pristine lossless audio tracks from large video files in one click without launching heavy editing software. |
 | **22** | **RQL SubtitleSync™** | Tier 2: Document & Privacy | $89 | Adjusts video subtitle timing with millisecond offset shifting and converts SRT/VTT formats offline without monthly SaaS subscriptions. |
 | **23** | **RQL SpaceMap™** | Tier 2: Document & Privacy | $39 | Visualizes disk storage with interactive high-speed treemaps to expose hidden gigabyte bloat and solve Disk Full errors instantly. |
-| **24** | **RQL InvoiceGen™** | Tier 2: Document & Privacy | $89 | Creates polished professional PDF tax invoices with automated calculations and QR codes offline without paying monthly billing SaaS rent. |
+| **24** | **RQL DocProtect™** | Tier 2: Document & Privacy | $49 | Locks confidential PDFs with authenticated AES-256 encryption, granular printing permissions, and dynamic watermarks offline. |
 | **25** | **RQL CashDrawer™** | Tier 2: Document & Privacy | $89 | Reconciles opening cash, shift payouts, and closing registers to stop register shortages and counter employee theft. |
 | **26** | **RQL ReceiptPrinter™** | Tier 3: Systems & Network | $59 | Tests and visualizes 58mm/80mm USB thermal receipt formatting directly against ESC/POS hardware with zero broken alignment. |
 | **27** | **RQL DiskClean™** | Tier 3: Systems & Network | $49 | Scans hard drives with multi-threaded byte hashing to purge duplicate files and hidden system junk without risking personal documents. |
@@ -216,13 +216,14 @@
 * **4. The Results?** Eliminates messy handwritten price tags on store shelves and prevents cashier pricing disputes, saving +$281 against Labeljoy.
 * **5. The 1-Sentence Superpower**: *"Generates batch retail shelf labels and price stickers with barcodes in seconds, eliminating handwriting errors on store shelves."*
 
-#### 14. RQL BarcodePrint™ ($89 / ₹6,999 | Anchor: BarTender Starter $144/yr | Saves: +$343) &mdash; [STAGED 🟡]
-* **Mintage & Escalation**: Batch 1: 999 @ $89 | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
-* **1. What is it?** A millimeter-accurate industrial barcode grid alignment and printer utility.
-* **2. What does it do?** Formats and prints misaligned warehouse barcode sticker grids to fit standard A4 and thermal printers so scanners never misread them.
-* **3. How does it do it?** Uses direct vector geometric coordinates (mm precision) to prevent printer DPI scaling distortion, generating high-contrast Grade-A barcodes.
-* **4. The Results?** Zero unscannable boxes in warehouses or dispatch trucks, replacing BarTender Starter to save +$343/yr.
-* **5. The 1-Sentence Superpower**: *"Formats misaligned barcode sticker grids to fit standard A4 office printers with millimeter barcode-scanner readability."*
+#### 14. RQL InvoiceGen™ ($89 / ₹7,499 | Anchor: Zoho Invoice $180/yr | Saves: +$451) &mdash; [STAGED 🟡]
+* **Mintage & Escalation**: Batch 1: 999 @ $89 (&#8377;7,499) | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
+* **Master Binary**: `RQL_InvoiceGen_Master_Setup.exe` &bull; **Chassis**: Pure Native Rust &bull; Embedded PDF Vector Engine &bull; Zero Cloud Telemetry
+* **1. What is it?** A 2-second sovereign offline PDF invoice and tax estimate workstation with statutory Indian GST/VAT calculations and dynamic UPI QR embedding.
+* **2. What does it do?** Generates publication-grade PDF tax invoices with itemized line items, automated CGST/SGST/IGST tax splits, discount calculations, and instant mobile scan-to-pay UPI QR codes without internet connectivity.
+* **3. How does it do it?** Compiles vector PDF byte streams directly in RAM with embedded font tables in under 2 seconds, while rendering real-time previews and dispatching to 80mm/58mm thermal ESC/POS receipt slips.
+* **4. The Results?** Retailers, consultancies, and MSMEs generate compliant tax invoices and collect payments instantly with zero recurring cloud subscriptions, saving +$451/yr against Zoho Invoice and FreshBooks.
+* **5. The 1-Sentence Superpower**: *"Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry."*
 
 #### 15. RQL CSVFormat™ ($89 / ₹6,999 | Anchor: Gigasheet Cloud $144/yr | Saves: +$343) &mdash; [STAGED 🟡]
 * **Mintage & Escalation**: Batch 1: 999 @ $89 | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
@@ -301,13 +302,13 @@
 * **4. The Results?** Solves Windows "Low Disk Space" panic instantly without paid utilities, saving +$141 against TreeSize Pro licenses.
 * **5. The 1-Sentence Superpower**: *"Visualizes disk storage with interactive high-speed treemaps to expose hidden gigabyte bloat and solve Disk Full errors instantly."*
 
-#### 24. RQL InvoiceGen™ ($89 | Anchor: FreshBooks Cloud $144/yr | Saves: +$343)
-* **Mintage & Escalation**: Batch 1: 999 @ $89 | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
-* **1. What is it?** An offline professional PDF billing invoice and estimate synthesizer.
-* **2. What does it do?** Generates publication-grade PDF tax invoices with itemized line items, automated tax math, and dynamic payment QR codes with zero internet.
-* **3. How does it do it?** Ingests client and line-item data into an embedded vector layout engine, compiling directly into standalone PDF bytes without browser rendering bloat.
-* **4. The Results?** Freelancers and consultancies dispatch polished client invoices instantly without paying $15/month to FreshBooks, saving +$343/yr.
-* **5. The 1-Sentence Superpower**: *"Creates polished professional PDF tax invoices with automated calculations and QR codes offline without paying monthly billing SaaS rent."*
+#### 24. RQL DocProtect™ ($49 | Anchor: Adobe Protect $60/yr | Saves: +$131)
+* **Mintage & Escalation**: Batch 1: 999 @ $49 | Batch 2: 9,999 @ $64 | Batch 3: 99,999 @ $83 | Final Cap: 999,999 @ $108
+* **1. What is it?** An offline PDF security vault, permission locker, and digital watermarking station.
+* **2. What does it do?** Applies military-grade AES-256 encryption to confidential PDF documents, restricts printing, copying, and modification, and embeds dynamic forensic ownership watermarks.
+* **3. How does it do it?** Rewrites PDF security dictionary structures directly in RAM with authenticated AES-256 standard encryption without third-party cloud tools.
+* **4. The Results?** Professionals protect proprietary whitepapers, proposals, and contracts with zero cloud leak risks, saving +$131 against Adobe Acrobat subscriptions.
+* **5. The 1-Sentence Superpower**: *"Locks confidential PDFs with authenticated AES-256 encryption, granular printing permissions, and dynamic watermarks offline."*
 
 #### 25. RQL CashDrawer™ ($89 | Anchor: POS Cash Control $144/yr | Saves: +$343)
 * **Mintage & Escalation**: Batch 1: 999 @ $89 | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
