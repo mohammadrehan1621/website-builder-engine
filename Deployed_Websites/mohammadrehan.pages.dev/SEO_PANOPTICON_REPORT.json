@@ -8,11 +8,6 @@
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
     "documentshield": {
       "keyword": "documentshield",
       "count": 24,
@@ -23,8 +18,28 @@
       "count": 4,
       "density_pct": 0.03
     },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 0,
+      "density_pct": 0.0
+    },
     "sovereign computing": {
       "keyword": "sovereign computing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 20,
+      "density_pct": 0.15
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "pos software": {
+      "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
     },
@@ -33,50 +48,35 @@
       "count": 53,
       "density_pct": 0.39
     },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 0,
-      "density_pct": 0.0
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 24,
+      "density_pct": 0.18
     },
     "rehan quant lab": {
       "keyword": "rehan quant lab",
       "count": 79,
       "density_pct": 0.58
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 20,
-      "density_pct": 0.15
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 18,
+      "density_pct": 0.13
     },
     "desktop software": {
       "keyword": "desktop software",
       "count": 23,
       "density_pct": 0.17
     },
-    "expressbill": {
-      "keyword": "expressbill",
+    "storeflow": {
+      "keyword": "storeflow",
       "count": 0,
       "density_pct": 0.0
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 24,
-      "density_pct": 0.18
     },
     "lifetime license": {
       "keyword": "lifetime license",
       "count": 3,
       "density_pct": 0.02
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 18,
-      "density_pct": 0.13
     }
   },
   "meta_audits": [
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 59864
+  "execution_micros": 62039
 }
