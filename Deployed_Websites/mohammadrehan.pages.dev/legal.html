@@ -458,7 +458,7 @@ document.addEventListener('keydown', function(e) {
 
 
 
-<!-- MAIN CONTENT WRAPPER: OFFICIAL LEGAL CLAUSE PAPER -->
+<!-- MAIN CONTENT WRAPPER: OFFICIAL GeM-ALIGNED STATUTORY LEGAL AGREEMENT -->
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
 <!-- START: RQL_AMBIENT_AURORA -->
@@ -474,28 +474,28 @@ document.addEventListener('keydown', function(e) {
         <!-- Search Input -->
         <div class="relative w-full sm:w-80">
             <i class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" data-lucide="search"></i>
-            <input id="clause-search-input" type="text" placeholder="Filter clauses (e.g. arbitration, liability, refund)..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 text-xs font-sans text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 bg-white transition shadow-2xs">
+            <input id="clause-search-input" type="text" placeholder="Search clauses (e.g. arbitration, goods, refund)..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 text-xs font-sans text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 bg-white transition shadow-2xs">
         </div>
 
         <!-- Quick Section Dropdown & Print Actions -->
         <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
             <select id="clause-jump-select" onchange="jumpToClause(this.value)" class="px-2.5 py-2 rounded-lg border border-slate-300 bg-white text-slate-700 text-xs font-sans focus:outline-none focus:ring-1 focus:ring-slate-900 cursor-pointer shadow-2xs">
-                <option value="">Jump to Section (1&ndash;15)...</option>
-                <option value="clause-1">Sec. 01 &bull; Nature of Service (SEBI)</option>
-                <option value="clause-2">Sec. 02 &bull; Zero-Custody Architecture</option>
-                <option value="clause-3">Sec. 03 &bull; Extreme Market Risk</option>
-                <option value="clause-4">Sec. 04 &bull; Absolute Limitation of Liability</option>
-                <option value="clause-5">Sec. 05 &bull; Force Majeure &amp; Networks</option>
-                <option value="clause-6">Sec. 06 &bull; IP &amp; &#8377;50 Lakh Liquidated Damages</option>
-                <option value="clause-7">Sec. 07 &bull; Mandatory Arbitration (Patna Seat)</option>
-                <option value="clause-8">Sec. 08 &bull; Universal Software License (5 Classes)</option>
-                <option value="clause-9">Sec. 09 &bull; Global Privacy Policy (DPDP/GDPR)</option>
-                <option value="clause-10">Sec. 10 &bull; 7-Day Defect Remediation &amp; Refunds</option>
-                <option value="clause-11">Sec. 11 &bull; Cookie &amp; Storage Policy</option>
-                <option value="clause-12">Sec. 12 &bull; Data Subject Rights (48-Hr Erasure)</option>
-                <option value="clause-13">Sec. 13 &bull; Children's Privacy (18+ Adult)</option>
-                <option value="clause-14">Sec. 14 &bull; Truth in Advertising Invariant</option>
-                <option value="clause-15">Sec. 15 &bull; Business Details &amp; Notices</option>
+                <option value="">Jump to Clause (1&ndash;15)...</option>
+                <option value="clause-1">1. Introduction (Electronic Record)</option>
+                <option value="clause-2">2. General Terms &amp; Definitions</option>
+                <option value="clause-3">3. Technology Provider &amp; SEBI Mandate</option>
+                <option value="clause-4">4. Zero-Custody Architecture</option>
+                <option value="clause-5">5. Extreme Market Risk Notice</option>
+                <option value="clause-6">6. Intellectual Property &amp; &#8377;50 Lakh Penalty</option>
+                <option value="clause-7">7. Dispute Resolution &amp; Arbitration (Patna)</option>
+                <option value="clause-8">8. Software Goods &amp; Perpetual Licensing</option>
+                <option value="clause-9">9. Data Protection (DPDP Act &amp; GDPR)</option>
+                <option value="clause-10">10. Delivery, Guarantee &amp; 7-Day Refund</option>
+                <option value="clause-11">11. Cookie &amp; Storage Policy</option>
+                <option value="clause-12">12. Data Subject Rights (48-Hr Erasure)</option>
+                <option value="clause-13">13. Protection of Minors (18+ Standard)</option>
+                <option value="clause-14">14. Truth in Advertising Invariant</option>
+                <option value="clause-15">15. Official Operator Details &amp; Notices</option>
             </select>
 
             <button onclick="expandAllClauses()" class="px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition border border-slate-300 shadow-2xs cursor-pointer">
@@ -504,16 +504,16 @@ document.addEventListener('keydown', function(e) {
 
             <button onclick="window.print()" class="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold transition flex items-center gap-1.5 shadow-2xs cursor-pointer">
                 <i class="w-3.5 h-3.5" data-lucide="printer"></i>
-                <span>Print Folio</span>
+                <span>Print PDF</span>
             </button>
         </div>
     </div>
 
-    <!-- THE OFFICIAL CLAUSE PAPER (LEGAL INDENTURE / FOLIO DOCUMENT) -->
+    <!-- THE OFFICIAL GeM-FORMAT LEGAL DOCUMENT SHEET -->
     <article id="legal-deed-document" class="max-w-4xl mx-auto bg-white border border-slate-300 shadow-lg sm:rounded-sm px-6 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-16 md:py-20 text-slate-800 leading-relaxed font-sans relative print:border-none print:shadow-none print:p-0 print:m-0 print:max-w-full">
 
-        <!-- FOLIO HEADER BLOCK -->
-        <header class="text-center space-y-3 pb-6 border-b border-slate-200">
+        <!-- OFFICIAL STATUTORY HEADER -->
+        <header class="text-center space-y-2.5 pb-6 border-b border-slate-300">
             <div class="flex items-center justify-center gap-3">
                 <img src="emblem.webp" alt="Rehan Quant Lab Corporate Seal" class="w-12 h-12 rounded-lg object-cover border border-slate-300 shadow-xs">
             </div>
@@ -522,362 +522,316 @@ document.addEventListener('keydown', function(e) {
                     REHAN QUANT LAB&trade;
                 </div>
                 <div class="text-[11px] font-mono tracking-wider text-slate-600 uppercase font-semibold">
-                    Statutory Enterprise &bull; Ministry of Micro, Small &amp; Medium Enterprises &bull; Govt. of India
+                    Govt. of India Registered MSME &bull; Ministry of Micro, Small &amp; Medium Enterprises
                 </div>
                 <div class="text-[10px] font-mono text-slate-500">
-                    Registration No: <strong class="text-slate-800">UDYAM-BR-26-0258772</strong> &bull; Commenced: <strong>12/01/2023</strong> &bull; NIC: 62011, 58202, 72100 &bull; HQ: Patna, Bihar 800006, India
+                    Udyam Reg: <strong class="text-slate-800">UDYAM-BR-26-0258772</strong> &bull; Date of Commencement: <strong>12/01/2023</strong> &bull; NIC: 62011, 58202, 72100 &bull; HQ: Patna, Bihar 800006, India
                 </div>
             </div>
 
-            <!-- Double Legal Rule -->
-            <div class="border-t-2 border-b border-slate-900 py-1 my-5 text-center font-heading font-black tracking-widest uppercase text-[10px] text-slate-900">
-                Official Master Legal Agreement &bull; Commercial Software Indenture &bull; Universal Terms of Service
+            <!-- Double Legal Rule in GeM Government Gazette Style -->
+            <div class="border-t-2 border-b border-slate-900 py-1.5 my-5 text-center font-heading font-black tracking-widest uppercase text-[10px] text-slate-900">
+                General Terms and Conditions on Rehan Quant Lab (Version 2.2) &bull; dt 12th January 2023
             </div>
 
-            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight leading-tight uppercase font-heading pt-2">
-                Commercial Software License, Terms of Service &amp; Statutory Legal Agreement
+            <h1 class="text-xl sm:text-2xl font-extrabold text-slate-950 tracking-tight leading-tight uppercase font-heading pt-1">
+                General Terms and Conditions &bull; Commercial Software Goods &amp; User License Agreement
             </h1>
         </header>
 
         <!-- FORMAL DOCUMENT DOCKET BAR -->
         <div class="py-2.5 px-4 bg-slate-50 border-y border-slate-300 my-6 text-[11px] font-mono text-slate-700 grid grid-cols-2 sm:grid-cols-4 gap-y-2 gap-x-4">
-            <div><span class="text-slate-500 uppercase font-bold">Document ID:</span> <span class="font-bold text-slate-900">RQL-LEGAL-2026-v2.2</span></div>
+            <div><span class="text-slate-500 uppercase font-bold">Document ID:</span> <span class="font-bold text-slate-900">RQL-GTC-2026-v2.2</span></div>
             <div><span class="text-slate-500 uppercase font-bold">Judicial Seat:</span> <span class="font-bold text-indigo-900">Patna, Bihar, India</span></div>
             <div><span class="text-slate-500 uppercase font-bold">Enforceability:</span> <span class="font-bold text-emerald-800">Sec. 65B Evidence Act</span></div>
-            <div><span class="text-slate-500 uppercase font-bold">Effective Date:</span> <span class="font-bold text-slate-900">November 2026 (Live)</span></div>
+            <div><span class="text-slate-500 uppercase font-bold">Effective Date:</span> <span class="font-bold text-slate-900">12/01/2023 (Live v2.2)</span></div>
         </div>
 
-        <!-- PREAMBLE & STATUTORY RECITALS -->
-        <div class="space-y-3.5 text-xs sm:text-sm text-slate-700 leading-relaxed my-6 pb-6 border-b border-slate-200">
-            <p class="font-bold text-slate-900 text-xs tracking-wider uppercase font-mono">
-                Preamble &bull; Binding Indenture &bull; Notice to Licensee
-            </p>
-            <p>
-                THIS COMMERCIAL SOFTWARE LICENSE AND STATUTORY LEGAL AGREEMENT (hereinafter referred to as the <strong>"Agreement"</strong> or <strong>"Codex"</strong>) constitutes an official, legally binding contract entered into by and between <strong>Mohammad Rehan / Rehan Quant Lab&trade;</strong> (hereinafter the <strong>"Licensor"</strong>), operating as a registered Indian enterprise under Udyam Registration No. <strong>UDYAM-BR-26-0258772</strong>, headquartered in Patna, Bihar, India, and any individual person, chartered accountant, retail merchant, sole proprietorship, partnership, corporate firm, or institutional trading desk (hereinafter the <strong>"Licensee"</strong> or <strong>"User"</strong>) who downloads, evaluates, licenses, acquires, or executes any commercial desktop application, compiled 64-bit binary executable (.exe), algorithmic library, or web platform authored by the Licensor.
-            </p>
-            <p>
-                BY DOWNLOADING, EVALUATING, OR EXECUTING ANY REHAN QUANT LAB SOFTWARE OR SUITE, LICENSEE EXPRESSLY AND IRREVOCABLY ACKNOWLEDGES AND AGREES TO BE UNCONDITIONALLY BOUND BY ALL CLAUSES, COVENANTS, STATUTORY ARBITRATION MANDATES, JURISDICTION SELECTION, AND FINANCIAL LIABILITY CEILINGS CONTAINED HEREIN. IF YOU DO NOT AGREE TO EACH TERM IN FULL, YOU SHALL NOT ACQUIRE, DOWNLOAD, COPY, INSTALL, OR RUN ANY LICENSOR EXECUTABLE.
-            </p>
-        </div>
+        <!-- CLAUSE STREAMS: 15 FORMAL NUMBERED SECTIONS (GeM STATUTORY STYLE) -->
+        <div id="clauses-stream" class="space-y-8 text-xs sm:text-sm text-slate-700 leading-relaxed">
 
-        <!-- STATUTORY REGULATORY NOTICE: SEBI RISK DISCLOSURE -->
-        <div class="my-8 border-l-4 border-amber-600 bg-amber-50/70 p-5 sm:p-6 text-xs sm:text-sm text-amber-950 space-y-2.5">
-            <div class="font-bold uppercase tracking-wider text-amber-900 flex items-center gap-2 text-xs font-mono">
-                <span>STATUTORY REGULATORY MANDATE &bull; SEBI RISK DISCLOSURE NOTICE</span>
-            </div>
-            <p class="leading-relaxed">
-                In strict accordance with official regulatory research published by the <strong>Securities and Exchange Board of India (SEBI)</strong>, <strong>9 out of 10 (93%) individual retail traders in the equity Futures &amp; Options (F&amp;O) segment incurred net financial losses</strong>, with an average net loss exceeding &#8377;50,000 per trader. Beyond gross market losses, loss-makers expended an additional 21% to 28% of net losses on transaction broker fees and statutory taxes.
-            </p>
-            <p class="leading-relaxed font-semibold">
-                Derivative, high-frequency, and algorithmic financial market operations carry extreme, inherent risks of total capital loss. Mohammad Rehan / Rehan Quant Lab&trade; operates strictly as an engineering software tooling laboratory and provides zero investment advisory, portfolio management, or trade execution solicitations.
-            </p>
-        </div>
-
-        <!-- CLAUSE SECTIONS 1 TO 15 (CONTINUOUS FORMAL LEGAL PAPER FLOW) -->
-        <div id="clauses-stream" class="space-y-10">
-
-            <!-- SECTION 1: NATURE OF SERVICE (SEBI COMPLIANCE) -->
-            <section id="clause-1" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 1. Nature of Service &bull; Technology Provider Only (SEBI Compliance)
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Non-Advisory Safe-Harbor</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 1: INTRODUCTION (ELECTRONIC RECORD UNDER IT ACT, 2000) -->
+            <section id="clause-1" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    1. Introduction
+                </h2>
+                <div class="space-y-3">
                     <p>
-                        <strong>1.1 Non-Advisory Safe-Harbor:</strong> Mohammad Rehan and Rehan Quant Lab&trade; (hereinafter the "Licensor") operate exclusively as a <strong>quantitative software engineering laboratory and standalone systems provider</strong>. Licensor is <strong>NOT</strong> an Investment Adviser (RIA), Research Analyst (RA), Stock Broker, Sub-Broker, Portfolio Manager (PMS), or Merchant Banker under the Securities and Exchange Board of India (SEBI) Act, 1992, nor under equivalent foreign financial market regulations.
+                        This document is an electronic record published by <strong>Rehan Quant Lab&trade;</strong> under the provisions of the <strong>Information Technology Act, 2000</strong> and the rules made there under (as applicable) and shall act as a valid, binding agreement between Seller / Licensor and Buyer / Licensee. Further, the use of Rehan Quant Lab platforms and the resulting acquisition, evaluation, and execution of all commercial desktop software goods, compiled 64-bit binary applications (.exe), and engineering utilities shall be governed by the following General Terms and Conditions (GTC).
                     </p>
                     <p>
-                        <strong>1.2 Self-Directed Deterministic Computational Tooling:</strong> All algorithms, stop-loss ratchets, Stoikov micro-pricing models, order book reconstruction services, and air-gapped commercial desktop workstations across all five (5) operational classes &mdash; Class I: Quant Research, Class II: Forensics &amp; Compliance, Class III: Retail POS &amp; Barcode Engineering, Class IV: Multi-WAN Network Tunnels, and Class V: Media &amp; Systems Utilities &mdash; are delivered strictly as self-directed, deterministic computational tools.
-                    </p>
-                    <p class="border-l-2 border-slate-900 pl-4 py-1.5 italic font-medium my-2 text-slate-900 bg-slate-50">
-                        <strong>1.3 Disclaimer of Advisory Intent:</strong> No calculation, signal, telemetry payload, diagnostic log, or analytical metric generated by the Software constitutes financial advice, tax planning, securities recommendation, chartered accountancy certification, legal counsel, or financial portfolio management solicitation.
+                        In accordance with <strong>Section 10A of the Information Technology Act, 2000</strong> and <strong>Section 65B of the Indian Evidence Act, 1872</strong>, electronic contracts formed through digital offer, acceptance, and checkout fulfillment are legally recognized, valid, and enforceable without requiring physical handwritten ink signatures.
                     </p>
                     <p>
-                        <strong>1.4 Enterprise Registration &amp; MSME Standing:</strong> Rehan Quant Lab is an enterprise officially registered under the Micro, Small and Medium Enterprises Development Act, 2006 (MSMED Act, 2006), Ministry of Micro, Small and Medium Enterprises, Government of India, under Udyam Registration Number <strong>UDYAM-BR-26-0258772</strong> (NIC: 62011, 58202, 72100), with certified Date of Incorporation and Date of Commencement of Operations on <strong>January 12, 2023 (12/01/2023)</strong>, with headquarters situated in Patna, Bihar, India.
+                        By downloading, evaluating, acquiring, or executing any commercial desktop workstation or software good authored by Licensor, Buyer / Licensee hereby unconditionally agrees to be bound by these General Terms and Conditions (GTC), the Product Specific Special Terms, and Service Level Agreements (SLAs).
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 2: ZERO CUSTODY ARCHITECTURE -->
-            <section id="clause-2" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 2. Zero-Custody Architecture &bull; Client Retains 100% Asset Custody
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Zero Commingling</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 2: GENERAL TERMS AND DEFINITIONS -->
+            <section id="clause-2" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    2. General Terms and Definitions
+                </h2>
+                <div class="space-y-2.5 pl-2">
                     <p>
-                        <strong>2.1 No Deposit Solicitation:</strong> Licensor never solicits, receives, holds, commingles, or manages client capital, fiat currency, or cryptocurrency. All financial funds remain exclusively inside the Licensee's independent broker accounts and registered custody solutions.
+                        <strong>a. &ldquo;APPLICABLE LAWS&rdquo;</strong> shall mean any statute, law, ordinance, notification, rule, regulation, judgment, order, decree, bye-law, approval, directive, guideline, policy, or other governmental restriction as may be in effect in the Republic of India, including the Information Technology Act, 2000, Indian Contract Act, 1872, Arbitration and Conciliation Act, 1996, MSMED Act, 2006, and Digital Personal Data Protection (DPDP) Act, 2023.
                     </p>
                     <p>
-                        <strong>2.2 Client-Owned Cryptographic Credentials:</strong> All algorithmic execution pipelines require Licensee's own broker API credentials, MPIN, and TOTP authentication tokens. The Licensee retains sole, unconditioned power to revoke API credentials, pause algorithmic threads, or execute panic liquidations directly through their broker at any second.
-                    </p>
-                </div>
-            </section>
-
-            <!-- SECTION 3: EXTREME MARKET RISK -->
-            <section id="clause-3" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 3. Extreme Market Risk &amp; No Guarantee of Profit
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Market Volatility</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
-                    <p>
-                        <strong>3.1 Non-Linear Regime Shifts:</strong> NO FINANCIAL MODEL, QUANTITATIVE PIPELINE, OR SOFTWARE WORKSTATION CAN GUARANTEE PROFITS OR IMMUNITY FROM DRAWDOWN. Markets are inherently non-linear and subject to catastrophic liquidity voids, exchange circuit halts, sudden margin requirement hikes, and execution slippage.
+                        <strong>b. &ldquo;GOODS&rdquo;</strong> shall mean an article / product or an intangible product like commercial software licenses, compiled native 64-bit Windows desktop executables (.exe), SHA-256 cryptographic verification manifests, and technical documentation offered for acquisition by Seller / Licensor.
                     </p>
                     <p>
-                        <strong>3.2 Retrospective Backtesting Disclaimer:</strong> Historical simulations and backtests (including simulated survival across the 2008 Lehman collapse, 2016 Demonetization, and 2020 Covid crash with 0% blowout) are purely mathematical and historical demonstrations. Past performance provides zero guarantee of future performance.
+                        <strong>c. &ldquo;SELLER / LICENSOR&rdquo;</strong> shall mean Mohammad Rehan operating as <strong>Rehan Quant Lab&trade;</strong>, an enterprise officially registered under the Micro, Small and Medium Enterprises Development Act, 2006 (MSMED Act, 2006), Ministry of MSME, Government of India, under Udyam Registration Number <strong>UDYAM-BR-26-0258772</strong> (NIC: 62011, 58202, 72100), with certified Date of Incorporation and Date of Commencement of Operations on <strong>January 12, 2023 (12/01/2023)</strong>, with headquarters situated in Patna, Bihar, India.
+                    </p>
+                    <p>
+                        <strong>d. &ldquo;BUYER / LICENSEE&rdquo;</strong> shall mean any legal entity such as firm(s) of Proprietorship / Partnership Firm / Limited Liability Partnership / Private Limited / Limited Company / Chartered Accountancy Practice / Corporate Entity, or individual purchasing, licensing, or evaluating Goods.
+                    </p>
+                    <p>
+                        <strong>e. &ldquo;COMMERCIAL LICENSE&rdquo;</strong> shall mean the non-exclusive, perpetual, single-workstation proprietary license granted by Seller to Buyer for running compiled desktop software offline with zero mandatory recurring monthly subscription fees.
+                    </p>
+                    <p>
+                        <strong>f. &ldquo;AIR-GAPPED EXECUTION&rdquo;</strong> shall mean 100% local random-access memory (RAM) and workstation hardware execution with zero outbound internet network sockets, zero background telemetry, and zero third-party cloud data transmission.
+                    </p>
+                    <p>
+                        <strong>g. &ldquo;CONTRACT&rdquo;</strong> shall mean the commercial order created upon checkout completion including scope of software goods, license deliverables, GTC, and warranty terms.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 4: ABSOLUTE LIMITATION OF LIABILITY -->
-            <section id="clause-4" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 4. Absolute Limitation of Liability &bull; Strict Financial Ceiling
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Statutory Cap</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 3: TECHNOLOGY PROVIDER STANDING & SEBI MANDATE -->
+            <section id="clause-3" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    3. Role, Responsibilities &amp; Statutory Safe-Harbor (SEBI Compliance)
+                </h2>
+                <div class="space-y-3">
                     <p>
-                        <strong>4.1 Comprehensive Damage Waiver:</strong> TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, LICENSOR SHALL HAVE ZERO LIABILITY FOR ANY DIRECT TRADING LOSSES, CAPITAL IMPAIRMENT, OPPORTUNITY COSTS, UNFILLED LIMIT ORDERS, LATENCY SPIKES, OR UNEXPECTED SPREAD EXPANSION.
+                        <strong>a. Non-Advisory Technology Provider Standing:</strong> Seller operates exclusively as a <strong>software engineering laboratory and standalone systems developer</strong>. Seller is <strong>NOT</strong> an Investment Adviser (RIA), Research Analyst (RA), Stock Broker, Sub-Broker, Portfolio Manager (PMS), or Merchant Banker under the Securities and Exchange Board of India (SEBI) Act, 1992, nor under equivalent foreign financial regulations.
                     </p>
-                    <div class="border-l-2 border-slate-900 pl-4 py-2 bg-slate-50 text-slate-900 font-mono text-xs leading-relaxed my-2">
-                        <p class="font-bold mb-1 uppercase tracking-wider text-slate-950">&bull; STATUTORY FINANCIAL LIABILITY CEILING:</p>
-                        IN ANY CONTROVERSY OR LEGAL PROCEEDING WHERE LIABILITY IS ADJUDICATED BY A COURT OR ARBITRAL TRIBUNAL OF COMPETENT JURISDICTION, LICENSOR'S AGGREGATE CUMULATIVE LIABILITY SHALL BE STRICTLY LIMITED TO THE EXACT PURCHASE PRICE ACTUALLY RECEIVED BY LICENSOR FOR THAT SPECIFIC COMMERCIAL SOFTWARE LICENSE (RANGING STRICTLY FROM $39.00 USD TO $299.00 USD), OR INR &#8377;1,000 (ONE THOUSAND INDIAN RUPEES), WHICHEVER IS LESS.
+                    <!-- SEBI Statutory Risk Warning Block in Formal Government Frame -->
+                    <div class="my-3 border-l-4 border-amber-600 bg-amber-50/70 p-4 sm:p-5 text-xs sm:text-sm text-amber-950 space-y-2">
+                        <div class="font-bold uppercase tracking-wider text-amber-900 font-mono text-xs">
+                            Statutory Mandate &bull; Securities and Exchange Board of India (SEBI) Risk Disclosure Notice
+                        </div>
+                        <p class="leading-relaxed">
+                            According to official regulatory research published by the <strong>Securities and Exchange Board of India (SEBI)</strong>, <strong>9 out of 10 (93%) individual retail traders in the equity Futures &amp; Options (F&amp;O) segment incurred net financial losses</strong>, with an average net loss of over &#8377;50,000 per trader. Over and above net trading losses, loss-makers expended an additional 21% to 28% on transaction broker fees and statutory taxes.
+                        </p>
+                        <p class="leading-relaxed font-semibold">
+                            Derivative, high-frequency, and algorithmic market operations involve extreme risk of total capital loss. Mohammad Rehan / Rehan Quant Lab&trade; provides zero investment advisory, portfolio management, or trade execution solicitations.
+                        </p>
                     </div>
-                </div>
-            </section>
-
-            <!-- SECTION 5: FORCE MAJEURE -->
-            <section id="clause-5" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 5. Third-Party Broker, Cloud &amp; Network Force Majeure
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Exogenous Factors</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
                     <p>
-                        <strong>5.1 Infrastructure Exclusions:</strong> Licensor bears zero responsibility or financial liability for damages resulting from exchange-wide circuit halts, broker API rate throttles, session key expirations, Cloudflare challenges, cloud edge DNS outages, ISP fiber-optic severance, local thermal printer hardware faults, or operating system patch disruptions beyond Licensor's reasonable control.
+                        <strong>b. Disclaimer of Financial Advisory Intent:</strong> No calculation, signal, telemetry payload, diagnostic log, or analytical metric generated by the Software constitutes financial advice, tax planning, securities recommendation, chartered accountancy certification, legal counsel, or financial portfolio management solicitation.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 6: IP PROTECTION & LIQUIDATED DAMAGES -->
-            <section id="clause-6" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 6. Intellectual Property Protection &amp; &#8377;50 Lakh Liquidated Damages
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-rose-700 font-bold">&#8377;50,00,000 Penalty</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 4: ZERO CUSTODY ARCHITECTURE -->
+            <section id="clause-4" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    4. Zero-Custody Architecture (Buyer Retains 100% Asset Custody)
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>6.1 Proprietary Trade Secrets:</strong> All source code, compiled 64-bit native binaries (`.exe`, `.dll`, ELF, Mach-O), Rust crates, Stoikov micro-pricing models, in-memory cache structures, and supervisor state machines remain the exclusive trade secrets and intellectual property of Rehan Quant Lab&trade;.
+                        <strong>a. Zero Commingling of Funds:</strong> Seller never solicits, receives, holds, commingles, or manages client capital, fiat currency, or cryptocurrency. All financial funds remain exclusively inside the Buyer's independent bank or registered broker accounts.
+                    </p>
+                    <p>
+                        <strong>b. Buyer-Owned Cryptographic Credentials:</strong> All algorithmic execution pipelines require Buyer's own broker API credentials, MPIN, and TOTP authentication tokens. The Buyer retains sole, unconditioned authority to revoke credentials, pause execution threads, or perform immediate liquidations directly through their broker.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CLAUSE 5: EXTREME MARKET RISK -->
+            <section id="clause-5" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    5. Extreme Market Risk &amp; No Guarantee of Profit
+                </h2>
+                <div class="space-y-2.5">
+                    <p>
+                        <strong>a. Non-Linear Market Conditions:</strong> NO FINANCIAL MODEL, QUANTITATIVE PIPELINE, OR SOFTWARE WORKSTATION CAN GUARANTEE PROFITS OR IMMUNITY FROM CAPITAL DRAWDOWN. Financial markets are subject to sudden liquidity voids, exchange circuit halts, margin requirement changes, and execution slippage.
+                    </p>
+                    <p>
+                        <strong>b. Backtesting Disclaimer:</strong> Historical simulations and backtests are purely mathematical demonstrations. Past performance provides zero guarantee of future outcomes.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CLAUSE 6: INTELLECTUAL PROPERTY & LIQUIDATED DAMAGES -->
+            <section id="clause-6" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    6. Intellectual Property Protection &amp; &#8377;50 Lakh Liquidated Damages
+                </h2>
+                <div class="space-y-3">
+                    <p>
+                        <strong>a. Proprietary Trade Secrets:</strong> All source code, compiled 64-bit native binaries (`.exe`, `.dll`), Stoikov pricing models, in-memory cache structures, and process state machines remain the exclusive trade secrets and intellectual property of Rehan Quant Lab&trade;.
                     </p>
                     <div class="border-l-2 border-rose-600 pl-4 py-2 bg-rose-50/70 text-rose-950 text-xs sm:text-sm leading-relaxed font-semibold my-2">
-                        <strong>6.2 Reverse Engineering Prohibition &amp; Liquidated Damages:</strong> Users, licensees, and reverse-engineers are strictly prohibited from decompiling, disassembling, memory-dumping, cracking, sub-licensing, or redistributing the Software. Any willful violation shall incur immediate injunctive relief and contractually agreed statutory liquidated damages of not less than <strong>INR &#8377;50,00,000 (Fifty Lakh Indian Rupees)</strong> per occurrence, plus all legal fees and expert forensic costs.
+                        <strong>b. Reverse Engineering Prohibition &amp; Liquidated Damages:</strong> Users, licensees, and reverse-engineers are strictly prohibited from decompiling, disassembling, memory-dumping, cracking, sub-licensing, or redistributing the Software. Any willful violation shall incur immediate injunctive relief and contractually agreed statutory liquidated damages of not less than <strong>INR &#8377;50,00,000 (Fifty Lakh Indian Rupees)</strong> per occurrence, plus all legal fees and expert forensic costs.
                     </div>
                 </div>
             </section>
 
-            <!-- SECTION 7: ARBITRATION & PATNA JURISDICTION -->
-            <section id="clause-7" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 7. Mandatory Binding Individual Arbitration &amp; Patna Judicial Seat
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-indigo-700 font-bold">Patna Seat</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 7: DISPUTE RESOLUTION & ARBITRATION (PATNA SEAT) -->
+            <section id="clause-7" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    7. Dispute Resolution, Conciliation &amp; Mandatory Arbitration (Patna Seat)
+                </h2>
+                <div class="space-y-3">
+                    <p>
+                        <strong>a. Amicable Conciliation:</strong> The Parties undertake that any conflict or dispute that may arise between them shall first be dealt with through mutual, amicable conciliation within thirty (30) days of formal written notice.
+                    </p>
                     <div class="border-l-2 border-indigo-600 pl-4 py-2 bg-indigo-50/60 text-indigo-950 text-xs sm:text-sm leading-relaxed font-medium my-2">
-                        <strong>7.1 Exclusive Seat of Arbitration:</strong> Any legal dispute, controversy, claim, or difference arising out of or relating to this agreement, commercial license, or software execution shall be resolved exclusively through final and binding individual arbitration administered under the <strong>Indian Arbitration and Conciliation Act, 1996</strong>, seated exclusively in <strong>Patna, Bihar, India</strong>. The arbitration shall be conducted before a sole arbitrator appointed in accordance with the Act and conducted in the English language.
+                        <strong>b. Mandatory Binding Arbitration:</strong> Any legal dispute, controversy, claim, or difference arising out of or relating to this agreement, commercial license, or software execution that cannot be resolved amicably shall be resolved exclusively through final and binding individual arbitration administered under the <strong>Indian Arbitration and Conciliation Act, 1996</strong>, seated exclusively in <strong>Patna, Bihar, India</strong>. The arbitration shall be conducted before a sole arbitrator appointed in accordance with the Act and conducted in the English language.
                     </div>
                     <p>
-                        <strong>7.2 Class-Action &amp; Representative Action Waiver:</strong> LICENSEE EXPRESSLY AND IRREVOCABLY WAIVES ALL RIGHTS TO INITIATE, JOIN, OR PARTICIPATE IN ANY CLASS-ACTION, MASS ARBITRATION, COLLECTIVE LITIGATION, OR REPRESENTATIVE PROCEEDING AGAINST LICENSOR.
+                        <strong>c. Exclusive Judicial Forum:</strong> Subject to the mandatory arbitration clause above, the competent courts located in <strong>Patna, Bihar, India</strong> shall possess sole and exclusive territorial jurisdiction over any interim injunctive relief or enforcement of arbitral awards.
                     </p>
                     <p>
-                        <strong>7.3 Exclusive Judicial Forum:</strong> Subject to the mandatory arbitration clause above, the competent courts located in <strong>Patna, Bihar, India</strong> shall possess sole and exclusive territorial jurisdiction over any interim injunctive relief or enforcement of arbitral awards.
+                        <strong>d. Class-Action Waiver:</strong> BUYER EXPRESSLY AND IRREVOCABLY WAIVES ALL RIGHTS TO INITIATE, JOIN, OR PARTICIPATE IN ANY CLASS-ACTION, MASS ARBITRATION, OR REPRESENTATIVE PROCEEDING AGAINST SELLER.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 8: UNIVERSAL COMMERCIAL SOFTWARE LICENSE (EULA) -->
-            <section id="clause-8" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 8. Commercial Desktop Software License Agreement (Universal EULA)
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">5 Operational Classes</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 8: SCOPE OF SOFTWARE GOODS (UNIVERSAL EULA) -->
+            <section id="clause-8" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    8. Scope of Software Goods &amp; Commercial Perpetual Licensing (13 Suites)
+                </h2>
+                <div class="space-y-3">
                     <p>
-                        <strong>8.1 Comprehensive Multi-Suite Coverage:</strong> This Universal Master Software License Agreement establishes a binding legal framework governing the perpetual acquisition, workstation deployment, and operational execution of all Rehan Quant Lab commercial desktop applications and modular engineering tools across all five (5) operational classes:
+                        <strong>a. 13 Commercial Suites Across 5 Operational Classes:</strong> This Universal Master License establishes a binding legal framework governing the acquisition and workstation deployment of all thirteen (13) commercial desktop applications:
                     </p>
-                    
                     <div class="space-y-2.5 my-3 pl-4 border-l-2 border-slate-300 text-xs font-mono text-slate-800">
                         <div>
-                            <strong>(a) Class I &bull; Quant &amp; Algorithmic Research Suites:</strong>
-                            Stoikov Micro-Pricing Engine, Order Flow Imbalance (OFI), Tick Depth Bitmask Router, Liquidity Routing Engine, Monte Carlo VaR Simulators, and High-Frequency Execution Pipelines. Delivered strictly as self-directed, deterministic computational research tools.
+                            <strong>i. Class I &bull; Quant &amp; Systematic Financial Research:</strong>
+                            Stoikov Micro-Pricing Engine, Order Flow Imbalance (OFI), Tick Depth Bitmask Router, Liquidity Routing Engine, Monte Carlo VaR Simulators, and Execution Pipelines. Delivered strictly as self-directed, deterministic computational research tools.
                         </div>
                         <div>
-                            <strong>(b) Class II &bull; Forensics &amp; Compliance Workstations:</strong>
+                            <strong>ii. Class II &bull; Forensics &amp; Compliance Workstations:</strong>
                             RQL DocumentShield&trade; (Air-Gapped PDF Sanitizer), RQL WhisperVault&trade; (Offline Audio Forensics), RQL DPDPShield&trade; (Indian Data Protection Sanitizer), and RQL Integrity Auditor (Cryptographic Verification Engine). Zero cloud telemetry.
                         </div>
                         <div>
-                            <strong>(c) Class III &bull; Retail POS &amp; Barcode Engineering:</strong>
+                            <strong>iii. Class III &bull; Retail POS &amp; Barcode Engineering:</strong>
                             RQL PriceTag&trade; (Barcode &amp; Thermal Label Studio), RQL RetailPOS&trade; (Offline Checkout Engine), StoreChain Mesh (LAN Multi-Counter Sync), and Thermal ESC/POS Vector Drivers. Zero print-spool leaks.
                         </div>
                         <div>
-                            <strong>(d) Class IV &bull; Multi-WAN &amp; Tunnel Infrastructure:</strong>
+                            <strong>iv. Class IV &bull; Multi-WAN &amp; Tunnel Infrastructure:</strong>
                             RQL Conduit&trade; (Multi-WAN Bonding Tunnel), WireGuard Fast-Failover Network Services, Sub-Millisecond Heartbeat Monitors, and Packet Aggregation Engines.
                         </div>
                         <div>
-                            <strong>(e) Class V &bull; Systems Architecture &amp; Media Utilities:</strong>
+                            <strong>v. Class V &bull; Systems Architecture &amp; Media Utilities:</strong>
                             RQL TextDiff&trade; (Deterministic Myers Diff), RQL Renamer&trade; (Atomic Regex Batch Renamer), RQL TagEditor&trade; (ID3v2 Audio Metadata Studio), RQL FontViewer&trade; (Typography Command Center), RQL HashCheck&trade; (Multi-Hash Integrity Verifier), RQL QRStudio&trade; (Vector QR &amp; Barcode Generator), and all modular desktop utilities.
                         </div>
                     </div>
-
                     <p>
-                        <strong>8.2 100% Air-Gapped Physical RAM Execution Covenants:</strong> Every software release operates exclusively inside Licensee's local random-access memory (RAM) and physical machine hardware. Zero document contents, zero audio waveforms, zero barcode inventories, zero transaction ledger records, and zero cryptographic private keys are ever transmitted over external public networks or multi-tenant cloud databases. Licensee retains 100% immutable custody, confidentiality, and complete control of all processed data.
+                        <strong>b. 100% Air-Gapped Local Execution:</strong> Every software release operates exclusively inside Buyer's local random-access memory (RAM) and physical machine hardware. Zero document contents, zero audio waveforms, zero barcode inventories, and zero transaction ledger records are ever transmitted over external public networks or multi-tenant cloud databases.
                     </p>
                     <p>
-                        <strong>8.3 Zero Recurring Cloud Rent &amp; No Remote Kill-Switches:</strong> All workstation and commercial enterprise licenses are strictly perpetual, pay-once acquisitions. Licensor embeds zero remote cloud telemetry, zero subscription expiration checks, and zero remote kill-switches. Software runs perpetually offline without requiring Internet connectivity, external license server heartbeats, or annual renewal fees.
-                    </p>
-                    <p>
-                        <strong>8.4 Restrictions &amp; Inviolability:</strong> Licensee shall not: (a) reverse engineer, decompile, unpack, or disassemble any binary executable or dynamic library; (b) redistribute, lease, pirate, or resell the Software to unverified third parties; or (c) remove proprietary copyright notices or cryptographic SHA-256 integrity signatures.
+                        <strong>c. Zero Subscription Rent &amp; No Remote Kill-Switches:</strong> All workstation licenses are strictly perpetual, pay-once acquisitions. Seller embeds zero remote cloud telemetry, zero subscription expiration checks, and zero remote kill-switches. Software runs perpetually offline without requiring Internet connectivity, external license server heartbeats, or annual renewal fees.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 9: GLOBAL PRIVACY POLICY -->
-            <section id="clause-9" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 9. Global Privacy Policy &bull; DPDP Act 2023, GDPR &amp; CCPA Compliant
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Data Minimization</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 9: DATA PROTECTION (DPDP ACT 2023 & GDPR) -->
+            <section id="clause-9" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    9. Data Protection, Privacy Policy &amp; DPDP Act 2023 Compliance
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>9.1 Data Minimization &amp; Controller Identity:</strong> Rehan Quant Lab (Data Controller: Mohammad Rehan, Patna, Bihar, India) adheres strictly to the principle of <em>Data Minimization</em> under Section 6 of India's Digital Personal Data Protection Act (DPDP Act, 2023), GDPR Art. 5, and CCPA/CPRA. We collect only what is strictly necessary to respond to client inquiries and fulfill commercial software orders.
+                        <strong>a. Data Minimization (Section 6, DPDP Act 2023):</strong> Rehan Quant Lab (Data Controller: Mohammad Rehan, Patna, Bihar, India) adheres strictly to the principle of <em>Data Minimization</em> under Section 6 of India's Digital Personal Data Protection Act (DPDP Act, 2023) and GDPR Art. 5. We collect only what is strictly necessary to process inquiries and fulfill software purchases.
                     </p>
                     <p>
-                        <strong>9.2 Commercial Payment Processing:</strong> All commercial license transactions are processed securely and externally via Gumroad, Inc. (PCI-DSS Level 1 certified payment gateway). Rehan Quant Lab never collects, processes, or stores your credit card numbers, debit card details, or banking authentication secrets.
+                        <strong>b. Payment Processing:</strong> All commercial license payments are processed securely via Gumroad, Inc. (PCI-DSS Level 1 certified payment gateway). Seller never receives, stores, or handles credit card numbers, debit card details, or banking authentication secrets.
                     </p>
                     <p>
-                        <strong>9.3 Absolute Ban on Data Monetization:</strong> We never sell, lease, rent, trade, or monetize client personal data under any circumstances. We employ zero third-party cross-site behavioral tracking pixels (e.g. Meta, TikTok, Google Ads Remarketing).
+                        <strong>c. Prohibition of Data Monetization:</strong> Seller never sells, leases, rents, trades, or monetizes client personal data. We deploy zero third-party cross-site advertising tracking pixels.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 10: REFUND & REMEDIATION -->
-            <section id="clause-10" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 10. Digital Goods Fulfillment &amp; Remediation &bull; Refund Policy
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">7-Day Defect Remediation</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 10: DELIVERY, GUARANTEE & REFUNDS -->
+            <section id="clause-10" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    10. Goods Delivery, Guarantee &amp; 7-Day Defect Remediation (Return Policy)
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>10.1 Instant Digital Delivery:</strong> All commercial desktop workstation setups, SHA-256 verification manifests, and software licenses are fulfilled digitally and immediately via Gumroad upon checkout completion.
+                        <strong>a. Digital Goods Delivery:</strong> All commercial desktop workstation setups, SHA-256 verification manifests, and software licenses are fulfilled digitally and immediately via Gumroad upon checkout completion.
                     </p>
                     <p>
-                        <strong>10.2 7-Day Technical Defect Remediation Protocol:</strong> If Software fails to execute or perform as specified on supported operating systems (Windows 10/11 64-bit), our engineering team provides direct 1-on-1 technical troubleshooting via WhatsApp/Remote desktop. If a verified reproducible binary bug cannot be rectified within seven (7) calendar days, Licensee is entitled to a full 100% refund processed via Gumroad.
+                        <strong>b. 7-Day Defect Remediation Protocol:</strong> If Software fails to execute or perform as specified on supported operating systems (Windows 10/11 64-bit), our engineering team provides direct technical troubleshooting via WhatsApp/Remote desktop. If a verified reproducible binary bug cannot be rectified within seven (7) calendar days, Buyer is entitled to a full 100% refund processed via Gumroad.
                     </p>
                     <p>
-                        <strong>10.3 Source Code Non-Refundability:</strong> In accordance with global software trade norms, due to the irreversible nature of raw source code delivery, Enterprise Source Code licenses are non-refundable once proprietary repository access or archive archives have been transmitted.
+                        <strong>c. Source Code Non-Refundability:</strong> Due to the irreversible nature of raw source code delivery, Enterprise Source Code licenses are non-refundable once proprietary repository access or archives have been transmitted.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 11: COOKIE & STORAGE POLICY -->
-            <section id="clause-11" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 11. Cookie &amp; Client-Side Local Storage Policy
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Zero Tracking</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 11: COOKIE POLICY -->
+            <section id="clause-11" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    11. Cookie &amp; Client-Side Local Storage Policy
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>11.1 Zero Advertising Cookies:</strong> Rehan Quant Lab does NOT deploy marketing, advertising, profiling, or third-party behavioral cookies.
+                        <strong>a. Zero Marketing Cookies:</strong> Rehan Quant Lab does NOT deploy marketing, advertising, profiling, or third-party behavioral cookies.
                     </p>
                     <p>
-                        <strong>11.2 Strictly Essential Local Storage:</strong> Client browser <code>localStorage</code> is utilized solely for: (a) persisting UI theme preferences; (b) Client-Side Write-Ahead Log (WAL) ensuring draft contact inquiries are not lost on accidental tab reloads; and (c) recording user cookie consent status.
+                        <strong>b. Essential Local Storage:</strong> Client browser <code>localStorage</code> is utilized solely for: (i) persisting UI theme preferences; (ii) Client-Side Write-Ahead Log (WAL) ensuring draft contact inquiries are not lost on accidental tab reloads; and (iii) recording user cookie consent status.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 12: DATA DELETION & SUBJECT RIGHTS -->
-            <section id="clause-12" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 12. Data Deletion &amp; Data Subject Rights &bull; Right to Erasure
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">48-Hr Erasure SLA</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 12: DATA SUBJECT RIGHTS (RIGHT TO ERASURE) -->
+            <section id="clause-12" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    12. Data Subject Rights &amp; Right to Erasure (48-Hour SLA)
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>12.1 Unconditional Erasure Right:</strong> Under DPDP Act 2023 (Section 12), GDPR Art. 17, and CCPA 1798.105, you maintain the unconditional right to request complete erasure of your inquiry records from our communication logs.
+                        <strong>a. Unconditional Erasure Right:</strong> Under DPDP Act 2023 (Section 12), GDPR Art. 17, and CCPA 1798.105, Buyer maintains the unconditional right to request complete erasure of inquiry records from our communication logs.
                     </p>
                     <p>
-                        <strong>12.2 Exercise Protocol:</strong> To trigger erasure, email <a data-obf="bWFpbHRvOnByaXZhY3lAcmVoYW5xdWFudGxhYi5jb20/c3ViamVjdD1EYXRhJTIwRGVsZXRpb24lMjBSZXF1ZXN0" role="button" class="text-indigo-600 font-bold hover:underline">privacy@rehanquantlab.com</a> or WhatsApp <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHJlcXVlc3QlMjBwZXJtYW5lbnQlMjBkZWxldGlvbiUyMG9mJTIwbXklMjBjb250YWN0JTIwcmVjb3Jkcy4=" role="button" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&nbsp;&#49;&#56;&#53;&#52;&#56;</a> with the subject <em>"Data Deletion Request"</em>. Erasure requests are completed within 48 hours with formal confirmation.
+                        <strong>b. Exercise Protocol:</strong> To trigger erasure, email <a data-obf="bWFpbHRvOnByaXZhY3lAcmVoYW5xdWFudGxhYi5jb20/c3ViamVjdD1EYXRhJTIwRGVsZXRpb24lMjBSZXF1ZXN0" role="button" class="text-indigo-600 font-bold hover:underline">privacy@rehanquantlab.com</a> or WhatsApp <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHJlcXVlc3QlMjBwZXJtYW5lbnQlMjBkZWxldGlvbiUyMG9mJTIwbXklMjBjb250YWN0JTIwcmVjb3Jkcy4=" role="button" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&nbsp;&#49;&#56;&#53;&#52;&#56;</a> with the subject <em>&ldquo;Data Deletion Request&rdquo;</em>. Erasure requests are completed within 48 hours with formal confirmation.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 13: COPPA & MINORS -->
-            <section id="clause-13" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 13. Children's Privacy Protection &bull; COPPA &amp; Minors Notice
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">18+ Adult Standard</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 13: CHILDREN'S PRIVACY (COPPA) -->
+            <section id="clause-13" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    13. Protection of Minors (COPPA &amp; 18+ Adult Standard)
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>13.1 Enterprise Adult Usage Standard:</strong> All commercial software suites, algorithmic libraries, and technical documentation offered by Rehan Quant Lab are strictly intended for adult software architects, quantitative researchers, business operators, and enterprise corporate entities. We do not knowingly solicit, process, or store personal information of minors under eighteen (18) years of age.
+                        All commercial software suites, algorithmic libraries, and technical documentation offered by Rehan Quant Lab are strictly intended for adult software architects, quantitative researchers, business operators, and enterprise corporate entities. We do not knowingly solicit, process, or store personal information of minors under eighteen (18) years of age.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 14: TRUTH IN ADVERTISING -->
-            <section id="clause-14" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 14. Truth in Advertising &amp; Architectural Verification Invariant
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">FTC Compliant</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+            <!-- CLAUSE 14: TRUTH IN ADVERTISING INVARIANT -->
+            <section id="clause-14" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    14. Truth in Advertising &amp; Benchmark Verification Invariant
+                </h2>
+                <div class="space-y-2.5">
                     <p>
-                        <strong>14.1 Zero Fabricated Endorsements:</strong> Rehan Quant Lab adheres strictly to truth-in-advertising guidelines (US FTC 16 CFR Part 255 and Advertising Standards Council of India). We never purchase fake customer reviews, publish artificial endorsements, or present fabricated trading records.
+                        <strong>a. Zero Fabricated Endorsements:</strong> Rehan Quant Lab adheres strictly to truth-in-advertising guidelines (US FTC 16 CFR Part 255 and Advertising Standards Council of India). We never purchase fake customer reviews, publish artificial endorsements, or present fabricated trading records.
                     </p>
                     <p>
-                        <strong>14.2 Hardware Benchmark Integrity:</strong> All hardware execution benchmarks, nanosecond latency timings, and throughput metrics are generated from deterministic, bare-metal x86_64 RDTSC hardware measurements verified in pure native Rust.
+                        <strong>b. Hardware Benchmark Integrity:</strong> All hardware execution benchmarks, sub-millisecond timings, and throughput metrics are generated from deterministic, bare-metal x86_64 RDTSC hardware measurements verified in pure native Rust.
                     </p>
                 </div>
             </section>
 
-            <!-- SECTION 15: OFFICIAL BUSINESS REGISTRATION & NOTICES -->
-            <section id="clause-15" class="legal-clause border-t border-slate-300 pt-7 space-y-3">
-                <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-200 pb-2">
-                    <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
-                        Section 15. Business Details, Operator Coordinates &amp; Official Notices
-                    </h2>
-                    <span class="text-[10px] font-mono uppercase text-slate-500 font-semibold">Verified Operator</span>
-                </div>
-                <div class="text-xs sm:text-sm text-slate-700 space-y-2 leading-relaxed">
+            <!-- CLAUSE 15: OFFICIAL OPERATOR DETAILS & NOTICES -->
+            <section id="clause-15" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
+                <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
+                    Section 15. Business Details, Operator Coordinates &amp; Official Notices
+                </h2>
+                <div class="space-y-2 text-slate-700">
                     <p><strong>Entity / Operator:</strong> Mohammad Rehan (Founder &amp; Principal Systems Architect, Rehan Quant Lab&trade;)</p>
+                    <p><strong>Enterprise Standing:</strong> Govt. of India Registered MSME &bull; Udyam Reg: <strong>UDYAM-BR-26-0258772</strong> (Commenced: <strong>12/01/2023</strong>)</p>
                     <p><strong>Primary Address &amp; Service Seat:</strong> Patna, Bihar 800001, India</p>
                     <p><strong>Legal &amp; Privacy Communications:</strong> <a data-obf="bWFpbHRvOnByaXZhY3lAcmVoYW5xdWFudGxhYi5jb20=" role="button" class="text-indigo-600 font-bold hover:underline">privacy@rehanquantlab.com</a> &bull; <a data-obf="bWFpbHRvOmNvbnRhY3RAcmVoYW5xdWFudGxhYi5jb20=" role="button" class="text-indigo-600 font-bold hover:underline">contact@rehanquantlab.com</a></p>
                     <p><strong>Direct WhatsApp Helpline:</strong> <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg=" role="button" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&nbsp;&#49;&#56;&#53;&#52;&#56;</a></p>
@@ -897,7 +851,7 @@ document.addEventListener('keydown', function(e) {
                     Formal Attestation, Statutory Docket &amp; Digital Seal
                 </h3>
                 <p class="text-xs text-slate-600 max-w-2xl leading-relaxed">
-                    Executed with binding statutory authority under Section 65B of the Indian Evidence Act, 1872 and the Information Technology Act, 2000.
+                    Executed with binding statutory authority under Section 65B of the Indian Evidence Act, 1872 and Section 10A of the Information Technology Act, 2000.
                 </p>
             </div>
 
