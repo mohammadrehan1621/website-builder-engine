@@ -261,7 +261,7 @@
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
                             <a href="#doctrine" className="hover:text-cyan-400 transition">Dual Doctrine</a>
-                            <a href="#trinity" className="hover:text-cyan-400 transition">Holy Trinity</a>
+                            <a href="#resilience" className="hover:text-cyan-400 transition">Resilience Lab</a>
                             <a href="#aegisdb" className="hover:text-cyan-400 transition">AegisDB&trade;</a>
                             <a href="#benchmark" className="hover:text-cyan-400 transition">Rust WASM</a>
                             <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
@@ -335,7 +335,7 @@
                                 href="#trinity"
                                 className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-sm transition shadow-lg shadow-cyan-500/20 font-mono"
                             >
-                                 EXPLORE THE HOLY TRINITY
+                                 EXPLORE RESILIENCE ARCHITECTURE
                             </a>
                             <button
                                 onClick={onRunBenchmark}
@@ -386,7 +386,7 @@
         // --------------------------------------------------------------------
         // 5. THE CORE ENGINEERING PRINCIPLES (GALL'S LAW & SUN TZU)
         // --------------------------------------------------------------------
-        function SovereignDualDoctrine() {
+        function DualEngineDoctrine() {
             return (
                 <section id="doctrine" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
                     <div className="text-center mb-12">
@@ -441,14 +441,14 @@
         }
 
         // --------------------------------------------------------------------
-        // 6. THE HOLY TRINITY RESILIENCE LAB & INTERACTIVE CHAOS SANDBOX
+        // 6. RESILIENCE LAB & INTERACTIVE CHAOS SANDBOX
         // --------------------------------------------------------------------
         function HolyTrinitySection() {
             const [chaosEpoch, setChaosEpoch] = useState(1);
             const [isInjecting, setIsInjecting] = useState(false);
             const [logLines, setLogLines] = useState([
                 "[T+0ms]  AEGIS PRE-AUDIT: Contract valid. 0 precision drift.",
-                "[T+1ms]  STEADY STATE: Genome Generation #1 executing at 100% equity."
+                "[T+1ms]  STEADY STATE: Worker Process Generation #1 executing at 100% equity."
             ]);
 
             const triggerChaos = () => {
@@ -464,7 +464,7 @@
                 setTimeout(() => {
                     setLogLines(prev => [
                         ...prev,
-                        `[T+12ms]  AEGIS SUPERVISOR: Circuit tripped! 0 lost bytes in Ash Ledger WAL.`
+                        `[T+12ms]  AEGIS SUPERVISOR: Circuit tripped! 0 lost bytes in Deterministic WAL.`
                     ]);
                 }, 250);
 
@@ -474,7 +474,7 @@
                     setChaosEpoch(nextGen);
                     setLogLines(prev => [
                         ...prev,
-                        `[T+${mttr}ms]  PHOENIX RESURRECTION: Thread restored! Genome advanced to Gen #${nextGen} (+25% Stiffened Envelope).`,
+                        `[T+${mttr}ms]  PROCESS RECOVERY: Thread restored! State recovered from WAL in <15ms.`,
                         `[T+${mttr + 2}ms] &radic; AUDIT: $0.00 Capital Loss &bull; 0.000000000000% Precision Drift.`
                     ]);
                     setIsInjecting(false);
@@ -489,7 +489,7 @@
                                 Fault-Tolerant Systems Architecture
                             </span>
                             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
-                                The Holy Trinity (Aegis &bull; Chaos &bull; Phoenix)
+                                Resilience Architecture (Supervisor &bull; Stress Engine &bull; Auto-Recovery)
                             </h2>
                             <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
                                 Enforcing Nassim Taleb's Golden Rule: Systems must never recover to a vulnerable status quo&mdash;every auto-heal permanently hardens execution envelopes.
@@ -510,7 +510,7 @@
                         </button>
                     </div>
 
-                    {/* Trinity 3-Pillar Cards */}
+                    {/* Resilience 3-Pillar Architecture */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
                             <span className="text-xs font-mono text-cyan-400 font-bold uppercase">Stage 01</span>
@@ -522,7 +522,7 @@
 
                         <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
                             <span className="text-xs font-mono text-amber-400 font-bold uppercase">Stage 02</span>
-                            <h3 className="text-xl font-bold text-white mt-2"> Chaos Gauntlet</h3>
+                            <h3 className="text-xl font-bold text-white mt-2"> Adversarial Stress Engine</h3>
                             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
                                 Continuous adversarial stress testing: 6 exchange disasters, 504 gateway dropouts, thread stalls, and database lock contention.
                             </p>
@@ -530,9 +530,9 @@
 
                         <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
                             <span className="text-xs font-mono text-emerald-400 font-bold uppercase">Stage 03</span>
-                            <h3 className="text-xl font-bold text-white mt-2"> Phoenix Resurrection</h3>
+                            <h3 className="text-xl font-bold text-white mt-2"> Automated Process Recovery</h3>
                             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
-                                Sub-10ms MTTR hot process revival from Ash Ledger WAL, advancing Genomic Generations with +25% adaptive envelope stiffening.
+                                Sub-10ms MTTR hot process revival from Deterministic WAL, advancing reliability benchmarks with +25% adaptive recovery margins.
                             </p>
                         </div>
                     </div>
@@ -540,7 +540,7 @@
                     {/* Live Terminal Telemetry Box */}
                     <div className="bg-black/80 rounded-2xl p-4 border border-slate-800 font-mono text-xs overflow-x-auto max-h-56 shadow-2xl">
                         <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[11px] text-slate-500">
-                            <span>PHOENIX RESILIENCE LIVE TELEMETRY LOG</span>
+                            <span>HIGH-AVAILABILITY FAULT-TOLERANCE TELEMETRY LOG</span>
                             <span className="text-emerald-400">IMMUNE GEN #{chaosEpoch}</span>
                         </div>
                         <div className="space-y-1">
@@ -646,7 +646,7 @@
                     <Navbar wasmReady={wasmReady} onRunBenchmark={runBenchmark} />
                     <main className="flex-grow">
                         <HeroSection onRunBenchmark={runBenchmark} benchmarkResult={benchmarkResult} />
-                        <SovereignDualDoctrine />
+                        <DualEngineDoctrine />
                         <HolyTrinitySection />
                         <RustWasmBenchmarkCard wasmReady={wasmReady} onRunBenchmark={runBenchmark} benchmarkResult={benchmarkResult} />
                     </main>

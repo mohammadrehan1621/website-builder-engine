@@ -26,7 +26,7 @@ export async function onRequest(context) {
         JSON.stringify({
           ok: true,
           endpoint: "/api/lead_dispatch",
-          description: "RQL Sovereign Edge Real-Time Lead & UPI Dispatch Gateway",
+          description: "RQL Edge Real-Time Lead & UPI Dispatch Gateway",
           method: "POST { type, slug, business_name, clinic_phone, patient_name, patient_phone, service, amount, utr, notes } required"
         }),
         { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }

@@ -2,7 +2,7 @@
  * ====================================================================
  * 🛡️ REHAN QUANT LAB™ — UNIVERSAL ROUTE & BUTTON OBFUSCATION SHIELD
  * ====================================================================
- * Sovereign Client-Side Memory Hydration Engine
+ * Client-Side Route Hydration Engine
  * Blinds automated web scrapers, crawler spiders, and contact harvesters.
  * Zero plaintext emails, zero plaintext WhatsApp numbers, zero plaintext
  * affiliate routes in the static HTML DOM.

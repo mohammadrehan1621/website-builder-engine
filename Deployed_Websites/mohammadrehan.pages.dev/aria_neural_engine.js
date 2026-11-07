@@ -283,7 +283,7 @@
             Traditional architectures merely restart a crashed process—leaving them vulnerable to dying from the exact same bug immediately.<br><br>
             <strong>How Rehan's Antifragile Systems Evolve Instead:</strong><br>
             1. 🧬 <strong>Evolution Epoch Progression:</strong> Every crash &amp; resurrection event advances the system's generation counter.<br>
-            2. 🔬 <strong>SHA-256 Signature Quarantine:</strong> The lethal payload or stack trace is cryptographically hashed and registered as an active immunity—blocking future occurrences at the perimeter in 0.0ms.<br>
+            2. 🔬 <strong>SHA-256 Signature Quarantine:</strong> The fault payload or error trace is cryptographically hashed and registered as an active immunity—blocking future occurrences at the perimeter in 0.0ms.<br>
             3. ⚙️ <strong>Adaptive Parameter Stiffening:</strong> Reconnection timeouts, backoff buffers, and circuit breakers automatically harden by +25% upon each anomaly.<br><br>
             <button onclick="runEvolutionSimulation()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-[11px] px-3 py-1.5 rounded-lg font-semibold inline-flex items-center gap-1">🧬 Run Live Evolution Telemetry</button>`;
         }
@@ -305,7 +305,7 @@
             - 📍 <strong>Hosting:</strong> AWS Mumbai (<code>ap-south-1</code>) on t3.small tuned instance.<br>
             - ⚡ <strong>Execution:</strong> Persistent WebSocket feeds with sub-50ms broker API dispatching.<br>
             - 🛡️ <strong>Risk Guards:</strong> Stop-loss anchored to Nifty Spot 15m VWAP / Swing Low.<br>
-            - ⏰ <strong>Theta Shield:</strong> Entries disabled after 13:30 IST on 0-DTE expiry days to prevent decay slaughter.<br>
+            - ⏰ <strong>Theta Shield:</strong> Entries disabled after 13:30 IST on 0-DTE expiry days to prevent rapid time decay.<br>
             - 🔒 <strong>Security:</strong> Accessible strictly over private Tailscale WireGuard mesh (zero public web exposure).`;
         }
 
@@ -399,7 +399,7 @@
         let evoEntry = null;
         try {
             if (window.__PHOENIX_CLIENT__ && window.__PHOENIX_CLIENT__.EvolutionaryHardener) {
-                evoEntry = window.__PHOENIX_CLIENT__.EvolutionaryHardener.evolve('interactive_chaos_simulation', 'Synthetic lethal buffer poison');
+                evoEntry = window.__PHOENIX_CLIENT__.EvolutionaryHardener.evolve('interactive_chaos_simulation', 'Synthetic memory stress test');
             }
         } catch (e) {}
 
@@ -411,10 +411,10 @@
             { text: "💥 [CHAOS_STRESS] Injecting synthetic mutation: Corrupted Memory Buffer & State Desync...", color: "text-rose-400", delay: 550 },
             { text: "⚠️ [TRAP_CAUGHT] Uncaught fatal vector detected. Phoenix Sentinel intercepts crash.", color: "text-amber-400", delay: 950 },
             { text: "📜 [GOLDEN_RULE] \"A system should never just heal back to its old vulnerable state—every auto-heal must make it evolve and become permanently stronger.\"", color: "text-cyan-300 italic font-semibold", delay: 1400 },
-            { text: "🔬 [AUTOPSY_HASH] Lethal signature SHA-256 [0x7F2A...E9C1] registered into Quarantine Vault.", color: "text-indigo-300", delay: 1850 },
+            { text: "🔬 [AUTOPSY_HASH] Fault signature SHA-256 [0x7F2A...E9C1] registered into Quarantine Vault.", color: "text-indigo-300", delay: 1850 },
             { text: `⚙️ [ADAPTIVE_STIFFENING] Jitter buffer + backoff threshold stiffened (+25% -> ${currentStiff}).`, color: "text-amber-300", delay: 2300 },
             { text: `✨ [EVOLUTION_EPOCH] System evolved to Generation Epoch #${currentEpoch}. Genetic state committed.`, color: "text-emerald-400 font-bold", delay: 2750 },
-            { text: "🛡️ [PERIMETER_VERIFY] Re-injecting identical lethal vector: BLOCKED AT PERIMETER (0.0ms). System is permanently immune!", color: "text-emerald-300 font-bold", delay: 3200 }
+            { text: "🛡️ [PERIMETER_VERIFY] Re-injecting identical fault pattern: BLOCKED AT PERIMETER (0.0ms). System is permanently immune!", color: "text-emerald-300 font-bold", delay: 3200 }
         ];
 
         let index = 0;

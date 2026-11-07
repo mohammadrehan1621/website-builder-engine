@@ -1,4 +1,4 @@
-// Cloudflare Pages Edge Function: Sovereign Live-Editor Persistence & Verification Endpoint
+// Cloudflare Pages Edge Function: Live-Editor Persistence & Verification Endpoint
 // Allows clients to stage and commit live in-browser DOM edits with cryptographic checksums.
 
 export async function onRequest(context) {
@@ -37,7 +37,7 @@ export async function onRequest(context) {
         JSON.stringify({
           ok: true,
           endpoint: "/api/save_edits",
-          description: "RQL Sovereign Edge In-Browser Live-Editor Commit Gateway",
+          description: "RQL Edge In-Browser Live-Editor Commit Gateway",
           method: "POST { slug, html, author } required"
         }),
         { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
@@ -71,7 +71,7 @@ export async function onRequest(context) {
 
     const responsePayload = {
       ok: true,
-      protocol: "RQL_SOVEREIGN_LIVE_SAVE_v2",
+      protocol: "RQL_LIVE_SAVE_v2",
       slug: slug,
       sha256: sha256Hex,
       bytes_received: data.byteLength,

@@ -1,4 +1,4 @@
-export async function onRequest(context) {
+﻿export async function onRequest(context) {
   try {
     let url, competitor_url, client_name, company_name;
     if (context.request.method === "POST") {
@@ -405,16 +405,16 @@ export async function onRequest(context) {
     const co2_grams_per_view = parseFloat((Math.max(0.015, weight_mb * 0.81)).toFixed(3));
     const co2_annual_10k_kg = parseFloat(((co2_grams_per_view * 10000) / 1000).toFixed(2));
 
-    // Phase 7: Einstein Speed-of-Light Fiber Distance Calculation
+    // Phase 7: Fiber Optic Latency Distance Calculation
     const estimatedDistanceKm = isGlobalEdge ? 150 : 12400; // Local POP vs Transoceanic
     const lightFiberFloorMs = parseFloat(((2 * estimatedDistanceKm) / 204).toFixed(2));
 
     // Phase 8: Real Parallel Multi-POP Live ECS Probing (DoH EDNS Client Subnet)
     const popEndpoints = [
-      { city: "Mumbai / Delhi", region: "South Asia (Local)", code: "BOM/DEL", flag: "🇮🇳", ecs: "103.21.244.0/24" },
-      { city: "Singapore", region: "Southeast Asia", code: "SIN", flag: "🇸🇬", ecs: "1.0.0.0/24" },
-      { city: "Frankfurt", region: "Europe Central", code: "FRA", flag: "🇩🇪", ecs: "194.109.6.0/24" },
-      { city: "New York / Ashburn", region: "Americas (US East)", code: "IAD", flag: "🇺🇸", ecs: "199.19.0.0/24" }
+      { city: "Mumbai / Delhi", region: "South Asia (Local)", code: "BOM/DEL", flag: "ðŸ‡®ðŸ‡³", ecs: "103.21.244.0/24" },
+      { city: "Singapore", region: "Southeast Asia", code: "SIN", flag: "ðŸ‡¸ðŸ‡¬", ecs: "1.0.0.0/24" },
+      { city: "Frankfurt", region: "Europe Central", code: "FRA", flag: "ðŸ‡©ðŸ‡ª", ecs: "194.109.6.0/24" },
+      { city: "New York / Ashburn", region: "Americas (US East)", code: "IAD", flag: "ðŸ‡ºðŸ‡¸", ecs: "199.19.0.0/24" }
     ];
 
     const globalNodes = await Promise.all(popEndpoints.map(async (pop, idx) => {
@@ -544,20 +544,20 @@ export async function onRequest(context) {
     const isPureEdge = isGlobalEdge && !platforms.includes("WordPress (PHP)") && !platforms.includes("Elementor Builder");
     const xrayData = {
       is_pure_edge: isPureEdge,
-      title: isPureEdge ? "✔ PURE SILICON EDGE ARCHITECTURE" : `⚠️ LEGACY ARCHITECTURE (${detected_platform})`,
+      title: isPureEdge ? "âœ” PURE SILICON EDGE ARCHITECTURE" : `âš ï¸ LEGACY ARCHITECTURE (${detected_platform})`,
       badge: isPureEdge ? "0 MS DATABASE LATENCY" : (domElementCount > 600 ? "HEAVY DOM BLOAT" : "DYNAMIC SERVER"),
       items: isPureEdge ? [
-        "✔ 0 Database Lookups (Instant In-Memory Edge Cache)",
-        `✔ Modern ${transportProtocol} & Type 65 Handshake`,
-        `✔ Lean Semantic DOM (${domElementCount} HTML elements)`,
-        "✔ Zero PHP / Node Server Process Overheads",
-        `✔ Grade ${securityGrade} Security Hardening (${securityScore}/100)`
+        "âœ” 0 Database Lookups (Instant In-Memory Edge Cache)",
+        `âœ” Modern ${transportProtocol} & Type 65 Handshake`,
+        `âœ” Lean Semantic DOM (${domElementCount} HTML elements)`,
+        "âœ” Zero PHP / Node Server Process Overheads",
+        `âœ” Grade ${securityGrade} Security Hardening (${securityScore}/100)`
       ] : [
-        `✖ Heavy Server-Side Processing (TTFB: ${ttfb_ms} ms)`,
-        `✖ ${scriptCount} External JavaScripts & Plugin Bundles`,
-        `✖ Unoptimized DOM Tree (${domElementCount} elements, ${domBloatRatio}x threshold)`,
-        `✖ ${contentEncoding.includes("None") ? "Uncompressed Asset Delivery" : "CPU-Bound Compression Latency"}`,
-        `✖ Security Vulnerability Risk: ${missingHeaders.length} missing security headers`
+        `âœ– Heavy Server-Side Processing (TTFB: ${ttfb_ms} ms)`,
+        `âœ– ${scriptCount} External JavaScripts & Plugin Bundles`,
+        `âœ– Unoptimized DOM Tree (${domElementCount} elements, ${domBloatRatio}x threshold)`,
+        `âœ– ${contentEncoding.includes("None") ? "Uncompressed Asset Delivery" : "CPU-Bound Compression Latency"}`,
+        `âœ– Security Vulnerability Risk: ${missingHeaders.length} missing security headers`
       ]
     };
 
@@ -582,7 +582,7 @@ export async function onRequest(context) {
       asnNumber = "AS16509";
       asnOrg = "Amazon.com Inc (AWS Global Cloud Infrastructure)";
       oceanCables = "AAE-1 / SEA-ME-WE 4 Submarine Fiber Cable (~9,800 km)";
-      landingStation = "Prabhadevi Cable Landing Station (Mumbai) ➔ US-East / EU Transit";
+      landingStation = "Prabhadevi Cable Landing Station (Mumbai) âž” US-East / EU Transit";
       oceanDelayMs = Math.max(68, Math.round(latency_ms * 0.4));
       hopList = [
         { hop: 1, node: "Client Local ISP Gateway", ip: "Local Subnet", ms: 3.5, status: "Local Wire" },
@@ -594,7 +594,7 @@ export async function onRequest(context) {
     } else if (asnNumber === "AS15169") {
       asnOrg = "Google LLC (Global Hyper-Scale Infrastructure)";
       oceanCables = "Dunant / Equiano / Blue-Raman Submarine Fiber System";
-      landingStation = "Mumbai Landing Station ➔ Global Google Backbone";
+      landingStation = "Mumbai Landing Station âž” Global Google Backbone";
       oceanDelayMs = Math.max(50, Math.round(latency_ms * 0.35));
       hopList = [
         { hop: 1, node: "Client Local ISP Gateway", ip: "Local Subnet", ms: 2.8, status: "Local Wire" },
@@ -604,7 +604,7 @@ export async function onRequest(context) {
     } else if (asnNumber === "AS14907") {
       asnOrg = "Wikimedia Foundation Inc. (Global Free Knowledge Core)";
       oceanCables = "AAE-1 / SEA-ME-WE 4 Ocean Fiber (Carrollton / Ashburn Datacenter)";
-      landingStation = "Versova Landing Station (Mumbai) ➔ Marseille ➔ Ashburn (USA)";
+      landingStation = "Versova Landing Station (Mumbai) âž” Marseille âž” Ashburn (USA)";
       oceanDelayMs = Math.round(latency_ms * 0.45);
       hopList = [
         { hop: 1, node: "Client Local ISP Gateway", ip: "Local Subnet", ms: 3.2, status: "Local Wire" },
@@ -617,7 +617,7 @@ export async function onRequest(context) {
       asnNumber = asnNumber !== "AS13335" ? asnNumber : "AS26347";
       asnOrg = "DreamHost / Automattic Core Infrastructure";
       oceanCables = "SEA-ME-WE 5 + Apollo Transatlantic (~14,200 km Ocean Bed)";
-      landingStation = "Versova Landing Station (Mumbai) ➔ Marseille (France) ➔ Ashburn (USA)";
+      landingStation = "Versova Landing Station (Mumbai) âž” Marseille (France) âž” Ashburn (USA)";
       oceanDelayMs = 138;
       hopList = [
         { hop: 1, node: "Client Local ISP Gateway", ip: "Local Subnet", ms: 4.8, status: "Wireless/FTTH" },
@@ -657,14 +657,14 @@ export async function onRequest(context) {
         rtt_overhead_ms: Math.round(latency_ms * 0.72),
         total_roundtrips: 3,
         steps: [
-          { rtt: "1.0 RTT", step: "SYN ➔ SYN-ACK", desc: "TCP 3-Way Handshake Connection", ms: Math.round(latency_ms * 0.24) },
-          { rtt: "2.0 RTT", step: "ClientHello ➔ ServerHello", desc: "TLS 1.2 Cryptographic Key Negotiation", ms: Math.round(latency_ms * 0.24) },
-          { rtt: "3.0 RTT", step: "CertVerify ➔ Finished", desc: "X.509 Certificate Chain Validation", ms: Math.round(latency_ms * 0.24) },
-          { rtt: "4.0 RTT", step: "GET / ➔ First Byte (TTFB)", desc: "HTTP Response Header Stream", ms: latency_ms }
+          { rtt: "1.0 RTT", step: "SYN âž” SYN-ACK", desc: "TCP 3-Way Handshake Connection", ms: Math.round(latency_ms * 0.24) },
+          { rtt: "2.0 RTT", step: "ClientHello âž” ServerHello", desc: "TLS 1.2 Cryptographic Key Negotiation", ms: Math.round(latency_ms * 0.24) },
+          { rtt: "3.0 RTT", step: "CertVerify âž” Finished", desc: "X.509 Certificate Chain Validation", ms: Math.round(latency_ms * 0.24) },
+          { rtt: "4.0 RTT", step: "GET / âž” First Byte (TTFB)", desc: "HTTP Response Header Stream", ms: latency_ms }
         ]
       },
       quic_http3: {
-        protocol: "RQL Sovereign Pure-Rust Engine (HTTP/3 over QUIC UDP)",
+        protocol: "RQL High-Performance Pure-Rust Engine (HTTP/3 over QUIC UDP)",
         rtt_overhead_ms: 0,
         total_roundtrips: 0,
         steps: [
@@ -769,7 +769,7 @@ export async function onRequest(context) {
       annual_kwh_10k: annualKwh10k,
       annual_grid_carbon_kg: annualGridCarbonKg,
       pue_ratio: pueRatio,
-      server_wattage: isTargetActuallyCloudflare ? "12W (Silicon Memory)" : "185W (Xeon/EPYC Server Rack)"
+      server_wattage: isTargetActuallyCloudflare ? "12W (Edge Memory)" : "185W (Standard Server Rack)"
     };
 
     // Phase 18: DNSSEC Cryptographic Chain Validation & CT Logs
@@ -952,10 +952,10 @@ export async function onRequest(context) {
       heat_dissipated_100k_joules: `${heatDissipated100kJoules.toLocaleString()} Joules`,
       landauer_entropy_state: landauerEntropyState,
       entropy_dissipation_rate: `${(joulesPerView / (273.15 + 45)).toExponential(3)} J/K per visit`,
-      thermal_cpu_load: isTargetActuallyCloudflare ? "Cold Silicon (<32°C Edge Core)" : "Hot Silicon (65°C - 82°C Sustained Die Temp)"
+      thermal_cpu_load: isTargetActuallyCloudflare ? "Cold Silicon (<32Â°C Edge Core)" : "Hot Silicon (65Â°C - 82Â°C Sustained Die Temp)"
     };
 
-    // Phase 27: Mobile Battery Microampere-Hour (µAh) Drain on OLED Screens
+    // Phase 27: Mobile Battery Microampere-Hour (ÂµAh) Drain on OLED Screens
     const batteryUah = isTargetActuallyCloudflare && domElementCount < 500 && scriptCount < 6
       ? 0.42 
       : parseFloat(((v8ThreadLockMs * 1.35 + domElementCount * 0.32 + (page_size_kb * 0.075)) / 3600 * 3.85).toFixed(2));
@@ -968,7 +968,7 @@ export async function onRequest(context) {
       : "Cool Silicon Operation (Zero Perceptible Thermal Rise)";
 
     const batteryPhysics = {
-      uah_per_visit: `${batteryUah} µAh`,
+      uah_per_visit: `${batteryUah} ÂµAh`,
       peak_current_ma: `${batteryPeakMa} mA`,
       oled_panel_draw: oledPanelDraw,
       thermal_feel: thermalFeel,
@@ -1034,7 +1034,7 @@ export async function onRequest(context) {
 
     const bgpPathTelemetry = {
       as_path_hops: bgpPathHops,
-      as_path_string: bgpPathHops.map(h => h.asn).join(" → "),
+      as_path_string: bgpPathHops.map(h => h.asn).join(" â†’ "),
       total_as_hops: bgpPathHops.length,
       bgp_peering_type: isTargetActuallyCloudflare ? "Settlement-Free Direct Peering (SFI)" : "Multi-Hop Transit Agreement (Transit Cost)",
       route_convergence_grade: isTargetActuallyCloudflare ? "A+ Deterministic Anycast" : "B Multi-Hop BGP Transit"
@@ -1128,7 +1128,7 @@ export async function onRequest(context) {
     const lightSpeedFiberKmS = Math.round(299792.458 / silicaRefractiveIndex);
 
     const meteorologyPhysics = {
-      ambient_temperature: `${ambientTempC}°C`,
+      ambient_temperature: `${ambientTempC}Â°C`,
       barometric_pressure: `${barometricPressureHpa} hPa`,
       ground_humidity: `${groundHumidity}% Relative Humidity`,
       datacenter_city: originCity || "Global Datacenter Hub",
@@ -1168,7 +1168,7 @@ export async function onRequest(context) {
       atomic_reference: "NIST UT1 / Rubidium Atomic Fountain Standard"
     };
 
-    // Phase 36: Coherent Laser Photon Flux & DWDM Channel Grid (Optical Physics)
+    // Phase 36: Optical Fiber Transit & DWDM Channel Grid
     const totalWireBits = (page_size_bytes + html.length) * 8;
     const photonCount = Math.round(totalWireBits * 2.45e9);
     const photonFluxText = photonCount > 1e15 
@@ -1181,7 +1181,7 @@ export async function onRequest(context) {
       optical_wavelength: "1550.12 nm (ITU-T C-Band Channel 34)",
       optical_frequency: "193.4 THz Optical Carrier",
       launch_power_dbm: "-3.0 dBm (0.50 mW Coherent Laser Pulse)",
-      photon_energy_joules: "1.282e-19 J per Photon (E = hc/λ)"
+      photon_energy_joules: "1.282e-19 J per Photon (E = hc/Î»)"
     };
 
     // Phase 37: Solar Weather & NOAA Planetary Geomagnetic Kp Telemetry (Space Weather)
@@ -1229,7 +1229,7 @@ export async function onRequest(context) {
       pump_laser_diodes: "980 nm InGaAs Laser Optical Pump (Erbium Inversion)"
     };
 
-    // Phase 39: Einstein's Gravitational Time Dilation (General Relativity Physics)
+    // Phase 39: Clock Drift & Precision Hardware Synchronization
     let originElevationMeters = 85;
     if (originCity === "Ashburn" || originRegion === "Virginia") originElevationMeters = 88;
     else if (originCity === "Denver") originElevationMeters = 1609;
@@ -1245,20 +1245,20 @@ export async function onRequest(context) {
 
     const relativityTelemetry = {
       elevation_meters: `${originElevationMeters} meters above sea level`,
-      gravitational_redshift_ratio: `${redshiftRatio.toExponential(3)} Δt/t`,
+      gravitational_redshift_ratio: `${redshiftRatio.toExponential(3)} Î”t/t`,
       femtosecond_dilation_per_day: `+${femtosecondsDay} fs/day Relativistic Drift`,
-      spacetime_curvature_state: "Einstein Weak-Field Schwarzschild Metric Verified",
-      relativity_standard: "General Relativity (GR) Gravitational Potential Time Dilation"
+      spacetime_curvature_state: "Hardware Clock Synchronization Verified",
+      relativity_standard: "Precision Clock Synchronization Standard"
     };
 
-    // Phase 40: Cosmic Ray DRAM Soft-Error Vulnerability (Single Event Upset / SEU Physics)
+    // Phase 40: Hardware Memory & DRAM Bit-Flip Protection
     const ramHeapMb = isTargetActuallyCloudflare ? 0.08 : (domElementCount > 600 || scriptCount > 10 ? 650 : 220);
     const seuVulnerability = isTargetActuallyCloudflare 
       ? "0.00001% (Immune via Hardware ECC Memory Scrubbing)" 
       : `${parseFloat((ramHeapMb * 0.0062).toFixed(2))}% Monthly DRAM Bit-Flip Threat`;
 
     const cosmicRaySeu = {
-      neutron_flux_rate: "13.2 Atmospheric Neutrons / cm² / hr (Cosmic Ray Cascade)",
+      neutron_flux_rate: "13.2 Environmental Events / cmÂ² / hr (Hardware DRAM Integrity)",
       ram_footprint_vulnerability: `${ramHeapMb} MB In-Memory Dynamic Heap`,
       seu_bitflip_probability: seuVulnerability,
       silicon_resilience_grade: isTargetActuallyCloudflare ? "A+ Space-Hardened ECC Parity" : "F High DRAM Bit-Flip Vulnerability",
@@ -1288,7 +1288,7 @@ export async function onRequest(context) {
     }
     const auditHash = "0x" + Math.abs(hashVal).toString(16).padStart(8, '0') + Math.abs(hashVal * 31).toString(16).padStart(8, '0');
 
-    // Phase 42: The NTSB Forensic Flight Log Recorder (Chronological Wire Blackbox)
+    // Phase 42: Cryptographic Wire Audit Log Recorder
     const flightRecorderLog = [
       { t_ms: "0.000", event: "INGRESS", label: `SYN packet emitted from Cloudflare Edge POP (${edgeColo} Anycast Node)` },
       { t_ms: "1.472", event: "OPTICAL_FIBER", label: `Speed-of-light silica transit over ${estimatedDistanceKm || 150}km fiber core (n = ${silicaRefractiveIndex}, ${lightSpeedFiberKmS.toLocaleString()} km/s)` },
@@ -1298,7 +1298,7 @@ export async function onRequest(context) {
       { t_ms: "12.440", event: "SUBSEA_EDFA", label: `${dwdmPhotonics.photons_transmitted} registered across ${underseaEdfaPhysics.edfa_repeaters_traversed} at ${underseaEdfaPhysics.hydrostatic_pressure}` },
       { t_ms: "14.880", event: "SPACE_NOAA", label: `SWPC space weather telemetry verified: ${spaceWeatherTelemetry.geomagnetic_kp_index} (${spaceWeatherTelemetry.magnetosphere_state.split(' ')[0]})` },
       { t_ms: "16.920", event: "RELATIVITY_GR", label: `Relativistic gravitational dilation: ${relativityTelemetry.femtosecond_dilation_per_day} (${relativityTelemetry.elevation_meters})` },
-      { t_ms: "17.450", event: "THERMO_LANDAUER", label: `Die heat dissipation: ${thermodynamics.joules_per_view} (${thermodynamics.thermal_cpu_load.split(' ')[0]}) • Fan: ${serverAerodynamics.chassis_fan_rpm.split(' ')[0]} RPM` },
+      { t_ms: "17.450", event: "THERMO_LANDAUER", label: `Die heat dissipation: ${thermodynamics.joules_per_view} (${thermodynamics.thermal_cpu_load.split(' ')[0]}) â€¢ Fan: ${serverAerodynamics.chassis_fan_rpm.split(' ')[0]} RPM` },
       { t_ms: "18.600", event: "BATTERY_LIION", label: `Client lithium-ion current draw: ${batteryPhysics.uah_per_visit} (${batteryPhysics.mobile_battery_grade.split(' ')[0]})` },
       { t_ms: `${latency_ms}.000`, event: "FLIGHT_COMPLETE", label: `Wire roundtrip verified (${latency_ms}ms). Cryptographic SHA-256 seal: ${auditHash}` }
     ];
@@ -1360,11 +1360,11 @@ export async function onRequest(context) {
         "RFC 8962: Establishing the Protocol for Direct Telemetry Forensics"
       ],
       subpoena_verdict: isTargetActuallyCloudflare 
-        ? "FULL COMPLIANCE: Sovereign Edge State Verified (0 Violations)" 
+        ? "FULL COMPLIANCE: High-Performance Edge State Verified (0 Violations)" 
         : "VIOLATION OF CORE LATENCY DOCTRINE: Unoptimized Infrastructure Causing Severe Packet Stutter",
       remediation_order: isTargetActuallyCloudflare 
         ? "Maintain Current Architecture (Zero Remediation Required)" 
-        : "Mandatory Migration to RQL Sovereign Native Rust Edge Runtime",
+        : "Recommended Optimization to RQL Native Rust Edge Runtime",
       executive_signoff_hash: auditHash
     };
 
@@ -1402,7 +1402,7 @@ export async function onRequest(context) {
       notary_docket_id: `NIST-ATOMIC-${auditHash.substring(2, 10).toUpperCase()}`,
       nist_time_standard: "UTC(NIST) Stratum-1 Atomic Master Clock (Boulder, CO)",
       nist_julian_date: nistJulianDate,
-      nist_offset_nanoseconds: "±1.2 ns UTC Traceability",
+      nist_offset_nanoseconds: "Â±1.2 ns UTC Traceability",
       immutable_sha256_hash: auditHash,
       court_admissibility: "FEDERAL RULES OF EVIDENCE (FRE 902(13) & (14) CERTIFIED)",
       public_verification_url: `https://rehanquantlab.com/verify/${auditHash}`
@@ -1423,8 +1423,8 @@ export async function onRequest(context) {
       rql_resilience_grade: "IMMUNE (Domestic Edge POP In-Country Termination)"
     };
 
-    // Phase 49: Head-to-Head Competitive Assassination Battle Matrix
-    let competitiveBattle = null;
+    // Phase 49: Head-to-Head Performance Benchmark Matrix
+    let competitiveBenchmark = null;
     const compInput = competitor_url || "shopify.com";
     try {
       let compClean = compInput.trim();
@@ -1449,7 +1449,7 @@ export async function onRequest(context) {
       const absDelta = Math.abs(deltaMs);
       const dailyLossUsd = targetFaster ? 0 : Math.round((absDelta / 100) * 14.5 * 10);
 
-      competitiveBattle = {
+      competitiveBenchmark = {
         competitor_domain: compDomain,
         competitor_latency_ms: compLatency,
         target_latency_ms: latency_ms,
@@ -1473,13 +1473,13 @@ export async function onRequest(context) {
 
 I ran an engineering performance & security audit on ${cleanDomain} (Primary IP: ${primaryIp}):
 
-• Wire Latency (TTFB): ${ttfb_ms} ms (${detected_platform})
-• DOM Complexity: ${domElementCount} HTML elements (${domBloatRatio}x Google threshold)
-• Payload: ${page_size_kb} KB (${scriptCount} external scripts)
-• Cryptography: ${transportProtocol} | ECH: ${hasEch ? "Enabled" : "Missing"}
-• Security Grade: ${securityGrade} (${missingHeaders.length} missing headers)
-• Carbon Impact: ${co2_annual_10k_kg} kg CO2 / year on legacy hosting
-• Modern high-speed standard: 0.20 seconds (100/100 Google Lighthouse score)
+â€¢ Wire Latency (TTFB): ${ttfb_ms} ms (${detected_platform})
+â€¢ DOM Complexity: ${domElementCount} HTML elements (${domBloatRatio}x Google threshold)
+â€¢ Payload: ${page_size_kb} KB (${scriptCount} external scripts)
+â€¢ Cryptography: ${transportProtocol} | ECH: ${hasEch ? "Enabled" : "Missing"}
+â€¢ Security Grade: ${securityGrade} (${missingHeaders.length} missing headers)
+â€¢ Carbon Impact: ${co2_annual_10k_kg} kg CO2 / year on legacy hosting
+â€¢ Modern high-speed standard: 0.20 seconds (100/100 Google Lighthouse score)
 
 Google recently began penalizing local business websites that take over 2.5 seconds on mobile search.
 
@@ -1587,7 +1587,7 @@ Would you be open to seeing a 60-second live speed demo on my phone this week ov
       ghost_rebuild: ghostRebuild,
       nist_notarization: nistNotarization,
       cable_severance_sim: cableSeveranceSim,
-      competitive_battle: competitiveBattle,
+      competitive_benchmark: competitiveBenchmark,
       page_size_kb,
       page_size_bytes,
       slowdown_factor,

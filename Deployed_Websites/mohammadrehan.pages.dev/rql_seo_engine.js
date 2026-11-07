@@ -84,7 +84,7 @@
             "caption": SITE_NAME
           },
           "image": EMBLEM_URL,
-          "description": "Sovereign desktop software laboratory: Developer of RQL DocumentShield™ forensic PDF redactor, RQL WhisperVault™ air-gapped speech intelligence, and pure-Rust high-throughput infrastructure with zero cloud telemetry and zero recurring subscriptions.",
+          "description": "Pure-Rust desktop software laboratory: Developer of RQL DocumentShield™ offline PDF redactor, RQL WhisperVault™ air-gapped speech intelligence, and pure-Rust high-performance tools with zero cloud telemetry and zero recurring subscriptions.",
           "founder": {
             "@type": "Person",
             "@id": `${SITE_URL}/#founder`,
@@ -117,7 +117,7 @@
     injectSchema(orgSchema, 'rql-schema-org');
   }
 
-  // 5. Store Catalog SoftwareApplication Schemas (Strict 2-Titan Sovereign Suites)
+  // 5. Store Catalog SoftwareApplication Schemas (Commercial Desktop Suites)
   function injectStoreProductsSchema() {
     const isStore = window.location.pathname.includes('store.html') || window.location.pathname.includes('projects.html');
     if (!isStore) return;
@@ -125,8 +125,8 @@
     const catalogSchema = {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Rehan Quant Lab™ Sovereign Commercial Software Suites",
-      "description": "Pure native Rust offline sovereign desktop suites: RQL DocumentShield forensic PDF redaction and RQL WhisperVault air-gapped speech recognition intelligence.",
+      "name": "Rehan Quant Lab™ Commercial Software Suites",
+      "description": "Pure native Rust offline desktop suites: RQL DocumentShield offline PDF redaction and RQL WhisperVault air-gapped speech recognition intelligence.",
       "itemListElement": [
         {
           "@type": "SoftwareApplication",
@@ -173,7 +173,7 @@
         {
           "@type": "SoftwareApplication",
           "position": 3,
-          "name": "RQL Sovereign Retail POS™",
+          "name": "RQL RetailPOS™",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "BusinessApplication",
           "description": "High-Speed Offline Retail Point-of-Sale & Inventory Ledger Engine: Sub-millisecond barcode checkout, 80mm/58mm thermal receipt printing, SQLite WAL double-entry ledger, and zero monthly subscriptions.",

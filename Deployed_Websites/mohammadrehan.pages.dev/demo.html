@@ -565,7 +565,7 @@ document.addEventListener('keydown', function(e) {
                         <div class="flex flex-wrap gap-2">
                             <button onclick="setQrPreset('https://rehanquantlab.com/store')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> Store URL</button>
                             <button onclick="setQrPreset('upi://pay?pa=founder@rehanquantlab&pn=MohammadRehan&cu=INR')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> UPI Payment</button>
-                            <button onclick="setQrPreset('WIFI:T:WPA;S:RQL-AirGapped;P:SovereignRust2026;;')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> Wi-Fi Access</button>
+                            <button onclick="setQrPreset('WIFI:T:WPA;S:RQL-AirGapped;P:AirGappedRust2026;;')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> Wi-Fi Access</button>
                         </div>
                     </div>
 
@@ -733,7 +733,7 @@ document.addEventListener('keydown', function(e) {
 
     function loadHashTestSample(e) {
         e.stopPropagation();
-        const testPayload = "REHAN_QUANT_LAB_SOVEREIGN_SYSTEMS_DETERMINISTIC_TEST_VECTOR_2026";
+        const testPayload = "REHAN_QUANT_LAB_DETERMINISTIC_TEST_VECTOR_2026";
         const blob = new Blob([testPayload], { type: 'application/octet-stream' });
         const file = new File([blob], 'Test_Sample_Payload.bin');
         processFileHash(file);

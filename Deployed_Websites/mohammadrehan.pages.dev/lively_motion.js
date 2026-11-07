@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-amber-400",
-            html: "<strong>RQL Sovereign Retail POS&trade;</strong> &bull; Offline Barcode &amp; Thermal Billing (<span class='text-amber-400 font-bold'>$199 USD / &#8377;16,500</span>)",
+            html: "<strong>RQL RetailPOS&trade;</strong> &bull; Offline Barcode &amp; Thermal Billing (<span class='text-amber-400 font-bold'>$199 USD / &#8377;16,500</span>)",
             url: "https://quantify17.gumroad.com/l/rql-retailpos",
             actionText: "Instant Checkout",
             actionColor: "text-amber-400"
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             actionColor: "text-purple-400"
         },
         {
-            label: "SOVEREIGN TITAN:",
+            label: "DESKTOP SUITE:",
             labelColor: "text-teal-400",
             html: "<strong>100% Pure Native Rust</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop License",
             url: "store.html",
