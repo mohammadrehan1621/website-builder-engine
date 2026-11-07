@@ -1032,7 +1032,7 @@ Resume (PDF)
 
 
 
-<div class="h-8 flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-4">
+<div class="flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-4">
 
 
 
@@ -1040,7 +1040,7 @@ Resume (PDF)
 
 
 
-    <span class="inline-block w-0.5 h-4 bg-indigo-600 animate-pulse ml-1 align-middle"></span>
+    
 
 
 
@@ -2728,172 +2728,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-(function initProjectsRoleRotator() {
-
-
-
-    const el = document.getElementById('projects-role-rotator');
-
-
-
-    if (!el) return;
-
-
-
-    const roles = [
-        "RQL DocumentShield&trade; &mdash; Enterprise Forensic PDF Redactor",
-        "RQL WhisperVault&trade; &mdash; Offline AI Speech Intelligence",
-        "100% Pure Native Rust &bull; Sub-Millisecond Desktop Silicon",
-        "Air-Gapped Sovereign Computing &bull; Zero Cloud Telemetry"
-    ];
-
-
-
-    let roleIndex = 0;
-
-
-
-    let charIndex = roles[0].length;
-
-
-
-    let isDeleting = true;
-
-
-
-    let pauseCounter = 0;
-
-
-
-
-
-
-
-    function tick() {
-
-
-
-        const currentRole = roles[roleIndex];
-
-
-
-        if (isDeleting) {
-
-
-
-            if (pauseCounter > 0) {
-
-
-
-                pauseCounter--;
-
-
-
-                setTimeout(tick, 100);
-
-
-
-                return;
-
-
-
-            }
-
-
-
-            charIndex--;
-
-
-
-            el.textContent = currentRole.substring(0, charIndex);
-
-
-
-            if (charIndex === 0) {
-
-
-
-                isDeleting = false;
-
-
-
-                roleIndex = (roleIndex + 1) % roles.length;
-
-
-
-                setTimeout(tick, 300);
-
-
-
-                return;
-
-
-
-            }
-
-
-
-            setTimeout(tick, 25);
-
-
-
-        } else {
-
-
-
-            charIndex++;
-
-
-
-            el.textContent = currentRole.substring(0, charIndex);
-
-
-
-            if (charIndex === currentRole.length) {
-
-
-
-                isDeleting = true;
-
-
-
-                pauseCounter = 25;
-
-
-
-                setTimeout(tick, 100);
-
-
-
-                return;
-
-
-
-            }
-
-
-
-            setTimeout(tick, 45);
-
-
-
-        }
-
-
-
-    }
-
-
-
-    pauseCounter = 20;
-
-
-
-    setTimeout(tick, 1000);
-
-
-
-})();
+// Role Rotator neutralized: clean static typography active
 
 
 
