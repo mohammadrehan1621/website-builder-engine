@@ -2,50 +2,60 @@
   "timestamp": "2026-11-07",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
   "total_html_files": 12,
-  "total_word_count": 13556,
+  "total_word_count": 13569,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 0,
+      "density_pct": 0.0
+    },
     "deterministic": {
       "keyword": "deterministic",
-      "count": 26,
-      "density_pct": 0.19
+      "count": 25,
+      "density_pct": 0.18
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 4,
+      "density_pct": 0.03
     },
     "systems architect": {
       "keyword": "systems architect",
       "count": 19,
       "density_pct": 0.14
     },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 78,
-      "density_pct": 0.58
-    },
-    "pos software": {
-      "keyword": "pos software",
+    "storeflow": {
+      "keyword": "storeflow",
       "count": 0,
       "density_pct": 0.0
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.02
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 22,
-      "density_pct": 0.16
     },
     "offline billing": {
       "keyword": "offline billing",
       "count": 0,
       "density_pct": 0.0
     },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 1,
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 78,
+      "density_pct": 0.57
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.02
+    },
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 55,
+      "density_pct": 0.41
+    },
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 2,
       "density_pct": 0.01
     },
     "documentshield": {
@@ -53,40 +63,30 @@
       "count": 25,
       "density_pct": 0.18
     },
-    "storeflow": {
-      "keyword": "storeflow",
+    "pos software": {
+      "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 22,
+      "density_pct": 0.16
     },
     "desktop software": {
       "keyword": "desktop software",
-      "count": 10,
-      "density_pct": 0.07
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 55,
-      "density_pct": 0.41
-    },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 2,
-      "density_pct": 0.01
+      "count": 22,
+      "density_pct": 0.16
     }
   },
   "meta_audits": [
     {
       "file": "404.html",
-      "title": "404 &mdash; sovereign route not found | rehan quant lab",
-      "title_length": 55,
+      "title": "404 &mdash; page not found | rehan quant lab",
+      "title_length": 44,
       "title_valid": true,
-      "description": "the requested sovereign endpoint was not located on this node. redirecting to rehan quant lab headquarters.",
-      "desc_length": 107,
+      "description": "the requested page could not be found. redirecting to rehan quant lab home page.",
+      "desc_length": 80,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -111,8 +111,8 @@
       "title": "changelog &amp; releases | rehan quant lab&trade;",
       "title_length": 49,
       "title_valid": true,
-      "description": "official release history and changelog for rehan quant lab. track pure-rust sovereign workstation updates, win32 kernels, and security patches.",
-      "desc_length": 143,
+      "description": "official release history and changelog for rehan quant lab. track pure-rust desktop software updates, win32 kernels, and security patches.",
+      "desc_length": 138,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -137,8 +137,8 @@
       "title": "interactive demos | rehan quant lab&trade;",
       "title_length": 42,
       "title_valid": true,
-      "description": "test pure-rust sovereign software directly in your browser. live cryptographic sha-256 hash verifier and permanent vector qr studio.",
-      "desc_length": 132,
+      "description": "test pure-rust desktop software directly in your browser. live cryptographic sha-256 hash verifier and permanent vector qr studio.",
+      "desc_length": 130,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -215,8 +215,8 @@
       "title": "institutional trust &amp; security registry | rehan quant lab",
       "title_length": 61,
       "title_valid": true,
-      "description": "official cryptographic sha-256 trust registry for rehan quant lab sovereign desktop workstations. 100% air-gapped rust binaries whitelisted by microsoft wdsi.",
-      "desc_length": 158,
+      "description": "official cryptographic sha-256 trust registry for rehan quant lab desktop applications. 100% air-gapped rust binaries whitelisted by microsoft wdsi.",
+      "desc_length": 148,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 23687
+  "execution_micros": 24658
 }
