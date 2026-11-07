@@ -1561,57 +1561,9 @@ Contact Mohammad Rehan
                 // Static Engineering Grid Active: zero CPU particle loop overhead
 
 // ==========================================
-        // 2. HERO ROLE TYPEWRITER / TEXT ROTATOR
-        // ==========================================
-        (function initTypewriterRotator() {
-            const el = document.getElementById('role-rotator');
-            if (!el) return;
-            const roles = [
-                "Founder @ Rehan Quant Lab",
-                "Architect of RQL DocumentShield&trade; & WhisperVault&trade;",
-                "The Holy Trinity Architecture (Aegis &bull; Chaos &bull; Phoenix)",
-                "AI Systems Architect & Tech Lead",
-                "Autonomous AI Swarm & Quant Engineer"
-            ];
-            let roleIndex = 0;
-            let charIndex = roles[0].length;
-            let isDeleting = true;
-            let pauseCounter = 0;
+        // 2. HERO ROLE: Static High-Contrast Typography
+        // Zero CPU typewriter loop overhead
 
-            function tick() {
-                const currentRole = roles[roleIndex];
-                if (isDeleting) {
-                    if (pauseCounter > 0) {
-                        pauseCounter--;
-                        setTimeout(tick, 100);
-                        return;
-                    }
-                    charIndex--;
-                    el.textContent = currentRole.substring(0, charIndex);
-                    if (charIndex === 0) {
-                        isDeleting = false;
-                        roleIndex = (roleIndex + 1) % roles.length;
-                        setTimeout(tick, 300);
-                        return;
-                    }
-                    setTimeout(tick, 25);
-                } else {
-                    charIndex++;
-                    el.textContent = currentRole.substring(0, charIndex);
-                    if (charIndex === currentRole.length) {
-                        isDeleting = true;
-                        pauseCounter = 25; // ~2.5s hold time
-                        setTimeout(tick, 100);
-                        return;
-                    }
-                    setTimeout(tick, 45);
-                }
-            }
-            pauseCounter = 20;
-            setTimeout(tick, 1000);
-        })();
-
-        // ==========================================
         // 3. 3D HOLOGRAPHIC TILT PROFILE CARD
         // ==========================================
         (function init3DCardTilt() {

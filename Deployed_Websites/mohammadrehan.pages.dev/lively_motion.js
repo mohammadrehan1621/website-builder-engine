@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labelColor: "text-teal-400",
             html: "<strong>100% Pure Native Rust</strong> &bull; Zero Cloud Telemetry &bull; Lifetime Desktop License",
             url: "store.html",
-            actionText: "Commercial Suites (5)",
+            actionText: "Commercial Suites (13)",
             actionColor: "text-teal-400"
         }
     ];
