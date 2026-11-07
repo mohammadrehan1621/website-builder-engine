@@ -2,31 +2,46 @@
   "timestamp": "2026-11-07",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
   "total_html_files": 12,
-  "total_word_count": 13676,
+  "total_word_count": 13679,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
-    "storeflow": {
-      "keyword": "storeflow",
+    "pos software": {
+      "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
     },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 19,
-      "density_pct": 0.14
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.02
+    "sovereign computing": {
+      "keyword": "sovereign computing",
+      "count": 0,
+      "density_pct": 0.0
     },
     "desktop software": {
       "keyword": "desktop software",
+      "count": 23,
+      "density_pct": 0.17
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 4,
+      "density_pct": 0.03
+    },
+    "quantitative": {
+      "keyword": "quantitative",
       "count": 22,
       "density_pct": 0.16
+    },
+    "offline billing": {
+      "keyword": "offline billing",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 80,
+      "density_pct": 0.58
     },
     "expressbill": {
       "keyword": "expressbill",
@@ -38,45 +53,30 @@
       "count": 25,
       "density_pct": 0.18
     },
-    "sovereign computing": {
-      "keyword": "sovereign computing",
-      "count": 1,
-      "density_pct": 0.01
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.02
     },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 22,
-      "density_pct": 0.16
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 55,
+      "density_pct": 0.4
+    },
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 0,
+      "density_pct": 0.0
     },
     "deterministic": {
       "keyword": "deterministic",
       "count": 25,
       "density_pct": 0.18
     },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 4,
-      "density_pct": 0.03
-    },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 80,
-      "density_pct": 0.58
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 55,
-      "density_pct": 0.4
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 19,
+      "density_pct": 0.14
     }
   },
   "meta_audits": [
@@ -199,8 +199,8 @@
     },
     {
       "file": "react_portal.html",
-      "title": "mohammad rehan | react 3d sovereign portal | rehan quant lab",
-      "title_length": 60,
+      "title": "mohammad rehan | react 3d interactive portal | rehan quant lab",
+      "title_length": 62,
       "title_valid": true,
       "description": "founder & lead systems architect @ rehan quant lab. powered by react, gsap, framer motion, three.js 3d webgl, and rust webassembly engine.",
       "desc_length": 138,
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 28628
+  "execution_micros": 32530
 }
