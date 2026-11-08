@@ -2679,12 +2679,14 @@ function goToDeskStep2() {
   // Populate Step 2 Details
   const invEl = document.getElementById('desk-invoice-number');
   const buyerEl = document.getElementById('desk-bill-to-name');
+  const prodEl = document.getElementById('desk-bill-product');
   const amtEl = document.getElementById('desk-bill-amount');
   const qrImg = document.getElementById('desk-qr-image');
 
   const randNum = Math.floor(1000 + Math.random() * 9000);
   if (invEl) invEl.textContent = 'PRO-RQL-2026-' + randNum;
   if (buyerEl) buyerEl.textContent = 'Buyer: ' + name + (firm ? ' (' + firm + ')' : '');
+  if (prodEl) prodEl.innerHTML = currentDeskProduct;
   if (amtEl) amtEl.innerHTML = '&#8377;' + currentDeskPrice;
 
   // Dynamic UPI payment QR
@@ -2801,155 +2803,193 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     <!-- ======================================================== -->
-    <!-- INDIAN DOMESTIC CHECKOUT & FULFILLMENT DESK (LIGHT THEME)-->
+    <!-- INDIAN DOMESTIC CHECKOUT & FULFILLMENT DESK (HORIZONTAL LIGHT THEME)-->
     <!-- ======================================================== -->
-    <div id="indian-desk-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-      <div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-xl w-full p-6 sm:p-8 relative my-8 animate-in fade-in zoom-in-95 duration-200">
-        <button onclick="closeIndianDeskModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm font-mono font-bold transition">&times;</button>
+    <div id="indian-desk-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-4xl w-full p-5 sm:p-7 relative my-auto animate-in fade-in zoom-in-95 duration-200">
         
-        <!-- Header -->
-        <div class="flex items-center gap-2 mb-2">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-            Official Indian Domestic Fulfillment Desk &bull; Govt MSME Reg: UDYAM-BR-26-0258772
-          </span>
+        <!-- Top Compact Bar -->
+        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200/80">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+              Official Indian Domestic Fulfillment Desk &bull; Govt MSME Reg: UDYAM-BR-26-0258772
+            </span>
+          </div>
+          <button onclick="closeIndianDeskModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm font-mono font-bold transition cursor-pointer" title="Close">&times;</button>
         </div>
 
-        <h3 id="desk-product-title" class="text-2xl font-black font-heading text-slate-900">
-          Indian Domestic UPI &amp; License Desk
-        </h3>
-        <p class="text-xs text-slate-600 mt-1">
-          Instant domestic acquisition via UPI (Google Pay, PhonePe, Paytm, BHIM) with zero credit card foreign markups.
-        </p>
-
-        <!-- Step 1: Customer & Order Form -->
-        <div id="desk-step-1" class="mt-5 space-y-3.5">
-          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2.5">
-            <div class="flex justify-between items-center text-slate-600 font-mono pb-2 border-b border-slate-200">
-              <span>Selected Workstation:</span>
-              <span id="desk-selected-workstation" class="text-slate-900 font-bold">RQL DocumentShield&trade;</span>
-            </div>
-            <div class="flex justify-between items-center text-slate-600 font-mono">
-              <span>Total Commercial License Fee:</span>
-              <span class="text-base font-extrabold text-emerald-700 font-mono" id="desk-price-display">&#8377;14,900 INR</span>
-            </div>
-          </div>
-
-          <div class="space-y-2.5 text-xs font-mono">
-            <div>
-              <label class="block text-slate-700 font-semibold mb-1">Full Name *</label>
-              <input id="desk-cust-name" type="text" placeholder="e.g. Adv. Rajesh Kumar" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
-            </div>
-            <div>
-              <label class="block text-slate-700 font-semibold mb-1">Firm / Business Name (Optional for Tax Invoice)</label>
-              <input id="desk-cust-firm" type="text" placeholder="e.g. Kumar Law Chambers / Sharma Enterprises" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
-            </div>
-            <div class="grid grid-cols-2 gap-2.5">
-              <div>
-                <label class="block text-slate-700 font-semibold mb-1">WhatsApp Mobile *</label>
-                <input id="desk-cust-phone" type="tel" placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
-              </div>
-              <div>
-                <label class="block text-slate-700 font-semibold mb-1">State / Place of Supply *</label>
-                <input id="desk-cust-state" type="text" placeholder="e.g. Bihar / Maharashtra" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
-              </div>
-            </div>
-          </div>
-
-          <button onclick="goToDeskStep2()" class="w-full mt-2 py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 cursor-pointer">
-            <span>Generate Pro-Forma Invoice &amp; Show UPI QR</span>
-            <span>&rarr;</span>
-          </button>
+        <!-- Title & Subtitle -->
+        <div class="mb-4">
+          <h3 id="desk-product-title" class="text-xl sm:text-2xl font-black font-heading text-slate-900 leading-tight">
+            Indian Domestic UPI &amp; License Desk
+          </h3>
+          <p class="text-xs text-slate-500 mt-0.5">
+            Instant domestic acquisition via UPI (Google Pay, PhonePe, Paytm, BHIM) with zero credit card foreign markups.
+          </p>
         </div>
 
-        <!-- Step 2: UPI QR Code & UTR Verification -->
-        <div id="desk-step-2" class="mt-5 space-y-4 hidden">
-          <!-- Pro-Forma Box -->
-          <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-xs font-mono space-y-1.5">
-            <div class="flex justify-between items-center text-slate-500 text-[10px]">
-              <span>PRO-FORMA INVOICE:</span>
-              <span id="desk-invoice-number" class="text-slate-800 font-bold">PRO-RQL-2026-081</span>
+        <!-- STEP 1: CUSTOMER & ORDER FORM (HORIZONTAL 2-COLUMN) -->
+        <div id="desk-step-1" class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+          
+          <!-- Left Column: Product Summary & Assurances -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold block">Selected Workstation</span>
+                <span id="desk-selected-workstation" class="text-base sm:text-lg font-bold font-heading text-slate-900 mt-0.5 block">RQL DocumentShield&trade;</span>
+              </div>
+              <div class="pt-3 border-t border-slate-200">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-bold block">Commercial License Fee</span>
+                <div class="text-2xl font-black text-emerald-700 font-mono mt-0.5" id="desk-price-display">&#8377;14,900 INR</div>
+                <p class="text-[11px] text-slate-500 font-mono mt-0.5">Single-Workstation Perpetual License &bull; Pay Once, Own Forever</p>
+              </div>
             </div>
-            <div class="flex justify-between items-center font-bold text-slate-800">
-              <span id="desk-bill-to-name">Buyer: Rajesh Kumar</span>
-              <span id="desk-bill-amount" class="text-emerald-700 text-sm">&#8377;14,900</span>
+
+            <div class="pt-3 border-t border-slate-200 space-y-1.5 text-[11px] font-mono text-slate-600">
+              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> 100% Offline Single Native Binary (.exe)</div>
+              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> Official MSME Pro-Forma Tax Invoice</div>
+              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> 7-Day Unconditional Money-Back Guarantee</div>
             </div>
           </div>
 
-          <!-- Secure QR Code Box (Light Mode High Contrast) -->
-          <div class="p-4 rounded-2xl bg-white border-2 border-emerald-400/60 shadow-sm flex flex-col items-center justify-center text-center space-y-3">
+          <!-- Right Column: Buyer Details Input Form -->
+          <div class="flex flex-col justify-between space-y-3 font-mono text-xs">
+            <div class="space-y-2.5">
+              <div>
+                <label class="block text-slate-700 font-semibold mb-1">Full Name *</label>
+                <input id="desk-cust-name" type="text" placeholder="e.g. Adv. Rajesh Kumar" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
+              </div>
+              <div>
+                <label class="block text-slate-700 font-semibold mb-1">Firm / Business Name (Optional for Tax Invoice)</label>
+                <input id="desk-cust-firm" type="text" placeholder="e.g. Kumar Law Chambers / Sharma Enterprises" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
+              </div>
+              <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                  <label class="block text-slate-700 font-semibold mb-1">WhatsApp Mobile *</label>
+                  <input id="desk-cust-phone" type="tel" placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
+                </div>
+                <div>
+                  <label class="block text-slate-700 font-semibold mb-1">State / Place of Supply *</label>
+                  <input id="desk-cust-state" type="text" placeholder="e.g. Bihar / Maharashtra" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
+                </div>
+              </div>
+            </div>
+
+            <button onclick="goToDeskStep2()" class="w-full mt-2 py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 cursor-pointer">
+              <span>Generate Pro-Forma Invoice &amp; Show UPI QR</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- STEP 2: UPI QR CODE & UTR VERIFICATION (HORIZONTAL 2-COLUMN) -->
+        <div id="desk-step-2" class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch hidden">
+          
+          <!-- Left Column: Pro-Forma Invoice & UTR Submission -->
+          <div class="flex flex-col justify-between space-y-3 font-mono text-xs">
+            <!-- Pro-Forma Box -->
+            <div class="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex justify-between items-center text-slate-500 text-[10px] pb-1.5 border-b border-slate-200">
+                <span class="font-bold">PRO-FORMA INVOICE:</span>
+                <span id="desk-invoice-number" class="text-indigo-700 font-bold">PRO-RQL-2026-081</span>
+              </div>
+              <div class="space-y-1 text-slate-700">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-500 text-[11px]">Billed To:</span>
+                  <span id="desk-bill-to-name" class="font-bold text-slate-900 text-xs truncate max-w-[200px]">Rajesh Kumar</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-500 text-[11px]">Workstation:</span>
+                  <span id="desk-bill-product" class="font-bold text-slate-900 text-xs truncate max-w-[200px]">RQL DocumentShield</span>
+                </div>
+                <div class="flex justify-between items-center pt-1.5 border-t border-slate-200">
+                  <span class="text-slate-600 font-bold text-xs">Total License Fee:</span>
+                  <span id="desk-bill-amount" class="text-emerald-700 font-black text-base font-mono">&#8377;14,900</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- UTR Input -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-mono font-bold text-slate-800">Enter 12-Digit Bank UTR / UPI Reference Number *</label>
+              <input id="desk-utr-input" type="text" maxlength="12" placeholder="e.g. 432198765432" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-emerald-600 font-mono text-sm tracking-wider font-bold" />
+              <p class="text-[10px] text-slate-500 font-mono">Found in your GPay / PhonePe / Paytm transaction receipt.</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-1.5 pt-1">
+              <button onclick="submitDeskPaymentAndOpenWhatsApp()" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 cursor-pointer">
+                <span>Confirm Payment &amp; Open WhatsApp Handshake (Free)</span>
+                <span>&rarr;</span>
+              </button>
+              <button onclick="goToDeskStep1()" class="w-full py-1 text-center text-xs text-slate-500 hover:text-slate-800 font-mono underline cursor-pointer">&larr; Back to Order Details</button>
+            </div>
+          </div>
+
+          <!-- Right Column: Crisp UPI Payment QR Box -->
+          <div class="p-4 rounded-2xl bg-white border-2 border-emerald-400/60 shadow-xs flex flex-col items-center justify-center text-center space-y-2.5">
             <div class="text-[11px] font-mono font-bold text-emerald-900 uppercase">
               Scan with Any UPI App (GPay / PhonePe / Paytm / BHIM)
             </div>
             
-            <!-- Standard Crisp UPI QR -->
-            <div class="w-48 h-48 bg-white p-2 border border-slate-300 rounded-xl shadow-xs flex items-center justify-center">
+            <!-- Compact High-Contrast QR Code -->
+            <div class="w-40 h-40 sm:w-44 sm:h-44 bg-white p-2 border border-slate-300 rounded-xl shadow-xs flex items-center justify-center">
               <img id="desk-qr-image" src="qr_codes/p01_DocumentShield_Gumroad_QR.png" alt="UPI Payment QR" class="w-full h-full object-contain" />
             </div>
 
-            <div class="space-y-1">
-              <div class="text-xs font-mono font-bold text-slate-800">UPI ID: <code class="bg-slate-100 px-2 py-0.5 rounded text-indigo-700">7091518548@pthdfc</code></div>
+            <div class="space-y-0.5">
+              <div class="text-xs font-mono font-bold text-slate-800">UPI ID: <code class="bg-slate-100 px-2 py-0.5 rounded text-indigo-700 font-bold">7091518548@pthdfc</code></div>
               <div class="text-[10px] font-mono text-slate-500">Payee: Mohammad Rehan &bull; Account: HDFC Bank</div>
             </div>
 
-            <button onclick="copyDeskUpiId()" class="py-1.5 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-mono font-semibold transition cursor-pointer">
+            <button onclick="copyDeskUpiId()" class="py-1 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-mono font-semibold transition cursor-pointer">
               <span id="desk-copy-status">Copy UPI ID</span>
             </button>
           </div>
 
-          <!-- UTR Submission -->
-          <div class="space-y-2">
-            <label class="block text-xs font-mono font-bold text-slate-700">Enter 12-Digit Bank UTR / UPI Reference Number *</label>
-            <input id="desk-utr-input" type="text" maxlength="12" placeholder="e.g. 432198765432" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-emerald-600 font-mono text-sm tracking-wider font-bold" />
-            <p class="text-[10px] text-slate-500 font-mono">Found in your GPay / PhonePe / Paytm transaction receipt.</p>
-          </div>
-
-          <div class="space-y-2 pt-1">
-            <button onclick="submitDeskPaymentAndOpenWhatsApp()" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 cursor-pointer">
-              <span>Confirm Payment &amp; Open WhatsApp VIP Handshake (Free)</span>
-              <span>&rarr;</span>
-            </button>
-            <button onclick="goToDeskStep1()" class="w-full py-2 text-center text-xs text-slate-500 hover:text-slate-800 font-mono underline cursor-pointer">&larr; Back to Order Details</button>
-          </div>
         </div>
 
-        <!-- Step 3: Success & Download Gate & Machine ID -->
-        <div id="desk-step-3" class="mt-5 space-y-4 hidden">
-          <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs space-y-2">
+        <!-- STEP 3: SUCCESS & DOWNLOAD & MACHINE ID (HORIZONTAL 2-COLUMN) -->
+        <div id="desk-step-3" class="space-y-4 hidden">
+          <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs">
             <div class="font-bold text-emerald-950 flex items-center gap-2">
               <span class="text-emerald-600 text-base font-bold">&#10003;</span>
               <span>Payment Confirmation Recorded in Official Sales Register!</span>
             </div>
-            <p class="text-[11.5px] text-emerald-900 leading-relaxed">
-              Your official order has been queued for immediate license key signing. You can now download your official 64-bit Windows setup bundle directly below:
+            <p class="text-[11.5px] text-emerald-900 leading-relaxed mt-0.5">
+              Your official order has been queued for immediate license key signing. Follow the two steps below:
             </p>
           </div>
 
-          <!-- Direct Download Action -->
-          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-            <div class="text-xs font-mono font-bold text-slate-800">Official Windows Setup Package:</div>
-            <button onclick="alert('Download started! Extract the .zip and run the .exe to get your Machine ID.')" class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-xs">
-              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span id="desk-download-filename">Download Master Setup Bundle (.zip)</span>
-            </button>
-            <p class="text-[10px] text-slate-500 font-mono">Includes portable single binary .exe, SHA-256 certificate, and offline PDF user guide.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+            <!-- Left: Direct Download Action -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="text-xs font-mono font-bold text-slate-800">Step 1: Download Windows Setup Package</div>
+                <p class="text-[11px] text-slate-500 font-mono mt-1">Extract the .zip on your 64-bit Windows machine and launch the application.</p>
+              </div>
+              <button onclick="alert('Download started! Extract the .zip and run the .exe to get your Machine ID.')" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-xs">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span id="desk-download-filename" class="truncate">Download Master Setup Bundle (.zip)</span>
+              </button>
+            </div>
+
+            <!-- Right: Machine ID Handshake -->
+            <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="text-xs font-mono font-bold text-amber-950">Step 2: Cryptographic Hardware Key Activation</div>
+                <p class="text-[11px] text-amber-900 mt-1">When launched, the software displays your 16-character Machine ID. Paste below:</p>
+              </div>
+              <div class="flex gap-2">
+                <input id="desk-hwid-input" type="text" placeholder="e.g. HWID-7B9F-8821" class="flex-1 px-3 py-2 rounded-xl border border-amber-300 bg-white font-mono text-xs uppercase" />
+                <button onclick="sendHwidViaWhatsApp()" class="py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs cursor-pointer shrink-0">Submit ID</button>
+              </div>
+            </div>
           </div>
 
-          <!-- Machine ID Handshake -->
-          <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs space-y-2">
-            <div class="font-bold text-amber-950 flex items-center gap-1.5">
-              <span>Cryptographic Hardware Key Activation</span>
-            </div>
-            <p class="text-[11px] text-amber-900 leading-relaxed">
-              When you launch the software on your Windows PC, it displays your 16-character Machine ID. Paste it below to receive your cryptographic license key:
-            </p>
-            <div class="flex gap-2">
-              <input id="desk-hwid-input" type="text" placeholder="e.g. HWID-7B9F-8821-3A4C" class="flex-1 px-3 py-2 rounded-xl border border-amber-300 bg-white font-mono text-xs uppercase" />
-              <button onclick="sendHwidViaWhatsApp()" class="py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs cursor-pointer">Submit ID</button>
-            </div>
-          </div>
-
-          <div class="text-center pt-2">
+          <div class="text-center pt-1">
             <button onclick="closeIndianDeskModal()" class="text-xs font-mono font-bold text-slate-600 hover:text-slate-900 underline cursor-pointer">Done &amp; Close Portal</button>
           </div>
         </div>
