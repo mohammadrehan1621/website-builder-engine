@@ -52,8 +52,8 @@
 | **14** | **RQL InvoiceGen™** | Tier 1: Atomic Surgical | $89 | Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry. |
 | **15** | **RQL CSVFormat™** | Tier 1: Atomic Surgical | $89 | Deduplicates, sanitizes, and splits million-row CSV files in seconds without Excel freezing or cloud upload limits. |
 | **16** | **RQL MarkdownPad™** | Tier 2: Document & Privacy | $49 | Delivers a distraction-free, instantaneous offline Markdown desk with real-time vector preview and zero cloud syncing interruptions. |
-| **17** | **RQL PDFMerge™ (Powerhouse Edition)** | Tier 2: Document & Privacy | $99 | Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent. |
-| **18** | **RQL TaxLedger™** | Tier 2: Document & Privacy | $99 | Compiles Indian Financial Year sales, UPI payments, and GST breakdowns into sequential, audit-ready PDF ledgers offline with zero cloud accounting subscriptions. |
+| **17** | **RQL PDFMerge™ (Powerhouse Edition)** | Tier 2: Document & Privacy | $119 | Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent. |
+| **18** | **RQL TaxLedger™** | Tier 2: Document & Privacy | $119 | Compiles Indian Financial Year sales, UPI payments, and GST breakdowns into sequential, audit-ready PDF ledgers offline with zero cloud accounting subscriptions. |
 | **19** | **RQL FileShredder™** | Tier 2: Document & Privacy | $59 | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. |
 | **20** | **RQL ClipVault™** | Tier 2: Document & Privacy | $39 | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. |
 | **21** | **RQL ImageBatch™** | Tier 2: Document & Privacy | $69 | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. |
@@ -227,16 +227,18 @@
 * **4. The Results?** Eliminates messy handwritten price tags on store shelves and prevents cashier pricing disputes, saving +$281 against Labeljoy.
 * **5. The 1-Sentence Superpower**: *"Generates batch retail shelf labels and price stickers with barcodes in seconds, eliminating handwriting errors on store shelves."*
 
-#### 14. RQL InvoiceGen™ ($89 / ₹7,499 | Anchor: Zoho Invoice $180/yr | Saves: +$451) &mdash; [STAGED 🟡]
+#### 14. RQL InvoiceGen™ ($89 / ₹7,499 | Anchor: Zoho Invoice $180/yr | Saves: +$451) &mdash; [LIVE ON GUMROAD 🟢]
+* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-invoicegen`
 * **Mintage & Escalation**: Batch 1: 999 @ $89 (&#8377;7,499) | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
-* **Master Binary**: `RQL_InvoiceGen_Master_Setup.exe` &bull; **Chassis**: Pure Native Rust &bull; Embedded PDF Vector Engine &bull; Zero Cloud Telemetry
+* **Master Binary**: `RQL_InvoiceGen_Master_Setup.exe` &bull; **WDSI ID**: `e8b314fe-0377-47fc-9ff6-a0bdc13ac01c` (Completed 🟢) &bull; **SHA-256**: `9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF`
+* **Chassis**: Pure Native Rust &bull; Embedded PDF Vector Engine &bull; Zero Cloud Telemetry
 * **1. What is it?** A 2-second sovereign offline PDF invoice and tax estimate workstation with statutory Indian GST/VAT calculations and dynamic UPI QR embedding.
 * **2. What does it do?** Generates publication-grade PDF tax invoices with itemized line items, automated CGST/SGST/IGST tax splits, discount calculations, and instant mobile scan-to-pay UPI QR codes without internet connectivity.
 * **3. How does it do it?** Compiles vector PDF byte streams directly in RAM with embedded font tables in under 2 seconds, while rendering real-time previews and dispatching to 80mm/58mm thermal ESC/POS receipt slips.
 * **4. The Results?** Retailers, consultancies, and MSMEs generate compliant tax invoices and collect payments instantly with zero recurring cloud subscriptions, saving +$451/yr against Zoho Invoice and FreshBooks.
 * **5. The 1-Sentence Superpower**: *"Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry."*
 
-#### 15. RQL CSVFormat™ ($89 / ₹6,999 | Anchor: Gigasheet Cloud $144/yr | Saves: +$343) &mdash; [STAGED 🟡]
+#### 15. RQL CSVFormat™ ($89 / ₹6,999 | Anchor: Gigasheet Cloud $144/yr | Saves: +$343) &mdash; [COMPLETED 🟢]
 * **Mintage & Escalation**: Batch 1: 999 @ $89 | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
 * **1. What is it?** A fast, high-speed large-file CSV sanitizer, deduplicator, and splitter.
 * **2. What does it do?** Opens, cleans, deduplicates, and splits massive 5,000,000+ row CSV and TXT files that cause Microsoft Excel to freeze and crash.
@@ -257,8 +259,8 @@
 * **4. The Results?** Authors write without cloud lag, telemetry eavesdropping, or subscription lock-ins, saving +$167 against Bear/Ulysses subscriptions.
 * **5. The 1-Sentence Superpower**: *"Delivers a distraction-free, instantaneous offline Markdown desk with real-time vector preview and zero cloud syncing interruptions."*
 
-#### 17. RQL PDFMerge™ (Powerhouse Edition) ($99 / ₹7,999 | Anchor: Smallpdf $108/yr & Adobe $240/yr | Saves: +$620) &mdash; [STAGED 🟡]
-* **Mintage & Escalation Architecture**: Batch 1: 999 @ $99 (₹7,999) | Batch 2: 9,999 @ $129 (+30%) | Batch 3: 99,999 @ $168 (+30%) | Final Cap: 999,999 @ $218 (+30%) • Free Generational Upgrades for Life
+#### 17. RQL PDFMerge™ (Powerhouse Edition) ($119 / ₹9,999 | Anchor: Smallpdf $108/yr & Adobe $240/yr | Saves: +$600) &mdash; [STAGED 🟡]
+* **Mintage & Escalation Architecture**: Batch 1: 999 @ $119 (₹9,999) | Batch 2: 9,999 @ $155 (+30%) | Batch 3: 99,999 @ $201 (+69%) | Final Cap: 999,999 @ $261 (+120%) • Free Generational Upgrades for Life
 * **Master Binary**: `RQL_PDFMerge_Master_Setup.exe` • **Chassis**: Pure Native Rust • In-Memory XRef Stream Manipulation • Direct2D Visual Grid • Zero Cloud Telemetry
 * **The Pentagon Method Integration**: Operates as Node 2 (Merge/Assembly) and embeds Node 4 (RQL QRStudio™ Titan #07 Vector Engine) for instant on-document QR verification stamping.
 
@@ -297,8 +299,8 @@
 * **5. The 1-Sentence Superpower**: *"Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent."*
 
 
-#### 18. RQL TaxLedger™ (Powerhouse Edition) ($99 / ₹7,999 | Anchor: Tally Prime ₹18,000/yr & Zoho Books $240/yr | Saves: +$831) &mdash; [STAGED 🟡]
-* **Mintage & Escalation Architecture**: Batch 1: 999 @ $99 (₹7,999) | Batch 2: 9,999 @ $129 (+30%) | Batch 3: 99,999 @ $168 (+30%) | Final Cap: 999,999 @ $218 (+30%) • Free Generational Upgrades for Life
+#### 18. RQL TaxLedger™ (Powerhouse Edition) ($119 / ₹9,999 | Anchor: Tally Prime ₹18,000/yr & Zoho Books $240/yr | Saves: +$770) &mdash; [STAGED 🟡]
+* **Mintage & Escalation Architecture**: Batch 1: 999 @ $119 (₹9,999) | Batch 2: 9,999 @ $155 (+30%) | Batch 3: 99,999 @ $201 (+69%) | Final Cap: 999,999 @ $261 (+120%) • Free Generational Upgrades for Life
 * **Master Binary**: RQL_TaxLedger_Master_Setup.exe • **Chassis**: Pure Native Rust • Streaming In-Memory Journal • Pristine Light Theme • Zero Cloud Telemetry
 * **The Pentagon Method Integration**: Operates as Node 5 (Master Audit & Reconciliation) and embeds Node 4 (RQL QRStudio™ Titan #07 Vector Engine) for instant on-document QR verification stamping.
 * **1. What is it?** An offline Indian Financial Year (April 1 – March 31) sales register compiler, presumptive tax classifier, and audit-ready tax ledger workstation.
