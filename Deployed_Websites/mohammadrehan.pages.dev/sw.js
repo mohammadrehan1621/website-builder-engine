@@ -1,10 +1,11 @@
-// RQL Service Worker v4.8 (Auto-Purge Old Caches & Network-First)
-const CACHE_NAME = 'rql-desktop-v4.8';
+// RQL Service Worker v4.9 (Auto-Purge Old Caches & Network-First)
+const CACHE_NAME = 'rql-desktop-v4.9';
 const ASSETS_TO_CACHE = [
   '/manifest.json',
   '/emblem.webp',
   '/favicon.svg',
-  '/og_preview.png'
+  '/og_preview.png',
+  '/assets/rql-wave.js'
 ];
 
 self.addEventListener('install', (event) => {
