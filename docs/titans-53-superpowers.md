@@ -297,13 +297,37 @@
 * **5. The 1-Sentence Superpower**: *"Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent."*
 
 
-#### 18. RQL TaxLedger™ ($99 / ₹7,999 | Anchor: Cloud Accounting Ledger $360/yr | Saves: +$831)
-* **Mintage & Escalation**: Batch 1: 999 @ $99 (₹7,999) | Batch 2: 9,999 @ $129 (+30%) | Batch 3: 99,999 @ $167 (+69%) | Final Cap: 999,999 @ $217 (+120%) &bull; Free Generational Upgrades for Life
-* **1. What is it?** An offline Indian Financial Year (April 1 – March 31) sales register compiler and audit-ready tax ledger workstation.
+#### 18. RQL TaxLedger™ (Powerhouse Edition) ($99 / ₹7,999 | Anchor: Tally Prime ₹18,000/yr & Zoho Books $240/yr | Saves: +$831) &mdash; [STAGED 🟡]
+* **Mintage & Escalation Architecture**: Batch 1: 999 @ $99 (₹7,999) | Batch 2: 9,999 @ $129 (+30%) | Batch 3: 99,999 @ $168 (+30%) | Final Cap: 999,999 @ $218 (+30%) • Free Generational Upgrades for Life
+* **Master Binary**: RQL_TaxLedger_Master_Setup.exe • **Chassis**: Pure Native Rust • Streaming In-Memory Journal • Pristine Light Theme • Zero Cloud Telemetry
+* **The Pentagon Method Integration**: Operates as Node 5 (Master Audit & Reconciliation) and embeds Node 4 (RQL QRStudio™ Titan #07 Vector Engine) for instant on-document QR verification stamping.
+* **1. What is it?** An offline Indian Financial Year (April 1 – March 31) sales register compiler, presumptive tax classifier, and audit-ready tax ledger workstation.
 * **2. What does it do?** Compiles all sales invoices, cash entries, and UPI collections into sequential, paginated multi-page PDF ledger books with automatic quarterly GST (Q1–Q4) splits for Chartered Accountants.
 * **3. How does it do it?** Ingests local sales journals, CSV files, or manual billing streams in pure native Rust memory, recalculating taxable turnover, CGST, SGST, IGST, and net receivables across custom date ranges in sub-1ms with zero cloud uploads.
 * **4. The Results?** Sole proprietors, traders, and MSME owners generate professional, CA-approved annual tax registers in 1 click without paying recurring monthly cloud accounting subscriptions, saving +$831 over 3 years.
 * **5. The 1-Sentence Superpower**: *"Compiles Indian Financial Year sales, UPI payments, and GST breakdowns into sequential, audit-ready PDF ledgers offline with zero cloud accounting subscriptions."*
+
+* **The 15-Feature Powerhouse Architecture Matrix**:
+  * **Module 1: The Sovereign Financial Year (FY) Date-Filtering Engine**:
+    1. *1-Click Indian Financial Year Switcher*: Instant toggle for FY 2026-27, FY 2025-26, FY 2024-25 natively anchored to statutory April 1 – March 31 cycles.
+    2. *Statutory Quarterly GST Slicing (Q1–Q4)*: Dedicated filters for Q1 (Apr–Jun), Q2 (Jul–Sep), Q3 (Oct–Dec), and Q4 (Jan–Mar) matching GSTR-1 & GSTR-3B deadlines.
+    3. *Custom Date Range & Fiscal Month Slider*: Micro-filter by exact months (Diwali rush, Fiscal Year-End March) or custom date ranges with sub-millisecond recalculation.
+  * **Module 2: Multi-Stream Ingestion & 44AD Presumptive Tax Classifier**:
+    4. *Universal CSV & Excel Ingestion*: Drag & drop sales CSVs from any billing software, Amazon, Flipkart, Shopify, or Excel sheet with automated column auto-detection.
+    5. *Bank & UPI Settlement Parser*: Ingests PhonePe, Google Pay, Paytm, and bank statement CSVs, automatically identifying customer payment credits.
+    6. *Cash vs. Digital vs. Bank Turnover Classifier (Section 44AD Tax Saver)*: Automatically separates turnover into Cash (8% presumptive tax) vs Digital/UPI (6% presumptive tax), saving sole proprietors ₹20,000–₹50,000 in income tax.
+  * **Module 3: Automated GST & Compliance Breakdown Matrix**:
+    7. *Automated B2B vs. B2C Segregation*: Auto-detects parties with valid 15-digit GSTINs as B2B Tax Invoices, separating unregistered retail sales into B2C Large and B2C Small.
+    8. *Intra-State vs. Inter-State Tax Slicer*: Automatically calculates and splits taxes into CGST + SGST (local sales) vs. IGST (inter-state sales) with unified HSN/SAC summary tables.
+    9. *Exempt, Nil-Rated & RCM Ledger Tagging*: Dedicated flags for non-taxable, nil-rated, and Reverse Charge Mechanism (RCM) entries to ensure 100% tax filing accuracy.
+  * **Module 4: The Master CA Audit Pack (Institutional Multi-Page PDF Book)**:
+    10. *Sequential Paginated Sales Register PDF Book*: Generates an institutional Swiss-style A4 sales register with sequential voucher numbers, customer details, tax splits, running page numbers (Page X of Y), and strict Type3 Font Count == 0.
+    11. *1-Click "CA Audit Pack" Export*: Packages Master Sales Register PDF, Annual GST Tax Summary PDF, GSTR-1 Ready Portal CSV, and Client Outstanding Khata into a single ZIP.
+    12. *Statutory Annual Turnover Certificate*: 1-page executive turnover certificate stamped with Udyam Registration (UDYAM-BR-26-0258772), address, and total net receipts for bank current account renewals and loan dossiers.
+  * **Module 5: Pentagon Integration & Cryptographic Proof**:
+    13. *Embedded Vector QR Verification Stamping (Pentagon Node 4 Integration)*: Embeds an offline cryptographically verifiable QR stamp (powered by RQL QRStudio™ Titan #07) linking to an offline cryptographic invoice hash for tamper detection.
+    14. *Local Merkle-Digest Integrity Seal*: Computes an SHA-256 Merkle root hash of all transactions in that financial year, proving mathematically that the register was not retroactively manipulated.
+    15. *Sovereign Engineering Law 17 Binding (100% Offline)*: Remembers active FY, default export folders, enterprise GSTIN, and bank coordinates locally in %APPDATA%\RehanQuantLab\TaxLedger\state.json.
 
 #### 19. RQL FileShredder™ ($59 | Anchor: Blancco Cloud $96/yr | Saves: +$229)
 * **Mintage & Escalation**: Batch 1: 999 @ $59 | Batch 2: 9,999 @ $77 | Batch 3: 99,999 @ $100 | Final Cap: 999,999 @ $130

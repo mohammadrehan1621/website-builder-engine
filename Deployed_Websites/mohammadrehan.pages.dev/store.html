@@ -2601,8 +2601,172 @@ document.addEventListener('keydown', (e) => {
     closeEvaluationModal();
     closeQrScanModal();
     closeVideoWalkthroughModal();
+    closeIndianDeskModal();
   }
 });
+
+// Close Indian Desk on click outside
+window.addEventListener('click', (e) => {
+  const modal = document.getElementById('indian-desk-modal');
+  if (modal && e.target === modal) {
+    closeIndianDeskModal();
+  }
+});
+
+// ========================================================
+// INDIAN DOMESTIC CHECKOUT & FULFILLMENT DESK JAVASCRIPT
+// ========================================================
+let currentDeskProduct = 'RQL DocumentShield';
+let currentDeskPrice = '14,900';
+let currentDeskCode = 'rql-documentshield';
+
+function openIndianDeskModal(title, priceInr, productCode) {
+  currentDeskProduct = title || 'RQL Commercial Workstation';
+  currentDeskPrice = priceInr || '14,900';
+  currentDeskCode = productCode || 'rql-documentshield';
+
+  const modal = document.getElementById('indian-desk-modal');
+  if (!modal) return;
+
+  const titleEl = document.getElementById('desk-product-title');
+  const wsEl = document.getElementById('desk-selected-workstation');
+  const priceEl = document.getElementById('desk-price-display');
+
+  if (titleEl) titleEl.innerHTML = currentDeskProduct + " &bull; Indian Domestic Fulfillment Desk";
+  if (wsEl) wsEl.innerHTML = currentDeskProduct;
+  if (priceEl) priceEl.innerHTML = "&#8377;" + currentDeskPrice + " INR";
+
+  // Reset to Step 1
+  goToDeskStep1();
+
+  modal.classList.remove('hidden');
+}
+
+function closeIndianDeskModal() {
+  const modal = document.getElementById('indian-desk-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function goToDeskStep1() {
+  const s1 = document.getElementById('desk-step-1');
+  const s2 = document.getElementById('desk-step-2');
+  const s3 = document.getElementById('desk-step-3');
+  if (s1) s1.classList.remove('hidden');
+  if (s2) s2.classList.add('hidden');
+  if (s3) s3.classList.add('hidden');
+}
+
+function goToDeskStep2() {
+  const nameInput = document.getElementById('desk-cust-name');
+  const phoneInput = document.getElementById('desk-cust-phone');
+  const firmInput = document.getElementById('desk-cust-firm');
+
+  const name = nameInput ? nameInput.value.trim() : '';
+  const phone = phoneInput ? phoneInput.value.trim() : '';
+  const firm = firmInput ? firmInput.value.trim() : '';
+
+  if (!name) {
+    alert('Please enter your Full Name.');
+    if (nameInput) nameInput.focus();
+    return;
+  }
+  if (!phone || phone.length < 10) {
+    alert('Please enter a valid 10-digit WhatsApp Mobile number.');
+    if (phoneInput) phoneInput.focus();
+    return;
+  }
+
+  // Populate Step 2 Details
+  const invEl = document.getElementById('desk-invoice-number');
+  const buyerEl = document.getElementById('desk-bill-to-name');
+  const amtEl = document.getElementById('desk-bill-amount');
+  const qrImg = document.getElementById('desk-qr-image');
+
+  const randNum = Math.floor(1000 + Math.random() * 9000);
+  if (invEl) invEl.textContent = 'PRO-RQL-2026-' + randNum;
+  if (buyerEl) buyerEl.textContent = 'Buyer: ' + name + (firm ? ' (' + firm + ')' : '');
+  if (amtEl) amtEl.innerHTML = '&#8377;' + currentDeskPrice;
+
+  // Dynamic UPI payment QR
+  if (qrImg) {
+    const rawAmt = currentDeskPrice.replace(/,/g, '');
+    const upiLink = 'upi://pay?pa=7091518548@pthdfc&pn=Mohammad%20Rehan&am=' + encodeURIComponent(rawAmt) + '&cu=INR&tn=RQL%20Workstation%20License';
+    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(upiLink);
+    qrImg.onerror = function() {
+      qrImg.src = 'qr_codes/p01_DocumentShield_Gumroad_QR.png';
+    };
+  }
+
+  // Switch steps
+  const s1 = document.getElementById('desk-step-1');
+  const s2 = document.getElementById('desk-step-2');
+  const s3 = document.getElementById('desk-step-3');
+  if (s1) s1.classList.add('hidden');
+  if (s2) s2.classList.remove('hidden');
+  if (s3) s3.classList.add('hidden');
+}
+
+function copyDeskUpiId() {
+  const upiId = '7091518548@pthdfc';
+  navigator.clipboard.writeText(upiId).then(() => {
+    const statusEl = document.getElementById('desk-copy-status');
+    if (statusEl) {
+      statusEl.textContent = 'UPI ID Copied!';
+      setTimeout(() => {
+        statusEl.textContent = 'Copy UPI ID';
+      }, 2000);
+    }
+  }).catch(() => {
+    prompt('Copy UPI ID:', upiId);
+  });
+}
+
+function submitDeskPaymentAndOpenWhatsApp() {
+  const utrInput = document.getElementById('desk-utr-input');
+  const utr = utrInput ? utrInput.value.trim() : '';
+  if (!utr || utr.length < 6) {
+    alert('Please enter the 12-digit UPI Transaction Ref (UTR) from your payment receipt.');
+    if (utrInput) utrInput.focus();
+    return;
+  }
+
+  const name = document.getElementById('desk-cust-name') ? document.getElementById('desk-cust-name').value.trim() : 'Valued Client';
+  const firm = document.getElementById('desk-cust-firm') ? document.getElementById('desk-cust-firm').value.trim() : 'Individual Practice';
+  const phone = document.getElementById('desk-cust-phone') ? document.getElementById('desk-cust-phone').value.trim() : 'N/A';
+  const state = document.getElementById('desk-cust-state') ? document.getElementById('desk-cust-state').value.trim() : 'India';
+  const inv = document.getElementById('desk-invoice-number') ? document.getElementById('desk-invoice-number').textContent : 'RQL-2026-INV';
+
+  const cleanTitle = currentDeskProduct.replace(/&trade;/g, '').replace(/\u2122/g, '').trim();
+
+  const msg = 'Hello Mohammad Rehan,\nI have completed the Indian Domestic UPI payment for ' + cleanTitle + ' (INR ' + currentDeskPrice + ').\n\nOrder & Statutory Details:\n- Invoice Ref: ' + inv + '\n- Client Name: ' + name + '\n- Firm / Chambers: ' + firm + '\n- WhatsApp Phone: ' + phone + '\n- Place of Supply: ' + state + '\n- Bank UTR / Ref: ' + utr + '\n\nPlease verify and issue my official commercial license key.';
+
+  const waUrl = 'https://wa.me/917091518548?text=' + encodeURIComponent(msg);
+  window.open(waUrl, '_blank');
+
+  // Advance to Step 3 (Download & HWID)
+  const s1 = document.getElementById('desk-step-1');
+  const s2 = document.getElementById('desk-step-2');
+  const s3 = document.getElementById('desk-step-3');
+  if (s1) s1.classList.add('hidden');
+  if (s2) s2.classList.add('hidden');
+  if (s3) s3.classList.remove('hidden');
+
+  const dlEl = document.getElementById('desk-download-filename');
+  if (dlEl) dlEl.textContent = 'Download ' + cleanTitle + ' Master Setup Bundle (.zip)';
+}
+
+function sendHwidViaWhatsApp() {
+  const hwidInput = document.getElementById('desk-hwid-input');
+  const hwid = hwidInput ? hwidInput.value.trim() : '';
+  if (!hwid) {
+    alert('Please enter your 16-character Machine ID shown in the software window.');
+    if (hwidInput) hwidInput.focus();
+    return;
+  }
+  const cleanTitle = currentDeskProduct.replace(/&trade;/g, '').replace(/\u2122/g, '').trim();
+  const msg = 'Hello Mohammad Rehan,\nHere is my Machine ID for offline license activation:\n\n- Workstation: ' + cleanTitle + '\n- Machine ID: ' + hwid + '\n\nPlease sign and issue my Ed25519 cryptographic license key.';
+  window.open('https://wa.me/917091518548?text=' + encodeURIComponent(msg), '_blank');
+}
 </script>
 
 
