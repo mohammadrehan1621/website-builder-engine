@@ -37,7 +37,7 @@ We engineer 100% air-gapped, sovereign desktop workstations and institutional qu
 9. **Universal Route & Contact Obfuscation.** Never leave raw phone numbers (`+91 70915 18548`), raw emails, or naked checkout links in the static DOM. Always use `data-obf` base64 hydration and 7-bit ASCII HTML entities (`&#43;&#57;&#49;&nbsp;...`).
 10. **The "Don't Fool Me" Verification Standard (Section 0.4)**:
     Before describing any work as complete:
-    - Run the pure-Rust SEO Panopticon: `cargo run --release --bin rql_website_builder -- seo`. Must report **100/100 SSS+ Sovereign Apex**.
+    - Run the pure-Rust SEO Validator: `cargo run --release --bin rql_website_builder -- seo`. Must report **100/100 SSS+ Sovereign Apex**.
     - Verify with real live network checks (`curl.exe -I`), never assumptions.
     - Confirm zero non-ASCII mojibake corruption across all primary HTML pages.
 11. **The Harper & Presenton Rule (The One-Sentence Superpower Invariant)**:
@@ -62,7 +62,7 @@ We engineer 100% air-gapped, sovereign desktop workstations and institutional qu
 ---
 
 ## 4. Key CLI Commands
-* **Run Pure-Rust SEO Panopticon Audit**:
+* **Run Pure-Rust SEO Validator Audit**:
   ```powershell
   cargo run --release --bin rql_website_builder -- seo
   ```

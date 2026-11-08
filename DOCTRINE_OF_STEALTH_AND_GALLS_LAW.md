@@ -4,7 +4,6 @@
 ---
 
 > ### **I. Sun Tzu on Strategic Asymmetry**
-> *"All warfare is based on deception. When strong, appear weak. When near, make them believe you are far. When far, make them believe you are near."*  
 > — **Sun Tzu**, *The Art of War*
 
 > ### **II. John Gall on Systems Engineering**
@@ -60,7 +59,7 @@ We do not seek validation from people who only skim the surface. We do not parti
 
 ---
 
-## ⚙️ Pillar II: Gall's Evolutionary Law (The Seed to Fortress)
+## ⚙️ Pillar II: Gall's Evolutionary Law (From Simple Core to Scaled Platform)
 
 A working complex system cannot be designed from a blank slate. It must be cultivated from an elementary, deterministic nucleus that works with 100% reliability.
 

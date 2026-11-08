@@ -76,7 +76,7 @@ This repository contains the pure-Rust engineering tools used to verify, test, a
 # 1. Verify 16-Point Pre-Launch Invariants (60ms Silicon Runtime)
 cargo run --bin verify_prelaunch_checklist
 
-# 2. Run Open-SEO Panopticon Audit (100/100 SSS+ Score Verification)
+# 2. Run Open-SEO Validator Audit (100/100 SSS+ Score Verification)
 cargo run --bin rql_website_builder seo
 
 # 3. Restructure Legal Agreement into GeM Statutory Format

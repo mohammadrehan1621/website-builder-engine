@@ -1,5 +1,5 @@
-# ⚖️ THE GALL'S LAW & SUN TZU DOCTRINE: ARCHITECTURAL CREED OF THE WEBSITE BUILDER ENGINE
-### *"Never Build a Monster We Cannot Understand • When Strong, Appear Weak"*
+# ⚖️ THE GALL'S LAW DOCTRINE: ARCHITECTURAL CREED OF THE WEBSITE BUILDER ENGINE
+### *"Build Clean Systems You Completely Understand • Strength Through Understated Reliability"*
 
 ---
 
@@ -9,12 +9,8 @@
 > There is no other way to get a complex system that works than to build a simple system and then develop it gradually."*  
 > — **John Gall**, *Systemantics: How Systems Work and Especially How They Fail*
 
-> ### ⚔️ **The Tactical Axiom of Sun Tzu (The Art of War)**
-> *"All warfare is based on deception. When strong, appear weak. When near, make them believe you are far."*  
-> — **Sun Tzu**, *The Art of War*
-
-> ### 🛡️ **The Rehan Quant Lab Sovereign Creed**
-> *"When the conventional frontend world builds fragile 30MB monsters with 50 npm dependencies that crash on mobile devices and spin CPU fans, we build lean, deterministic, sub-50ms static engines that survive real-world chaos. We appear deceptively simple on the outside while running unkillable resilience under the hood."*  
+> ### 🛡️ **The Rehan Quant Lab Engineering Principle**
+> *"While modern web development often builds fragile 30MB sites with dozens of heavy dependencies that crash on mobile devices and spin CPU fans, we build lean, deterministic, sub-50ms engines that perform flawlessly. Clean and understated on the outside, backed by robust resilience under the hood."*
 > — **Mohammad Rehan**, Founder & Lead Systems Architect
 
 ---
@@ -25,8 +21,8 @@ In web systems architecture, the greatest risk is **uncontrolled architectural b
 
 At **Rehan Quant Lab**, the `website-builder-engine` and its flagship deployment **[rehanquantlab.com](https://rehanquantlab.com)** are governed by two inviolable doctrines:
 
-1. **Gall's Law (Simplicity Over Monsters)**: Every site begins as a simple, lightning-fast static document that renders in $< 50\text{ ms}$ on any device on Earth. Features evolve incrementally only after the underlying core is mathematically proven and stable.
-2. **Sun Tzu's Deception (Strength Through Understatement)**: The frontend appears clean, refined, and effortlessly simple. We reject garish gimmicks and noisy animations. Beneath this calm surface lies an institutional-grade infrastructure: SHA-checksummed client-side state resurrection, autonomous circuit breakers, zero-leakage privacy headers, and global edge distribution across 300+ Cloudflare data centers.
+1. **Gall's Law (Simplicity Over Bloat)**: Every site begins as a simple, lightning-fast static document that renders in $< 50\text{ ms}$ on any device on Earth. Features evolve incrementally only after the underlying core is mathematically proven and stable.
+2. **Strength Through Understatement**: The frontend appears clean, refined, and effortlessly simple. We reject garish gimmicks and noisy animations. Beneath this calm surface lies an institutional-grade infrastructure: SHA-checksummed client-side state recovery, autonomous circuit breakers, zero-leakage privacy headers, and global edge distribution across 300+ Cloudflare data centers.
 
 ---
 
@@ -50,7 +46,7 @@ At **Rehan Quant Lab**, the `website-builder-engine` and its flagship deployment
 
 ## 🔬 How Gall's Law & Sun Tzu Demolished Modern Web Fragility
 
-### 1. Rejection of the 30MB "Awwwards Monster"
+### 1. Rejection of Bloated 30MB Framework Sites
 - **The Industry Failure**: Importing 600KB Three.js bundles, 1.2MB physics engines, and scroll-hijackers. The site drops to 12 FPS on mobile, drains battery, and fails accessibility.
 - **The Sovereign Solution**: 100% vanilla JavaScript, pure hardware-accelerated CSS transforms (`transform: translate3d`), and zero external npm runtime bloat. The entire site bundles into $< 1.6\text{ MB}$ total assets—including high-resolution executive images and vector PDFs.
 

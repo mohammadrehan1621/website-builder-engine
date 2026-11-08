@@ -4,8 +4,6 @@
 
 ---
 
-> *"All warfare is based on deception. When able to attack, we must seem unable; when using our forces, we must seem inactive; when we are near, we must make the enemy believe we are far away; when far away, we must make him believe we are near."*  
-> — **Sun Tzu, The Art of War**
 
 > *"A complex system that works is always found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be made to work. There is no getting around it; we must start with a simple working system."*  
 > — **John Gall, Systems Engineering Law**
@@ -21,7 +19,7 @@
 You do not build an autonomous agency platform with fragile node modules, heavy framework build steps, and complex Docker pipelines that break on minor dependency updates. We built from unbreakable foundational primitives:
 
 ```text
-                                  [ THE AGENCY FORTRESS ]
+                                  [ THE PRODUCTION PLATFORM ]
                  RUNG 7: 1-Click Automated Cloudflare Pages Global Edge Deploy
                                           ▲
                  RUNG 6: Client Acquisition Scraper & Automated PDF Pitch Dossier
@@ -64,7 +62,7 @@ We completely invert the power dynamic through asymmetric demonstration:
 
 ---
 
-## 🛡️ THE 5 SACRED INVARIANTS (NON-NEGOTIABLE GROUND TRUTHS)
+## 🛡️ THE 5 CORE INVARIANTS (NON-NEGOTIABLE GROUND TRUTHS)
 
 | # | Invariant | Technical Implementation | Purpose |
 | :---: | :--- | :--- | :--- |
