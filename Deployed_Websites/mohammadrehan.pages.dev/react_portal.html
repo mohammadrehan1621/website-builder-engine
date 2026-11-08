@@ -144,7 +144,7 @@
         // --------------------------------------------------------------------
         // 2. 3D THREE.JS QUANTUM LATTICE COMPONENT
         // --------------------------------------------------------------------
-        function QuantumLattice3D() {
+        function NetworkMesh3D() {
             const mountRef = useRef(null);
 
             useEffect(() => {
@@ -160,7 +160,7 @@
                 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
                 container.appendChild(renderer.domElement);
 
-                // Geometric Icosahedron (AegisDB Crystalline Lattice)
+                // Geometric Icosahedron (AegisDB Mesh Topology)
                 const geometry = new THREE.IcosahedronGeometry(11, 2);
                 const wireframeGeometry = new THREE.WireframeGeometry(geometry);
                 const lineMaterial = new THREE.LineBasicMaterial({
@@ -261,7 +261,7 @@
 
                         {/* Navigation Links */}
                         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-                            <a href="#doctrine" className="hover:text-cyan-400 transition">Dual Doctrine</a>
+                            <a href="#principles" className="hover:text-cyan-400 transition">Core Principles</a>
                             <a href="#resilience" className="hover:text-cyan-400 transition">Resilience Lab</a>
                             <a href="#aegisdb" className="hover:text-cyan-400 transition">AegisDB&trade;</a>
                             <a href="#benchmark" className="hover:text-cyan-400 transition">Rust WASM</a>
@@ -308,7 +308,7 @@
 
             return (
                 <section ref={heroRef} className="relative min-h-[85vh] flex items-center justify-center pt-12 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-                    <QuantumLattice3D />
+                    <NetworkMesh3D />
 
                     <div className="max-w-5xl mx-auto text-center relative z-10">
                         {/* Status Badge */}
@@ -321,7 +321,7 @@
                         <h1 className="gsap-hero-title text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
                             Deterministic Systems. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">
-                                Unkillable Execution.
+                                Fault-Tolerant Execution.
                             </span>
                         </h1>
 
@@ -333,7 +333,7 @@
                         {/* Action Buttons */}
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                             <a
-                                href="#trinity"
+                                href="#resilience"
                                 className="px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-sm transition shadow-lg shadow-cyan-500/20 font-mono"
                             >
                                  EXPLORE RESILIENCE ARCHITECTURE
@@ -389,7 +389,7 @@
         // --------------------------------------------------------------------
         function DualEngineDoctrine() {
             return (
-                <section id="doctrine" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+                <section id="principles" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
                     <div className="text-center mb-12">
                         <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full">
                             The Philosophical Bedrock
@@ -407,7 +407,7 @@
                         <div className="bg-slate-900/70 p-8 rounded-3xl border border-slate-800 hover:border-cyan-500/30 transition shadow-xl relative overflow-hidden group">
                             <div className="flex items-center gap-3 text-cyan-400 text-xs font-mono font-bold uppercase mb-4">
                                 <span className="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20"></span>
-                                <span>I. Gall's Law: Never Build a Monster</span>
+                                <span>I. Gall's Law: Start with Working Simplicity</span>
                             </div>
                             <blockquote className="text-base sm:text-lg text-slate-200 italic leading-relaxed font-serif">
                                 "A complex system that works is always found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be made to work. There is no getting around it; we must start with a simple working system."
@@ -444,7 +444,7 @@
         // --------------------------------------------------------------------
         // 6. RESILIENCE LAB & INTERACTIVE CHAOS SANDBOX
         // --------------------------------------------------------------------
-        function HolyTrinitySection() {
+        function ResilienceSection() {
             const [chaosEpoch, setChaosEpoch] = useState(1);
             const [isInjecting, setIsInjecting] = useState(false);
             const [logLines, setLogLines] = useState([
@@ -459,7 +459,7 @@
                 const currentGen = chaosEpoch;
                 setLogLines(prev => [
                     ...prev,
-                    `[T+0ms]  INJECTING CHAOS: Gateway 504 Timeout & Thread Freeze simulated!`
+                    `[T+0ms]  SIMULATING FAULT: Gateway 504 Timeout & Thread Freeze simulated!`
                 ]);
 
                 setTimeout(() => {
@@ -483,7 +483,7 @@
             };
 
             return (
-                <section id="trinity" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+                <section id="resilience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <div>
                             <span className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full">
@@ -507,7 +507,7 @@
                             }`}
                         >
                             <span></span>
-                            <span>{isInjecting ? "SIMULATING CHAOS SHOCK..." : `INJECT 504 CHAOS (GEN #${chaosEpoch})`}</span>
+                            <span>{isInjecting ? "SIMULATING TIMEOUT..." : `SIMULATE FAULT (TEST #${chaosEpoch})`}</span>
                         </button>
                     </div>
 
@@ -542,7 +542,7 @@
                     <div className="bg-black/80 rounded-2xl p-4 border border-slate-800 font-mono text-xs overflow-x-auto max-h-56 shadow-2xl">
                         <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[11px] text-slate-500">
                             <span>HIGH-AVAILABILITY FAULT-TOLERANCE TELEMETRY LOG</span>
-                            <span className="text-emerald-400">IMMUNE GEN #{chaosEpoch}</span>
+                            <span className="text-emerald-400">TEST PASSED (RUN #${chaosEpoch})</span>
                         </div>
                         <div className="space-y-1">
                             {logLines.map((line, idx) => (
@@ -648,7 +648,7 @@
                     <main className="flex-grow">
                         <HeroSection onRunBenchmark={runBenchmark} benchmarkResult={benchmarkResult} />
                         <DualEngineDoctrine />
-                        <HolyTrinitySection />
+                        <ResilienceSection />
                         <RustWasmBenchmarkCard wasmReady={wasmReady} onRunBenchmark={runBenchmark} benchmarkResult={benchmarkResult} />
                     </main>
 
