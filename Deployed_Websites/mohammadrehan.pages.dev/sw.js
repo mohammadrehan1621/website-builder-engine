@@ -1,5 +1,5 @@
-// RQL Service Worker v4.9 (Auto-Purge Old Caches & Network-First)
-const CACHE_NAME = 'rql-desktop-v6.3';
+// RQL Service Worker v5.0 (Auto-Purge Old Caches & Network-First)
+const CACHE_NAME = 'rql-desktop-v6.4';
 const ASSETS_TO_CACHE = [
   '/manifest.json',
   '/emblem.webp',

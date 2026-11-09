@@ -2723,6 +2723,8 @@ function goToDeskStep1() {
   if (s1) s1.classList.remove('hidden');
   if (s2) s2.classList.add('hidden');
   if (s3) s3.classList.add('hidden');
+  const statusEl = document.getElementById('desk-download-status');
+  if (statusEl) statusEl.classList.add('hidden');
 }
 
 function goToDeskStep2() {
@@ -2824,6 +2826,47 @@ function submitDeskPaymentAndOpenWhatsApp() {
 
   const dlEl = document.getElementById('desk-download-filename');
   if (dlEl) dlEl.textContent = 'Download ' + cleanTitle + ' Master Setup Bundle (.zip)';
+  const statusEl = document.getElementById('desk-download-status');
+  if (statusEl) statusEl.classList.add('hidden');
+}
+
+const DESK_DOWNLOAD_REGISTRY = {
+  'rql-documentshield': 'downloads/RQL_DocumentShield_Master_Suite_Setup_v1.0.zip',
+  'rql-whispervault': 'downloads/RQL_WhisperVault_Master_Suite_Setup_v1.0.zip',
+  'rql-retailpos': 'downloads/RQL_RetailPOS_Master_Suite_Setup_v1.0.zip',
+  'rql-storechain': 'downloads/RQL_StoreChain_Master_Suite_Setup_v1.0.zip',
+  'rql-conduit': 'downloads/RQL_Conduit_Master_Suite_Setup_v2.0.zip',
+  'rql-hashcheck': 'downloads/RQL_HashCheck_Master_Suite_Setup_v1.0.zip',
+  'rql-qrstudio': 'downloads/RQL_QRStudio_Master_Suite_Setup_v1.0.zip',
+  'rql-textdiff': 'downloads/RQL_TextDiff_Master_Suite_Setup_v1.0.zip',
+  'rql-renamer': 'downloads/RQL_Renamer_Master_Suite_Setup_v1.0.zip',
+  'rql-tageditor': 'downloads/RQL_TagEditor_Master_Suite_Setup_v1.0.zip',
+  'rql-fontviewer': 'downloads/RQL_FontViewer_Master_Suite_Setup_v1.0.zip',
+  'rql-dpdpshield': 'downloads/RQL_DPDPShield_Master_Suite_Setup_v1.0.zip',
+  'rql-pricetag': 'downloads/RQL_PriceTag_Master_Suite_Setup_v1.0.zip',
+  'rql-invoicegen': 'downloads/RQL_InvoiceGen_Master_Suite_Setup_v1.0.zip',
+  'rql-csvformat': 'downloads/RQL_CSVFormat_Master_Suite_Setup_v1.0.zip'
+};
+
+function triggerDeskBundleDownload() {
+  const filePath = DESK_DOWNLOAD_REGISTRY[currentDeskCode] || 'downloads/RQL_WhisperVault_Master_Suite_Setup_v1.0.zip';
+  const fileName = filePath.split('/').pop();
+
+  const link = document.createElement('a');
+  link.href = filePath;
+  link.setAttribute('download', fileName);
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  setTimeout(function() {
+    try { document.body.removeChild(link); } catch (e) {}
+  }, 500);
+
+  const statusEl = document.getElementById('desk-download-status');
+  if (statusEl) {
+    statusEl.innerHTML = '<span class="font-bold text-emerald-800">&#10003; Download Started:</span> ' + fileName + '<br><span class="text-[10.5px] text-slate-500">Check Chrome downloads (<code class="bg-emerald-100/70 px-1 rounded">Ctrl+J</code>). Extract .zip &amp; run Setup.exe to get your Machine ID.</span>';
+    statusEl.classList.remove('hidden');
+  }
 }
 
 function sendHwidViaWhatsApp() {
@@ -3039,10 +3082,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="text-xs font-mono font-bold text-slate-800">Step 1: Download Windows Setup Package</div>
                 <p class="text-[11px] text-slate-500 font-mono mt-1">Extract the .zip on your 64-bit Windows machine and launch the application.</p>
               </div>
-              <button onclick="alert('Download started! Extract the .zip and run the .exe to get your Machine ID.')" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-xs">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span id="desk-download-filename" class="truncate">Download Master Setup Bundle (.zip)</span>
-              </button>
+              <div class="space-y-2">
+                <button onclick="triggerDeskBundleDownload()" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-xs">
+                  <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span id="desk-download-filename" class="truncate">Download Master Setup Bundle (.zip)</span>
+                </button>
+                <div id="desk-download-status" class="hidden text-[11px] font-mono text-emerald-900 bg-emerald-50 border border-emerald-200 rounded-xl p-2.5 leading-relaxed"></div>
+              </div>
             </div>
 
             <!-- Right: Machine ID Handshake -->
