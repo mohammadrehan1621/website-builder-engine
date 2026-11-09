@@ -513,6 +513,7 @@ Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 
   2. **Printable A4 Countertop Acrylic Stand PDF Generator**: 1-Click generation of high-contrast, commercial-grade countertop payment stand PDFs for physical counter collection.
   3. **High-Resolution Master PNG Rasterizer**: Exports standalone 1024×1024 high-contrast QR PNGs for incorporation into physical stationery, packaging, and store signage.
   4. **Multi-Protocol Generative Studio**: Generates UPI, E-Verify, Web URL, Wi-Fi, and vCard business contact QR matrices directly in pure Rust via `qrcode` with Level-M error correction.
+  5. **Real-Time Dynamic Cart Price QR Solution**: Generates instant, mathematically locked UPI payment QR codes directly embedded on invoices, POS checkout bills, and pro-forma quotations calculated from the real-time net total (items + CGST/SGST/IGST tax splits) for sub-second smartphone camera scanning and zero-toll bank-to-bank settlement.
 
 ### 17. Zero Type-3 Font Invariant for Sovereign PDF Generation
 * **The Rule**: All generated PDF manuals, invoices, receipts, and technical user guides across the 54 Titans must maintain **`Type3 Font Count == 0`** at all times.
