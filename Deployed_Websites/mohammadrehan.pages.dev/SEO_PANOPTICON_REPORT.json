@@ -2,19 +2,74 @@
   "timestamp": "2026-11-09",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
   "total_html_files": 12,
-  "total_word_count": 15012,
+  "total_word_count": 15021,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 54,
+      "density_pct": 0.36
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 21,
+      "density_pct": 0.14
+    },
     "expressbill": {
       "keyword": "expressbill",
       "count": 0,
       "density_pct": 0.0
     },
+    "pos software": {
+      "keyword": "pos software",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 27,
+      "density_pct": 0.18
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 80,
+      "density_pct": 0.53
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 17,
+      "density_pct": 0.11
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 18,
+      "density_pct": 0.12
+    },
+    "lifetime license": {
+      "keyword": "lifetime license",
+      "count": 3,
+      "density_pct": 0.02
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 4,
+      "density_pct": 0.03
+    },
     "storeflow": {
       "keyword": "storeflow",
+      "count": 0,
+      "density_pct": 0.0
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 24,
+      "density_pct": 0.16
+    },
+    "offline billing": {
+      "keyword": "offline billing",
       "count": 0,
       "density_pct": 0.0
     },
@@ -22,61 +77,6 @@
       "keyword": "sovereign computing",
       "count": 0,
       "density_pct": 0.0
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 17,
-      "density_pct": 0.11
-    },
-    "pos software": {
-      "keyword": "pos software",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 80,
-      "density_pct": 0.53
-    },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 21,
-      "density_pct": 0.14
-    },
-    "offline billing": {
-      "keyword": "offline billing",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 54,
-      "density_pct": 0.36
-    },
-    "lifetime license": {
-      "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.02
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 18,
-      "density_pct": 0.12
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 27,
-      "density_pct": 0.18
-    },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 4,
-      "density_pct": 0.03
-    },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 24,
-      "density_pct": 0.16
     }
   },
   "meta_audits": [
@@ -241,5 +241,5 @@
   "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 56737
+  "execution_micros": 58159
 }
