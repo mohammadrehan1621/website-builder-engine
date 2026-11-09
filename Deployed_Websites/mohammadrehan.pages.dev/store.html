@@ -2313,27 +2313,22 @@ document.addEventListener('keydown', function(e) {
           </a>
         </div>
 
-        <!-- Action CTAs -->
-        <div class="mt-4 space-y-3">
-          <a id="modal-gumroad-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-2 shadow-sm transition">
-            <span>Acquire Commercial Perpetual License (Gumroad)</span>
-            <span>&rarr;</span>
-          </a>
-
-          <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs">
-            <div class="font-bold text-emerald-900 flex items-center gap-1.5 mb-1">
-              <i class="w-4 h-4 text-emerald-700" data-lucide="zap"></i>
-              <span>Instant Indian Domestic Payment (UPI / QR)</span>
-            </div>
-            <p class="text-[11px] text-emerald-800 leading-relaxed">
-              Prefer paying in &#8377; INR without credit card markups? Pay directly via UPI ID <code class="font-bold bg-white px-1 py-0.5 rounded border border-emerald-300">&#55;&#48;&#57;&#49;&#53;&#49;&#56;&#53;&#52;&#56;&#64;pthdfc</code> or connect directly on WhatsApp with Founder Mohammad Rehan for instant license issuance.
-            </p>
-            <button onclick="launchIndianDeskFromEvaluation()" class="mt-2.5 w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 cursor-pointer">
+        <!-- Action CTAs (Crisp Horizontal 2-Column Layout) -->
+        <div class="mt-4 pt-3 border-t border-slate-100 space-y-2.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a id="modal-gumroad-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-101">
+              <span>Buy on Gumroad</span>
+              <span>&rarr;</span>
+            </a>
+            <button onclick="launchIndianDeskFromEvaluation()" class="w-full py-3.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-101 cursor-pointer" title="Open Indian Domestic UPI Fulfillment Desk">
               <span class="text-white font-bold">&#8377;</span>
-              <span>Open Interactive UPI &amp; Invoice Desk &rarr;</span>
+              <span>UPI India Desk &rarr;</span>
             </button>
-            <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdvdWxkJTIwbGlrZSUyMHRvJTIwcHVyY2hhc2UlMjBhbiUyMFJRTCUyMGNvbW1lcmNpYWwlMjBsaWNlbnNlJTIwdmlhJTIwVVBJLg==" role="button" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 hover:text-emerald-950 underline font-mono">
-              <span>Or Direct WhatsApp to Founder &rarr;</span>
+          </div>
+          <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 pt-1">
+            <span class="text-emerald-700 font-semibold">&#10003; Direct UPI &bull; Zero Bank Markups</span>
+            <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdvdWxkJTIwbGlrZSUyMHRvJTIwcHVyY2hhc2UlMjBhbiUyMFJRTCUyMGNvbW1lcmNpYWwlMjBsaWNlbnNlJTIwdmlhJTIwVVBJLg==" role="button" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-bold underline">
+              <span>Direct WhatsApp &rarr;</span>
             </a>
           </div>
         </div>
