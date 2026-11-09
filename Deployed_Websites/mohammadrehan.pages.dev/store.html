@@ -2725,6 +2725,15 @@ function goToDeskStep1() {
   if (s3) s3.classList.add('hidden');
   const statusEl = document.getElementById('desk-download-status');
   if (statusEl) statusEl.classList.add('hidden');
+  const utrInput = document.getElementById('desk-utr-input');
+  const counterEl = document.getElementById('desk-utr-counter');
+  const errEl = document.getElementById('desk-utr-error');
+  if (utrInput) {
+    utrInput.value = '';
+    utrInput.classList.remove('border-emerald-500', 'border-rose-400', 'border-rose-500');
+  }
+  if (counterEl) counterEl.textContent = '0/12 digits';
+  if (errEl) errEl.classList.add('hidden');
 }
 
 function goToDeskStep2() {
@@ -2777,6 +2786,20 @@ function goToDeskStep2() {
   if (s1) s1.classList.add('hidden');
   if (s2) s2.classList.remove('hidden');
   if (s3) s3.classList.add('hidden');
+
+  // Reset UTR field and state
+  const utrInput = document.getElementById('desk-utr-input');
+  const counterEl = document.getElementById('desk-utr-counter');
+  const errEl = document.getElementById('desk-utr-error');
+  if (utrInput) {
+    utrInput.value = '';
+    utrInput.classList.remove('border-emerald-500', 'border-rose-400', 'border-rose-500');
+  }
+  if (counterEl) counterEl.textContent = '0/12 digits';
+  if (errEl) {
+    errEl.textContent = '';
+    errEl.classList.add('hidden');
+  }
 }
 
 function copyDeskUpiId() {
@@ -2794,14 +2817,82 @@ function copyDeskUpiId() {
   });
 }
 
+function validateDeskUtrInput(input) {
+  if (!input) return;
+  // Strictly filter digits only and cap at 12
+  input.value = input.value.replace(/\D/g, '').slice(0, 12);
+  const val = input.value;
+  
+  const counterEl = document.getElementById('desk-utr-counter');
+  const errEl = document.getElementById('desk-utr-error');
+  if (errEl) errEl.classList.add('hidden');
+
+  if (counterEl) {
+    if (val.length === 12) {
+      if (isBogusUtr(val)) {
+        counterEl.innerHTML = '<span class="text-rose-600 font-bold">&#10007; Invalid sequence</span>';
+        input.classList.add('border-rose-400');
+        input.classList.remove('border-emerald-500');
+      } else {
+        counterEl.innerHTML = '<span class="text-emerald-700 font-bold">&#10003; 12/12 digits valid</span>';
+        input.classList.remove('border-rose-400', 'border-rose-500');
+        input.classList.add('border-emerald-500');
+      }
+    } else {
+      counterEl.textContent = val.length + '/12 digits';
+      input.classList.remove('border-emerald-500', 'border-rose-400', 'border-rose-500');
+    }
+  }
+}
+
+function isBogusUtr(utr) {
+  if (!utr || utr.length !== 12) return true;
+  // Reject identical repeating digits (e.g. 000000000000, 111111111111)
+  if (/^(\d)\1{11}$/.test(utr)) return true;
+  // Reject known sequential dummy patterns
+  if (utr === '123456789012' || utr === '012345678901' || utr === '234567890123' || utr === '345678901234') return true;
+  if (utr === '987654321098' || utr === '876543210987' || utr === '109876543210') return true;
+  return false;
+}
+
 function submitDeskPaymentAndOpenWhatsApp() {
   const utrInput = document.getElementById('desk-utr-input');
   const utr = utrInput ? utrInput.value.trim() : '';
-  if (!utr || utr.length < 6) {
-    alert('Please enter the 12-digit UPI Transaction Ref (UTR) from your payment receipt.');
-    if (utrInput) utrInput.focus();
+  const errEl = document.getElementById('desk-utr-error');
+
+  // Strict 12-digit numeric validation
+  if (!/^\d{12}$/.test(utr)) {
+    const msg = 'Please enter the official 12-digit numeric UPI Transaction Reference (UTR) from your payment receipt.';
+    if (errEl) {
+      errEl.textContent = msg;
+      errEl.classList.remove('hidden');
+    } else {
+      alert(msg);
+    }
+    if (utrInput) {
+      utrInput.focus();
+      utrInput.classList.add('border-rose-500');
+    }
     return;
   }
+
+  // Reject dummy/bogus test patterns
+  if (isBogusUtr(utr)) {
+    const msg = 'Invalid dummy UTR detected. Please enter the authentic 12-digit bank reference issued by your UPI payment app.';
+    if (errEl) {
+      errEl.textContent = msg;
+      errEl.classList.remove('hidden');
+    } else {
+      alert(msg);
+    }
+    if (utrInput) {
+      utrInput.focus();
+      utrInput.classList.add('border-rose-500');
+    }
+    return;
+  }
+
+  if (errEl) errEl.classList.add('hidden');
 
   const name = document.getElementById('desk-cust-name') ? document.getElementById('desk-cust-name').value.trim() : 'Valued Client';
   const firm = document.getElementById('desk-cust-firm') ? document.getElementById('desk-cust-firm').value.trim() : 'Individual Practice';
@@ -3025,9 +3116,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- UTR Input -->
             <div class="space-y-1.5">
-              <label class="block text-xs font-mono font-bold text-slate-800">Enter 12-Digit Bank UTR / UPI Reference Number *</label>
-              <input id="desk-utr-input" type="text" maxlength="12" placeholder="e.g. 432198765432" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-emerald-600 font-mono text-sm tracking-wider font-bold" />
-              <p class="text-[10px] text-slate-500 font-mono">Found in your GPay / PhonePe / Paytm transaction receipt.</p>
+              <div class="flex justify-between items-center">
+                <label class="block text-xs font-mono font-bold text-slate-800">Enter 12-Digit Bank UTR / UPI Ref *</label>
+                <span id="desk-utr-counter" class="text-[10px] font-mono text-slate-600 font-semibold">0/12 digits</span>
+              </div>
+              <input id="desk-utr-input" type="text" maxlength="12" inputmode="numeric" placeholder="e.g. 431528910472" oninput="validateDeskUtrInput(this)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-emerald-600 font-mono text-sm tracking-wider font-bold" />
+              <div id="desk-utr-error" class="hidden text-[10.5px] font-mono text-rose-700 bg-rose-50 border border-rose-200 rounded-lg p-2 font-medium"></div>
+              <p class="text-[10px] text-slate-500 font-mono">Found in your GPay / PhonePe / Paytm / BHIM transaction receipt (strictly 12 digits).</p>
+              <div class="text-[10px] font-mono text-slate-600 bg-slate-100/90 rounded-xl p-2.5 border border-slate-200 leading-relaxed">
+                <span class="font-bold text-slate-800">&#128274; Statutory Bank Audit Rule:</span> UTR numbers are cross-verified against live HDFC Bank credit records before the Ed25519 cryptographic activation key is signed. Unverified or dummy UTR entries cannot activate commercial software.
+              </div>
             </div>
 
             <!-- Action Buttons -->
