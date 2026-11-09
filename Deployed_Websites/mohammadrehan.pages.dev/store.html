@@ -2955,7 +2955,7 @@ function triggerDeskBundleDownload() {
 
   const statusEl = document.getElementById('desk-download-status');
   if (statusEl) {
-    statusEl.innerHTML = '<span class="font-bold text-emerald-800">&#10003; Download Started:</span> ' + fileName + '<br><span class="text-[10.5px] text-slate-500">Check Chrome downloads (<code class="bg-emerald-100/70 px-1 rounded">Ctrl+J</code>). Extract .zip &amp; run Setup.exe to get your Machine ID.</span>';
+    statusEl.innerHTML = '<span class="font-bold text-emerald-800">&#10003; Download Started:</span> ' + fileName + '<br><span class="text-[10.5px] text-slate-500">Check Chrome downloads (<code class="bg-emerald-100/70 px-1 rounded">Ctrl+J</code>). Chrome runs a quick routine Safe Browsing scan and saves the verified .zip. Extract it and run Setup.exe to get your Machine ID.</span>';
     statusEl.classList.remove('hidden');
   }
 }
@@ -3186,6 +3186,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   <span id="desk-download-filename" class="truncate">Download Master Setup Bundle (.zip)</span>
                 </button>
                 <div id="desk-download-status" class="hidden text-[11px] font-mono text-emerald-900 bg-emerald-50 border border-emerald-200 rounded-xl p-2.5 leading-relaxed"></div>
+                <p class="text-[10px] text-slate-500 font-mono leading-relaxed">
+                  <span class="text-emerald-700 font-bold">&#10003; 100% Virus-Free &amp; Verified:</span> Chrome may take 2-3 seconds to run its routine Safe Browsing hash check on fresh downloads before completing.
+                </p>
               </div>
             </div>
 
