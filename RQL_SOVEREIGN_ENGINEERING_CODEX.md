@@ -1,4 +1,4 @@
-# 🏛️ THE SOVEREIGN ENGINEERING CODEX
+﻿# 🏛️ THE SOVEREIGN ENGINEERING CODEX
 ## The 20 Sovereign Titan Principles & Master Construction Laws
 
 > ### 🛡️ THE SUPREME LAW OF ENTERPRISE SOVEREIGNTY:
@@ -410,7 +410,7 @@ Rehan Quant Lab software achieves absolute platform independence through the **T
 
 ## ⚡ SECTION III: THE CORE EXECUTION & CONSTRUCTION LAWS (THE CW & ACW PRODUCTION LOOP)
 
-To ensure every software product released by Rehan Quant Lab achieves complete market dominance, institutional authority, and buyer trust, all engineering methods and construction laws adhere strictly to the **Dual Engineering Principles of High-Throughput Processing and Resilient Recovery (The 14 Core Execution Laws)**:
+To ensure every software product released by Rehan Quant Lab achieves complete market dominance, institutional authority, and buyer trust, all engineering methods and construction laws adhere strictly to the **Dual Engineering Principles of High-Throughput Processing and Resilient Recovery (The 31 Master Methods)**:
 
 Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 ACW (Water ➔ Fire)** loop, balancing:
 * 🔥 **The Fire of Execution**: Blazing raw compiler torque, SIMD vectorization, sub-second NVMe unpacking, cryptographic hardware node binding, and adversarial red-team stress.
@@ -455,12 +455,12 @@ Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 
 * **🔄 ACW (Reverse Contract Audit)**: The confirmation card features an elevated agreement checkbox:
   `[✓] I have read, understood, and accept the RQL Commercial Master EULA` (pre-checked by default), establishing legally binding air-gapped commercial contract proof.
 
-### 6. Strict Deliverable Package Structure (Setup + Readme Only)
+### 6. Strict Deliverable Package Structure (Master Setup + Publication PDF Guide Only, Zero .txt Notes)
 * The customer download archive on Gumroad must **strictly** contain:
   1. `<AppName>_Master_Setup.exe` (1-Click Master Installer)
-  2. `README_START_HERE.txt` (Customer Quickstart Manual)
+  2. `<AppName>_User_Guide.pdf` (Publication-Grade Vector PDF User Guide & Architecture Manual)
   3. *(Optional)*: `Test_Confidential_Document` (Sample benchmark file if relevant).
-* **Zero loose code files, zero runtime folders, zero confusing subdirectories.**
+* **Zero loose code files, zero runtime folders, zero raw `.txt` notes, zero confusing subdirectories.**
 
 ### 7. Official RQL Sovereign Shield Icon
 * The official RQL Sovereign Shield icon (`icon.ico` / `.icns`) must be embedded directly into:
@@ -476,10 +476,10 @@ Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 
   - The title and subtitle cleanly left-aligned.
   - An air-gapped status badge (`100% AIR-GAPPED` or `RQL QUANT LAB`) anchored on the right.
 
-### 9. The Strict Tkinter Packing Order Rule (Zero UI Clipping Bug)
-* **Footer First**: Bottom navigation buttons (`Next >`, `< Back`, `Install Now`, `Finish`) must **always be packed with `side=tk.BOTTOM` FIRST** before any scrollable card or middle frame. This guarantees buttons can never be pushed off-screen regardless of DPI.
-* **Right Badge First**: Header badges (like `100% AIR-GAPPED` or `CLEAN UNINSTALL`) must **always be packed with `side=tk.RIGHT` FIRST** before left title text. This guarantees badge text is never squeezed or clipped.
-* **Strict ASCII Button Labels**: Standard ASCII (`Next >`, `< Back`) instead of Unicode arrows (`\u2192`) to prevent console encoding crashes.
+### 9. Zero-Clipping Layout Geometry & Visual Hierarchy Law (Native GUI Bounds & Invariant Packing)
+* **Footer First**: Bottom navigation and action bars (`Next >`, `< Back`, `Install Now`, `Finish`, status summaries) must **always be anchored to the bottom panel first** before allocating scrollable middle frames. This guarantees critical action controls can never be pushed off-screen regardless of DPI scaling or window height.
+* **Right Badge First**: Header badges (such as `[ 100% AIR-GAPPED ]`, `[?] User Guide`, `[ Open Output Folder ]`) must **always be right-anchored first** before allocating left-aligned title text. This guarantees badge controls and quick actions are never squeezed, obscured, or clipped by long titles.
+* **Strict ASCII Button Labels**: Standard ASCII (`Next >`, `< Back`, `[+] New`, `[X] Close`) instead of Unicode arrows (`\u2192`) to prevent console encoding crashes and rendering anomalies.
 
 ### 10. Instant 5-Second Test Benchmark File Included
 * Every software suite installs an instant sample benchmark file (e.g., `Test_Confidential_Legal_Document.pdf` or `Test_Confidential_Briefing.wav`) so the customer can run their first verification test within 5 seconds of installing without risking real client data.
@@ -491,20 +491,20 @@ Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 
 ### 12. VIP Founder Direct Escalation Channel
 * Every app embeds the Founder VIP WhatsApp line (`+91 70915 18548`) and email (`founder@rehanquantlab.com`) for direct white-glove onboarding and customer confidence.
 
-### 13. Automated 1-Click Desktop Deploy Kit Assembly
-* Every product build script (`build_all.py`) automatically compiles a ready-to-launch folder:
-  `C:\Users\rehan\Desktop\DEPLOY_<PRODUCT_NAME>_FILES\` containing covers, thumbnails, Gumroad listing copy, Readme, Master Setup, and deliverable ZIP.
+### 13. Automated 1-Click Pure Rust Desktop Release Packaging Standard (rql_packager)
+* The official packaging suite (`08_Build_Tools/rql_packager.exe`) is compiled in 100% pure native Rust. In sub-10 seconds, it cleans build artifacts, injects authentic product icons, compiles release binaries, bundles the Master Setup and Master Suite ZIP, generates covers and store assets, and cryptographically updates SHA-256 integrity manifests across the entire portfolio with zero Python scripts and zero `.bat` wrappers.
+
 
 ### 14. Universal Cross-Platform Multi-OS Parity (Windows, macOS, Linux)
 * **🔄 CW (Cross-Compilation Matrix)**: All sovereign applications share identical algorithmic logic, compiling to Windows `.exe`, macOS `.dmg` / `.app`, and Linux `.AppImage`.
 * **🔄 ACW (Hardware ID Symmetrical Compatibility)**: Standardized hashing across `MachineGuid` (Windows), `IOPlatformUUID` (macOS), and `/etc/machine-id` (Linux) guarantees that the exact same Founder License Generator issues and verifies licenses across all operating systems.
 
-### 15. The High-DPI Resolution & Optical Scaling Standard: 125% Standard (with 130% Toggle) & Zero Tofu Invariant
-* **The Rule**: All desktop applications across the 54 Titans must enforce an **Optical DPI Scale default set strictly to 125% Standard (with 130% Comfort Mode Toggle)**, combined with **Pure ASCII Icons** (zero emojis, zero hollow tofu boxes `▯`) and **Bold, High-Contrast Typography**.
+### 15. Zero-Tofu & Clean ASCII Typography Standard (Zero Hollow Boxes, High-Contrast Legibility)
+* **The Rule**: All desktop applications across the 54 Titans must strictly enforce **Pure ASCII Glyph Iconography** (zero color emojis, zero hollow tofu boxes `▯`) and **Bold High-Contrast Typography**. Display scaling is governed independently by Method 28 (120% Cold-Boot Scale) and Method 31 (In-App Scale Switcher).
 * **Rationalization & Ergonomic Invariant**:
-  1. **Strict 125% Standard with 130% Toggle**: Standard 100% scale on modern 1080p, 2K, and 4K displays causes eye strain, while scaling above 130% leads to widget clipping on compact screens. Locking default scale to 125% with an interactive 130% comfort toggle provides universal readability and 100% predictable layout geometry across all machines.
-  2. **Zero Hollow Tofu Box Invariant**: Native GUI toolkits (such as `egui`) only ship standard ASCII/Latin glyphs. Using 4-byte UTF-8 emojis or non-standard symbols causes ugly hollow tofu boxes (`▯`). All icons, tabs, badges, and action buttons must strictly use clean ASCII symbols (e.g., `[ RQL ]`, `[1]`, `[+]`, `[X]`, `[PDF]`, `[Vault]`).
-  3. **Bold High-Contrast Typography**: Body and button text must be set with `.strong()` styling and high-contrast deep slate color (`#0F172A`), completely eliminating spindly, thin, or washed-out fonts.
+  1. **Zero Hollow Tofu Box Invariant**: Native GUI toolkits (such as `egui`) bundle standard ASCII/Latin glyph ranges. Embedding 4-byte UTF-8 emojis or non-standard Unicode glyphs causes ugly hollow tofu boxes (`▯`) on systems without specialized fallback fonts. All icons, tabs, badges, and action buttons must strictly use clean ASCII symbols (e.g., `[ RQL ]`, `[1]`, `[+]`, `[X]`, `[PDF]`, `[Vault]`, `[?]`).
+  2. **Bold High-Contrast Typography**: Body, label, and button text must be set with `.strong()` styling and high-contrast deep slate color (`#0F172A`), completely eliminating spindly, thin, or washed-out fonts.
+  3. **Universal Cross-Platform Rendering**: Clean ASCII glyphs render with 100% mathematical fidelity across Windows 10, Windows 11, macOS, and Linux without font rendering artifacts or tofu regressions.
 
 ### 16. Inbuilt QR Studio™ Dynamic Settlement Engine Protocol
 * **The Rule**: All retail, billing, invoicing, and POS Titans must embed an **Inbuilt QR Studio™ Engine** capable of dynamic offline vector QR generation directly within the workstation.
@@ -513,7 +513,7 @@ Every construction law operates in a closed **🔄 CW (Fire ➔ Water) ⇄ 🔄 
   2. **Printable A4 Countertop Acrylic Stand PDF Generator**: 1-Click generation of high-contrast, commercial-grade countertop payment stand PDFs for physical counter collection.
   3. **High-Resolution Master PNG Rasterizer**: Exports standalone 1024×1024 high-contrast QR PNGs for incorporation into physical stationery, packaging, and store signage.
   4. **Multi-Protocol Generative Studio**: Generates UPI, E-Verify, Web URL, Wi-Fi, and vCard business contact QR matrices directly in pure Rust via `qrcode` with Level-M error correction.
-  5. **Real-Time Dynamic Cart Price QR Solution**: Generates instant, mathematically locked UPI payment QR codes directly embedded on invoices, POS checkout bills, and pro-forma quotations calculated from the real-time net total (items + CGST/SGST/IGST tax splits) for sub-second smartphone camera scanning and zero-toll bank-to-bank settlement.
+  5. **Real-Time Dynamic Cart Price QR Solution**: The checkout register calculates the cart total live and instantly displays a dynamic QR code for that exact amount (`upi://pay?pa={vpa}&pn={name}&am={cart_total:.2f}&cu=INR&tn={bill_id}`). As line items are added or quantities modified, the dynamic QR recalculates live on-screen, locking the exact amount on the customer's phone upon scan to eliminate manual customer typing errors, dispute risks, and queue delays.
 
 ### 17. Zero Type-3 Font Invariant for Sovereign PDF Generation
 * **The Rule**: All generated PDF manuals, invoices, receipts, and technical user guides across the 54 Titans must maintain **`Type3 Font Count == 0`** at all times.
@@ -574,6 +574,142 @@ undll32 url.dll,FileProtocolHandler) or `CREATE_NO_WINDOW`, eliminating black co
   - Zero Type-3 fonts, 0 color emojis, standard institutional typography.
 * **4. Universal Future Mandate**:
   - Enshrined permanently for all remaining products (Titan 16 through Titan 54). All UI copy and documentation will be written humanized from day one.
+
+### 21. High-Contrast Pristine Light-Theme & Button Legibility Standard (Zero Muddy Buttons)
+* **The Core Rule**: Never allow low-contrast, muddy, or unreadable buttons. In egui and all native Win32 GUI engines, all widgets must be explicitly styled for pristine contrast against white and light-slate cards (WCAG AAA compliant).
+* **1. Explicit Light Visuals Initialization**:
+  - The application context must strictly initialize `egui::Visuals::light()` at launch so buttons do not inherit dark-mode charcoal fills (`#2D2D2D`).
+  - Standard button background: `#F1F5F9` (Slate-100), border stroke: `1.0px #CBD5E1` (Slate-300), and text: `#0F172A` (Slate-900).
+* **2. Solid High-Contrast Action Buttons**:
+  - Primary / Action buttons (e.g., `[ Remove Duplicates ]`, `[ Clean & Export ]`, `[ Split File ]`, `[ Select File ]`): Must use solid vibrant fills (`#0284C7` Blue, `#059669` Emerald) with pure `#FFFFFF` white bold text.
+  - Secondary / Utility buttons (e.g., `[ Save Settings ]`, `[ Export Backup ]`): Must use dedicated solid slate fills (`#334155` / `#059669` / `#0284C7`) with pure `#FFFFFF` white bold text.
+* **3. The Colored-Text-on-Dark-Fill Prohibition**:
+  - Colored text (such as dark blue `#0284C7` or dark green `#059669`) must NEVER be placed on a dark gray or colored background. Text on colored buttons must always be crisp `#FFFFFF` white.
+* **4. Cold-Boot Resolution Invariant (Zero Header Clutter)**:
+  - The 120% DPI scale is set automatically at cold boot and persisted in the background configuration (`state.json`). Never clutter the top header bar with scale percentages (`120% Standard`); keep the top header clean, spacious, and dedicated to utility actions.
+
+### 22. Universal In-App "How It Works" Architecture & User Guide Integration
+* **The Core Rule**: Every Titan application header must include a prominent `[?] How It Works / User Guide` button that provides instant offline operator guidance and 1-click access to the official PDF manual.
+* **1. Top Header Placement**:
+  - Prominently anchored at the top right of the header bar next to `[ Open Output Folder ]`.
+  - Styled with a solid vibrant Blue fill (`#0284C7`) and pure white bold text (`#FFFFFF`) for immediate discovery.
+* **2. In-App Operator Guide Modal**:
+  - Clicking `[?] How It Works / User Guide` opens a dedicated, resizable modal window inside the application.
+  - Explains why the tool exists (e.g. overcoming Excel's 1,048,576 row freeze), gives a tab-by-tab walkthrough of all functions, and details keyboard shortcuts and privacy guarantees.
+* **3. Dual-Delivery PDF Dispatch (Zero CMD Flash)**:
+  - The modal provides an explicit `[ Open Official PDF Manual ]` button.
+  - Seamlessly searches: 1) Executable directory, 2) `%LOCALAPPDATA%\Programs\<TitanName>\`, 3) Workspace root.
+  - Embedded Fallback Invariant: If the PDF is absent on disk, the application extracts its embedded binary byte payload (`include_bytes!`) into the export directory and opens it natively via silent Win32 protocol dispatch (`rundll32 url.dll,FileProtocolHandler`).
+  - Clicking this button launches the system's default PDF viewer (Edge, Adobe Acrobat, Chrome) in under 20ms with ZERO command prompt window flickering.
+
+### 23. Memory-Mapped Zero-Copy CSV Inspection & Delimiter Sniffing Method
+* **The Core Rule**: Never load multi-gigabyte files into RAM just to display summary metrics or preview data. The application must open 10GB+ datasets in under 20ms while consuming less than 150MB of RAM.
+* **1. Zero-Copy File Inspection (`memmap2`)**:
+  - The file is memory-mapped directly into the process virtual address space.
+  - The first 64KB slice is inspected to sniff delimiters: dynamically tests `,`, `;`, `\t`, `|`, and `:` using row-consistency variance heuristics.
+* **2. Heuristic Column Type Inference**:
+  - Infers column types (Integer, Float, Boolean, Date/ISO, Email, Phone, Text) by inspecting non-empty sample rows without decoding the rest of the multi-gigabyte file.
+* **3. Lightning-Fast Line Counting**:
+  - Rapidly counts newline bytes (`\n`) using SIMD/parallel byte scanning (`rayon`) or chunked buffers, accurately reporting multi-million row counts in milliseconds.
+
+### 24. Single-Pass Streaming Hash Deduplication & Header-Replicating Chunker Method
+* **The Core Rule**: Massive tabular operations must stream through in a single pass with predictable memory overhead and guaranteed zero-loss data integrity.
+* **1. 64-Bit Hash Deduplication (`HashSet<u64>`)**:
+  - Rows are hashed using fast 64-bit non-cryptographic hashing (`DefaultHasher`).
+  - Storing only 8 bytes per unique row allows deduplicating 10,000,000 rows in ~80MB of RAM, completely avoiding memory crashes.
+  - Optional Removed Duplicates Export: Unique rows stream to the clean output file, while duplicate rows stream to an optional `_duplicates.csv` audit file.
+* **2. Header-Replicating Splitter (The Excel Rescuer)**:
+  - Splits multi-million row files into bite-sized chunks (e.g., 100,000, 250,000, or 500,000 rows).
+  - Header Invariant: The original column header is byte-accurately prepended to EVERY generated split chunk file so that each split file is an immediately valid, independent spreadsheet that Microsoft Excel can open without freezing.
+  - Categorical Splitting: Also supports splitting dynamically into separate files based on unique column values (e.g. Region, State, Month).
+
+### 25. Real-Time Zero-Allocation Markdown Parsing & Live Document Analytics Method
+* **The Core Rule**: Never embed multi-hundred megabyte web browser engines (Chromium, Electron, CEF) merely to render formatted text and calculate editing metrics. An offline writing desktop must launch in <100ms and operate in <50MB RAM.
+* **1. Incremental CommonMark AST Parsing**:
+  - Compiles CommonMark and GitHub Flavored Markdown (GFM) directly to intermediate AST structures in-memory.
+  - Renders synchronized typography with instant viewport toggling: `Split View` (dual-pane live preview), `Editor Only` (Zen distraction-free focus mode), and `Preview Only` (reading and audit mode).
+* **2. Sub-Millisecond Non-Blocking Document Statistics**:
+  - Computes real-time word count, character count (with and without whitespace), total lines, paragraphs, and estimated reading time (based on 225 words per minute) synchronously per keystroke without UI stutter.
+* **3. Offline Formula, Table & Diagram Engine**:
+  - Native rendering of KaTeX math equations (inline `$...$` and display `$$...$$`), GitHub-style tables, and task list checkboxes entirely offline without internet CDN dependencies.
+
+### 26. Pure Direct Vector PDF Dispatch Method (Zero-HTML Clutter Invariant)
+* **The Core Rule**: Never litter the user's export folder with intermediary `.html` files, CSS sheets, or temporary assets. Document export must yield a single, pristine, publication-grade `.pdf` file with zero secondary file debris.
+* **1. Direct PDF Generation (Zero HTML Clutter)**:
+  - Document compilers bypass HTML serialization entirely, rendering text, headers, code blocks, tables, and vector graphics directly into native PDF page streams (using `lopdf`, `pdf-writer`, or direct Win32 print pipelines).
+  - The export folder contains exclusively the target `.pdf` document, immediately ready for corporate email, board presentation, or legal court filing.
+* **2. Publication-Grade Vector Standards (Method 17 Alignment)**:
+  - Strict Zero Type-3 Font Invariant: All embedded typefaces must use TrueType or Type-1 outlines.
+  - Pixel-perfect millimeter pagination, standardized margins (0.75-inch / 19mm), and automatic header/footer page numbers (`Page X of Y`).
+* **3. Silent Win32 Shell Dispatch Pipeline**:
+  - Immediately upon generation, the file is optionally opened for operator review via `rundll32 url.dll,FileProtocolHandler` with zero command prompt window flashing.
+
+### 27. Zero-Collision Sequential Toolbar & Dropdown Menu Standard
+* **The Core Rule**: Never allow horizontal toolbars to overlap, clip, or collide text when the application window is resized or operated across diverse display resolutions. Layouts must maintain strict breathing room and visual clarity under all operating conditions.
+* **1. Dropdown Menu Grouping for Multi-Option Actions (`ui.menu_button`)**:
+  - Loose horizontal buttons for templates, document presets, and view filters rapidly exhaust toolbar pixel budgets on smaller displays.
+  - Standard: Group auxiliary presets into compact, intuitive dropdown menus (e.g. `[ Templates v ]`). This saves over 350 horizontal pixels and keeps primary action buttons (`[+] New`, `[O] Open`, `[S] Save`, `[PDF] Export`) immediately accessible.
+* **2. Sequential Left-to-Right Hierarchy (No Opposing Float Collisions)**:
+  - Do not mix free-floating left-to-right controls with right-to-left layout containers on the same horizontal plane if total widget widths approach viewport constraints.
+  - Value increment and decrement selectors (such as font scaling: `Font: [ - ] 14pt [ + ]`) must be arranged in a tight sequential group without floating into neighboring action zones.
+* **3. Concise, Humanized Window Title Headers**:
+  - Keep application title bars and top banner labels strictly under 75 characters (e.g. `[ RQL ]  RQL PDFMerge™ v1.0 | Universal Document Assembler & Legal Stamping Engine`). This reserves a minimum of 300px of negative space for system action buttons (`[Settings]`, `[?] User Guide`, `[Output Folder]`).
+
+### 28. Enforced Cold-Boot 120% DPI Scale & Auto-Viewport Budgeting Standard
+* **The Core Rule**: Professional business software must be effortlessly readable from the very first frame on modern displays without causing horizontal toolbar clipping or button crowding on standard laptop screens (1366×768 and 1080p).
+* **1. Cold-Boot 120% DPI Scale Enforcement (`pixels_per_point = 1.20`)**:
+  - While 1.0 scale is too small and 1.25 scale can crowd toolbars on compact laptops, 120% (`1.20`) provides the optimal balance of crisp typography, comfortable touch/click targets, and generous breathing room.
+  - Standard: Call `ctx.set_pixels_per_point(1.20)` at application startup in `new()` and maintain state synchronization in `update()`. In-app runtime magnification switching is governed by Method 31.
+* **2. Standardized Viewport Dimensions & Minimum Constraints**:
+  - Default Window Inner Size: Budgeted at `1240.0 x 780.0` logical points (which renders comfortably as `1488 × 936` physical pixels at 1.20x scale), providing generous room for dual panes, inspector sidebars, and data tables.
+  - Minimum Clamped Viewport: Strictly constrained with `with_min_inner_size([960.0, 600.0])` to prevent layout collapse, text truncation, or button clipping if the operator reduces window size.
+* **3. Horizontal Toolbar Pixel Budgeting (<650pt)**:
+  - Primary toolbar actions must be budgeted strictly under 650 logical points, guaranteeing at least 200 points of free breathing space on any monitor before reaching the right-hand utility cluster. Content text wrapping is governed by Method 30.
+
+### 29. Inbuilt Real-Time Auto-Saving System & Crash-Resilient State Recovery Standard (Universal Workstation Fleet Standard)
+* **The Core Rule**: Never rely solely on manual user saves (`Ctrl+S`). Professional productivity workstations across all 54 Titans must continuously protect operator data against unexpected power failure, accidental application exit, or hardware crashes through debounced real-time disk auto-saving and volatile journaling.
+* **1. Debounced Periodic Disk Auto-Save**:
+  - Whenever an active document or workspace file is opened from disk, modifications are automatically committed to the file after a 2-second user idle pause (or every 10 seconds during continuous typing).
+  - Atomic Write Invariant: To prevent corrupted or truncated files if power cuts mid-save, changes are written to a temporary peer file (`.tmp`) and atomically swapped via OS rename (`std::fs::rename`).
+* **2. Continuous Emergency Draft Journaling**:
+  - For untitled, newly created, or unsaved documents, the application continuously streams the current workspace state to an emergency crash-recovery journal (`autosave_draft.md` / `autosave_draft.dat` / `state.json`) inside `%LOCALAPPDATA%\Programs\<TitanName>\` (or `%APPDATA%\<TitanName>\`).
+  - Cold-Boot Auto-Recovery: Upon launch, the workstation seamlessly restores the last active session, text buffers, and settings without data loss.
+* **3. Non-Intrusive Status & Toggle Controls**:
+  - Status Bar Durability Indicator: A clean visual indicator (e.g., `● Auto-saved at HH:MM:SS` in emerald green when synced; `● Unsaved (saving in 2s...)` in warm amber during active keystrokes) provides instant psychological peace of mind.
+  - Operator Toggle Control: Provides a clean 1-click `[✓ Auto-Save: ON]` / `[ Auto-Save: OFF ]` toggle button directly on the primary toolbar and inside Settings, allowing operators to disable or customize auto-save intervals if manual file version control is desired.
+* **4. Portfolio-Wide Enforcement**:
+  - Mandatory across all 54 Titans: text editors, document mergers, tabular calculators, retail registers, and ledger systems must strictly implement real-time auto-saving and atomic journaling.
+
+### 30. Automatic Text Wrapping & Responsive Content Reflow Standard (Zero Text Clipping Invariant)
+* **The Core Rule**: Content, headings, and preview panes must adapt fluidly to any pane width or window geometry without ever clipping or truncating text at the viewport edge.
+* **1. Universal Preview & Content Engine Wrapping**:
+  - The preview and content renderers must explicitly initialize container wrap mode:
+    `ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap);`
+  - This ensures all child text components automatically inherit fluid word wrapping rather than extending past the visible boundary.
+* **2. Explicit Heading & Paragraph `.wrap()` Enforcement**:
+  - Every heading, body paragraph, list item, and blockquote label must explicitly invoke `.wrap()`:
+    `ui.label(RichText::new("...").wrap());`
+  - Prevents single long words, URLs, or hyphenated terms from forcing horizontal overflow.
+* **3. Tuned Heading 1 Scale (18.5pt Standard)**:
+  - Heading 1 typography is calibrated to a comfortable, balanced 18.5pt (rather than oversized 24pt+ fonts that force awkward single-character wraps).
+  - Headings wrap cleanly onto subsequent lines if the pane is narrow and NEVER get cut off or truncated.
+* **4. Bounded Horizontal Containers for Code & Tables**:
+  - Prose and documentation reflow naturally across lines, while fixed-width elements (syntax-highlighted code blocks, tabular grids) are isolated inside distinct horizontally scrollable card frames (`ScrollArea::horizontal()`), guaranteeing zero horizontal layout distortion across the application.
+
+### 31. Interactive 1-Click Display Scale Switcher Standard (In-App Multi-Scale Control & Persistence)
+* **The Core Rule**: Operators must possess immediate, 1-click visual control over application magnification directly within the UI without needing to restart the software or adjust Windows system display scaling.
+* **1. 5-Option Display Scale Switcher Strip in Settings**:
+  - Inside `[ Settings & History ]` (or preferences modal), provide an interactive scale selector strip:
+    `Display UI Scale:  [ 100% ]  [ 110% ]  [ 120% Standard ]  [ 125% ]  [ 135% ]`
+  - Each scale button renders as a clean selectable pill with clear visual active-state feedback.
+* **2. Instant Live Runtime Re-Scaling**:
+  - Clicking any scale pill immediately executes `ctx.set_pixels_per_point(scale)` for instant visual feedback.
+  - The UI dynamically reflows all fonts, buttons, paddings, and card layouts in real time without screen flicker or process restart.
+* **3. Automatic Local State Persistence (Method 18 / Method 29 Alignment)**:
+  - The chosen scale factor is atomically written to `%APPDATA%\RehanQuantLab\<TitanName>\state.json` via Method 18 and debounced auto-save (Method 29).
+  - On the next cold boot, the application reads `state.json` and automatically restores the operator's preferred magnification.
+* **4. Gold Standard Visual Designation**:
+  - The `[ 120% Standard ]` pill is prominently labeled and highlighted in emerald or bold contrast, denoting the lab's calibrated gold standard for optimal legibility, comfortable touch targets, and generous toolbar breathing space.
 
 ---
 
@@ -754,9 +890,8 @@ Every subsequent Titan in the 54-product sovereign roster builds directly on the
      - **Titan 13 (PriceTag)**: Automatically persists Store Branding, Currency Symbol (₹ / $ / €), and Barcode Label Layout Presets (e.g. Avery 24-up).
      - **Titan 07 (QRStudio)**: Automatically persists Primary Shop UPI VPA, Merchant Name, Center Brand Logos, and Countertop Stand Dimensions.
      - **Titan 15 (CSVFormat)**: Automatically persists Column Cleaning Regex Rules, Deduplication Keys, and Export Delimiter Preferences.
-     - **Titan 16 (MarkdownPad)**: Automatically persists Editor Themes, Recent Draft Histories, Typography Scales, and Custom CSS Templates.
-     - **Titan 17 (PDFMerge)**: Automatically persists Legal Bates Prefixes (`CASE-2026-`), Default Header/Footer Numbering, Vector QR Stamp Coordinates, and Watermark Opacities.
-     - **Titan 18 (TaxLedger)**: Automatically persists Active Financial Year (FY 2026-27), Default CA Audit Export Destination, Enterprise GSTIN, and Custom Date Filtering Presets.
+     - **Titan 16 (PDFMerge)**: Automatically persists Ingestion Queues, Page Rotations, Stamp Templates, and Output Destination History.
+     - **Titan 17 (TaxLedger)**: Automatically persists Financial Year selections, GSTIN profiles, custom currency conversion rates, and ledger accounts.
 
    * **🔒 How We Implement It (100% Offline, Zero Cloud)**:
      1. **Local-Only Encrypted/JSON Storage**:
@@ -784,7 +919,7 @@ Every subsequent Titan in the 54-product sovereign roster builds directly on the
 | **01** | **RQL DocumentShield™** | Permanently burns redacted text into raw pixels and scrubs forensic metadata so confidential PDFs can never leak. | Adobe Acrobat Pro<br>($23.99/mo ≈ $288/yr) | **$179 (₹4,999)**<br>*(8.5 mo anchor)* | **+$685** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 | **02** | **RQL WhisperVault™** | Transcribes audio meetings and dictations 100% locally on CPU with millisecond Word SRT sync and zero cloud eavesdropping. | Otter.ai Pro<br>($16.99/mo ≈ $204/yr) | **$149**<br>*(8.5 mo anchor)* | **+$463** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 | **03** | **RQL RetailPOS™** | Dispatches 80mm thermal receipts and balances shift cash drawers in under 10ms with zero internet and zero monthly fees. | Square Retail Plus<br>($20.00/mo ≈ $240/yr) | **$169 (₹13,999)**<br>*(8.5 mo anchor)* | **+$551** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
-| **04** | **RQL StoreChain™** | Synchronizes up to 5 checkout tills over an offline local router mesh with automatic failover if the shop internet drops. | Cloud Multi-Till SaaS<br>($35.00/mo ≈ $420/yr) | **$299 (₹24,999)**<br>*(8.5 mo anchor)* | **+$961** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
+| **04** | **RQL StoreChain™** | Synchronizes up to 5 checkout tills over an offline local router mesh with dynamic price QR settlement and automatic failover if the shop internet drops. | Cloud Multi-Till SaaS<br>($35.00/mo ≈ $420/yr) | **$299 (₹24,999)**<br>*(8.5 mo anchor)* | **+$961** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 | **05** | **RQL Conduit™** | Bonds Wi-Fi, Ethernet, and 5G cellular into an unbreakable high-speed internet connection without monthly Speedify bills. | Speedify Pro / Teams<br>($14.99/mo ≈ $180/yr) | **$129**<br>*(8.5 mo anchor)* | **+$411** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 
 ---
@@ -804,8 +939,7 @@ Every subsequent Titan in the 54-product sovereign roster builds directly on the
 | **12** | **RQL DPDPShield™** | Destructively scrubs Aadhaar, PAN, and banking identifiers from client PDFs with 1-click DPDP Act 2023 court-admissible audit certification. | Adobe Acrobat / Cloud Redact<br>(₹24,000/yr) | **₹4,999 / $79**<br>*(8.0 mo anchor)* | **+₹58,000** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 | **13** | **RQL PriceTag™** | Designs and batch-prints retail supermarket shelf labels and barcode stickers in seconds for laser and thermal printers. | Labeljoy Retail Cloud<br>($15.00/mo ≈ $180/yr) | **$79 (₹6,500)**<br>*(8.5 mo anchor)* | **+$461** | **LIVE ON GUMROAD 🟢 (Swiss 4-Page Standard)** |
 | **14** | **RQL InvoiceGen™** | Generates court-admissible vector PDF tax invoices & quotations with automated GST/VAT and dynamic UPI payment QR in 2 seconds offline. | FreshBooks / Zoho Invoice<br>($15.00/mo ≈ $180/yr) | **$89 (₹7,499)**<br>*(8.0 mo anchor)* | **+$451** | **LIVE ON GUMROAD 🟢 (WDSI Cleared: e8b314fe • Swiss 4-Page)** |
-| **15** | **RQL CSVFormat** | Deduplicates, sanitizes, and splits million-row CSV files in seconds without Excel freezing or cloud upload limits. | Gigasheet Cloud<br>($12.00/mo  $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
-| **16** | **RQL MarkdownPad** | Delivers a distraction-free, instantaneous offline Markdown desk with real-time vector preview and zero cloud syncing interruptions. | Ulysses / Bear Pro<br>($6.00/mo  $72/yr) | **$49**<br>*(8.5 mo anchor)* | **+$167** | Queued |
+| **15** | **RQL CSVFormat™** | Deduplicates, sanitizes, and splits million-row CSV files in seconds without Excel freezing or cloud upload limits. | Gigasheet Cloud<br>($12.00/mo ≈ $144/yr) | **$89 (₹6,999)**<br>*(8.5 mo anchor)* | **+$343** | **LIVE ON GUMROAD 🟢 (WDSI Cleared: f639f750 • Swiss 4-Page)** |
 
 ---
 
@@ -815,17 +949,17 @@ Every subsequent Titan in the 54-product sovereign roster builds directly on the
 
 | Step | RQL Titan Name | Core Capability (The Harper/Presenton Invariant) | Direct Competitor & Rent | RQL Sovereign Price (89 Mo Anchor) | Customer 3-Yr Savings | Status |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: |
-| **17** | **RQL PDFMerge™ (Powerhouse Edition)** | Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent. | Smallpdf & Adobe Acrobat<br>($20.00/mo ≈ $240/yr) | **$119 flat (₹9,999)**<br>*(6.0 mo anchor)* | **+$600** | **STAGED (21 Features & Pentagon QRStudio Locked) 🟡** |
-| **18** | **RQL TaxLedger™ (Powerhouse Edition)** | Compiles Indian Financial Year sales, UPI payments, and GST breakdowns into sequential, audit-ready PDF ledgers offline with zero cloud accounting subscriptions. | Tally Prime & Zoho Books<br>($25.00/mo ≈ $300/yr) | **$119 flat (₹9,999)**<br>*(4.8 mo anchor)* | **+$770** | **STAGED (15 Features & 44AD Presumptive Engine) 🟡** |
-| **19** | **RQL FileShredder** | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. | Blancco Cloud Eraser<br>($8.00/mo ≈ $96/yr) | **$59**<br>*(8.0 mo anchor)* | **+$229** | Queued |
-| **20** | **RQL ClipVault** | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. | Paste App Cloud Sync<br>($4.00/mo ≈ $48/yr) | **$39**<br>*(8.5 mo anchor)* | **+$105** | Queued |
-| **21** | **RQL ImageBatch** | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. | TinyPNG / BulkResize<br>($9.00/mo ≈ $108/yr) | **$69**<br>*(8.5 mo anchor)* | **+$255** | Queued |
-| **22** | **RQL AudioExtract** | Rips pristine lossless audio tracks from large video files in one click without launching heavy editing software. | CloudConvert Pro<br>($7.00/mo ≈ $84/yr) | **$49**<br>*(8.5 mo anchor)* | **+$203** | Queued |
-| **23** | **RQL SubtitleSync** | Adjusts video subtitle timing with millisecond offset shifting and converts SRT/VTT formats offline without monthly SaaS subscriptions. | HappyScribe / Subly<br>($12.00/mo ≈ $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
-| **24** | **RQL SpaceMap** | Visualizes disk storage with interactive high-speed treemaps to expose hidden gigabyte bloat and solve "Disk Full" errors instantly. | TreeSize / CleanMyPC<br>($5.00/mo ≈ $60/yr) | **$39**<br>*(8.5 mo anchor)* | **+$141** | Queued |
-| **25** | **RQL DocProtect** | Applies standard industry AES-256 permission encryption, print lockdown, and anti-copy restrictions to sensitive client PDF dossiers offline. | Adobe Acrobat Pro<br>($24.00/mo ≈ $288/yr) | **$79**<br>*(8.5 mo anchor)* | **+$301** | Queued |
-| **26** | **RQL CashDrawer** | Reconciles opening cash, shift payouts, and closing registers to stop register shortages and counter employee theft. | POS Cash Control SaaS<br>($12.00/mo ≈ $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
-| **27** | **RQL ReceiptPrinter** | Tests and visualizes 58mm/80mm USB thermal receipt formatting directly against ESC/POS hardware with zero broken alignment. | Hardware Test Suites<br>($8.00/mo ≈ $96/yr) | **$59**<br>*(8.5 mo anchor)* | **+$229** | Queued |
+| **16** | **RQL PDFMerge™ (Powerhouse Edition)** | Assembles, converts, compresses, and stamps 21-format document dossiers with embedded vector QR verification offline in seconds with zero SaaS rent. | Smallpdf & Adobe Acrobat<br>($20.00/mo ≈ $240/yr) | **$119 flat (₹9,999)**<br>*(6.0 mo anchor)* | **+$600** | **LIVE ON GUMROAD 🟢 (WDSI Cleared: 25be22ae • Swiss 4-Page)** |
+| **17** | **RQL TaxLedger™ (Powerhouse Edition)** | Offline 20-Feature Indian FY Accounting Workstation, GSTR-1 Portal JSON Exporter, 44ADA Engine & MCA Audit Trail. | Tally Prime & Zoho Books<br>($25.00/mo ≈ $300/yr) | **$119 flat (₹9,999)**<br>*(4.8 mo anchor)* | **+$770** | **STAGED (20 Master Features & GSTR-1 JSON Engine) 🟡** |
+| **18** | **RQL FileShredder** | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. | Blancco Cloud Eraser<br>($8.00/mo ≈ $96/yr) | **$59**<br>*(8.0 mo anchor)* | **+$229** | Queued |
+| **19** | **RQL ClipVault** | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. | Paste App Cloud Sync<br>($4.00/mo ≈ $48/yr) | **$39**<br>*(8.5 mo anchor)* | **+$105** | Queued |
+| **20** | **RQL ImageBatch** | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. | TinyPNG / BulkResize<br>($9.00/mo ≈ $108/yr) | **$69**<br>*(8.5 mo anchor)* | **+$255** | Queued |
+| **21** | **RQL AudioExtract** | Rips pristine lossless audio tracks from large video files in one click without launching heavy editing software. | CloudConvert Pro<br>($7.00/mo ≈ $84/yr) | **$49**<br>*(8.5 mo anchor)* | **+$203** | Queued |
+| **22** | **RQL SubtitleSync** | Adjusts video subtitle timing with millisecond offset shifting and converts SRT/VTT formats offline without monthly SaaS subscriptions. | HappyScribe / Subly<br>($12.00/mo ≈ $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
+| **23** | **RQL SpaceMap** | Visualizes disk storage with interactive high-speed treemaps to expose hidden gigabyte bloat and solve "Disk Full" errors instantly. | TreeSize / CleanMyPC<br>($5.00/mo ≈ $60/yr) | **$39**<br>*(8.5 mo anchor)* | **+$141** | Queued |
+| **24** | **RQL DocProtect** | Applies standard industry AES-256 permission encryption, print lockdown, and anti-copy restrictions to sensitive client PDF dossiers offline. | Adobe Acrobat Pro<br>($24.00/mo ≈ $288/yr) | **$79**<br>*(8.5 mo anchor)* | **+$301** | Queued |
+| **25** | **RQL CashDrawer** | Reconciles opening cash, shift payouts, and closing registers to stop register shortages and counter employee theft. | POS Cash Control SaaS<br>($12.00/mo ≈ $144/yr) | **$89**<br>*(8.5 mo anchor)* | **+$343** | Queued |
+| **26** | **RQL ReceiptPrinter** | Tests and visualizes 58mm/80mm USB thermal receipt formatting directly against ESC/POS hardware with zero broken alignment. | Hardware Test Suites<br>($8.00/mo ≈ $96/yr) | **$59**<br>*(8.5 mo anchor)* | **+$229** | Queued |
 
 ---
 
@@ -835,8 +969,8 @@ Every subsequent Titan in the 54-product sovereign roster builds directly on the
 
 | Step | RQL Titan Name | Core Capability (The Harper/Presenton Invariant) | Direct Competitor & Rent | RQL Sovereign Price (8–9 Mo Anchor) | Customer 3-Yr Savings | Status |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: |
-| **28** | **RQL DiskClean** | Scans hard drives with multi-threaded byte hashing to purge duplicate files and hidden system junk without risking personal documents. | CCleaner Pro Cloud<br>($5.00/mo  $60/yr) | **$49**<br>*(8.5 mo anchor)* | **+$131** | Queued |
-| **29** | **RQL ArchiveMaster** | Compresses and encrypts files into high-speed ZIP, 7z, and TAR archives with standard industry AES-256 and zero nag popups. | WinZip Pro Subscription<br>($4.50/mo  $54/yr) | **$39**<br>*(8.5 mo anchor)* | **+$123** | Queued |
+| **27** | **RQL DiskClean** | Scans hard drives with multi-threaded byte hashing to purge duplicate files and hidden system junk without risking personal documents. | CCleaner Pro Cloud<br>($5.00/mo  $60/yr) | **$49**<br>*(8.5 mo anchor)* | **+$131** | Queued |
+| **28** | **RQL ArchiveMaster** | Compresses and encrypts files into high-speed ZIP, 7z, and TAR archives with standard industry AES-256 and zero nag popups. | WinZip Pro Subscription<br>($4.50/mo  $54/yr) | **$39**<br>*(8.5 mo anchor)* | **+$123** | Queued |
 | **30** | **RQL SocketShield** | Inspects raw TCP/UDP socket payloads and flags anomalous outbound telemetry at the NDIS packet filter boundary. | Wireshark Enterprise / Sentinel<br>($10.00/mo  $120/yr) | **$79**<br>*(8.5 mo anchor)* | **+$281** | Queued |
 | **31** | **RQL PingPulse** | Monitors multi-endpoint latency with audible packet drop alarms to diagnose unstable Wi-Fi and ISP lag during trading or gaming. | PingPlotter Pro<br>($9.00/mo  $108/yr) | **$69**<br>*(8.5 mo anchor)* | **+$255** | Queued |
 | **32** | **RQL FolderSync** | Mirrors directories to external backup drives with delta-only copying and auto-sync triggers without recurring cloud storage fees. | GoodSync Business<br>($7.00/mo  $84/yr) | **$59**<br>*(8.5 mo anchor)* | **+$193** | Queued |

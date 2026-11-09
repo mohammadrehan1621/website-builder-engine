@@ -34,7 +34,8 @@
     'gumroad-textdiff': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm',
     'gumroad-renamer': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXI=',
     'gumroad-tageditor': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvcg==',
-    'gumroad-fontviewer': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXI='
+    'gumroad-fontviewer': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXI=',
+    'gumroad-pdfmerge': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl'
   };
 
   function hydrateString(b64) {
