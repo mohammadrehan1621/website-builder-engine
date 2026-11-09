@@ -8,7 +8,11 @@ Allow: /
 Disallow: /vault.html
 Disallow: /vault
 Disallow: /platform/
-Disallow: /downloads/
+Disallow: /404.html
+Disallow: /downloads/*.zip
+Disallow: /downloads/*.exe
+Disallow: /downloads/*.tar.gz
+Allow: /downloads/*.pdf
 
 # Sitemap Index Declaration
 Sitemap: https://rehanquantlab.com/sitemap.xml

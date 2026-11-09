@@ -242,6 +242,9 @@ impl SeoEngine {
         let mut xml = String::from("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
 
         for file in html_files {
+            if file == "404.html" {
+                continue;
+            }
             let (route, priority, changefreq) = match file.as_str() {
                 "index.html" => ("", "1.00", "weekly"),
                 "store.html" => ("store.html", "1.00", "daily"),
@@ -299,7 +302,11 @@ impl SeoEngine {
              Disallow: /vault.html\n\
              Disallow: /vault\n\
              Disallow: /platform/\n\
-             Disallow: /downloads/\n\n\
+             Disallow: /404.html\n\
+             Disallow: /downloads/*.zip\n\
+             Disallow: /downloads/*.exe\n\
+             Disallow: /downloads/*.tar.gz\n\
+             Allow: /downloads/*.pdf\n\n\
              # Sitemap Index Declaration\n\
              Sitemap: https://{}/sitemap.xml\n\n\
              # Friendly Bot Optimizations\n\
