@@ -1,0 +1,1 @@
+﻿/* Rehan Quant Lab - Founder Vault Deactivated */

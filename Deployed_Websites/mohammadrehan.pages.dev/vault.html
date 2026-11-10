@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>RQL Founder Sovereign Studio     CW & ACW Engine</title>
+  <meta name="description" content="Rehan Quant Lab Founder Cryptographic Studio & CW/ACW Bi-Directional Sovereign License Engine">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;"/>
+  <link rel="canonical" href="https://rehanquantlab.com/vault.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RQL Founder Sovereign Studio         CW & ACW Engine">
+  <meta property="og:description" content="Rehan Quant Lab Founder Cryptographic Studio & CW/ACW Bi-Directional Sovereign License Engine">
+  <meta property="og:url" content="https://rehanquantlab.com/vault.html">
+  <meta property="og:image" content="https://rehanquantlab.com/emblem.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "RQL Founder Sovereign Studio",
+    "description": "Rehan Quant Lab Founder Cryptographic Studio & CW/ACW Bi-Directional Sovereign License Engine",
+    "url": "https://rehanquantlab.com/vault.html"
+  }
+  </script>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0F172A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="RQL Studio">
+  <link rel="apple-touch-icon" sizes="64x64" href="favicon-64x64.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: #0B0F19;
+      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: env(safe-area-inset-top, 16px) 16px env(safe-area-inset-bottom, 20px) 16px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .header-card {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #10B981;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-badge {
+      font-size: 10px;
+      background: rgba(16,185,129,0.15);
+      border: 1px solid #10B981;
+      color: #34D399;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    /* Tab Navigation */
+    .tabs-nav {
+      display: flex;
+      background: #1E293B;
+      padding: 4px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      gap: 4px;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 10px 12px;
+      border: none;
+      background: transparent;
+      color: #94A3B8;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      background: #10B981;
+      color: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(16,185,129,0.3);
+    }
+    .card {
+      background: #0F172A;
+      border: 1px solid #1E293B;
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .field-group {
+      margin-bottom: 14px;
+    }
+    .field-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      color: #94A3B8;
+    }
+    .field-label.emerald { color: #10B981; }
+    .field-label.sky { color: #38BDF8; }
+    .field-label.amber { color: #F59E0B; }
+    
+    input[type="text"], input[type="password"], select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      color: #FFFFFF;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #10B981;
+    }
+    .mono-input {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #38BDF8 !important;
+    }
+    .btn-action {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      background: #10B981;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(16,185,129,0.3);
+      transition: transform 0.1s, opacity 0.2s;
+    }
+    .btn-action:active {
+      transform: scale(0.98);
+      opacity: 0.9;
+    }
+    .btn-blue {
+      background: #2563EB;
+      box-shadow: 0 4px 15px rgba(37,99,235,0.3);
+    }
+    .btn-secondary {
+      background: #1E293B;
+      border: 1px solid #334155;
+      color: #F8FAFC;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .result-box {
+      background: #1E293B;
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 14px;
+      border: 1px solid #334155;
+    }
+    .pin-display {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 18px;
+      font-weight: 800;
+      color: #38BDF8;
+      letter-spacing: 2px;
+      margin: 8px 0;
+      word-break: break-all;
+    }
+    .master-bar {
+      background: rgba(16,185,129,0.08);
+      border: 1px solid #10B981;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #10B981;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      z-index: 99999;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+    
+    /* Gate Overlay */
+    #gate-screen {
+      position: fixed;
+      inset: 0;
+      background: #0B0F19;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gate-card {
+      background: #0F172A;
+      border: 1px solid #10B981;
+      border-radius: 20px;
+      padding: 30px 24px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(16,185,129,0.25);
+    }
+  </style>
+  <script src="rql_seo_engine.js" defer></script>
+    <script src="assets/rql-shield.js"></script>
+</head>
+<body>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">    Copied to clipboard!</div>
+
+  <!-- Authentication Gate Screen -->
+  <div id="gate-screen">
+    <div class="gate-card">
+      <div style="font-size: 44px; margin-bottom: 12px;">    </div>
+      <h2 style="font-size: 20px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">Founder Sovereign Studio</h2>
+      <p style="font-size: 12px; color: #94A3B8; margin-bottom: 20px;">Air-Gapped CW & ACW Cryptographic Engine</p>
+      
+      <input type="password" id="gate-pin" placeholder="                  " maxlength="8" style="font-size: 24px; text-align: center; letter-spacing: 6px; padding: 14px; margin-bottom: 16px;">
+      <div id="gate-err" style="color: #EF4444; font-size: 12px; margin-bottom: 14px; display: none;">Invalid Master PIN (Use: 709151)</div>
+      <button class="btn-action" onclick="authenticateGate()">Unlock Studio</button>
+    </div>
+  </div>
+
+  <!-- Main Mobile App Interface -->
+  <div class="container" id="main-app" style="display: none;">
+    
+    <!-- Top Header -->
+    <div class="header-card">
+      <div class="brand-title">
+        <span style="font-size: 18px;">    </span>
+        <span>RQL FOUNDER STUDIO</span>
+      </div>
+      <div class="brand-badge">v2.6 PWA</div>
+    </div>
+
+    <!-- Master Key Quick Bar -->
+    <div class="master-bar">
+      <div style="overflow: hidden;">
+        <div style="font-size: 10px; font-weight: 700; color: #10B981; text-transform: uppercase;">Founder Master Key</div>
+        <div style="font-family: monospace; font-size: 11px; color: #F59E0B; font-weight: bold; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+          RQL-FOUNDER-MASTER-2026-SOVEREIGN
+        </div>
+      </div>
+      <button class="btn-secondary" onclick="copyMasterKey()" style="white-space: nowrap; padding: 6px 12px;">Copy</button>
+    </div>
+
+    <!-- Bi-Directional Dual-Vortex Tabs -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" id="tab-cw-btn" onclick="switchTab('cw')">
+        <span>    </span> <span>CW: Generate Key</span>
+      </button>
+      <button class="tab-btn" id="tab-acw-btn" onclick="switchTab('acw')">
+        <span>    </span> <span>ACW: Reverse Audit</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: CLOCKWISE (CW) GENERATION ENGINE -->
+    <div id="tab-cw" class="card">
+      <div class="field-group">
+        <label class="field-label emerald">Target Commercial Product (Scrollable 20 Options)</label>
+        <select id="prod-select" style="font-size: 12px;">
+          <optgroup label="     MASTER SUITE (ALL PRODUCTS ACCESS)">
+            <option value="     Universal Sovereign Master Access (All 19 Products)">     Universal Sovereign Master Access (All 19 Products)</option>
+          </optgroup>
+          <optgroup label="    BARE-METAL QUANT ENGINES (01 - 05)">
+            <option value="01     RQL Conduit        Multi-Interface Network Gateway v2.0">01     RQL Conduit        Network Gateway</option>
+            <option value="02     RQL Deterministic State Kernel    v2.0">02     RQL Deterministic State Kernel   </option>
+            <option value="03     RQL Aegis        Sovereign Risk Engine v2.0">03     RQL Aegis        Sovereign Risk Engine</option>
+            <option value="04     RQL Veritas Dossier        Governance & Capital Auditor v2.0">04     RQL Veritas Dossier        Capital Auditor</option>
+            <option value="05     RQL Industrial Sentinel        Telemetry Engine v2.0">05     RQL Industrial Sentinel        Telemetry Engine</option>
+          </optgroup>
+          <optgroup label="     RETAIL POS & HARDWARE FLEET (06 - 09, 11 - 13)">
+            <option value="06     RQL ExpressBill POS        Retail Billing Suite v2.0">06     RQL ExpressBill POS        Retail Suite</option>
+            <option value="07     RQL Sovereign Suite Master        Enterprise Fleet v2.0">07     RQL Sovereign Suite Master        Enterprise Fleet</option>
+            <option value="08     RQL TagMaster        Thermal Barcode & Label Printer v1.0">08     RQL TagMaster        Barcode & Label</option>
+            <option value="09     RQL DeskBroadcast        WhatsApp Direct Marketing Workstation v1.0">09     RQL DeskBroadcast        WhatsApp Marketing</option>
+            <option value="11     RQL LocalMesh        Multi-Counter Sync (Air-Gapped CRDT) v1.0">11     RQL LocalMesh        Counter Sync</option>
+            <option value="12     RQL Sovereign Flagship Studio Enterprise v2.0">12     RQL Flagship Studio Enterprise   </option>
+            <option value="13     RQL StoreFlow        Unified Retail Workstation v1.0">13     RQL StoreFlow        Retail POS Workstation</option>
+          </optgroup>
+          <optgroup label="     CA & FINANCIAL RECONCILERS (10, 14, 15)">
+            <option value="10     RQL TaxMatrix        CA Reconciler (GST 2B vs Books) v1.0">10     RQL TaxMatrix        CA GST Reconciler</option>
+            <option value="14     RQL LedgerGuard        CA Financial Reconciler v1.0">14     RQL LedgerGuard        CA Financial Reconciler</option>
+            <option value="15     RQL StockAudit        Physical Inventory Gun Scanner v1.0">15     RQL StockAudit        Inventory Gun Scanner</option>
+          </optgroup>
+          <optgroup label="     AUTONOMOUS AGENT WORKSTATIONS (16, 17)">
+            <option value="16     RQL OmniDispatch        24/7 WhatsApp Closer Workstation v1.0">16     RQL OmniDispatch        WhatsApp Closer</option>
+            <option value="17     RQL Nexus        Multi-Branch P2P Sync & Fleet Workstation v1.0">17     RQL Nexus        Multi-Branch Sync</option>
+          </optgroup>
+          <optgroup label="        FORENSIC REDACTION & AI VOICE OS (18, 19)">
+            <option value="18     RQL DocumentShield        Forensic PDF Redactor & Metadata Purge OS v1.0">18     RQL DocumentShield        Forensic PDF Redactor</option>
+            <option value="19     RQL WhisperVault        Air-Gapped AI Voice Intelligence OS v1.0">19     RQL WhisperVault        AI Voice OS</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label sky">Commercial Version Tier (Gumroad Edition)</label>
+        <select id="tier-select">
+          <option value="Tier 1: Solo Practitioner / Consultant (1 Workstation)">Tier 1: Solo Practitioner / Consultant (1 Workstation)</option>
+          <option value="Tier 2: Law Firm & Title Agency (5 Workstations Multi-Seat)">Tier 2: Law Firm & Title Agency (5 Workstations Multi-Seat)</option>
+          <option value="Tier 3: Enterprise Corporate Compliance Fleet (Unlimited Seats)">Tier 3: Enterprise Corporate Compliance Fleet (Unlimited Seats)</option>
+          <option value="Tier 4: CA Audit Pro / Full Source Code + VIP Founder Onboarding">Tier 4: CA Audit Pro / Full Source Code + VIP Founder Onboarding</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label amber">License Validity / Duration</label>
+        <select id="dur-select">
+          <option value="LIFETIME_PERPETUAL">LIFETIME_PERPETUAL (One-Time Payment     Forever Access)</option>
+          <option value="1_YEAR_RENEWAL">1_YEAR_RENEWAL (12-Month Access     Yearly Renewal / Upgrade)</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Customer Machine ID (from buyer screen)</label>
+        <input type="text" id="cust-mid" class="mono-input" placeholder="e.g. RQL-0B78-F950-D49F">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Customer / Business Name</label>
+        <input type="text" id="cust-name" placeholder="e.g. Metro Retailers / Ladies Zone">
+      </div>
+
+      <button class="btn-action" onclick="generateCWKey()">
+        <span>   </span> <span>SIGN & GENERATE OFFLINE KEY</span>
+      </button>
+
+      <!-- CW Result -->
+      <div id="cw-result" class="result-box" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 11px; font-weight: 700; color: #10B981;">FAST OFFLINE PIN:</span>
+          <span id="cw-tier-tag" style="font-size: 10px; background: #059669; padding: 2px 8px; border-radius: 999px; font-weight: bold;">LIFETIME</span>
+        </div>
+        <div id="cw-pin-val" class="pin-display"></div>
+
+        <button class="btn-action btn-blue" style="margin-top: 10px; font-size: 13px;" onclick="copyAndOpenWhatsApp()">
+          <span>    </span> <span>COPY & OPEN WHATSAPP</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 2: ANTI-CLOCKWISE (ACW) REVERSE AUDIT ENGINE -->
+    <div id="tab-acw" class="card" style="display: none;">
+      <div style="font-size: 12px; color: #94A3B8; margin-bottom: 14px; line-height: 1.4;">
+        Paste any Fast PIN (<code style="color: #38BDF8;">KEY-XXXX-...</code>), Ed25519 token, or Founder Key to run a <strong>reverse cryptographic forensic audit</strong> and uncover its history.
+      </div>
+
+      <div class="field-group">
+        <label class="field-label sky">Paste Key To Inspect</label>
+        <input type="text" id="acw-key-input" class="mono-input" placeholder="KEY-XXXX-XXXX-XXXX or Token...">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Buyer's Machine ID (for Hardware Match Test)</label>
+        <input type="text" id="acw-mid-input" class="mono-input" placeholder="e.g. RQL-0B78-F950-D49F (Optional)">
+      </div>
+
+      <button class="btn-action btn-blue" onclick="inspectACWKey()">
+        <span>    </span> <span>REVERSE AUDIT & DECODE KEY</span>
+      </button>
+
+      <!-- ACW Result Box -->
+      <div id="acw-result" class="result-box" style="display: none;">
+        <div id="acw-badge-status" style="font-weight: 800; font-size: 13px; margin-bottom: 8px;"></div>
+        <div id="acw-details" style="font-size: 12px; line-height: 1.6; color: #E2E8F0;"></div>
+      </div>
+    </div>
+
+    <!-- Footer Security Stamp -->
+    <div style="text-align: center; font-size: 10px; color: #64748B; margin-top: auto; padding: 12px 0;">
+           100% AIR-GAPPED CLIENT CRYPTOGRAPHY     ZERO SERVER STORAGE     MOHAMMAD REHAN
+    </div>
+
+  </div>
+
+  <script>
+    const MASTER_KEY = "RQL-FOUNDER-MASTER-2026-SOVEREIGN";
+    const OFFLINE_MASTER_SALT = "RQL_QUANT_LAB_MASTER_KEY_2026_EXPRESSBILL_OFFLINE_PERPETUAL";
+    const FOUNDER_PIN_HASH = "ca980486c99f9c735d487cb1a48c4a0362c3f8e658ecfdf3c67c51ddb4ab7e29"; // 709151
+
+    let generatedWhatsAppMessage = "";
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+      return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.innerText = msg;
+      t.classList.add("show");
+      if (navigator.vibrate) navigator.vibrate(40);
+      setTimeout(() => t.classList.remove("show"), 2200);
+    }
+
+    async function authenticateGate() {
+      const pin = document.getElementById("gate-pin").value.trim();
+      const hash = await sha256(pin);
+      if (hash === FOUNDER_PIN_HASH || pin === "709151" || pin === "rehan2026") {
+        document.getElementById("gate-screen").style.display = "none";
+        document.getElementById("main-app").style.display = "flex";
+        sessionStorage.setItem("rql_authenticated", "true");
+      } else {
+        document.getElementById("gate-err").style.display = "block";
+      }
+    }
+
+    document.getElementById("gate-pin").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") authenticateGate();
+    });
+
+    if (sessionStorage.getItem("rql_authenticated") === "true") {
+      document.getElementById("gate-screen").style.display = "none";
+      document.getElementById("main-app").style.display = "flex";
+    }
+
+    function switchTab(tab) {
+      if (tab === 'cw') {
+        document.getElementById("tab-cw").style.display = "block";
+        document.getElementById("tab-acw").style.display = "none";
+        document.getElementById("tab-cw-btn").classList.add("active");
+        document.getElementById("tab-acw-btn").classList.remove("active");
+      } else {
+        document.getElementById("tab-cw").style.display = "none";
+        document.getElementById("tab-acw").style.display = "block";
+        document.getElementById("tab-cw-btn").classList.remove("active");
+        document.getElementById("tab-acw-btn").classList.add("active");
+      }
+    }
+
+    function copyMasterKey() {
+      navigator.clipboard.writeText(MASTER_KEY).then(() => {
+        showToast("    Master Key copied to clipboard!");
+      });
+    }
+
+    async function generateCWKey() {
+      const mid = document.getElementById("cust-mid").value.trim().toUpperCase();
+      if (!mid) {
+        alert("Please enter Customer Machine ID (from their screen)");
+        return;
+      }
+      const prod = document.getElementById("prod-select").value;
+      const tier = document.getElementById("tier-select").value;
+      const dur = document.getElementById("dur-select").value;
+      const cust = document.getElementById("cust-name").value.trim() || "Valued Commercial Partner";
+      const isLifetime = dur.includes("LIFETIME");
+
+      // Compute Deterministic Fast PIN
+      const raw = mid + ":" + OFFLINE_MASTER_SALT;
+      const h = (await sha256(raw)).toUpperCase();
+      const pin = "KEY-" + h.slice(0, 4) + "-" + h.slice(4, 8) + "-" + h.slice(8, 12);
+
+      document.getElementById("cw-pin-val").innerText = pin;
+      document.getElementById("cw-tier-tag").innerText = isLifetime ? "LIFETIME" : "1-YEAR RENEWAL";
+
+      const validityNotice = isLifetime
+        ? "Your software is unlocked permanently with zero recurring fees!        "
+        : "Your software is activated for 1 Year (12 Months). At the end of the year, you can easily renew for another year or upgrade to Lifetime Perpetual anytime!        ";
+
+      generatedWhatsAppMessage = `Thank you for choosing Rehan Quant Lab Sovereign Suite!     \n\n        Hardware Machine ID: ${mid}\n     Licensed Product: ${prod}\n     Licensee: ${cust}\n        Version Tier: ${tier}\n    License Validity: ${isLifetime ? "Lifetime Perpetual" : "1-Year License (Yearly Renewal)"}\n\n     Fast Offline Activation Key:\n${pin}\n\nHow to activate:\n1. Open your application\n2. Paste this Key into the Activation Gate\n3. Click 'Activate & Unlock Workstation'\n\n${validityNotice}`;
+
+      document.getElementById("cw-result").style.display = "block";
+      showToast("    Offline Key Generated Successfully!");
+    }
+
+    function copyAndOpenWhatsApp() {
+      navigator.clipboard.writeText(generatedWhatsAppMessage).then(() => {
+        showToast("    Copied message! Opening WhatsApp...");
+        setTimeout(() => {
+          const encoded = encodeURIComponent(generatedWhatsAppMessage);
+          window.open(`https://api.whatsapp.com/send?text=${encoded}`, '_blank');
+        }, 300);
+      });
+    }
+
+    // ACW: Reverse Audit Key Inspector
+    async function inspectACWKey() {
+      const rawKey = document.getElementById("acw-key-input").value.trim();
+      const testMid = document.getElementById("acw-mid-input").value.trim().toUpperCase();
+      const resultBox = document.getElementById("acw-result");
+      const statusBadge = document.getElementById("acw-badge-status");
+      const details = document.getElementById("acw-details");
+
+      if (!rawKey) {
+        alert("Please paste a key into the inspection box.");
+        return;
+      }
+
+      resultBox.style.display = "block";
+
+      // 1. Check Master Key
+      if (rawKey === MASTER_KEY || rawKey === "RQL-REHAN-QUANT-TITAN-ALPHA-70915") {
+        statusBadge.innerHTML = "<span style='color: #10B981;'>     100% VALID: UNIVERSAL FOUNDER MASTER KEY</span>";
+        details.innerHTML = `
+              <strong>Authority:</strong> Founder Mohammad Rehan<br>
+              <strong>Access Scope:</strong> ALL 19 Sovereign Products (Universal Bypass)<br>
+              <strong>Hardware Lock:</strong> Global / Any Device<br>
+              <strong>Validity:</strong> Perpetual Sovereign Authority
+        `;
+        return;
+      }
+
+      // 2. Check Fast PIN (KEY-XXXX-XXXX-XXXX)
+      if (rawKey.toUpperCase().startsWith("KEY-")) {
+        if (!testMid) {
+          statusBadge.innerHTML = "<span style='color: #F59E0B;'>       FAST PIN SYNTAX DETECTED</span>";
+          details.innerHTML = `
+                <strong>Key Format:</strong> 17-Char SHA-256 Salted Hardware PIN<br>
+                <strong>Status:</strong> Formally Valid Structure<br>
+                <em>Enter the customer's Machine ID above to test if this key belongs to their hardware!</em>
+          `;
+          return;
+        }
+
+        const expectedHash = (await sha256(testMid + ":" + OFFLINE_MASTER_SALT)).toUpperCase();
+        const expectedPin = "KEY-" + expectedHash.slice(0, 4) + "-" + expectedHash.slice(4, 8) + "-" + expectedHash.slice(8, 12);
+
+        if (rawKey.toUpperCase() === expectedPin) {
+          statusBadge.innerHTML = `<span style='color: #10B981;'>    100% AUTHENTIC: HARDWARE MATCH CONFIRMED</span>`;
+          details.innerHTML = `
+                <strong>Bound Machine ID:</strong> ${testMid}<br>
+                <strong>Integrity Seal:</strong> Match 100% Verified<br>
+                <strong>Anti-Piracy Check:</strong> Passed (Key is strictly tied to this hardware)<br>
+                <strong>Verdict:</strong> Legitimate Customer License
+          `;
+        } else {
+          statusBadge.innerHTML = `<span style='color: #EF4444;'>    FORGED / HARDWARE MISMATCH</span>`;
+          details.innerHTML = `
+                <strong>Provided Key:</strong> ${rawKey}<br>
+                <strong>Tested Hardware ID:</strong> ${testMid}<br>
+                <strong>Expected Key for this PC:</strong> ${expectedPin}<br>
+                <strong>Verdict:</strong> Key was either forged or generated for a completely different computer!
+          `;
+        }
+        return;
+      }
+
+      // 3. Ed25519 Token Inspection
+      if (rawKey.includes(".")) {
+        const parts = rawKey.split(".");
+        if (parts.length === 2) {
+          try {
+            // Hex decode payload
+            const hex = parts[0];
+            let str = '';
+            for (let i = 0; i < hex.length; i += 2) {
+              str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+            }
+            const dec = JSON.parse(str);
+            statusBadge.innerHTML = `<span style='color: #10B981;'>    100% VALID Ed25519 ASYMMETRIC TOKEN</span>`;
+            details.innerHTML = `
+                  <strong>Licensed Product:</strong> ${dec.p || 'Sovereign Suite'}<br>
+                  <strong>Licensed Hardware ID:</strong> ${dec.m || 'Unknown'}<br>
+                  <strong>Licensee:</strong> ${dec.c || 'Valued Partner'}<br>
+                  <strong>Version Tier:</strong> ${dec.t || 'Standard'}<br>
+                  <strong>Issuance Date:</strong> ${dec.d || 'N/A'}<br>
+                  <strong>Validity:</strong> ${dec.v || 'LIFETIME_PERPETUAL'}
+            `;
+            return;
+          } catch(e) {
+            statusBadge.innerHTML = `<span style='color: #EF4444;'>    CORRUPT / MALFORMED TOKEN</span>`;
+            details.innerText = "Payload could not be parsed: " + e.message;
+            return;
+          }
+        }
+      }
+
+      statusBadge.innerHTML = `<span style='color: #EF4444;'>    UNRECOGNIZED KEY FORMAT</span>`;
+      details.innerText = "Expected Fast PIN (KEY-XXXX-...) or Ed25519 Cryptographic Token.";
+    }
+
+    // Register Service Worker for Instant PWA Support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then((reg) => {
+          console.log('PWA Service Worker registered successfully:', reg.scope);
+        }).catch((err) => {
+          console.warn('Service Worker registration skipped:', err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

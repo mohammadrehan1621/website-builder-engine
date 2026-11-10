@@ -1,92 +1,92 @@
 {
-  "timestamp": "2026-11-09",
+  "timestamp": "2026-11-10",
   "base_directory": "Deployed_Websites/mohammadrehan.pages.dev",
-  "total_html_files": 12,
-  "total_word_count": 15307,
+  "total_html_files": 13,
+  "total_word_count": 10198,
   "broken_links_count": 0,
   "broken_links": [],
   "broken_assets_count": 0,
   "broken_assets": [],
   "keyword_matrix": {
+    "air-gapped": {
+      "keyword": "air-gapped",
+      "count": 49,
+      "density_pct": 0.48
+    },
+    "systems architect": {
+      "keyword": "systems architect",
+      "count": 14,
+      "density_pct": 0.14
+    },
+    "rehan quant lab": {
+      "keyword": "rehan quant lab",
+      "count": 68,
+      "density_pct": 0.67
+    },
+    "quantitative": {
+      "keyword": "quantitative",
+      "count": 20,
+      "density_pct": 0.2
+    },
+    "zero monthly fee": {
+      "keyword": "zero monthly fee",
+      "count": 3,
+      "density_pct": 0.03
+    },
     "sovereign computing": {
       "keyword": "sovereign computing",
-      "count": 0,
-      "density_pct": 0.0
+      "count": 3,
+      "density_pct": 0.03
+    },
+    "expressbill": {
+      "keyword": "expressbill",
+      "count": 1,
+      "density_pct": 0.01
+    },
+    "documentshield": {
+      "keyword": "documentshield",
+      "count": 24,
+      "density_pct": 0.24
+    },
+    "deterministic": {
+      "keyword": "deterministic",
+      "count": 19,
+      "density_pct": 0.19
+    },
+    "desktop software": {
+      "keyword": "desktop software",
+      "count": 10,
+      "density_pct": 0.1
     },
     "offline billing": {
       "keyword": "offline billing",
       "count": 0,
       "density_pct": 0.0
     },
-    "zero monthly fee": {
-      "keyword": "zero monthly fee",
-      "count": 4,
-      "density_pct": 0.03
-    },
-    "expressbill": {
-      "keyword": "expressbill",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "systems architect": {
-      "keyword": "systems architect",
-      "count": 18,
-      "density_pct": 0.12
-    },
-    "desktop software": {
-      "keyword": "desktop software",
-      "count": 24,
-      "density_pct": 0.16
-    },
-    "documentshield": {
-      "keyword": "documentshield",
-      "count": 27,
-      "density_pct": 0.18
-    },
-    "rehan quant lab": {
-      "keyword": "rehan quant lab",
-      "count": 80,
-      "density_pct": 0.52
-    },
-    "air-gapped": {
-      "keyword": "air-gapped",
-      "count": 55,
-      "density_pct": 0.36
-    },
-    "storeflow": {
-      "keyword": "storeflow",
-      "count": 0,
-      "density_pct": 0.0
-    },
-    "quantitative": {
-      "keyword": "quantitative",
-      "count": 17,
-      "density_pct": 0.11
-    },
     "pos software": {
       "keyword": "pos software",
       "count": 0,
       "density_pct": 0.0
     },
-    "deterministic": {
-      "keyword": "deterministic",
-      "count": 21,
-      "density_pct": 0.14
-    },
     "lifetime license": {
       "keyword": "lifetime license",
-      "count": 3,
-      "density_pct": 0.02
+      "count": 4,
+      "density_pct": 0.04
+    },
+    "storeflow": {
+      "keyword": "storeflow",
+      "count": 1,
+      "density_pct": 0.01
     }
   },
   "meta_audits": [
     {
       "file": "404.html",
-      "title": "404 &mdash; page not found | rehan quant lab",
-      "title_length": 44,
+      "title": "404     sovereign route not found | rehan quant lab",
+      "title_length": 51,
       "title_valid": true,
-      "description": "the requested page could not be found. redirecting to rehan quant lab home page.",
-      "desc_length": 80,
+      "description": "the requested sovereign endpoint was not located on this node. redirecting to rehan quant lab headquarters.",
+      "desc_length": 107,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -95,8 +95,8 @@
     },
     {
       "file": "aegis.html",
-      "title": "rql aegis&trade; process supervisor | rehan quant lab",
-      "title_length": 53,
+      "title": "rql aegis    process supervisor | rehan quant lab",
+      "title_length": 49,
       "title_valid": true,
       "description": "high-availability deterministic process supervisor with continuous invariant monitoring and sha-256 cryptographic write-ahead logging.",
       "desc_length": 134,
@@ -163,8 +163,8 @@
       "title": "mohammad rehan | founder @ rehan quant lab &amp; systems architect",
       "title_length": 66,
       "title_valid": true,
-      "description": "founder & systems architect at rehan quant lab. creator of rql documentshield&trade;, rql whispervault&trade;, and bare-metal high-throughput distributed systems.",
-      "desc_length": 162,
+      "description": "founder & systems architect at rehan quant lab. creator of rql documentshield   , rql whispervault   , and bare-metal high-throughput distributed systems.",
+      "desc_length": 154,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
@@ -199,16 +199,18 @@
     },
     {
       "file": "react_portal.html",
-      "title": "mohammad rehan | react 3d interactive portal | rehan quant lab",
-      "title_length": 62,
-      "title_valid": true,
+      "title": "mohammad rehan | founder @ rehan quant lab     react 3d sovereign portal",
+      "title_length": 72,
+      "title_valid": false,
       "description": "founder & lead systems architect @ rehan quant lab. powered by react, gsap, framer motion, three.js 3d webgl, and rust webassembly engine.",
       "desc_length": 138,
       "desc_valid": true,
       "has_canonical": true,
       "has_schema_engine": true,
       "has_og_tags": true,
-      "findings": []
+      "findings": [
+        "Title exceeds 70 chars (72 chars): will be truncated on Google SERP"
+      ]
     },
     {
       "file": "security.html",
@@ -235,11 +237,24 @@
       "has_schema_engine": true,
       "has_og_tags": true,
       "findings": []
+    },
+    {
+      "file": "vault.html",
+      "title": "rql founder sovereign studio     cw & acw engine",
+      "title_length": 48,
+      "title_valid": true,
+      "description": "rehan quant lab founder cryptographic studio & cw/acw bi-directional sovereign license engine",
+      "desc_length": 93,
+      "desc_valid": true,
+      "has_canonical": true,
+      "has_schema_engine": true,
+      "has_og_tags": true,
+      "findings": []
     }
   ],
-  "seo_panopticon_score": 100,
-  "verdict": "SSS+ SOVEREIGN APEX (TRANSCENDENT TITANIUM)",
+  "seo_panopticon_score": 90,
+  "verdict": "A (HIGH INTEGRITY)",
   "sitemap_generated": true,
   "robots_generated": true,
-  "execution_micros": 64838
+  "execution_micros": 66472
 }

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>RQL Founder Mobile License Studio</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="RQL Studio">
+  <meta name="theme-color" content="#0B1120">
+  <style>
+    :root {
+      --bg: #0B1120;
+      --card: #1E293B;
+      --card-border: #334155;
+      --emerald: #10B981;
+      --emerald-dark: #059669;
+      --text: #F8FAFC;
+      --subtext: #94A3B8;
+      --accent: #38BDF8;
+      --gold: #F59E0B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+    body { background-color: var(--bg); color: var(--text); padding: 16px; padding-bottom: 60px; }
+    .header { text-align: center; margin-bottom: 18px; padding-top: 10px; }
+    .brand-badge { display: inline-block; background: #0F172A; border: 1px solid #334155; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 1px; margin-bottom: 8px; }
+    h1 { font-size: 20px; font-weight: 800; color: #FFF; }
+    .subtitle { font-size: 12px; color: var(--subtext); margin-top: 3px; }
+
+    .card { background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+    .card-title { font-size: 13px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+    label { display: block; font-size: 12px; color: var(--subtext); font-weight: 600; margin-bottom: 6px; }
+    input[type="text"], select { width: 100%; background: #0F172A; border: 1px solid var(--card-border); border-radius: 10px; padding: 12px 14px; font-size: 15px; color: #FFF; outline: none; margin-bottom: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    input[type="text"]:focus, select:focus { border-color: var(--emerald); }
+
+    .chip-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+    .chip { background: #0F172A; border: 1px solid var(--card-border); padding: 10px 8px; border-radius: 10px; text-align: center; font-size: 12px; font-weight: 700; color: var(--subtext); cursor: pointer; transition: all 0.2s; }
+    .chip.active { background: rgba(16, 185, 129, 0.15); border-color: var(--emerald); color: var(--emerald); }
+
+    .output-box { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 14px; margin-top: 8px; text-align: center; }
+    .output-label { font-size: 11px; text-transform: uppercase; color: var(--emerald); font-weight: 700; letter-spacing: 0.5px; }
+    .output-val { font-size: 22px; font-weight: 800; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #FFF; margin: 6px 0 10px; letter-spacing: 1.5px; word-break: break-all; }
+
+    .btn { display: block; width: 100%; padding: 13px; border-radius: 10px; font-size: 14px; font-weight: 700; text-align: center; cursor: pointer; border: none; transition: 0.2s; text-decoration: none; }
+    .btn-emerald { background: var(--emerald); color: #FFF; }
+    .btn-emerald:active { background: var(--emerald-dark); transform: scale(0.98); }
+    .btn-secondary { background: #334155; color: #FFF; margin-top: 8px; }
+    .btn-wa { background: #25D366; color: #FFF; margin-top: 10px; font-size: 15px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px; }
+
+    .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #10B981; color: #FFF; font-weight: 700; padding: 10px 20px; border-radius: 999px; font-size: 13px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 999; }
+    .toast.show { opacity: 1; }
+
+    .meta-pwa { font-size: 11px; color: var(--subtext); text-align: center; margin-top: 16px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand-badge">👑 REHAN QUANT LAB</div>
+    <h1>Founder Mobile Studio</h1>
+    <div class="subtitle">100% Offline Key Synthesis Engine</div>
+  </div>
+
+  <!-- CARD 1: CUSTOMER HARDWARE ID & PRODUCT SELECTION -->
+  <div class="card">
+    <div class="card-title">
+      <span>1. Machine ID from Buyer</span>
+      <span style="font-size: 11px; color: var(--emerald); font-weight: 600;">Air-Gapped SHA-256</span>
+    </div>
+    <label for="hw_id">Buyer's Hardware ID (from installation screen):</label>
+    <input type="text" id="hw_id" placeholder="e.g. RQL-0B78-F950-D49F" oninput="generateKeys()" autofocus>
+
+    <div class="card-title" style="margin-top: 10px;">
+      <span>2. Select Product Suite</span>
+    </div>
+    <div class="chip-group" id="prod_chips">
+      <div class="chip active" onclick="selectProduct(0, this)">01 DocumentShield</div>
+      <div class="chip" onclick="selectProduct(1, this)">02 WhisperVault</div>
+      <div class="chip" onclick="selectProduct(2, this)">03 Retail POS ($199)</div>
+      <div class="chip" onclick="selectProduct(3, this)">04 StoreChain ($299)</div>
+      <div class="chip" onclick="selectProduct(4, this)" style="grid-column: span 2;">👑 Sovereign Master Access</div>
+    </div>
+
+    <!-- TIER SELECTOR FOR RETAIL POS -->
+    <div id="tier_section" style="display: none; margin-top: 6px;">
+      <div class="card-title">
+        <span>3. Commercial Edition</span>
+      </div>
+      <div class="chip-group" id="tier_chips">
+        <div class="chip active">Single Store Standalone Edition ($199)</div>
+      </div>
+    </div>
+
+    <label for="cust_name" style="margin-top: 4px;">Licensee / Business Name:</label>
+    <input type="text" id="cust_name" value="Valued Commercial Partner" oninput="generateKeys()">
+  </div>
+
+  <!-- CARD 2: GENERATED ACTIVATION CODES -->
+  <div class="card">
+    <div class="card-title">
+      <span>Generated Activation Codes</span>
+      <span style="font-size: 11px; color: var(--emerald); font-weight: 600;">Instant Calculation</span>
+    </div>
+
+    <!-- Fast PIN -->
+    <div class="output-box">
+      <div class="output-label">⚡ Fast Activation PIN (Primary)</div>
+      <div class="output-val" id="pin_val">KEY-XXXX-XXXX-XXXX</div>
+      <button class="btn btn-emerald" onclick="copyPIN()">📋 Copy PIN</button>
+    </div>
+
+    <!-- Enterprise Token -->
+    <div class="output-box" style="margin-top: 12px; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.3);">
+      <div class="output-label" style="color: var(--accent);">🛡️ Enterprise License Token</div>
+      <div class="output-val" style="font-size: 17px;" id="token_val">RQL-LIC-XXXX-XXXX-XXXX</div>
+      <button class="btn btn-secondary" onclick="copyToken()">📋 Copy Token</button>
+    </div>
+
+    <!-- One Click WhatsApp Dispatch -->
+    <button class="btn btn-wa" onclick="sendWhatsApp()">
+      <span>💬 Send via WhatsApp</span>
+    </button>
+  </div>
+
+  <!-- PWA INSTRUCTIONS -->
+  <div class="meta-pwa">
+    💡 <strong>Tip for Founder:</strong> Tap <em>Share → Add to Home Screen</em> in Safari (iPhone) or <em>Install App</em> in Chrome (Android) to use this 100% offline without opening a browser!
+  </div>
+
+  <div id="toast" class="toast">Copied to Clipboard!</div>
+
+  <script>
+    const OFFLINE_MASTER_SALT = "RQL_QUANT_LAB_MASTER_KEY_2026_EXPRESSBILL_OFFLINE_PERPETUAL";
+
+    const PRODUCTS = [
+      { id: "RQL_DocumentShield", name: "RQL DocumentShield™ (Forensic PDF Redactor)" },
+      { id: "RQL_WhisperVault", name: "RQL WhisperVault™ (AI Voice Intelligence)" },
+      { id: "RQL_RetailPOS", name: "RQL Sovereign Retail POS™ (Single-Store Billing)" },
+      { id: "RQL_StoreChain", name: "RQL StoreChain™ (Multi-Counter & Branch POS Suite)" },
+      { id: "UNIVERSAL_MASTER", name: "RQL Sovereign All-Suite Master Access" }
+    ];
+
+    const RETAIL_TIERS = [
+      { id: "RQL_RetailPOS", name: "Single Store Standalone Workstation (1 Machine)" }
+    ];
+
+    let selectedIdx = 0;
+    let selectedTierIdx = 0;
+
+    async function sha256Hex(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('').toUpperCase();
+    }
+
+    function selectProduct(idx, element) {
+      selectedIdx = idx;
+      document.querySelectorAll('#prod_chips .chip').forEach(c => c.classList.remove('active'));
+      element.classList.add('active');
+
+      const tierSec = document.getElementById('tier_section');
+      if (idx === 2) {
+        tierSec.style.display = 'block';
+        document.getElementById('tier_chips').innerHTML = '<div class="chip active">Single Store Standalone Edition ($199)</div>';
+      } else if (idx === 3) {
+        tierSec.style.display = 'block';
+        document.getElementById('tier_chips').innerHTML = '<div class="chip active">5-Till LAN & Multi-Branch Network ($299)</div>';
+      } else {
+        tierSec.style.display = 'none';
+      }
+      generateKeys();
+    }
+
+    function selectTier(idx, element) {
+      selectedTierIdx = idx;
+      document.querySelectorAll('#tier_chips .chip').forEach(c => c.classList.remove('active'));
+      element.classList.add('active');
+      generateKeys();
+    }
+
+    async function generateKeys() {
+      const mid = document.getElementById('hw_id').value.trim().toUpperCase();
+      if (!mid) {
+        document.getElementById('pin_val').innerText = "KEY-XXXX-XXXX-XXXX";
+        document.getElementById('token_val').innerText = "RQL-LIC-XXXX-XXXX-XXXX";
+        return;
+      }
+
+      // Fast PIN
+      const pinPayload = `${OFFLINE_MASTER_SALT}:${mid}`;
+      const pinHash = await sha256Hex(pinPayload);
+      const pin = `KEY-${pinHash.slice(0, 4)}-${pinHash.slice(4, 8)}-${pinHash.slice(8, 12)}`;
+      document.getElementById('pin_val').innerText = pin;
+
+      // Token
+      let tokenPayload;
+      if (selectedIdx === 2) {
+        tokenPayload = `${OFFLINE_MASTER_SALT}:RQL_RetailPOS:${mid}`;
+      } else if (selectedIdx === 3) {
+        tokenPayload = `${OFFLINE_MASTER_SALT}:RQL_StoreChain:${mid}`;
+      } else {
+        const prod = PRODUCTS[selectedIdx];
+        tokenPayload = `${OFFLINE_MASTER_SALT}:${prod.id}:${mid}`;
+      }
+
+      const tokenHash = await sha256Hex(tokenPayload);
+      const token = `RQL-LIC-${tokenHash.slice(0, 4)}-${tokenHash.slice(4, 8)}-${tokenHash.slice(8, 12)}`;
+      document.getElementById('token_val').innerText = token;
+    }
+
+    function buildDispatchMessage() {
+      const mid = document.getElementById('hw_id').value.trim().toUpperCase() || "YOUR-MACHINE-ID";
+      const cust = document.getElementById('cust_name').value.trim() || "Valued Commercial Partner";
+      const prod = PRODUCTS[selectedIdx];
+      const pin = document.getElementById('pin_val').innerText;
+      const token = document.getElementById('token_val').innerText;
+
+      let tierName = "Commercial Lifetime Perpetual (100% Offline)";
+      if (selectedIdx === 2) {
+        tierName = "Single Store Standalone Workstation (1 Machine • 100% Offline POS)";
+      } else if (selectedIdx === 3) {
+        tierName = "5-Till Multi-Counter LAN & Distributed Network License";
+      }
+
+      return `👑 *REHAN QUANT LAB (RQL) — COMMERCIAL LICENSE ACTIVATION* 🛡️\n\n` +
+             `Dear ${cust},\n` +
+             `Thank you for choosing ${prod.name}! Your perpetual commercial license is generated and locked to your workstation.\n\n` +
+             `🖥️ *Workstation Hardware ID:* \`${mid}\`\n` +
+             `📦 *Licensed Product:* ${prod.name}\n` +
+             `🏢 *Licensee:* ${cust}\n` +
+             `🏷️ *License Edition:* ${tierName}\n` +
+             `⏳ *Validity:* Permanent Silicon Ownership (Zero recurring monthly rent)\n\n` +
+             `🔑 *FAST ACTIVATION PIN (PRIMARY):*\n` +
+             `\`${pin}\`\n\n` +
+             `🛡️ *ENTERPRISE LICENSE TOKEN:*\n` +
+             `\`${token}\`\n\n` +
+             `🚀 *How to Activate:*\n` +
+             `1. Open your software or setup wizard.\n` +
+             `2. In License Activation, paste the Fast PIN or Token.\n` +
+             `3. Click *Verify & Activate*.\n\n` +
+             `Your workstation is permanently unlocked! 🛡️\n` +
+             `Founder Direct Support: Mohammad Rehan (+91 70915 18548)`;
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    function copyPIN() {
+      const pin = document.getElementById('pin_val').innerText;
+      navigator.clipboard.writeText(pin).then(() => showToast("PIN Copied to Clipboard!"));
+    }
+
+    function copyToken() {
+      const token = document.getElementById('token_val').innerText;
+      navigator.clipboard.writeText(token).then(() => showToast("Token Copied to Clipboard!"));
+    }
+
+    function sendWhatsApp() {
+      const msg = buildDispatchMessage();
+      navigator.clipboard.writeText(msg);
+      showToast("Message Copied! Opening WhatsApp...");
+      setTimeout(() => {
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
+      }, 500);
+    }
+  </script>
+</body>
+</html>

@@ -35,7 +35,11 @@
     'gumroad-renamer': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXI=',
     'gumroad-tageditor': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvcg==',
     'gumroad-fontviewer': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXI=',
-    'gumroad-pdfmerge': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl'
+    'gumroad-pdfmerge': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl',
+    'gumroad-taxledger': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==',
+    'gumroad-fileshredder': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==',
+    'gumroad-clipvault': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==',
+    'gumroad-imagebatch': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g='
   };
 
   function hydrateString(b64) {
