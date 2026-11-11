@@ -1,5 +1,5 @@
 /**
- * 🌐 Rehan Quant Lab™ — Inbuilt Autonomous SEO & Structured Data Engine
+ *  Rehan Quant Lab  Inbuilt Autonomous SEO & Structured Data Engine
  * Version: 2.0.0-PROD
  * Invariant: Guarantees 100% Google Rich Results compliance, Schema.org validation,
  *            canonical self-healing, OpenGraph verification, and search crawler readiness.
@@ -8,7 +8,7 @@
   'use strict';
 
   const SITE_URL = 'https://rehanquantlab.com';
-  const SITE_NAME = 'Rehan Quant Lab™';
+  const SITE_NAME = 'Rehan Quant Lab';
   const FOUNDER = 'Mohammad Rehan';
   const LOGO_URL = `${SITE_URL}/logo.jpg`;
   const EMBLEM_URL = `${SITE_URL}/emblem.jpg`;
@@ -84,7 +84,7 @@
             "caption": SITE_NAME
           },
           "image": EMBLEM_URL,
-          "description": "Pure-Rust desktop software laboratory: Developer of RQL DocumentShield™ offline PDF redactor, RQL WhisperVault™ air-gapped speech intelligence, and pure-Rust high-performance tools with zero cloud telemetry and zero recurring subscriptions.",
+          "description": "Pure-Rust desktop software laboratory: Developer of RQL DocumentShield offline PDF redactor, RQL WhisperVault air-gapped speech intelligence, and pure-Rust high-performance tools with zero cloud telemetry and zero recurring subscriptions.",
           "founder": {
             "@type": "Person",
             "@id": `${SITE_URL}/#founder`,
@@ -125,13 +125,13 @@
     const catalogSchema = {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Rehan Quant Lab™ Commercial Software Suites",
+      "name": "Rehan Quant Lab Commercial Software Suites",
       "description": "Pure native Rust offline desktop suites: RQL DocumentShield offline PDF redaction and RQL WhisperVault air-gapped speech recognition intelligence.",
       "itemListElement": [
         {
           "@type": "SoftwareApplication",
           "position": 1,
-          "name": "RQL DocumentShield™ — Enterprise PDF Redactor & Metadata Removal Software",
+          "name": "RQL DocumentShield  Enterprise PDF Redactor & Metadata Removal Software",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "SecurityApplication",
           "description": "Permanent offline PDF sanitization for law firms, medical clinics, and accountants. True destructive redaction, automated pattern detection, complete metadata removal, and cryptographic SHA-256 compliance verification.",
@@ -152,7 +152,7 @@
         {
           "@type": "SoftwareApplication",
           "position": 2,
-          "name": "RQL WhisperVault™ — Offline AI Speech Recognition & Meeting Transcription Software",
+          "name": "RQL WhisperVault  Offline AI Speech Recognition & Meeting Transcription Software",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "BusinessApplication",
           "description": "Local speech-to-text transcription and meeting intelligence for attorneys, physicians, corporate executives, and content creators. High-accuracy local Whisper speech recognition, word-level subtitle generation, and structured PDF summaries.",
@@ -173,7 +173,7 @@
         {
           "@type": "SoftwareApplication",
           "position": 3,
-          "name": "RQL RetailPOS™",
+          "name": "RQL RetailPOS",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "BusinessApplication",
           "description": "High-Speed Offline Retail Point-of-Sale & Inventory Ledger Engine: Sub-millisecond barcode checkout, 80mm/58mm thermal receipt printing, SQLite WAL double-entry ledger, and zero monthly subscriptions.",
@@ -194,7 +194,7 @@
         {
           "@type": "SoftwareApplication",
           "position": 4,
-          "name": "RQL StoreChain™ Multi-Counter LAN & Branch POS",
+          "name": "RQL StoreChain Multi-Counter LAN & Branch POS",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "BusinessApplication",
           "description": "Multi-Counter LAN & Distributed Branch POS Suite: Connect up to 5 checkout registers over local in-store Wi-Fi/LAN without internet, with SHA-256 Merkle chain branch reconciliation.",
@@ -215,7 +215,7 @@
         {
           "@type": "SoftwareApplication",
           "position": 5,
-          "name": "RQL Conduit™ — Offline Internet Bonding Tool",
+          "name": "RQL Conduit  Offline Internet Bonding Tool",
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "UtilitiesApplication",
           "description": "Pure-Rust Offline Internet Bonding & Automatic Failover Software: Combines Wi-Fi, Ethernet, and Mobile Hotspot simultaneously for unbreakable connection stability. 100% offline with zero cloud VPN routing.",
