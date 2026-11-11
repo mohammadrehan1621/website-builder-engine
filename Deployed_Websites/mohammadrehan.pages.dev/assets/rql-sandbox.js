@@ -51,7 +51,7 @@
     if (activeToolBadge) {
       var names = {
         imagebatch: 'RQL ImageBatch v1.0 (SIMD WebP Compressor)',
-        documentshield: 'RQL DocumentShield v1.0 (Redaction Kernel)',
+        documentshield: 'RQL DocumentShield v1.0 (Confidential Redactor)',
         hashcheck: 'RQL HashCheck v1.0 (Cryptographic Verifier)',
         qrstudio: 'RQL QRStudio v1.0 (Vector Barcode Studio)',
         textdiff: 'RQL TextDiff v1.0 (Myers Vector Diff)'
@@ -266,7 +266,7 @@
     var elapsed = (t1 - t0).toFixed(2);
 
     if (countBadge) countBadge.textContent = count + ' Tokens Blacked Out';
-    if (timeBadge) timeBadge.textContent = 'Sub-' + Math.max(1, Math.ceil(elapsed)) + 'ms Rust Kernel';
+    if (timeBadge) timeBadge.textContent = 'Sub-' + Math.max(1, Math.ceil(elapsed)) + 'ms Local Engine';
     if (shaBadge) shaBadge.textContent = 'SHA-256: 7d8f...4a21 Verified Clean';
   };
 
@@ -509,7 +509,7 @@
     var elapsed = (t1 - t0).toFixed(2);
 
     if (badge) badge.textContent = changes + ' Alterations Detected';
-    if (timeBadge) timeBadge.textContent = 'Sub-' + Math.max(1, Math.ceil(elapsed)) + 'ms Myers Kernel';
+    if (timeBadge) timeBadge.textContent = 'Sub-' + Math.max(1, Math.ceil(elapsed)) + 'ms Myers Engine';
   };
 
   // ====================================================================
