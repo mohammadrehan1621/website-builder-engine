@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offline Document Redactor & PII Sanitizer | Zero Cloud Upload | Rehan Quant Lab</title>
+<meta name="description" content="Permanently blackout Social Security numbers, tax EINs, credit card numbers, and confidential PII from legal and medical documents in local RAM. Zero server transmission.">
+<meta name="keywords" content="offline document redactor, redact pii offline, private text sanitizer, confidential legal redaction, air gapped document redactor, hipaa compliant text redaction, Rehan Quant Lab">
+<link rel="canonical" href="https://rehanquantlab.com/tools/offline-pdf-redactor.html"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="64x64" href="../favicon-64x64.png" />
+
+<script src="../assets/tailwind.min.js"></script>
+<script src="../assets/lucide.min.js"></script>
+<script src="../assets/rql-sandbox.js" defer></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Outfit', '-apple-system', 'sans-serif'],
+        mono: ['"SF Mono"', '"Roboto Mono"', 'Consolas', 'monospace']
+      }
+    }
+  }
+};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "RQL Sovereign Document Redactor",
+      "operatingSystem": "Web Browser (All Platforms)",
+      "applicationCategory": "SecurityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "description": "Zero-telemetry confidential legal text and document redaction utility operating in local memory with sub-2ms regex vectorization."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rehanquantlab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://rehanquantlab.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "Offline Document Redactor", "item": "https://rehanquantlab.com/tools/offline-pdf-redactor.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this redactor upload confidential legal or medical data to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All regex pattern matching and vector text replacement are executed strictly in your local device RAM. No server endpoint exists."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is true vector blackout safer than drawing black rectangles in PDF editors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many PDF editors only draw a black graphical shape on top of the text while leaving the raw text characters in the underlying PDF stream, allowing anyone to copy and paste the confidential text. RQL DocumentShield permanently purges and replaces the text stream itself."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-rose-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+        <span class="text-white font-bold">SOVEREIGN LEGAL REDACTION:</span>
+        <span class="text-slate-400">Pure In-Memory Browser Execution &bull; Zero Server Transmission</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="index.html" class="text-slate-400 hover:text-white transition">&larr; All Free Tools</a>
+        <a href="../store.html" class="text-emerald-400 hover:text-emerald-300 underline font-bold">Commercial Store &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
+        <div>
+          <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
+          <div class="text-[10px] font-mono text-slate-500">Founder @ Rehan Quant Lab</div>
+        </div>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Tools Hub</a>
+        <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-10">
+
+    <nav class="text-xs font-mono text-slate-500 flex items-center gap-2">
+      <a href="../index.html" class="hover:text-slate-900">Home</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-slate-900">Tools</a>
+      <span>/</span>
+      <span class="text-slate-900 font-bold">Offline Document Redactor</span>
+    </nav>
+
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-mono font-bold border border-rose-300">
+        <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+        <span>100% CLIENT-SIDE RAM &bull; ZERO CLOUD EXPOSURE</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black font-heading text-slate-950 tracking-tight">
+        Offline Confidential Document &amp; PII Redactor
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Sanitize legal briefs, medical dossiers, and tax forms in your browser memory. SSNs, EINs, cards, and email addresses are permanently blacked out in sub-2ms without sending data to any cloud server.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-white border-2 border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-100 text-rose-800 border border-rose-200">THE SKEPTIC'S DARE</span>
+            <span class="text-xs font-bold text-slate-900 font-heading">Turn Off Your Wi-Fi &amp; Test Live</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-mono">
+            Unplug your internet connection. Paste any sensitive test text below. The redaction vectorizer executes with zero errors and zero network traffic.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-1.5 text-xs font-mono font-bold text-rose-700 bg-rose-50 px-3 py-1.5 rounded-xl border border-rose-200">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+          <span>Air-Gapped RAM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Document Redactor Sandbox Container -->
+    <div class="bg-slate-950 text-white rounded-3xl p-5 sm:p-7 border-2 border-slate-800 shadow-xl">
+      <div id="sandbox-panel-documentshield" class="pt-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+          
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-3">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                <span class="text-xs font-mono font-bold text-white uppercase">Raw Legal / Forensic Text</span>
+              </div>
+              <button onclick="resetRedactionSample()" class="text-[11px] font-mono text-slate-400 hover:text-white underline cursor-pointer">
+                Reset Sample
+              </button>
+            </div>
+
+            <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-mono text-xs focus:border-rose-500 focus:outline-hidden leading-relaxed resize-none"></textarea>
+
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
+              <span class="text-rose-400 font-semibold">Sub-1ms Regex Vectorizer</span>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-3">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span class="text-xs font-mono font-bold text-white uppercase">Permanent Blackout Output</span>
+              </div>
+              <span id="redact-tokens-count" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                5 Tokens Blacked Out
+              </span>
+            </div>
+
+            <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-mono text-xs overflow-y-auto leading-relaxed select-text">
+              CONFIDENTIAL CLIENT LEGAL INTAKE &amp; FORENSIC DOSSIER
+            </div>
+
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span class="text-emerald-400 font-semibold">&#10003; True Vector Blackout</span>
+              <span id="redact-sha-badge" class="text-slate-400">SHA-256: 7d8f...4a21 Verified Clean</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer">
+            <i class="w-4 h-4" data-lucide="shield-alert"></i>
+            <span>Run Sovereign Redaction Engine (Sub-2ms)</span>
+          </button>
+          <div class="text-[11px] font-mono text-slate-400 text-center sm:text-right">
+            Zero bytes sent to server &bull; Pure client-side regex vectorization
+          </div>
+        </div>
+
+        <!-- Engine C: Natural Free-to-Paid Bridge -->
+        <div class="mt-3 p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 text-slate-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Need to scrub 500-page scanned PDF dossiers, strip hidden EXIF/XMP metadata, and generate court-admissible audit certificates?
+            </p>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <a href="../store.html#rql-documentshield" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer">
+              View Specs &rarr;
+            </a>
+            <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/40 text-rose-300 hover:text-rose-200 font-bold text-xs transition">
+              <span>Get RQL DocumentShield&trade; &mdash; $179 Lifetime</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Authority Section -->
+    <section class="space-y-6 pt-6 border-t border-slate-200 text-sm leading-relaxed text-slate-700">
+      <h2 class="text-2xl font-bold font-heading text-slate-950">
+        The Difference Between True Redaction and Visual Masking
+      </h2>
+      <p>
+        In high-stakes legal proceedings, patent litigation, and medical records disclosure, "redaction failures" have led to multimillion-dollar sanctions. Most redaction errors occur because users believe that drawing a black rectangle over text removes the data. In reality, standard PDF readers simply overlay a graphic layer while preserving the underlying text string intact in the document stream.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+        <h3 class="font-bold text-slate-900 font-heading text-base">Regulatory Compliance Framework</h3>
+        <p class="text-xs text-slate-600 font-mono leading-relaxed">
+          Under HIPAA Security Rules (45 CFR &sect; 164.312) and GDPR Article 32, transmitting unencrypted Protected Health Information (PHI) or Personally Identifiable Information (PII) to unverified third-party cloud tools constitutes an unauthorized data exposure. Rehan Quant Lab sovereign sanitizers guarantee zero network transmission by executing strictly in non-persistent client memory.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-8 px-4 text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Rehan Quant Lab &bull; Sovereign Air-Gapped Software Systems</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-slate-900 underline">All Free Tools</a>
+        <a href="../store.html" class="hover:text-slate-900 underline">Commercial Store</a>
+        <a href="../security.html" class="hover:text-slate-900 underline">Security Ledger</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>

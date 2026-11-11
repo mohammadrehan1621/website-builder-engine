@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Free Sovereign Offline Web Tools | Zero Cloud Upload | Rehan Quant Lab</title>
+<meta name="description" content="Five sovereign, zero-telemetry in-browser tools that run 100% inside your local RAM. WebP image compression, confidential text redaction, SHA-256 hash calculation, vector QR codes, and Myers diff.">
+<meta name="keywords" content="offline web tools, client side image compressor, offline webp converter, private text redactor, sha256 checksum online, vector qr code generator svg, myers diff tool, zero telemetry browser tools, Rehan Quant Lab">
+<link rel="canonical" href="https://rehanquantlab.com/tools/"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="64x64" href="../favicon-64x64.png" />
+
+<!-- Tailwind CSS & Assets -->
+<script src="../assets/tailwind.min.js"></script>
+<script src="../assets/lucide.min.js"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Outfit', '-apple-system', 'sans-serif'],
+        mono: ['"SF Mono"', '"Roboto Mono"', 'Consolas', 'monospace']
+      }
+    }
+  }
+};
+</script>
+
+<!-- Structured Data Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Sovereign In-Browser Client-Side Utilities",
+  "description": "Collection of five 100% client-side, zero-telemetry utilities that execute in local memory without server transmission.",
+  "url": "https://rehanquantlab.com/tools/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rehan Quant Lab",
+    "url": "https://rehanquantlab.com"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Top Announcement Bar -->
+  <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-white font-bold">100% SOVEREIGN CLIENT-SIDE EXECUTION:</span>
+        <span class="text-slate-400">Zero cloud uploads &bull; Works with Wi-Fi turned completely off</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="../store.html" class="text-emerald-400 hover:text-emerald-300 underline font-bold">Open Commercial Store (20 Flagships) &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
+        <div>
+          <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
+          <div class="text-[10px] font-mono text-slate-500">Founder @ Rehan Quant Lab</div>
+        </div>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+        <a href="../index.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Home</a>
+        <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store (20)</a>
+        <a href="index.html" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white font-bold transition">Free Tools</a>
+        <a href="../contact.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="grow max-w-7xl mx-auto px-4 sm:px-6 py-12 w-full">
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold border border-emerald-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>100% IN-BROWSER RAM &bull; ZERO SERVER CALLS</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black font-heading text-slate-950 tracking-tight leading-tight">
+        Sovereign, Zero-Telemetry <br class="hidden sm:inline"/>Browser Utilities.
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Five fast, zero-installation utilities engineered in pure client-side primitives. Every computation executes strictly inside your computer's RAM. Turn off your Wi-Fi or unplug your Ethernet cable&mdash;all five tools will continue running with zero network errors.
+      </p>
+
+      <!-- The Skeptic's Dare Badge -->
+      <div class="mt-6 p-4 rounded-2xl bg-white border-2 border-slate-200/90 shadow-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">THE SKEPTIC'S DARE</span>
+            <span class="text-xs font-bold text-slate-900 font-heading">Think "100% Offline" is just marketing words?</span>
+          </div>
+          <p class="text-xs text-slate-600 font-mono">
+            Unplug your internet connection right now, open any tool below, and test it. If a single byte leaves your machine, don't use our software.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-2 text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200">
+          <i class="w-4 h-4" data-lucide="wifi-off"></i>
+          <span>Air-Gap Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Micro-Tools Directory Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+      <!-- Card 1: WebP Compressor -->
+      <div class="bg-white border-2 border-emerald-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold text-lg font-mono">#01</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">SIMD Accelerated</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-emerald-600 transition">
+              Offline WebP Converter &amp; Compressor
+            </h2>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Convert PNG and JPEG images to WebP locally in your browser RAM with live quality sliders and instant savings metrics. Zero files uploaded to external cloud servers.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+            <div>&#10003; 80%&ndash;92% Size Reduction</div>
+            <div>&#10003; Sub-10ms Local Execution</div>
+            <div>&#10003; Zero Image Telemetry</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100">
+          <a href="offline-webp-compressor.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+            <span>Launch WebP Tool</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: DocumentShield -->
+      <div class="bg-white border-2 border-rose-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold text-lg font-mono">#02</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-mono font-bold border border-rose-200">Legal &amp; HIPAA</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-rose-600 transition">
+              Offline Document Redactor &amp; Sanitizer
+            </h2>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Permanently blackout Social Security numbers, tax EINs, credit cards, and confidential PII from legal and medical text snippets using sub-2ms client-side regex vectorization.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+            <div>&#10003; Permanent Vector Blackout</div>
+            <div>&#10003; Auto PII Token Detection</div>
+            <div>&#10003; Sub-2ms In-RAM Vectorizer</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100">
+          <a href="offline-pdf-redactor.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-rose-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+            <span>Launch Redactor Tool</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: HashCheck -->
+      <div class="bg-white border-2 border-sky-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center font-bold text-lg font-mono">#03</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-[10px] font-mono font-bold border border-sky-200">FIPS 180-4</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-sky-600 transition">
+              Offline SHA-256 / SHA-512 Hash Verifier
+            </h2>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Compute cryptographic SHA-256 and SHA-512 hashes for any local file or text string in your browser RAM using window.crypto.subtle hardware acceleration.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+            <div>&#10003; Hardware WebCrypto API</div>
+            <div>&#10003; Zero Server Uploads</div>
+            <div>&#10003; 1-Click Checksum Copy</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100">
+          <a href="sha256-checksum-verifier.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+            <span>Launch Hasher Tool</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: QRStudio -->
+      <div class="bg-white border-2 border-purple-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center font-bold text-lg font-mono">#04</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 text-[10px] font-mono font-bold border border-purple-200">Never Expire</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-purple-600 transition">
+              Offline Vector QR Code Generator (SVG)
+            </h2>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Generate permanent, infinite-scalable vector SVG QR codes directly in your browser. Zero cloud redirect links, zero tracking pixels, and zero expiration dates.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+            <div>&#10003; Scalable Vector SVG Export</div>
+            <div>&#10003; URL, UPI &amp; WhatsApp Presets</div>
+            <div>&#10003; Zero 30-Day Link Expiration</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100">
+          <a href="offline-qr-code-generator.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-purple-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+            <span>Launch QR Tool</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5: TextDiff -->
+      <div class="bg-white border-2 border-amber-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-lg font-mono">#05</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-mono font-bold border border-amber-200">Sub-1ms Myers</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-amber-600 transition">
+              Offline Text &amp; Contract Difference Checker
+            </h2>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Compare two revisions of source code or confidential legal clauses. Sub-millisecond Myers vector algorithm highlights alterations with zero cloud exposure.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+            <div>&#10003; Myers Vector Difference Engine</div>
+            <div>&#10003; Word &amp; Line Change Detection</div>
+            <div>&#10003; Zero NDA Data Leakage</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-100">
+          <a href="offline-text-diff.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+            <span>Launch Diff Tool</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6: Desktop Commercial Suite Hub -->
+      <div class="bg-slate-950 border-2 border-slate-800 rounded-3xl p-6 flex flex-col justify-between shadow-md text-white">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="w-10 h-10 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg font-mono">EXE</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/40">Windows Flagships</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold font-heading text-white">
+              Need Multi-Core Desktop Power?
+            </h2>
+            <p class="text-xs text-slate-400 mt-2 leading-relaxed font-mono">
+              Our in-browser tools handle single items. If you need to process 5,000 images, scrub 500-page dossiers, or run multi-counter LAN POS, explore our compiled Windows flagships.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
+            <div>&#10003; 100% Offline Pure Native Rust</div>
+            <div>&#10003; Zero Monthly Subscriptions</div>
+            <div>&#10003; Instant Gumroad Digital Delivery</div>
+          </div>
+        </div>
+        <div class="pt-5 mt-4 border-t border-slate-800">
+          <a href="../store.html" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/40">
+            <span>Explore 20 Desktop Suites</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Architectural FAQ Section (SEO Structured Data) -->
+    <section class="max-w-4xl mx-auto pt-8 border-t border-slate-200">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold font-heading text-slate-950">Frequently Asked Technical Questions</h2>
+        <p class="text-xs font-mono text-slate-500 mt-1">Understanding client-side sovereign computing &amp; air-gapped web architecture</p>
+      </div>
+
+      <div class="space-y-4 text-xs font-mono">
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
+          <div class="font-bold text-slate-900 text-sm font-heading">How do these tools run without an internet connection?</div>
+          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+            When you load this webpage, all HTML, CSS, and JavaScript logic are delivered to your browser cache. Once loaded, algorithms like WebCrypto SHA hashing, Canvas WebP encoding, and regex redaction execute entirely inside your local device CPU and RAM using native browser APIs. No packets are transmitted over the network.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
+          <div class="font-bold text-slate-900 text-sm font-heading">Are my files or photos ever uploaded to a server?</div>
+          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+            Never. Unlike typical cloud converters that upload your files to remote Amazon AWS or Google Cloud servers for background processing, Rehan Quant Lab tools do not have an upload endpoint. You can inspect the browser Network tab (F12) or unplug your Wi-Fi to confirm zero outbound network sockets.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
+          <div class="font-bold text-slate-900 text-sm font-heading">What is the difference between these free browser tools and the commercial desktop software?</div>
+          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+            Our free in-browser tools are designed for single-file micro-tasks (one image, one document snippet, one hash). Our commercial Windows software (.exe) flagships are multi-threaded native Rust binaries built for heavy industrial workloads: batch-processing 5,000 images directly from Windows Explorer, redacting 500-page scanned court filings, and running multi-till LAN retail billing without internet.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-8 px-4 text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span>&copy; 2026 Rehan Quant Lab &bull; Sovereign Air-Gapped Software Systems</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="../store.html" class="hover:text-slate-900 underline">Commercial Store</a>
+        <a href="../projects.html" class="hover:text-slate-900 underline">Projects</a>
+        <a href="../security.html" class="hover:text-slate-900 underline">Security Ledger</a>
+        <a href="../legal.html" class="hover:text-slate-900 underline">Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>

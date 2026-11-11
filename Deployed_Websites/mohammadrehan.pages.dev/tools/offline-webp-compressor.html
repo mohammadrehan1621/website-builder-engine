@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offline WebP Converter & Image Compressor | Zero Cloud Upload | Rehan Quant Lab</title>
+<meta name="description" content="Convert PNG and JPEG images to WebP locally in your browser memory. 100% private, zero cloud uploads, hardware accelerated, works with Wi-Fi turned completely off.">
+<meta name="keywords" content="offline webp converter, client side image compressor, local png to webp, browser webp encoder, convert image without upload, private image compression, Rehan Quant Lab">
+<link rel="canonical" href="https://rehanquantlab.com/tools/offline-webp-compressor.html"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="64x64" href="../favicon-64x64.png" />
+
+<!-- Tailwind CSS & Assets -->
+<script src="../assets/tailwind.min.js"></script>
+<script src="../assets/lucide.min.js"></script>
+<script src="../assets/rql-sandbox.js" defer></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Outfit', '-apple-system', 'sans-serif'],
+        mono: ['"SF Mono"', '"Roboto Mono"', 'Consolas', 'monospace']
+      }
+    }
+  }
+};
+</script>
+
+<!-- Structured Data Schemas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "RQL Sovereign Offline WebP Compressor",
+      "operatingSystem": "Web Browser (All Platforms)",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "description": "Zero-telemetry client-side image compression tool converting PNG and JPEG to WebP inside local computer RAM without network transmission."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://rehanquantlab.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://rehanquantlab.com/tools/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Offline WebP Compressor",
+          "item": "https://rehanquantlab.com/tools/offline-webp-compressor.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this tool upload my images to an external server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The conversion is performed entirely inside your browser using HTML5 Canvas and native WebP encoders. Not a single byte is sent over the internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this WebP converter while offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can turn off your Wi-Fi or unplug your Ethernet cable. The tool continues to convert and download images with zero network connectivity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this compare to cloud compressors like TinyPNG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cloud compressors require uploading your files to remote servers, which creates privacy risks for confidential or unreleased images, imposes file size limits, and requires monthly subscriptions. RQL WebP Compressor runs locally at hardware RAM speed with zero fees."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-white font-bold">AIR-GAP VERIFIED:</span>
+        <span class="text-slate-400">Pure In-Memory Browser Execution &bull; 0 Bytes Outbound Egress</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="index.html" class="text-slate-400 hover:text-white transition">&larr; All Free Tools</a>
+        <a href="../store.html" class="text-emerald-400 hover:text-emerald-300 underline font-bold">Commercial Store &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
+        <div>
+          <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
+          <div class="text-[10px] font-mono text-slate-500">Founder @ Rehan Quant Lab</div>
+        </div>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Tools Hub</a>
+        <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store</a>
+        <span id="airgap-live-indicator" class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-sky-500/10 text-sky-700 border border-sky-300">SYSTEM STANDBY</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-10">
+
+    <!-- Breadcrumbs -->
+    <nav class="text-xs font-mono text-slate-500 flex items-center gap-2">
+      <a href="../index.html" class="hover:text-slate-900">Home</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-slate-900">Tools</a>
+      <span>/</span>
+      <span class="text-slate-900 font-bold">Offline WebP Compressor</span>
+    </nav>
+
+    <!-- Page Title & Air-Gap Dare -->
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold border border-emerald-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>100% CLIENT-SIDE RAM &bull; HARDWARE ACCELERATED</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black font-heading text-slate-950 tracking-tight">
+        Offline WebP Image Converter &amp; Compressor
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Drop any local PNG or JPEG image below. It will convert instantly to modern high-fidelity WebP format inside your browser memory. Inspect your network tab or turn off your Wi-Fi&mdash;not a single byte leaves your machine.
+      </p>
+
+      <!-- The Skeptic's Dare -->
+      <div class="p-4 rounded-2xl bg-white border-2 border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">THE SKEPTIC'S DARE</span>
+            <span class="text-xs font-bold text-slate-900 font-heading">Turn Off Your Wi-Fi &amp; Test Live</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-mono">
+            Unplug your Ethernet cable or disable Wi-Fi right now. Drop any photo below. It will compress and download with zero network errors.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+          <span>Zero Server Calls</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive WebP Tool Sandbox Container -->
+    <div class="bg-slate-950 text-white rounded-3xl p-5 sm:p-7 border-2 border-slate-800 shadow-xl">
+      <div id="sandbox-panel-imagebatch" class="pt-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+          
+          <!-- Left: Source Control & Dropzone -->
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-xs font-mono font-bold text-white uppercase">Source Image Input</span>
+                </div>
+                <button onclick="loadSampleImage()" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 underline cursor-pointer">
+                  Load 1080p Benchmark Sample
+                </button>
+              </div>
+
+              <div class="mt-4">
+                <label class="block border-2 border-dashed border-slate-700 hover:border-emerald-500/60 rounded-xl p-5 text-center cursor-pointer transition bg-slate-950/60 group">
+                  <input type="file" accept="image/png, image/jpeg, image/webp" class="hidden" onchange="handleImageUpload(this)">
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-10 h-10 rounded-xl bg-slate-800 group-hover:bg-emerald-500/20 text-slate-400 group-hover:text-emerald-400 flex items-center justify-center transition">
+                      <i class="w-5 h-5" data-lucide="upload-cloud"></i>
+                    </div>
+                    <div class="text-xs font-mono text-slate-300 font-bold">
+                      Drop any local image (PNG/JPG) or click to browse
+                    </div>
+                    <div class="text-[10px] font-mono text-slate-500">
+                      100% processed in local browser RAM &bull; Never uploaded to any server
+                    </div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- WebP Quality Slider -->
+              <div class="mt-5 p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80 space-y-2">
+                <div class="flex items-center justify-between text-xs font-mono">
+                  <span class="text-slate-400">WebP Compression Quality:</span>
+                  <span id="imagebatch-quality-label" class="text-emerald-400 font-bold">85%</span>
+                </div>
+                <input id="imagebatch-quality-slider" type="range" min="30" max="100" value="85" class="w-full accent-emerald-500 cursor-pointer" oninput="onQualitySliderChange(this.value)">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <span>Higher Compression (Smaller KB)</span>
+                  <span>High Fidelity (Max Crispness)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-[11px] font-mono text-slate-400 flex items-center justify-between pt-3 border-t border-slate-800">
+              <span>Original Size: <strong id="imagebatch-orig-size" class="text-white">1.2 MB</strong></span>
+              <span class="text-emerald-400 font-bold">&#10003; In-Memory Execution</span>
+            </div>
+          </div>
+
+          <!-- Right: Compressed Output & Metrics -->
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span class="text-xs font-mono font-bold text-white uppercase">Real-Time WebP Output</span>
+                </div>
+                <span id="imagebatch-savings-badge" class="font-mono text-xs font-extrabold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                  -92% SAVED
+                </span>
+              </div>
+
+              <!-- Preview Frame -->
+              <div class="mt-4 aspect-video w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 relative flex items-center justify-center p-2">
+                <img id="imagebatch-preview-img" src="../emblem.webp" alt="Compressed Preview" class="max-w-full max-h-full object-contain rounded-lg">
+              </div>
+
+              <!-- Metrics Strip -->
+              <div class="grid grid-cols-2 gap-3 mt-4 text-xs font-mono">
+                <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                  <div class="text-slate-500 text-[10px] uppercase">Compressed WebP Size:</div>
+                  <div id="imagebatch-comp-size" class="text-emerald-400 font-bold text-sm mt-0.5">98 KB</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800">
+                  <div class="text-slate-500 text-[10px] uppercase">Execution Latency:</div>
+                  <div id="imagebatch-time-badge" class="text-white font-bold text-sm mt-0.5">4.2ms (Local RAM)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download Action & Engine C Bridge -->
+            <div class="pt-3 border-t border-slate-800 space-y-3">
+              <button id="imagebatch-download-btn" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-lg shadow-emerald-950/40 cursor-pointer">
+                <i class="w-4 h-4 text-white" data-lucide="download"></i>
+                <span>Download Compressed WebP (Zero Cloud Used)</span>
+                <span>&rarr;</span>
+              </button>
+
+              <!-- Engine C: Natural Free-to-Paid Bridge -->
+              <div class="p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2">
+                <div class="flex items-center gap-2 text-slate-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                  Need to batch-convert 5,000 images at once with 16-core SIMD directly from Windows Explorer?
+                </p>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
+                  <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 font-bold text-xs transition">
+                    <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <a href="../store.html#rql-imagebatch" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer text-center sm:text-right">
+                    View Specs &amp; Guarantee &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Educational Technical Content (Programmatic SEO Authority) -->
+    <section class="space-y-6 pt-6 border-t border-slate-200 text-sm leading-relaxed text-slate-700">
+      <h2 class="text-2xl font-bold font-heading text-slate-950">
+        Why Convert Images to WebP in Local Browser RAM?
+      </h2>
+      <p>
+        Modern web performance standards demand WebP or AVIF formats for all digital storefronts and media applications. WebP provides lossy and lossless compression that is typically <strong>26% to 34% smaller than equivalent JPEG files</strong>, and up to <strong>300% smaller than unoptimized PNG files</strong>, while preserving transparency (alpha channel) and visual crispness.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+          <h3 class="font-bold text-slate-900 font-heading text-base">The Cloud Upload Problem</h3>
+          <p class="text-xs text-slate-600 font-mono leading-relaxed">
+            Most online image compression websites upload your sensitive photos to remote Amazon AWS S3 buckets or overseas servers for backend processing. For marketing teams handling embargoed product launches, real estate dossiers, or personal customer IDs, uploading files to third-party web servers introduces severe data liability.
+          </p>
+        </div>
+        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+          <h3 class="font-bold text-slate-900 font-heading text-base">The Client-Side Solution</h3>
+          <p class="text-xs text-slate-600 font-mono leading-relaxed">
+            Rehan Quant Lab image utilities leverage your computer's local hardware primitives via HTML5 Canvas rasterization and browser-native WebP compression. Files are read, decompressed, encoded, and saved directly inside local RAM without opening a single outbound network socket.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold font-heading text-slate-950 pt-4">
+        WebP vs. JPEG vs. PNG Compression Benchmarks
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs font-mono border-collapse bg-white rounded-2xl overflow-hidden border border-slate-200">
+          <thead class="bg-slate-100 text-slate-700 uppercase font-bold">
+            <tr>
+              <th class="p-3 border-b border-slate-200">Format</th>
+              <th class="p-3 border-b border-slate-200">Typical Size</th>
+              <th class="p-3 border-b border-slate-200">Alpha Transparency</th>
+              <th class="p-3 border-b border-slate-200">Execution Location</th>
+              <th class="p-3 border-b border-slate-200">Cloud Risk</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-600">
+            <tr>
+              <td class="p-3 font-bold text-slate-900">Original PNG (1080p)</td>
+              <td class="p-3">2,400 KB</td>
+              <td class="p-3 text-emerald-600">Yes</td>
+              <td class="p-3">Local Disk</td>
+              <td class="p-3 text-slate-500">None</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-slate-900">Standard JPEG (Q=85)</td>
+              <td class="p-3">380 KB</td>
+              <td class="p-3 text-rose-600">No</td>
+              <td class="p-3">Local Disk</td>
+              <td class="p-3 text-slate-500">None</td>
+            </tr>
+            <tr class="bg-emerald-50/50">
+              <td class="p-3 font-bold text-emerald-900">RQL WebP (In-RAM Q=85)</td>
+              <td class="p-3 font-bold text-emerald-700">98 KB (-92%)</td>
+              <td class="p-3 text-emerald-600">Yes</td>
+              <td class="p-3 font-bold text-emerald-700">100% Browser RAM</td>
+              <td class="p-3 font-bold text-emerald-700">Zero (0 Egress)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-8 px-4 text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span>&copy; 2026 Rehan Quant Lab &bull; Sovereign Air-Gapped Software Systems</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-slate-900 underline">All Free Tools</a>
+        <a href="../store.html" class="hover:text-slate-900 underline">Commercial Store</a>
+        <a href="../security.html" class="hover:text-slate-900 underline">Security Ledger</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>

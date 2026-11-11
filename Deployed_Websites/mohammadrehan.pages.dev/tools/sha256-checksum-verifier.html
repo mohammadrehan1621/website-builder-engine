@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offline SHA-256 & SHA-512 File Checksum Verifier | WebCrypto | Rehan Quant Lab</title>
+<meta name="description" content="Calculate cryptographic SHA-256 and SHA-512 hashes for any file in your browser RAM using the native WebCrypto API. Zero bytes uploaded to the internet.">
+<meta name="keywords" content="offline sha256 generator, sha256 checksum online, local file hash calculator, webcrypto sha512, verify checksum without upload, air gapped hash tool, Rehan Quant Lab">
+<link rel="canonical" href="https://rehanquantlab.com/tools/sha256-checksum-verifier.html"/>
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="64x64" href="../favicon-64x64.png" />
+
+<script src="../assets/tailwind.min.js"></script>
+<script src="../assets/lucide.min.js"></script>
+<script src="../assets/rql-sandbox.js" defer></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        heading: ['Outfit', '-apple-system', 'sans-serif'],
+        mono: ['"SF Mono"', '"Roboto Mono"', 'Consolas', 'monospace']
+      }
+    }
+  }
+};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "RQL Sovereign WebCrypto Checksum Verifier",
+      "operatingSystem": "Web Browser (All Platforms)",
+      "applicationCategory": "DeveloperApplication",
+      "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
+      "description": "Client-side cryptographic hash calculator using browser window.crypto.subtle primitives to compute SHA-256 and SHA-512 checksums without network transmission."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://rehanquantlab.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://rehanquantlab.com/tools/" },
+        { "@type": "ListItem", "position": 3, "name": "SHA-256 Checksum Verifier", "item": "https://rehanquantlab.com/tools/sha256-checksum-verifier.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this tool hash large files without uploading them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool uses the browser W3C WebCrypto API (window.crypto.subtle.digest). It streams raw byte slices directly from your local disk into CPU registers, never transmitting a single packet over the network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the SHA-256 output cryptographically identical to Windows CertUtil or Linux sha256sum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The hashing follows the exact FIPS 180-4 standard specification. The hexadecimal digest generated here will bit-for-bit match CertUtil, OpenSSL, and sha256sum."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-sky-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        <span class="text-white font-bold">CRYPTOGRAPHIC INTEGRITY:</span>
+        <span class="text-slate-400">FIPS 180-4 Hardware WebCrypto Engine &bull; Zero Server Egress</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="index.html" class="text-slate-400 hover:text-white transition">&larr; All Free Tools</a>
+        <a href="../store.html" class="text-emerald-400 hover:text-emerald-300 underline font-bold">Commercial Store &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
+        <div>
+          <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
+          <div class="text-[10px] font-mono text-slate-500">Founder @ Rehan Quant Lab</div>
+        </div>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Tools Hub</a>
+        <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="grow max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full space-y-10">
+
+    <nav class="text-xs font-mono text-slate-500 flex items-center gap-2">
+      <a href="../index.html" class="hover:text-slate-900">Home</a>
+      <span>/</span>
+      <a href="index.html" class="hover:text-slate-900">Tools</a>
+      <span>/</span>
+      <span class="text-slate-900 font-bold">SHA-256 Checksum Verifier</span>
+    </nav>
+
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-mono font-bold border border-sky-300">
+        <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+        <span>FIPS 180-4 WEBCRYPTO API &bull; LOCAL HARDWARE RAM</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black font-heading text-slate-950 tracking-tight">
+        Offline SHA-256 &amp; SHA-512 File Checksum Verifier
+      </h1>
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+        Verify ISO downloads, firmware binaries, and confidential records against official cryptographic checksums. Calculates SHA-256 and SHA-512 hashes inside your browser RAM with zero internet connection required.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-white border-2 border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="space-y-0.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-sky-100 text-sky-800 border border-sky-200">THE SKEPTIC'S DARE</span>
+            <span class="text-xs font-bold text-slate-900 font-heading">Turn Off Your Wi-Fi &amp; Test Live</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-mono">
+            Disconnect from the network. Drop any multi-gigabyte file or type a string. The hash computes instantly via native browser hardware cryptography.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-1.5 text-xs font-mono font-bold text-sky-700 bg-sky-50 px-3 py-1.5 rounded-xl border border-sky-200">
+          <i class="w-4 h-4" data-lucide="shield-check"></i>
+          <span>Zero Server Uploads</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive HashCheck Sandbox Container -->
+    <div class="bg-slate-950 text-white rounded-3xl p-5 sm:p-7 border-2 border-slate-800 shadow-xl">
+      <div id="sandbox-panel-hashcheck" class="pt-2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+          
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                  <span class="text-xs font-mono font-bold text-white uppercase">Inspect Any File or Text</span>
+                </div>
+                <span id="hashcheck-time-badge" class="text-[11px] font-mono text-sky-400">
+                  Hardware Accelerated
+                </span>
+              </div>
+
+              <div class="mt-4">
+                <label class="block border-2 border-dashed border-slate-700 hover:border-sky-500/60 rounded-xl p-4 text-center cursor-pointer transition bg-slate-950/60 group">
+                  <input type="file" class="hidden" onchange="handleHashCheckFile(this)">
+                  <div class="text-xs font-mono text-slate-300 font-bold">
+                    Drop ANY file to compute cryptographic hash instantly
+                  </div>
+                  <div class="text-[10px] font-mono text-slate-500 mt-1">
+                    File never leaves your RAM &bull; Executed via window.crypto.subtle
+                  </div>
+                </label>
+              </div>
+
+              <div class="mt-4 space-y-1.5">
+                <label class="block text-[11px] font-mono text-slate-400">Or type custom text string:</label>
+                <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 font-mono text-xs focus:border-sky-500 focus:outline-hidden" oninput="runTextHash()">
+              </div>
+            </div>
+
+            <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-800">
+              Target: <strong id="hashcheck-target-label" class="text-white">Raw Text Payload</strong>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                <span class="text-xs font-mono font-bold text-white uppercase">Cryptographic Checksums</span>
+                <span class="text-emerald-400 font-mono text-[11px]">&#10003; Bit-for-Bit Verified</span>
+              </div>
+
+              <!-- SHA-256 Box -->
+              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
+                  <span>SHA-256 (FIPS 180-4 Standard):</span>
+                  <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
+                </div>
+                <div id="hashcheck-sha256-output" class="font-mono text-xs text-sky-300 break-all select-text font-bold">
+                  Computing...
+                </div>
+              </div>
+
+              <!-- SHA-512 Box -->
+              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
+                  <span>SHA-512 (FIPS 180-4 Cryptographic Standard):</span>
+                  <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
+                </div>
+                <div id="hashcheck-sha512-output" class="font-mono text-[11px] text-slate-300 break-all select-text font-bold max-h-16 overflow-y-auto">
+                  Computing...
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="text-[11px] font-mono text-slate-500 pt-2 border-t border-slate-800">
+                Zero Cloud Uploads &bull; Executed locally via browser WebCrypto primitives
+              </div>
+
+              <!-- Engine C: Natural Free-to-Paid Bridge -->
+              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2">
+                <div class="flex items-center gap-2 text-slate-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                  Need right-click SHA verification in Windows Explorer, multi-terabyte disk drive hashing, and CSV compliance export?
+                </p>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
+                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 border border-sky-500/40 text-sky-300 hover:text-sky-200 font-bold text-xs transition">
+                    <span>Get RQL HashCheck&trade; &mdash; $39 Lifetime License</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <a href="../store.html#rql-hashcheck" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer text-center sm:text-right">
+                    View Specs &amp; Guarantee &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Authority Section -->
+    <section class="space-y-6 pt-6 border-t border-slate-200 text-sm leading-relaxed text-slate-700">
+      <h2 class="text-2xl font-bold font-heading text-slate-950">
+        How Browser-Native WebCrypto Hardware Acceleration Works
+      </h2>
+      <p>
+        The W3C Web Cryptography API (`crypto.subtle`) exposes native cryptographic algorithms directly to modern browser engines. When you drop an installer, disk image, or payload into this utility, JavaScript delegates the hashing computation directly to the underlying OS cryptographic subsystem or CPU instructions (such as Intel SHA Extensions / ARMv8 Crypto).
+      </p>
+
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+        <h3 class="font-bold text-slate-900 font-heading text-base">FIPS 180-4 Standard Compliance</h3>
+        <p class="text-xs text-slate-600 font-mono leading-relaxed">
+          The Secure Hash Standard (FIPS 180-4) specifies cryptographic hash algorithms produced by the National Institute of Standards and Technology (NIST). SHA-256 produces a 256-bit (32-byte) message digest, and SHA-512 produces a 512-bit (64-byte) digest. Because the mapping is deterministic and one-way, even altering a single bit in a 10GB ISO completely scrambles the output hash.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-8 px-4 text-xs font-mono text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Rehan Quant Lab &bull; Sovereign Air-Gapped Software Systems</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-slate-900 underline">All Free Tools</a>
+        <a href="../store.html" class="hover:text-slate-900 underline">Commercial Store</a>
+        <a href="../security.html" class="hover:text-slate-900 underline">Security Ledger</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) { lucide.createIcons(); }
+  </script>
+</body>
+</html>
