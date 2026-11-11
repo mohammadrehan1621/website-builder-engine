@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -677,29 +677,7 @@ tailwind.config = {
 </head>
 <body class="bg-[#030712] text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 flex flex-col min-h-screen relative">
 
-<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock) -->
-<div class="fixed bottom-24 sm:bottom-6 left-4 right-4 sm:left-1/2 sm:right-auto sm:-translate-x-1/2 z-[70] max-w-2xl bg-slate-950 border border-slate-700/90 rounded-2xl p-4 sm:p-5 shadow-2xl text-slate-100 transition-all duration-300 transform" id="cookie-banner">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-3 text-left">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
-                <i class="w-5 h-5" data-lucide="shield-check"></i>
-            </div>
-            <div>
-                <p class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
-                    <span>Data Privacy &amp; Cryptographic Security</span>
-                    <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-mono font-semibold">TLS 1.3 &amp; AES-256</span>
-                </p>
-                <p class="text-xs text-slate-200 leading-relaxed mt-1 font-medium">
-                    We value your privacy. 256-Bit SSL encrypted session with zero tracking cookies or external third-party data collection.
-                </p>
-            </div>
-        </div>
-        <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-800">
-            <button class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-md transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Accept</button>
-            <button class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3.5 py-2 rounded-xl text-xs border border-slate-700 transition whitespace-nowrap" onclick="(function(){ try{localStorage.setItem('cookie_consent_accepted','true');}catch(e){} const b=document.getElementById('cookie-banner'); if(b) b.remove(); })()">Settings</button>
-        </div>
-    </div>
-</div>
+
 <!-- Top Unified Institutional Status Bar (Identical to Home & Experience) -->
 <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
   <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
@@ -1150,6 +1128,96 @@ document.addEventListener('keydown', function(e) {
           <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] font-mono text-amber-300 flex items-center gap-1.5">
             <i class="w-3.5 h-3.5" data-lucide="check-circle-2"></i>
             <span>Lifetime License &bull; No Monthly Fees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- ========================================================================== -->
+    <!-- BENTO INTERACTIVE ROI CALCULATOR: CLOUD SAAS VS. SOVEREIGN RQL            -->
+    <!-- ========================================================================== -->
+    <div class="bento-card relative rounded-3xl p-6 sm:p-8 md:p-10 mb-14 border border-cyan-500/30 bg-gradient-to-br from-[#0c1529]/90 via-[#070e22]/95 to-[#030712] shadow-2xl overflow-hidden" data-spotlight="true" id="roi-calculator">
+      <!-- Ambient glows -->
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-cyan-500/20">
+          <div class="max-w-2xl space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-bold">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span>INTERACTIVE SOVEREIGN ROI MATRIX</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-heading text-white tracking-tight">
+              How Much Are You Donating to Cloud SaaS Every Year?
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Cloud vendors lock your business into eternal monthly rent for software that could run on your own CPU for free. Adjust the sliders to see what your firm saves with perpetual offline ownership.
+            </p>
+          </div>
+          <div class="shrink-0 flex items-center gap-2 font-mono text-xs text-slate-300 bg-[#050a16] px-4 py-2.5 rounded-xl border border-cyan-500/20">
+            <span class="text-emerald-400 font-bold">&#10003;</span>
+            <span>Guaranteed /mo Recurring Fees</span>
+          </div>
+        </div>
+
+        <!-- Sliders and Results Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+          <!-- Left Controls (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Workstations Slider -->
+            <div class="space-y-3 bg-[#080f24] p-5 rounded-2xl border border-cyan-500/20">
+              <div class="flex items-center justify-between">
+                <label for="seats-slider" class="text-sm font-bold text-white font-heading flex items-center gap-2">
+                  <span>Workstations in Your Firm:</span>
+                  <span id="seats-display" class="px-2.5 py-0.5 rounded-md bg-cyan-950 text-cyan-300 font-mono text-sm border border-cyan-500/40">5 Seats</span>
+                </label>
+                <span class="text-[11px] font-mono text-slate-400">1 to 50 Workstations</span>
+              </div>
+              <input id="seats-slider" type="range" min="1" max="50" value="5" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400" oninput="calculateRoi()" />
+              <div class="flex justify-between text-[10px] font-mono text-slate-500">
+                <span>1 Solo Practitioner</span>
+                <span>10 Boutique Firm</span>
+                <span>25 Mid-Sized Org</span>
+                <span>50 Enterprise</span>
+              </div>
+            </div>
+
+            <!-- Time Horizon Selector -->
+            <div class="space-y-3 bg-[#080f24] p-5 rounded-2xl border border-cyan-500/20">
+              <div class="text-sm font-bold text-white font-heading">Evaluation Time Horizon:</div>
+              <div class="grid grid-cols-3 gap-3">
+                <button type="button" onclick="setTimeHorizon(1)" id="horizon-1" class="py-2.5 px-3 rounded-xl border border-cyan-500/20 bg-[#0c1529] text-xs font-mono font-bold text-slate-300 hover:text-white transition cursor-pointer">1 Year (12 Mo)</button>
+                <button type="button" onclick="setTimeHorizon(3)" id="horizon-3" class="py-2.5 px-3 rounded-xl border border-cyan-500/60 bg-cyan-950/70 text-xs font-mono font-bold text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.25)] transition cursor-pointer">3 Years (36 Mo)</button>
+                <button type="button" onclick="setTimeHorizon(5)" id="horizon-5" class="py-2.5 px-3 rounded-xl border border-cyan-500/20 bg-[#0c1529] text-xs font-mono font-bold text-slate-300 hover:text-white transition cursor-pointer">5 Years (60 Mo)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Result Cards (5 cols) -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+            <!-- Comparison Block -->
+            <div class="p-6 rounded-2xl bg-[#080f24] border border-cyan-500/20 space-y-4">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-xs font-mono text-slate-400">Recurring Cloud SaaS Rent:</span>
+                <span id="saas-total" class="text-lg font-black font-mono text-rose-400">$32,400 USD</span>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <span class="text-xs font-mono text-slate-400">RQL Sovereign One-Time Ownership:</span>
+                <span id="rql-total" class="text-lg font-black font-mono text-cyan-300">$895 USD</span>
+              </div>
+              <!-- Net Cash Saved Badge -->
+              <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-950/80 to-[#041c14] border border-emerald-500/40 text-center space-y-1">
+                <div class="text-[10px] font-mono uppercase tracking-widest text-emerald-300 font-bold">Total Cash Kept in Your Bank</div>
+                <div id="savings-total" class="text-3xl sm:text-4xl font-extrabold font-heading text-emerald-400 tracking-tight">$31,505 USD</div>
+                <div class="text-[11px] font-mono text-emerald-300/80 pt-0.5">Zero monthly invoices &bull; 100% offline security</div>
+              </div>
+            </div>
+
+            <a href="#products-grid" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-cyan-600 hover:from-cyan-500 to-blue-600 text-white font-heading font-extrabold text-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(6,182,212,0.3)] transition hover:scale-101">
+              <span>Choose Your Workstations Below</span>
+              <span>&darr;</span>
+            </a>
           </div>
         </div>
       </div>
@@ -1896,14 +1964,14 @@ document.addEventListener('keydown', function(e) {
           </button>
         </div>
       </div>
-      <!-- Product Card 6: RQL HashCheck™ -->
+      <!-- Product Card 6: RQL HashCheck&trade; -->
       <div class="bg-white border-2 border-sky-300/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-gradient-to-r from-sky-700 to-cyan-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-          🛡️ CRYPTOGRAPHIC INTEGRITY VERIFIER
+          &#128737; CRYPTOGRAPHIC INTEGRITY VERIFIER
         </div>
         <div>
           <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-            <img src="HashCheck_Cover_1080p.png" alt="RQL HashCheck™ Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="HashCheck_Cover_1080p.png" alt="RQL HashCheck&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
               Verifier v1.0
             </div>
@@ -1918,20 +1986,20 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
               <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
-              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
+              <span>PERPETUAL COMMERCIAL LICENSE &bull; ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
-              RQL HashCheck™
+              RQL HashCheck&trade;
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Offline Cryptographic Checksum &amp; Integrity Verifier: Drop any downloaded file in, paste the code from the website, and know in one second if it's authentic or corrupted. Single-pass parallel streaming with zero cloud telemetry.
             </p>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
-              <button onclick="openEvaluationModal('RQL HashCheck™', 'Offline Cryptographic Checksum Verifier', 'HashCheck_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+              <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', 'HashCheck_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) &#8599;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
-              64-bit Windows portable binary • Zero cloud telemetry • 7-day unconditional money-back guarantee.
+              64-bit Windows portable binary &bull; Zero cloud telemetry &bull; 7-day unconditional money-back guarantee.
             </p>
             <div class="pt-3 border-t border-slate-100 text-xs font-mono text-slate-600 space-y-1.5">
               <div class="flex items-center gap-2"><span class="text-emerald-600 font-bold">&#10003;</span> <span>Single-Pass Parallel Streaming: SHA-256, SHA-512 &amp; MD5</span></div>
@@ -1945,7 +2013,7 @@ document.addEventListener('keydown', function(e) {
             <div>
               <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
               <div class="text-base font-extrabold text-slate-900 font-mono">$39 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;3,250</span></div>
-              <div class="text-[10px] font-mono text-sky-700 mt-1 font-semibold">⚡ Replaces Cloud Tools ($60/yr) &bull; Save $141+ over 3 yrs</div>
+              <div class="text-[10px] font-mono text-sky-700 mt-1 font-semibold">&#9889; Replaces Cloud Tools ($60/yr) &bull; Save $141+ over 3 yrs</div>
             </div>
             <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
               Pay Once, Own Forever
@@ -1966,14 +2034,14 @@ document.addEventListener('keydown', function(e) {
           </button>
         </div>
       </div>
-      <!-- Product Card 7: RQL QRStudio™ -->
+      <!-- Product Card 7: RQL QRStudio&trade; -->
       <div class="bg-white border-2 border-violet-300/80 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-gradient-to-r from-violet-700 to-purple-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
-          🎨 VECTOR QR &amp; BARCODE STUDIO
+          &#55356;&#57256; VECTOR QR &amp; BARCODE STUDIO
         </div>
         <div>
           <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-            <img src="QRStudio_Cover_1080p.png" alt="RQL QRStudio™ Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="QRStudio_Cover_1080p.png" alt="RQL QRStudio&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
               Vector Studio v1.0
             </div>
@@ -1988,10 +2056,10 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-mono font-bold">
               <i class="w-3 h-3 text-emerald-600" data-lucide="check-circle-2"></i>
-              <span>PERPETUAL COMMERCIAL LICENSE • ZERO SAAS RENT</span>
+              <span>PERPETUAL COMMERCIAL LICENSE &bull; ZERO SAAS RENT</span>
             </div>
             <h3 class="text-2xl font-bold font-heading text-slate-900 group-hover:text-violet-600 transition">
-              RQL QRStudio™
+              RQL QRStudio&trade;
             </h3>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Permanent Offline Vector QR Code &amp; Custom Barcode Studio: Infinite-resolution SVG vector exports, center brand logo engine, 9 multi-protocol presets (URL, Wi-Fi, vCard, UPI), and zero expiring cloud redirects.
@@ -2003,10 +2071,10 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-indigo-600" data-lucide="download"></i> TRIAL BUILD:</span>
-              <button onclick="openEvaluationModal('RQL QRStudio™', 'Offline Vector QR &amp; Barcode Studio', 'QRStudio_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) ↗</button>
+              <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', 'QRStudio_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-indigo-600 hover:text-indigo-800 font-bold underline cursor-pointer text-[11px]">Free Evaluation (.exe) &#8599;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
-              64-bit Windows portable binary • Zero cloud redirects • 7-day unconditional money-back guarantee.
+              64-bit Windows portable binary &bull; Zero cloud redirects &bull; 7-day unconditional money-back guarantee.
             </p>
           </div>
         </div>
@@ -2015,7 +2083,7 @@ document.addEventListener('keydown', function(e) {
             <div>
               <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
               <div class="text-base font-extrabold text-slate-900 font-mono">$79 USD <span class="text-xs text-slate-500 font-normal">/ &#8377;6,500</span></div>
-              <div class="text-[10px] font-mono text-violet-700 mt-1 font-semibold">⚡ Replaces QR Cloud SaaS ($420/yr) &bull; Save $1,181+ over 3 yrs</div>
+              <div class="text-[10px] font-mono text-violet-700 mt-1 font-semibold">&#9889; Replaces QR Cloud SaaS ($420/yr) &bull; Save $1,181+ over 3 yrs</div>
             </div>
             <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
               Pay Once, Own Forever
@@ -3777,33 +3845,7 @@ function sendHwidViaWhatsApp() {
 
 
 
-<script>
-// Standalone Cookie Consent Handlers
-window.acceptCookies = function() {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) {
-        try {
-            localStorage.setItem('cookie_consent_accepted', 'true');
-        } catch (e) {}
-        banner.style.opacity = '0';
-        banner.style.pointerEvents = 'none';
-        setTimeout(() => banner.remove(), 250);
-    }
-};
 
-window.dismissCookies = function() {
-    window.acceptCookies();
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    try {
-        if (localStorage.getItem('cookie_consent_accepted') === 'true') {
-            const banner = document.getElementById('cookie-banner');
-            if (banner) banner.remove();
-        }
-    } catch (e) {}
-});
-</script>
 
 
     <!-- ======================================================== -->
@@ -4044,6 +4086,160 @@ document.addEventListener('DOMContentLoaded', () => {
     initSpotlight();
   }
 })();
+</script>
+<!-- ========================================================================== -->
+<!-- INSTITUTIONAL COMMAND PALETTE (CTRL+K / CMD+K)                            -->
+<!-- ========================================================================== -->
+<div id="cmd-palette-backdrop" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-start justify-center pt-20 sm:pt-28 px-4" onclick="closeCmdPalette()">
+  <div class="bg-[#080e1e] border-2 border-cyan-500/40 rounded-3xl max-w-2xl w-full p-4 sm:p-6 shadow-[0_0_50px_rgba(6,182,212,0.3)] text-white transform transition-all animate-in fade-in zoom-in-95 duration-150 relative" onclick="event.stopPropagation()">
+    <!-- Header with Search Input -->
+    <div class="flex items-center gap-3 pb-3 border-b border-cyan-500/20">
+      <svg class="w-5 h-5 text-cyan-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="cmd-palette-input" type="text" placeholder="Search 20 workstations, specs, or licenses... (e.g., pdf, speech, pos, diff)" class="w-full bg-transparent text-sm sm:text-base text-white placeholder-slate-500 outline-none font-mono" oninput="filterCmdPalette()" />
+      <span class="text-[10px] font-mono text-slate-400 bg-slate-900 border border-slate-700 px-2 py-1 rounded-md shrink-0">ESC to exit</span>
+    </div>
+
+    <!-- Quick Results List (Scrollable) -->
+    <div id="cmd-palette-results" class="max-h-80 overflow-y-auto mt-3 space-y-1.5 pr-1 font-mono text-xs">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Footer Shortcuts -->
+    <div class="pt-3 mt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+      <span>Type workstation name or keyword</span>
+      <span>Press <kbd class="px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-emerald-300">ESC</kbd> to close</span>
+    </div>
+  </div>
+</div>
+
+<!-- ROI Calculator & Command Palette Controller Scripts -->
+<script>
+let currentHorizon = 3; // default 3 years
+
+function setTimeHorizon(years) {
+  currentHorizon = years;
+  [1, 3, 5].forEach(y => {
+    const btn = document.getElementById('horizon-' + y);
+    if (!btn) return;
+    if (y === years) {
+      btn.className = "py-2.5 px-3 rounded-xl border border-cyan-500/60 bg-cyan-950/70 text-xs font-mono font-bold text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.25)] transition cursor-pointer";
+    } else {
+      btn.className = "py-2.5 px-3 rounded-xl border border-cyan-500/20 bg-[#0c1529] text-xs font-mono font-bold text-slate-300 hover:text-white transition cursor-pointer";
+    }
+  });
+  calculateRoi();
+}
+
+function calculateRoi() {
+  const slider = document.getElementById('seats-slider');
+  const display = document.getElementById('seats-display');
+  const saasEl = document.getElementById('saas-total');
+  const rqlEl = document.getElementById('rql-total');
+  const savingsEl = document.getElementById('savings-total');
+
+  if (!slider) return;
+  const seats = parseInt(slider.value, 10);
+  if (display) display.textContent = seats + (seats === 1 ? ' Seat' : ' Seats');
+
+  // Cloud SaaS benchmark: /mo per seat across Adobe + Speech + POS
+  const months = currentHorizon * 12;
+  const saasTotal = seats * 180 * months;
+  // Sovereign one-time license: avg  per seat once forever
+  const rqlTotal = seats * 179;
+  const savings = Math.max(0, saasTotal - rqlTotal);
+
+  const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  if (saasEl) saasEl.textContent = formatter.format(saasTotal) + ' USD';
+  if (rqlEl) rqlEl.textContent = formatter.format(rqlTotal) + ' USD';
+  if (savingsEl) savingsEl.textContent = formatter.format(savings) + ' USD';
+}
+
+// 20 Workstations Index for Command Palette
+const RQL_SUITES_INDEX = [
+  { id: 'rql-documentshield', name: 'RQL DocumentShield', tag: 'Forensic PDF Redaction', price: '', link: 'https://quantify17.gumroad.com/l/rql-documentshield' },
+  { id: 'rql-whispervault', name: 'RQL WhisperVault', tag: 'Offline Speech AI', price: '', link: 'https://quantify17.gumroad.com/l/rql-whispervault' },
+  { id: 'rql-retailpos', name: 'RQL Retail POS', tag: 'Sub-1ms Barcode Checkout', price: '', link: 'https://quantify17.gumroad.com/l/rql-retailpos' },
+  { id: 'rql-storechain', name: 'RQL StoreChain', tag: 'Distributed Retail Sync', price: '', link: 'https://quantify17.gumroad.com/l/rql-storechain' },
+  { id: 'rql-conduit', name: 'RQL Conduit', tag: 'Multi-WAN Bonding Engine', price: '', link: 'https://quantify17.gumroad.com/l/rql-conduit' },
+  { id: 'rql-hashcheck', name: 'RQL HashCheck', tag: 'Cryptographic Integrity', price: '', link: 'https://quantify17.gumroad.com/l/rql-hashcheck' },
+  { id: 'rql-qrstudio', name: 'RQL QRStudio', tag: 'High-Density SVG QR', price: '', link: 'https://quantify17.gumroad.com/l/rql-qrstudio' },
+  { id: 'rql-textdiff', name: 'RQL TextDiff', tag: 'Myers Vector Diff Engine', price: '', link: 'https://quantify17.gumroad.com/l/rql-textdiff' },
+  { id: 'rql-renamer', name: 'RQL Renamer', tag: 'Regex Batch File Renamer', price: '', link: 'https://quantify17.gumroad.com/l/rql-renamer' },
+  { id: 'rql-tageditor', name: 'RQL TagEditor', tag: 'FLAC & MP3 ID3 Editor', price: '', link: 'https://quantify17.gumroad.com/l/rql-tageditor' },
+  { id: 'rql-fontviewer', name: 'RQL FontViewer', tag: 'Typographic Inspection', price: '', link: 'https://quantify17.gumroad.com/l/rql-fontviewer' },
+  { id: 'rql-dpdpshield', name: 'RQL DPDPShield', tag: 'India DPDP Compliance', price: '', link: 'https://quantify17.gumroad.com/l/rql-dpdpshield' },
+  { id: 'rql-pricetag', name: 'RQL PriceTag', tag: 'Shelf Edge Thermal Label', price: '', link: 'https://quantify17.gumroad.com/l/rql-pricetag' },
+  { id: 'rql-invoicegen', name: 'RQL InvoiceGen', tag: 'GST & VAT Invoicing', price: '', link: 'https://quantify17.gumroad.com/l/rql-invoicegen' },
+  { id: 'rql-csvformat', name: 'RQL CSVFormat', tag: 'Multi-GB CSV Validator', price: '', link: 'https://quantify17.gumroad.com/l/rql-csvformat' },
+  { id: 'rql-pdfmerge', name: 'RQL PDFMerge', tag: 'Zero-Cloud PDF Split/Merge', price: '', link: 'https://quantify17.gumroad.com/l/rql-pdfmerge' },
+  { id: 'rql-taxledger', name: 'RQL TaxLedger', tag: 'Double-Entry Accounting', price: '', link: 'https://quantify17.gumroad.com/l/rql-taxledger' },
+  { id: 'rql-fileshredder', name: 'RQL FileShredder', tag: 'DoD 5220 Military Purge', price: '', link: 'https://quantify17.gumroad.com/l/rql-fileshredder' },
+  { id: 'rql-clipvault', name: 'RQL ClipVault', tag: 'Encrypted Clipboard Vault', price: '', link: 'https://quantify17.gumroad.com/l/rql-clipvault' },
+  { id: 'rql-imagebatch', name: 'RQL ImageBatch', tag: 'SIMD Multi-Core Resizer', price: '', link: 'https://quantify17.gumroad.com/l/rql-imagebatch' }
+];
+
+function openCmdPalette() {
+  const modal = document.getElementById('cmd-palette-backdrop');
+  const input = document.getElementById('cmd-palette-input');
+  if (!modal || !input) return;
+  modal.classList.remove('hidden');
+  input.value = '';
+  filterCmdPalette();
+  setTimeout(() => input.focus(), 50);
+}
+
+function closeCmdPalette() {
+  const modal = document.getElementById('cmd-palette-backdrop');
+  if (modal) modal.classList.add('hidden');
+}
+
+function filterCmdPalette() {
+  const input = document.getElementById('cmd-palette-input');
+  const container = document.getElementById('cmd-palette-results');
+  if (!input || !container) return;
+  const q = input.value.trim().toLowerCase();
+  const matches = RQL_SUITES_INDEX.filter(item => {
+    return !q || item.name.toLowerCase().includes(q) || item.tag.toLowerCase().includes(q) || item.id.toLowerCase().includes(q);
+  });
+
+  if (matches.length === 0) {
+    container.innerHTML = '<div class="p-4 text-center text-slate-500 font-mono">No matching workstations found. Try "pdf", "pos", or "speech".</div>';
+    return;
+  }
+
+  container.innerHTML = matches.map(m => 
+    <a href=" + m.link + " target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3 rounded-xl bg-[#0c1529] hover:bg-[#111e3f] border border-cyan-500/20 hover:border-cyan-400/50 transition group">
+      <div>
+        <div class="text-white font-bold group-hover:text-cyan-300 transition"> + m.name + </div>
+        <div class="text-[11px] text-slate-400"> + m.tag + </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 text-xs font-bold font-mono"> + m.price + </span>
+        <span class="text-cyan-400 group-hover:translate-x-0.5 transition">&rarr;</span>
+      </div>
+    </a>
+  ).join('');
+}
+
+// Global Keyboard Listener for Ctrl+K / Cmd+K / Esc
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    const modal = document.getElementById('cmd-palette-backdrop');
+    if (modal && !modal.classList.contains('hidden')) {
+      closeCmdPalette();
+    } else {
+      openCmdPalette();
+    }
+  } else if (e.key === 'Escape') {
+    closeCmdPalette();
+  }
+});
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  calculateRoi();
+});
 </script>
 </body>
 </html>
