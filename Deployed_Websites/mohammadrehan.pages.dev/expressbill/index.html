@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="ExpressBill POS">
-    <title>ExpressBill Mobile POS™ - 100% Offline PWA</title>
+    <title>ExpressBill Mobile POS&#8482; - 100% Offline PWA</title>
     <link rel="manifest" href="./manifest.json">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -336,7 +336,7 @@
     <!-- Top Header -->
     <header class="top-header">
         <div>
-            <div class="brand-title">⚡ ExpressBill POS</div>
+            <div class="brand-title">&#9889; ExpressBill POS</div>
             <div class="brand-subtitle" id="live-clock">...</div>
         </div>
         <div class="header-status">
@@ -347,7 +347,7 @@
     <!-- Tab 1: POS Billing Counter -->
     <main class="tab-content active" id="tab-billing">
         <div class="search-box">
-            <span>🔍</span>
+            <span>&#55357;&#56589;</span>
             <input type="text" id="catalog-search" placeholder="Search item or scan barcode..." oninput="filterCatalog()">
         </div>
 
@@ -361,16 +361,16 @@
         <div class="metrics-grid">
             <div class="metric-card hero">
                 <div class="metric-label">Today's Sales Total</div>
-                <div class="metric-val" id="today-total-val">₹ 0.00</div>
+                <div class="metric-val" id="today-total-val">&#8377; 0.00</div>
                 <div style="font-size: 12px; margin-top: 4px;" id="today-bills-count">0 bills generated</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Cash Collected</div>
-                <div class="metric-val green" id="today-cash-val">₹ 0.00</div>
+                <div class="metric-val green" id="today-cash-val">&#8377; 0.00</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">UPI Payments</div>
-                <div class="metric-val" style="color: var(--primary);" id="today-upi-val">₹ 0.00</div>
+                <div class="metric-val" style="color: var(--primary);" id="today-upi-val">&#8377; 0.00</div>
             </div>
         </div>
 
@@ -386,19 +386,19 @@
         <!-- 4 Full-Width KPI Stats Cards -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px;">
             <div class="metric-card">
-                <div class="metric-label">📦 Total Catalog SKUs</div>
+                <div class="metric-label">&#55357;&#56550; Total Catalog SKUs</div>
                 <div class="metric-val" id="inv-total-skus">0 Items</div>
             </div>
             <div class="metric-card">
-                <div class="metric-label">📊 Current Total Stock</div>
+                <div class="metric-label">&#55357;&#56522; Current Total Stock</div>
                 <div class="metric-val" style="color: var(--primary);" id="inv-total-units">0 Units</div>
             </div>
             <div class="metric-card">
-                <div class="metric-label">💰 Total Stock Valuation</div>
-                <div class="metric-val" style="color: var(--success);" id="inv-total-valuation">₹ 0.00</div>
+                <div class="metric-label">&#55357;&#56496; Total Stock Valuation</div>
+                <div class="metric-val" style="color: var(--success);" id="inv-total-valuation">&#8377; 0.00</div>
             </div>
             <div class="metric-card">
-                <div class="metric-label">⚠️ Low Stock Alerts</div>
+                <div class="metric-label">&#9888;&#65039; Low Stock Alerts</div>
                 <div class="metric-val" style="color: #10b981;" id="inv-low-alerts">0 (Healthy)</div>
             </div>
         </div>
@@ -411,7 +411,7 @@
                     <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">Real-time inventory valuation and one-click rapid counter adjustments</div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 8px;">
-                    <input type="text" id="inv-search-input" placeholder="🔍 Search SKU, Product..." oninput="renderStockList()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; width: 240px; outline: none; background: var(--bg-card); color: var(--text-main);">
+                    <input type="text" id="inv-search-input" placeholder="&#55357;&#56589; Search SKU, Product..." oninput="renderStockList()" style="padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; width: 240px; outline: none; background: var(--bg-card); color: var(--text-main);">
                 </div>
             </div>
             <div style="overflow-x: auto;">
@@ -438,12 +438,12 @@
     <!-- Tab 4: Sync & PWA -->
     <section class="tab-content" id="tab-settings">
         <div class="metric-card" style="margin-bottom: 16px;">
-            <div style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">📱 Progressive Web App (PWA)</div>
+            <div style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">&#55357;&#56561; Progressive Web App (PWA)</div>
             <p style="font-size: 13px; color: var(--text-muted); line-height: 1.4;">
                 This app runs offline on your Android phone, iPhone, or iPad. Add it to your home screen for full-screen touch POS.
             </p>
             <button id="pwa-install-btn" style="background: var(--primary); color: #fff; border: none; padding: 12px 16px; border-radius: 10px; font-weight: 700; width: 100%; margin-top: 12px; cursor: pointer;">
-                📲 Install App on Phone
+                &#55357;&#56562; Install App on Phone
             </button>
         </div>
 
@@ -453,7 +453,7 @@
                 Link to Laptop POS: <strong>http://192.168.1.20:8080</strong>
             </div>
             <button onclick="syncWithDesktop()" style="background: var(--bg-page); border: 1px solid var(--border); padding: 10px 14px; border-radius: 8px; font-weight: 700; width: 100%; cursor: pointer;">
-                🔄 Test Laptop POS Sync
+                &#55357;&#56580; Test Laptop POS Sync
             </button>
         </div>
     </section>
@@ -462,16 +462,16 @@
     <div class="cart-pill" id="cart-pill" onclick="openCheckoutSheet()">
         <div>
             <span style="font-size: 13px; opacity: 0.8;" id="cart-pill-count">0 items</span>
-            <div class="cart-pill-total" id="cart-pill-total">₹ 0.00</div>
+            <div class="cart-pill-total" id="cart-pill-total">&#8377; 0.00</div>
         </div>
-        <div class="cart-pill-btn">View Bill ➔</div>
+        <div class="cart-pill-btn">View Bill &#10132;</div>
     </div>
 
     <!-- Bottom Checkout Sheet -->
     <div class="sheet-overlay" id="checkout-overlay">
         <div class="sheet">
             <div class="sheet-header">
-                <div class="sheet-title">🛒 Bill Summary</div>
+                <div class="sheet-title">&#55357;&#57042; Bill Summary</div>
                 <button class="sheet-close" onclick="closeCheckoutSheet()">&times;</button>
             </div>
 
@@ -486,9 +486,9 @@
 
             <div style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Payment Method:</div>
             <div class="pay-chips">
-                <div class="pay-chip active" id="chip-cash" onclick="selectPayment('Cash')">💵 Cash</div>
-                <div class="pay-chip" id="chip-upi" onclick="selectPayment('UPI')">📱 UPI</div>
-                <div class="pay-chip" id="chip-card" onclick="selectPayment('Card')">💳 Card</div>
+                <div class="pay-chip active" id="chip-cash" onclick="selectPayment('Cash')">&#55357;&#56501; Cash</div>
+                <div class="pay-chip" id="chip-upi" onclick="selectPayment('UPI')">&#55357;&#56561; UPI</div>
+                <div class="pay-chip" id="chip-card" onclick="selectPayment('Card')">&#55357;&#56499; Card</div>
             </div>
 
             <div class="upi-qr-card" id="upi-qr-box">
@@ -499,7 +499,7 @@
 
             <button class="charge-btn" onclick="submitInvoice()">
                 <span>Confirm & Generate Bill</span>
-                <span id="charge-total-btn">₹ 0.00</span>
+                <span id="charge-total-btn">&#8377; 0.00</span>
             </button>
         </div>
     </div>
@@ -507,7 +507,7 @@
     <!-- Receipt Modal -->
     <div class="receipt-modal" id="receipt-modal">
         <div class="receipt-card">
-            <div style="font-size: 28px;">🎉</div>
+            <div style="font-size: 28px;">&#55356;&#57225;</div>
             <div style="font-size: 18px; font-weight: 800; margin: 4px 0;" id="modal-bill-num">Invoice #INV-1001</div>
             <div style="font-size: 12px; color: var(--text-muted);">Recorded Successfully in Offline Storage</div>
 
@@ -515,10 +515,10 @@
 
             <div style="display: flex; gap: 8px;">
                 <button onclick="shareWhatsApp()" style="flex: 1; background: #25d366; color: #fff; border: none; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer;">
-                    📲 WhatsApp
+                    &#55357;&#56562; WhatsApp
                 </button>
                 <button onclick="printReceipt()" style="flex: 1; background: #0284c7; color: #fff; border: none; padding: 12px; border-radius: 10px; font-weight: 700; cursor: pointer;">
-                    🖨️ Print
+                    &#55357;&#56744;&#65039; Print
                 </button>
             </div>
             <button onclick="closeReceiptModal()" style="margin-top: 10px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-weight: 700; cursor: pointer;">
@@ -530,25 +530,25 @@
     <!-- Bottom Navigation Bar -->
     <nav class="bottom-nav">
         <div class="nav-item active" onclick="switchTab('billing', this)">
-            <div class="nav-icon">🛒</div>
+            <div class="nav-icon">&#55357;&#57042;</div>
             <div>Counter</div>
         </div>
         <div class="nav-item" onclick="switchTab('invoices', this)">
-            <div class="nav-icon">📋</div>
+            <div class="nav-icon">&#55357;&#56523;</div>
             <div>Bills</div>
         </div>
         <div class="nav-item" onclick="switchTab('inventory', this)">
-            <div class="nav-icon">📦</div>
+            <div class="nav-icon">&#55357;&#56550;</div>
             <div>Stock</div>
         </div>
         <div class="nav-item" onclick="switchTab('settings', this)">
-            <div class="nav-icon">⚡</div>
+            <div class="nav-icon">&#9889;</div>
             <div>Sync</div>
         </div>
     </nav>
 
     <script>
-        const CURRENCY = "₹";
+        const CURRENCY = "&#8377;";
         let catalog = [
             { sku: 'MILK-01', name: 'Fresh Milk 1L', price: '66.00', price_minor: 6600, tax_bp: 0, stock: '50 pcs' },
             { sku: 'BREAD-01', name: 'Whole Wheat Bread', price: '45.00', price_minor: 4500, tax_bp: 0, stock: '30 pcs' },
@@ -590,7 +590,7 @@
                 await deferredPrompt.userChoice;
                 deferredPrompt = null;
             } else {
-                alert("To install on iOS: Tap Share ➔ 'Add to Home Screen'.\nOn Android: Tap Menu (3 dots) ➔ 'Install App'.");
+                alert("To install on iOS: Tap Share &#10132; 'Add to Home Screen'.\nOn Android: Tap Menu (3 dots) &#10132; 'Install App'.");
             }
         });
 
@@ -818,7 +818,7 @@
                 <div class="invoice-card" style="display: flex; justify-content: space-between; align-items: center;">
                     <div onclick='showReceiptModal(${JSON.stringify(inv)})' style="flex: 1; cursor: pointer;">
                         <div style="font-weight: 800; font-size: 14px;">${inv.number}</div>
-                        <div style="font-size: 12px; color: var(--text-muted);">${inv.customer} • ${inv.time}</div>
+                        <div style="font-size: 12px; color: var(--text-muted);">${inv.customer} &#8226; ${inv.time}</div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <div style="text-align: right; cursor: pointer;" onclick='showReceiptModal(${JSON.stringify(inv)})'>
@@ -826,7 +826,7 @@
                             <div style="font-size: 11px; font-weight: 700; color: var(--text-muted);">${inv.mode}</div>
                         </div>
                         <button onclick="voidOfflineInvoice('${inv.number}')" style="background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; padding: 6px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer;">
-                            🗑️ Void
+                            &#55357;&#56785;&#65039; Void
                         </button>
                     </div>
                 </div>
@@ -834,10 +834,10 @@
         }
 
         function voidOfflineInvoice(invNumber) {
-            const pin = prompt("🔒 ADMIN SECURITY AUTHORIZATION\nCustomer denied payment or refused bill.\nCashiers CANNOT delete bills.\nEnter 4-Digit Admin PIN (Default: 9999) to void:");
+            const pin = prompt("&#55357;&#56594; ADMIN SECURITY AUTHORIZATION\nCustomer denied payment or refused bill.\nCashiers CANNOT delete bills.\nEnter 4-Digit Admin PIN (Default: 9999) to void:");
             if (pin === null) return;
             if (pin.trim() !== "9999") {
-                alert("❌ ACCESS DENIED!\nInvalid Admin PIN. Only the Store Admin can delete bills.");
+                alert("&#10060; ACCESS DENIED!\nInvalid Admin PIN. Only the Store Admin can delete bills.");
                 return;
             }
 
@@ -857,7 +857,7 @@
                 });
             }
 
-            alert(`✅ Bill #${invNumber} VOIDED by Admin!\nItems returned to inventory stock.`);
+            alert(`&#9989; Bill #${invNumber} VOIDED by Admin!\nItems returned to inventory stock.`);
             renderInvoicesHistory();
             renderStockList();
             renderCatalog(catalog);
@@ -902,7 +902,7 @@
                             <td style="padding: 10px 8px; text-align: right; font-weight: 700;">${CURRENCY} ${it.price.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
                             <td style="padding: 10px 8px; text-align: right;">
                                 <span style="display: inline-block; padding: 2px 8px; border-radius: 6px; font-weight: 700; font-size: 12px; background: ${isLow ? '#fee2e2' : '#dcfce7'}; color: ${isLow ? '#dc2626' : '#16a34a'};">
-                                    ${isLow ? '⚠️' : '✓'} ${it.stock}
+                                    ${isLow ? '&#9888;&#65039;' : '&#10003;'} ${it.stock}
                                 </span>
                             </td>
                             <td style="padding: 10px 8px; text-align: right; font-weight: 700; color: var(--text-main);">${CURRENCY} ${stockVal.toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
@@ -930,12 +930,12 @@
             try {
                 const res = await fetch('http://192.168.1.20:8080/api/summary');
                 if (res.ok) {
-                    alert("✅ Connected to Laptop POS successfully!");
+                    alert("&#9989; Connected to Laptop POS successfully!");
                 } else {
-                    alert("⚠️ Laptop responded with error. Check if ExpressBill Desktop is open.");
+                    alert("&#9888;&#65039; Laptop responded with error. Check if ExpressBill Desktop is open.");
                 }
             } catch(e) {
-                alert("ℹ️ Laptop POS offline or not reachable. Running 100% offline via phone storage!");
+                alert("&#8505;&#65039; Laptop POS offline or not reachable. Running 100% offline via phone storage!");
             }
         }
 
@@ -946,7 +946,7 @@
         <!-- FLOATING COMMERCIAL CTA BANNER -->
         <div style="position: fixed; bottom: 16px; left: 16px; right: 16px; z-index: 9999; max-width: 650px; margin: 0 auto; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(16px); border: 2px solid rgba(16, 185, 129, 0.5); border-radius: 18px; padding: 12px 18px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: space-between; gap: 12px; color: white;">
             <div>
-                <div style="font-size: 11px; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">⚡ EXPRESSBILL POS™ — INTERACTIVE DEMO</div>
+                <div style="font-size: 11px; font-weight: 700; color: #34d399; text-transform: uppercase; letter-spacing: 0.05em;">&#9889; EXPRESSBILL POS&#8482; &#8212; INTERACTIVE DEMO</div>
                 <div style="font-size: 13px; font-weight: 600; color: #f1f5f9;">Own the Perpetual License ($49 / &#8377;3,999)</div>
             </div>
             <div style="display: flex; gap: 8px;">
@@ -960,7 +960,7 @@
         </div>
         
 
-<!-- 🔒 SECURE DUAL-CHECKOUT & UPI MODAL (VERIFIED PAYEE: rehanquantlab@upi) -->
+<!-- &#55357;&#56594; SECURE DUAL-CHECKOUT & UPI MODAL (VERIFIED PAYEE: rehanquantlab@upi) -->
 <div id="secure-upi-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="bg-slate-900 border-2 border-emerald-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl text-white relative max-h-[92vh] overflow-y-auto">
         <!-- Close Button -->
@@ -971,10 +971,10 @@
         <div class="text-center space-y-3">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                🔒 Verified Direct Settlement &bull; Zero Platform Fee
+                &#55357;&#56594; Verified Direct Settlement &bull; Zero Platform Fee
             </div>
             
-            <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">ExpressBill POS™ Lifetime License</h3>
+            <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">ExpressBill POS&#8482; Lifetime License</h3>
             <p class="text-xs text-slate-300">Choose your preferred checkout method below:</p>
 
             <!-- TRACK 1: GUMROAD INTERNATIONAL CARD / PAYPAL -->
@@ -985,7 +985,7 @@
                 </div>
                 <p class="text-[11px] text-slate-400">Credit / Debit Cards, Apple Pay &amp; PayPal with instant automated ZIP delivery.</p>
                 <a href="https://quantify17.gumroad.com/l/ExpressBill" data-gumroad-single-product="true" class="gumroad-button block w-full text-center py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs font-mono transition shadow-md shadow-sky-600/20 btn-spring">
-                    💳 Pay $49 via Gumroad (Cards / PayPal)
+                    &#55357;&#56499; Pay $49 via Gumroad (Cards / PayPal)
                 </a>
             </div>
 
@@ -1019,7 +1019,7 @@
 
                 <!-- Mobile 1-Click UPI Deep-link (Opens GPay/PhonePe directly on mobile) -->
                 <a href="upi://pay?pa=rehanquantlab@upi&pn=Mohammad%20Rehan&am=3999&cu=INR&tn=ExpressBill%20POS%20Lifetime%20License" class="md:hidden block w-full py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-center font-bold rounded-xl shadow-md text-xs font-mono transition">
-                    📲 Pay &#8377;3,999 on Mobile App
+                    &#55357;&#56562; Pay &#8377;3,999 on Mobile App
                 </a>
 
                 <!-- WhatsApp Verification Dispatch Button -->
