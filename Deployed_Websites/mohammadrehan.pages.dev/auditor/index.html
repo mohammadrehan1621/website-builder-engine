@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
@@ -1733,7 +1733,7 @@
       </div>
     </div>
 
-      <!-- 27. OPTICAL FIBER TRANSIT & UNDERSEA LINK MONITORING (QUANTUM & COSMIC) -->
+      <!-- 27. OPTICAL FIBER TRANSIT & UNDERSEA LINK MONITORING (TELEMETRY & FIBER SENSING) -->
     <div id="photonSpaceEdfaSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
         <div class="flex items-center gap-2.5">
@@ -2589,7 +2589,7 @@
       <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse"></span>
-          <span class="text-xs font-bold tracking-wider uppercase text-indigo-300">POST-QUANTUM CRYPTOGRAPHY &amp; BGP RPKI ROUTE HIJACK PROTECTION (QUANTUM PHYSICS &amp; LAYER 3)</span>
+          <span class="text-xs font-bold tracking-wider uppercase text-indigo-300">POST-QUANTUM CRYPTOGRAPHY &amp; BGP RPKI ROUTE HIJACK PROTECTION (ROA VERIFIED &amp; LAYER 3 ROUTING)</span>
         </div>
         <div class="flex items-center gap-2">
           <span id="pqcBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-800/50 font-bold">NIST ML-KEM Ready</span>
@@ -2598,9 +2598,9 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Metric 1: Quantum Encryption -->
+        <!-- Metric 1: NIST Post-Quantum Key Exchange -->
         <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
-          <span class="text-slate-400 text-[10px] uppercase block font-bold">Quantum Key Exchange:</span>
+          <span class="text-slate-400 text-[10px] uppercase block font-bold">NIST ML-KEM Key Exchange:</span>
           <div id="pqcStatusText" class="text-xs font-bold text-white truncate">ML-KEM / Kyber768</div>
           <span id="pqcHarvestRiskText" class="text-[10px] text-emerald-400 block font-semibold">Zero Decryption Threat</span>
         </div>
@@ -3174,7 +3174,7 @@
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Verification Authority:</span>
-            <span class="text-emerald-400 font-bold">Rehan Quant Lab&trade; Edge Sentinel (Node 5)</span>
+            <span class="text-emerald-400 font-bold">Rehan Quant Lab&trade; Edge Health Node (Node 5)</span>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Certified Architectural Upgrade:</span>
@@ -3888,7 +3888,7 @@
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
     <div class="card"><span style="font-size: 1.5rem;">&#129658;</span><h3 style="margin: 0.5rem 0; font-size: 1rem;">Clinical Review</h3><p style="color: ${muted}; font-size: 0.8rem;">1-on-1 personalized diagnostic session with verified specialist.</p><div style="margin-top: 0.75rem; font-weight: bold; color: ${primary};">&#8377;${fee} Token</div></div>
-    <div class="card"><span style="font-size: 1.5rem;">&#9889;</span><h3 style="margin: 0.5rem 0; font-size: 1rem;">Advanced ${category}</h3><p style="color: ${muted}; font-size: 0.8rem;">State-of-the-art technological procedures with zero hospital downtime.</p><div style="margin-top: 0.75rem; font-weight: bold; color: ${primary};">&#8377;${parseInt(fee) * 3} onwards</div></div>
+    <div class="card"><span style="font-size: 1.5rem;">&#9889;</span><h3 style="margin: 0.5rem 0; font-size: 1rem;">Advanced ${category}</h3><p style="color: ${muted}; font-size: 0.8rem;">Modern clinical procedures with zero patient downtime.</p><div style="margin-top: 0.75rem; font-weight: bold; color: ${primary};">&#8377;${parseInt(fee) * 3} onwards</div></div>
     <div class="card"><span style="font-size: 1.5rem;">&#128737;&#65039;</span><h3 style="margin: 0.5rem 0; font-size: 1rem;">Family Plan</h3><p style="color: ${muted}; font-size: 0.8rem;">Comprehensive annual health and checkup coverage for families.</p><div style="margin-top: 0.75rem; font-weight: bold; color: ${primary};">&#8377;1,500 Package</div></div>
   </div>
 
@@ -4354,7 +4354,7 @@
       const fiberFloorEl = document.getElementById('factFiberFloor');
       if (fiberFloorEl) fiberFloorEl.innerText = `${data.light_fiber_floor_ms || 1.47} ms`;
 
-      // Quantum Laser Conduit Telemetry Update
+      // Anycast Route Telemetry Update
       const fiberBadge = document.getElementById('fiberTelemetryBadge');
       if (fiberBadge) fiberBadge.innerText = `Physical Floor: ~${data.light_fiber_floor_ms || 1.47}ms &bull; ~204,000 km/s in Glass`;
 
@@ -5152,7 +5152,7 @@ TARGET: ${window.lastAuditData.url}
 PRIMARY IP: ${window.lastAuditData.primary_ip}
 TIMESTAMP: ${window.lastAuditData.audit_timestamp}
 SHA-256 WIRE FINGERPRINT: ${window.lastAuditData.audit_hash}
-CORE SUPERPOWER: "Turn any URL into cold physical evidence that sells high-speed native websites for you."
+PRIMARY CAPABILITY: "Audit any URL to verify physical wire latency, page weight, and server response time."
 ================================================================================\n\n`;
       const body = window.currentFlightLog.map(i => `[T+${i.t_ms}ms] [${i.event}] ${i.label}`).join('\n');
       const blob = new Blob([header + body], { type: "text/plain;charset=utf-8" });
@@ -5285,7 +5285,7 @@ CORE SUPERPOWER: "Turn any URL into cold physical evidence that sells high-speed
       } catch (e) {}
     }
 
-    // Interactive Quantum Silica Fiber Laser Conduit (60 FPS Wire Scene)
+    // Interactive Fiber Optical Signal Simulation (60 FPS Canvas Scene)
     let laserCanvas, laserCtx;
     let laserParticles = [];
     let laserAnimationId = null;
