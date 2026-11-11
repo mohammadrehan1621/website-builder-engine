@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="scroll-smooth" lang="en">
 <head>
@@ -20,6 +20,40 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 #chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
 
+/* Bento Card with Frosted Glass & Dynamic Spotlight */
+.bento-card {
+  position: relative;
+  background: rgba(12, 21, 41, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.20);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.55);
+  box-shadow: 0 20px 45px -12px rgba(6, 182, 212, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(6, 182, 212, 0.16), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bento-card:hover::before {
+  opacity: 1;
+}
+.bento-card > * {
+  position: relative;
+  z-index: 2;
+}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -131,7 +165,41 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
         }
 
-    </style>
+    /* Bento Card with Frosted Glass & Dynamic Spotlight */
+.bento-card {
+  position: relative;
+  background: rgba(12, 21, 41, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.20);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.55);
+  box-shadow: 0 20px 45px -12px rgba(6, 182, 212, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(6, 182, 212, 0.16), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bento-card:hover::before {
+  opacity: 1;
+}
+.bento-card > * {
+  position: relative;
+  z-index: 2;
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -567,6 +635,40 @@ img, svg, video, canvas, audio, iframe, embed, object {
   animation: aurora-drift-3 26s ease-in-out infinite alternate;
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
+/* Bento Card with Frosted Glass & Dynamic Spotlight */
+.bento-card {
+  position: relative;
+  background: rgba(12, 21, 41, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.20);
+  border-radius: 1.75rem;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.55);
+  box-shadow: 0 20px 45px -12px rgba(6, 182, 212, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px), rgba(6, 182, 212, 0.16), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bento-card:hover::before {
+  opacity: 1;
+}
+.bento-card > * {
+  position: relative;
+  z-index: 2;
+}
 </style>
 </head>
 <body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
@@ -1309,24 +1411,24 @@ document.addEventListener('keydown', function(e) {
 </section>
 <!-- WHAT I BUILD & FEATURED PROJECTS TEASER -->
 <!-- Section 3: 1-Click Master Setup Bundles -->
-<section class="py-14 sm:py-16 bg-slateCanvas border-t border-slate-200" id="projects">
+<section class="py-14 sm:py-16 bg-[#030712] border-t border-cyan-500/15 relative overflow-hidden" id="projects">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
       <div>
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-mono font-bold mb-2">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/70 border border-amber-500/30 text-amber-300 text-[11px] font-mono font-bold mb-2 shadow-[0_0_15px_rgba(245,158,11,0.2)]">
           <span> Desktop Engineering Flagships</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white tracking-tight">
           Featured Commercial Desktop Systems
         </h2>
-        <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed">
-          Official Windows Setup Wizards (<code class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-mono text-xs">Setup.exe</code>) &bull; Air-Gapped Workstations &bull; Lifetime Binary Ownership
+        <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl leading-relaxed">
+          Official Windows Setup Wizards (<code class="bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 px-1.5 py-0.5 rounded font-mono text-xs">Setup.exe</code>) &bull; Air-Gapped Workstations &bull; Lifetime Binary Ownership
         </p>
       </div>
       <div class="flex items-center gap-2 shrink-0">
-        <a class="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-900 bg-white border border-slate-300 hover:bg-slate-100 px-4 py-2.5 rounded-xl transition shadow-2xs" href="store.html">
+        <a class="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-300 bg-cyan-500/15 border border-cyan-500/30 hover:bg-cyan-500/25 px-4 py-2.5 rounded-xl transition shadow-[0_0_15px_rgba(6,182,212,0.2)]" href="store.html">
           <span>Explore 20 Commercial Suites</span>
           <span class="text-rose-600 font-bold">&rarr;</span>
         </a>
@@ -1334,15 +1436,15 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <!-- Featured Desktop Flagships & Commercial Store Gateway (Clean 3-Column Responsive Grid) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bento-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- MASTER SUITE 1: RQL DocumentShield&trade; Forensic Redaction OS -->
-        <div class="bg-gradient-to-b from-white to-rose-50/20 border-2 border-rose-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
-          <div class="absolute -top-3 left-6 bg-gradient-to-r from-rose-700 to-red-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+        <div class="bento-card relative rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xl transition-all duration-300 group" data-spotlight="true">
+          <div class="absolute -top-3 left-6 bg-gradient-to-r from-rose-600 to-red-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-[0_0_15px_rgba(225,29,72,0.35)]">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-[#050a16] border border-cyan-500/20 mb-4 mt-2 shadow-inner">
               <img src="18_RQL_DocumentShield_Cover_1080p.png" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Forensic OS v1.0
@@ -1353,38 +1455,38 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
-                <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="text-rose-400 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
+                <span class="shrink-0 whitespace-nowrap text-cyan-300 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
-              <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-rose-400 transition">
                 RQL DocumentShield&trade;
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Enterprise Forensic PDF Redaction &amp; Deep Metadata Removal Software: True permanent vector redaction, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.
+                Tired of paying Adobe $60 every month just to black out an SSN on a 2-page PDF? True permanent vector redaction and deep metadata purge in under 5ms &mdash; 100% offline on your own machine. Zero cloud telemetry.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-300 space-y-1">
                 <div>&#10003; True Permanent Vector &amp; Text Redaction</div>
                 <div>&#10003; Automated SSN, Tax EIN, Card &amp; Phone Scanner</div>
                 <div>&#10003; Court-Admissible SHA-256 Compliance Certificate</div>
               </div>
             </div>
           </div>
-          <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
-            <div class="p-3 rounded-2xl bg-rose-50/70 border border-rose-200 flex items-center justify-between">
+          <div class="pt-5 mt-4 border-t border-slate-800/80 space-y-3">
+            <div class="p-3 rounded-2xl bg-[#080f24] border border-cyan-500/20 flex items-center justify-between">
               <div>
-                <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Single Workstation Commercial License</div>
-                <div class="text-sm font-extrabold text-slate-900 font-mono">$179 <span class="text-xs text-slate-500 font-normal">/ &#8377;14,900</span></div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">Single Workstation Commercial License</div>
+                <div class="text-sm font-extrabold text-white font-mono">$179 <span class="text-xs text-slate-500 font-normal">/ &#8377;14,900</span></div>
               </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/40">
                 Air-Gapped Vault
               </span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-rose-600 hover:from-rose-500 to-red-600 text-white shadow-[0_0_15px_rgba(225,29,72,0.35)] font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBEb2N1bWVudFNoaWVsZCVFMiU4NCVBMiUyME1hc3RlciUyMFNldHVwJTIwKCQxNzklMjAvJTIwJUUyJTgyJUI5MTQsOTAwKS4lMjBQbGVhc2UlMjBhc3Npc3QlMjB3aXRoJTIwb25ib2FyZGluZy4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBEb2N1bWVudFNoaWVsZCVFMiU4NCVBMiUyME1hc3RlciUyMFNldHVwJTIwKCQxNzklMjAvJTIwJUUyJTgyJUI5MTQsOTAwKS4lMjBQbGVhc2UlMjBhc3Npc3QlMjB3aXRoJTIwb25ib2FyZGluZy4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-300 border border-emerald-500/40 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1392,12 +1494,12 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- MASTER SUITE 2: RQL WhisperVault&trade; Air-Gapped AI Voice Intelligence OS -->
-        <div class="bg-gradient-to-b from-white to-sky-50/20 border-2 border-sky-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
-          <div class="absolute -top-3 left-6 bg-gradient-to-r from-sky-700 to-blue-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+        <div class="bento-card relative rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xl transition-all duration-300 group" data-spotlight="true">
+          <div class="absolute -top-3 left-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.35)]">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-[#050a16] border border-cyan-500/20 mb-4 mt-2 shadow-inner">
               <img src="19_RQL_WhisperVault_Cover_1080p.png" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 AI Speech OS v1.0
@@ -1408,38 +1510,38 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
-                <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="text-cyan-400 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
+                <span class="shrink-0 whitespace-nowrap text-cyan-300 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
-              <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-cyan-300 transition">
                 RQL WhisperVault&trade;
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Air-Gapped AI Voice Intelligence &amp; Meeting Transcription OS: Powered by local Whisper AI with word-level SRT/VTT subtitle generation and executive PDF meeting reports.
+                Stop letting cloud AI listen to your confidential board meetings and client recordings. 100% offline local Whisper AI speech recognition with millisecond-accurate word subtitles and executive PDF reports.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-300 space-y-1">
                 <div>&#10003; 100% Offline Local Whisper AI (Zero Cloud Telemetry)</div>
                 <div>&#10003; Millisecond Word-Level Subtitles (.SRT / .VTT)</div>
                 <div>&#10003; Executive PDF Meeting Summaries &amp; SHA-256 Vault</div>
               </div>
             </div>
           </div>
-          <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
-            <div class="p-3 rounded-2xl bg-sky-50/70 border border-sky-200 flex items-center justify-between">
+          <div class="pt-5 mt-4 border-t border-slate-800/80 space-y-3">
+            <div class="p-3 rounded-2xl bg-[#080f24] border border-cyan-500/20 flex items-center justify-between">
               <div>
-                <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Single Workstation Commercial License</div>
-                <div class="text-sm font-extrabold text-slate-900 font-mono">$149 <span class="text-xs text-slate-500 font-normal">/ &#8377;12,450</span></div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">Single Workstation Commercial License</div>
+                <div class="text-sm font-extrabold text-white font-mono">$149 <span class="text-xs text-slate-500 font-normal">/ &#8377;12,450</span></div>
               </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/40">
                 Air-Gapped Vault
               </span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-cyan-600 hover:from-cyan-500 to-blue-600 text-white shadow-[0_0_15px_rgba(6,182,212,0.35)] font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBXaGlzcGVyVmF1bHQlRTIlODQlQTIlMjBNYXN0ZXIlMjBTZXR1cCUyMCgkMTQ5JTIwLyUyMCVFMiU4MiVCOTEyLDQ1MCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMG9uYm9hcmRpbmcu" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBXaGlzcGVyVmF1bHQlRTIlODQlQTIlMjBNYXN0ZXIlMjBTZXR1cCUyMCgkMTQ5JTIwLyUyMCVFMiU4MiVCOTEyLDQ1MCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMG9uYm9hcmRpbmcu" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-300 border border-emerald-500/40 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1447,12 +1549,12 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- FEATURED FLAGSHIP 3: RQL TextDiff&trade; (Offline Myers File & Code Comparison Engine) -->
-        <div class="bg-gradient-to-b from-white to-indigo-50/20 border-2 border-indigo-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
-          <div class="absolute -top-3 left-6 bg-gradient-to-r from-indigo-700 to-blue-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+        <div class="bento-card relative rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xl transition-all duration-300 group" data-spotlight="true">
+          <div class="absolute -top-3 left-6 bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-[0_0_15px_rgba(99,102,241,0.35)]">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2 group/media">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-[#050a16] border border-cyan-500/20 mb-4 mt-2 shadow-inner group/media">
               <img src="TextDiff_Cover_1080p.png" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Myers Diff v1.0
@@ -1463,38 +1565,38 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
-                <span class="text-indigo-700 font-bold truncate">RQL_TextDiff_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
+                <span class="text-indigo-400 font-bold truncate">RQL_TextDiff_Master_Setup.exe</span>
+                <span class="shrink-0 whitespace-nowrap text-indigo-300 bg-indigo-950/70 border border-indigo-800/60 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
               </div>
-              <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-indigo-600 transition">
+              <h3 class="text-xl font-bold font-heading text-white group-hover:text-indigo-400 transition">
                 RQL TextDiff&trade;
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
-                Offline Visual File &amp; Code Comparison Engine: Sub-millisecond Myers vector diff, side-by-side contract alteration auditing, and court-admissible PDF reports.
+                Sub-millisecond Myers vector diff engine. Compare legal contracts, SQL schemas, and source code side-by-side with 100% offline confidentiality. Zero cloud data leaks.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-300 space-y-1">
                 <div>&#10003; Sub-Millisecond Myers Vector Diff Engine</div>
                 <div>&#10003; Side-by-Side Word &amp; Character Alteration Audit</div>
                 <div>&#10003; Court-Admissible PDF Comparison Certificates</div>
               </div>
             </div>
           </div>
-          <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
-            <div class="p-3 rounded-2xl bg-indigo-50/70 border border-indigo-200 flex items-center justify-between">
+          <div class="pt-5 mt-4 border-t border-slate-800/80 space-y-3">
+            <div class="p-3 rounded-2xl bg-[#080f24] border border-cyan-500/20 flex items-center justify-between">
               <div>
-                <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
-                <div class="text-sm font-extrabold text-slate-900 font-mono">$99 <span class="text-xs text-slate-500 font-normal">/ &#8377;8,200</span></div>
+                <div class="text-[10px] font-mono text-slate-400 uppercase font-semibold">Perpetual Commercial License</div>
+                <div class="text-sm font-extrabold text-white font-mono">$99 <span class="text-xs text-slate-500 font-normal">/ &#8377;8,200</span></div>
               </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/40">
                 Pay Once, Own Forever
               </span>
             </div>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-indigo-600 hover:from-indigo-500 to-violet-600 text-white shadow-[0_0_15px_rgba(99,102,241,0.35)] font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBUZXh0RGlmZiVFMiU4NCVBMiUyMENvbW1lcmNpYWwlMjBMaWNlbnNlJTIwKCQ5OSUyMFVTRCUyMC8lMjAlRTIlODIlQjk4LDIwMCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMGZvdW5kZXIlMjBvbmJvYXJkaW5nLg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBUZXh0RGlmZiVFMiU4NCVBMiUyMENvbW1lcmNpYWwlMjBMaWNlbnNlJTIwKCQ5OSUyMFVTRCUyMC8lMjAlRTIlODIlQjk4LDIwMCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMGZvdW5kZXIlMjBvbmJvYXJkaW5nLg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-950/60 hover:bg-emerald-900/80 text-emerald-300 border border-emerald-500/40 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102 shadow-[0_0_12px_rgba(16,185,129,0.2)]">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1503,7 +1605,7 @@ document.addEventListener('keydown', function(e) {
 
 
         <!-- STORE GATEWAY CALLOUT: 6 MORE COMMERCIAL FLAGSHIPS IN STORE -->
-        <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-slate-900 via-slate-850 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r bg-[#070d1e]/90 border border-cyan-500/25 text-white rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-xl">
           <div class="space-y-2 max-w-2xl">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono font-bold">
               <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
@@ -1517,7 +1619,7 @@ document.addEventListener('keydown', function(e) {
             </p>
           </div>
           <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm font-heading shadow-lg hover:shadow-rose-600/20 transition hover:scale-102">
+            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold text-sm font-heading shadow-[0_0_20px_rgba(6,182,212,0.3)] transition hover:scale-102">
               <span>Open Commercial Store</span>
               <span class="font-mono text-base">&rarr;</span>
             </a>
@@ -1526,6 +1628,63 @@ document.addEventListener('keydown', function(e) {
             </a>
           </div>
         </div>
+
+        <!-- MASTER SUITE 7: RQL QRStudio™ (Permanent Offline Vector QR Code & Custom Barcode Studio) -->
+        <div class="bg-gradient-to-b from-white to-violet-50/20 border-2 border-violet-300/80 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+          <div class="absolute -top-3 left-6 bg-gradient-to-r from-violet-700 to-purple-600 text-white text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+            🎨 VECTOR QR STUDIO
+          </div>
+          <div>
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
+              <img src="QRStudio_Cover_1080p.png" alt="RQL QRStudio™ Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
+                Vector Studio v1.0
+              </div>
+              <div class="absolute top-3 right-3 bg-emerald-500 text-white font-mono font-bold text-[10px] px-2.5 py-1 rounded-full">
+                Zero Expire QR
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
+                <span class="text-violet-700 font-bold truncate">RQL_QRStudio_Master_Setup.exe</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Infinite Vector SVG</span>
+              </div>
+              <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-violet-600 transition">
+                RQL QRStudio™
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Permanent Offline Vector QR Code &amp; Custom Barcode Studio: Infinite-resolution SVG vector exports, center brand logo engine, 9 multi-protocol presets (URL, Wi-Fi, vCard, UPI), and zero expiring cloud redirects.
+              </p>
+              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+                <div>✓ Permanent ISO/IEC 18004 Vector QR Codes (Zero Link-Rot)</div>
+                <div>✓ Center Brand Logo Engine &amp; Level-H Error Parity</div>
+                <div>✓ Infinite SVG &amp; 1024&times;1024 High-Res PNG + Clipboard Bridge</div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-5 mt-4 border-t border-slate-100 space-y-3">
+            <div class="p-3 rounded-2xl bg-violet-50/70 border border-violet-200 flex items-center justify-between">
+              <div>
+                <div class="text-[10px] font-mono text-slate-500 uppercase font-semibold">Perpetual Commercial License</div>
+                <div class="text-sm font-extrabold text-slate-900 font-mono">$79 <span class="text-xs text-slate-500 font-normal">/ ₹6,500</span></div>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">
+                Pay Once, Own Forever
+              </span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+                <span>Buy Setup</span>
+                <span>↗</span>
+              </a>
+              <a href="https://wa.me/917091518548?text=Hello%20Mohammad%20Rehan,%20I%20want%20to%20acquire%20the%20RQL%20QRStudio%E2%84%A2%20Commercial%20License%20($79%20USD%20/%20%E2%82%B96,500).%20Please%20assist%20with%20founder%20onboarding." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+                <span>WhatsApp VIP</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
     </div>
 
     <!-- Clean Bottom Directory Banner -->
@@ -2119,6 +2278,28 @@ function filterProjects(category, triggerEl) {
     }
 }
 
+</script>
+<!-- RQL Dynamic Cursor Spotlight Engine -->
+<script>
+(function() {
+  function initSpotlight() {
+    const cards = document.querySelectorAll('.bento-card');
+    cards.forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSpotlight);
+  } else {
+    initSpotlight();
+  }
+})();
 </script>
 </body>
 </html>
