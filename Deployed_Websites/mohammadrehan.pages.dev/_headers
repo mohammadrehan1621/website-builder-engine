@@ -14,8 +14,20 @@
 /
   Cache-Control: public, max-age=0, must-revalidate
 
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
 /.well-known/*
   Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
+
+/BingSiteAuth.xml
+  Content-Type: text/xml; charset=utf-8
   Cache-Control: public, max-age=86400
 
 /downloads/*

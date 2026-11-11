@@ -1,0 +1,160 @@
+# Rehan Quant Lab (RQL) - Full Institutional Specification (llms-full.txt)
+> Version: 2026.4.0 | Classification: Public Sovereign Specification | Author: Mohammad Rehan
+
+## 1. Executive Summary & Company Profile
+- **Entity**: Rehan Quant Lab (RQL)
+- **Founder & Systems Architect**: Mohammad Rehan (Patna, Bihar, India)
+- **Primary Domain**: https://rehanquantlab.com/
+- **Commercial Store**: https://rehanquantlab.com/store.html
+- **Official Gumroad Storefront**: https://quantify17.gumroad.com/
+- **Core Engineering Mission**: Eradicate SaaS recurring rent and cloud dependency for foundational desktop computing. Deliver air-gapped, sub-millisecond, pure-Rust native x86_64 software suites with lifetime ownership and zero cloud telemetry.
+
+## 2. Core Architectural Pillars
+1. **Air-Gapped Execution**:
+   - Zero network socket requests during operational workloads.
+   - All processing occurs in-memory on local hardware.
+   - Ideal for defense contractors, legal chambers, chartered accountants, healthcare providers, and high-security trading desks.
+2. **Pure Compiled Native Rust**:
+   - Compiled to native machine code using Rust 1.80+ with Link-Time Optimization (LTO), aggressive loop unrolling, and zero-cost abstractions.
+   - Zero interpreter overhead: No Python runtime, no Electron/Chromium RAM bloat, no Node.js node_modules, no JVM garbage collection spikes.
+3. **Double-Entry Cryptographic Persistence**:
+   - Transactional persistence powered by SQLite with Write-Ahead Logging (WAL) and synchronous normal durability.
+   - Tamper-evident SHA-256 state hashing across all transactional outputs.
+4. **Perpetual Commercial Ownership**:
+   - Lifetime license key generation using ECDSA / Ed25519 asymmetric cryptography.
+   - Buy once, own forever. No monthly subscriptions, no forced online activation checks.
+
+## 3. The 20 Commercial Workstations - Full Technical Breakdown
+
+### Product 01: RQL DocumentShield?
+- **Installer**: `RQL_DocumentShield_Master_Setup.exe`
+- **Category**: Legal & Forensic Security
+- **Core Function**: Permanent vector redaction of PDF files. Automatically scans and obliterates Tax EINs, SSNs, credit card numbers, phone numbers, and custom regex patterns.
+- **Key Capability**: Unlike standard PDF editors that merely place a black box over text, DocumentShield rewrites the PDF content stream, physically removing vector glyphs, clipping paths, and hidden document metadata (author, location, editing software).
+- **Compliance**: HIPAA, GDPR, India DPDP Act 2023, court-admissible audit certificate generation.
+- **URL**: https://quantify17.gumroad.com/l/rql-documentshield
+
+### Product 02: RQL WhisperVault?
+- **Installer**: `RQL_WhisperVault_Master_Setup.exe`
+- **Category**: Offline AI Speech Intelligence
+- **Core Function**: 100% offline speech-to-text recognition powered by local OpenAI Whisper neural models (Tiny, Base, Small, Medium).
+- **Key Capability**: Subtitle generation (.SRT, .VTT) with millisecond-precision word-level timestamps, speaker separation, audio waveform visualization, and automated executive PDF meeting summaries without sending a single byte to external cloud servers.
+- **URL**: https://quantify17.gumroad.com/l/rql-whispervault
+
+### Product 03: RQL RetailPOS?
+- **Installer**: `RQL_RetailPOS_Master_Setup.exe`
+- **Category**: Retail & Supermarket Point-of-Sale
+- **Core Function**: Sub-millisecond barcode checkout, split-payment processing (Cash, Card, UPI, Store Credit), and hardware ESC/POS 80mm/58mm thermal receipt printing.
+- **Key Capability**: Operates during total internet outages. Integrated inventory deduction with real-time stock low alerts, barcode scanner support, and daily X/Z shift audit balancing.
+- **URL**: https://quantify17.gumroad.com/l/rql-retailpos
+
+### Product 04: RQL StoreChain?
+- **Installer**: `RQL_StoreChain_Master_Setup.exe`
+- **Category**: Multi-Branch Retail Logistics
+- **Core Function**: Multi-store stock transfer manifests, cryptographic ledger synchronization, and inter-branch inventory rebalancing.
+- **Key Capability**: Peer-to-peer differential ledger replication via local LAN or encrypted file handoffs. Eliminates central database downtime.
+- **URL**: https://quantify17.gumroad.com/l/rql-storechain
+
+### Product 05: RQL Conduit?
+- **Installer**: `RQL_Conduit_Master_Setup.exe`
+- **Category**: Network & Infrastructure
+- **Core Function**: Multi-WAN channel bonding and automatic failover engine.
+- **Key Capability**: Aggregates Ethernet, Wi-Fi, and 4G/5G cellular dongles into a single zero-drop virtual tunnel. Sub-1ms failover prevents trading terminal disconnects and POS transaction freezes.
+- **URL**: https://quantify17.gumroad.com/l/rql-conduit
+
+### Product 06: RQL HashCheck?
+- **Installer**: `RQL_HashCheck_Master_Setup.exe`
+- **Category**: Cryptographic Auditing
+- **Core Function**: Cryptographic file and directory tree verification supporting SHA-256, SHA-512, SHA-1, MD5, and BLAKE3 algorithms at memory-bus speeds (GB/s).
+- **URL**: https://quantify17.gumroad.com/l/rql-hashcheck
+
+### Product 07: RQL QRStudio?
+- **Installer**: `RQL_QRStudio_Master_Setup.exe`
+- **Category**: Commercial Barcoding & Retail Labeling
+- **Core Function**: Vector QR code and 2D barcode generator with support for high-error-correction (Level H), custom branding, Wi-Fi keys, vCards, and batch CSV payload generation.
+- **URL**: https://quantify17.gumroad.com/l/rql-qrstudio
+
+### Product 08: RQL TextDiff?
+- **Installer**: `RQL_TextDiff_Master_Setup.exe`
+- **Category**: Document & Source Comparison
+- **Core Function**: Sub-millisecond Myers vector diff engine. Features side-by-side visual difference viewing, character-level diff highlighting, and court-admissible audit PDF export.
+- **URL**: https://quantify17.gumroad.com/l/rql-textdiff
+
+### Product 09: RQL Renamer?
+- **Installer**: `RQL_Renamer_Master_Setup.exe`
+- **Category**: Workflow Automation
+- **Core Function**: Batch file renaming with real-time atomic rollback, regular expression tokens, EXIF/ID3 tag insertion, and recursive folder handling.
+- **URL**: https://quantify17.gumroad.com/l/rql-renamer
+
+### Product 10: RQL TagEditor?
+- **Installer**: `RQL_TagEditor_Master_Setup.exe`
+- **Category**: Digital Asset Management
+- **Core Function**: Audio metadata inspector and tagger supporting MP3, FLAC, OGG, WAV, and M4A. Strips tracking beacons and personal identifying metadata.
+- **URL**: https://quantify17.gumroad.com/l/rql-tageditor
+
+### Product 11: RQL FontViewer?
+- **Installer**: `RQL_FontViewer_Master_Setup.exe`
+- **Category**: Typographic Engineering
+- **Core Function**: High-DPI font glyph inspector, OpenType font table auditor, kerning tester, and offline watermark inspection.
+- **URL**: https://quantify17.gumroad.com/l/rql-fontviewer
+
+### Product 12: RQL DPDPShield?
+- **Installer**: `RQL_DPDPShield_Master_Setup.exe`
+- **Category**: Regulatory Compliance
+- **Core Function**: India Digital Personal Data Protection Act 2023 compliance auditing. Scans documents, databases, and logs for Aadhaar, PAN, voter IDs, and personal identifiers.
+- **URL**: https://quantify17.gumroad.com/l/rql-dpdpshield
+
+### Product 13: RQL PriceTag?
+- **Installer**: `RQL_PriceTag_Master_Setup.exe`
+- **Category**: Supermarket Operations
+- **Core Function**: Retail shelf edge price tag designer with automated EAN-13, UPC-A, Code-128 barcodes, multi-currency formatting, and batch printer alignment.
+- **URL**: https://quantify17.gumroad.com/l/rql-pricetag
+
+### Product 14: RQL InvoiceGen?
+- **Installer**: `RQL_InvoiceGen_Master_Setup.exe`
+- **Category**: Tax & Financial Engineering
+- **Core Function**: Cryptographic GST/VAT tax invoice generator with automatic HSN/SAC rate tables, B2B/B2C templates, and SHA-256 tamper-evident digital seal.
+- **URL**: https://quantify17.gumroad.com/l/rql-invoicegen
+
+### Product 15: RQL CSVFormat?
+- **Installer**: `RQL_CSVFormat_Master_Setup.exe`
+- **Category**: Data Engineering
+- **Core Function**: Million-row streaming CSV sanitizer, schema splitter, deduplicator, and column transformer. Processes massive multi-gigabyte datasets without RAM crashes.
+- **URL**: https://quantify17.gumroad.com/l/rql-csvformat
+
+### Product 16: RQL PDFMerge?
+- **Installer**: `RQL_PDFMerge_Master_Setup.exe`
+- **Category**: Document Engineering
+- **Core Function**: High-speed offline PDF merger, page splitter, document rotater, and AES-256 encrypted password protector.
+- **URL**: https://quantify17.gumroad.com/l/rql-pdfmerge
+
+### Product 17: RQL TaxLedger?
+- **Installer**: `RQL_TaxLedger_Master_Setup.exe`
+- **Category**: Accounting & Financial Compliance
+- **Core Function**: Double-entry general ledger, automated trial balance, balance sheet generator, and GST tax liability estimator for chartered accountants.
+- **URL**: https://quantify17.gumroad.com/l/rql-taxledger
+
+### Product 18: RQL FileShredder?
+- **Installer**: `RQL_FileShredder_Master_Setup.exe`
+- **Category**: Data Sanitization & Security
+- **Core Function**: DoD 5220.22-M 7-pass and NIST SP 800-88 Rev. 1 cryptographic file shredder. Overwrites file data sectors and filenames with cryptographic pseudorandom noise before unlinking.
+- **URL**: https://quantify17.gumroad.com/l/rql-fileshredder
+
+### Product 19: RQL ClipVault?
+- **Installer**: `RQL_ClipVault_Master_Setup.exe`
+- **Category**: Privacy & Security
+- **Core Function**: Encrypted air-gapped clipboard manager with ChaCha20-Poly1305 storage, automated password/token purge timer, and zero background network polling.
+- **URL**: https://quantify17.gumroad.com/l/rql-clipvault
+
+### Product 20: RQL ImageBatch?
+- **Installer**: `RQL_ImageBatch_Master_Setup.exe`
+- **Category**: Media Engineering
+- **Core Function**: Multi-threaded batch image compressor, WebP/AVIF converter, GPS/EXIF location stripper, and high-DPI resizer.
+- **URL**: https://quantify17.gumroad.com/l/rql-imagebatch
+
+## 4. Verification & Security Credentials
+- **Public Domain**: https://rehanquantlab.com/
+- **Cloudflare Edge Deployment**: https://mohammadrehan.pages.dev/
+- **Google Search Console**: Verified via `googlecb5b21d2c61033d5`
+- **IndexNow Protocol**: Key: `rql2026indexnow` (https://rehanquantlab.com/rql2026indexnow.txt)
+- **Security Contact**: founder@rehanquantlab.com

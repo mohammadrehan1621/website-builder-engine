@@ -1,10 +1,15 @@
 # ====================================================================
-# Rehan Quant Lab (RQL) - Search Engine Optimization Directives
-# Generated Deterministically by Bare-Metal Rust Engine on 2026-11-10
+# Rehan Quant Lab (RQL) - Search Engine Optimization & Security Directives
+# Generated Deterministically by Bare-Metal Rust Engine on 2026-11-11
 # ====================================================================
 
 User-agent: *
 Allow: /
+Disallow: /.git/
+Disallow: /.git/*
+Disallow: /.env*
+Disallow: /.well-known/../
+Disallow: /functions/
 Disallow: /vault.html
 Disallow: /vault
 Disallow: /platform/
@@ -16,6 +21,12 @@ Allow: /downloads/*.pdf
 
 # Sitemap Index Declaration
 Sitemap: https://rehanquantlab.com/sitemap.xml
+
+# LLM & AI Engine Directives (llms.txt standard)
+# Specification: https://llmstxt.org/
+# Machine-readable context for ChatGPT, Perplexity, Claude, Gemini, Cursor
+# https://rehanquantlab.com/llms.txt
+# https://rehanquantlab.com/llms-full.txt
 
 # Friendly Bot Optimizations
 User-agent: Googlebot
@@ -31,4 +42,20 @@ User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
+Allow: /
+
+# LLM Web Search Agents (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Omgilibot
 Allow: /
