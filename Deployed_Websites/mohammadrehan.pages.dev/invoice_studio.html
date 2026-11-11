@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REHAN QUANT LAB — Sovereign Commercial Invoice &amp; Quotation Studio</title>
+<style>
+  :root {
+    --primary: #0284c7;
+    --primary-dark: #0369a1;
+    --emerald: #059669;
+    --amber: #b45309;
+    --slate-900: #0f172a;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-400: #94a3b8;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--slate-900);
+    background: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top Studio Header */
+  .topbar {
+    background: #ffffff;
+    border-bottom: 1.5px solid var(--slate-200);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .top-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .crest-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+
+  .top-title {
+    font-size: 13pt;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+    color: var(--slate-900);
+  }
+
+  .top-subtitle {
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--primary);
+  }
+
+  .top-badge {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+    border-radius: 4px;
+    padding: 2.5px 7px;
+    font-size: 6.8pt;
+    font-weight: 800;
+  }
+
+  .top-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 5px;
+    padding: 7px 14px;
+    font-size: 8pt;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+  }
+
+  .btn-primary { background: var(--primary); color: #ffffff; }
+  .btn-primary:hover { background: var(--primary-dark); }
+  .btn-success { background: var(--emerald); color: #ffffff; }
+  .btn-success:hover { background: #047857; }
+  .btn-secondary { background: var(--slate-100); color: var(--slate-800); border: 1px solid var(--slate-200); }
+  .btn-secondary:hover { background: var(--slate-200); }
+  .btn-danger { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+  .btn-danger:hover { background: #fecaca; }
+
+  /* Workspace Layout */
+  .workspace {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Left Controls Panel */
+  .form-panel {
+    width: 440px;
+    background: #ffffff;
+    border-right: 1.5px solid var(--slate-200);
+    overflow-y: auto;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .form-card {
+    background: #ffffff;
+    border: 1px solid var(--slate-200);
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .card-title {
+    font-size: 8pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--slate-100);
+    padding-bottom: 5px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+
+  label {
+    font-size: 6.8pt;
+    font-weight: 700;
+    color: var(--slate-600);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 7.8pt;
+    font-family: inherit;
+    color: var(--slate-900);
+    background: #ffffff;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.15);
+  }
+
+  .type-toggle {
+    display: flex;
+    border: 1px solid var(--slate-200);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .type-btn {
+    flex: 1;
+    text-align: center;
+    padding: 7px;
+    font-size: 7.6pt;
+    font-weight: 800;
+    cursor: pointer;
+    background: var(--slate-50);
+    color: var(--slate-600);
+  }
+
+  .type-btn.active.invoice { background: var(--emerald); color: #ffffff; }
+  .type-btn.active.quotation { background: var(--primary); color: #ffffff; }
+
+  /* Item Row Card in Form */
+  .item-card {
+    background: var(--slate-50);
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .item-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .item-badge-num {
+    background: var(--slate-900);
+    color: #ffffff;
+    font-size: 6.5pt;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* Right Preview Panel */
+  .preview-panel {
+    flex: 1;
+    background: #cbd5e1;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .preview-wrapper {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+
+  /* Official A4 Sheet Geometry */
+  .invoice-page {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    background: #ffffff;
+    padding: 10mm 11mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 7.2pt;
+    line-height: 1.25;
+    color: var(--slate-900);
+    overflow: hidden;
+  }
+
+  .header-table {
+    width: 100%;
+    border-bottom: 2px solid var(--slate-900);
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  .doc-badge {
+    display: inline-block;
+    padding: 2.5px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 7pt;
+    letter-spacing: 0.5px;
+    background: var(--emerald);
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .doc-badge.quotation { background: var(--primary); }
+
+  .meta-table { font-size: 7pt; margin-left: auto; }
+  .meta-table td { padding: 1px 3px; }
+  .meta-lbl { color: var(--slate-600); font-weight: 600; text-align: right; }
+  .meta-val { font-weight: 800; color: var(--slate-900); font-family: ui-monospace, Consolas, monospace; text-align: right; }
+
+  .address-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+    margin-bottom: 5px;
+  }
+
+  .addr-card {
+    background: var(--slate-50);
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 5px 8px;
+  }
+
+  .addr-header {
+    font-size: 6.2pt;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .addr-name {
+    font-size: 8.5pt;
+    font-weight: 900;
+    color: var(--slate-900);
+    margin-bottom: 2px;
+  }
+
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+  }
+
+  .items-table th {
+    background: var(--slate-900);
+    color: #ffffff;
+    font-size: 6.5pt;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 4px 6px;
+    border: 1px solid var(--slate-900);
+  }
+
+  .items-table td {
+    border: 1px solid #cbd5e1;
+    font-size: 6.8pt;
+  }
+
+  .items-table tbody tr:nth-child(even) { background: var(--slate-50); }
+  .col-center { text-align: center; }
+  .col-right { text-align: right; }
+  .item-title { font-weight: 800; color: var(--slate-900); font-size: 7.2pt; }
+  .item-sub { color: var(--slate-600); font-size: 6pt; margin-top: 1px; }
+
+  .security-bar {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 3px;
+    padding: 3px 6px;
+    font-size: 5.5pt;
+    color: #065f46;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 7px;
+    margin-bottom: 5px;
+  }
+
+  .bank-card {
+    background: var(--slate-50);
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 6.2pt;
+  }
+
+  .totals-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 6.8pt;
+  }
+
+  .totals-table td { padding: 2.5px 4px; border-bottom: 1px solid #e2e8f0; }
+  .totals-lbl { text-align: right; color: var(--slate-600); font-weight: 600; }
+  .totals-val { text-align: right; font-weight: 800; color: var(--slate-900); font-family: ui-monospace, Consolas, monospace; }
+  .grand-row { background: var(--slate-900); color: #ffffff !important; }
+  .grand-row td { color: #ffffff !important; font-size: 8.5pt; font-weight: 900; padding: 4px; border: none; }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 120px 1.4fr 1.2fr;
+    gap: 6px;
+    border-top: 1px solid #cbd5e1;
+    padding-top: 4px;
+  }
+
+  .terms-box { font-size: 5.4pt; color: var(--slate-600); line-height: 1.2; }
+  .sign-box { text-align: right; font-size: 6pt; color: #64748b; }
+  .sign-seal {
+    display: inline-block;
+    border: 1.5px dashed var(--primary);
+    background: #f0f9ff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin: 2px 0;
+    text-align: center;
+  }
+
+  .trust-footer {
+    border-top: 1px solid #cbd5e1;
+    padding-top: 2px;
+    font-size: 5.5pt;
+    color: #64748b;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* PRINT MEDIA CSS */
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    body { background: #ffffff !important; height: auto !important; overflow: visible !important; }
+    .topbar, .form-panel { display: none !important; }
+    .preview-panel { padding: 0 !important; background: #ffffff !important; overflow: visible !important; }
+    .preview-wrapper { box-shadow: none !important; border: none !important; }
+    .invoice-page { margin: 0 !important; border: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Application Bar -->
+<div class="topbar">
+  <div class="top-brand">
+    <svg class="crest-img" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0284c7"/>
+          <stop offset="100%" stop-color="#0f172a"/>
+        </linearGradient>
+      </defs>
+      <polygon points="100,10 178,44 178,124 100,186 22,124 22,44" fill="url(#shieldGrad)" stroke="#38bdf8" stroke-width="6"/>
+      <rect x="68" y="56" width="16" height="88" rx="3" fill="#ffffff"/>
+      <path d="M 68,56 L 114,56 C 134,56 144,66 144,82 C 144,98 134,108 114,108 L 68,108" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+      <path d="M 106,104 L 140,144" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+      <circle cx="106" cy="82" r="6" fill="#00f0ff"/>
+    </svg>
+    <div>
+      <div class="top-title">REHAN QUANT LAB</div>
+      <div class="top-subtitle">Sovereign Invoice &amp; Quotation Studio &bull; Systems Division</div>
+    </div>
+    <span class="top-badge">MSME: UDYAM-BR-26-0258772</span>
+  </div>
+  <div class="top-actions">
+    <button class="btn btn-secondary" onclick="copyWhatsAppPitch()">
+      <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Copy WhatsApp Summary
+    </button>
+    <button class="btn btn-primary" onclick="handlePrintSavePdf()">
+      <svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+</div>
+
+<div class="workspace">
+  <!-- Left Controls Panel -->
+  <div class="form-panel">
+    <!-- Presets -->
+    <div class="form-card">
+      <div class="card-title">1-Click Institutional Presets</div>
+      <div class="form-row">
+        <select id="presetSelect" onchange="applyPreset(this.value)">
+          <option value="quadstack">🌟 Retail Sovereignty Quad-Stack™ (4 Products)</option>
+          <option value="documentshield">🛡️ RQL DocumentShield™ Enterprise (1 Product)</option>
+          <option value="whispervault">🎙️ RQL WhisperVault™ Local AI Studio (1 Product)</option>
+          <option value="pricetag">🏷️ RQL PriceTag™ Barcode Engine (1 Product)</option>
+          <option value="storechain">🔗 RQL StoreChain™ Multi-Till Sync (1 Product)</option>
+          <option value="custom">⚙️ Bespoke Custom Software License (1 Product)</option>
+          <option value="blank">🗑️ Clear to Blank (Add Your Own Items)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Document Identity -->
+    <div class="form-card">
+      <div class="card-title">Document Identity</div>
+      <div class="form-row">
+        <div class="type-toggle">
+          <div class="type-btn active invoice" id="btnTypeInv" onclick="setDocType('invoice')">Tax Invoice</div>
+          <div class="type-btn quotation" id="btnTypeQtn" onclick="setDocType('quotation')">Formal Quotation</div>
+        </div>
+      </div>
+      <div class="form-grid-2 form-row">
+        <div>
+          <label>Document No</label>
+          <input type="text" id="inpDocNo" value="RQL-INV-2026-001" oninput="updatePreview()">
+        </div>
+        <div>
+          <label>Issue Date</label>
+          <input type="text" id="inpDate" value="07-NOV-2026" oninput="updatePreview()">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Payment / Delivery Terms</label>
+        <input type="text" id="inpTerms" value="IMMEDIATE COMMERCIAL CLEARANCE" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <!-- Client Profile -->
+    <div class="form-card">
+      <div class="card-title">Client / Billed To</div>
+      <div class="form-row">
+        <label>Company / Store Name</label>
+        <input type="text" id="inpClientName" value="Patna Retail Superstore / BNI Member" oninput="updatePreview()">
+      </div>
+      <div class="form-grid-2 form-row">
+        <div>
+          <label>Contact Person</label>
+          <input type="text" id="inpContact" value="Managing Director / Store Owner" oninput="updatePreview()">
+        </div>
+        <div>
+          <label>Phone / WhatsApp</label>
+          <input type="text" id="inpPhone" value="+91 98XXX XXXXX" oninput="updatePreview()">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Billing Address</label>
+        <input type="text" id="inpAddress" value="Boring Road / Fraser Road Commercial Market, Patna, Bihar" oninput="updatePreview()">
+      </div>
+      <div class="form-row">
+        <label>GSTIN / Tax ID</label>
+        <input type="text" id="inpGst" value="URP (Unregistered Commercial Person) / B2B Retail" oninput="updatePreview()">
+      </div>
+    </div>
+
+    <!-- Dynamic Line Items Customizer -->
+    <div class="form-card">
+      <div class="card-title" style="justify-content: space-between;">
+        <span>Products &amp; Line Items Manager</span>
+        <button class="btn btn-primary" style="padding: 2px 7px; font-size: 7pt;" onclick="addNewItemRow()">+ Add Item</button>
+      </div>
+      <div id="itemsContainer" style="display: flex; flex-direction: column; gap: 8px;">
+        <!-- Populated dynamically via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Pricing & Concessions -->
+    <div class="form-card">
+      <div class="card-title">Pricing &amp; Concessions</div>
+      <div class="form-grid-2 form-row">
+        <div>
+          <label>Catalog Gross (Auto)</label>
+          <input type="number" id="inpGross" value="64996" readonly style="background:#f8fafc; font-weight:700;">
+        </div>
+        <div>
+          <label>Concession / Discount (INR)</label>
+          <input type="number" id="inpDiscount" value="14997" oninput="updateCalculations()">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Net Amount Payable (INR)</label>
+        <input type="number" id="inpNet" value="49999" readonly style="font-weight:900; color:#0284c7; font-size:11pt; background:#f0f9ff; border-color:#7dd3fc;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Live Preview Canvas -->
+  <div class="preview-panel">
+    <div class="preview-wrapper">
+      <div class="invoice-page" id="invoiceSheet">
+        <div>
+          <!-- Header Table -->
+          <table class="header-table">
+            <tr>
+              <td style="width: 52px; vertical-align: middle;">
+                <svg class="crest-img" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:46px; height:46px;">
+                  <defs>
+                    <linearGradient id="shieldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0284c7"/>
+                      <stop offset="100%" stop-color="#0f172a"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon points="100,10 178,44 178,124 100,186 22,124 22,44" fill="url(#shieldGrad2)" stroke="#38bdf8" stroke-width="6"/>
+                  <rect x="68" y="56" width="16" height="88" rx="3" fill="#ffffff"/>
+                  <path d="M 68,56 L 114,56 C 134,56 144,66 144,82 C 144,98 134,108 114,108 L 68,108" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                  <path d="M 106,104 L 140,144" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+                  <circle cx="106" cy="82" r="6" fill="#00f0ff"/>
+                </svg>
+              </td>
+              <td style="vertical-align: middle; padding-left: 8px;">
+                <div style="font-size: 14pt; font-weight: 900; letter-spacing: -0.3px; color: #0f172a;">REHAN QUANT LAB</div>
+                <div style="font-size: 6.2pt; font-weight: 800; letter-spacing: 0.8px; color: #0284c7; text-transform: uppercase;">SOVEREIGN HIGH-PERFORMANCE DESKTOP SOFTWARE • SYSTEMS DIVISION</div>
+                <div style="font-size: 5.6pt; color: #64748b;">Unit 1, Patna, Bihar, Pin: 800006 &bull; Govt MSME: <strong>UDYAM-BR-26-0258772</strong> &bull; NIC: <strong>62011</strong></div>
+              </td>
+              <td style="vertical-align: middle; text-align: right;">
+                <span class="doc-badge" id="previewBadge">STATUTORY TAX INVOICE</span>
+                <table class="meta-table" style="margin-top: 3px;">
+                  <tr><td class="meta-lbl">DOCUMENT NO:</td><td class="meta-val" id="prevDocNo">RQL-INV-2026-001</td></tr>
+                  <tr><td class="meta-lbl">ISSUE DATE:</td><td class="meta-val" id="prevDate">07-NOV-2026</td></tr>
+                  <tr><td class="meta-lbl">PAYMENT TERMS:</td><td class="meta-val" id="prevTerms" style="font-size:6.2pt;">IMMEDIATE COMMERCIAL CLEARANCE</td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <!-- Address Cards -->
+          <div class="address-grid">
+            <div class="addr-card">
+              <div class="addr-header">ISSUED BY / REGISTERED ENTERPRISE</div>
+              <div class="addr-name">REHAN QUANT LAB</div>
+              <div style="font-size: 6.2pt; color: #334155; line-height: 1.25;">
+                <strong>Proprietor:</strong> Mohammad Rehan<br>
+                <strong>Operational HQ:</strong> Unit 1, Patna, Bihar, Pin: 800006, India<br>
+                <strong>Primary NIC:</strong> 62011 (Computer Programming &amp; Software Systems)<br>
+                <strong>VIP Hotline / WhatsApp:</strong> +91 70915 18548 &bull; <strong>Email:</strong> rehanquantlab@gmail.com
+              </div>
+              <span class="top-badge" style="display:inline-block; margin-top:3px;">MSME Udyam: UDYAM-BR-26-0258772</span>
+            </div>
+
+            <div class="addr-card">
+              <div class="addr-header">BILLED TO / CLIENT ENTITY</div>
+              <div class="addr-name" id="prevClientName">Patna Retail Superstore / BNI Member</div>
+              <div style="font-size: 6.2pt; color: #334155; line-height: 1.25;">
+                <strong>Contact Person:</strong> <span id="prevContact">Managing Director / Store Owner</span><br>
+                <strong>Billing Address:</strong> <span id="prevAddress">Boring Road / Fraser Road Commercial Market, Patna, Bihar</span><br>
+                <strong>Phone / WhatsApp:</strong> <span id="prevPhone">+91 98XXX XXXXX</span><br>
+                <strong>GSTIN / Tax ID:</strong> <span id="prevGst">URP (Unregistered Commercial Person) / B2B Retail</span>
+              </div>
+              <span class="top-badge" style="display:inline-block; margin-top:3px; background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe;">Microsoft WDSI Clean Binary Clearance</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Products Table -->
+          <table class="items-table">
+            <thead>
+              <tr>
+                <th style="width: 26px;" class="col-center">#</th>
+                <th>SOFTWARE PRODUCT / SUITE DESCRIPTION</th>
+                <th style="width: 95px;" class="col-center">MINTAGE &amp; TIER</th>
+                <th style="width: 35px;" class="col-center">QTY</th>
+                <th style="width: 75px;" class="col-right">RATE (INR)</th>
+                <th style="width: 85px;" class="col-right">AMOUNT (INR)</th>
+              </tr>
+            </thead>
+            <tbody id="prevItemsBody">
+              <!-- Dynamically Populated with exact user items -->
+            </tbody>
+          </table>
+
+          <!-- Security Bar -->
+          <div class="security-bar">
+            <div><strong>MICROSOFT WDSI SECURITY CLEARANCE:</strong> Submission ID: e8b314fe-0377-47fc-9ff6-a0bdc13ac01c (Status: Completed 🟢 Clean Whitelisted)</div>
+            <div><strong>100% OFFLINE AIR-GAP:</strong> Zero network telemetry &bull; Zero SaaS rent</div>
+            <div><strong>DETERMINISTIC SQLITE WAL:</strong> Atomic offline ACID writes</div>
+          </div>
+
+          <!-- Calculations & Remittance -->
+          <div class="calc-grid">
+            <div class="bank-card">
+              <div style="font-weight: 800; color: #0f172a; border-bottom: 1px solid #cbd5e1; padding-bottom: 2px; margin-bottom: 3px;">
+                STATUTORY REMITTANCE &amp; BANK WIRE DETAILS
+              </div>
+              <div style="display: grid; grid-template-columns: 85px 1fr; gap: 2px; font-size: 6.2pt;">
+                <span style="color:#64748b; font-weight:600;">BENEFICIARY:</span>
+                <span style="font-weight:800;">MOHAMMAD REHAN (REHAN QUANT LAB)</span>
+                <span style="color:#64748b; font-weight:600;">ENTERPRISE:</span>
+                <span>Micro Enterprise (Services - Non-Trading)</span>
+                <span style="color:#64748b; font-weight:600;">PRIMARY UPI VPA:</span>
+                <span style="font-weight:800; color:#0284c7;">7091518548@upi / rehanquantlab@upi</span>
+                <span style="color:#64748b; font-weight:600;">BANK WIRE (NEFT):</span>
+                <span>Provided upon Formal Commercial Issuance</span>
+                <span style="color:#64748b; font-weight:600;">CARD / STORE:</span>
+                <span>https://quantify17.gumroad.com</span>
+              </div>
+              <div style="margin-top: 4px; padding-top: 3px; border-top: 1px dashed #cbd5e1; font-size: 6.2pt;">
+                <strong>AMOUNT IN WORDS:</strong> <span id="prevWords">Rupees Forty-Nine Thousand Nine Hundred Ninety-Nine Only.</span>
+              </div>
+            </div>
+
+            <div>
+              <table class="totals-table">
+                <tr><td class="totals-lbl">Gross Catalog Total:</td><td class="totals-val" id="prevGross">Rs. 64,996.00</td></tr>
+                <tr><td class="totals-lbl" style="color:#b45309;">BNI Executive Concession:</td><td class="totals-val" style="color:#b45309;" id="prevDiscount">- Rs. 14,997.00</td></tr>
+                <tr><td class="totals-lbl">Net Taxable Value:</td><td class="totals-val" id="prevNet">Rs. 49,999.00</td></tr>
+                <tr><td class="totals-lbl">Applicable GST / Taxes:</td><td class="totals-val" style="font-size:6.2pt; color:#059669;">Exempt / Composition Micro Enterprise</td></tr>
+                <tr class="grand-row"><td class="totals-lbl">NET PAYABLE:</td><td class="totals-val" id="prevGrand">Rs. 49,999.00</td></tr>
+              </table>
+              <div style="font-size: 5.6pt; color: #64748b; text-align: right; margin-top: 2px;">
+                Includes Lifetime Ownership &bull; Zero Monthly Software Fees Forever
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- Signatures & Terms -->
+          <div class="footer-grid">
+            <div style="text-align: center;">
+              <div style="font-weight: 800; font-size: 6.5pt; color: #0f172a;">VIP UPI REMIT</div>
+              <div style="font-size: 6pt; color: #0284c7; font-weight: 700; margin-top: 2px;">7091518548@upi</div>
+              <div style="font-size: 5.5pt; color: #64748b;">+91 70915 18548</div>
+            </div>
+
+            <div class="terms-box">
+              <strong>Sovereign Licensing Terms &amp; Warranties:</strong><br>
+              1. <strong>Perpetual Ownership:</strong> Client acquires permanent commercial usage rights. Zero recurring monthly or yearly subscription fees.<br>
+              2. <strong>100% Offline Air-Gapped:</strong> Operates entirely without broadband connection or external servers.<br>
+              3. <strong>14-Day Sovereign Guarantee:</strong> Complete unconditional 14-day operational money-back assurance.<br>
+              4. <strong>Data Sovereignty &amp; DPDP:</strong> All customer transaction ledgers remain 100% physically hosted on local client storage.<br>
+              5. <strong>Statutory Jurisdiction:</strong> Governed by the MSMED Act 2006, Patna Jurisdiction.
+            </div>
+
+            <div class="sign-box">
+              <div style="font-size: 6.5pt; font-weight: 800; color: #0f172a;">AUTHORIZED ISSUING SIGNATORY</div>
+              <div style="font-size: 5.5pt;">FOR REHAN QUANT LAB</div>
+              <div class="sign-seal">
+                <div style="font-weight: 800; color: #0369a1; font-size: 6.2pt;">STATUTORY MSME SEAL</div>
+                <div style="font-size: 5.2pt; color: #0284c7;">UDYAM-BR-26-0258772</div>
+              </div>
+              <div style="font-size: 8pt; font-weight: 900; color: #0f172a;">MOHAMMAD REHAN</div>
+              <div style="font-size: 5.5pt;">Founder, Lead Systems Architect &amp; Proprietor</div>
+            </div>
+          </div>
+
+          <!-- Trust Bar -->
+          <div class="trust-footer">
+            <div><strong>REHAN QUANT LAB</strong> &bull; Ministry of MSME Govt. of India: <strong>UDYAM-BR-26-0258772</strong> &bull; NIC: 62011</div>
+            <div>Official Store: <strong>quantify17.gumroad.com</strong> &bull; Patna, Bihar, 800006</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentDocType = 'invoice';
+let currentItems = [];
+
+const institutionalPresets = {
+  quadstack: [
+    { title: "RQL Retail Sovereignty Quad-Stack™ (Master Bundle)", desc: "PE32+ Bare-metal offline POS & 80mm thermal receipt engine, Barcode sticker generator (EAN-13/Code-128), LAN cashier synchronizer, dynamic QR payment engine.", tier: "FOUNDER BATCH 1", qty: 1, rate: 64996 },
+    { title: "On-Site Workstation Deployment & Hardware Pairing Protocol", desc: "Physical installation on Patna store terminals, thermal receipt printer calibration, USB barcode scanner pairing, and cash-drawer trigger test.", tier: "VIP CONCIERGE", qty: 1, rate: 0 },
+    { title: "Cryptographic Node Token Issuance (license.rql)", desc: "Offline machine-locked Ed25519 token. Grants perpetual physical hardware execution with zero cloud telemetry or internet activation.", tier: "CRYPTOGRAPHIC CORE", qty: 5, rate: 0 },
+    { title: "12 Months Priority Sovereign Technical Support & Security Updates", desc: "Direct VIP WhatsApp hotline with Founder Mohammad Rehan. Zero monthly maintenance fees, zero annual cloud subscription renewals.", tier: "FOUNDER SLA", qty: 1, rate: 0 }
+  ],
+  documentshield: [
+    { title: "RQL DocumentShield™ Enterprise Workstation", desc: "Deep vector sanitization, metadata destruction, irreversible black-box redaction, and forensic PDF sanitization on local CPU. Permanent perpetual commercial license.", tier: "PERPETUAL ENTERPRISE", qty: 1, rate: 24999 }
+  ],
+  whispervault: [
+    { title: "RQL WhisperVault™ Local AI Speech Transcription Desk", desc: "100% air-gapped local AI speech-to-text audio and video transcription workstation. Converts executive board meetings, legal audio, and clinical dictations into Word/SRT without internet.", tier: "FOUNDER COMMERCE", qty: 1, rate: 34999 }
+  ],
+  pricetag: [
+    { title: "RQL PriceTag™ Barcode Label & Sticker Workstation", desc: "High-speed barcode matrix printer for standard office laser printers and thermal roll devices. Generates batch inventory stickers (EAN-13, Code-128) with store names and custom prices.", tier: "PERPETUAL RETAIL", qty: 1, rate: 19999 }
+  ],
+  storechain: [
+    { title: "RQL StoreChain™ Air-Gapped Multi-Till Synchronizer", desc: "Synchronizes up to 5 checkout registers in real-time over local store Wi-Fi LAN with zero broadband dependency. Complete local sales ledger consolidation.", tier: "PERPETUAL CHAIN", qty: 1, rate: 22999 }
+  ],
+  custom: [
+    { title: "RQL Sovereign Custom Software Systems License", desc: "Tailored bare-metal offline software solution engineered to client specifications. Permanent perpetual ownership, zero cloud dependency, zero recurring fees.", tier: "BESPOKE TIER", qty: 1, rate: 49999 }
+  ],
+  blank: []
+};
+
+function numToWords(num) {
+  num = Math.floor(num);
+  if (num === 0) return 'Rupees Zero Only.';
+  const a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen '];
+  const b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+  function inWords(n) {
+    if (n < 20) return a[n];
+    if (n < 100) return b[Math.floor(n / 10)] + (n % 10 !== 0 ? '-' + a[n % 10].trim() : ' ');
+    if (n < 1000) return a[Math.floor(n / 100)] + 'Hundred ' + (n % 100 !== 0 ? inWords(n % 100) : '');
+    if (n < 100000) return inWords(Math.floor(n / 1000)) + 'Thousand ' + (n % 1000 !== 0 ? inWords(n % 1000) : '');
+    if (n < 10000000) return inWords(Math.floor(n / 100000)) + 'Lakh ' + (n % 100000 !== 0 ? inWords(n % 100000) : '');
+    return inWords(Math.floor(n / 10000000)) + 'Crore ' + (n % 10000000 !== 0 ? inWords(n % 10000000) : '');
+  }
+  return 'Rupees ' + inWords(num).trim() + ' Only.';
+}
+
+function setDocType(type) {
+  currentDocType = type;
+  const isInv = type === 'invoice';
+  document.getElementById('btnTypeInv').className = 'type-btn' + (isInv ? ' active invoice' : '');
+  document.getElementById('btnTypeQtn').className = 'type-btn quotation' + (!isInv ? ' active' : '');
+
+  const badge = document.getElementById('previewBadge');
+  const docNo = document.getElementById('inpDocNo');
+  const terms = document.getElementById('inpTerms');
+
+  if (isInv) {
+    badge.className = 'doc-badge';
+    badge.innerText = 'STATUTORY TAX INVOICE';
+    if (docNo.value.includes('QTN')) docNo.value = docNo.value.replace('QTN', 'INV');
+    terms.value = 'IMMEDIATE COMMERCIAL CLEARANCE';
+  } else {
+    badge.className = 'doc-badge quotation';
+    badge.innerText = 'FORMAL COMMERCIAL QUOTATION';
+    if (docNo.value.includes('INV')) docNo.value = docNo.value.replace('INV', 'QTN');
+    terms.value = '14 Days Validity / 21-NOV-2026';
+  }
+  updatePreview();
+}
+
+function applyPreset(key) {
+  const p = institutionalPresets[key] || [];
+  currentItems = JSON.parse(JSON.stringify(p));
+  if (key === 'quadstack') {
+    document.getElementById('inpDiscount').value = 14997;
+  } else if (key === 'documentshield') {
+    document.getElementById('inpDiscount').value = 6000;
+  } else if (key === 'whispervault') {
+    document.getElementById('inpDiscount').value = 10000;
+  } else if (key === 'pricetag') {
+    document.getElementById('inpDiscount').value = 5000;
+  } else if (key === 'storechain') {
+    document.getElementById('inpDiscount').value = 6000;
+  } else {
+    document.getElementById('inpDiscount').value = 0;
+  }
+  renderItemsForm();
+  updateCalculations();
+}
+
+function renderItemsForm() {
+  const c = document.getElementById('itemsContainer');
+  c.innerHTML = '';
+
+  if (currentItems.length === 0) {
+    c.innerHTML = '<div style="font-size:7pt; color:#64748b; font-style:italic; padding:6px;">No items. Click "+ Add Item" or select a preset above.</div>';
+    return;
+  }
+
+  currentItems.forEach((it, idx) => {
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.innerHTML = `
+      <div class="item-card-header">
+        <span class="item-badge-num">Product #${idx + 1}</span>
+        <button class="btn btn-danger" style="padding:2px 6px; font-size:6.8pt;" onclick="deleteItemRow(${idx})">🗑 Delete</button>
+      </div>
+      <div>
+        <label>Product Title</label>
+        <input type="text" value="${escapeHtml(it.title)}" oninput="updateItemField(${idx}, 'title', this.value)">
+      </div>
+      <div>
+        <label>Specs / Scope</label>
+        <input type="text" value="${escapeHtml(it.desc)}" oninput="updateItemField(${idx}, 'desc', this.value)">
+      </div>
+      <div class="form-grid-3">
+        <div>
+          <label>Tier / Scope</label>
+          <input type="text" value="${escapeHtml(it.tier)}" oninput="updateItemField(${idx}, 'tier', this.value)">
+        </div>
+        <div>
+          <label>Qty</label>
+          <input type="number" min="1" value="${it.qty}" oninput="updateItemField(${idx}, 'qty', parseInt(this.value)||1)">
+        </div>
+        <div>
+          <label>Rate (INR)</label>
+          <input type="number" min="0" value="${it.rate}" oninput="updateItemField(${idx}, 'rate', parseFloat(this.value)||0)">
+        </div>
+      </div>
+    `;
+    c.appendChild(card);
+  });
+}
+
+function escapeHtml(str) {
+  return (str || '').replace(/"/g, '&quot;');
+}
+
+function updateItemField(idx, field, val) {
+  if (currentItems[idx]) {
+    currentItems[idx][field] = val;
+    updateCalculations();
+  }
+}
+
+function addNewItemRow() {
+  currentItems.push({
+    title: "Custom Software Product / Consultation",
+    desc: "Bare-metal offline software solution engineered to client specifications. Permanent perpetual ownership.",
+    tier: "PERPETUAL COMMERCIAL",
+    qty: 1,
+    rate: 14999
+  });
+  renderItemsForm();
+  updateCalculations();
+}
+
+function deleteItemRow(idx) {
+  currentItems.splice(idx, 1);
+  renderItemsForm();
+  updateCalculations();
+}
+
+function updateCalculations() {
+  let gross = 0;
+  currentItems.forEach(it => {
+    gross += (it.qty || 1) * (it.rate || 0);
+  });
+  document.getElementById('inpGross').value = gross;
+
+  const discount = parseFloat(document.getElementById('inpDiscount').value) || 0;
+  const net = Math.max(0, gross - discount);
+  document.getElementById('inpNet').value = net;
+  updatePreview();
+}
+
+function updatePreview() {
+  document.getElementById('prevDocNo').innerText = document.getElementById('inpDocNo').value;
+  document.getElementById('prevDate').innerText = document.getElementById('inpDate').value;
+  document.getElementById('prevTerms').innerText = document.getElementById('inpTerms').value;
+
+  document.getElementById('prevClientName').innerText = document.getElementById('inpClientName').value;
+  document.getElementById('prevContact').innerText = document.getElementById('inpContact').value;
+  document.getElementById('prevPhone').innerText = document.getElementById('inpPhone').value;
+  document.getElementById('prevAddress').innerText = document.getElementById('inpAddress').value;
+  document.getElementById('prevGst').innerText = document.getElementById('inpGst').value;
+
+  const gross = parseFloat(document.getElementById('inpGross').value) || 0;
+  const discount = parseFloat(document.getElementById('inpDiscount').value) || 0;
+  const net = parseFloat(document.getElementById('inpNet').value) || 0;
+
+  const fmt = (n) => 'Rs. ' + Number(n).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  document.getElementById('prevGross').innerText = fmt(gross);
+  document.getElementById('prevDiscount').innerText = '- ' + fmt(discount);
+  document.getElementById('prevNet').innerText = fmt(net);
+  document.getElementById('prevGrand').innerText = fmt(net);
+  document.getElementById('prevWords').innerText = numToWords(net);
+
+  // Render items table in preview
+  const tbody = document.getElementById('prevItemsBody');
+  tbody.innerHTML = '';
+
+  const paddingStyle = currentItems.length <= 2 ? 'padding: 6px 8px;' : (currentItems.length <= 4 ? 'padding: 4px 7px;' : 'padding: 2.5px 5px;');
+
+  currentItems.forEach((it, idx) => {
+    const num = String(idx + 1).padStart(2, '0');
+    const amt = (it.qty || 1) * (it.rate || 0);
+    const rateStr = it.rate === 0 ? '<span style="color:#059669; font-weight:700;">COMPLIMENTARY</span>' : fmt(it.rate);
+    const amtStr = amt === 0 ? '<span style="color:#059669; font-weight:700;">Rs. 0.00</span>' : `<strong>${fmt(amt)}</strong>`;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="col-center" style="${paddingStyle}"><strong>${num}</strong></td>
+      <td style="${paddingStyle}">
+        <div class="item-title">${it.title}</div>
+        <div class="item-sub">${it.desc}</div>
+      </td>
+      <td class="col-center" style="${paddingStyle}"><strong>${it.tier}</strong></td>
+      <td class="col-center" style="${paddingStyle}"><strong>${it.qty}</strong></td>
+      <td class="col-right" style="${paddingStyle}">${rateStr}</td>
+      <td class="col-right" style="${paddingStyle}">${amtStr}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function handlePrintSavePdf() {
+  // Check if Rust backend is active on 127.0.0.1:4040
+  const docNo = document.getElementById('inpDocNo').value;
+  const clientName = document.getElementById('inpClientName').value;
+  const netPayable = parseFloat(document.getElementById('inpNet').value) || 0;
+  const fullHtml = document.documentElement.outerHTML;
+
+  fetch('http://127.0.0.1:4040/api/export_pdf', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      doc_no: docNo,
+      doc_type: currentDocType,
+      client_name: clientName,
+      net_payable: netPayable,
+      items_count: currentItems.length,
+      html: fullHtml
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert("✔ PDF Exported Successfully via Pure Rust Engine!\nSaved to: " + data.path);
+    } else {
+      triggerBrowserPrintWithWarning();
+    }
+  })
+  .catch(err => {
+    // If backend is not running, trigger browser print with helpful printer selection alert
+    triggerBrowserPrintWithWarning();
+  });
+}
+
+function triggerBrowserPrintWithWarning() {
+  alert("⚠️ PRINTER DESTINATION TIP:\n\nIf your computer defaults to a label or receipt printer (such as 'SEZNIK Josh Label Printer'), make sure to change the Destination to:\n\n👉 'Save as PDF' (and select Paper size: A4)\n\nThis guarantees a perfect 1-page full-size Swiss A4 document without any clipping!");
+  window.print();
+}
+
+function copyWhatsAppPitch() {
+  const isInv = currentDocType === 'invoice';
+  const typeStr = isInv ? 'TAX INVOICE' : 'COMMERCIAL QUOTATION';
+  const docNo = document.getElementById('inpDocNo').value;
+  const client = document.getElementById('inpClientName').value;
+  const net = document.getElementById('inpNet').value;
+
+  let itemsSummary = currentItems.map(it => `• ${it.title}`).join('\n');
+  if (!itemsSummary) itemsSummary = "Custom Software Systems Scope";
+
+  const msg = `*REHAN QUANT LAB — ${typeStr}*
+*Doc No:* ${docNo}
+*Client:* ${client}
+*Scope of Delivery:*
+${itemsSummary}
+*Net Payable:* Rs. ${Number(net).toLocaleString('en-IN')} (One-Time Lifetime Ownership • Zero SaaS Rent)
+*Amount in Words:* ${numToWords(parseFloat(net))}
+*Govt MSME Reg:* UDYAM-BR-26-0258772
+*Primary UPI Remittance:* 7091518548@upi
+*Support / VIP Direct:* +91 70915 18548
+
+Sharing your formal Swiss A4 PDF document. Please reply with payment confirmation for instant hardware attestation & node token generation.`;
+
+  navigator.clipboard.writeText(msg).then(() => {
+    alert("✔ Copied WhatsApp Summary to Clipboard! Ready to paste.");
+  }).catch(err => {
+    prompt("Copy this WhatsApp text:", msg);
+  });
+}
+
+// Initial Run: Load Quad-Stack default preset
+applyPreset('quadstack');
+</script>
+</body>
+</html>
