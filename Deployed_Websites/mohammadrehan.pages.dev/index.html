@@ -50,12 +50,10 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <meta name="twitter:description" content="Founder & Systems Architect at Rehan Quant Lab. Creator of RQL DocumentShield&trade;, RQL WhisperVault&trade;, and bare-metal high-throughput distributed systems." />
 <meta name="twitter:image" content="https://rehanquantlab.com/og_preview.png" />
 <!-- Sub-16ms Edge Preconnect & DNS Pre-fetch -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Tailwind CSS CDN -->
+<!-- High Performance Assets -->
 <script src="assets/tailwind.min.js"></script>
-<script src="assets/rql-shield.js"></script>
-    <script src="assets/rql-wave.js" defer></script>
+<script src="assets/rql-shield.js" defer></script>
+<script src="assets/rql-wave.js" defer></script>
 <script>
 
         tailwind.config = {
@@ -599,7 +597,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
-<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
+<img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
 <div class="whitespace-nowrap">
 <span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
 <span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
@@ -650,7 +648,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
   <!-- Drawer Top Bar -->
   <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
     <div class="flex items-center gap-2.5">
-      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
       <div>
         <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
         <div class="text-[10px] text-slate-500 font-mono">Site Directory Navigation</div>
@@ -908,9 +906,9 @@ document.addEventListener('keydown', function(e) {
 <!-- Top Decorative Header -->
 <div class="flex items-center justify-between pb-6 border-b border-slate-100 relative z-10">
 <div class="flex items-center gap-3">
-<img src="emblem.jpg" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/20 border border-slate-700/50">
+<img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/20 border border-slate-700/50">
 <div>
-<h3 class="font-bold text-slate-900 text-base">Mohammad Rehan</h3>
+<h2 class="font-bold text-slate-900 text-base">Mohammad Rehan</h2>
 <p class="text-xs text-indigo-600 font-medium">Founder @ Rehan Quant Lab</p>
 </div>
 </div>
@@ -931,7 +929,7 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Verified Core Tech Badges -->
 <div class="space-y-2.5 pt-1 relative z-10">
-<p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
+<p class="text-[11px] font-semibold text-slate-600 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
 <div class="flex flex-wrap gap-1.5">
 <span class="bg-indigo-50/90 text-indigo-900 border border-indigo-200/70 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">100% Pure Native Rust</span>
 <span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Win32 &amp; Windows 11 API</span>
@@ -1321,7 +1319,7 @@ document.addEventListener('keydown', function(e) {
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-              <img src="18_RQL_DocumentShield_Cover_1080p.png" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="18_RQL_DocumentShield_Cover_1080p.webp" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Forensic OS v1.0
               </div>
@@ -1332,7 +1330,7 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
                 RQL DocumentShield&trade;
@@ -1376,7 +1374,7 @@ document.addEventListener('keydown', function(e) {
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
-              <img src="19_RQL_WhisperVault_Cover_1080p.png" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="19_RQL_WhisperVault_Cover_1080p.webp" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 AI Speech OS v1.0
               </div>
@@ -1387,7 +1385,7 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
                 RQL WhisperVault&trade;
@@ -1431,7 +1429,7 @@ document.addEventListener('keydown', function(e) {
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2 group/media">
-              <img src="TextDiff_Cover_1080p.png" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="TextDiff_Cover_1080p.webp" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Myers Diff v1.0
               </div>
@@ -1442,7 +1440,7 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-indigo-700 font-bold truncate">RQL_TextDiff_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-500 bg-slate-100 border border-slate-200/80 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-indigo-600 transition">
                 RQL TextDiff&trade;
@@ -1509,7 +1507,7 @@ document.addEventListener('keydown', function(e) {
     <!-- Clean Bottom Directory Banner -->
     <div class="mt-10 p-6 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
       <div>
-        <h4 class="text-sm font-bold text-slate-900">Looking for Architectural Specifications &amp; Whitepapers?</h4>
+        <div class="text-sm font-bold text-slate-900" role="heading" aria-level="4">Looking for Architectural Specifications &amp; Whitepapers?</div>
         <p class="text-xs text-slate-500 mt-0.5">Explore individual engine documentation, native C-ABI dynamic libraries, and production client deployments.</p>
       </div>
       <div class="flex flex-wrap items-center gap-3 shrink-0">
@@ -1576,7 +1574,7 @@ document.addEventListener('keydown', function(e) {
             <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Patna, Bihar Deployment
             </span>
-            <span class="text-xs font-mono text-slate-400">Retail Systems</span>
+            <span class="text-xs font-mono text-slate-600">Retail Systems</span>
           </div>
           <h3 class="text-xl font-bold font-heading text-slate-900">
             High-Volume Multi-Counter Retail POS Engine
@@ -1586,15 +1584,15 @@ document.addEventListener('keydown', function(e) {
           </p>
           <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center font-mono text-xs">
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">Processed</div>
+              <div class="text-slate-600 text-[10px] uppercase">Processed</div>
               <div class="text-slate-900 font-bold mt-0.5">&#8377;45L+</div>
             </div>
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">SaaS Rent</div>
+              <div class="text-slate-600 text-[10px] uppercase">SaaS Rent</div>
               <div class="text-emerald-600 font-bold mt-0.5">&#8377;0 / Mo</div>
             </div>
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">Barcode Scan</div>
+              <div class="text-slate-600 text-[10px] uppercase">Barcode Scan</div>
               <div class="text-indigo-600 font-bold mt-0.5">&lt; 0.4s</div>
             </div>
           </div>
@@ -1615,7 +1613,7 @@ document.addEventListener('keydown', function(e) {
             <span class="bg-indigo-50 text-indigo-800 border border-indigo-200 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Global Anycast Web
             </span>
-            <span class="text-xs font-mono text-slate-400">Forensic Speed Migration</span>
+            <span class="text-xs font-mono text-slate-600">Forensic Speed Migration</span>
           </div>
           <h3 class="text-xl font-bold font-heading text-slate-900">
             Sub-12ms Anycast Web Architecture &amp; Speed Migration
@@ -1625,15 +1623,15 @@ document.addEventListener('keydown', function(e) {
           </p>
           <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center font-mono text-xs">
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">Lighthouse</div>
+              <div class="text-slate-600 text-[10px] uppercase">Lighthouse</div>
               <div class="text-emerald-600 font-bold mt-0.5">100 / 100</div>
             </div>
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">Edge TTFB</div>
+              <div class="text-slate-600 text-[10px] uppercase">Edge TTFB</div>
               <div class="text-slate-900 font-bold mt-0.5">14ms</div>
             </div>
             <div>
-              <div class="text-slate-400 text-[10px] uppercase">Organic Traffic</div>
+              <div class="text-slate-600 text-[10px] uppercase">Organic Traffic</div>
               <div class="text-indigo-600 font-bold mt-0.5">+44%</div>
             </div>
           </div>
@@ -1746,7 +1744,7 @@ Contact Mohammad Rehan
   <!-- Col 1: Identity & Architecture -->
   <div class="space-y-3.5">
     <div class="flex items-center gap-2.5">
-      <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-700/40">
+      <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-700/40">
       <div class="leading-tight">
         <span class="font-bold text-slate-900 text-sm block">Mohammad Rehan</span>
         <span class="text-[11px] font-mono text-indigo-600">Rehan Quant Lab&trade;</span>

@@ -1,6 +1,6 @@
 /**
  * ====================================================================
- * 🛡️ REHAN QUANT LAB™ — UNIVERSAL ROUTE & BUTTON OBFUSCATION SHIELD
+ *         REHAN QUANT LAB        UNIVERSAL ROUTE & BUTTON OBFUSCATION SHIELD
  * ====================================================================
  * Client-Side Route Hydration Engine
  * Blinds automated web scrapers, crawler spiders, and contact harvesters.
