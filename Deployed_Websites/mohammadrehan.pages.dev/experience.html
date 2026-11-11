@@ -1215,7 +1215,11 @@ Directing daily retail showroom operations, inventory management, vendor negotia
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
 
-            
+            // Check if cookie consent was already granted
+            if (localStorage.getItem('cookie_consent_accepted') === 'true') {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) banner.remove();
+            }
         });
 
         // Mobile Menu Toggle

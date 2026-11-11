@@ -20,14 +20,6 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 #chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
 
-/* Apple Design Tactile Physics & Typography */
-button:active, a[role="button"]:active, a:active {
-  transform: scale(0.982) !important;
-  transition: transform 70ms cubic-bezier(0.2, 0, 0, 1) !important;
-}
-h1, h2, h3, h4, .font-heading {
-  letter-spacing: -0.025em;
-}
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -139,15 +131,7 @@ h1, h2, h3, h4, .font-heading {
 
         }
 
-    /* Apple Design Tactile Physics & Typography */
-button:active, a[role="button"]:active, a:active {
-  transform: scale(0.982) !important;
-  transition: transform 70ms cubic-bezier(0.2, 0, 0, 1) !important;
-}
-h1, h2, h3, h4, .font-heading {
-  letter-spacing: -0.025em;
-}
-</style>
+    </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -583,19 +567,11 @@ h1, h2, h3, h4, .font-heading {
   animation: aurora-drift-3 26s ease-in-out infinite alternate;
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
-/* Apple Design Tactile Physics & Typography */
-button:active, a[role="button"]:active, a:active {
-  transform: scale(0.982) !important;
-  transition: transform 70ms cubic-bezier(0.2, 0, 0, 1) !important;
-}
-h1, h2, h3, h4, .font-heading {
-  letter-spacing: -0.025em;
-}
 </style>
 </head>
 <body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 <!-- Single Unified Institutional Status & Rotating Announcement Bar (Gumroad Live Banner) -->
-<div class="bg-slate-100/90 text-slate-700 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-200/90 relative z-50">
+<div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
         <div id="live-ticker-container" class="flex items-center gap-2 truncate">
             <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
@@ -614,7 +590,6 @@ h1, h2, h3, h4, .font-heading {
         </div>
     </div>
 </div>
-<!-- SECURITY BANNER / COOKIE CONSENT (Floating Centered Dock, Zero Collision with Aria/WhatsApp) -->
 
 <!-- STICKY NAVBAR -->
 <!-- START: RQL_HYBRID_NAV_AND_DRAWER -->
@@ -697,7 +672,7 @@ h1, h2, h3, h4, .font-heading {
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900">Home</div>
+              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
               <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
@@ -1004,42 +979,44 @@ document.addEventListener('keydown', function(e) {
 
 
 <!-- =========================================================================
-      COMMERCIAL SUITES TEASER BANNER (APPLE LIGHT THEME)
+      COMMERCIAL SUITES TEASER BANNER (LIQUID GLASS DEEP RED CHROME)
      ========================================================================= -->
-<section class="py-14 bg-slate-50/70 relative overflow-hidden border-y border-slate-200">
+<section class="py-14 bg-[#140205] relative overflow-hidden border-y border-rose-950">
+  <div class="absolute inset-0 pointer-events-none opacity-40 bg-[radial-gradient(ellipse_at_50%_0%,rgba(225,29,72,0.35)_0%,transparent_70%)]"></div>
+  
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="p-6 sm:p-10 rounded-3xl bg-white border-2 border-slate-200/90 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+    <div class="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#2a050d] via-[#3d0814] to-[#200309] border border-rose-500/40 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
       
       <div class="space-y-3 max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-mono font-bold tracking-wider uppercase">
-          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/20 border border-rose-400/40 text-rose-200 text-xs font-mono font-bold tracking-wider uppercase">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>20 Flagship Commercial Suites &bull; Instant Gumroad Delivery</span>
         </div>
 
-        <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white tracking-tight leading-tight">
           Offline Desktop Applications &amp; Business Software.
         </h2>
 
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+        <p class="text-xs sm:text-sm text-rose-100/90 leading-relaxed font-normal">
           20 native Windows desktop tools in pure Rust for visual PDF merge &amp; split reorganization, GST invoicing with dynamic payment QR, multi-gigabyte CSV data sanitization, barcode &amp; thermal label printing, Indian DPDP Act compliance, typography inspection, lossless audio metadata, bulk regex renaming, vector QR generation, cryptographic hashing, code comparison, network bonding, PDF redaction, offline AI transcription, offline retail POS, and LAN store networks. <strong>Pay once, own forever on Gumroad &mdash; zero monthly fee and lifetime license.</strong>
         </p>
 
-        <!-- 4 Stats in Apple Light Style -->
-        <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono text-slate-600">
-          <span class="flex items-center gap-1.5"><strong class="text-emerald-700">&lt; 1ms</strong> Rust Latency</span>
+        <!-- 4 Stats in Deep Red Chrome Style -->
+        <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono text-rose-200">
+          <span class="flex items-center gap-1.5"><strong class="text-emerald-400">&lt; 1ms</strong> Rust Latency</span>
           <span>&bull;</span>
-          <span class="flex items-center gap-1.5"><strong class="text-indigo-700">100%</strong> Offline &amp; Air-Gapped</span>
+          <span class="flex items-center gap-1.5"><strong class="text-cyan-400">100%</strong> Offline &amp; Air-Gapped</span>
           <span>&bull;</span>
-          <span class="flex items-center gap-1.5"><strong class="text-amber-700">&#8377;0 / Mo</strong> Cloud Rent</span>
+          <span class="flex items-center gap-1.5"><strong class="text-amber-400">&#8377;0 / Mo</strong> Cloud Rent</span>
           <span>&bull;</span>
-          <span class="flex items-center gap-1.5"><strong class="text-slate-900">20 Flagships</strong> Live</span>
+          <span class="flex items-center gap-1.5"><strong class="text-white">20 Flagships</strong> Live</span>
         </div>
       </div>
 
       <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
         <a
           href="store.html"
-          class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs font-mono tracking-wider shadow-sm transition hover:scale-105 flex items-center justify-center gap-2 uppercase"
+          class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-xs font-mono tracking-wider shadow-lg transition hover:scale-105 flex items-center justify-center gap-2 uppercase"
         >
           <span>Explore 20 Commercial Suites</span>
           <span>&rarr;</span>
@@ -1049,7 +1026,7 @@ document.addEventListener('keydown', function(e) {
           data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs font-mono border border-slate-300 transition hover:scale-105 flex items-center justify-center gap-1.5"
+          class="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-slate-950/80 hover:bg-slate-900 text-white font-bold text-xs font-mono border border-rose-900/60 transition hover:scale-105 flex items-center justify-center gap-1.5"
         >
           <span>Gumroad Store &rarr;</span>
         </a>
@@ -1058,6 +1035,7 @@ document.addEventListener('keydown', function(e) {
     </div>
   </div>
 </section>
+
 
 
 <!-- ABOUT / PHILOSOPHY / HOW WE MAKE IT POSSIBLE SECTION -->
@@ -1124,45 +1102,46 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- Pillar 2: HOW WE DO IT -->
-        <div class="bg-slate-50 rounded-3xl border border-slate-200/90 p-8 flex flex-col justify-between hover:shadow-xl hover:border-slate-300 transition duration-300 text-slate-900">
+        <div class="bg-slate-900 text-white rounded-3xl border border-slate-800 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+            
             <div>
-                <div class="flex items-center justify-between pb-6 border-b border-slate-200/70">
-                    <span class="font-mono text-xs font-bold text-emerald-700 uppercase tracking-widest">Pillar 02</span>
-                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100/70 text-emerald-800 border border-emerald-200">Architecture</span>
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                    <span class="font-mono text-xs font-bold text-emerald-400 uppercase tracking-widest">Pillar 02</span>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Architecture</span>
                 </div>
-                <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center my-6 shadow-md shadow-emerald-600/20 font-bold">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center my-6 shadow-md shadow-emerald-500/30 font-bold">
                     <i class="w-6 h-6" data-lucide="shield-check"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-3">How We Do It</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <h3 class="text-2xl font-bold text-white tracking-tight mb-3">How We Do It</h3>
+                <p class="text-slate-300 text-sm leading-relaxed mb-6">
                     We design software to prevent common failures by applying clear software engineering principles and robust local storage:
                 </p>
-                <ul class="space-y-4 text-xs sm:text-sm text-slate-700">
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-300">
                     <li class="flex items-start gap-3">
-                        <i class="w-4 h-4 text-emerald-600 mt-1 shrink-0" data-lucide="database"></i>
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="database"></i>
                         <span><strong>Write-Ahead Journaling (WAL Mode):</strong> Append-only database transaction logging with SHA-256 checkpoints before commits, ensuring zero data loss even during sudden power cuts or computer shutdowns.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="w-4 h-4 text-emerald-600 mt-1 shrink-0" data-lucide="refresh-cw"></i>
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="refresh-cw"></i>
                         <span><strong>Process Supervision &amp; Fast Recovery:</strong> Independent background supervisor threads continuously monitor worker health. If a worker process encounters an unexpected error, it is restarted in milliseconds without losing application state.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="w-4 h-4 text-emerald-600 mt-1 shrink-0" data-lucide="shield-check"></i>
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="shield-check"></i>
                         <span><strong>Fault-Isolated Architecture:</strong> Components operate independently so an issue in one section cannot crash the entire application. Exponential backoff and retry limits prevent cascading failures.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="w-4 h-4 text-emerald-600 mt-1 shrink-0" data-lucide="lock"></i>
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="lock"></i>
                         <span><strong>Automated Safety Limits &amp; Controls:</strong> Hard boundaries enforced in code&mdash;including strict cash reserves, systematic trade exit triggers, and automated shut-offs during anomalous market conditions.</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <i class="w-4 h-4 text-emerald-600 mt-1 shrink-0" data-lucide="shield"></i>
+                        <i class="w-4 h-4 text-emerald-400 mt-1 shrink-0" data-lucide="shield"></i>
                         <span><strong>Encrypted Private Networking via WireGuard:</strong> Zero exposed public management ports. Internal server administration and sync run strictly across authenticated, peer-to-peer encrypted WireGuard VPN tunnels.</span>
                     </li>
                 </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500 font-mono">
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
                 <span>Standard: Fault-Tolerant Architecture</span>
-                <span class="text-emerald-700 font-semibold">&bull; Sub-50ms Recovery</span>
+                <span class="text-emerald-400 font-semibold">&bull; Sub-50ms Recovery</span>
             </div>
         </div>
 
@@ -1206,80 +1185,82 @@ document.addEventListener('keydown', function(e) {
         </div>
 
     </div>
+
     <!-- Verified Institutional Metrics Row -->
-    <div class="mt-12 bg-white text-slate-900 rounded-2xl p-6 sm:p-8 border-2 border-slate-200/90 shadow-sm">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
+    <div class="mt-12 bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 shadow-xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
             <div class="pt-4 md:pt-0">
-                <p class="text-2xl sm:text-3xl font-extrabold text-emerald-700 font-mono">&lt;50ms</p>
-                <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">MTTR Process Recovery</p>
+                <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">&lt;50ms</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">MTTR Process Recovery</p>
             </div>
             <div class="pt-4 md:pt-0 md:pl-6">
-                <p class="text-2xl sm:text-3xl font-extrabold text-indigo-700 font-mono">&lt;1&mu;s</p>
-                <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">In-Memory Compute (&lt;1&mu;s CPU / ~1.2ms Wire)</p>
+                <p class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">&lt;1&mu;s</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">In-Memory Compute (&lt;1&mu;s CPU / ~1.2ms Wire)</p>
             </div>
             <div class="pt-4 md:pt-0 md:pl-6">
-                <p class="text-2xl sm:text-3xl font-extrabold text-amber-700 font-mono">Zero</p>
-                <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">State Loss (WAL Journaled)</p>
+                <p class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">Zero</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">State Loss (WAL Journaled)</p>
             </div>
             <div class="pt-4 md:pt-0 md:pl-6">
-                <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono">4+ Years</p>
-                <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Production Retail Deployment</p>
+                <p class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4+ Years</p>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Production Retail Deployment</p>
             </div>
         </div>
     </div>
 
     <!-- Core Engineering Philosophy: Gall's Law & Sun Tzu's Strategic Asymmetry -->
-    <div class="mt-12 bg-white text-slate-800 border-2 border-slate-200/90 rounded-3xl p-8 sm:p-10 shadow-sm relative overflow-hidden">
+    <div class="mt-12 bg-slate-900 text-slate-200 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
         
-        <div class="flex items-center justify-between pb-6 border-b border-slate-200 flex-wrap gap-4">
+        <div class="flex items-center justify-between pb-6 border-b border-slate-800 flex-wrap gap-4">
             <div class="flex items-center gap-3">
-                <span class="w-3 h-3 rounded-full bg-emerald-600 animate-pulse"></span>
-                <span class="text-xs font-mono font-bold uppercase tracking-widest text-emerald-700">Core Engineering Philosophy</span>
+                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400">Core Engineering Philosophy</span>
             </div>
-            <div class="flex items-center gap-2 text-xs font-mono text-slate-600">
-                <span class="bg-slate-100 px-2.5 py-1 rounded border border-slate-200">John Gall (1975)</span>
-                <span class="text-slate-400">&bull;</span>
-                <span class="bg-slate-100 px-2.5 py-1 rounded border border-slate-200">Edsger W. Dijkstra (Simplicity)</span>
+            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+                <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">John Gall (1975)</span>
+                <span class="text-slate-600">&bull;</span>
+                <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">Edsger W. Dijkstra (Simplicity)</span>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <!-- Left: Gall's Law -->
-            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                <div class="flex items-center gap-2 text-indigo-700 text-xs font-mono font-bold uppercase mb-3">
+            <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800/80">
+                <div class="flex items-center gap-2 text-indigo-400 text-xs font-mono font-bold uppercase mb-3">
                     <i class="w-4 h-4" data-lucide="scale"></i>
                     <span>I. Gall's Law: Start with Working Simplicity</span>
                 </div>
-                <blockquote class="text-xs sm:text-sm text-slate-700 italic leading-relaxed font-serif">
+                <blockquote class="text-xs sm:text-sm text-slate-300 italic leading-relaxed font-serif">
                     "A complex system that works is always found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be made to work. There is no getting around it; we must start with a simple working system."
                 </blockquote>
-                <p class="text-[11px] text-slate-500 font-mono mt-3">
+                <p class="text-[11px] text-slate-400 font-mono mt-3">
                     &mdash; <strong>John Gall</strong>, <em>Systemantics: How Systems Work and Especially How They Fail</em>
                 </p>
             </div>
-            <!-- Right: Dijkstra -->
-            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                <div class="flex items-center gap-2 text-emerald-700 text-xs font-mono font-bold uppercase mb-3">
+            <!-- Right: Sun Tzu -->
+            <div class="bg-slate-950/60 p-6 rounded-2xl border border-slate-800/80">
+                <div class="flex items-center gap-2 text-emerald-400 text-xs font-mono font-bold uppercase mb-3">
                     <i class="w-4 h-4" data-lucide="shield"></i>
                     <span>II. Edsger W. Dijkstra: Essential Simplicity</span>
                 </div>
-                <blockquote class="text-xs sm:text-sm text-slate-700 italic leading-relaxed font-serif">
+                <blockquote class="text-xs sm:text-sm text-slate-300 italic leading-relaxed font-serif">
                     "Simplicity is prerequisite for reliability. If we want systems with zero defects, we must design systems simple enough that there are obviously no deficiencies."
                 </blockquote>
-                <p class="text-[11px] text-slate-500 font-mono mt-3">
+                <p class="text-[11px] text-slate-400 font-mono mt-3">
                     &mdash; <strong>Edsger W. Dijkstra</strong>, <em>ACM Turing Award Lecture</em>
                 </p>
             </div>
         </div>
-        <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                <strong class="text-slate-900">The Rehan Quant Lab Philosophy:</strong> Understated, clean interfaces on the surface; deterministic execution, automated crash recovery, and local data persistence underneath. We reject bloated vanity and let cold, audited numbers deliver the verdict.
+        <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <strong class="text-white">The Rehan Quant Lab Philosophy:</strong> Understated, clean interfaces on the surface; deterministic execution, automated crash recovery, and local data persistence underneath. We reject bloated vanity and let cold, audited numbers deliver the verdict.
             </p>
-            <a href="store.html" class="shrink-0 inline-flex items-center gap-2 text-xs font-mono text-indigo-600 hover:text-indigo-800 font-bold transition">
+            <a href="store.html" class="shrink-0 inline-flex items-center gap-2 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition">
                 <span>Explore Commercial Store</span>
                 <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
             </a>
         </div>
     </div>
+
 
     <!-- Founder's Personal Manifesto Quote -->
     <div class="mt-12 bg-gradient-to-r from-slate-50 via-white to-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-sm relative">
@@ -1339,7 +1320,7 @@ document.addEventListener('keydown', function(e) {
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 mb-4 mt-2">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
               <img src="18_RQL_DocumentShield_Cover_1080p.png" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Forensic OS v1.0
@@ -1394,7 +1375,7 @@ document.addEventListener('keydown', function(e) {
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 mb-4 mt-2">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2">
               <img src="19_RQL_WhisperVault_Cover_1080p.png" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 AI Speech OS v1.0
@@ -1449,7 +1430,7 @@ document.addEventListener('keydown', function(e) {
              LIVE OFFICIAL RELEASE
           </div>
           <div>
-            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200/80 mb-4 mt-2 group/media">
+            <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/80 mb-4 mt-2 group/media">
               <img src="TextDiff_Cover_1080p.png" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Myers Diff v1.0
@@ -1499,49 +1480,67 @@ document.addEventListener('keydown', function(e) {
         </div>
 
 
-        <!-- STORE GATEWAY CALLOUT: 20 COMMERCIAL FLAGSHIPS IN STORE -->
-        <div class="md:col-span-2 lg:col-span-3 bg-white text-slate-900 rounded-3xl p-6 sm:p-8 border-2 border-slate-200/90 shadow-sm hover:shadow-md transition flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- STORE GATEWAY CALLOUT: 6 MORE COMMERCIAL FLAGSHIPS IN STORE -->
+        <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-slate-900 via-slate-850 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="space-y-2 max-w-2xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-mono font-bold">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-mono font-bold">
               <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
               <span>20 Commercial Desktop Software Flagships Live</span>
             </div>
-            <h3 class="text-2xl sm:text-3xl font-extrabold font-heading tracking-tight text-slate-900">
+            <h3 class="text-2xl sm:text-3xl font-black font-heading tracking-tight text-white">
               Explore All 20 Desktop Suites in Commercial Store
             </h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Looking for <strong>RQL TagEditor&trade;</strong>, <strong>RQL Renamer&trade;</strong>, <strong>RQL Retail POS&trade;</strong>, <strong>RQL StoreChain&trade;</strong>, <strong>RQL Conduit&trade;</strong>, <strong>RQL HashCheck&trade;</strong>, or <strong>RQL QRStudio&trade;</strong>? Air-gapped single-workstation installers with instant Gumroad delivery are available in our official store.
             </p>
           </div>
           <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm font-heading shadow-md transition hover:scale-102">
+            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm font-heading shadow-lg hover:shadow-rose-600/20 transition hover:scale-102">
               <span>Open Commercial Store</span>
               <span class="font-mono text-base">&rarr;</span>
             </a>
-            <a href="projects.html" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 font-mono text-xs font-bold transition">
+            <a href="projects.html" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-mono text-xs font-bold transition">
               <span>Technical Projects &rarr;</span>
             </a>
           </div>
         </div>
     </div>
 
+    <!-- Clean Bottom Directory Banner -->
+    <div class="mt-10 p-6 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs">
+      <div>
+        <h4 class="text-sm font-bold text-slate-900">Looking for Architectural Specifications &amp; Whitepapers?</h4>
+        <p class="text-xs text-slate-500 mt-0.5">Explore individual engine documentation, native C-ABI dynamic libraries, and production client deployments.</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-3 shrink-0">
+        <a href="store.html" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition flex items-center gap-1.5 shadow-2xs">
+          <span>Commercial Store Tab</span>
+          <span class="text-emerald-400 font-bold">&rarr;</span>
+        </a>
+        <a href="projects.html" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-mono text-xs font-bold border border-slate-200 transition flex items-center gap-1.5">
+          <span>Technical Projects</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
     <!-- Dedicated Web Studio & Speed Auditor Showcase Banner -->
-    <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-white text-slate-900 border-2 border-slate-200/90 shadow-sm hover:shadow-md flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative overflow-hidden group">
+    <div class="mt-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-850 to-indigo-950 text-white border border-slate-800 shadow-xl flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative overflow-hidden group">
       <div class="space-y-2 relative z-10 max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-mono font-semibold">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono font-semibold">
           <i class="w-3.5 h-3.5" data-lucide="gauge"></i>
           <span>Forensic Speed Auditor &bull; 1-Click Client Website Studio</span>
         </div>
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-heading">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-heading">
           Web Performance &amp; Speed Studio
         </h3>
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
           Need forensic site diagnostics or an instant client website? Audit any URL with the 16ms socket diagnostic engine or launch our 60-second Swiss Light Ceramic builder with zero monthly hosting fees.
         </p>
       </div>
       <div class="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
-        <a href="websites/" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading transition shadow-md hover:scale-102 flex items-center gap-2">
-          <i class="w-4 h-4 text-emerald-400" data-lucide="layers"></i>
+        <a href="websites/" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs font-heading transition shadow-md hover:scale-102 flex items-center gap-2">
+          <i class="w-4 h-4 text-emerald-600" data-lucide="layers"></i>
           <span>Open Web &amp; Speed Studio</span>
           <span>&rarr;</span>
         </a>
@@ -1550,6 +1549,7 @@ document.addEventListener('keydown', function(e) {
 
   </div>
 </section>
+
 <!-- ======================================================== -->
 <!-- REAL-WORLD OPERATIONAL CASE STUDIES & FIELD DEPLOYMENTS -->
 <!-- ======================================================== -->
@@ -1722,14 +1722,14 @@ document.addEventListener('keydown', function(e) {
 </section>
 
 <!-- CALL TO ACTION BANNER -->
-<section id="contact-cta" class="py-16 sm:py-20 bg-slate-50 text-slate-900 border-t border-slate-200 relative overflow-hidden">
+<section id="contact-cta" class="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-heading text-slate-900">Ready to collaborate or deploy native desktop systems?</h2>
-<p class="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-heading">Ready to collaborate or deploy native desktop systems?</h2>
+<p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
 Whether you require sub-12ms Anycast web architectures, air-gapped desktop computing suites, or custom quantitative systems engineering, let's connect.
 </p>
 <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
-<a class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm" href="contact.html">
+<a class="bg-white hover:bg-slate-100 text-slate-900 font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm" href="contact.html">
 Contact Mohammad Rehan
 </a>
 <a class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm flex items-center gap-2" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwaW50ZXJlc3RlZCUyMGluJTIweW91ciUyMHNlcnZpY2VzLg==" role="button" rel="noopener noreferrer" target="_blank">
@@ -1872,7 +1872,7 @@ Contact Mohammad Rehan
 
             // Check if cookie consent was already granted
             if (localStorage.getItem('cookie_consent_accepted') === 'true') {
-                // cookie-banner removed
+                const banner = document.getElementById('cookie-banner');
                 if (banner) banner.remove();
             }
         });
@@ -1889,7 +1889,7 @@ Contact Mohammad Rehan
 
         // Cookie Banner Management
         function acceptCookies() {
-            // cookie-banner removed
+            const banner = document.getElementById('cookie-banner');
             if (banner) {
                 try {
                     localStorage.setItem('cookie_consent_accepted', 'true');

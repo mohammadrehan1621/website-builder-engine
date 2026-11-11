@@ -2717,7 +2717,43 @@ document.addEventListener('keydown', function(e) {
 
         // Architectural Systems Catalog Active
 
-        
+        // Cookie Banner Management
+
+
+
+        function acceptCookies() {
+
+
+
+            const banner = document.getElementById('cookie-banner');
+
+
+
+            if (banner) {
+
+
+
+                try { localStorage.setItem('cookie_consent_accepted', 'true'); } catch (e) {}
+
+
+
+                banner.style.opacity = '0';
+
+
+
+                banner.style.pointerEvents = 'none';
+
+
+
+                setTimeout(() => banner.remove(), 250);
+
+
+
+            }
+
+
+
+        }
 
 
 
