@@ -1121,6 +1121,32 @@ document.addEventListener('keydown', function(e) {
           </div>
         </div>
 
+        <!-- The Ultimate Air-Gap Verification Challenge Banner -->
+        <div class="my-4 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+              <i class="w-5 h-5" data-lucide="wifi-off"></i>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-mono font-bold text-white uppercase tracking-wider">Independent Air-Gap Verification Protocol</span>
+                <span id="airgap-live-indicator" class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">
+                  SYSTEM STANDBY: ZERO EGRESS
+                </span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                <strong class="text-slate-200">Test it yourself right now:</strong> Turn off your computer Wi-Fi or unplug your Ethernet cable. Drop an image, redact text, or compute a hash below. Notice that every single tool continues executing with zero errors, zero pauses, and zero cloud dependencies because everything executes 100% in your local RAM.
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex items-center gap-2">
+            <button onclick="auditBrowserNetworkEntries()" class="px-3.5 py-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold flex items-center gap-1.5 transition cursor-pointer">
+              <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="activity"></i>
+              <span>Run Network Audit</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Tool Selection Tabs -->
         <div class="flex items-center gap-2 overflow-x-auto py-4 border-b border-slate-800/60 no-scrollbar">
           <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs flex items-center gap-1.5 cursor-pointer">
