@@ -1,7 +1,6 @@
 ---
 name: apple-design
-description: >-
-  Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography, reduced-motion, or Apple-style interfaces.
+description: Apple design principles and fluid interface rules translated for web applications. Use for gesture-driven UI, spring animations, sheet interactions, translucent materials, and Apple-style interfaces.
 ---
 
 # Apple Design
