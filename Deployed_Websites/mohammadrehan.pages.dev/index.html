@@ -865,27 +865,29 @@ document.addEventListener('keydown', function(e) {
     I build native Windows desktop tools that run <strong>100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
 </p>
 
-<!-- The Skeptic's Dare Attention Card (Main Home Tab) -->
-<div class="p-4 sm:p-5 rounded-2xl bg-slate-950 border-2 border-emerald-500/50 text-left shadow-xl max-w-2xl mx-auto lg:mx-0 relative overflow-hidden group">
-  <div class="absolute -right-8 -top-8 w-28 h-28 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
-  <div class="flex items-start gap-3.5 relative z-10">
-    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
-      <i class="w-5 h-5 text-emerald-400" data-lucide="wifi-off"></i>
+<!-- The Skeptic's Dare Attention Card (Apple Glassmorphism Edition) -->
+<div class="p-5 rounded-3xl bg-white/85 backdrop-blur-xl border-2 border-slate-200/90 hover:border-emerald-500/50 text-left shadow-lg shadow-slate-200/50 max-w-2xl mx-auto lg:mx-0 relative overflow-hidden transition-all duration-300 group">
+  <div class="absolute -right-10 -top-10 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+  <div class="absolute -left-10 -bottom-10 w-36 h-36 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none"></div>
+  <div class="flex items-start gap-3.5 sm:gap-4 relative z-10">
+    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-50 to-emerald-100/90 border border-emerald-300/80 text-emerald-700 flex items-center justify-center shrink-0 shadow-xs">
+      <i class="w-5 h-5 text-emerald-700" data-lucide="wifi-off"></i>
     </div>
-    <div class="space-y-1">
+    <div class="space-y-1.5 flex-grow">
       <div class="flex flex-wrap items-center gap-2">
-        <span class="text-[10px] font-mono font-extrabold uppercase px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/40">The Skeptic's Dare</span>
-        <span class="text-[10px] font-mono text-emerald-400 font-bold">&#10003; 100% Proven In Browser</span>
+        <span class="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 shadow-2xs">The Skeptic's Dare</span>
+        <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs">&#10003; 100% Proven In Browser</span>
       </div>
-      <h3 class="text-sm sm:text-base font-extrabold font-heading text-white tracking-tight">
+      <h3 class="text-base sm:text-lg font-extrabold font-heading text-slate-950 tracking-tight leading-snug">
         Think "100% Offline" is just marketing words? Prove us wrong in 5 seconds.
       </h3>
-      <p class="text-xs text-slate-300 font-mono leading-relaxed">
+      <p class="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
         Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
       </p>
-      <div class="pt-1.5">
-        <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 underline cursor-pointer">
-          <span>Take The 5-Second Air-Gap Challenge (Live In Browser)</span>
+      <div class="pt-2 flex items-center gap-3">
+        <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs transition shadow-sm hover:scale-102 cursor-pointer">
+          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="zap"></i>
+          <span>Take The 5-Second Air-Gap Challenge</span>
           <span>&rarr;</span>
         </a>
       </div>
