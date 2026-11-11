@@ -1121,29 +1121,44 @@ document.addEventListener('keydown', function(e) {
           </div>
         </div>
 
-        <!-- The Ultimate Air-Gap Verification Challenge Banner -->
-        <div class="my-4 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div class="flex items-start gap-3">
-            <div class="w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-              <i class="w-5 h-5" data-lucide="wifi-off"></i>
-            </div>
-            <div>
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="text-xs font-mono font-bold text-white uppercase tracking-wider">Independent Air-Gap Verification Protocol</span>
-                <span id="airgap-live-indicator" class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">
-                  SYSTEM STANDBY: ZERO EGRESS
-                </span>
+        <!-- The Ultimate Skeptic Challenge: Prove Us Wrong in 5 Seconds -->
+        <div class="my-5 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-2 border-emerald-500/40 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-44 h-44 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 relative z-10">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 shadow-inner">
+                <i class="w-6 h-6" data-lucide="zap"></i>
               </div>
-              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
-                <strong class="text-slate-200">Test it yourself right now:</strong> Turn off your computer Wi-Fi or unplug your Ethernet cable. Drop an image, redact text, or compute a hash below. Notice that every single tool continues executing with zero errors, zero pauses, and zero cloud dependencies because everything executes 100% in your local RAM.
-              </p>
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/40 tracking-wider uppercase">
+                    The Skeptic's Dare
+                  </span>
+                  <span id="airgap-live-indicator" class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">
+                    NETWORK STATUS: ZERO OUTBOUND EGRESS
+                  </span>
+                </div>
+                
+                <h4 class="text-lg sm:text-xl font-extrabold font-heading text-white tracking-tight">
+                  Think This Is Just Marketing Words? Prove Us Wrong in 5 Seconds.
+                </h4>
+                
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+                  Every SaaS on Earth claims they "care about privacy" right before uploading your files to AWS. <strong class="text-white">We refuse to ask for your trust.</strong> Turn off your computer Wi-Fi or unplug your Ethernet cable right now, then compress an image, redact text, or compute a hash below. If a single byte leaves your machine or any tool fails, don't buy our software.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="shrink-0 flex items-center gap-2">
-            <button onclick="auditBrowserNetworkEntries()" class="px-3.5 py-2 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold flex items-center gap-1.5 transition cursor-pointer">
-              <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="activity"></i>
-              <span>Run Network Audit</span>
-            </button>
+
+            <div class="shrink-0 w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5">
+              <button onclick="auditBrowserNetworkEntries()" class="w-full py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-102 shadow-lg shadow-emerald-950/50 cursor-pointer">
+                <i class="w-4 h-4 text-white" data-lucide="activity"></i>
+                <span>Run Forensic Network Audit</span>
+              </button>
+              <div class="text-[10px] font-mono text-slate-400 text-center">
+                100% In-RAM Execution &bull; 0 Cloud APIs
+              </div>
+            </div>
           </div>
         </div>
 
