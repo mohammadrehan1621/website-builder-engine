@@ -4,14 +4,73 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=(), screen-wake-lock=(), accelerometer=(), gyroscope=(), magnetometer=(), ambient-light-sensor=()
   Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
   Content-Security-Policy: upgrade-insecure-requests; default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; script-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: data: blob: 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https: wss:;
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /
+  Cache-Control: public, max-age=0, must-revalidate
+
+/store
+  Cache-Control: public, max-age=0, must-revalidate
+
+/store.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/legal
+  Cache-Control: public, max-age=0, must-revalidate
+
+/legal.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/projects
+  Cache-Control: public, max-age=0, must-revalidate
+
+/projects.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/experience
+  Cache-Control: public, max-age=0, must-revalidate
+
+/experience.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/security
+  Cache-Control: public, max-age=0, must-revalidate
+
+/security.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contact
+  Cache-Control: public, max-age=0, must-revalidate
+
+/contact.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/aegis
+  Cache-Control: public, max-age=0, must-revalidate
+
+/aegis.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/changelog
+  Cache-Control: public, max-age=0, must-revalidate
+
+/changelog.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/demo
+  Cache-Control: public, max-age=0, must-revalidate
+
+/demo.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/tools/*
   Cache-Control: public, max-age=0, must-revalidate
 
 /llms.txt
