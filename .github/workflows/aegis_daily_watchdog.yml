@@ -1,0 +1,21 @@
+name: Aegis-Chaos-Phoenix Daily Sentinel
+
+on:
+  schedule:
+    # Runs daily at 02:00 UTC (07:30 AM IST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  aegis-watchdog:
+    name: Strix, PentAGI & Aegis Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Execute Autonomous Sentinel Suite
+        shell: pwsh
+        run: |
+          ./aegis_watchdog.ps1
