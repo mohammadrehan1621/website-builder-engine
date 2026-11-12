@@ -438,10 +438,10 @@
             <div class="relative z-10 space-y-4">
               <div class="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
                   <span class="font-mono text-xs font-bold text-emerald-700 uppercase tracking-wider">Direct Access &bull; 20 Min Slot</span>
                 </div>
-                <span class="text-[10px] font-mono bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded border border-indigo-200 font-bold">Founder &amp; Architect</span>
+                <span class="text-[10px] font-mono bg-indigo-50 text-indigo-800 px-2 py-0.5 rounded border border-indigo-200 font-bold">Founder &amp; Architect</span>
               </div>
 
               <div>
@@ -449,8 +449,8 @@
                   <i class="w-5 h-5 text-indigo-700" data-lucide="calendar"></i>
                   <span>Schedule Technical Briefing</span>
                 </h3>
-                <p class="text-slate-600 text-xs leading-relaxed mt-2">
-                  Book a direct 20-minute private technical briefing with Mohammad Rehan to discuss distributed systems, AegisDB&trade; architecture, high-impact tech roles, or institutional quantitative setups.
+                <p class="text-slate-700 text-xs leading-relaxed mt-2 font-medium">
+                  Book a direct 20-minute private technical briefing with Mohammad Rehan regarding enterprise licensing across our 27 Pure-Rust Desktop Flagships (ClauseForge&trade;, DocumentShield&trade;, RetailPOS&trade;), custom air-gapped systems architecture, or principal engineering roles.
                 </p>
               </div>
 
@@ -470,7 +470,7 @@
           <!-- Direct Communication Channels Card -->
           <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-xs hover:shadow-xl space-y-4 bento-card-spring">
             <h3 class="text-sm font-black text-slate-950 uppercase tracking-wider font-mono flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
               <span>Direct Communication Channels</span>
             </h3>
 
@@ -486,7 +486,7 @@
                 </div>
               </div>
               <button class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition flex items-center gap-1.5 shrink-0 cursor-pointer btn-spring font-mono shadow-xs" onclick="handleSmartEmail(event)" title="Copy Email &amp; Open Gmail">
-                <i class="w-3.5 h-3.5 text-emerald-300" data-lucide="copy"></i> <span>Copy</span>
+                <i class="w-3.5 h-3.5 text-white" data-lucide="copy"></i> <span>Copy</span>
               </button>
             </div>
 
@@ -585,13 +585,13 @@
                 </div>
                 <div>
                   <label class="block text-[11px] font-mono font-bold text-slate-700 uppercase tracking-wider mb-1.5 font-bold" for="subject">Engagement Type *</label>
-                  <select class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 focus:border-slate-900 focus:bg-white focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 transition font-sans" id="subject" required="">
+                  <select class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 focus:border-slate-900 focus:bg-white focus:ring-1 focus:ring-slate-900 outline-none text-sm text-slate-900 font-medium transition font-sans" id="subject" required="">
                     <option value="">Select engagement type...</option>
-                    <option value="Full-Time Tech Lead / Architect Role">Full-Time Tech Lead / Systems Architect</option>
-                    <option value="Enterprise Distributed Systems Architecture">Enterprise Distributed Systems Architecture</option>
-                    <option value="AegisDB / Distributed Engine Consulting">AegisDB / Distributed Engine Consulting</option>
-                    <option value="Enterprise Web &amp; Distributed Systems">Enterprise Web Platforms &amp; Distributed Systems</option>
-                    <option value="General Technical Inquiry">General Institutional Inquiry</option>
+                    <option value="Enterprise Software License (27 Pure-Rust Desktop Suites)">Enterprise License &mdash; 27 Pure-Rust Desktop Suites (ClauseForge / DocumentShield / POS)</option>
+                    <option value="Custom Air-Gapped Systems & Web Platform Engineering">Custom Air-Gapped Systems &amp; Web Platform Engineering</option>
+                    <option value="AegisDB Distributed Systems & Security Advisory">AegisDB&trade; Distributed Systems &amp; Security Advisory</option>
+                    <option value="Full-Time Systems Architect / Tech Lead Role">Full-Time Systems Architect / Tech Lead Role</option>
+                    <option value="Institutional & Partnership Inquiry">Institutional &amp; Partnership Inquiry</option>
                   </select>
                 </div>
               </div>
@@ -740,45 +740,61 @@
 </div>
 </footer>
 
-<!-- VIP TECHNICAL BRIEFING MODAL (OBSIDIAN THEMED) -->
-<div id="briefing-modal" class="hidden fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-md flex items-center justify-center p-4">
-  <div class="bg-white text-slate-900 rounded-3xl border border-slate-200 max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
-    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-mono text-xs text-emerald-800 uppercase tracking-wider font-bold">20-Min Technical Briefing</span>
+<!-- VIP TECHNICAL BRIEFING MODAL (HIGH-CONTRAST LIGHT THEME) -->
+<div id="briefing-modal" class="hidden fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-md flex items-center justify-center p-4">
+  <div class="bg-white text-slate-950 rounded-3xl border border-slate-300 max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+        <span class="font-mono text-xs text-emerald-800 uppercase tracking-wider font-extrabold">20-Min Technical Briefing</span>
       </div>
-      <button onclick="closeBriefingModal()" class="text-slate-500 hover:text-slate-900 p-1 rounded-lg hover:bg-slate-100 transition cursor-pointer">
+      <button onclick="closeBriefingModal()" class="text-slate-800 hover:text-slate-950 p-1.5 rounded-lg hover:bg-slate-100 transition cursor-pointer" aria-label="Close modal">
         <i class="w-5 h-5" data-lucide="x"></i>
       </button>
     </div>
 
     <div class="space-y-4">
       <div>
-        <label class="block text-xs font-mono text-slate-700 font-bold uppercase tracking-wider mb-2">Select Briefing Topic:</label>
-        <div class="space-y-2">
-          <button onclick="selectBriefingTopic(this, 'Distributed Systems Engineering & Enterprise Architecture')" class="briefing-topic-btn text-left p-3 rounded-xl border-2 border-indigo-600 bg-indigo-50 text-xs font-bold text-indigo-950 transition flex items-center justify-between w-full cursor-pointer shadow-xs">
-            <span>Quant Algorithmic Execution Setup</span>
-            <i class="w-4 h-4 text-emerald-700 check-icon" data-lucide="check-circle-2"></i>
+        <label class="block text-xs font-mono text-slate-900 font-extrabold uppercase tracking-wider mb-2.5">Select Briefing Topic:</label>
+        <div class="space-y-2.5">
+          <button onclick="selectBriefingTopic(this, 'Enterprise Licensing: 27 Pure-Rust Desktop Suites (ClauseForge, DocumentShield, POS)')" class="briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-indigo-700 bg-indigo-50 text-xs font-extrabold text-indigo-950 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-sm">
+            <div>
+              <div class="text-indigo-950 font-extrabold">Enterprise Software Licensing (27 Desktop Suites)</div>
+              <div class="text-[11px] font-medium text-indigo-800 mt-0.5">RQL ClauseForge&trade;, DocumentShield&trade;, RetailPOS&trade; &amp; Multi-Seat Deployments</div>
+            </div>
+            <i class="w-4 h-4 text-indigo-700 check-icon shrink-0" data-lucide="check-circle-2"></i>
           </button>
-          <button onclick="selectBriefingTopic(this, 'AegisDB In-Memory Architecture & SIMD Operations')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 text-xs font-bold text-slate-700 transition flex items-center justify-between w-full cursor-pointer">
-            <span>AegisDB Database Architecture</span>
-            <i class="w-4 h-4 text-slate-600 check-icon" data-lucide="circle"></i>
+          <button onclick="selectBriefingTopic(this, 'Custom Air-Gapped Systems, LegalTech & High-Speed Web Engineering')" class="briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-500 text-xs font-bold text-slate-900 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-2xs">
+            <div>
+              <div class="text-slate-950 font-bold">Custom Air-Gapped Systems &amp; Web Engineering</div>
+              <div class="text-[11px] font-medium text-slate-600 mt-0.5">Native Rust Workstations, Offline POS Meshes &amp; Sub-15ms Edge Sites</div>
+            </div>
+            <i class="w-4 h-4 text-slate-500 check-icon shrink-0" data-lucide="circle"></i>
           </button>
-          <button onclick="selectBriefingTopic(this, 'Full-Time Tech Lead / Software Architect Role')" class="briefing-topic-btn text-left p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 text-xs font-bold text-slate-700 transition flex items-center justify-between w-full cursor-pointer">
-            <span>Full-Time Architectural Engagement</span>
-            <i class="w-4 h-4 text-slate-600 check-icon" data-lucide="circle"></i>
+          <button onclick="selectBriefingTopic(this, 'AegisDB Distributed Architecture & Cryptographic Advisory')" class="briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-500 text-xs font-bold text-slate-900 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-2xs">
+            <div>
+              <div class="text-slate-950 font-bold">AegisDB&trade; Architecture &amp; Security Advisory</div>
+              <div class="text-[11px] font-medium text-slate-600 mt-0.5">In-Memory Quorum, Zero-Egress Audits &amp; Performance Optimization</div>
+            </div>
+            <i class="w-4 h-4 text-slate-500 check-icon shrink-0" data-lucide="circle"></i>
+          </button>
+          <button onclick="selectBriefingTopic(this, 'Full-Time / Fractional Systems Architect & Tech Lead Role')" class="briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-500 text-xs font-bold text-slate-900 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-2xs">
+            <div>
+              <div class="text-slate-950 font-bold">Full-Time Systems Architect / Tech Lead Role</div>
+              <div class="text-[11px] font-medium text-slate-600 mt-0.5">Principal Systems Engineering &amp; Executive Technical Leadership</div>
+            </div>
+            <i class="w-4 h-4 text-slate-500 check-icon shrink-0" data-lucide="circle"></i>
           </button>
         </div>
       </div>
 
-      <div class="space-y-2 pt-2 border-t border-slate-100">
-        <button onclick="dispatchBriefingEmail()" class="w-full bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
-          <i class="w-4 h-4" data-lucide="send"></i>
+      <div class="space-y-2.5 pt-3 border-t border-slate-200">
+        <button onclick="dispatchBriefingEmail()" class="w-full bg-indigo-700 hover:bg-indigo-600 text-white font-extrabold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
+          <i class="w-4 h-4 text-white" data-lucide="send"></i>
           <span>Send Calendar Invite via Email</span>
         </button>
-        <button onclick="dispatchBriefingWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
-          <i class="w-4 h-4" data-lucide="message-square"></i>
+        <button onclick="dispatchBriefingWhatsApp()" class="w-full bg-emerald-700 hover:bg-emerald-600 text-white font-extrabold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 text-xs cursor-pointer btn-spring">
+          <i class="w-4 h-4 text-white" data-lucide="message-square"></i>
           <span>Confirm via Instant WhatsApp Direct</span>
         </button>
       </div>
@@ -955,7 +971,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Technical Briefing Modal Logic
-let selectedTopic = "Distributed Systems Engineering & Enterprise Software Architecture";
+let selectedTopic = "Enterprise Licensing: 27 Pure-Rust Desktop Suites (ClauseForge, DocumentShield, POS)";
 function openBriefingModal() {
   const modal = document.getElementById('briefing-modal');
   if (modal) {
@@ -970,18 +986,26 @@ function closeBriefingModal() {
 function selectBriefingTopic(btn, topic) {
   selectedTopic = topic;
   document.querySelectorAll('.briefing-topic-btn').forEach(function(b) {
-    b.className = "briefing-topic-btn text-left p-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 text-xs font-bold text-slate-700 transition flex items-center justify-between w-full cursor-pointer";
+    b.className = "briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-500 text-xs font-bold text-slate-900 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-2xs";
+    const titleEl = b.querySelector('div > div:first-child');
+    const subEl = b.querySelector('div > div:last-child');
+    if (titleEl) titleEl.className = "text-slate-950 font-bold";
+    if (subEl && subEl !== titleEl) subEl.className = "text-[11px] font-medium text-slate-600 mt-0.5";
     const icon = b.querySelector('.check-icon');
     if (icon) {
       icon.setAttribute('data-lucide', 'circle');
-      icon.className = "w-4 h-4 text-slate-600 check-icon";
+      icon.className = "w-4 h-4 text-slate-500 check-icon shrink-0";
     }
   });
-  btn.className = "briefing-topic-btn text-left p-3 rounded-xl border-2 border-indigo-600 bg-indigo-50 text-xs font-bold text-indigo-950 transition flex items-center justify-between w-full cursor-pointer shadow-xs";
+  btn.className = "briefing-topic-btn text-left p-3.5 rounded-xl border-2 border-indigo-700 bg-indigo-50 text-xs font-extrabold text-indigo-950 transition flex items-center justify-between gap-3 w-full cursor-pointer shadow-sm";
+  const activeTitleEl = btn.querySelector('div > div:first-child');
+  const activeSubEl = btn.querySelector('div > div:last-child');
+  if (activeTitleEl) activeTitleEl.className = "text-indigo-950 font-extrabold";
+  if (activeSubEl && activeSubEl !== activeTitleEl) activeSubEl.className = "text-[11px] font-medium text-indigo-800 mt-0.5";
   const icon = btn.querySelector('.check-icon');
   if (icon) {
     icon.setAttribute('data-lucide', 'check-circle-2');
-    icon.className = "w-4 h-4 text-emerald-400 check-icon";
+    icon.className = "w-4 h-4 text-indigo-700 check-icon shrink-0";
   }
   if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
 }
@@ -989,7 +1013,7 @@ function dispatchBriefingEmail() {
   const subject = encodeURIComponent("Technical Briefing Request (20 Min) - " + selectedTopic);
   const body = encodeURIComponent(
     "Hi Mohammad Rehan,\n\nI would like to schedule a 20-minute Technical Briefing with you regarding:\n" +
-    "&bull; Topic: " + selectedTopic + "\n\nLooking forward to speaking."
+    "- Topic: " + selectedTopic + "\n\nLooking forward to speaking."
   );
   window.location.href = "mailto:founder@rehanquantlab.com?subject=" + subject + "&body=" + body;
 }
