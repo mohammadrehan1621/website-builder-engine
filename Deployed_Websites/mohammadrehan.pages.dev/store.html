@@ -782,13 +782,13 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
     <div class="flex items-center gap-2 truncate">
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
-      <span class="text-emerald-700 font-bold uppercase text-[10px] tracking-wider shrink-0"> COMMERCIAL SUITES:</span>
-      <span class="text-slate-800 text-xs truncate">
-        <strong>26 Pure-Rust Commercial Desktop Flagships</strong> &bull; Instant Gumroad Digital Delivery
+      <span class="text-emerald-400 font-bold uppercase text-[10px] tracking-wider shrink-0">COMMERCIAL SUITES:</span>
+      <span class="text-slate-200 text-xs truncate">
+        <strong class="text-white">26 Pure-Rust Commercial Desktop Flagships</strong> &bull; <span class="bg-amber-500/20 text-amber-300 border border-amber-400/50 px-2 py-0.5 rounded-full font-mono text-[10.5px] font-bold">PIONEER70 (-70%) &amp; PIONEER20 (-20%) Live Checkout</span>
       </span>
     </div>
     <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
-      <span class="text-slate-600 hidden md:inline font-mono text-[11px]">&lt; 1ms Rust Latency &bull; 100% Offline Air-Gapped &bull; &#8377;0 / Mo Cloud Rent</span>
+      <span class="text-slate-400 hidden md:inline font-mono text-[11px]">&lt; 1ms Rust Latency &bull; 100% Offline Air-Gapped &bull; &#8377;0 / Mo Cloud Rent</span>
       <span class="text-slate-300 hidden md:inline">|</span>
       <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-bold underline transition flex items-center gap-1 font-mono">
         <span>Gumroad Store &rarr;</span>
@@ -832,7 +832,7 @@ tailwind.config = {
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
 <div class="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
-<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-950 hover:bg-slate-900 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 items-center gap-1.5">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs shadow-indigo-600/20 transition hover:scale-102 items-center gap-1.5 btn-spring">
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
 </a>
@@ -999,7 +999,7 @@ tailwind.config = {
 
   <!-- Drawer Footer Actions -->
   <div class="p-5 border-t border-slate-200 bg-slate-50/90 space-y-2.5">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-950 hover:bg-slate-900 text-white text-xs font-black font-heading shadow-md flex items-center justify-center gap-2 transition btn-spring">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-black font-heading shadow-md shadow-indigo-600/20 flex items-center justify-center gap-2 transition btn-spring">
       <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
@@ -1347,24 +1347,24 @@ document.addEventListener('keydown', function(e) {
 
         <!-- Tool Selection Tabs -->
         <div class="flex items-center gap-2 overflow-x-auto py-4 border-b border-slate-200/60 no-scrollbar">
-          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-slate-950 text-white border border-slate-950 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-emerald-600 text-white border border-emerald-600 shadow-sm flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="image"></i>
             <span>20. RQL ImageBatch (WebP Compressor)</span>
           </button>
           <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-rose-400" data-lucide="file-text"></i>
+            <i class="w-3.5 h-3.5 text-rose-600" data-lucide="file-text"></i>
             <span>01. DocumentShield (Redactor)</span>
           </button>
           <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-sky-400" data-lucide="fingerprint"></i>
+            <i class="w-3.5 h-3.5 text-sky-600" data-lucide="fingerprint"></i>
             <span>06. HashCheck (Cryptographic Hasher)</span>
           </button>
           <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-purple-400" data-lucide="qr-code"></i>
+            <i class="w-3.5 h-3.5 text-purple-600" data-lucide="qr-code"></i>
             <span>07. QRStudio (Vector QR Studio)</span>
           </button>
           <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-amber-400" data-lucide="git-compare"></i>
+            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="git-compare"></i>
             <span>08. TextDiff (Myers Vector Engine)</span>
           </button>
         </div>
@@ -1466,19 +1466,27 @@ document.addEventListener('keydown', function(e) {
 
                 <!-- Engine C: Natural Free-to-Paid Bridge -->
                 <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
-                  <div class="flex items-center gap-2 text-slate-400">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+                  <div class="flex items-center gap-2 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
                   </div>
                   <p class="text-slate-700 leading-relaxed font-sans font-medium">
                     Need to batch-convert 5,000 images at once with 16-core SIMD directly from Windows Explorer?
                   </p>
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
+                  <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER70 (-70%) &rarr;</span>
+                    </a>
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER20 (-20%) &rarr;</span>
+                    </a>
+                  </div>
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
                     <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
                       <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
                       <span>&rarr;</span>
                     </a>
-                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-600 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
+                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
                       View Specs &amp; Guarantee &rarr;
                     </button>
                   </div>
@@ -1549,24 +1557,30 @@ document.addEventListener('keydown', function(e) {
           </div>
 
           <!-- Engine C: Natural Free-to-Paid Bridge -->
-          <div class="mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
             <div class="space-y-1">
-              <div class="flex items-center gap-2 text-slate-400">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+              <div class="flex items-center gap-2 text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
               </div>
-              <p class="text-slate-300 leading-relaxed">
+              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
                 Need to scrub 500-page scanned PDF dossiers, strip hidden EXIF/XMP metadata, and generate court-admissible audit certificates?
               </p>
             </div>
-            <div class="flex items-center gap-3 shrink-0">
-              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '18_RQL_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer">
-                View Specs &rarr;
-              </button>
-              <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/40 text-rose-300 hover:text-rose-200 font-bold text-xs transition">
-                <span>Get RQL DocumentShield&trade; &mdash; $179 Lifetime</span>
+            <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER70 (-70%) &rarr;</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER20 (-20%) &rarr;</span>
+              </a>
+              <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
+                <span>DocumentShield&trade; &mdash; $179</span>
                 <span>&rarr;</span>
               </a>
+              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '18_RQL_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[11px] text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer">
+                View Specs &rarr;
+              </button>
             </div>
           </div>
         </div>
@@ -1648,19 +1662,27 @@ document.addEventListener('keydown', function(e) {
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
               <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
-                <div class="flex items-center gap-2 text-slate-400">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+                <div class="flex items-center gap-2 text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
                 </div>
-                <p class="text-slate-300 leading-relaxed">
+                <p class="text-slate-700 leading-relaxed font-sans font-medium">
                   Need right-click SHA verification in Windows Explorer, multi-terabyte disk drive hashing, and CSV compliance export?
                 </p>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
-                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-sky-500/15 hover:bg-sky-500/25 border border-sky-500/40 text-sky-300 hover:text-sky-200 font-bold text-xs transition">
+                <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER70 (-70%) &rarr;</span>
+                    </a>
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER20 (-20%) &rarr;</span>
+                    </a>
+                  </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
+                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
                     <span>Get RQL HashCheck&trade; &mdash; $39 Lifetime License</span>
                     <span>&rarr;</span>
                   </a>
-                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', 'HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer text-center sm:text-right">
+                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', 'HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
                     View Specs &amp; Guarantee &rarr;
                   </button>
                 </div>
@@ -1718,19 +1740,27 @@ document.addEventListener('keydown', function(e) {
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
               <div class="w-full p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2 text-left">
-                <div class="flex items-center gap-2 text-slate-400">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+                <div class="flex items-center gap-2 text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
                 </div>
-                <p class="text-slate-300 leading-relaxed">
+                <p class="text-slate-700 leading-relaxed font-sans font-medium">
                   Need bulk generation of 10,000 inventory barcodes, direct 80mm/58mm thermal label printing, and custom business logos?
                 </p>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
-                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-purple-500/15 hover:bg-purple-500/25 border border-purple-500/40 text-purple-300 hover:text-purple-200 font-bold text-xs transition">
+                <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER70 (-70%) &rarr;</span>
+                    </a>
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer">
+                      <span>PIONEER20 (-20%) &rarr;</span>
+                    </a>
+                  </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
+                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
                     <span>Get RQL QRStudio&trade; &mdash; $79 Lifetime License</span>
                     <span>&rarr;</span>
                   </a>
-                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', 'QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer text-center sm:text-right">
+                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', 'QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
                     View Specs &amp; Guarantee &rarr;
                   </button>
                 </div>
@@ -1778,24 +1808,30 @@ document.addEventListener('keydown', function(e) {
           </div>
 
           <!-- Engine C: Natural Free-to-Paid Bridge -->
-          <div class="mt-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
             <div class="space-y-1">
-              <div class="flex items-center gap-2 text-slate-400">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
+              <div class="flex items-center gap-2 text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
               </div>
-              <p class="text-slate-300 leading-relaxed">
+              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
                 Need to compare 300-page legal contracts, multi-gigabyte source code repos, and export forensic PDF difference reports?
               </p>
             </div>
-            <div class="flex items-center gap-3 shrink-0">
-              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', 'TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer">
-                View Specs &rarr;
-              </button>
-              <a href="https://quantify17.gumroad.com/l/rql-textdiff" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 hover:text-amber-200 font-bold text-xs transition">
-                <span>Get RQL TextDiff&trade; &mdash; $99 Lifetime</span>
+            <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER70 (-70%) &rarr;</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER20 (-20%) &rarr;</span>
+              </a>
+              <a href="https://quantify17.gumroad.com/l/rql-textdiff" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
+                <span>TextDiff&trade; &mdash; $99</span>
                 <span>&rarr;</span>
               </a>
+              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', 'TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[11px] text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer">
+                View Specs &rarr;
+              </button>
             </div>
           </div>
         </div>
@@ -1813,7 +1849,7 @@ document.addEventListener('keydown', function(e) {
           </div>
 
           <div class="flex items-center gap-2">
-            <button onclick="auditBrowserNetworkEntries()" class="py-1.5 px-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-mono font-semibold flex items-center gap-1.5 transition hover:scale-102 cursor-pointer">
+            <button onclick="auditBrowserNetworkEntries()" class="py-1.5 px-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono font-bold flex items-center gap-1.5 transition hover:scale-102 shadow-xs cursor-pointer">
               <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="activity"></i>
               <span>Run Air-Gap Integrity Audit</span>
             </button>
@@ -1824,6 +1860,34 @@ document.addEventListener('keydown', function(e) {
           <div class="text-emerald-400 font-bold font-mono">[Air-Gap Audit Initialized] Local memory sandbox active. 0 telemetry sockets open.</div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- PIONEER LAUNCH DISCOUNT DIRECT CHECKOUT BANNER -->
+    <div class="max-w-7xl mx-auto mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-sm flex flex-col md:flex-row items-center justify-between gap-5">
+      <div class="space-y-1.5 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200 text-xs font-mono font-bold">
+          <i class="w-3.5 h-3.5 text-amber-600" data-lucide="tag"></i>
+          <span>PIONEER FOUNDER DISCOUNTS LIVE</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">
+          Direct Checkout with Auto-Applied Pioneer Discount Passes
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-2xl font-medium leading-relaxed">
+          Claim up to 70% off our 100% offline pure-Rust desktop workstations. Coupon codes <code class="bg-amber-100/90 border border-amber-300 text-amber-950 px-1.5 py-0.5 rounded font-mono font-bold">PIONEER70</code> (70% Off) and <code class="bg-indigo-100/90 border border-indigo-300 text-indigo-950 px-1.5 py-0.5 rounded font-mono font-bold">PIONEER20</code> (20% Off) are pre-configured on every product card below with instant 1-click checkout.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 shrink-0 w-full sm:w-auto">
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono shadow-sm transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+          <i class="w-4 h-4 text-amber-200" data-lucide="zap"></i>
+          <span>Checkout with PIONEER70 (-70%)</span>
+          <span>&rarr;</span>
+        </a>
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono shadow-sm transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+          <i class="w-4 h-4 text-indigo-200" data-lucide="percent"></i>
+          <span>Checkout with PIONEER20 (-20%)</span>
+          <span>&rarr;</span>
+        </a>
       </div>
     </div>
 
@@ -1896,12 +1960,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DocumentShield with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DocumentShield with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL DocumentShield&trade;', '14,900', 'rql-documentshield')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL DocumentShield&trade;', '14,900', 'rql-documentshield')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL DocumentShield', 'qr_codes/p01_DocumentShield_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-documentshield', '$179 USD / INR 14,900', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -1965,12 +2048,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL WhisperVault with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdC9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL WhisperVault with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL WhisperVault&trade;', '12,450', 'rql-whispervault')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL WhisperVault&trade;', '12,450', 'rql-whispervault')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL WhisperVault', 'qr_codes/p02_WhisperVault_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-whispervault', '$149 USD / INR 12,400', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2035,12 +2137,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJldGFpbHBvcy9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-retailpos/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Retail POS with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJldGFpbHBvcy9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-retailpos/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Retail POS with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJldGFpbHBvcw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJldGFpbHBvcw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL Retail POS&trade;', '14,000', 'rql-retailpos')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL Retail POS&trade;', '14,000', 'rql-retailpos')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL Retail POS', 'qr_codes/p03_RetailPOS_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-retailpos', '$169 USD / INR 13,900', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2103,12 +2224,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN0b3JlY2hhaW4vUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-storechain/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL StoreChain with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN0b3JlY2hhaW4vUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-storechain/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL StoreChain with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN0b3JlY2hhaW4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN0b3JlY2hhaW4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL StoreChain&trade;', '24,900', 'rql-storechain')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL StoreChain&trade;', '24,900', 'rql-storechain')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL StoreChain', 'qr_codes/p04_StoreChain_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-storechain', '$299 USD / INR 24,900', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2171,12 +2311,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNvbmR1aXQvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-conduit/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Conduit with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNvbmR1aXQvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-conduit/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Conduit with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNvbmR1aXQ=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNvbmR1aXQ=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL Conduit&trade;', '16,500', 'rql-conduit')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL Conduit&trade;', '16,500', 'rql-conduit')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL Conduit', 'qr_codes/p05_Conduit_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-conduit', '$199 USD / INR 16,500', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2239,12 +2398,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL HashCheck with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL HashCheck with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjaw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjaw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL HashCheck&trade;', '3,200', 'rql-hashcheck')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL HashCheck&trade;', '3,200', 'rql-hashcheck')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL HashCheck', 'qr_codes/p06_HashCheck_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-hashcheck', '$39 USD / INR 3,200', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2307,12 +2485,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL QRStudio with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL QRStudio with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlv" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlv" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL QRStudio&trade;', '6,500', 'rql-qrstudio')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL QRStudio&trade;', '6,500', 'rql-qrstudio')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL QRStudio', 'qr_codes/p07_QRStudio_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-qrstudio', '$79 USD / INR 6,500', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2369,12 +2566,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TextDiff with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TextDiff with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL TextDiff&trade;', '8,200', 'rql-textdiff')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL TextDiff&trade;', '8,200', 'rql-textdiff')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL TextDiff', 'qr_codes/p08_TextDiff_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-textdiff', '$99 USD / INR 8,200', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2431,12 +2647,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXIvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-renamer/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Renamer with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXIvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-renamer/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL Renamer with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlbmFtZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL Renamer&trade;', '3,900', 'rql-renamer')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL Renamer&trade;', '3,900', 'rql-renamer')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL Renamer', 'qr_codes/p09_Renamer_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-renamer', '$49 USD / INR 4,000', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2493,12 +2728,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvci9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-tageditor/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TagEditor with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvci9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-tageditor/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TagEditor with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRhZ2VkaXRvcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL TagEditor&trade;', '4,900', 'rql-tageditor')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL TagEditor&trade;', '4,900', 'rql-tageditor')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
           <button onclick="openQrScanModal('RQL TagEditor', 'qr_codes/p10_TagEditor_Gumroad_QR.png', 'https://quantify17.gumroad.com/l/rql-tageditor', '$59 USD / INR 4,900', 'Point camera to open instant Gumroad checkout on your phone')" class="w-full py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 hover:border-slate-300 text-[11px] font-mono font-semibold flex items-center justify-center gap-2 transition btn-spring cursor-pointer" title="Scan QR Code with iPhone/Android Camera to purchase on phone">
             <svg class="w-3.5 h-3.5 text-indigo-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
@@ -2555,12 +2809,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXIvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-fontviewer/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL FontViewer with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXIvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-fontviewer/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL FontViewer with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZvbnR2aWV3ZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL FontViewer&trade;', '4,000', 'rql-fontviewer')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL FontViewer&trade;', '4,000', 'rql-fontviewer')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
         </div>
       </div>
@@ -2613,12 +2886,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRwZHBzaGllbGQvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-dpdpshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DPDPShield with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRwZHBzaGllbGQvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-dpdpshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DPDPShield with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRwZHBzaGllbGQ=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRwZHBzaGllbGQ=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL DPDPShield&trade;', '6,999', 'rql-dpdpshield')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL DPDPShield&trade;', '6,999', 'rql-dpdpshield')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
         </div>
       </div>
@@ -2671,12 +2963,31 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXByaWNldGFnL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-pricetag/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL PriceTag with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXByaWNldGFnL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-pricetag/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL PriceTag with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXByaWNldGFn" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXByaWNldGFn" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
-            <button onclick="openIndianDeskModal('RQL PriceTag&trade;', '6,499', 'rql-pricetag')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-emerald-600 font-bold">&#8377;</span><span>UPI India Desk</span></button>
+            <button onclick="openIndianDeskModal('RQL PriceTag&trade;', '6,499', 'rql-pricetag')" class="w-full py-3 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm shadow-emerald-600/20 transition btn-spring cursor-pointer" title="Direct Indian Domestic UPI Desk"><span class="text-white font-bold">&#8377;</span><span>UPI India Desk</span></button>
           </div>
         </div>
       </div>
@@ -2734,8 +3045,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWludm9pY2VnZW4vUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-invoicegen/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL InvoiceGen with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWludm9pY2VnZW4vUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-invoicegen/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL InvoiceGen with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWludm9pY2VnZW4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWludm9pY2VnZW4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -2801,8 +3131,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNzdmZvcm1hdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-csvformat/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL CSVFormat with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNzdmZvcm1hdC9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-csvformat/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL CSVFormat with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNzdmZvcm1hdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNzdmZvcm1hdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -2867,8 +3216,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdlL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-pdfmerge/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL PDFMerge with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdlL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-pdfmerge/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL PDFMerge with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -2934,8 +3302,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlci9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-taxledger/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TaxLedger with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlci9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-taxledger/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL TaxLedger with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3001,8 +3388,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlci9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-fileshredder/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL FileShredder with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlci9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-fileshredder/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL FileShredder with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3068,8 +3474,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-clipvault/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ClipVault with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdC9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-clipvault/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ClipVault with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3135,8 +3560,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ImageBatch with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ImageBatch with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3203,8 +3647,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWF1ZGlvZXh0cmFjdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-audioextract/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL AudioExtract with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWF1ZGlvZXh0cmFjdC9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-audioextract/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL AudioExtract with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWF1ZGlvZXh0cmFjdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWF1ZGlvZXh0cmFjdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3270,8 +3733,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN1YnRpdGxlc3luYy9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-subtitlesync/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL SubtitleSync with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN1YnRpdGxlc3luYy9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-subtitlesync/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL SubtitleSync with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN1YnRpdGxlc3luYw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXN1YnRpdGxlc3luYw==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3337,8 +3819,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXNwYWNlbWFwL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-spacemap/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL SpaceMap with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXNwYWNlbWFwL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-spacemap/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL SpaceMap with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXNwYWNlbWFw" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXNwYWNlbWFw" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3404,8 +3905,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3Byb3RlY3QvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-docprotect/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DocProtect with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3Byb3RlY3QvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-docprotect/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL DocProtect with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3Byb3RlY3Q=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3Byb3RlY3Q=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3471,8 +3991,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNhc2hkcmF3ZXIvUElPTkVFUjcwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-cashdrawer/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL CashDrawer with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNhc2hkcmF3ZXIvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-cashdrawer/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL CashDrawer with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNhc2hkcmF3ZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNhc2hkcmF3ZXI=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3538,8 +4077,27 @@ document.addEventListener('keydown', function(e) {
               Pay Once, Own Forever
             </span>
           </div>
+                    <!-- Live Pioneer Direct Checkout Passes (PIONEER70 & PIONEER20) -->
+          <div class="p-2.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-2xs">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 px-0.5">
+              <span class="flex items-center gap-1 text-amber-800 font-black"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Discount Checkout</span>
+              <span class="text-emerald-700 font-bold bg-emerald-100/90 px-1.5 py-0.2 rounded font-mono text-[9.5px]">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlY2VpcHRwcmludGVyL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-receiptprinter/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ReceiptPrinter with 70% discount code PIONEER70 applied">
+                <i class="w-3 h-3 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70</span>
+                <span class="text-[9.5px] bg-amber-800/80 px-1 py-0.2 rounded font-sans font-bold text-amber-100">-70%</span>
+              </a>
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlY2VpcHRwcmludGVyL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-receiptprinter/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono flex items-center justify-center gap-1 shadow-xs transition hover:scale-102 cursor-pointer btn-spring text-center" title="Direct Gumroad checkout for RQL ReceiptPrinter with 20% discount code PIONEER20 applied">
+                <i class="w-3 h-3 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20</span>
+                <span class="text-[9.5px] bg-indigo-800/80 px-1 py-0.2 rounded font-sans font-bold text-indigo-100">-20%</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlY2VpcHRwcmludGVy" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-md transition btn-spring cursor-pointer">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXJlY2VpcHRwcmludGVy" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 hover:border-slate-400 font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-2xs transition btn-spring cursor-pointer">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -3971,11 +4529,27 @@ document.addEventListener('keydown', function(e) {
           </a>
         </div>
 
-        <!-- Action CTAs (Crisp Horizontal 2-Column Layout) -->
+        <!-- Action CTAs with Direct Pioneer Discounts -->
         <div class="mt-4 pt-3 border-t border-slate-100 space-y-2.5">
+          <div class="p-2.5 rounded-2xl bg-amber-50/90 border border-amber-200">
+            <div class="flex items-center justify-between text-[10px] font-mono font-bold uppercase text-amber-900 mb-1.5">
+              <span class="flex items-center gap-1"><i class="w-3 h-3 text-amber-600" data-lucide="tag"></i> Direct Pioneer Discount Passes</span>
+              <span class="text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded font-mono">Auto-Applied</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <a id="modal-pioneer70-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2.5 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 text-center shadow-xs transition hover:scale-102 cursor-pointer btn-spring">
+                <i class="w-3.5 h-3.5 text-amber-200" data-lucide="zap"></i>
+                <span>PIONEER70 (-70%)</span>
+              </a>
+              <a id="modal-pioneer20-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="py-2.5 px-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 text-center shadow-xs transition hover:scale-102 cursor-pointer btn-spring">
+                <i class="w-3.5 h-3.5 text-indigo-200" data-lucide="percent"></i>
+                <span>PIONEER20 (-20%)</span>
+              </a>
+            </div>
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <a id="modal-gumroad-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-101">
-              <span>Buy on Gumroad</span>
+              <span>Standard Gumroad</span>
               <span>&rarr;</span>
             </a>
             <button onclick="launchIndianDeskFromEvaluation()" class="w-full py-3.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-mono font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-101 cursor-pointer" title="Open Indian Domestic UPI Fulfillment Desk">
@@ -4029,11 +4603,17 @@ document.addEventListener('keydown', function(e) {
             <span>&bull;</span>
             <span class="text-indigo-400">User-Space Isolated</span>
           </div>
-          <div class="flex items-center gap-2.5">
+          <div class="flex flex-wrap items-center gap-2">
+            <a id="walkthrough-pioneer70-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black font-mono transition text-xs shadow-md flex items-center gap-1 cursor-pointer">
+              <span>PIONEER70 (-70%) &rarr;</span>
+            </a>
+            <a id="walkthrough-pioneer20-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVIyMD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black font-mono transition text-xs shadow-md flex items-center gap-1 cursor-pointer">
+              <span>PIONEER20 (-20%) &rarr;</span>
+            </a>
             <a id="walkthrough-youtube-btn" href="https://youtu.be/AA9Dk5JPDn4" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-medium transition text-xs border border-slate-700/80 flex items-center gap-1.5 shadow-sm">
               <span class="text-red-500 font-bold">&#9654;</span> Watch on YouTube &rarr;
             </a>
-            <a id="walkthrough-gumroad-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold font-heading transition text-xs shadow-md">
+            <a id="walkthrough-gumroad-btn" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" href="https://quantify17.gumroad.com/l/rql-documentshield" role="button" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold font-heading transition text-xs shadow-md">
               <span id="walkthrough-gumroad-label">Acquire Commercial License ($179) &rarr;</span>
             </a>
           </div>
@@ -4300,7 +4880,22 @@ function openEvaluationModal(title, desc, coverImg, gumroadUrl) {
   const gumroadBtn = document.getElementById('modal-gumroad-btn');
   if (titleEl) titleEl.innerHTML = title + " &bull; Specifications &amp; Guarantee";
   if (descEl) descEl.innerHTML = desc + " &mdash; 100% offline pure native Rust software.";
-  if (gumroadBtn && gumroadUrl) gumroadBtn.href = gumroadUrl;
+  if (gumroadBtn && gumroadUrl) {
+    gumroadBtn.href = gumroadUrl;
+    gumroadBtn.dataset.obf = btoa(gumroadUrl);
+  }
+  const p70ModalBtn = document.getElementById('modal-pioneer70-btn');
+  const p20ModalBtn = document.getElementById('modal-pioneer20-btn');
+  if (p70ModalBtn && gumroadUrl) {
+    const u70 = gumroadUrl + '/PIONEER70?wanted=true';
+    p70ModalBtn.href = u70;
+    p70ModalBtn.dataset.obf = btoa(u70);
+  }
+  if (p20ModalBtn && gumroadUrl) {
+    const u20 = gumroadUrl + '/PIONEER20?wanted=true';
+    p20ModalBtn.href = u20;
+    p20ModalBtn.dataset.obf = btoa(u20);
+  }
   modal.classList.remove('hidden');
 }
 
@@ -4320,7 +4915,22 @@ function openVideoWalkthroughModal(videoSrc, title, youtubeUrl, gumroadUrl, gumr
   if (!modal || !player) return;
   if (title && titleEl) titleEl.textContent = title;
   if (ytBtn) ytBtn.href = youtubeUrl || 'https://www.youtube.com/channel/UCf1-IOclsbG8QHI2HKuac0A';
-  if (grBtn && gumroadUrl) grBtn.href = gumroadUrl;
+  const wtP70Btn = document.getElementById('walkthrough-pioneer70-btn');
+  const wtP20Btn = document.getElementById('walkthrough-pioneer20-btn');
+  if (grBtn && gumroadUrl) {
+    grBtn.href = gumroadUrl;
+    grBtn.dataset.obf = btoa(gumroadUrl);
+  }
+  if (wtP70Btn && gumroadUrl) {
+    const u70 = gumroadUrl + '/PIONEER70?wanted=true';
+    wtP70Btn.href = u70;
+    wtP70Btn.dataset.obf = btoa(u70);
+  }
+  if (wtP20Btn && gumroadUrl) {
+    const u20 = gumroadUrl + '/PIONEER20?wanted=true';
+    wtP20Btn.href = u20;
+    wtP20Btn.dataset.obf = btoa(u20);
+  }
   if (grLabel && gumroadLabel) grLabel.textContent = gumroadLabel;
   if (videoSrc) {
     const srcEl = player.querySelector('source');
