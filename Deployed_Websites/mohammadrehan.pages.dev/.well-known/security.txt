@@ -6,6 +6,7 @@
 Contact: mailto:security@rehanquantlab.com
 Contact: https://wa.me/917091518548
 Expires: 2027-12-31T23:59:59.000Z
+Encryption: https://rehanquantlab.com/.well-known/rql-release-signing-public.key
 Preferred-Languages: en
 Canonical: https://rehanquantlab.com/.well-known/security.txt
 Policy: https://rehanquantlab.com/security.html
