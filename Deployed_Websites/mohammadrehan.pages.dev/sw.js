@@ -1,5 +1,5 @@
 // RQL Service Worker v5.5 (Auto-Purge Old Caches & Network-First)
-const CACHE_NAME = 'rql-desktop-v9.1';
+const CACHE_NAME = 'rql-desktop-v9.2';
 const ASSETS_TO_CACHE = [
   '/manifest.json',
   '/emblem.webp',
@@ -32,8 +32,11 @@ self.addEventListener('activate', (event) => {
 // Network-First with Cache Fallback
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  const fetchReq = (event.request.mode === 'navigate' || (event.request.headers.get('accept') || '').includes('text/html'))
+    ? new Request(event.request, { cache: 'no-store' })
+    : event.request;
   event.respondWith(
-    fetch(event.request)
+    fetch(fetchReq)
       .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
