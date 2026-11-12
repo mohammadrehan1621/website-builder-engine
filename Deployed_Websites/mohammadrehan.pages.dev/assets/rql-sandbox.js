@@ -113,7 +113,7 @@
     ctx.fillText('REHAN QUANT LAB', 140, 360);
     ctx.fillStyle = '#94a3b8';
     ctx.font = '32px sans-serif';
-    ctx.fillText('Titan #20 - RQL ImageBatch SIMD WebP Engine', 140, 420);
+    ctx.fillText('Flagship 20 - RQL ImageBatch SIMD WebP Engine', 140, 420);
     ctx.font = '24px monospace';
     ctx.fillStyle = '#38bdf8';
     ctx.fillText('100% Offline Client-Side Compression Benchmark', 140, 470);
