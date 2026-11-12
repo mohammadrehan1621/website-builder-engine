@@ -180,8 +180,8 @@
       border-color: #cbd5e1 !important;
       color: #0f172a !important;
     }
-    body.theme-light .text-slate-200,
-    body.theme-light .text-slate-300,
+    body.theme-light .text-slate-600,
+    body.theme-light .text-slate-600,
     body.theme-light .text-white {
       color: #0f172a !important;
     }
@@ -191,8 +191,8 @@
     body.theme-light .text-slate-500 {
       color: #64748b !important;
     }
-    body.theme-light .border-slate-800,
-    body.theme-light .border-slate-800\/80,
+    body.theme-light .border-slate-200,
+    body.theme-light .border-slate-200\/80,
     body.theme-light .border-slate-700,
     body.theme-light .border-slate-700\/70 {
       border-color: #e2e8f0 !important;
@@ -261,14 +261,14 @@
         border: 1px solid #999 !important;
         box-shadow: none !important;
       }
-      .text-white, .text-slate-300, .text-slate-400 { color: #111111 !important; }
+      .text-white, .text-slate-600, .text-slate-400 { color: #111111 !important; }
     }
   </style>
 </head>
-<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
+<body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
   <!-- TOP NAVIGATION WITH CONTRAST ACCENT -->
-  <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl sticky top-0 z-50">
+  <header class="border-b border-slate-200 bg-slate-950/90 backdrop-blur-xl sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="relative w-3.5 h-3.5 flex items-center justify-center">
@@ -283,13 +283,13 @@
       
       <div class="flex items-center gap-2">
         <!-- Theme Toggle (Light Ceramic / Dark Carbon) -->
-        <button id="themeToggleBtn" onclick="toggleTheme()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-50 hover:bg-slate-800 text-amber-300 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
           <span id="themeIcon">&#9728;&#65039;</span>
           <span id="themeText" class="hidden md:inline">Ceramic</span>
         </button>
 
         <!-- Audio Sonar Toggle -->
-        <button id="soundToggleBtn" onclick="toggleAudio()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
+        <button id="soundToggleBtn" onclick="toggleAudio()" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-slate-50 hover:bg-slate-800 text-slate-600 border border-slate-700/80 transition flex items-center gap-1.5 shadow">
           <span id="soundIcon">&#128266;</span>
           <span id="soundText" class="hidden md:inline">Sonar: ON</span>
         </button>
@@ -323,7 +323,7 @@
           <span class="hidden md:inline">Print Tear-Sheet</span>
         </button>
 
-        <a href="/" class="px-2.5 py-1.5 rounded-lg text-xs font-mono text-slate-400 hover:text-white bg-slate-900/80 border border-slate-800 transition">Exit</a>
+        <a href="/" class="px-2.5 py-1.5 rounded-lg text-xs font-mono text-slate-400 hover:text-white bg-slate-900/80 border border-slate-200 transition">Exit</a>
       </div>
     </div>
   </header>
@@ -342,7 +342,7 @@
         <span class="text-slate-600">&bull;</span>
         <span>Hardware Gyroscope</span>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight font-sans">
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight font-black leading-tight font-sans">
         Forensic Website Speed & <br class="hidden sm:block" />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400">3D Client Migration Studio</span>
       </h1>
@@ -351,7 +351,7 @@
       </p>
       <div class="mt-3.5 inline-block px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-950/80 via-slate-900 to-emerald-950/80 border border-cyan-800/60 shadow-lg">
         <p class="text-xs sm:text-sm font-semibold text-cyan-200">
-          &#128073; <span class="text-white font-bold">"Turn any URL into cold physical evidence that sells high-speed native websites for you."</span>
+          &#128073; <span class="text-slate-950 font-bold">"Turn any URL into cold physical evidence that sells high-speed native websites for you."</span>
         </p>
       </div>
     </div>
@@ -383,7 +383,7 @@
       </div>
       
       <!-- Telemetry Mode & Live Notice -->
-      <div id="telemetryStatusNotice" class="mt-3.5 text-[11px] font-mono text-slate-400 flex flex-wrap items-center justify-between gap-2 border-t border-slate-800/80 pt-3">
+      <div id="telemetryStatusNotice" class="mt-3.5 text-[11px] font-mono text-slate-400 flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 pt-3">
         <span id="telemetrySourceText" class="flex items-center gap-1.5">
           <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
           <span>Status: Ready for Real Live Network Diagnostic</span>
@@ -426,7 +426,7 @@
       <!-- DUAL-PERSPECTIVE LATENCY TELEMETRY & JITTER / BUFFERBLOAT -->
     <div class="w-full max-w-5xl space-y-2 mb-4 font-mono text-xs">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 flex items-center justify-between">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
             <span class="text-slate-400">Your Local Device ISP (Wireless/Wi-Fi):</span>
@@ -436,7 +436,7 @@
             <span id="clientLocalPing" class="text-cyan-400 font-bold">Measuring...</span>
           </div>
         </div>
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 flex items-center justify-between">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200 flex items-center justify-between">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span class="text-slate-400">Cloudflare Anycast Fiber Backbone:</span>
@@ -453,7 +453,7 @@
 
       <!-- HIGH-SPEED FIBER OPTIC TRANSIT STREAM (SUB-MILLISECOND NETWORK CONDUIT) -->
     <div id="fiberConduitSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-4 mb-8 border border-slate-700/70 shadow-2xl relative overflow-hidden">
-      <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-200">
         <div class="flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">HIGH-SPEED OPTICAL FIBER TRANSIT STREAM (~204,000 KM/S FIBER VELOCITY)</span>
@@ -462,7 +462,7 @@
           Physical Floor: ~1.47ms &bull; Silica Waveform Active
         </span>
       </div>
-      <canvas id="laserConduitCanvas" class="w-full h-14 rounded-xl bg-slate-950 border border-slate-800/80 block"></canvas>
+      <canvas id="laserConduitCanvas" class="w-full h-14 rounded-xl bg-slate-950 border border-slate-200 block"></canvas>
       <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 mt-2 px-1">
         <span id="fiberOriginText" class="truncate max-w-[240px]">&#128225; Anycast Edge Node (Local POP)</span>
         <span id="fiberDistanceText" class="text-cyan-400 font-bold">150 km physical transit</span>
@@ -472,7 +472,7 @@
 
       <!-- 1. THE DUAL-MOBILE SCREEN RACE (THE "HUMAN EYE" TEST) -->
     <div id="raceSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl relative overflow-hidden">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 mb-6 border-b border-slate-800 gap-3">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 mb-6 border-b border-slate-200 gap-3">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">1,000 FPS DUAL-DEVICE LIVE RENDER DRAG RACE (HUMAN PERCEPTION TEST)</span>
@@ -488,7 +488,7 @@
       </div>
 
       <!-- Central 1,000 FPS Sub-Millisecond Stopwatch HUD -->
-      <div class="flex flex-col items-center justify-center p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 mb-6 shadow-inner">
+      <div class="flex flex-col items-center justify-center p-3.5 rounded-2xl bg-slate-950/80 border border-slate-200 mb-6 shadow-inner">
         <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-widest">1,000 FPS HIGH-SPEED WIRE TELEMETRY CHRONOMETER</span>
         <div id="dragRaceStopwatch" class="text-3xl sm:text-5xl font-black text-white font-mono tracking-widest my-1 tabular-nums">
           00:00.016
@@ -503,9 +503,9 @@
         
         <!-- LEFT PHONE: CURRENT CLIENT SITE (LAGGING ENGINE) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-slate-950 border-4 border-slate-800 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-slate-950 border-4 border-slate-200 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-900/90 py-1.5 border-b border-slate-800/80">
+            <div class="w-full flex justify-center bg-slate-50 py-1.5 border-b border-slate-200">
               <div class="phone-notch bg-slate-950 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-800"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-800"></span>
@@ -513,7 +513,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
+            <div class="px-3 py-1.5 bg-slate-900 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-400">
               <span class="truncate max-w-[170px]" id="phoneLeftDomain">wordpress.org</span>
               <span id="phoneLeftBadge" class="text-cyan-400 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> Measuring Wire
@@ -528,10 +528,10 @@
                 <p class="text-[10px] font-mono text-slate-500">Live physical packet stream</p>
               </div>
               <div id="phoneLeftComplete" class="hidden space-y-2">
-                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-left text-[11px] font-mono space-y-1">
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-200 text-left text-[11px] font-mono space-y-1">
                   <div class="h-3 bg-slate-800 rounded w-3/4"></div>
                   <div class="h-2 bg-slate-800/60 rounded w-full"></div>
-                  <div class="h-16 bg-slate-800/40 rounded border border-slate-700/40 flex items-center justify-center text-slate-300 text-[10px] font-bold">
+                  <div class="h-16 bg-slate-800/40 rounded border border-slate-700/40 flex items-center justify-center text-slate-600 text-[10px] font-bold">
                     Rendering Wire DOM...
                   </div>
                 </div>
@@ -539,7 +539,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-900 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-400">Load Duration:</span>
               <span id="phoneLeftTimer" class="text-lg font-bold text-cyan-400 tabular-nums">0.00s</span>
             </div>
@@ -549,9 +549,9 @@
 
         <!-- RIGHT PHONE: RQL PURE-RUST ENGINE (INSTANT EDGE STREAM) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-[#0b111b] border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-white border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-800">
+            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-200">
               <div class="phone-notch bg-slate-200 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-400"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-400"></span>
@@ -559,7 +559,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-200">
+            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-600">
               <span class="truncate max-w-[170px]" id="phoneRightDomain">rehanquantlab.com</span>
               <span class="text-emerald-600 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 5G Edge
@@ -571,12 +571,12 @@
               <div id="phoneRightComplete" class="space-y-2.5 w-full">
                 <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-[11px] font-mono space-y-1.5 shadow-sm">
                   <div class="flex items-center justify-between">
-                    <span class="font-bold text-white text-xs">&#9889; RQL Pure-Rust Edge</span>
+                    <span class="font-bold text-slate-950 text-xs">&#9889; RQL Pure-Rust Edge</span>
                     <span class="text-[9px] bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold">100/100</span>
                   </div>
                   <div class="h-2 bg-emerald-300 rounded w-full"></div>
                   <div class="h-2 bg-emerald-200 rounded w-4/5"></div>
-                  <div class="p-2 rounded bg-[#0b111b] border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
+                  <div class="p-2 rounded bg-white border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
                     &#127937; Instant Render (0.20s Flat)
                   </div>
                 </div>
@@ -587,7 +587,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-100 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-600 font-bold">Instant Edge:</span>
               <span id="phoneRightTimer" class="text-lg font-bold text-emerald-600 tabular-nums">0.20s</span>
             </div>
@@ -600,9 +600,9 @@
         
         <!-- LEFT PHONE: CURRENT CLIENT SITE (LAGGING ENGINE) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-slate-950 border-4 border-slate-800 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-slate-950 border-4 border-slate-200 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-900/90 py-1.5 border-b border-slate-800/80">
+            <div class="w-full flex justify-center bg-slate-50 py-1.5 border-b border-slate-200">
               <div class="phone-notch bg-slate-950 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-800"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-800"></span>
@@ -610,7 +610,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-400">
+            <div class="px-3 py-1.5 bg-slate-900 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-400">
               <span class="truncate max-w-[170px]" id="phoneLeftDomain">wordpress.org</span>
               <span id="phoneLeftBadge" class="text-cyan-400 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> Measuring Wire
@@ -625,10 +625,10 @@
                 <p class="text-[10px] font-mono text-slate-500">Live physical packet stream</p>
               </div>
               <div id="phoneLeftComplete" class="hidden space-y-2">
-                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-left text-[11px] font-mono space-y-1">
+                <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-200 text-left text-[11px] font-mono space-y-1">
                   <div class="h-3 bg-slate-800 rounded w-3/4"></div>
                   <div class="h-2 bg-slate-800/60 rounded w-full"></div>
-                  <div class="h-16 bg-slate-800/40 rounded border border-slate-700/40 flex items-center justify-center text-slate-300 text-[10px] font-bold">
+                  <div class="h-16 bg-slate-800/40 rounded border border-slate-700/40 flex items-center justify-center text-slate-600 text-[10px] font-bold">
                     Rendering Wire DOM...
                   </div>
                 </div>
@@ -636,7 +636,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-900 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-400">Load Duration:</span>
               <span id="phoneLeftTimer" class="text-lg font-bold text-cyan-400 tabular-nums">0.00s</span>
             </div>
@@ -646,9 +646,9 @@
 
         <!-- RIGHT PHONE: RQL PURE-RUST ENGINE (INSTANT EDGE STREAM) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-[#0b111b] border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-white border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-800">
+            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-200">
               <div class="phone-notch bg-slate-200 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-400"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-400"></span>
@@ -656,7 +656,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-200">
+            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-600">
               <span class="truncate max-w-[170px]" id="phoneRightDomain">rehanquantlab.com</span>
               <span class="text-emerald-600 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 5G Edge
@@ -668,12 +668,12 @@
               <div id="phoneRightComplete" class="space-y-2.5 w-full">
                 <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-[11px] font-mono space-y-1.5 shadow-sm">
                   <div class="flex items-center justify-between">
-                    <span class="font-bold text-white text-xs">&#9889; RQL Pure-Rust Edge</span>
+                    <span class="font-bold text-slate-950 text-xs">&#9889; RQL Pure-Rust Edge</span>
                     <span class="text-[9px] bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold">100/100</span>
                   </div>
                   <div class="h-2 bg-emerald-300 rounded w-full"></div>
                   <div class="h-2 bg-emerald-200 rounded w-4/5"></div>
-                  <div class="p-2 rounded bg-[#0b111b] border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
+                  <div class="p-2 rounded bg-white border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
                     &#127937; Instant Render (0.20s Flat)
                   </div>
                 </div>
@@ -684,7 +684,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-100 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-600 font-bold">Instant Edge:</span>
               <span id="phoneRightTimer" class="text-lg font-bold text-emerald-600 tabular-nums">0.20s</span>
             </div>
@@ -733,25 +733,25 @@
 
         <!-- CAD PLANE 2: Dynamic Telemetry Indicators (Populated via JS) -->
         <div id="slowCardList" class="cad-plane-2 space-y-2.5 mt-8 pt-6 border-t border-red-500/20 text-xs font-mono">
-          <div class="flex items-center justify-between text-slate-300">
+          <div class="flex items-center justify-between text-slate-600">
             <span class="flex items-center gap-1.5">
               <span class="text-red-400 font-bold">&#10006;</span> Cloud Server Roundtrip:
             </span>
             <span id="slowLatencyMs" class="text-red-400 font-bold">3,236 ms</span>
           </div>
-          <div class="flex items-center justify-between text-slate-300">
+          <div class="flex items-center justify-between text-slate-600">
             <span class="flex items-center gap-1.5">
               <span class="text-red-400 font-bold">&#10006;</span> Architecture Type:
             </span>
             <span id="slowArchText" class="text-red-400 font-bold">Centralized Database Server</span>
           </div>
-          <div class="flex items-center justify-between text-slate-300">
+          <div class="flex items-center justify-between text-slate-600">
             <span class="flex items-center gap-1.5">
               <span class="text-red-400 font-bold">&#10006;</span> Annual Server & Renewal Drain:
             </span>
             <span class="text-red-400 font-bold">&#8377;8,000 &ndash; &#8377;12,000 / yr</span>
           </div>
-          <div class="flex items-center justify-between text-slate-300">
+          <div class="flex items-center justify-between text-slate-600">
             <span class="flex items-center gap-1.5">
               <span class="text-red-400 font-bold">&#10006;</span> Security & Attack Surface:
             </span>
@@ -778,7 +778,7 @@
         <!-- CAD PLANE 1: Front Optical Floating Digits -->
         <div class="cad-plane-1 text-center my-6">
           <div class="inline-flex items-baseline gap-2">
-            <span id="fastLoadTimeText" class="text-6xl sm:text-7xl font-extrabold text-white font-sans tracking-tight tabular-nums drop-shadow-sm">0.20</span>
+            <span id="fastLoadTimeText" class="text-6xl sm:text-7xl font-black text-slate-950 font-sans tracking-tight tabular-nums drop-shadow-sm">0.20</span>
             <span class="text-2xl font-sans text-slate-600 font-bold">sec</span>
           </div>
           <p class="text-xs font-mono text-slate-600 mt-1 uppercase tracking-wide font-semibold">Instant Global Edge Render</p>
@@ -787,7 +787,7 @@
           <div class="w-full bg-slate-200 rounded-full h-3 mt-5 p-0.5 border border-slate-300">
             <div id="fastProgressBar" class="bg-gradient-to-r from-teal-500 to-emerald-500 h-full rounded-full transition-all duration-1000 shadow-sm" style="width: 100%;"></div>
           </div>
-          <div class="flex justify-between text-[11px] font-mono text-slate-200 mt-1.5 px-0.5 font-bold">
+          <div class="flex justify-between text-[11px] font-mono text-slate-600 mt-1.5 px-0.5 font-bold">
             <span>Google Score: 100/100 (Optimal)</span>
             <span id="speedMultiplierBadge" class="text-teal-700 bg-teal-100 px-2 py-0.5 rounded text-[10px]">15.6&#215; FASTER</span>
           </div>
@@ -805,7 +805,7 @@
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Compiler Optimization:
             </span>
-            <span class="text-white font-bold">Pure-Rust Native Stream Minifier</span>
+            <span class="text-slate-950 font-bold">Pure-Rust Native Stream Minifier</span>
           </div>
           <div class="flex items-center justify-between text-slate-100">
             <span class="flex items-center gap-1.5">
@@ -817,7 +817,7 @@
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Security & Uptime Resilience:
             </span>
-            <span class="text-white font-bold">Grade A+ (Immutable Air-Gapped Code)</span>
+            <span class="text-slate-950 font-bold">Grade A+ (Immutable Air-Gapped Code)</span>
           </div>
         </div>
       </div>
@@ -826,7 +826,7 @@
 
       <!-- 1. MULTI-POP GLOBAL LATENCY RADAR (WORLD MAP PROPAGATION PING) -->
     <div id="globalRadarSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">MULTI-POP GLOBAL ANYCAST RADAR (CROSS-CONTINENTAL LATENCY)</span>
@@ -838,12 +838,12 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4" id="globalRadarGrid">
         <!-- Node 1: Mumbai / Delhi -->
-        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-200 relative overflow-hidden">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+            <span class="text-xs font-mono font-bold text-slate-950 flex items-center gap-1.5">
               <span>&#127470;&#127475;</span> Mumbai / Delhi
             </span>
-            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">BOM/DEL</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200">BOM/DEL</span>
           </div>
           <div class="space-y-1.5 text-xs font-mono">
             <div class="flex justify-between text-slate-400">
@@ -861,12 +861,12 @@
         </div>
 
         <!-- Node 2: Singapore -->
-        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-200 relative overflow-hidden">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+            <span class="text-xs font-mono font-bold text-slate-950 flex items-center gap-1.5">
               <span>&#127480;&#127468;</span> Singapore
             </span>
-            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">SIN</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200">SIN</span>
           </div>
           <div class="space-y-1.5 text-xs font-mono">
             <div class="flex justify-between text-slate-400">
@@ -884,12 +884,12 @@
         </div>
 
         <!-- Node 3: Frankfurt -->
-        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-200 relative overflow-hidden">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+            <span class="text-xs font-mono font-bold text-slate-950 flex items-center gap-1.5">
               <span>&#127465;&#127466;</span> Frankfurt
             </span>
-            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">FRA</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200">FRA</span>
           </div>
           <div class="space-y-1.5 text-xs font-mono">
             <div class="flex justify-between text-slate-400">
@@ -907,12 +907,12 @@
         </div>
 
         <!-- Node 4: New York / Ashburn -->
-        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 relative overflow-hidden">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-200 relative overflow-hidden">
           <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+            <span class="text-xs font-mono font-bold text-slate-950 flex items-center gap-1.5">
               <span>&#127482;&#127480;</span> New York / Ashburn
             </span>
-            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800">IAD</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200">IAD</span>
           </div>
           <div class="space-y-1.5 text-xs font-mono">
             <div class="flex justify-between text-slate-400">
@@ -936,7 +936,7 @@
 
       <!-- 2. PHYSICAL ASSET PAYLOAD EXPOSER (BLOAT FILE INSPECTOR) -->
     <div id="payloadSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-purple-300">PHYSICAL WIRE PAYLOAD & DOM COMPLEXITY (EXACT MEASUREMENTS)</span>
@@ -948,7 +948,7 @@
 
       <!-- Segmented Physical Wire Bar -->
       <div class="mb-4">
-        <div class="w-full bg-slate-950 rounded-xl h-6 p-1 border border-slate-800 flex overflow-hidden gap-1 text-[9px] font-mono font-bold text-center">
+        <div class="w-full bg-slate-950 rounded-xl h-6 p-1 border border-slate-200 flex overflow-hidden gap-1 text-[9px] font-mono font-bold text-center">
           <div id="barHtml" class="bg-blue-500 text-slate-950 rounded flex items-center justify-center transition-all duration-700" style="width: 40%;" title="HTML Wire Bytes">HTML Wire</div>
           <div id="barDom" class="bg-amber-500 text-slate-950 rounded flex items-center justify-center transition-all duration-700" style="width: 30%;" title="DOM Element Density">DOM Nodes</div>
           <div id="barScripts" class="bg-red-500 text-white rounded flex items-center justify-center transition-all duration-700" style="width: 30%;" title="External Scripts">Scripts</div>
@@ -962,9 +962,9 @@
       </div>
 
       <!-- Real Script Samples (Extracted from DOM) -->
-      <div class="bg-slate-950/80 rounded-xl p-4 border border-slate-800">
+      <div class="bg-slate-950/80 rounded-xl p-4 border border-slate-200">
         <span class="text-xs font-mono uppercase text-slate-400 font-bold block mb-2">Detected External Assets & Plugins on Wire:</span>
-        <div id="extractedAssetsList" class="space-y-1.5 font-mono text-[11px] text-slate-300 max-h-40 overflow-y-auto">
+        <div id="extractedAssetsList" class="space-y-1.5 font-mono text-[11px] text-slate-600 max-h-40 overflow-y-auto">
           <p class="text-slate-500">Awaiting wire probe stream...</p>
         </div>
       </div>
@@ -972,7 +972,7 @@
 
       <!-- RUPEE REVENUE LEAKAGE CALCULATOR (MATHEMATICAL LOSS) -->
     <div id="calculatorSection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-amber-300">EX-BNI COMMERCIAL REVENUE LEAKAGE MATRIX (MATHEMATICAL PENALTY)</span>
@@ -986,7 +986,7 @@
         <!-- Interactive Sliders -->
         <div class="lg:col-span-6 space-y-4 font-mono text-xs">
           <div>
-            <div class="flex justify-between text-slate-300 mb-1">
+            <div class="flex justify-between text-slate-600 mb-1">
               <span>Estimated Monthly Website Visitors:</span>
               <span id="calcVisitorCountText" class="text-cyan-400 font-bold">1,000 visitors</span>
             </div>
@@ -995,7 +995,7 @@
           </div>
 
           <div>
-            <div class="flex justify-between text-slate-300 mb-1">
+            <div class="flex justify-between text-slate-600 mb-1">
               <span>Average Value Per Customer / Order:</span>
               <span id="calcOrderValueText" class="text-emerald-400 font-bold">&#8377;10,000</span>
             </div>
@@ -1003,7 +1003,7 @@
               class="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-emerald-400" />
           </div>
 
-          <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
+          <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-200 text-[11px] text-slate-400 leading-relaxed">
             <span class="font-bold text-amber-400">Scientific Formula:</span> Every 1.0 second of delay causes a 7% loss in conversions. On their current <span id="calcCurrentDelayText" class="text-red-400 font-bold">3.24s</span> load time, the penalty over the 0.20s standard is <span id="calcPenaltyPercentText" class="text-red-400 font-bold">21.3%</span>.
           </div>
         </div>
@@ -1046,7 +1046,7 @@
           </div>
 
           <div class="mt-6 pt-4 border-t border-red-900/40 flex items-center justify-between text-xs font-mono">
-            <span class="text-slate-300">RQL Upgrade Payback Period:</span>
+            <span class="text-slate-600">RQL Upgrade Payback Period:</span>
             <span id="calcPaybackDays" class="text-emerald-400 font-bold bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-800/60">
               Pays for itself in 57 Days
             </span>
@@ -1059,8 +1059,8 @@
     <div id="securityMatrixSection" class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
       
       <!-- SECURITY VULNERABILITY MATRIX -->
-      <div class="glass-mid-dark rounded-2xl p-6 border border-slate-800">
-        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="glass-mid-dark rounded-2xl p-6 border border-slate-200">
+        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
           <div class="flex items-center gap-2">
             <span class="text-red-400 font-bold text-sm">&#128737;&#65039; CRITICAL SECURITY HEADER SHIELDS</span>
           </div>
@@ -1070,24 +1070,24 @@
         </div>
         
         <div class="space-y-2.5 font-mono text-xs">
-          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
-            <span class="text-slate-300">Strict-Transport-Security (HSTS)</span>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-200">
+            <span class="text-slate-600">Strict-Transport-Security (HSTS)</span>
             <span id="shieldHsts" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Missing)</span>
           </div>
-          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
-            <span class="text-slate-300">Content-Security-Policy (CSP)</span>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-200">
+            <span class="text-slate-600">Content-Security-Policy (CSP)</span>
             <span id="shieldCsp" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Missing)</span>
           </div>
-          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
-            <span class="text-slate-300">X-Frame-Options (Clickjacking)</span>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-200">
+            <span class="text-slate-600">X-Frame-Options (Clickjacking)</span>
             <span id="shieldXFrame" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Missing)</span>
           </div>
-          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
-            <span class="text-slate-300">X-Content-Type-Options (MIME)</span>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-200">
+            <span class="text-slate-600">X-Content-Type-Options (MIME)</span>
             <span id="shieldXContent" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Missing)</span>
           </div>
-          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-800">
-            <span class="text-slate-300">DNSSEC Cryptographic Chain (RFC 4034)</span>
+          <div class="flex items-center justify-between p-2 rounded-lg bg-slate-950/80 border border-slate-200">
+            <span class="text-slate-600">DNSSEC Cryptographic Chain (RFC 4034)</span>
             <span id="shieldDnssec" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">FAIL (Unsigned)</span>
           </div>
         </div>
@@ -1097,9 +1097,9 @@
       </div>
 
       <!-- CARBON & WATTAGE FOOTPRINT -->
-      <div class="glass-mid-dark rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+      <div class="glass-mid-dark rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
             <div class="flex items-center gap-2">
               <span class="text-emerald-400 font-bold text-sm">&#127793; CARBON FOOTPRINT & ENERGY DRAIN</span>
             </div>
@@ -1108,7 +1108,7 @@
             </span>
           </div>
 
-          <div class="space-y-3 font-mono text-xs text-slate-300">
+          <div class="space-y-3 font-mono text-xs text-slate-600">
             <div class="flex justify-between">
               <span class="text-slate-400">Carbon Emitted Per Page Visit:</span>
               <span id="metricCo2PerVisit" class="font-bold text-amber-400">0.85 g CO&#8322;</span>
@@ -1123,7 +1123,7 @@
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Transport Protocol:</span>
-              <span id="metricTransportProtocol" class="font-bold text-white">HTTP/1.1 or HTTP/2</span>
+              <span id="metricTransportProtocol" class="font-bold text-slate-950">HTTP/1.1 or HTTP/2</span>
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Regional Power Grid Intensity:</span>
@@ -1140,7 +1140,7 @@
           </div>
         </div>
 
-        <div class="mt-4 pt-3 border-t border-slate-800/80 text-[11px] font-mono text-slate-400">
+        <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-400">
           Heavy PHP database queries burn unnecessary CPU server electricity. Pure static edge caching reduces energy drain by up to 95%.
         </div>
       </div>
@@ -1151,8 +1151,8 @@
     <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-6">
 
       <!-- WHATSAPP PITCH CARD -->
-      <div id="whatsappPitchSection" class="lg:col-span-7 glass-mid-dark rounded-2xl p-6 border border-slate-800">
-        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div id="whatsappPitchSection" class="lg:col-span-7 glass-mid-dark rounded-2xl p-6 border border-slate-200">
+        <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
           <div class="flex items-center gap-2">
             <span class="text-emerald-400 font-bold text-sm">&#128241; ONE-CLICK WHATSAPP OUTREACH PITCH</span>
           </div>
@@ -1160,20 +1160,20 @@
             <span id="copyBtnText">Copy Pitch Text</span>
           </button>
         </div>
-        <textarea id="whatsappPitchBox" rows="8" readonly class="w-full bg-slate-950/90 border border-slate-800 rounded-xl p-3.5 text-slate-300 font-mono text-xs leading-relaxed focus:outline-none resize-none"></textarea>
+        <textarea id="whatsappPitchBox" rows="8" readonly class="w-full bg-slate-950/90 border border-slate-200 rounded-xl p-3.5 text-slate-600 font-mono text-xs leading-relaxed focus:outline-none resize-none"></textarea>
       </div>
 
       <!-- COMMERCIAL PROPOSAL TICKET -->
-      <div id="proposalActionSection" class="lg:col-span-5 glass-mid-dark rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+      <div id="proposalActionSection" class="lg:col-span-5 glass-mid-dark rounded-2xl p-6 border border-slate-200 flex flex-col justify-between">
         <div>
-          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+          <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
             <span class="text-cyan-400 font-bold text-sm">&#127963;&#65039; EX-BNI CLIENT PROPOSAL</span>
             <span class="text-[10px] font-mono px-2 py-0.5 bg-cyan-950 text-cyan-300 rounded border border-cyan-800/40">48-Hr Delivery</span>
           </div>
-          <div class="space-y-3 text-xs font-mono text-slate-300">
+          <div class="space-y-3 text-xs font-mono text-slate-600">
             <div class="flex justify-between">
               <span class="text-slate-400">Migration Fee:</span>
-              <span class="font-bold text-white">&#8377;19,999 (One-Time)</span>
+              <span class="font-bold text-slate-950">&#8377;19,999 (One-Time)</span>
             </div>
             <div class="flex justify-between">
               <span class="text-slate-400">Regular Agency Fee:</span>
@@ -1190,7 +1190,7 @@
           </div>
         </div>
 
-        <div class="mt-6 pt-4 border-t border-slate-800/80">
+        <div class="mt-6 pt-4 border-t border-slate-200">
           <a id="directWhatsAppLink" href="#" target="_blank" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-600/20">
             <span>Send Direct on WhatsApp</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -1211,13 +1211,13 @@
       <div class="absolute -top-16 -right-16 w-56 h-56 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
       
       <!-- Card Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-800">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-red-950/80 border border-red-700/60 flex items-center justify-center text-xl shadow-inner">
             &#9889;
           </div>
           <div>
-            <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase flex items-center gap-2">
+            <h2 class="text-sm sm:text-base font-bold text-slate-950 tracking-wide uppercase flex items-center gap-2">
               <span>HEAD-TO-HEAD PERFORMANCE BENCHMARK COMPARISON</span>
               <span class="text-[9px] px-2 py-0.5 rounded-full bg-red-950 text-red-400 border border-red-800 font-normal">PHASE 49 TELEMETRY</span>
             </h2>
@@ -1233,15 +1233,15 @@
       </div>
 
       <!-- Duel Input Control Console -->
-      <div class="bg-slate-950/90 p-4 sm:p-5 rounded-2xl border border-slate-800/80 mb-6 shadow-inner">
+      <div class="bg-slate-950/90 p-4 sm:p-5 rounded-2xl border border-slate-200 mb-6 shadow-inner">
         <div class="text-xs text-slate-400 mb-3 flex items-center justify-between">
-          <span class="uppercase tracking-wider font-bold text-slate-300">Target URL vs Primary Market Competitor</span>
+          <span class="uppercase tracking-wider font-bold text-slate-600">Target URL vs Primary Market Competitor</span>
           <span class="text-[10px] text-cyan-400">Real-time HTTP/3 wire comparison</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
           <div class="md:col-span-5 relative">
             <span class="absolute left-3.5 top-2.5 text-xs text-slate-500 font-bold">TARGET:</span>
-            <input id="battleTargetInput" type="text" readonly class="w-full bg-slate-900 border border-slate-700/80 rounded-xl pl-20 pr-3.5 py-2 text-xs text-slate-200 font-mono focus:outline-none" value="https://wordpress.org" />
+            <input id="battleTargetInput" type="text" readonly class="w-full bg-slate-900 border border-slate-700/80 rounded-xl pl-20 pr-3.5 py-2 text-xs text-slate-600 font-mono focus:outline-none" value="https://wordpress.org" />
           </div>
           <div class="md:col-span-2 flex justify-center">
             <span class="px-3 py-1 rounded-full bg-red-950/90 text-red-400 border border-red-800 text-xs font-black tracking-widest animate-pulse">VS</span>
@@ -1263,13 +1263,13 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 mb-6">
         
         <!-- Left: Target Domain Current Telemetry -->
-        <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl p-5 border border-slate-800 flex flex-col justify-between">
+        <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800/80">
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
               <span class="text-[11px] uppercase tracking-wider text-slate-400">Client Under Audit</span>
               <span id="battleTargetStatus" class="text-[10px] px-2 py-0.5 rounded font-bold bg-red-950 text-red-400 border border-red-800">LOSING TRAFFIC</span>
             </div>
-            <h3 id="battleTargetDomain" class="text-base font-bold text-white truncate">wordpress.org</h3>
+            <h3 id="battleTargetDomain" class="text-base font-bold text-slate-950 truncate">wordpress.org</h3>
             <div class="mt-4 space-y-2 text-xs">
               <div class="flex justify-between items-center py-1 border-b border-slate-900">
                 <span class="text-slate-400">Total Latency:</span>
@@ -1295,7 +1295,7 @@
         </div>
 
         <!-- Center: Differential Standoff Multiplier -->
-        <div class="lg:col-span-2 flex flex-col items-center justify-center p-4 bg-slate-950/90 rounded-2xl border border-slate-800 text-center space-y-3">
+        <div class="lg:col-span-2 flex flex-col items-center justify-center p-4 bg-slate-950/90 rounded-2xl border border-slate-200 text-center space-y-3">
           <span class="text-[9px] uppercase tracking-widest text-slate-500 font-bold">Speed Delta</span>
           <div id="battleDeltaBadge" class="p-3 w-full rounded-xl bg-gradient-to-b from-slate-900 to-slate-950 border border-amber-500/40 shadow-lg">
             <span id="battleSpeedMultiplier" class="text-2xl font-black text-amber-400 block tracking-tight">2.3x</span>
@@ -1307,9 +1307,9 @@
         </div>
 
         <!-- Right: Rival Domain Telemetry -->
-        <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl p-5 border border-slate-800 flex flex-col justify-between">
+        <div class="lg:col-span-5 bg-slate-950/80 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800/80">
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
               <span class="text-[11px] uppercase tracking-wider text-slate-400">Direct Competitor</span>
               <span id="battleRivalStatus" class="text-[10px] px-2 py-0.5 rounded font-bold bg-emerald-950 text-emerald-400 border border-emerald-800">SIPHONING USERS</span>
             </div>
@@ -1352,17 +1352,17 @@
           </span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-200">
             <span class="text-slate-400 text-[10px] uppercase">RQL Edge Latency:</span>
             <p class="text-lg font-black text-cyan-400 mt-0.5">16 ms</p>
             <p class="text-[10px] text-slate-500">Global Anycast In-Memory</p>
           </div>
-          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-200">
             <span class="text-slate-400 text-[10px] uppercase">Estimated Monthly Theft:</span>
             <p id="battleMonthlySteal" class="text-lg font-black text-red-400 mt-0.5">&#8377;1,48,000 / mo</p>
             <p class="text-[10px] text-slate-500">Stolen By Rival Speed Advantage</p>
           </div>
-          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-950/90 p-3 rounded-xl border border-slate-200">
             <span class="text-slate-400 text-[10px] uppercase">Client Fiduciary Action:</span>
             <p class="text-lg font-black text-emerald-400 mt-0.5">Instant Checkmate</p>
             <p class="text-[10px] text-slate-500">48-Hr Native Edge Deployment</p>
@@ -1371,11 +1371,11 @@
       </div>
 
       <!-- Tactical Takeover Verdict -->
-      <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-slate-300 space-y-2">
+      <div class="p-4 rounded-2xl bg-slate-950 border border-slate-200 text-xs text-slate-600 space-y-2">
         <div class="flex items-center gap-2 text-red-400 font-bold">
           <span>&#127919;</span> <span>EXECUTIVE COMPETITIVE TAKEOVER BRIEF:</span>
         </div>
-        <p id="battleVerdictText" class="leading-relaxed text-slate-300">
+        <p id="battleVerdictText" class="leading-relaxed text-slate-600">
           CRITICAL DEFICIT: shopify.com beats wordpress.org by 812ms on first-byte wire transmission. Under Google Chromium Search ranking algorithms, this 812ms latency gap depresses the target domain's mobile search position by -14 ranks for high-intent transactional queries. Migrating the target domain to RQL Native Rust Edge (16ms) leapfrogs the competitor by 40x, reversing the conversion hemorrhage and bankrupting the rival's paid customer acquisition funnel within 48 hours.
         </p>
       </div>
@@ -1394,13 +1394,13 @@
       <div class="absolute -top-16 -right-16 w-56 h-56 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Card Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-800">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-amber-950/80 border border-amber-700/60 flex items-center justify-center text-xl shadow-inner">
             &#128293;
           </div>
           <div>
-            <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase flex items-center gap-2">
+            <h2 class="text-sm sm:text-base font-bold text-slate-950 tracking-wide uppercase flex items-center gap-2">
               <span>THERMOGRAPHIC INFRARED HEAT-CAM SIMULATOR (FLIR VISION)</span>
               <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber-950 text-amber-400 border border-amber-800 font-normal">PHASE 46 TELEMETRY</span>
             </h2>
@@ -1423,7 +1423,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
         
         <!-- Left: FLIR Canvas Thermal Map -->
-        <div class="lg:col-span-7 bg-black rounded-2xl p-4 border border-slate-800 relative flex flex-col items-center justify-center">
+        <div class="lg:col-span-7 bg-black rounded-2xl p-4 border border-slate-200 relative flex flex-col items-center justify-center">
           <div class="absolute top-3 left-3 text-[10px] text-slate-400 font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
             <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
             <span>FLIR INFRARED SPECTRAL HUD [CLIENT SOC DIE]</span>
@@ -1440,7 +1440,7 @@
 
         <!-- Right: Thermal Telemetry Gauges -->
         <div class="lg:col-span-5 flex flex-col justify-between space-y-3">
-          <div class="bg-slate-950/90 rounded-2xl p-4 border border-slate-800 space-y-3 text-xs">
+          <div class="bg-slate-950/90 rounded-2xl p-4 border border-slate-200 space-y-3 text-xs">
             <div class="flex justify-between items-center pb-2 border-b border-slate-900">
               <span class="text-slate-400">SoC CPU Core Junction:</span>
               <span id="flirCpuTemp" class="text-lg font-black text-red-400">89.4&#176;C</span>
@@ -1464,7 +1464,7 @@
           </div>
 
           <!-- Thermal Shock Ledger -->
-          <div class="bg-slate-950/90 rounded-2xl p-4 border border-slate-800 text-[11px] text-slate-300 space-y-2">
+          <div class="bg-slate-950/90 rounded-2xl p-4 border border-slate-200 text-[11px] text-slate-600 space-y-2">
             <span class="text-red-400 font-bold uppercase tracking-wider block">Thermal Hardware Degradation:</span>
             <p id="flirDegradationText" class="leading-relaxed text-slate-400">
               Running heavy uncompiled JavaScript DOM loops heats the user's mobile processor to 89.4&#176;C, triggering aggressive hardware thermal throttling. Under Black's Electromigration Equation, sustained junction heat reduces device lifespan by 400% and drains 4.8% of battery capacity within 60 seconds.
@@ -1479,7 +1479,7 @@
 
       <!-- 31. CLIENT GPU HARDWARE RASTERIZATION & THERMAL WATTAGE SENSOR -->
     <div id="clientGpuThermalSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-violet-300">CLIENT GPU HARDWARE RASTERIZATION &amp; THERMAL WATTAGE SENSOR (SILICON PROBE)</span>
@@ -1490,22 +1490,22 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Detected Client GPU Chip</span>
-          <span id="gpuRendererName" class="text-slate-200 font-bold text-xs truncate block">Probing Local Hardware...</span>
+          <span id="gpuRendererName" class="text-slate-600 font-bold text-xs truncate block">Probing Local Hardware...</span>
           <span id="gpuVendorName" class="text-[10px] text-violet-400 mt-1 block">Hardware Accelerated</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">60-Frame Shader Raster Time</span>
           <span id="gpuRasterLatency" class="text-cyan-400 font-bold text-xs block">0.00 ms</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Hardware Pipeline Stress</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Estimated Peak Processor Power</span>
           <span id="gpuWattageBoost" class="text-red-400 font-bold text-xs block">14.8 Watts (Boost Draw)</span>
           <span class="text-[10px] text-emerald-400 mt-1 block">RQL Native: 0.8W Idle Base</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Hardware Thermal Throttle Risk</span>
           <span id="gpuThermalState" class="text-emerald-400 font-bold text-xs block">NOMINAL (Low Die Heat)</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Zero Core Throttling</span>
@@ -1515,7 +1515,7 @@
 
       <!-- 20. THERMODYNAMIC HEAT DISSIPATION & MOBILE OLED BATTERY DRAIN (LANDAUER'S PRINCIPLE) -->
     <div id="thermodynamicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-amber-300">THERMODYNAMIC HEAT DISSIPATION &amp; MOBILE OLED BATTERY DRAIN (LANDAUER'S PRINCIPLE)</span>
@@ -1528,28 +1528,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Joules per Pageview -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Hardware Thermal Dissipation:</span>
-          <div id="joulesPerViewText" class="text-xs font-bold text-white truncate">0.0018 Joules / view</div>
+          <div id="joulesPerViewText" class="text-xs font-bold text-slate-950 truncate">0.0018 Joules / view</div>
           <span id="landauerStateText" class="text-[10px] text-emerald-400 block font-semibold truncate">Minimal Transistor Switching</span>
         </div>
 
         <!-- Metric 2: 100k Thermal Cumulative -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">100k Visits Cumulative Heat:</span>
           <div id="heatDissipatedText" class="text-xs font-bold text-amber-300 truncate">180 Joules Total</div>
           <span id="entropyRateText" class="text-[10px] text-slate-400 block truncate">5.657e-6 J/K Entropy Rate</span>
         </div>
 
         <!-- Metric 3: Mobile Li-Ion Battery Drain -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Mobile Battery Consumption:</span>
           <div id="batteryUahText" class="text-xs font-bold text-cyan-300 truncate">0.42 &#181;Ah / visit</div>
           <span id="batteryGradeText" class="text-[10px] text-emerald-400 block font-semibold truncate">A+ Near-Zero Battery Drain</span>
         </div>
 
         <!-- Metric 4: Display Draw & Temperature -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Display &amp; Hardware Temperature:</span>
           <div id="oledDrawText" class="text-xs font-bold text-purple-300 truncate">Optimized Dark Subpixel</div>
           <span id="batteryThermalFeelText" class="text-[10px] text-slate-400 block truncate">Cool Operation (Zero Warming)</span>
@@ -1559,7 +1559,7 @@
 
       <!-- 23. MICROPROCESSOR TRANSISTOR GATES & DISPLAY VSYNC 120Hz STUTTER (SEMICONDUCTOR & LAYER 8) -->
     <div id="siliconVsyncSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">MICROPROCESSOR TRANSISTOR GATES &amp; DISPLAY VSYNC 120Hz STUTTER (SEMICONDUCTOR &amp; LAYER 8)</span>
@@ -1572,28 +1572,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Hardware Transistors Switched -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">CMOS Gates Switched:</span>
-          <div id="siliconGateCountText" class="text-xs font-bold text-white truncate">45.2 Million Switches</div>
+          <div id="siliconGateCountText" class="text-xs font-bold text-slate-950 truncate">45.2 Million Switches</div>
           <span id="siliconSwitchStateText" class="text-[10px] text-emerald-400 block font-semibold truncate">Ultra-Lean Native Execution</span>
         </div>
 
         <!-- Metric 2: Microarchitectural Pipeline -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Microarchitectural Pipeline:</span>
           <div id="siliconIpcText" class="text-xs font-bold text-cyan-300 truncate">3.85 Instructions Per Cycle</div>
           <span id="siliconGradeText" class="text-[10px] text-slate-400 block truncate">A+ Native Hardware Efficiency</span>
         </div>
 
         <!-- Metric 3: Physical Monitor Refresh Rate -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Physical Display Refresh:</span>
           <div id="vsyncRefreshText" class="text-xs font-bold text-amber-300 truncate">120 Hz (8.33 ms budget)</div>
           <span id="vsyncStandardText" class="text-[10px] text-slate-400 block truncate">Apple ProMotion / High-Refresh</span>
         </div>
 
         <!-- Metric 4: Hardware Dropped Frames & Stutter -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Hardware VSync Frame Drops:</span>
           <div id="vsyncDropsText" class="text-xs font-bold text-purple-300 truncate">0 Dropped Frames (0% Jank)</div>
           <span id="vsyncWorstFrameText" class="text-[10px] text-slate-400 block truncate">Worst Frame: 8.4 ms (Clean Lock)</span>
@@ -1603,7 +1603,7 @@
 
       <!-- 28. HARDWARE CLOCK SYNCHRONIZATION & DRAM MEMORY INTEGRITY (GENERAL RELATIVITY & PARTICLE ASTROPHYSICS) -->
     <div id="relativityCosmicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-yellow-300">HARDWARE CLOCK SYNCHRONIZATION &amp; DRAM MEMORY INTEGRITY (SUB-MICROSECOND BENCHMARKS)</span>
@@ -1616,28 +1616,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Hardware Clock Drift Rate -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Hardware Clock Drift Rate:</span>
-          <div id="femtosecondsDayText" class="text-xs font-bold text-white truncate">< 1.0 ns/day Synchronized Drift</div>
+          <div id="femtosecondsDayText" class="text-xs font-bold text-slate-950 truncate">< 1.0 ns/day Synchronized Drift</div>
           <span id="elevationText" class="text-[10px] text-yellow-400 block font-semibold truncate">88 meters above sea level</span>
         </div>
 
         <!-- Metric 2: Schwarzschild Gravitational Redshift -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Precision Clock Stability Gradient:</span>
           <div id="redshiftRatioText" class="text-xs font-bold text-cyan-300 truncate">8.51e-15 &#916;t/t Ratio</div>
           <span id="spacetimeCurvatureText" class="text-[10px] text-slate-400 block truncate">Standard Hardware Clock Verified</span>
         </div>
 
         <!-- Metric 3: Hardware Memory Integrity Rate -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Hardware DRAM Bit-Flip Risk:</span>
           <div id="seuRiskText" class="text-xs font-bold text-emerald-400 truncate">0.00001% (Immune via ECC)</div>
           <span id="ramHeapText" class="text-[10px] text-slate-400 block truncate">0.08 MB Edge Heap (Zero Bloat)</span>
         </div>
 
         <!-- Metric 4: Secondary Cosmic Neutron Cascade -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Hardware Memory Integrity:</span>
           <div id="neutronFluxText" class="text-xs font-bold text-purple-300 truncate">Zero Memory Corruptions Logged</div>
           <span id="seuGradeText" class="text-[10px] text-slate-400 block truncate">A+ Memory Safety &amp; ECC Parity</span>
@@ -1647,7 +1647,7 @@
 
       <!-- 29. SERVER CHASSIS FAN TACHOMETER & CFM AIRFLOW DISPLACEMENT (THERMODYNAMIC FLUID DYNAMICS) -->
     <div id="serverAerodynamicsSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-rose-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-rose-300">SERVER HARDWARE THERMAL DISSIPATION &amp; ENERGY EFFICIENCY PROFILE</span>
@@ -1660,28 +1660,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Motherboard PWM Chassis Fan RPM -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Server Rack Chassis Fan Speed:</span>
-          <div id="fanRpmText" class="text-xs font-bold text-white truncate">0 RPM Incremental Spin</div>
+          <div id="fanRpmText" class="text-xs font-bold text-slate-950 truncate">0 RPM Incremental Spin</div>
           <span id="fanDutyText" class="text-[10px] text-emerald-400 block font-semibold truncate">Solid-State Edge Ingress</span>
         </div>
 
         <!-- Metric 2: Forced Convective Airflow -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Forced Convective Airflow:</span>
           <div id="airflowCfmText" class="text-xs font-bold text-cyan-300 truncate">0 CFM Thermal Displacement</div>
           <span id="aerodynamicGradeText" class="text-[10px] text-slate-400 block truncate">A+ Passive Die Dissipation</span>
         </div>
 
         <!-- Metric 3: Acoustic Noise SPL -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Server Room Acoustic Noise:</span>
           <div id="fanAcousticText" class="text-xs font-bold text-amber-300 truncate">0 dBA Edge Noise (Silent)</div>
           <span class="text-[10px] text-slate-400 block truncate">Zero Fan Turbine Whine</span>
         </div>
 
         <!-- Metric 4: Cooling Mechanism -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Semiconductor Die Cooling:</span>
           <div id="fanCoolingTypeText" class="text-xs font-bold text-purple-300 truncate">Passive Thermal Dissipation</div>
           <span class="text-[10px] text-slate-400 block truncate">Zero Forced Convective Drag</span>
@@ -1691,41 +1691,41 @@
 
       <!-- 15. PHYSICAL MOBILE RAM & CHROMIUM V8 HEAP ALLOCATION (DEVICE PHYSICS) -->
     <div id="devicePhysicsSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">PHYSICAL MOBILE RAM &amp; CHROMIUM V8 HEAP ALLOCATION (DEVICE HARDWARE PHYSICS)</span>
         </div>
         <div class="flex items-center gap-2">
           <span id="mobileRamGradeBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold">A+ Ultra-Lean</span>
-          <span id="batteryDrainBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Negligible Battery Drain</span>
+          <span id="batteryDrainBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200">Negligible Battery Drain</span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: V8 DOM Heap Memory -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">V8 DOM Heap Memory:</span>
-          <div id="deviceV8HeapText" class="text-2xl font-bold text-white tabular-nums">0.24 MB</div>
+          <div id="deviceV8HeapText" class="text-2xl font-bold text-slate-950 tabular-nums">0.24 MB</div>
           <span id="deviceDomSubtext" class="text-[10px] text-slate-400 block">1.4 KB / DOM Node in Memory</span>
         </div>
 
         <!-- Metric 2: Estimated Mobile RAM Allocation -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Physical Mobile RAM Consumed:</span>
           <div id="deviceTotalRamText" class="text-2xl font-bold text-cyan-300 tabular-nums">18.4 MB</div>
           <span class="text-[10px] text-slate-400 block">Android / iOS App Context Footprint</span>
         </div>
 
         <!-- Metric 3: Main Thread CPU Lockup -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">CPU Main Thread Freeze:</span>
           <div id="deviceThreadLockText" class="text-2xl font-bold text-emerald-400 tabular-nums">12 ms</div>
           <span class="text-[10px] text-slate-400 block">Touch Responsiveness Stall Window</span>
         </div>
 
         <!-- Metric 4: Script Execution Complexity -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Execution Pressure:</span>
           <div id="deviceExecutionComplexityText" class="text-2xl font-bold text-purple-300 tabular-nums">Zero Bloat</div>
           <span id="deviceScriptCountText" class="text-[10px] text-slate-400 block">0 External Scripts Active</span>
@@ -1735,7 +1735,7 @@
 
       <!-- 27. OPTICAL FIBER TRANSIT & UNDERSEA LINK MONITORING (TELEMETRY & FIBER SENSING) -->
     <div id="photonSpaceEdfaSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-fuchsia-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-fuchsia-300">OPTICAL FIBER TRANSIT &amp; UNDERSEA LINK MONITORING (HIGH CAPACITY)</span>
@@ -1748,28 +1748,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Optical Link Capacity & Flux -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Fiber Optical Signal Power:</span>
-          <div id="photonCountText" class="text-xs font-bold text-white truncate">-3.5 dBm Optical Power (Optimal)</div>
+          <div id="photonCountText" class="text-xs font-bold text-slate-950 truncate">-3.5 dBm Optical Power (Optimal)</div>
           <span id="photonWavelengthText" class="text-[10px] text-fuchsia-400 block font-semibold truncate">1550.12 nm (ITU-T C-Band Channel 34)</span>
         </div>
 
         <!-- Metric 2: NOAA Planetary Geomagnetic Space Weather -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Network Carrier Link Quality:</span>
           <div id="geomagneticKpText" class="text-xs font-bold text-amber-300 truncate">Link Quality: 99.99% Stable</div>
           <span id="spaceAgencyText" class="text-[10px] text-slate-400 block truncate">Physical Transit Signal Margin Verified</span>
         </div>
 
         <!-- Metric 3: Undersea EDFA Optical Repeaters -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Subsea Optical Repeaters:</span>
           <div id="edfaRepeatersText" class="text-xs font-bold text-cyan-300 truncate">18 Submerged Repeaters</div>
           <span id="edfaPumpText" class="text-[10px] text-slate-400 block truncate">980 nm InGaAs Laser Optical Pump</span>
         </div>
 
         <!-- Metric 4: Ocean Trench Hydrostatic Pressure -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Trench Hydrostatic Load:</span>
           <div id="oceanPressureText" class="text-xs font-bold text-purple-300 truncate">347 Atmospheres (35.2 MPa)</div>
           <span id="oceanDepthText" class="text-[10px] text-slate-400 block truncate">~3,850 meters Undersea Floor</span>
@@ -1779,7 +1779,7 @@
 
       <!-- 21. SHANNON CRYPTOGRAPHIC ENTROPY & GLOBAL CDN RAM EVICTION HALF-LIFE (LRU PHYSICS) -->
     <div id="entropyCdnSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">SHANNON CRYPTOGRAPHIC ENTROPY &amp; GLOBAL CDN RAM EVICTION HALF-LIFE (LRU PHYSICS)</span>
@@ -1792,28 +1792,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Shannon Entropy -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Public Key Shannon Entropy:</span>
-          <div id="shannonEntropyText" class="text-xs font-bold text-white truncate">7.989 bits/byte (Max 8.0)</div>
+          <div id="shannonEntropyText" class="text-xs font-bold text-slate-950 truncate">7.989 bits/byte (Max 8.0)</div>
           <span id="entropyQualityText" class="text-[10px] text-emerald-400 block font-semibold truncate">Hardware TRNG (RDRAND Noise)</span>
         </div>
 
         <!-- Metric 2: PRNG Factorization Defense -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Factorization Vulnerability:</span>
           <div id="factorizationRiskText" class="text-xs font-bold text-emerald-400 truncate">ZERO Factorization Risk</div>
           <span id="keyDistributionText" class="text-[10px] text-slate-400 block truncate">Uniform Modulus Dispersion</span>
         </div>
 
         <!-- Metric 3: CDN LRU Cache Half-Life -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Edge LRU Eviction Half-Life:</span>
           <div id="evictionHalfLifeText" class="text-xs font-bold text-cyan-300 truncate">72+ Hours Warm Cache</div>
           <span id="lruGradeText" class="text-[10px] text-slate-400 block truncate">Tier-1 Permanent RAM Resident</span>
         </div>
 
         <!-- Metric 4: RAM Slab Allocation Tier -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">RAM Memory Slab Allocation:</span>
           <div id="ramTierText" class="text-xs font-bold text-purple-300 truncate">L1 In-Memory Fast Slab</div>
           <span id="memoryFootprintText" class="text-[10px] text-slate-400 block truncate">Lean Worker Footprint</span>
@@ -1823,7 +1823,7 @@
 
       <!-- 25. DATACENTER METEOROLOGY, FIBER REFRACTION & ATOMIC CHRONOMETRY (LAYER 0 & 1) -->
     <div id="meteorologyChronometrySection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-teal-300">DATACENTER METEOROLOGY, FIBER REFRACTION &amp; ATOMIC CHRONOMETRY (LAYER 0 &amp; 1)</span>
@@ -1836,28 +1836,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Datacenter Ambient Weather -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Datacenter Ambient Weather:</span>
-          <div id="meteoAmbientText" class="text-xs font-bold text-white truncate">14.2&#176;C &bull; 1016.4 hPa</div>
+          <div id="meteoAmbientText" class="text-xs font-bold text-slate-950 truncate">14.2&#176;C &bull; 1016.4 hPa</div>
           <span id="meteoCityText" class="text-[10px] text-teal-400 block font-semibold truncate">Ashburn Datacenter Alley</span>
         </div>
 
         <!-- Metric 2: Optical Silica Glass Refraction -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Silica Glass Core Refraction:</span>
           <div id="meteoRefractiveText" class="text-xs font-bold text-cyan-300 truncate">n = 1.46814 &bull; 204,196 km/s</div>
           <span id="meteoPulseText" class="text-[10px] text-slate-400 block truncate">-0.058 ps/km Pulse Drift</span>
         </div>
 
         <!-- Metric 3: Atomic Clock Skew vs Stratum-1 -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Atomic Clock Synchronization:</span>
           <div id="clockSkewText" class="text-xs font-bold text-amber-300 truncate">42 ms Skew vs Stratum-1</div>
           <span id="clockStandardText" class="text-[10px] text-slate-400 block truncate">NIST UT1 / Rubidium Standard</span>
         </div>
 
         <!-- Metric 4: Quartz Crystal Drift & Grade -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Quartz Oscillator Drift:</span>
           <div id="quartzDriftText" class="text-xs font-bold text-purple-300 truncate">0.85 PPM Oscillator Drift</div>
           <span id="chronometryGradeText" class="text-[10px] text-slate-400 block truncate">Stratum-1 Atomic Disciplined</span>
@@ -1867,7 +1867,7 @@
 
       <!-- 26. RADIO FREQUENCY FREE-SPACE PATH LOSS & BGP ROUTE FLAP STABILITY (LAYER 2 & 3) -->
     <div id="radioRfFlapSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-violet-300">RADIO FREQUENCY FREE-SPACE PATH LOSS &amp; BGP ROUTE FLAP STABILITY (LAYER 2 &amp; 3)</span>
@@ -1880,28 +1880,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Radio Carrier Free-Space Path Loss -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">RF Free-Space Path Loss (FSPL):</span>
-          <div id="rfFsplText" class="text-xs font-bold text-white truncate">-64.2 dBm Signal Attenuation</div>
+          <div id="rfFsplText" class="text-xs font-bold text-slate-950 truncate">-64.2 dBm Signal Attenuation</div>
           <span id="rfFreqText" class="text-[10px] text-violet-400 block font-semibold truncate">5.0 GHz Wi-Fi / 5G Carrier</span>
         </div>
 
         <!-- Metric 2: Last-Mile Air Distance & Absorption -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Last-Mile Air Distance:</span>
           <div id="rfDistText" class="text-xs font-bold text-cyan-300 truncate">~36 meters to Base Station</div>
           <span id="rfAbsorbText" class="text-[10px] text-slate-400 block truncate">5.1% RF Absorption Decay</span>
         </div>
 
         <!-- Metric 3: BGP 24h Route Flap Frequency -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">BGP Route Flaps (24h):</span>
           <div id="bgpFlapCountText" class="text-xs font-bold text-emerald-400 truncate">0 Flap Events (100% Uptime)</div>
           <span id="bgpDampeningText" class="text-[10px] text-slate-400 block truncate">CLEAN (Flap Dampening Immune)</span>
         </div>
 
         <!-- Metric 4: BGP RIB Convergence Time -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">BGP RIB Convergence:</span>
           <div id="bgpRibTimeText" class="text-xs font-bold text-purple-300 truncate">&lt; 50 ms Sub-Second Anycast</div>
           <span id="bgpStabilityGradeText" class="text-[10px] text-slate-400 block truncate">A+ Deterministic Anycast Stability</span>
@@ -1920,13 +1920,13 @@
       <div class="absolute -top-16 -left-16 w-56 h-56 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Card Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-800">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-cyan-950/80 border border-cyan-700/60 flex items-center justify-center text-xl shadow-inner">
             &#127754;&#9875;
           </div>
           <div>
-            <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase flex items-center gap-2">
+            <h2 class="text-sm sm:text-base font-bold text-slate-950 tracking-wide uppercase flex items-center gap-2">
               <span>GLOBAL TECTONIC & SUBSEA CABLE SEVERANCE SIMULATOR</span>
               <span class="text-[9px] px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800 font-normal">PHASE 48 TELEMETRY</span>
             </h2>
@@ -1948,20 +1948,20 @@
           <button onclick="simulateCableSeverance('redsea')" id="cableBtn-redsea" class="cable-btn active px-3.5 py-2.5 rounded-xl border border-red-500/50 bg-red-950/50 text-red-300 hover:bg-red-900/60 transition flex items-center gap-2 text-left">
             <span>&#9875;</span> <span>Bab-el-Mandeb Cut (Red Sea)</span>
           </button>
-          <button onclick="simulateCableSeverance('luzon')" id="cableBtn-luzon" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:bg-slate-800 transition flex items-center gap-2 text-left">
+          <button onclick="simulateCableSeverance('luzon')" id="cableBtn-luzon" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-600 hover:bg-slate-800 transition flex items-center gap-2 text-left">
             <span>&#127755;</span> <span>Luzon Trench M7.1 Seismic</span>
           </button>
-          <button onclick="simulateCableSeverance('transatlantic')" id="cableBtn-transatlantic" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:bg-slate-800 transition flex items-center gap-2 text-left">
+          <button onclick="simulateCableSeverance('transatlantic')" id="cableBtn-transatlantic" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-600 hover:bg-slate-800 transition flex items-center gap-2 text-left">
             <span>&#127754;</span> <span>MAREA Atlantic Cut</span>
           </button>
-          <button onclick="simulateCableSeverance('nominal')" id="cableBtn-nominal" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:bg-slate-800 transition flex items-center gap-2 text-left">
+          <button onclick="simulateCableSeverance('nominal')" id="cableBtn-nominal" class="cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-600 hover:bg-slate-800 transition flex items-center gap-2 text-left">
             <span>&#128994;</span> <span>Nominal Fiber Baseline</span>
           </button>
         </div>
       </div>
 
       <!-- Disaster Telemetry HUD -->
-      <div class="bg-slate-950/90 rounded-2xl p-5 border border-slate-800 mb-6">
+      <div class="bg-slate-950/90 rounded-2xl p-5 border border-slate-200 mb-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4 mb-4 border-b border-slate-900 text-xs">
           <div>
             <span class="text-slate-500 text-[10px] uppercase">Incident Vector:</span>
@@ -2044,7 +2044,7 @@
       </div>
 
       <!-- Architectural Fact -->
-      <div class="p-4 rounded-2xl bg-cyan-950/30 border border-cyan-800/40 text-xs text-slate-300 flex items-start gap-3">
+      <div class="p-4 rounded-2xl bg-cyan-950/30 border border-cyan-800/40 text-xs text-slate-600 flex items-start gap-3">
         <span class="text-cyan-400 text-lg">&#128161;</span>
         <p class="leading-relaxed">
           <strong class="text-cyan-300">Why Centralized Architecture Fails:</strong> Over 99% of intercontinental internet traffic travels through underwater fiber cables. When anchor drags or undersea earthquakes sever cables in geopolitical choke points, centralized servers leave international clients paralyzed. RQL edge websites execute directly on 330+ distributed edge nodes, guaranteeing 100% operational uptime and sub-20ms delivery regardless of regional undersea cable disruptions.
@@ -2056,23 +2056,23 @@
 
       <!-- 13. PHYSICAL SUBMARINE OCEAN CABLE & BGP ROUTING HOP TRACKER (LAYER 1 & 3) -->
     <div id="cableTrackerSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-cyan-300">PHYSICAL SUBMARINE UNDERSEA CABLE &amp; BGP ROUTING TRACER (LAYER 1 &amp; 3)</span>
         </div>
         <div class="flex items-center gap-2">
           <span id="routeAsnBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold">ASN: AS13335</span>
-          <span id="routeOceanDelayBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">0ms Ocean Delay</span>
+          <span id="routeOceanDelayBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200">0ms Ocean Delay</span>
         </div>
       </div>
 
       <div class="space-y-4">
         <!-- Submarine & Telecom Metadata Banner -->
-        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[11px]">
+        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-[11px]">
           <div>
             <span class="text-slate-400 text-[10px] uppercase block font-bold">Undersea Cable Trunk System:</span>
-            <span id="routeCablesText" class="text-white font-bold">Domestic Terrestrial Silica Fiber</span>
+            <span id="routeCablesText" class="text-slate-950 font-bold">Domestic Terrestrial Silica Fiber</span>
           </div>
           <div>
             <span class="text-slate-400 text-[10px] uppercase block font-bold">Cable Landing Station:</span>
@@ -2100,7 +2100,7 @@
 
       <!-- 14. HTTP/3 QUIC 0-RTT VS LEGACY TCP 3-RTT PACKET HANDSHAKE LADDER -->
     <div id="packetLadderSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-purple-300">HTTP/3 QUIC 0-RTT VS LEGACY TCP 3-RTT WIRE LADDER (PROTOCOL PHYSICS)</span>
@@ -2143,7 +2143,7 @@
 
       <!-- 22. BGP AUTONOMOUS SYSTEM AS-PATH & GLOBAL SUBSEA SEISMIC CORRELATOR (LAYER 1 & 3) -->
     <div id="bgpSeismicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-orange-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-orange-300">BGP AUTONOMOUS SYSTEM AS-PATH &amp; GLOBAL SUBSEA SEISMIC CORRELATOR (LAYER 1 &amp; 3)</span>
@@ -2156,28 +2156,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Autonomous System Path Traversal -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Autonomous System Traversal:</span>
-          <div id="bgpPathStringText" class="text-xs font-bold text-white truncate">AS-CLIENT &#8594; AS13335</div>
+          <div id="bgpPathStringText" class="text-xs font-bold text-slate-950 truncate">AS-CLIENT &#8594; AS13335</div>
           <span id="bgpPeeringTypeText" class="text-[10px] text-emerald-400 block font-semibold truncate">Direct Settlement-Free Peering</span>
         </div>
 
         <!-- Metric 2: BGP Route Convergence -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">BGP Route Convergence:</span>
           <div id="bgpConvergenceText" class="text-xs font-bold text-cyan-300 truncate">A+ Deterministic Anycast</div>
           <span id="bgpHopCountText" class="text-[10px] text-slate-400 block truncate">2 Autonomous Systems</span>
         </div>
 
         <!-- Metric 3: Real-Time USGS Seismic Feed -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">USGS Submarine Seismic Stream:</span>
           <div id="seismicMagLocationText" class="text-xs font-bold text-amber-300 truncate">M6.4 &bull; Subsea Trench</div>
           <span id="seismicDepthText" class="text-[10px] text-slate-400 block truncate">10 km Crustal Depth</span>
         </div>
 
         <!-- Metric 4: Undersea Cable Armor Integrity -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Subsea Armor Cable Integrity:</span>
           <div id="seismicIntegrityText" class="text-xs font-bold text-purple-300 truncate">SECURE (Armor Active)</div>
           <span id="seismicZoneText" class="text-[10px] text-slate-400 block truncate">Undersea Trans-Oceanic Conduits</span>
@@ -2187,7 +2187,7 @@
 
       <!-- 24. CLIENT-SIDE WEBRTC LOCAL WI-FI GATEWAY & NAT RECON (RFC 8489 / RFC 8445) -->
     <div id="clientLanSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-blue-300">CLIENT-SIDE WEBRTC LOCAL WI-FI GATEWAY &amp; NAT RECON (RFC 8489 / RFC 8445)</span>
@@ -2200,28 +2200,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: Local Physical AP Gateway -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Local Physical AP Gateway:</span>
-          <div id="lanGatewayText" class="text-xs font-bold text-white truncate">192.168.1.1 (Wi-Fi AP / ONT)</div>
+          <div id="lanGatewayText" class="text-xs font-bold text-slate-950 truncate">192.168.1.1 (Wi-Fi AP / ONT)</div>
           <span id="lanSubnetText" class="text-[10px] text-slate-400 block truncate">255.255.255.0 (/24 Private CIDR)</span>
         </div>
 
         <!-- Metric 2: NAT Translation Topology -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">NAT Translation Topology:</span>
           <div id="natTypeText" class="text-xs font-bold text-cyan-300 truncate">Full Cone / Endpoint-Independent</div>
           <span id="natStunText" class="text-[10px] text-emerald-400 block font-semibold truncate">STUN Reflexive Handshake Active</span>
         </div>
 
         <!-- Metric 3: Visitor Local NIC Interface -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Visitor Local NIC Host IP:</span>
           <div id="lanLocalIpText" class="text-xs font-bold text-amber-300 truncate">192.168.1.42 (RFC 1918 Host)</div>
           <span class="text-[10px] text-slate-400 block truncate">IPv4 Host Interface Candidate</span>
         </div>
 
         <!-- Metric 4: Edge Ingress Proximity -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Last-Mile Radio Link:</span>
           <div id="lanRadioHopsText" class="text-xs font-bold text-purple-300 truncate">1 Radio Hop to Gateway</div>
           <span class="text-[10px] text-slate-400 block truncate">Direct 802.11ax / 5G NR Hardware Link</span>
@@ -2231,7 +2231,7 @@
 
       <!-- 19. LINUX KERNEL BBR CONGESTION ENGINE & PHYSICAL ROUTER TTL PHYSICS (LAYER 3 & 4) -->
     <div id="kernelNetworkSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-cyan-300">LINUX KERNEL BBR CONGESTION ENGINE &amp; PHYSICAL ROUTER TTL PHYSICS (LAYER 3 &amp; 4)</span>
@@ -2244,28 +2244,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: TCP/QUIC Congestion Engine -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Kernel Congestion Control:</span>
-          <div id="bbrAlgoText" class="text-xs font-bold text-white truncate">Google BBRv2</div>
+          <div id="bbrAlgoText" class="text-xs font-bold text-slate-950 truncate">Google BBRv2</div>
           <span id="bbrLossText" class="text-[10px] text-emerald-400 block font-semibold truncate">0% Cut on Jitter</span>
         </div>
 
         <!-- Metric 2: Pacing & Bufferbloat Mitigation -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Pacing &amp; Buffer Control:</span>
           <div id="bbrPacingText" class="text-xs font-bold text-cyan-300 truncate">2.885x Max Pacing Rate</div>
           <span id="bbrBufferText" class="text-[10px] text-slate-400 block truncate">Zero Bufferbloat Queue</span>
         </div>
 
         <!-- Metric 3: IP Packet TTL Decay -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">IP Packet TTL Decay:</span>
           <div id="ttlReceivedText" class="text-xs font-bold text-amber-300 truncate">TTL: 61/64 (3 Chassis)</div>
           <span id="ttlCleanlinessText" class="text-[10px] text-slate-400 block truncate">Direct Tier-1 Anycast Mesh</span>
         </div>
 
         <!-- Metric 4: Core Chassis Architecture -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Routing Chassis Topology:</span>
           <div id="ttlChassisText" class="text-xs font-bold text-purple-300 truncate">Leaf-Spine BGP Anycast</div>
           <span id="ttlDecayRatioText" class="text-[10px] text-slate-400 block truncate">4.7% TTL Attenuation</span>
@@ -2275,14 +2275,14 @@
 
       <!-- 18. CERTIFICATE TRANSPARENCY (CT) SHADOW INFRASTRUCTURE RECON (RFC 6962) -->
     <div id="subdomainDiscoverySection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-pink-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-pink-300">CERTIFICATE TRANSPARENCY (CT) SHADOW INFRASTRUCTURE RECON (RFC 6962 LOG STREAM)</span>
         </div>
         <div class="flex items-center gap-2">
           <span id="subdomainCountBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-pink-950 text-pink-300 border border-pink-800/50 font-bold">0 Subdomains Discovered</span>
-          <span id="shadowRiskBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800">Minimal Shadow Risk</span>
+          <span id="shadowRiskBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200">Minimal Shadow Risk</span>
         </div>
       </div>
 
@@ -2299,7 +2299,7 @@
 
       <!-- 16. ZERO-DAMAGE SENSITIVE ENDPOINT & RECON SHIELD (LAYER 7 AUDIT) -->
     <div id="endpointExposureSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-amber-300">ZERO-DAMAGE SENSITIVE ENDPOINT &amp; ATTACK SURFACE RECON (LAYER 7 PROBE)</span>
@@ -2325,13 +2325,13 @@
       <div class="absolute -top-16 -left-16 w-56 h-56 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <!-- Card Header -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-800">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-200">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-emerald-950/80 border border-emerald-700/60 flex items-center justify-center text-xl shadow-inner">
             &#127963;&#65039;
           </div>
           <div>
-            <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase flex items-center gap-2">
+            <h2 class="text-sm sm:text-base font-bold text-slate-950 tracking-wide uppercase flex items-center gap-2">
               <span>NIST ATOMIC CLOCK NOTARIZATION &amp; CRYPTOGRAPHIC PROOF</span>
               <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 font-normal">PHASE 47 TELEMETRY</span>
             </h2>
@@ -2347,11 +2347,11 @@
       </div>
 
       <!-- Master Notary Ledger Block -->
-      <div class="bg-slate-950/90 rounded-2xl p-5 border border-slate-800 mb-6">
+      <div class="bg-slate-950/90 rounded-2xl p-5 border border-slate-200 mb-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs pb-4 mb-4 border-b border-slate-900">
           <div>
             <span class="text-slate-500 text-[10px] uppercase">Stratum-1 Atomic Beacon:</span>
-            <p class="font-bold text-white mt-0.5">NIST Boulder, Colorado (UTC)</p>
+            <p class="font-bold text-slate-950 mt-0.5">NIST Boulder, Colorado (UTC)</p>
             <p class="text-[10px] text-slate-500">time.nist.gov &bull; Cesium Standard</p>
           </div>
           <div>
@@ -2377,7 +2377,7 @@
             <span class="text-[11px] text-slate-400 uppercase tracking-wider font-bold">Immutable SHA-256 Merkle Proof Seal:</span>
             <span class="text-[10px] text-emerald-400">Cryptographically Signed</span>
           </div>
-          <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800 font-mono text-xs break-all text-emerald-300 flex items-center justify-between gap-3">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 font-mono text-xs break-all text-emerald-300 flex items-center justify-between gap-3">
             <span id="nistProofHash">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
             <button onclick="copyNistSeal()" id="copyNistBtn" class="shrink-0 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5 shadow">
               <span>&#128203;</span> <span id="copyNistBtnText">Copy Seal</span>
@@ -2388,7 +2388,7 @@
 
       <!-- Legal Admissibility Declaration -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-2">
           <div class="flex items-center gap-2 text-cyan-400 font-bold">
             <span>&#128220;</span> <span>RULE 902(13) DECLARATION:</span>
           </div>
@@ -2396,7 +2396,7 @@
             Certified Records Generated by an Electronic Process or System: This forensic telemetry dossier was generated autonomously through deterministic TCP/IP raw socket packet measurement without human modification or manual alteration.
           </p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-2">
           <div class="flex items-center gap-2 text-emerald-400 font-bold">
             <span>&#9878;&#65039;</span> <span>RULE 902(14) DECLARATION:</span>
           </div>
@@ -2411,7 +2411,7 @@
 
       <!-- 30. CRYPTOGRAPHIC WIRE CONVERSATION & AUDIT LOG RECORDER -->
     <div id="flightRecorderSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 mb-4 border-b border-slate-800 gap-2">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-3 mb-4 border-b border-slate-200 gap-2">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">CRYPTOGRAPHIC WIRE CONVERSATION & AUDIT LOG RECORDER</span>
@@ -2426,12 +2426,12 @@
         </div>
       </div>
 
-      <div class="p-4 rounded-xl bg-slate-950 border border-slate-800/80 overflow-hidden">
+      <div class="p-4 rounded-xl bg-slate-950 border border-slate-200 overflow-hidden">
         <div class="flex items-center justify-between text-[10px] text-slate-500 pb-2 border-b border-slate-900 font-mono">
           <span>TIMESTAMP / RELATIVE DELTA</span>
           <span>EVENT VECTOR &amp; WIRE PROBE DISPATCH LOG</span>
         </div>
-        <div id="flightRecorderConsole" class="mt-2.5 space-y-1.5 font-mono text-[11px] leading-relaxed max-h-64 overflow-y-auto pr-2 text-slate-300 select-text">
+        <div id="flightRecorderConsole" class="mt-2.5 space-y-1.5 font-mono text-[11px] leading-relaxed max-h-64 overflow-y-auto pr-2 text-slate-600 select-text">
           <!-- Dynamically populated chronological audit log entries -->
         </div>
       </div>
@@ -2448,7 +2448,7 @@
           <span id="docketIdBadge" class="text-[10px] px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-800 font-bold">
             DOCKET: #RQL-2026-RFC-SEC8
           </span>
-          <button onclick="window.print()" class="px-3 py-1 rounded bg-red-900/80 hover:bg-red-800 text-white font-bold text-[10px] transition border border-red-700 flex items-center gap-1 shadow">
+          <button onclick="window.print()" class="px-3 py-1 rounded bg-red-900/80 hover:bg-red-800 text-slate-950 font-bold text-[10px] transition border border-red-700 flex items-center gap-1 shadow">
             <span>&#128209; Export Technical Compliance Report (PDF)</span>
           </button>
         </div>
@@ -2457,11 +2457,11 @@
       <div class="p-4 rounded-xl bg-slate-950/90 border border-red-950 space-y-3">
         <div class="flex flex-col md:flex-row md:items-center justify-between text-[11px] pb-2 border-b border-slate-900 gap-1">
           <span class="text-red-400 font-bold">INVESTIGATION VERDICT:</span>
-          <span id="subpoenaVerdictText" class="text-slate-300">Evaluating RFC latency &amp; packet integrity compliance...</span>
+          <span id="subpoenaVerdictText" class="text-slate-600">Evaluating RFC latency &amp; packet integrity compliance...</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[10px] text-slate-400">
-          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80 space-y-1">
-            <span class="text-slate-300 font-bold uppercase block">IETF Legal RFC Standards Cited:</span>
+          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-200 space-y-1">
+            <span class="text-slate-600 font-bold uppercase block">IETF Legal RFC Standards Cited:</span>
             <div id="rfcStandardsList" class="space-y-0.5 text-cyan-300/80">
               <div>&bull; RFC 8446 (TLS 1.3 Key Exchange)</div>
               <div>&bull; RFC 9000 (QUIC Multiplexed Transport)</div>
@@ -2470,14 +2470,14 @@
               <div>&bull; RFC 6962 (Certificate Transparency)</div>
             </div>
           </div>
-          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80 flex flex-col justify-between">
+          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-200 flex flex-col justify-between">
             <div>
-              <span class="text-slate-300 font-bold uppercase block">Executive Remediation Order:</span>
-              <p id="remediationOrderText" class="text-slate-300 text-[11px] mt-1">
+              <span class="text-slate-600 font-bold uppercase block">Executive Remediation Order:</span>
+              <p id="remediationOrderText" class="text-slate-600 text-[11px] mt-1">
                 Mandatory Migration to RQL Modern Native Rust Edge Runtime
               </p>
             </div>
-            <div class="mt-3 pt-2 border-t border-slate-800 flex items-center justify-between text-[10px]">
+            <div class="mt-3 pt-2 border-t border-slate-200 flex items-center justify-between text-[10px]">
               <span class="text-slate-500">Forensic Digital Signature:</span>
               <span id="executiveSignoffHash" class="text-emerald-400 font-bold font-mono">0x00000000</span>
             </div>
@@ -2488,7 +2488,7 @@
 
       <!-- 32. EPA CARBON & COAL POWER GRID LEDGER (IEA / IPCC ENVIRONMENTAL STANDARD) -->
     <div id="epaCarbonLedgerSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-emerald-300">EPA CARBON &amp; COAL POWER GRID LEDGER (IEA / IPCC SUSTAINABLE WEB STANDARD)</span>
@@ -2499,22 +2499,22 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Annual Grid Electricity</span>
           <span id="carbonAnnualKwh" class="text-amber-400 font-bold text-xs block">0 kWh</span>
           <span id="carbonPageWeight" class="text-[10px] text-slate-500 mt-1 block">100k Monthly Visits</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Annual CO&#8322; Emissions</span>
           <span id="carbonAnnualCo2" class="text-red-400 font-bold text-xs block">0 kg CO&#8322;</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Global Grid (442 g/kWh)</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Coal Burned Equivalence</span>
           <span id="carbonCoalBurned" class="text-orange-400 font-bold text-xs block">0 lbs of Coal</span>
           <span class="text-[10px] text-slate-500 mt-1 block">EPA GHG Equivalence</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Trees Needed to Offset</span>
           <span id="carbonTreesNeeded" class="text-emerald-400 font-bold text-xs block">0 Seedlings</span>
           <span id="carbonReductionPercent" class="text-[10px] text-emerald-400 mt-1 block">98.4% Clean Energy Delta</span>
@@ -2524,61 +2524,61 @@
 
       <!-- FORENSIC SCIENTIFIC WIRE BREAKDOWN (100% RAW PHYSICAL TRUTH) -->
     <div id="forensicSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">SCIENTIFIC WIRE DIAGNOSTIC BREAKDOWN</span>
         </div>
-        <span id="forensicStatusBadge" class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+        <span id="forensicStatusBadge" class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-slate-800 text-slate-600 border border-slate-700">
           Raw Physical Telemetry
         </span>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 text-center mb-6">
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Server TTFB</p>
           <p id="metricTtfb" class="text-base font-bold font-mono text-cyan-400 mt-1">-- ms</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Roundtrip</p>
           <p id="metricTotalLatency" class="text-base font-bold font-mono text-amber-400 mt-1">-- ms</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Server IP</p>
           <p id="metricServerIp" class="text-xs font-bold font-mono text-cyan-400 mt-1.5 truncate">--</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">DOM Elements</p>
           <p id="metricDomElements" class="text-xs font-bold font-mono text-amber-400 mt-1.5 truncate">--</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Server Header</p>
           <p id="metricServerHeader" class="text-xs font-bold font-mono text-white mt-1.5 truncate">--</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Scripts</p>
           <p id="metricScriptCount" class="text-base font-bold font-mono text-red-400 mt-1">--</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">CSS Files</p>
           <p id="metricCssCount" class="text-base font-bold font-mono text-purple-400 mt-1">--</p>
         </div>
-        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-800/80">
+        <div class="bg-slate-950/70 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] font-mono uppercase text-slate-400">Compression</p>
           <p id="metricCompression" class="text-xs font-bold font-mono text-emerald-400 mt-1.5 truncate">--</p>
         </div>
       </div>
 
       <!-- Live Title & Forensic Evidence String Matches -->
-      <div class="bg-slate-950/90 rounded-xl p-3.5 border border-slate-800 text-xs font-mono">
-        <div class="flex items-center gap-2 mb-2 pb-2 border-b border-slate-800/60">
+      <div class="bg-slate-950/90 rounded-xl p-3.5 border border-slate-200 text-xs font-mono">
+        <div class="flex items-center gap-2 mb-2 pb-2 border-b border-slate-200/60">
           <span class="text-slate-400 uppercase text-[10px] font-bold">Remote Page Title:</span>
           <span id="remotePageTitleText" class="text-white font-semibold truncate">Scanning remote page...</span>
         </div>
         <div class="flex items-start gap-2">
           <span class="text-slate-400 uppercase text-[10px] font-bold shrink-0 mt-0.5">Forensic Proof:</span>
           <div id="evidenceListContainer" class="flex flex-wrap gap-1.5">
-            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800 text-[10px]">Awaiting probe stream...</span>
+            <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200 text-[10px]">Awaiting probe stream...</span>
           </div>
         </div>
       </div>
@@ -2586,7 +2586,7 @@
 
       <!-- 17. POST-QUANTUM CRYPTOGRAPHY & BGP RPKI ROUTE HIJACK IMMUNITY -->
     <div id="quantumCryptoSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-indigo-300">POST-QUANTUM CRYPTOGRAPHY &amp; BGP RPKI ROUTE HIJACK PROTECTION (ROA VERIFIED &amp; LAYER 3 ROUTING)</span>
@@ -2599,28 +2599,28 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Metric 1: NIST Post-Quantum Key Exchange -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">NIST ML-KEM Key Exchange:</span>
-          <div id="pqcStatusText" class="text-xs font-bold text-white truncate">ML-KEM / Kyber768</div>
+          <div id="pqcStatusText" class="text-xs font-bold text-slate-950 truncate">ML-KEM / Kyber768</div>
           <span id="pqcHarvestRiskText" class="text-[10px] text-emerald-400 block font-semibold">Zero Decryption Threat</span>
         </div>
 
         <!-- Metric 2: BGP RPKI Cryptographic Status -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">BGP Routing Security:</span>
           <div id="rpkiStatusText" class="text-xs font-bold text-cyan-300">VALID (Signed ROA)</div>
           <span id="rpkiDetailsText" class="text-[10px] text-slate-400 block truncate">BGP Hijack Immune (Routinator)</span>
         </div>
 
         <!-- Metric 3: Origin CPU Burn Rate -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Origin CPU Processing:</span>
           <div id="originCpuBurnText" class="text-xs font-bold text-amber-300 truncate">0 Cycles (Edge Cached)</div>
           <span id="originCacheProbText" class="text-[10px] text-slate-400 block">100% In-Memory Stream</span>
         </div>
 
         <!-- Metric 4: Origin Thermal Wattage Load -->
-        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1">
+        <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-200 space-y-1">
           <span class="text-slate-400 text-[10px] uppercase block font-bold">Server Thermal State:</span>
           <div id="originThermalText" class="text-xs font-bold text-purple-300 truncate">12W Active RAM</div>
           <span id="originArchitectureText" class="text-[10px] text-slate-400 block truncate">Static Edge Ingress</span>
@@ -2630,7 +2630,7 @@
 
       <!-- DEEP WEB APPLICATION RECONNAISSANCE & FACT INTELLIGENCE (CHATGPT & GEMINI PARITY) -->
     <div id="deepFactsSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-cyan-300">DEEP WEB APPLICATION RECONNAISSANCE &amp; FACT INTELLIGENCE</span>
@@ -2642,23 +2642,23 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- Left Column: Document Semantics & Headings -->
-        <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
-          <p class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider border-b border-slate-800/80 pb-1.5 flex items-center justify-between">
+        <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-200 space-y-3">
+          <p class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider border-b border-slate-200 pb-1.5 flex items-center justify-between">
             <span>Semantic Structure</span>
             <span class="text-[9px] text-slate-500">HTML5 DOM</span>
           </p>
           <div>
             <span class="text-slate-400 text-[10px] uppercase font-bold">Meta Description:</span>
-            <p id="factMetaDesc" class="text-slate-200 text-[11px] mt-1 leading-relaxed italic bg-slate-900/60 p-2.5 rounded-lg border border-slate-800/60 max-h-24 overflow-y-auto">
+            <p id="factMetaDesc" class="text-slate-600 text-[11px] mt-1 leading-relaxed italic bg-slate-900/60 p-2.5 rounded-lg border border-slate-200/60 max-h-24 overflow-y-auto">
               Scanning page metadata...
             </p>
           </div>
           <div class="grid grid-cols-2 gap-2 text-[11px]">
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">Primary H1:</span>
               <p id="factPrimaryH1" class="text-white font-semibold truncate mt-0.5">--</p>
             </div>
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">Canonical URL:</span>
               <p id="factCanonicalUrl" class="text-cyan-300 truncate mt-0.5">--</p>
             </div>
@@ -2666,48 +2666,48 @@
           <div>
             <span class="text-slate-400 text-[10px] uppercase font-bold block mb-1">Schema.org JSON-LD Types:</span>
             <div id="factSchemaBadges" class="flex flex-wrap gap-1.5">
-              <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800 text-[10px]">Scanning JSON-LD structured data...</span>
+              <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200 text-[10px]">Scanning JSON-LD structured data...</span>
             </div>
           </div>
         </div>
 
         <!-- Right Column: Network Protocols & Speed-of-Light Physics -->
-        <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
-          <p class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider border-b border-slate-800/80 pb-1.5 flex items-center justify-between">
+        <div class="bg-slate-950/80 p-4 rounded-xl border border-slate-200 space-y-3">
+          <p class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider border-b border-slate-200 pb-1.5 flex items-center justify-between">
             <span>Protocol &amp; Cryptography</span>
             <span class="text-[9px] text-slate-500">RFC 8446 / DoH</span>
           </p>
           <div class="grid grid-cols-2 gap-2 text-[11px]">
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">ALPN Negotiation:</span>
               <p id="factAlpnProtocols" class="text-emerald-400 font-bold mt-0.5">--</p>
             </div>
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">Encrypted Client Hello:</span>
               <p id="factEchStatus" class="font-bold mt-0.5 text-slate-400">--</p>
             </div>
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">Primary IPv4:</span>
               <p id="factPrimaryIpv4" class="text-cyan-300 font-mono mt-0.5 truncate">--</p>
             </div>
-            <div class="bg-slate-900/40 p-2 rounded border border-slate-800/40">
+            <div class="bg-slate-900/40 p-2 rounded border border-slate-200/40">
               <span class="text-slate-400 text-[10px] uppercase font-bold block">IPv6 Status:</span>
               <p id="factIpv6Status" class="text-cyan-300 font-mono mt-0.5 truncate">--</p>
             </div>
           </div>
-          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/60 text-[11px]">
+          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-200/60 text-[11px]">
             <span class="text-slate-400 text-[10px] uppercase font-bold block mb-1">Fiber Optic Latency Threshold:</span>
             <div class="flex items-center justify-between">
-              <span class="text-slate-300">Physical Distance: <span id="factFiberDist" class="text-cyan-400 font-bold">-- km</span></span>
+              <span class="text-slate-600">Physical Distance: <span id="factFiberDist" class="text-cyan-400 font-bold">-- km</span></span>
               <span class="text-emerald-400 font-bold">Transit Floor: <span id="factFiberFloor">-- ms</span></span>
             </div>
           </div>
-          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/60 text-[11px] space-y-1.5">
+          <div class="p-2.5 rounded-lg bg-slate-900/60 border border-slate-200/60 text-[11px] space-y-1.5">
             <div class="flex items-center justify-between">
               <span class="text-slate-400 text-[10px] uppercase font-bold">Authorized CA (CAA):</span>
               <span id="factCertCa" class="text-emerald-400 font-bold truncate max-w-[200px]">Cloudflare / DigiCert</span>
             </div>
-            <div class="flex items-center justify-between pt-1 border-t border-slate-800/60">
+            <div class="flex items-center justify-between pt-1 border-t border-slate-200/60">
               <span class="text-slate-400 text-[10px] uppercase font-bold">Wire Compression:</span>
               <span id="factCompressionMetrics" class="text-cyan-300 font-bold">--x (0% Saved)</span>
             </div>
@@ -2715,7 +2715,7 @@
           <div>
             <span class="text-slate-400 text-[10px] uppercase font-bold block mb-1">External Third-Party Asset Hosts:</span>
             <div id="factScriptDomains" class="flex flex-wrap gap-1 max-h-16 overflow-y-auto">
-              <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-800 text-[10px]">Resolving asset origins...</span>
+              <span class="px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-200 text-[10px]">Resolving asset origins...</span>
             </div>
           </div>
         </div>
@@ -2724,7 +2724,7 @@
 
       <!-- OFFICIAL GOOGLE CHROMIUM CORE WEB VITALS (CHROMIUM HEADLESS AUDIT) -->
     <div id="googleVitalsSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl font-mono text-xs">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
           <span class="text-xs font-bold tracking-wider uppercase text-amber-300">OFFICIAL GOOGLE CHROMIUM CORE WEB VITALS</span>
@@ -2734,23 +2734,23 @@
         </span>
       </div>
       <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] text-slate-400 uppercase">First Contentful Paint</p>
           <p id="vitalFcp" class="text-base font-bold text-emerald-400 mt-1">-- s</p>
         </div>
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] text-slate-400 uppercase">Largest Contentful Paint</p>
           <p id="vitalLcp" class="text-base font-bold text-cyan-400 mt-1">-- s</p>
         </div>
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] text-slate-400 uppercase">Layout Shift (CLS)</p>
           <p id="vitalCls" class="text-base font-bold text-emerald-400 mt-1">0.00</p>
         </div>
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] text-slate-400 uppercase">Total Blocking Time</p>
           <p id="vitalTbt" class="text-base font-bold text-purple-400 mt-1">-- ms</p>
         </div>
-        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-800">
+        <div class="bg-slate-950/80 p-3 rounded-xl border border-slate-200">
           <p class="text-[10px] text-slate-400 uppercase">Speed Index (SI)</p>
           <p id="vitalSpeedIndex" class="text-base font-bold text-amber-400 mt-1">-- s</p>
         </div>
@@ -2759,7 +2759,7 @@
 
       <!-- INTERACTIVE SPLIT-SCREEN CODE BLOAT SCANNER (X-RAY VIEW) -->
     <div id="xraySection" class="w-full max-w-5xl glass-mid-dark rounded-3xl p-6 mb-10 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-purple-300">INTERACTIVE X-RAY ARCHITECTURE SCANNER (BLOAT VS PURE RUST)</span>
@@ -2775,7 +2775,7 @@
             <span class="font-bold text-emerald-400">&#9889; RQL PURE-RUST PERFORMANCE STREAM</span>
             <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[10px] border border-emerald-800">0 MS DATABASE LATENCY</span>
           </div>
-          <div class="space-y-1.5 text-[11px] text-slate-300">
+          <div class="space-y-1.5 text-[11px] text-slate-600">
             <p>&#10004; 0 Database Queries (Pre-compiled Static In-Memory Assets)</p>
             <p>&#10004; 0 jQuery / Framework Bloat (Pure Clean Semantic DOM)</p>
             <p>&#10004; 1 Single Compressed HTTP/3 Wire Stream (~85 KB)</p>
@@ -2793,7 +2793,7 @@
             <span class="font-bold text-red-400">&#9888;&#65039; LEGACY WORDPRESS / SHARED HOSTING</span>
             <span class="px-2 py-0.5 rounded bg-red-950 text-red-300 text-[10px] border border-red-800">42 MYSQL QUERIES</span>
           </div>
-          <div class="space-y-1.5 text-[11px] text-slate-300">
+          <div class="space-y-1.5 text-[11px] text-slate-600">
             <p>&#10006; 42 Heavy MySQL Database Lookups per page visit</p>
             <p>&#10006; 18 Render-Blocking JavaScripts & Plugins (wp-content)</p>
             <p>&#10006; Unoptimized DOM Layout Tree (Elementor Div-Soup)</p>
@@ -2813,12 +2813,12 @@
 
       <!-- PHYSICAL WIRE WATERFALL & TIMELINE (PURE SCIENCE) -->
     <div id="waterfallSection" class="w-full max-w-5xl glass-mid-dark rounded-2xl p-6 mb-8 border border-slate-700/70 shadow-2xl">
-      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
           <span class="text-xs font-mono font-bold tracking-wider uppercase text-cyan-300">PHYSICAL WIRE PACKET WATERFALL (MICROSECOND ACCURACY)</span>
         </div>
-        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+        <span class="text-[11px] font-mono px-2.5 py-0.5 rounded bg-slate-800 text-slate-600 border border-slate-700">
           TCP / TLS / TTFB Breakdown
         </span>
       </div>
@@ -2826,11 +2826,11 @@
       <!-- Waterfall Bars -->
       <div class="space-y-4 font-mono text-xs">
         <div>
-          <div class="flex justify-between text-slate-300 mb-1">
+          <div class="flex justify-between text-slate-600 mb-1">
             <span>Legacy Server: DNS & TLS Connect + Server Processing (TTFB)</span>
             <span id="wfLegacyTime" class="text-red-400 font-bold">1,820 ms</span>
           </div>
-          <div class="w-full bg-slate-950 rounded-lg h-5 p-0.5 border border-slate-800 flex overflow-hidden">
+          <div class="w-full bg-slate-950 rounded-lg h-5 p-0.5 border border-slate-200 flex overflow-hidden">
             <div id="wfTtfbBar" class="bg-red-500 h-full rounded-l transition-all duration-700" style="width: 70%;" title="TTFB Server Delay"></div>
             <div id="wfTransferBar" class="bg-amber-500 h-full rounded-r transition-all duration-700" style="width: 30%;" title="Payload Download"></div>
           </div>
@@ -2841,11 +2841,11 @@
         </div>
 
         <div>
-          <div class="flex justify-between text-slate-300 mb-1">
+          <div class="flex justify-between text-slate-600 mb-1">
             <span>RQL Pure Edge: Instant Fiber Cache Stream (Zero Database Latency)</span>
             <span class="text-emerald-400 font-bold">185 ms</span>
           </div>
-          <div class="w-full bg-slate-950 rounded-lg h-5 p-0.5 border border-slate-800 flex overflow-hidden">
+          <div class="w-full bg-slate-950 rounded-lg h-5 p-0.5 border border-slate-200 flex overflow-hidden">
             <div class="bg-emerald-500 h-full rounded transition-all duration-700" style="width: 100%;" title="Instant Edge Stream"></div>
           </div>
           <div class="flex justify-between text-[10px] text-slate-500 mt-1">
@@ -2867,7 +2867,7 @@
           <span id="rageTapScoreBadge" class="text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800 font-bold">
             0 Rage-Taps Recorded
           </span>
-          <button onclick="resetRageTapTest()" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 text-[10px] transition">
+          <button onclick="resetRageTapTest()" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-600 border border-slate-700 text-[10px] transition">
             &#128260; Reset
           </button>
         </div>
@@ -2928,10 +2928,10 @@
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <h3 class="text-sm sm:text-base font-extrabold text-white">Visual Point-and-Click Client Studio</h3>
+            <h3 class="text-sm sm:text-base font-black text-slate-950">Visual Point-and-Click Client Studio</h3>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300 border border-emerald-700/50 font-bold uppercase">No Terminal Needed</span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed max-w-2xl">
+          <p class="text-xs text-slate-600 leading-relaxed max-w-2xl">
             Type client details into the boxes (Clinic name, phone, city, UPI ID, consultation fee) and get instant live preview, direct UPI payment stamping, and an automated WhatsApp sales pitch ready to send in 1 click.
           </p>
         </div>
@@ -2959,22 +2959,22 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Original Wire Payload</span>
           <span id="ghostOriginalSizeText" class="text-red-400 font-bold text-xs block">1.8 MB</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Third-Party Scripts &amp; Trackers</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">RQL Ghost Size</span>
           <span id="ghostSanitizedSizeText" class="text-emerald-400 font-bold text-xs block">24.2 KB</span>
           <span class="text-[10px] text-emerald-400 mt-1 block">Pure Compiled Static Edge</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Third-Party Scripts Purged</span>
           <span id="ghostScriptsPurgedText" class="text-cyan-400 font-bold text-xs block">14 External Trackers</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Zero Telemetry Surveillance</span>
         </div>
-        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800/80">
+        <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-200">
           <span class="text-slate-400 text-[10px] uppercase tracking-wider block mb-1">Target Speed of Light</span>
           <span class="text-emerald-400 font-bold text-xs block">16 ms Instant</span>
           <span class="text-[10px] text-slate-500 mt-1 block">Single CPU Clock Cycle</span>
@@ -2983,7 +2983,7 @@
 
       <!-- Live Ghost Sandbox Viewport Container -->
       <div id="ghostSandboxContainer" class="hidden mt-4 p-4 rounded-xl bg-slate-950 border border-cyan-800/60 overflow-hidden transition-all duration-500">
-        <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800 text-[10px] text-slate-400">
+        <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200 text-[10px] text-slate-400">
           <span class="flex items-center gap-1.5 font-bold text-cyan-300">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
             LIVE 16MS RQL GHOST EDGE SANDBOX PREVIEW:
@@ -3011,10 +3011,10 @@
       <!-- Live Production Sites Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <!-- Site 1: Sharma Orthopedic -->
-        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between">
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-200 flex flex-col justify-between">
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-xs font-bold text-slate-200">Sharma Orthopedic &amp; Joint Clinic</span>
+              <span class="text-xs font-bold text-slate-600">Sharma Orthopedic &amp; Joint Clinic</span>
               <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-bold border border-emerald-800">100/100 CWV</span>
             </div>
             <p class="text-[11px] text-slate-400 mb-2">Robotic Knee Replacement &amp; Joint Center &bull; Patna, Bihar</p>
@@ -3037,10 +3037,10 @@
         </div>
 
         <!-- Site 2: Verma Dental Care -->
-        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between">
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-200 flex flex-col justify-between">
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-xs font-bold text-slate-200">Verma Dental Care &amp; Implant Centre</span>
+              <span class="text-xs font-bold text-slate-600">Verma Dental Care &amp; Implant Centre</span>
               <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-bold border border-emerald-800">ENTERPRISE AUDIT GRADE</span>
             </div>
             <p class="text-[11px] text-slate-400 mb-2">Laser Dentistry &amp; Advanced Orthodontics &bull; Patna, Bihar</p>
@@ -3065,7 +3065,7 @@
 
       <!-- 60-Second In-Browser Client Website Generator Form -->
       <div class="p-4 rounded-xl bg-slate-950/80 border border-cyan-800/60">
-        <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+        <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
           <span class="font-bold text-cyan-300 text-xs">&#9889; 60-SECOND IN-BROWSER WEBSITE BUILDER &amp; COMPILER</span>
           <span class="text-[10px] text-slate-500 font-mono">John Gall's Law Invariant</span>
         </div>
@@ -3073,41 +3073,41 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">Business Name</label>
-            <input type="text" id="builderBusName" value="Apex Cardiac &amp; Vascular Institute" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="text" id="builderBusName" value="Apex Cardiac &amp; Vascular Institute" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">Category &amp; Niche</label>
-            <input type="text" id="builderCategory" value="Super-Specialty Cardiology" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="text" id="builderCategory" value="Super-Specialty Cardiology" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">City</label>
-            <input type="text" id="builderCity" value="Patna" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="text" id="builderCity" value="Patna" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-4">
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">WhatsApp / Phone</label>
-            <input type="text" id="builderPhone" value="+91 98350 99888" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="text" id="builderPhone" value="+91 98350 99888" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">UPI VPA (Direct Bank)</label>
-            <input type="text" id="builderUpi" value="apexcardiac@upi" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="text" id="builderUpi" value="apexcardiac@upi" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">Token Fee (INR)</label>
-            <input type="number" id="builderFee" value="500" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono" />
+            <input type="number" id="builderFee" value="500" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono" />
           </div>
           <div>
             <label class="block text-[10px] uppercase text-slate-400 mb-1">Theme</label>
-            <select id="builderTheme" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono">
+            <select id="builderTheme" class="w-full p-2 rounded bg-slate-900 border border-slate-700 text-slate-600 text-xs font-mono">
               <option value="ceramic">Swiss Ceramic Light</option>
               <option value="obsidian">Cyber Obsidian Dark</option>
             </select>
           </div>
         </div>
 
-        <button onclick="compileInBrowserWebsite()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
+        <button onclick="compileInBrowserWebsite()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-slate-950 font-bold text-xs uppercase tracking-wider transition shadow-lg flex items-center justify-center gap-2">
           <span>&#9889; Compile &amp; Preview 100/100 Modern Website (Sub-3ms)</span>
         </button>
       </div>
@@ -3121,7 +3121,7 @@
     <div class="bg-slate-950 border border-slate-700/80 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative overflow-hidden text-slate-100 font-mono">
       
       <!-- Modal Header -->
-      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
         <div class="flex items-center gap-2.5">
           <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
           <span class="font-bold text-sm tracking-wide uppercase text-emerald-300">RQL PURE-RUST ENGINEERING FORENSIC CERTIFICATE</span>
@@ -3133,7 +3133,7 @@
       <div id="certPrintArea" class="py-6 space-y-5">
         <div class="flex items-start justify-between">
           <div>
-            <h2 id="certClientFirm" class="text-xl font-sans font-extrabold text-white">Sharma & Associates</h2>
+            <h2 id="certClientFirm" class="text-xl font-sans font-black text-slate-950">Sharma & Associates</h2>
             <p id="certTargetDomain" class="text-xs text-cyan-400 mt-0.5">wordpress.org</p>
             <p class="text-[10px] text-slate-500 mt-1">Audit Timestamp: <span id="certTimestamp" class="text-slate-400">2026-11-02 12:00:00 UTC</span></p>
           </div>
@@ -3148,26 +3148,26 @@
 
         <!-- Telemetry Verdict Grid -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-          <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
             <span class="text-[9px] text-slate-400 uppercase">Measured Latency</span>
             <p id="certLatencyText" class="text-lg font-bold text-red-400 mt-0.5">1,452 ms</p>
           </div>
-          <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
             <span class="text-[9px] text-slate-400 uppercase">Google SEO Rating</span>
             <p id="certGoogleRating" class="text-lg font-bold text-amber-400 mt-0.5">28 / 100</p>
           </div>
-          <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
             <span class="text-[9px] text-slate-400 uppercase">Security Grade</span>
             <p id="certSecurityGrade" class="text-lg font-bold text-red-400 mt-0.5">Grade F</p>
           </div>
-          <div class="bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
             <span class="text-[9px] text-slate-400 uppercase">Annual Loss</span>
             <p id="certAnnualLoss" class="text-lg font-bold text-red-400 mt-0.5">&#8377;1,27,800</p>
           </div>
         </div>
 
         <!-- Cryptographic Proof Footer -->
-        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-[10px] space-y-1">
+        <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-200 text-[10px] space-y-1">
           <div class="flex justify-between">
             <span class="text-slate-400">Cryptographic Integrity Hash:</span>
             <span id="certHashVal" class="text-cyan-400 font-bold">0xPending</span>
@@ -3178,17 +3178,17 @@
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Certified Architectural Upgrade:</span>
-            <span class="text-white font-bold">48-Hr Pure-Rust Edge Rebuild (&#8377;19,999)</span>
+            <span class="text-slate-950 font-bold">48-Hr Pure-Rust Edge Rebuild (&#8377;19,999)</span>
           </div>
         </div>
       </div>
 
       <!-- Modal Footer -->
-      <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+      <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
         <button onclick="window.print()" class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-400 hover:from-cyan-400 hover:to-teal-300 text-slate-950 font-bold text-xs rounded-xl transition flex items-center gap-1.5 shadow">
           <span>&#128424;&#65039; Print Official Certificate (A4)</span>
         </button>
-        <button onclick="closeCertificateModal()" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-xl transition">
+        <button onclick="closeCertificateModal()" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-600 text-xs rounded-xl transition">
           Close
         </button>
       </div>
@@ -3197,7 +3197,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500 font-mono">
+  <footer class="border-t border-slate-200 py-6 text-center text-xs text-slate-500 font-mono">
     &#169; 2026 Rehan Quant Lab &bull; 3D Client Migration Studio &bull; Light & Dark GetLayers Architecture
   </footer>
 
@@ -4103,25 +4103,25 @@
       if (slowCardList) {
         if (isUltraFast) {
           slowCardList.innerHTML = `
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-emerald-400 font-bold">&#10004;</span> Roundtrip Wire Latency:
               </span>
               <span class="text-emerald-400 font-bold">${data.latency_ms} ms</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-emerald-400 font-bold">&#10004;</span> Architecture Infrastructure:
               </span>
               <span class="text-emerald-400 font-bold">${data.detected_platform || 'Global Edge Network'}</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-emerald-400 font-bold">&#10004;</span> Server Cost Drain:
               </span>
               <span class="text-emerald-400 font-bold">&#8377;0 (Static Edge Cached)</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-emerald-400 font-bold">&#10004;</span> Security Shield Status:
               </span>
@@ -4130,25 +4130,25 @@
           `;
         } else {
           slowCardList.innerHTML = `
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-red-400 font-bold">&#10006;</span> Cloud Server Roundtrip:
               </span>
               <span class="text-red-400 font-bold">${data.latency_ms} ms</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-red-400 font-bold">&#10006;</span> Architecture Type:
               </span>
               <span class="text-red-400 font-bold">Centralized Database Server (${data.detected_platform})</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-red-400 font-bold">&#10006;</span> Annual Server & Renewal Drain:
               </span>
               <span class="text-red-400 font-bold">&#8377;8,000 &ndash; &#8377;12,000 / yr</span>
             </div>
-            <div class="flex items-center justify-between text-slate-300">
+            <div class="flex items-center justify-between text-slate-600">
               <span class="flex items-center gap-1.5">
                 <span class="text-red-400 font-bold">&#10006;</span> Security & Attack Surface:
               </span>
@@ -4192,11 +4192,11 @@
       if (data.subresource_waterfall && data.subresource_waterfall.length > 0) {
         data.subresource_waterfall.forEach(item => {
           const div = document.createElement('div');
-          div.className = "flex items-center justify-between p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] font-mono";
+          div.className = "flex items-center justify-between p-2 rounded-lg bg-slate-900/80 border border-slate-200 text-[11px] font-mono";
           div.innerHTML = `
             <div class="flex items-center gap-2 truncate max-w-[280px]">
               <span class="px-1.5 py-0.5 rounded text-[9px] font-bold ${item.status === 200 ? 'bg-emerald-950 text-emerald-300 border border-emerald-800' : 'bg-red-950 text-red-300 border border-red-800'}">HTTP ${item.status}</span>
-              <span class="text-slate-200 truncate font-semibold" title="${item.url}">${item.name}</span>
+              <span class="text-slate-600 truncate font-semibold" title="${item.url}">${item.name}</span>
             </div>
             <div class="flex items-center gap-3 shrink-0">
               <span class="text-slate-400 text-[10px]">${item.size_kb} KB (${item.encoding})</span>
@@ -4278,7 +4278,7 @@
                 <span class="font-bold text-emerald-400">${data.xray.title}</span>
                 <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 text-[10px] border border-emerald-800 font-bold">${data.xray.badge}</span>
               </div>
-              <div class="space-y-1.5 text-[11px] text-slate-300">
+              <div class="space-y-1.5 text-[11px] text-slate-600">
                 ${data.xray.items.map(it => `<p>${it}</p>`).join('')}
               </div>
               <div class="p-2.5 rounded-xl bg-emerald-950/70 border border-emerald-700/60 text-emerald-200 text-xs font-bold text-center">
@@ -4292,7 +4292,7 @@
                 <span class="font-bold text-red-400">${data.xray.title}</span>
                 <span class="px-2 py-0.5 rounded bg-red-950 text-red-300 text-[10px] border border-red-800 font-bold">${data.xray.badge}</span>
               </div>
-              <div class="space-y-1.5 text-[11px] text-slate-300">
+              <div class="space-y-1.5 text-[11px] text-slate-600">
                 ${data.xray.items.map(it => `<p>${it}</p>`).join('')}
               </div>
               <div class="p-2.5 rounded-xl bg-red-950/70 border border-red-700/60 text-red-200 text-xs font-bold text-center">
@@ -4370,7 +4370,7 @@
         if (data.script_domains && data.script_domains.length > 0) {
           data.script_domains.forEach(sd => {
             const sp = document.createElement('span');
-            sp.className = "px-1.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800 text-[9px]";
+            sp.className = "px-1.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200 text-[9px]";
             sp.innerText = sd;
             scriptDomainsContainer.appendChild(sp);
           });
@@ -4419,15 +4419,15 @@
           hopsContainer.innerHTML = '';
           sr.hops.forEach(hop => {
             const hDiv = document.createElement('div');
-            hDiv.className = "flex items-center justify-between p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-[11px] font-mono";
+            hDiv.className = "flex items-center justify-between p-2 rounded-lg bg-slate-900/80 border border-slate-200 text-[11px] font-mono";
             hDiv.innerHTML = `
               <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center font-bold text-[10px]">${hop.hop}</span>
+                <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-600 flex items-center justify-center font-bold text-[10px]">${hop.hop}</span>
                 <span class="text-white font-semibold">${hop.node}</span>
                 <span class="text-slate-400 text-[10px]">(${hop.ip})</span>
               </div>
               <div class="flex items-center gap-3">
-                <span class="text-[10px] px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-800">${hop.status}</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-slate-950 text-slate-400 border border-slate-200">${hop.status}</span>
                 <span class="text-cyan-400 font-bold w-14 text-right">${hop.ms} ms</span>
               </div>
             `;
@@ -4455,7 +4455,7 @@
               <div class="space-y-0.5">
                 <div class="flex items-center gap-2">
                   <span class="text-[9px] px-1.5 py-0.5 bg-red-950 text-red-300 font-bold rounded">${st.rtt}</span>
-                  <span class="text-slate-200 font-bold">${st.step}</span>
+                  <span class="text-slate-600 font-bold">${st.step}</span>
                 </div>
                 <p class="text-[10px] text-slate-400">${st.desc}</p>
               </div>
@@ -4475,7 +4475,7 @@
               <div class="space-y-0.5">
                 <div class="flex items-center gap-2">
                   <span class="text-[9px] px-1.5 py-0.5 bg-emerald-950 text-emerald-300 font-bold rounded">${st.rtt}</span>
-                  <span class="text-slate-200 font-bold">${st.step}</span>
+                  <span class="text-slate-600 font-bold">${st.step}</span>
                 </div>
                 <p class="text-[10px] text-slate-400">${st.desc}</p>
               </div>
@@ -4539,7 +4539,7 @@
           data.endpoint_exposure.forEach(probe => {
             if (probe.is_exposed) exposedCount++;
             const pDiv = document.createElement('div');
-            pDiv.className = "p-3 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between space-y-2";
+            pDiv.className = "p-3 rounded-xl bg-slate-950/80 border border-slate-200 flex flex-col justify-between space-y-2";
             
             let badgeClass = "bg-emerald-950 text-emerald-300 border-emerald-800";
             if (probe.is_exposed) {
@@ -4552,7 +4552,7 @@
 
             pDiv.innerHTML = `
               <div class="flex items-center justify-between">
-                <span class="font-bold text-white text-[11px]">${probe.label}</span>
+                <span class="font-bold text-slate-950 text-[11px]">${probe.label}</span>
                 <span class="text-[9px] px-2 py-0.5 rounded font-bold border ${badgeClass}">${probe.status}</span>
               </div>
               <p class="text-[10px] text-slate-400">${probe.risk}</p>
@@ -4613,7 +4613,7 @@
         const rpkiBadge = document.getElementById('rpkiBadge');
         if (rpkiBadge) {
           rpkiBadge.innerText = `RPKI ${data.rpki.status}`;
-          rpkiBadge.className = data.rpki.status === "VALID" ? "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold" : (data.rpki.status === "INVALID" ? "text-[10px] px-2.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800/50 font-bold" : "text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800 font-bold");
+          rpkiBadge.className = data.rpki.status === "VALID" ? "text-[10px] px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50 font-bold" : (data.rpki.status === "INVALID" ? "text-[10px] px-2.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800/50 font-bold" : "text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200 font-bold");
         }
         const rpkiStatusEl = document.getElementById('rpkiStatusText');
         if (rpkiStatusEl) rpkiStatusEl.innerText = `${data.rpki.status} (${data.rpki.asn})`;
@@ -4653,7 +4653,7 @@
           if (sr.subdomains && sr.subdomains.length > 0) {
             sr.subdomains.forEach(sub => {
               const span = document.createElement('span');
-              span.className = "px-2 py-0.5 rounded bg-slate-900 text-cyan-300 border border-slate-800 text-[10px] font-mono";
+              span.className = "px-2 py-0.5 rounded bg-slate-900 text-cyan-300 border border-slate-200 text-[10px] font-mono";
               span.innerText = sub;
               container.appendChild(span);
             });
@@ -4694,7 +4694,7 @@
           ttlBadge.className = ttl.estimated_hops <= 5
             ? "text-[10px] px-2.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/50 font-bold"
             : (ttl.estimated_hops <= 12 
-                ? "text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-300 border border-slate-800 font-bold"
+                ? "text-[10px] px-2.5 py-0.5 rounded bg-slate-900 text-slate-600 border border-slate-200 font-bold"
                 : "text-[10px] px-2.5 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800/50 font-bold");
         }
         const recvEl = document.getElementById('ttlReceivedText');
@@ -4991,7 +4991,7 @@
             row.innerHTML = `
               <span class="text-slate-500 w-24 shrink-0 font-bold">[T+${item.t_ms}ms]</span>
               <span class="px-2 py-0.5 rounded text-[9px] border font-bold shrink-0 ${badgeClass}">${item.event}</span>
-              <span class="text-slate-300 break-words">${item.label}</span>
+              <span class="text-slate-600 break-words">${item.label}</span>
             `;
             consoleEl.appendChild(row);
           });
@@ -5609,7 +5609,7 @@ PRIMARY CAPABILITY: "Audit any URL to verify physical wire latency, page weight,
           if (k === scenarioKey) {
             b.className = 'cable-btn active px-3.5 py-2.5 rounded-xl border border-red-500/50 bg-red-950/50 text-red-300 hover:bg-red-900/60 transition flex items-center gap-2 text-left';
           } else {
-            b.className = 'cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-300 hover:bg-slate-800 transition flex items-center gap-2 text-left';
+            b.className = 'cable-btn px-3.5 py-2.5 rounded-xl border border-slate-700 bg-slate-900/80 text-slate-600 hover:bg-slate-800 transition flex items-center gap-2 text-left';
           }
         }
       });

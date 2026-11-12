@@ -112,7 +112,7 @@
     <link rel="preconnect" href="https://assets.gumroad.com" crossorigin>
   <script src="rql_seo_engine.js" defer></script>
 </head>
-<body class="selection:bg-cyan-500 selection:text-black">
+<body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
     <div id="root"></div>
 
     <!-- REACT + GSAP + FRAMER MOTION + 3D THREE.JS + RUST WASM ROOT SCRIPT -->
@@ -243,7 +243,7 @@
         // --------------------------------------------------------------------
         function Navbar({ wasmReady, onRunBenchmark }) {
             return (
-                <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+                <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-200">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <img src="emblem.jpg" alt="RQL Emblem" className="w-9 h-9 rounded-xl border border-cyan-500/30 object-cover shadow-sm" />
@@ -261,7 +261,7 @@
                         </div>
 
                         {/* Navigation Links */}
-                        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
                             <a href="#principles" className="hover:text-cyan-400 transition">Core Principles</a>
                             <a href="#resilience" className="hover:text-cyan-400 transition">Resilience Lab</a>
                             <a href="#aegisdb" className="hover:text-cyan-400 transition">AegisDB&trade;</a>
@@ -313,7 +313,7 @@
 
                     <div className="max-w-5xl mx-auto text-center relative z-10">
                         {/* Status Badge */}
-                        <div className="gsap-hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-xs font-mono text-cyan-400 mb-8 backdrop-blur-md shadow-lg">
+                        <div className="gsap-hero-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-cyan-500/30 text-xs font-mono text-cyan-400 mb-8 backdrop-blur-md shadow-lg">
                             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
                             <span>FOUNDER & LEAD SYSTEMS ARCHITECT @ REHAN QUANT LAB&trade;</span>
                         </div>
@@ -327,7 +327,7 @@
                         </h1>
 
                         {/* Subtitle */}
-                        <p className="gsap-hero-p mt-6 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                        <p className="gsap-hero-p mt-6 text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                             Bridging <strong>4+ years of physical retail business management</strong> in Patna, Bihar, with high-frequency in-memory architectures (<span className="text-cyan-400 font-mono">AegisDB&trade;</span>), multi-agent swarms, and pure <span className="text-purple-400 font-mono">Rust WebAssembly</span> execution.
                         </p>
 
@@ -356,25 +356,25 @@
 
                         {/* Key Audited Metrics Cards */}
                         <div className="gsap-hero-cards mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
-                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition duration-300">
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200 hover:border-cyan-500/40 transition duration-300">
                                 <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest block">AegisDB Read Latency</span>
                                 <span className="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono block mt-1">0.38 &micro;s</span>
                                 <span className="text-xs text-slate-500 mt-1 block">2.62M reads/sec @ L1 cacheline</span>
                             </div>
 
-                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/40 transition duration-300">
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200 hover:border-emerald-500/40 transition duration-300">
                                 <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest block">Process MTTR</span>
                                 <span className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono block mt-1">&lt;10 ms</span>
                                 <span className="text-xs text-slate-500 mt-1 block">Sub-10ms Hot-Restart</span>
                             </div>
 
-                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-800 hover:border-purple-500/40 transition duration-300">
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200 hover:border-purple-500/40 transition duration-300">
                                 <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest block">SIMD Invariants</span>
                                 <span className="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono block mt-1">21.4M /s</span>
                                 <span className="text-xs text-slate-500 mt-1 block">46.69ns AVX2 Invariant checks</span>
                             </div>
 
-                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-800 hover:border-amber-500/40 transition duration-300">
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200 hover:border-amber-500/40 transition duration-300">
                                 <span className="text-[11px] font-mono text-slate-400 uppercase tracking-widest block">Retail Provenance</span>
                                 <span className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono block mt-1">4+ Years</span>
                                 <span className="text-xs text-slate-500 mt-1 block">Ladies Zone Patna &bull; BCA 2025</span>
@@ -390,12 +390,12 @@
         // --------------------------------------------------------------------
         function DualEngineDoctrine() {
             return (
-                <section id="principles" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+                <section id="principles" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
                     <div className="text-center mb-12">
                         <span className="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full">
                             The Philosophical Bedrock
                         </span>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl font-black text-slate-950 mt-4 tracking-tight">
                             Core Engineering Principles
                         </h2>
                         <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl mx-auto">
@@ -405,35 +405,35 @@
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Gall's Law Card */}
-                        <div className="bg-slate-900/70 p-8 rounded-3xl border border-slate-800 hover:border-cyan-500/30 transition shadow-xl relative overflow-hidden group">
+                        <div className="bg-slate-900/70 p-8 rounded-3xl border border-slate-200 hover:border-cyan-500/30 transition shadow-xl relative overflow-hidden group">
                             <div className="flex items-center gap-3 text-cyan-400 text-xs font-mono font-bold uppercase mb-4">
                                 <span className="p-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20"></span>
                                 <span>I. Gall's Law: Start with Working Simplicity</span>
                             </div>
-                            <blockquote className="text-base sm:text-lg text-slate-200 italic leading-relaxed font-serif">
+                            <blockquote className="text-base sm:text-lg text-slate-600 italic leading-relaxed font-serif">
                                 "A complex system that works is always found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be made to work. There is no getting around it; we must start with a simple working system."
                             </blockquote>
                             <p className="text-xs font-mono text-slate-400 mt-4">
                                 &mdash; <strong>John Gall</strong>, <em>Systemantics (1975)</em>
                             </p>
-                            <div className="mt-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400 leading-relaxed">
+                            <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-400 leading-relaxed">
                                 <strong>RQL Application:</strong> We never design untested monoliths. Every engine begins as a deterministic single-thread primitive, hardened under 10,000,000 automated stress-test cycles before scaling.
                             </div>
                         </div>
 
                         {/* Sun Tzu Card */}
-                        <div className="bg-slate-900/70 p-8 rounded-3xl border border-slate-800 hover:border-purple-500/30 transition shadow-xl relative overflow-hidden group">
+                        <div className="bg-slate-900/70 p-8 rounded-3xl border border-slate-200 hover:border-purple-500/30 transition shadow-xl relative overflow-hidden group">
                             <div className="flex items-center gap-3 text-purple-400 text-xs font-mono font-bold uppercase mb-4">
                                 <span className="p-2 rounded-xl bg-purple-500/10 border border-purple-500/20">&bull;</span>
                                 <span>II. Strategic Focus &amp; Independent Architecture</span>
                             </div>
-                            <blockquote className="text-base sm:text-lg text-slate-200 italic leading-relaxed font-serif">
+                            <blockquote className="text-base sm:text-lg text-slate-600 italic leading-relaxed font-serif">
                                 "Simplicity is prerequisite for reliability. If we want systems with zero defects, we must design systems simple enough that there are obviously no deficiencies."
                             </blockquote>
                             <p className="text-xs font-mono text-slate-400 mt-4">
                                 &mdash; <strong>Edsger W. Dijkstra</strong>, <em>ACM Turing Award Lecture</em>
                             </p>
-                            <div className="mt-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400 leading-relaxed">
+                            <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-400 leading-relaxed">
                                 <strong>RQL Application:</strong> Outwardly quiet, clean, and understated. We reject flashy social media hype and let cold, audited sub-microsecond numbers and 100% passed test suites deliver the verdict.
                             </div>
                         </div>
@@ -484,13 +484,13 @@
             };
 
             return (
-                <section id="resilience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+                <section id="resilience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                         <div>
                             <span className="text-xs font-mono font-bold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full">
                                 Fault-Tolerant Systems Architecture
                             </span>
-                            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 tracking-tight">
+                            <h2 className="text-3xl sm:text-4xl font-black text-slate-950 mt-4 tracking-tight">
                                 Resilience Architecture (Supervisor &bull; Stress Engine &bull; Auto-Recovery)
                             </h2>
                             <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
@@ -514,25 +514,25 @@
 
                     {/* Resilience 3-Pillar Architecture */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-200">
                             <span className="text-xs font-mono text-cyan-400 font-bold uppercase">Stage 01</span>
-                            <h3 className="text-xl font-bold text-white mt-2"> Aegis Pre-Audit</h3>
+                            <h3 className="text-xl font-bold text-slate-950 mt-2"> Aegis Pre-Audit</h3>
                             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
                                 AST Contract verification, 35% hard drawdown clamp, and bit-exact precision floor quantization prior to memory allocation.
                             </p>
                         </div>
 
-                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-200">
                             <span className="text-xs font-mono text-amber-400 font-bold uppercase">Stage 02</span>
-                            <h3 className="text-xl font-bold text-white mt-2"> Automated Resilience Engine</h3>
+                            <h3 className="text-xl font-bold text-slate-950 mt-2"> Automated Resilience Engine</h3>
                             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
                                 Continuous fault-tolerance testing: simulated gateway timeouts, thread stalls, and database lock contention.
                             </p>
                         </div>
 
-                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div className="bg-slate-900/80 p-6 rounded-2xl border border-slate-200">
                             <span className="text-xs font-mono text-emerald-400 font-bold uppercase">Stage 03</span>
-                            <h3 className="text-xl font-bold text-white mt-2"> Automated Process Recovery</h3>
+                            <h3 className="text-xl font-bold text-slate-950 mt-2"> Automated Process Recovery</h3>
                             <p className="text-slate-400 text-xs mt-2 leading-relaxed">
                                 Sub-10ms MTTR hot process revival from Deterministic WAL, advancing reliability benchmarks with +25% adaptive recovery margins.
                             </p>
@@ -540,8 +540,8 @@
                     </div>
 
                     {/* Live Terminal Telemetry Box */}
-                    <div className="bg-black/80 rounded-2xl p-4 border border-slate-800 font-mono text-xs overflow-x-auto max-h-56 shadow-2xl">
-                        <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[11px] text-slate-500">
+                    <div className="bg-black/80 rounded-2xl p-4 border border-slate-200 font-mono text-xs overflow-x-auto max-h-56 shadow-2xl">
+                        <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-200 text-[11px] text-slate-500">
                             <span>HIGH-AVAILABILITY FAULT-TOLERANCE TELEMETRY LOG</span>
                             <span className="text-emerald-400">TEST PASSED (RUN #${chaosEpoch})</span>
                         </div>
@@ -562,16 +562,16 @@
         // --------------------------------------------------------------------
         function RustWasmBenchmarkCard({ wasmReady, onRunBenchmark, benchmarkResult }) {
             return (
-                <section id="benchmark" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800">
+                <section id="benchmark" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
                     <div className="bg-gradient-to-r from-purple-950/40 via-slate-900 to-slate-950 p-8 sm:p-12 rounded-3xl border border-purple-500/30 shadow-2xl relative overflow-hidden">
                         <div className="max-w-3xl">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-xs font-mono text-purple-300 mb-4">
                                 <span> BARE-METAL WEBASSEMBLY ENGINE</span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight font-black">
                                 High-Throughput Rust In The Browser
                             </h2>
-                            <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
                                 We compiled our quantitative kernel directly from pure Rust 1.99.1 into WebAssembly (<span className="text-purple-400 font-mono">rql_rust_engine.wasm</span>, 2.4 KB). It runs threadless, near-native mathematical operations right inside your browser session with 0 garbage collection pauses.
                             </p>
 

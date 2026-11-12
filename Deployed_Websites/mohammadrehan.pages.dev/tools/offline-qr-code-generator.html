@@ -73,9 +73,9 @@ tailwind.config = {
 }
 </script>
 </head>
-<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
+<body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
-  <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
+  <header class="bg-slate-100 text-slate-700 py-2.5 px-4 text-xs font-mono border-b border-slate-200">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
@@ -89,17 +89,17 @@ tailwind.config = {
     </div>
   </header>
 
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-800/80">
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <a href="../index.html" class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
+        <div class="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-white font-black text-sm">R</div>
         <div>
           <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
           <div class="text-[10px] font-mono text-slate-400">Founder @ Rehan Quant Lab</div>
         </div>
       </a>
       <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
-        <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-300 transition">Tools Hub</a>
+        <a href="index.html" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Tools Hub</a>
         <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store</a>
       </div>
     </div>
@@ -123,15 +123,15 @@ tailwind.config = {
       <h1 class="text-3xl sm:text-4xl font-black font-heading text-slate-950 tracking-tight">
         Offline Vector QR Code Generator (SVG &amp; PNG)
       </h1>
-      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
         Generate permanent QR codes with raw URL, UPI, or contact payloads. Export clean vector SVG files that never expire, never track users, and require zero cloud servers.
       </p>
 
-      <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div class="space-y-0.5">
           <div class="flex items-center gap-2">
             <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-100 text-purple-800 border border-purple-200">THE SKEPTIC'S DARE</span>
-            <span class="text-xs font-bold text-white font-heading">Turn Off Your Wi-Fi &amp; Test Live</span>
+            <span class="text-xs font-bold text-slate-950 font-heading">Turn Off Your Wi-Fi &amp; Test Live</span>
           </div>
           <p class="text-[11px] text-slate-400 font-mono">
             Unplug your Ethernet cable or disable Wi-Fi. Type any text or URL below. The vector QR code renders and exports instantly in local RAM.
@@ -145,37 +145,37 @@ tailwind.config = {
     </div>
 
     <!-- Interactive QRStudio Sandbox Container -->
-    <div class="bg-slate-950 text-white rounded-3xl p-5 sm:p-7 border-2 border-slate-800 shadow-xl">
+    <div class="bg-white text-slate-900 rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-xl">
       <div id="sandbox-panel-qrstudio" class="pt-2">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
-                <span class="text-xs font-mono font-bold text-white uppercase">QR Data &amp; Payload Input</span>
+              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                <span class="text-xs font-mono font-bold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
                 <span id="qrstudio-time-badge" class="text-[11px] font-mono text-purple-400">Vector Render</span>
               </div>
 
               <div class="mt-4 space-y-2">
                 <label class="block text-[11px] font-mono text-slate-400">Enter text, URL, or UPI string:</label>
-                <textarea id="qrstudio-text-input" rows="4" class="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 font-mono text-xs focus:border-purple-500 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
+                <textarea id="qrstudio-text-input" rows="4" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs focus:border-purple-500 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
               </div>
 
               <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono text-slate-400">
-                <button onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/store.html'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">RQL Store</button>
-                <button onclick="document.getElementById('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">WhatsApp VIP</button>
-                <button onclick="document.getElementById('qrstudio-text-input').value='upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">UPI Direct</button>
+                <button onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/store.html'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-600 cursor-pointer">RQL Store</button>
+                <button onclick="document.getElementById('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-600 cursor-pointer">WhatsApp VIP</button>
+                <button onclick="document.getElementById('qrstudio-text-input').value='upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-600 cursor-pointer">UPI Direct</button>
               </div>
             </div>
 
-            <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-800">
+            <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-200">
               100% Client-Side Vector Geometry &bull; Zero external API dependencies
             </div>
           </div>
 
-          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
-            <div class="w-full flex items-center justify-between pb-2 border-b border-slate-800">
-              <span class="text-xs font-mono font-bold text-white uppercase">Generated Vector QR Preview</span>
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
+            <div class="w-full flex items-center justify-between pb-2 border-b border-slate-200">
+              <span class="text-xs font-mono font-bold text-slate-950 uppercase">Generated Vector QR Preview</span>
               <span class="text-emerald-400 font-mono text-[11px]">&#10003; Infinite Scalable SVG</span>
             </div>
 
@@ -188,15 +188,15 @@ tailwind.config = {
               </button>
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
-              <div class="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2 text-left">
+              <div class="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px] font-mono text-slate-600 flex flex-col gap-2 text-left">
                 <div class="flex items-center gap-2 text-slate-400">
                   <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
                   <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
                 </div>
-                <p class="text-slate-300 leading-relaxed">
+                <p class="text-slate-600 leading-relaxed">
                   Need bulk generation of 10,000 inventory barcodes, direct 80mm/58mm thermal label printing, and custom business logos?
                 </p>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-200">
                   <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-purple-500/15 hover:bg-purple-500/25 border border-purple-500/40 text-purple-300 hover:text-purple-200 font-bold text-xs transition">
                     <span>Get RQL QRStudio&trade; &mdash; $79 Lifetime License</span>
                     <span>&rarr;</span>
@@ -215,7 +215,7 @@ tailwind.config = {
     </div>
 
     <!-- Technical Authority Section -->
-    <section class="space-y-6 pt-6 border-t border-slate-800 text-sm leading-relaxed text-slate-200">
+    <section class="space-y-6 pt-6 border-t border-slate-200 text-sm leading-relaxed text-slate-600">
       <h2 class="text-2xl font-bold font-heading text-slate-950">
         The "Expiring QR Code" Scam vs. Permanent Vector QR
       </h2>
@@ -223,9 +223,9 @@ tailwind.config = {
         Most commercial QR code generators on search engines lure users in with "free QR codes", but generate dynamic links that route through their tracking servers (e.g., `qr-platform.com/r/84920`). After 14 to 30 days, they deactivate the code and demand $35/month to reactivate it. If you have already printed business cards, banners, or retail packaging, your print run is held hostage.
       </p>
 
-      <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 space-y-2">
-        <h3 class="font-bold text-white font-heading text-base">True ISO/IEC 18004 Permanent Encoding</h3>
-        <p class="text-xs text-slate-300 font-mono leading-relaxed">
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2">
+        <h3 class="font-bold text-slate-950 font-heading text-base">True ISO/IEC 18004 Permanent Encoding</h3>
+        <p class="text-xs text-slate-600 font-mono leading-relaxed">
           Rehan Quant Lab QR generator encodes the raw target payload directly into the binary matrix modules using ISO/IEC 18004 international barcode standards. When a phone camera scans your QR code, it reads the URL, contact card, or UPI payment string directly from the printed ink without contacting any intermediary server. It never expires and cannot be hijacked.
         </p>
       </div>
@@ -233,13 +233,13 @@ tailwind.config = {
 
   </main>
 
-  <footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
+  <footer class="bg-[#fafafa] border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
   <div class="space-y-3.5">
     <div class="flex items-center gap-2.5">
       <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover border border-slate-700">
       <div class="leading-tight">
-        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="font-bold text-slate-950 text-sm block">Mohammad Rehan</span>
         <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
       </div>
     </div>
@@ -247,43 +247,43 @@ tailwind.config = {
       Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
     </p>
     <div class="pt-1 text-xs text-slate-400 space-y-1">
-      <div><span class="font-semibold text-slate-200">HQ:</span> Patna, Bihar 800006, India</div>
-      <div><span class="font-semibold text-slate-200">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
-      <div><span class="font-semibold text-slate-200">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
+      <div><span class="font-semibold text-slate-600">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-600">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-600">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
     </div>
   </div>
 
   <div>
-    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
+    <h4 class="font-bold text-slate-950 text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
     <ul class="space-y-2 text-xs">
-      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
-      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
-      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-600 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-600">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-600 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-600">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-600 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-600">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
       <li><a class="text-rose-400 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
     </ul>
   </div>
 
   <div>
-    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <h4 class="font-bold text-slate-950 text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
     <ul class="space-y-2 text-xs">
       <li><a class="text-emerald-400 hover:text-emerald-300 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-slate-900 border border-slate-700 px-1 rounded">SHA-256</span></a></li>
-      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
-      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
-      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+      <li><a class="text-slate-600 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-600 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-600 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
     </ul>
   </div>
 
   <div>
-    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <h4 class="font-bold text-slate-950 text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
     <ul class="space-y-2 text-xs">
-      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
-      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
-      <li><a class="text-slate-300 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
+      <li><a class="text-slate-600 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-600 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-600 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
     </ul>
   </div>
 </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
   <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade; &bull; UDYAM-BR-26-0258772</div>
   <div class="flex items-center gap-4">
     <a href="legal.html" class="hover:text-white transition">Terms &amp; Disclosures</a>
