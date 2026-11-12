@@ -33,7 +33,7 @@
 <script src="assets/tailwind.min.js"></script>
 <script src="assets/rql-shield.js" defer></script>
     <script src="assets/rql-wave.js" defer></script>
-    <script src="assets/rql-sandbox.js" defer></script>
+    <script src="assets/rql-sandbox.js?v=20261112b" defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -1346,25 +1346,25 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- Tool Selection Tabs -->
-        <div class="flex items-center gap-2 overflow-x-auto py-4 border-b border-slate-200/60 no-scrollbar">
-          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-emerald-600 text-white border border-emerald-600 shadow-sm flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="image"></i>
+        <div class="flex items-center gap-2.5 overflow-x-auto py-4 px-1 border-b border-slate-200 no-scrollbar">
+          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-emerald-700 text-white border-2 border-emerald-800 shadow-lg ring-2 ring-emerald-200 flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-white shrink-0" data-lucide="image"></i>
             <span>20. RQL ImageBatch (WebP Compressor)</span>
           </button>
-          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-rose-600" data-lucide="file-text"></i>
+          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-rose-700 hover:text-white hover:border-rose-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-rose-700 group-hover:text-white shrink-0" data-lucide="file-text"></i>
             <span>01. DocumentShield (Redactor)</span>
           </button>
-          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-sky-600" data-lucide="fingerprint"></i>
+          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-sky-700 hover:text-white hover:border-sky-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-sky-700 group-hover:text-white shrink-0" data-lucide="fingerprint"></i>
             <span>06. HashCheck (Cryptographic Hasher)</span>
           </button>
-          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-purple-600" data-lucide="qr-code"></i>
+          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-purple-700 hover:text-white hover:border-purple-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-purple-700 group-hover:text-white shrink-0" data-lucide="qr-code"></i>
             <span>07. QRStudio (Vector QR Studio)</span>
           </button>
-          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
-            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="git-compare"></i>
+          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-amber-700 hover:text-white hover:border-amber-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-amber-700 group-hover:text-white shrink-0" data-lucide="git-compare"></i>
             <span>08. TextDiff (Myers Vector Engine)</span>
           </button>
         </div>
@@ -1380,10 +1380,10 @@ document.addEventListener('keydown', function(e) {
               <div>
                 <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                   <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="text-xs font-mono font-bold text-slate-950 uppercase">Source Image Input</span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Source Image Input</span>
                   </div>
-                  <button onclick="loadSampleImage()" class="text-[11px] font-mono text-emerald-400 hover:text-emerald-300 underline cursor-pointer">
+                  <button onclick="loadSampleImage()" class="text-[11px] font-mono font-bold text-emerald-700 hover:text-emerald-900 underline cursor-pointer">
                     Load 1080p Benchmark Sample
                   </button>
                 </div>
@@ -1406,22 +1406,22 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <!-- WebP Quality Slider -->
-                <div class="mt-5 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-2">
+                <div class="mt-5 p-3.5 rounded-xl bg-white border border-slate-300 space-y-2 shadow-2xs">
                   <div class="flex items-center justify-between text-xs font-mono">
-                    <span class="text-slate-400">WebP Compression Quality:</span>
-                    <span id="imagebatch-quality-label" class="text-emerald-400 font-bold">85%</span>
+                    <span class="text-slate-800 font-bold">WebP Compression Quality:</span>
+                    <span id="imagebatch-quality-label" class="text-emerald-700 font-black">85%</span>
                   </div>
-                  <input id="imagebatch-quality-slider" type="range" min="30" max="100" value="85" class="w-full accent-emerald-500 cursor-pointer" oninput="onQualitySliderChange(this.value)">
-                  <div class="flex items-center justify-between text-[10px] font-mono text-slate-500">
+                  <input id="imagebatch-quality-slider" type="range" min="30" max="100" value="85" class="w-full accent-emerald-700 cursor-pointer" oninput="onQualitySliderChange(this.value)">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-semibold text-slate-700">
                     <span>Higher Compression (Smaller KB)</span>
                     <span>High Fidelity (Max Crispness)</span>
                   </div>
                 </div>
               </div>
 
-              <div class="text-[11px] font-mono text-slate-400 flex items-center justify-between pt-3 border-t border-slate-800">
-                <span>Original Size: <strong id="imagebatch-orig-size" class="text-slate-900 font-bold">1.2 MB</strong></span>
-                <span class="text-emerald-400 font-bold">&#10003; SIMD Hardware Acceleration</span>
+              <div class="text-[11px] font-mono text-slate-700 font-semibold flex items-center justify-between pt-3 border-t border-slate-200">
+                <span>Original Size: <strong id="imagebatch-orig-size" class="text-slate-950 font-black">1.2 MB</strong></span>
+                <span class="text-emerald-700 font-extrabold">&#10003; SIMD Hardware Acceleration</span>
               </div>
             </div>
 
@@ -1430,10 +1430,10 @@ document.addEventListener('keydown', function(e) {
               <div>
                 <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                   <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                    <span class="text-xs font-mono font-bold text-slate-950 uppercase">Real-Time WebP Output</span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Real-Time WebP Output</span>
                   </div>
-                  <span id="imagebatch-savings-badge" class="font-mono text-xs font-extrabold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                  <span id="imagebatch-savings-badge" class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-700 text-white border border-emerald-800 shadow-xs">
                     -92% SAVED
                   </span>
                 </div>
@@ -1445,20 +1445,20 @@ document.addEventListener('keydown', function(e) {
 
                 <!-- Metrics Strip -->
                 <div class="grid grid-cols-2 gap-3 mt-4 text-xs font-mono">
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="text-slate-500 text-[10px] uppercase">Compressed WebP Size:</div>
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
+                    <div class="text-slate-700 font-bold text-[10px] uppercase">Compressed WebP Size:</div>
                     <div id="imagebatch-comp-size" class="text-emerald-700 font-black text-sm mt-0.5 font-mono">98 KB</div>
                   </div>
-                  <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-                    <div class="text-slate-500 text-[10px] uppercase">Execution Latency:</div>
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
+                    <div class="text-slate-700 font-bold text-[10px] uppercase">Execution Latency:</div>
                     <div id="imagebatch-time-badge" class="text-slate-950 font-black text-sm mt-0.5 font-mono">4.2ms (Local RAM)</div>
                   </div>
                 </div>
               </div>
 
               <!-- Download Action -->
-              <div class="pt-3 border-t border-slate-800 space-y-3">
-                <button id="imagebatch-download-btn" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-lg shadow-emerald-950/40 cursor-pointer">
+              <div class="pt-3 border-t border-slate-200 space-y-3">
+                <button id="imagebatch-download-btn" class="w-full py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
                   <i class="w-4 h-4 text-white" data-lucide="download"></i>
                   <span>Download Compressed WebP (Zero Cloud Used)</span>
                   <span>&rarr;</span>
@@ -1483,7 +1483,7 @@ document.addEventListener('keydown', function(e) {
                       <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
                       <span>&rarr;</span>
                     </a>
-                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', '20_ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
+                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', '20_ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
                       View Specs &amp; Guarantee &rarr;
                     </button>
                   </div>
@@ -1504,29 +1504,29 @@ document.addEventListener('keydown', function(e) {
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
               <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                 <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-rose-500"></span>
-                  <span class="text-xs font-mono font-bold text-slate-950 uppercase">Raw Legal / Forensic Text</span>
+                  <span class="w-2 h-2 rounded-full bg-rose-600"></span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Raw Legal / Forensic Text</span>
                 </div>
-                <button onclick="resetRedactionSample()" class="text-[11px] font-mono text-slate-400 hover:text-white underline cursor-pointer">
+                <button onclick="resetRedactionSample()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">
                   Reset Sample
                 </button>
               </div>
 
-              <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-500 focus:outline-none leading-relaxed resize-none"></textarea>
+              <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-600 focus:outline-none leading-relaxed resize-none"></textarea>
 
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
                 <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
-                <span class="text-rose-400 font-semibold">Sub-1ms Regex Vectorizer</span>
+                <span class="text-rose-700 font-extrabold">Sub-1ms Regex Vectorizer</span>
               </div>
             </div>
 
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
               <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                 <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span class="text-xs font-mono font-bold text-slate-950 uppercase">Permanent Blackout Output</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Permanent Blackout Output</span>
                 </div>
-                <span id="redact-tokens-count" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                <span id="redact-tokens-count" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-700 text-white border border-rose-800 shadow-xs">
                   5 Tokens Blacked Out
                 </span>
               </div>
@@ -1535,20 +1535,20 @@ document.addEventListener('keydown', function(e) {
                 CONFIDENTIAL CLIENT LEGAL INTAKE &amp; FORENSIC DOSSIER
               </div>
 
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
-                <span class="text-emerald-400 font-semibold">&#10003; True Vector Blackout</span>
-                <span id="redact-sha-badge" class="text-slate-400">SHA-256: 7d8f...4a21 Verified Clean</span>
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
+                <span class="text-emerald-700 font-extrabold">&#10003; True Vector Blackout</span>
+                <span id="redact-sha-badge" class="text-slate-800 font-bold">SHA-256: 7d8f...4a21 Verified Clean</span>
               </div>
             </div>
 
           </div>
 
           <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200">
-            <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer">
-              <i class="w-4 h-4" data-lucide="shield-alert"></i>
+            <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-700 hover:bg-rose-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
+              <i class="w-4 h-4 text-white" data-lucide="shield-alert"></i>
               <span>Run Sovereign Redaction Engine (Sub-2ms)</span>
             </button>
-            <div class="text-[11px] font-mono text-slate-400 text-center sm:text-right">
+            <div class="text-[11px] font-mono font-semibold text-slate-700 text-center sm:text-right">
               Zero bytes sent to server &bull; Pure client-side regex vectorization
             </div>
           </div>
@@ -1572,7 +1572,7 @@ document.addEventListener('keydown', function(e) {
                 <span>DocumentShield&trade; &mdash; $179</span>
                 <span>&rarr;</span>
               </a>
-              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '01_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[11px] text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer">
+              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '01_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
                 View Specs &rarr;
               </button>
             </div>
@@ -1589,68 +1589,68 @@ document.addEventListener('keydown', function(e) {
               <div>
                 <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                   <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-sky-400"></span>
-                    <span class="text-xs font-mono font-bold text-slate-950 uppercase">Inspect Any File or Text</span>
+                    <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Inspect Any File or Text</span>
                   </div>
-                  <span id="hashcheck-time-badge" class="text-[11px] font-mono text-sky-400">
+                  <span id="hashcheck-time-badge" class="text-[11px] font-mono font-bold text-sky-700">
                     Hardware Accelerated
                   </span>
                 </div>
 
                 <div class="mt-4">
-                  <label class="block border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-4 text-center cursor-pointer transition bg-white hover:bg-slate-50 group">
+                  <label class="block border-2 border-dashed border-slate-400 hover:border-sky-600 rounded-xl p-4 text-center cursor-pointer transition bg-white hover:bg-sky-50/40 group">
                     <input type="file" class="hidden" onchange="handleHashCheckFile(this)">
-                    <div class="text-xs font-mono text-slate-300 font-bold">
+                    <div class="text-xs font-mono text-slate-950 font-extrabold">
                       Drop ANY file to compute cryptographic hash instantly
                     </div>
-                    <div class="text-[10px] font-mono text-slate-500 mt-1">
+                    <div class="text-[10px] font-mono font-semibold text-slate-700 mt-1">
                       File never leaves your RAM &bull; Executed via window.crypto.subtle
                     </div>
                   </label>
                 </div>
 
                 <div class="mt-4 space-y-1.5">
-                  <label class="block text-[11px] font-mono text-slate-400">Or type custom text string:</label>
-                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-sky-500 focus:outline-none" oninput="runTextHash()">
+                  <label class="block text-[11px] font-mono font-bold text-slate-800">Or type custom text string:</label>
+                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-sky-600 focus:outline-none" oninput="runTextHash()">
                 </div>
               </div>
 
-              <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-800">
-                Target: <strong id="hashcheck-target-label" class="text-slate-900 font-bold">Raw Text Payload</strong>
+              <div class="text-[11px] font-mono text-slate-700 font-semibold pt-2 border-t border-slate-200">
+                Target: <strong id="hashcheck-target-label" class="text-slate-950 font-black">Raw Text Payload</strong>
               </div>
             </div>
 
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
               <div class="space-y-4">
                 <div class="flex items-center justify-between pb-2 border-b border-slate-200">
-                  <span class="text-xs font-mono font-bold text-slate-950 uppercase">Cryptographic Checksums</span>
-                  <span class="text-emerald-400 font-mono text-[11px]">&#10003; Bit-for-Bit Verified</span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Cryptographic Checksums</span>
+                  <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; Bit-for-Bit Verified</span>
                 </div>
 
                 <!-- SHA-256 Box -->
-                <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
+                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
                     <span>SHA-256 (FIPS 180-4 Standard):</span>
-                    <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
+                    <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
                   </div>
-                  <div id="hashcheck-sha256-output" class="font-mono text-xs text-sky-300 break-all select-text font-bold">
+                  <div id="hashcheck-sha256-output" class="font-mono text-xs text-sky-800 break-all select-text font-extrabold">
                     Computing...
                   </div>
                 </div>
 
                 <!-- SHA-512 Box -->
-                <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
+                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
                     <span>SHA-512 (FIPS 180-4 Cryptographic Standard):</span>
-                    <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
+                    <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
                   </div>
-                  <div id="hashcheck-sha512-output" class="font-mono text-[11px] text-slate-300 break-all select-text font-bold max-h-16 overflow-y-auto">
+                  <div id="hashcheck-sha512-output" class="font-mono text-[11px] text-slate-900 break-all select-text font-bold max-h-16 overflow-y-auto">
                     Computing...
                   </div>
                 </div>
               </div>
 
-              <div class="text-[11px] font-mono text-slate-500 pt-2 border-t border-slate-800">
+              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
                 Zero Cloud Uploads &bull; Executed locally via browser WebCrypto primitives
               </div>
 
@@ -1673,7 +1673,7 @@ document.addEventListener('keydown', function(e) {
                     <span>Get RQL HashCheck&trade; &mdash; $39 Lifetime License</span>
                     <span>&rarr;</span>
                   </a>
-                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', '06_HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
+                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', '06_HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
                     View Specs &amp; Guarantee &rarr;
                   </button>
                 </div>
@@ -1692,39 +1692,39 @@ document.addEventListener('keydown', function(e) {
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
               <div>
                 <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                  <span class="text-xs font-mono font-bold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
-                  <span id="qrstudio-time-badge" class="text-[11px] font-mono text-purple-400">Vector Render</span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
+                  <span id="qrstudio-time-badge" class="text-[11px] font-mono font-bold text-purple-700">Vector Render</span>
                 </div>
 
                 <div class="mt-4 space-y-2">
-                  <label class="block text-[11px] font-mono text-slate-400">Enter text, URL, or UPI string:</label>
-                  <textarea id="qrstudio-text-input" rows="4" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-indigo-500 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
+                  <label class="block text-[11px] font-mono font-bold text-slate-800">Enter text, URL, or UPI string:</label>
+                  <textarea id="qrstudio-text-input" rows="4" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-purple-600 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
                 </div>
 
-                <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono text-slate-400">
-                  <button onclick="$('qrstudio-text-input').value='https://rehanquantlab.com/store.html'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">RQL Store</button>
-                  <button onclick="$('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">WhatsApp VIP</button>
-                  <button onclick="$('qrstudio-text-input').value='upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan'; generateLiveQrCode()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 cursor-pointer">UPI Direct</button>
+                <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono">
+                  <button onclick="$('qrstudio-text-input').value='https://rehanquantlab.com/store.html'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">RQL Store</button>
+                  <button onclick="$('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">WhatsApp VIP</button>
+                  <button onclick="$('qrstudio-text-input').value='upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">UPI Direct</button>
                 </div>
               </div>
 
-              <div class="text-[11px] font-mono text-slate-500 pt-2 border-t border-slate-800">
+              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
                 100% Client-Side Vector Geometry &bull; Zero external API dependencies
               </div>
             </div>
 
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
               <div class="w-full flex items-center justify-between pb-2 border-b border-slate-200">
-                <span class="text-xs font-mono font-bold text-slate-950 uppercase">Generated Vector QR Preview</span>
-                <span class="text-emerald-400 font-mono text-[11px]">&#10003; Infinite Scalable SVG</span>
+                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Generated Vector QR Preview</span>
+                <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; Infinite Scalable SVG</span>
               </div>
 
               <!-- Vector QR Container -->
-              <div id="qrstudio-display-container" class="w-44 h-44 flex items-center justify-center">
+              <div id="qrstudio-display-container" class="w-44 h-44 flex items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
                 <!-- SVG rendered here -->
               </div>
 
-              <button onclick="downloadQrSvg()" class="w-full py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-md">
+              <button onclick="downloadQrSvg()" class="w-full py-2.5 px-4 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-md">
                 <i class="w-4 h-4" data-lucide="download"></i>
                 <span>Download Vector QR Code (.svg)</span>
               </button>
@@ -1748,7 +1748,7 @@ document.addEventListener('keydown', function(e) {
                     <span>Get RQL QRStudio&trade; &mdash; $79 Lifetime License</span>
                     <span>&rarr;</span>
                   </a>
-                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', '07_QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-xs text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
+                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', '07_QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
                     View Specs &amp; Guarantee &rarr;
                   </button>
                 </div>
@@ -1765,19 +1765,19 @@ document.addEventListener('keydown', function(e) {
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch mb-4">
             
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-              <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-300 pb-2 border-b border-slate-200">
+              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
                 <span>Original Revision (Clause A)</span>
-                <button onclick="resetDiffSample()" class="text-[11px] text-amber-400 underline cursor-pointer">Reset Samples</button>
+                <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Reset Samples</button>
               </div>
-              <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-indigo-500 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
+              <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
             </div>
 
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-              <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-300 pb-2 border-b border-slate-200">
+              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
                 <span>Modified Revision (Clause B)</span>
-                <span id="diff-time-badge" class="text-[11px] text-amber-400 font-mono">Sub-1ms Myers</span>
+                <span id="diff-time-badge" class="text-[11px] font-bold text-amber-700 font-mono">Sub-1ms Myers</span>
               </div>
-              <textarea id="diff-input-b" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-indigo-500 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
+              <textarea id="diff-input-b" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
             </div>
 
           </div>
@@ -1785,8 +1785,8 @@ document.addEventListener('keydown', function(e) {
           <!-- Diff Results Box -->
           <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
             <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
-              <span class="text-xs font-mono font-bold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
-              <span id="diff-status-badge" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+              <span id="diff-status-badge" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-amber-700 text-white border border-amber-800 shadow-xs">
                 3 Alterations Detected
               </span>
             </div>
@@ -1814,7 +1814,7 @@ document.addEventListener('keydown', function(e) {
                 <span>TextDiff&trade; &mdash; $99</span>
                 <span>&rarr;</span>
               </a>
-              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', '08_TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[11px] text-slate-700 hover:text-slate-950 underline font-semibold cursor-pointer">
+              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', '08_TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
                 View Specs &rarr;
               </button>
             </div>
@@ -1824,18 +1824,18 @@ document.addEventListener('keydown', function(e) {
         <!-- ======================================================== -->
         <!-- LIVE AIR-GAP & TELEMETRY INTEGRITY AUDIT STRIP -->
         <!-- ======================================================== -->
-        <div class="mt-8 pt-5 border-t border-slate-800/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="mt-8 pt-5 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div class="flex items-center gap-3">
-            <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-600 animate-ping"></div>
             <div class="text-xs font-mono">
-              <span class="text-slate-400">Current Sandbox Status: </span>
-              <span id="sandbox-active-tool-badge" class="text-emerald-400 font-bold">RQL ImageBatch v1.0 (SIMD WebP Compressor)</span>
+              <span class="text-slate-800 font-bold">Current Sandbox Status: </span>
+              <span id="sandbox-active-tool-badge" class="text-emerald-700 font-extrabold">RQL ImageBatch v1.0 (SIMD WebP Compressor)</span>
             </div>
           </div>
 
           <div class="flex items-center gap-2">
-            <button onclick="auditBrowserNetworkEntries()" class="py-1.5 px-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono font-bold flex items-center gap-1.5 transition hover:scale-102 shadow-xs cursor-pointer">
-              <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="activity"></i>
+            <button onclick="auditBrowserNetworkEntries()" class="py-2 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-mono font-extrabold flex items-center gap-1.5 transition hover:scale-102 shadow-md cursor-pointer">
+              <i class="w-3.5 h-3.5 text-white shrink-0" data-lucide="activity"></i>
               <span>Run Air-Gap Integrity Audit</span>
             </button>
           </div>

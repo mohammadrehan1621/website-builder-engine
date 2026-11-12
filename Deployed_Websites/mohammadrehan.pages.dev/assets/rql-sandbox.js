@@ -23,10 +23,38 @@
   // DOM Elements cache
   function $(id) { return document.getElementById(id); }
 
-  // Tab Switching
+  // Tab Switching (Bold Jewel High-Contrast Light Theme)
   window.switchSandboxTab = function(tabName) {
     activeTab = tabName;
     var tabs = ['imagebatch', 'documentshield', 'hashcheck', 'qrstudio', 'textdiff'];
+    var activeStyles = {
+      imagebatch: 'sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-emerald-700 text-white border-2 border-emerald-800 shadow-lg ring-2 ring-emerald-200 flex items-center gap-1.5 cursor-pointer shrink-0',
+      documentshield: 'sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-rose-700 text-white border-2 border-rose-800 shadow-lg ring-2 ring-rose-200 flex items-center gap-1.5 cursor-pointer shrink-0',
+      hashcheck: 'sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-sky-700 text-white border-2 border-sky-800 shadow-lg ring-2 ring-sky-200 flex items-center gap-1.5 cursor-pointer shrink-0',
+      qrstudio: 'sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-purple-700 text-white border-2 border-purple-800 shadow-lg ring-2 ring-purple-200 flex items-center gap-1.5 cursor-pointer shrink-0',
+      textdiff: 'sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-amber-700 text-white border-2 border-amber-800 shadow-lg ring-2 ring-amber-200 flex items-center gap-1.5 cursor-pointer shrink-0'
+    };
+    var inactiveStyles = {
+      imagebatch: 'sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-emerald-700 hover:text-white hover:border-emerald-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0',
+      documentshield: 'sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-rose-700 hover:text-white hover:border-rose-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0',
+      hashcheck: 'sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-sky-700 hover:text-white hover:border-sky-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0',
+      qrstudio: 'sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-purple-700 hover:text-white hover:border-purple-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0',
+      textdiff: 'sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-amber-700 hover:text-white hover:border-amber-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0'
+    };
+    var iconColors = {
+      imagebatch: 'text-emerald-700',
+      documentshield: 'text-rose-700',
+      hashcheck: 'text-sky-700',
+      qrstudio: 'text-purple-700',
+      textdiff: 'text-amber-700'
+    };
+    var badgeColors = {
+      imagebatch: 'text-emerald-700 font-extrabold',
+      documentshield: 'text-rose-700 font-extrabold',
+      hashcheck: 'text-sky-700 font-extrabold',
+      qrstudio: 'text-purple-700 font-extrabold',
+      textdiff: 'text-amber-700 font-extrabold'
+    };
     for (var i = 0; i < tabs.length; i++) {
       var t = tabs[i];
       var panel = $('sandbox-panel-' + t);
@@ -39,10 +67,15 @@
         }
       }
       if (btn) {
-        if (t === tabName) {
-          btn.className = 'sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-slate-950 text-white border border-slate-950 shadow-xs flex items-center gap-1.5 cursor-pointer';
-        } else {
-          btn.className = 'sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer';
+        btn.className = (t === tabName) ? activeStyles[t] : inactiveStyles[t];
+        var icon = btn.querySelector('svg, i');
+        if (icon) {
+          icon.classList.remove('text-emerald-400', 'text-rose-400', 'text-sky-400', 'text-purple-400', 'text-amber-400', 'text-rose-600', 'text-sky-600', 'text-purple-600', 'text-amber-600', 'text-emerald-700', 'text-rose-700', 'text-sky-700', 'text-purple-700', 'text-amber-700', 'text-white', 'group-hover:text-white');
+          if (t === tabName) {
+            icon.classList.add('text-white');
+          } else {
+            icon.classList.add(iconColors[t], 'group-hover:text-white');
+          }
         }
       }
     }
@@ -57,6 +90,7 @@
         textdiff: 'RQL TextDiff v1.0 (Myers Vector Diff)'
       };
       activeToolBadge.textContent = names[tabName] || tabName;
+      activeToolBadge.className = badgeColors[tabName] || 'text-emerald-700 font-extrabold';
     }
   };
 
@@ -171,8 +205,8 @@
 
     if (savingsBadge) {
       savingsBadge.textContent = '-' + pct + '% SAVED';
-      savingsBadge.className = 'font-mono text-xs font-extrabold px-2.5 py-1 rounded-full ' + 
-        (pct > 50 ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold' : 'bg-sky-50 text-sky-800 border border-sky-300 font-bold');
+      savingsBadge.className = 'font-mono text-xs font-extrabold px-3 py-1 rounded-full shadow-xs ' + 
+        (pct > 50 ? 'bg-emerald-700 text-white border border-emerald-800' : 'bg-sky-700 text-white border border-sky-800');
     }
 
     if (timeBadge) {
@@ -491,15 +525,15 @@
 
       if (lineA === lineB) {
         if (lineA !== undefined) {
-          html += '<div class="text-slate-400 px-2 py-0.5 font-mono text-[11px] leading-relaxed select-text">  [UNCHANGED] ' + escapeHtml(lineA) + '</div>';
+          html += '<div class="text-slate-800 bg-slate-50 px-2.5 py-1 rounded font-mono text-[11px] leading-relaxed select-text font-medium">  [UNCHANGED] ' + escapeHtml(lineA) + '</div>';
         }
       } else {
         changes++;
         if (lineA !== undefined) {
-          html += '<div class="bg-rose-950/40 border-l-2 border-rose-500 text-rose-300 px-2 py-0.5 font-mono text-[11px] leading-relaxed select-text">- [REMOVED] ' + escapeHtml(lineA) + '</div>';
+          html += '<div class="bg-rose-50 border-l-4 border-rose-600 text-rose-950 px-2.5 py-1 rounded-r font-mono text-[11px] font-bold leading-relaxed select-text">- [REMOVED] ' + escapeHtml(lineA) + '</div>';
         }
         if (lineB !== undefined) {
-          html += '<div class="bg-emerald-950/40 border-l-2 border-emerald-500 text-emerald-300 px-2 py-0.5 font-mono text-[11px] leading-relaxed select-text">+ [ADDED]   ' + escapeHtml(lineB) + '</div>';
+          html += '<div class="bg-emerald-50 border-l-4 border-emerald-600 text-emerald-950 px-2.5 py-1 rounded-r font-mono text-[11px] font-bold leading-relaxed select-text">+ [ADDED]   ' + escapeHtml(lineB) + '</div>';
         }
       }
     }
