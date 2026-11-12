@@ -534,11 +534,11 @@
     
     var now = new Date().toLocaleTimeString();
 
-    var html = '<div class="text-slate-400">[' + now + '] Forensic network audit running...</div>';
-    html += '<div class="text-slate-300">[' + now + '] Static Page Assets Loaded: <strong class="text-white">' + allResources.length + ' assets</strong> (Cloudflare CDN cache).</div>';
-    html += '<div class="text-slate-300">[' + now + '] Dynamic Fetch / XHR / Beacon Requests: <strong class="text-emerald-400">' + dynamicEgress.length + '</strong> (Zero outbound transmission).</div>';
-    html += '<div class="text-slate-300">[' + now + '] Telemetry Sockets Open: <strong class="text-emerald-400">0</strong> &bull; Tracking Pixels: <strong class="text-emerald-400">0</strong>.</div>';
-    html += '<div class="text-slate-300">[' + now + '] Sandbox Memory Egress: <strong class="text-emerald-400">0.00 KB</strong> (100% In-RAM Execution via Canvas &amp; WebCrypto).</div>';
+    var html = '<div class="text-slate-400 font-mono">[' + now + '] Forensic network audit running...</div>';
+    html += '<div class="text-slate-300 font-mono">[' + now + '] Static Page Assets Loaded: <strong class="text-white font-bold">' + allResources.length + ' assets</strong> (Cloudflare CDN cache).</div>';
+    html += '<div class="text-slate-300 font-mono">[' + now + '] Dynamic Fetch / XHR / Beacon Requests: <strong class="text-emerald-400 font-bold">' + dynamicEgress.length + '</strong> (Zero outbound transmission).</div>';
+    html += '<div class="text-slate-300 font-mono">[' + now + '] Telemetry Sockets Open: <strong class="text-emerald-400 font-bold">0</strong> &bull; Tracking Pixels: <strong class="text-emerald-400 font-bold">0</strong>.</div>';
+    html += '<div class="text-slate-300 font-mono">[' + now + '] Sandbox Memory Egress: <strong class="text-emerald-400 font-bold">0.00 KB</strong> (100% In-RAM Execution via Canvas &amp; WebCrypto).</div>';
     html += '<div class="text-emerald-400 font-bold font-mono">[' + now + '] AIR-GAP AUDIT VERIFIED: Bit-for-bit zero user data collection confirmed by browser runtime.</div>';
 
     display.innerHTML = html;
