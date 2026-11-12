@@ -20,6 +20,34 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 #chat-messages, #aria-messages { overflow-x: hidden !important; scrollbar-width: thin; scrollbar-color: rgba(6, 182, 212, 0.35) transparent; }
 
+  /* Custom Obsidian 60-30-10 Scrollbar & Motion Tokens */
+  *, *::before, *::after { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #06090e; }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.4); }
+
+  .btn-spring {
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
+  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+
+  .bento-card-spring {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+  }
+  .bento-card-spring:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(16, 185, 129, 0.15);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
 </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -129,7 +157,35 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
         }
 
-    </style>
+      /* Custom Obsidian 60-30-10 Scrollbar & Motion Tokens */
+  *, *::before, *::after { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #06090e; }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.4); }
+
+  .btn-spring {
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
+  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+
+  .bento-card-spring {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+  }
+  .bento-card-spring:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(16, 185, 129, 0.15);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -565,9 +621,37 @@ img, svg, video, canvas, audio, iframe, embed, object {
   animation: aurora-drift-3 26s ease-in-out infinite alternate;
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
+  /* Custom Obsidian 60-30-10 Scrollbar & Motion Tokens */
+  *, *::before, *::after { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #06090e; }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(16, 185, 129, 0.4); }
+
+  .btn-spring {
+    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
+  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+
+  .bento-card-spring {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+  }
+  .bento-card-spring:hover {
+    transform: translateY(-3px);
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 20px -2px rgba(16, 185, 129, 0.15);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
 </style>
 </head>
-<body class="bg-slateCanvas text-slate-800 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
 <!-- Single Unified Institutional Status & Rotating Announcement Bar (Gumroad Live Banner) -->
 <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between gap-4">
@@ -592,24 +676,24 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <!-- STICKY NAVBAR -->
 <!-- START: RQL_HYBRID_NAV_AND_DRAWER -->
 <!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+<header class="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-[#06090e]/95 backdrop-blur-md shadow-xs transition-all">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
 <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
 <div class="whitespace-nowrap">
-<span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
-<span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+<span class="font-extrabold text-white tracking-tight text-base block font-heading">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-400 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
 </div>
 </a>
 
 <!-- Clean Spacious 3-Flagship Desktop Navigation -->
 <nav class="hidden md:flex items-center gap-5 lg:gap-7 text-sm whitespace-nowrap">
-<a class="text-slate-900 font-bold bg-slate-100 px-3 py-1 rounded-lg transition" href="index.html">Home</a>
+<a class="text-emerald-400 font-bold bg-emerald-950/50 border border-emerald-500/30 px-3 py-1 rounded-lg transition" href="index.html">Home</a>
 
 <!-- Commercial Suites (Sleek Pill with Live Count 26) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="26 Pure-Rust Commercial Desktop Suites on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-semibold text-xs transition shadow-2xs group" href="store.html" title="26 Pure-Rust Commercial Desktop Suites on Gumroad">
 <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">26</span></a>
@@ -619,23 +703,23 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="wifi-off"></i>
 <span>Air-Gap Test (Turn Off Wi-Fi)</span>
 </a>
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
+<a class="text-slate-300 hover:text-white font-medium py-1 transition" href="contact.html">Contact</a>
 </nav>
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
 <div class="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
-<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 items-center gap-1.5">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs transition hover:scale-102 items-center gap-1.5 btn-spring">
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
 </a>
 
-<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
+<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
 <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
 <span>Resume</span>
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-600" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
 <i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
 <span class="font-heading font-bold text-slate-900">Menu</span>
 </button>
@@ -649,9 +733,9 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <!-- ========================================== -->
 <div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-slate-900 text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
     <div class="flex items-center gap-2.5">
       <img src="emblem.webp" decoding="async" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
       <div>
@@ -849,7 +933,9 @@ document.addEventListener('keydown', function(e) {
 
 <!-- HERO SECTION (HOME PAGE ROLE) -->
 <main class="flex-grow">
-<section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-gradient-to-b from-white via-slateCanvas to-slate-100/60" id="hero-section">
+<section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20 overflow-hidden bg-[#06090e] border-b border-slate-800/80" id="hero-section">
+  <!-- 60FPS In-RAM Hardware-Accelerated Canvas (Homepage Hero Constellation) -->
+  <canvas id="rql-home-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
 <!-- Interactive Network Constellation Canvas -->
 <!-- Calm Clean Background Grid -->
 <!-- START: RQL_AMBIENT_AURORA -->
@@ -869,19 +955,19 @@ document.addEventListener('keydown', function(e) {
 <div class="grid lg:grid-cols-12 gap-12 items-center">
 <!-- Left Column: Copy, Dynamic Rotator & CTAs -->
 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12]">
-    Fast, single-binary <span class="bg-gradient-to-r from-indigo-700 via-slate-900 to-indigo-950 bg-clip-text text-transparent">Windows desktop tools</span> in pure Rust.
-    <span class="block text-base sm:text-lg lg:text-xl text-slate-500 font-mono font-medium mt-3">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.12]">
+    Fast, single-binary <span class="bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent">Windows desktop tools</span> in pure Rust.
+    <span class="block text-base sm:text-lg lg:text-xl text-slate-400 font-mono font-medium mt-3">
         Engineered by Mohammad Rehan &bull; Patna, Bihar
     </span>
 </h1>
 
-<p class="text-base sm:text-lg text-slate-700 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-    I build native Windows desktop tools that run <strong>100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
+<p class="text-base sm:text-lg text-slate-400 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+    I build native Windows desktop tools that run <strong>100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-slate-200 border border-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
 </p>
 
 <!-- The Skeptic's Dare Attention Card (Apple Glassmorphism Edition) -->
-<div class="p-5 rounded-3xl bg-white/85 backdrop-blur-xl border-2 border-slate-200/90 hover:border-emerald-500/50 text-left shadow-lg shadow-slate-200/50 max-w-2xl mx-auto lg:mx-0 relative overflow-hidden transition-all duration-300 group">
+<div class="p-5 rounded-3xl bg-[#0b111b] border border-slate-800/90 hover:border-emerald-500/40 text-left shadow-2xl max-w-2xl mx-auto lg:mx-0 relative overflow-hidden bento-card-spring group">
   <div class="absolute -right-10 -top-10 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
   <div class="absolute -left-10 -bottom-10 w-36 h-36 bg-indigo-500/5 rounded-full blur-2xl pointer-events-none"></div>
   <div class="flex items-start gap-3.5 sm:gap-4 relative z-10">
@@ -893,10 +979,10 @@ document.addEventListener('keydown', function(e) {
         <span class="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 shadow-2xs">The Skeptic's Dare</span>
         <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs">&#10003; 100% Proven In Browser</span>
       </div>
-      <h3 class="text-base sm:text-lg font-extrabold font-heading text-slate-950 tracking-tight leading-snug">
+      <h3 class="text-base sm:text-lg font-extrabold font-heading text-white tracking-tight leading-snug">
         Think "100% Offline" is just marketing words? Prove us wrong in 5 seconds.
       </h3>
-      <p class="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+      <p class="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed">
         Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
       </p>
       <div class="pt-2 flex items-center gap-3">
@@ -912,36 +998,36 @@ document.addEventListener('keydown', function(e) {
 
 <!-- CTA Buttons with Micro-Interactions -->
 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-<a class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5 text-sm group" href="contact.html#schedule-briefing">
+<a class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2.5 text-sm group btn-spring" href="contact.html#schedule-briefing">
 <i class="w-4 h-4 text-emerald-300 group-hover:scale-110 transition-transform duration-300" data-lucide="calendar"></i>
 <span>Schedule Technical Briefing</span>
 </a>
-<a class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3.5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5 text-sm group" href="#about">
+<a class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700/80 font-medium px-6 py-3.5 rounded-xl shadow-md transition flex items-center gap-2.5 text-sm group btn-spring" href="#about">
 <i class="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" data-lucide="layers"></i>
 <span>Architecture Blueprint</span>
 </a>
-<a class="bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-medium px-5 py-3.5 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2.5 text-sm group" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
+<a class="bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-medium px-5 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm group btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
 <i class="w-4 h-4 text-slate-700" data-lucide="download"></i>
 <span>Resume (PDF)</span>
 </a>
 </div>
 
 <!-- Real-World Grounded Trust Pillars -->
-<div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-200/80 max-w-xl mx-auto lg:mx-0">
+<div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80 max-w-xl mx-auto lg:mx-0">
 <div>
-<p class="text-2xl font-bold font-mono text-slate-900">0 Bytes</p>
+<p class="text-2xl font-black font-mono text-white tabular-nums">0 Bytes</p>
 <p class="text-xs text-slate-500 mt-0.5 font-medium">Cloud Telemetry</p>
 </div>
 <div>
-<p class="text-2xl font-bold font-mono text-indigo-600">&#8377;0 / Mo</p>
+<p class="text-2xl font-black font-mono text-emerald-400 tabular-nums">&#8377;0 / Mo</p>
 <p class="text-xs text-slate-500 mt-0.5 font-medium">Zero Monthly Fees</p>
 </div>
 <div>
-<p class="text-2xl font-bold font-mono text-emerald-600">100%</p>
+<p class="text-2xl font-black font-mono text-cyan-400 tabular-nums">100%</p>
 <p class="text-xs text-slate-500 mt-0.5 font-medium">Pure Native Rust</p>
 </div>
 <div>
-<p class="text-2xl font-bold font-mono text-cyan-600">Patna, IN</p>
+<p class="text-2xl font-black font-mono text-slate-200 tabular-nums">Patna, IN</p>
 <p class="text-xs text-slate-500 mt-0.5 font-medium">Engineered Locally</p>
 </div>
 </div>
@@ -949,16 +1035,16 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Right Column: Interactive Profile Card & Real Verification Sandbox -->
 <div class="lg:col-span-5">
-<div id="hero-profile-card" class="bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-8 relative transition-transform duration-200 ease-out will-change-transform group">
+<div id="hero-profile-card" class="bg-[#0b111b] rounded-3xl border border-slate-800/90 shadow-2xl p-6 sm:p-8 relative bento-card-spring group">
 <!-- Dynamic Radial Glow Light Following Cursor -->
 <div id="card-glow-overlay" class="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.12),transparent_70%)]"></div>
 
 <!-- Top Decorative Header -->
-<div class="flex items-center justify-between pb-6 border-b border-slate-100 relative z-10">
+<div class="flex items-center justify-between pb-6 border-b border-slate-800/80 relative z-10">
 <div class="flex items-center gap-3">
 <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/20 border border-slate-700/50">
 <div>
-<h2 class="font-bold text-slate-900 text-base">Mohammad Rehan</h2>
+<h2 class="font-bold text-white text-base">Mohammad Rehan</h2>
 <p class="text-xs text-indigo-600 font-medium">Founder @ Rehan Quant Lab</p>
 </div>
 </div>
@@ -969,9 +1055,9 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Brand Statement Quote -->
 <div class="py-5 space-y-3 relative z-10">
-<div class="flex items-start gap-3 bg-slate-50/80 p-4 rounded-2xl border border-slate-200/70">
+<div class="flex items-start gap-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
 <i class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" data-lucide="quote"></i>
-<p class="text-xs text-slate-700 italic leading-relaxed">
+<p class="text-xs text-slate-300 italic leading-relaxed">
     "I build fast, offline-first desktop software that solves real business problems&mdash;from air-gapped document privacy to multi-counter retail billing&mdash;with zero recurring subscription fees."
 </p>
 </div>
@@ -979,21 +1065,21 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Verified Core Tech Badges -->
 <div class="space-y-2.5 pt-1 relative z-10">
-<p class="text-[11px] font-semibold text-slate-600 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
+<p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
 <div class="flex flex-wrap gap-1.5">
 <span class="bg-indigo-50/90 text-indigo-900 border border-indigo-200/70 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">100% Pure Native Rust</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Win32 &amp; Windows 11 API</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Air-Gapped Forensic Security</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Offline AI Whisper Transcriber</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Sub-12ms Anycast Web Arch</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Multi-Counter LAN Billing (POS)</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Direct UPI QR Integration</span>
-<span class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Zero Cloud Dependencies</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Win32 &amp; Windows 11 API</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Air-Gapped Forensic Security</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Offline AI Whisper Transcriber</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Sub-12ms Anycast Web Arch</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Multi-Counter LAN Billing (POS)</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Direct UPI QR Integration</span>
+<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Zero Cloud Dependencies</span>
 </div>
 </div>
 
 <!-- REAL AIR-GAP & HARDWARE INTEGRITY CHECK -->
-<div class="mt-5 pt-4 border-t border-slate-100 relative z-10">
+<div class="mt-5 pt-4 border-t border-slate-800/80 relative z-10">
 <div class="flex items-center justify-between text-xs font-mono mb-2">
     <span class="text-slate-500 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> AIR-GAP INTEGRITY:</span>
     <span id="hero-node-status" class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">100% OFFLINE VERIFIED</span>
@@ -1009,8 +1095,8 @@ document.addEventListener('keydown', function(e) {
 </div>
 
 <!-- Bottom Quick Action -->
-<div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs relative z-10">
-<span class="text-slate-500">Status: <strong class="text-slate-900">Active &amp; Ready</strong></span>
+<div class="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs relative z-10">
+<span class="text-slate-500">Status: <strong class="text-emerald-400">Active &amp; Ready</strong></span>
 <a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="contact.html">
 <span>Direct Consultation</span>
 <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
@@ -1087,7 +1173,7 @@ document.addEventListener('keydown', function(e) {
 
 
 <!-- ABOUT / PHILOSOPHY / HOW WE MAKE IT POSSIBLE SECTION -->
-<section class="py-14 sm:py-16 bg-white border-t border-slate-200" id="about">
+<section class="py-14 sm:py-16 bg-[#06090e] border-t border-slate-800/80 text-white" id="about">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -1095,7 +1181,7 @@ document.addEventListener('keydown', function(e) {
             <i class="w-3.5 h-3.5" data-lucide="layers"></i>
             <span>Engineering Philosophy &amp; Execution Blueprint</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
             Engineering Principles, System Architecture &amp; Reliability Standards
         </h2>
         <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
@@ -1335,7 +1421,7 @@ document.addEventListener('keydown', function(e) {
 </section>
 <!-- WHAT I BUILD & FEATURED PROJECTS TEASER -->
 <!-- Section 3: 1-Click Master Setup Bundles -->
-<section class="py-14 sm:py-16 bg-slateCanvas border-t border-slate-200" id="projects">
+<section class="py-14 sm:py-16 bg-[#06090e] border-t border-slate-800/80 text-white" id="projects">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
@@ -1585,7 +1671,7 @@ document.addEventListener('keydown', function(e) {
 <!-- ======================================================== -->
 <!-- REAL-WORLD OPERATIONAL CASE STUDIES & FIELD DEPLOYMENTS -->
 <!-- ======================================================== -->
-<section id="case-studies-highlight" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+<section id="case-studies-highlight" class="py-16 sm:py-20 bg-[#06090e] border-t border-slate-800/80 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-12 space-y-2">
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-bold">
@@ -1685,7 +1771,7 @@ document.addEventListener('keydown', function(e) {
 <!-- ======================================================== -->
 <!-- HOMEPAGE BUYER FAQ ACCORDION                             -->
 <!-- ======================================================== -->
-<section id="homepage-faq" class="py-16 sm:py-20 bg-white border-t border-slate-200">
+<section id="homepage-faq" class="py-16 sm:py-20 bg-[#06090e] border-t border-slate-800/80 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-bold">
@@ -2129,6 +2215,122 @@ function filterProjects(category, triggerEl) {
     }
 }
 
+</script>
+<!-- ======================================================== -->
+<!-- ANTHROPIC CANVAS 60FPS GRAPH ENGINE (HOMEPAGE HERO)     -->
+<!-- ======================================================== -->
+<script>
+(function() {
+  var canvas = document.getElementById('rql-home-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var animationFrameId = null;
+  var isVisible = true;
+  var width = 0;
+  var height = 0;
+
+  var POINT_COUNT = 36;
+  var points = [];
+  var mouse = { x: -1000, y: -1000, radius: 140 };
+
+  function initPoints() {
+    points.length = 0;
+    for (var i = 0; i < POINT_COUNT; i++) {
+      points.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        radius: Math.random() * 1.8 + 1.2
+      });
+    }
+  }
+
+  function resize() {
+    var rect = canvas.getBoundingClientRect();
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = rect.width;
+    height = rect.height;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.scale(dpr, dpr);
+    if (points.length === 0) initPoints();
+  }
+
+  function draw() {
+    if (!isVisible) return;
+    ctx.clearRect(0, 0, width, height);
+
+    for (var i = 0; i < points.length; i++) {
+      var p1 = points[i];
+      p1.x += p1.vx;
+      p1.y += p1.vy;
+      if (p1.x < 0 || p1.x > width) p1.vx *= -1;
+      if (p1.y < 0 || p1.y > height) p1.vy *= -1;
+
+      var dxm = mouse.x - p1.x;
+      var dym = mouse.y - p1.y;
+      var distMouse = Math.sqrt(dxm * dxm + dym * dym);
+      if (distMouse < mouse.radius) {
+        ctx.strokeStyle = 'rgba(16, 185, 129, ' + (1 - distMouse / mouse.radius) * 0.4 + ')';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+      }
+
+      for (var j = i + 1; j < points.length; j++) {
+        var p2 = points[j];
+        var dx = p1.x - p2.x;
+        var dy = p1.y - p2.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 115) {
+          ctx.strokeStyle = 'rgba(56, 189, 248, ' + (1 - dist / 115) * 0.18 + ')';
+          ctx.lineWidth = 0.75;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+
+      ctx.fillStyle = 'rgba(16, 185, 129, 0.75)';
+      ctx.beginPath();
+      ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    animationFrameId = requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', function(e) {
+    var rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+  window.addEventListener('mouseleave', function() {
+    mouse.x = -1000;
+    mouse.y = -1000;
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      isVisible = entry.isIntersecting;
+      if (isVisible && !animationFrameId) {
+        animationFrameId = requestAnimationFrame(draw);
+      } else if (!isVisible && animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    });
+  });
+  observer.observe(canvas);
+
+  resize();
+  animationFrameId = requestAnimationFrame(draw);
+})();
 </script>
 </body>
 </html>
