@@ -40,9 +40,9 @@
       }
       if (btn) {
         if (t === tabName) {
-          btn.className = 'sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs flex items-center gap-1.5 cursor-pointer';
+          btn.className = 'sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-slate-950 text-white border border-slate-950 shadow-xs flex items-center gap-1.5 cursor-pointer';
         } else {
-          btn.className = 'sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-medium font-mono text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent transition flex items-center gap-1.5 cursor-pointer';
+          btn.className = 'sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer';
         }
       }
     }
@@ -172,7 +172,7 @@
     if (savingsBadge) {
       savingsBadge.textContent = '-' + pct + '% SAVED';
       savingsBadge.className = 'font-mono text-xs font-extrabold px-2.5 py-1 rounded-full ' + 
-        (pct > 50 ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-sky-500/20 text-sky-300 border border-sky-500/40');
+        (pct > 50 ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-bold' : 'bg-sky-50 text-sky-800 border border-sky-300 font-bold');
     }
 
     if (timeBadge) {

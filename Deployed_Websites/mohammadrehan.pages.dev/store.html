@@ -843,10 +843,10 @@ tailwind.config = {
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-sm hover:border-slate-600" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-300" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-950">Menu</span>
-</button>
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-xs hover:border-slate-400" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+              <i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
+              <span class="font-heading font-bold text-slate-950">Menu</span>
+            </button>
 </div>
 
 </div>
@@ -1089,29 +1089,29 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Master Heading in Clean Slate 900 Typography -->
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-white max-w-4xl mx-auto leading-tight">
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-slate-950 max-w-4xl mx-auto leading-tight">
         Offline Desktop Applications <br class="hidden sm:inline" />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
+        <span class="bg-gradient-to-r from-slate-950 via-slate-800 to-slate-700 bg-clip-text text-transparent">
           &amp; Commercial Suites.
         </span>
       </h1>
 
       <!-- Subtitle (Harper & Presenton Standard) -->
-      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
-        Twenty-six single-binary Windows desktop tools engineered in pure Rust. <strong>100% offline, zero telemetry, zero monthly subscriptions</strong> &mdash; you pay once, own the compiled <code class="bg-slate-900 text-slate-200 border border-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte leaves your machine.
+      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
+        Twenty-six single-binary Windows desktop tools engineered in pure Rust. <strong>100% offline, zero telemetry, zero monthly subscriptions</strong> &mdash; you pay once, own the compiled <code class="bg-slate-100 text-slate-900 border border-slate-300 px-1.5 py-0.5 rounded font-mono text-xs font-bold">.exe</code> forever, and not a single byte leaves your machine.
       </p>
 
       <!-- Clean Trust Badges -->
-      <div class="flex flex-wrap items-center justify-center gap-2 pt-1 pb-2 text-xs font-mono text-slate-300">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-300 shadow-2xs">
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-1 pb-2 text-xs font-mono text-slate-700 font-semibold">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
           <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="zap"></i>
           <span>Sub-1ms Native Rust</span>
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-300 shadow-2xs">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
           <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield"></i>
           <span>100% Local &amp; Offline</span>
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-slate-300 shadow-2xs">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
           <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
           <span>Perpetual License Ownership</span>
         </span>
@@ -1347,23 +1347,23 @@ document.addEventListener('keydown', function(e) {
 
         <!-- Tool Selection Tabs -->
         <div class="flex items-center gap-2 overflow-x-auto py-4 border-b border-slate-200/60 no-scrollbar">
-          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-xs flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn active px-4 py-2.5 rounded-xl text-xs font-bold font-mono transition bg-slate-950 text-white border border-slate-950 shadow-xs flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="image"></i>
             <span>20. RQL ImageBatch (WebP Compressor)</span>
           </button>
-          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-medium font-mono text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent transition flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-rose-400" data-lucide="file-text"></i>
             <span>01. DocumentShield (Redactor)</span>
           </button>
-          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-medium font-mono text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent transition flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-sky-400" data-lucide="fingerprint"></i>
             <span>06. HashCheck (Cryptographic Hasher)</span>
           </button>
-          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-medium font-mono text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent transition flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-purple-400" data-lucide="qr-code"></i>
             <span>07. QRStudio (Vector QR Studio)</span>
           </button>
-          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-medium font-mono text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-transparent transition flex items-center gap-1.5 cursor-pointer">
+          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn px-4 py-2.5 rounded-xl text-xs font-bold font-mono text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-950 border border-slate-200 transition flex items-center gap-1.5 cursor-pointer">
             <i class="w-3.5 h-3.5 text-amber-400" data-lucide="git-compare"></i>
             <span>08. TextDiff (Myers Vector Engine)</span>
           </button>
@@ -1389,13 +1389,13 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <div class="mt-4">
-                  <label class="block border-2 border-dashed border-slate-700 hover:border-emerald-500/60 rounded-xl p-5 text-center cursor-pointer transition bg-slate-950/60 group">
+                  <label class="block border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-5 text-center cursor-pointer transition bg-white hover:bg-slate-50 group">
                     <input type="file" accept="image/png, image/jpeg, image/webp" class="hidden" onchange="handleImageUpload(this)">
                     <div class="flex flex-col items-center gap-2">
-                      <div class="w-10 h-10 rounded-xl bg-slate-800 group-hover:bg-emerald-500/20 text-slate-400 group-hover:text-emerald-400 flex items-center justify-center transition">
+                      <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-slate-200 text-slate-700 group-hover:text-slate-950 flex items-center justify-center transition">
                         <i class="w-5 h-5" data-lucide="upload-cloud"></i>
                       </div>
-                      <div class="text-xs font-mono text-slate-300 font-bold">
+                      <div class="text-xs font-mono text-slate-900 font-bold">
                         Drop any local image (PNG/JPG) or click to browse
                       </div>
                       <div class="text-[10px] font-mono text-slate-500">
@@ -1420,7 +1420,7 @@ document.addEventListener('keydown', function(e) {
               </div>
 
               <div class="text-[11px] font-mono text-slate-400 flex items-center justify-between pt-3 border-t border-slate-800">
-                <span>Original Size: <strong id="imagebatch-orig-size" class="text-white">1.2 MB</strong></span>
+                <span>Original Size: <strong id="imagebatch-orig-size" class="text-slate-900 font-bold">1.2 MB</strong></span>
                 <span class="text-emerald-400 font-bold">&#10003; SIMD Hardware Acceleration</span>
               </div>
             </div>
@@ -1447,11 +1447,11 @@ document.addEventListener('keydown', function(e) {
                 <div class="grid grid-cols-2 gap-3 mt-4 text-xs font-mono">
                   <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
                     <div class="text-slate-500 text-[10px] uppercase">Compressed WebP Size:</div>
-                    <div id="imagebatch-comp-size" class="text-emerald-400 font-bold text-sm mt-0.5">98 KB</div>
+                    <div id="imagebatch-comp-size" class="text-emerald-700 font-black text-sm mt-0.5 font-mono">98 KB</div>
                   </div>
                   <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
                     <div class="text-slate-500 text-[10px] uppercase">Execution Latency:</div>
-                    <div id="imagebatch-time-badge" class="text-white font-bold text-sm mt-0.5">4.2ms (Local RAM)</div>
+                    <div id="imagebatch-time-badge" class="text-slate-950 font-black text-sm mt-0.5 font-mono">4.2ms (Local RAM)</div>
                   </div>
                 </div>
               </div>
@@ -1465,20 +1465,20 @@ document.addEventListener('keydown', function(e) {
                 </button>
 
                 <!-- Engine C: Natural Free-to-Paid Bridge -->
-                <div class="p-3 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2">
+                <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
                   <div class="flex items-center gap-2 text-slate-400">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
                   </div>
-                  <p class="text-slate-300 leading-relaxed">
+                  <p class="text-slate-700 leading-relaxed font-sans font-medium">
                     Need to batch-convert 5,000 images at once with 16-core SIMD directly from Windows Explorer?
                   </p>
                   <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-slate-800/80">
-                    <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 font-bold text-xs transition">
+                    <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
                       <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
                       <span>&rarr;</span>
                     </a>
-                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer text-center sm:text-right">
+                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-600 hover:text-slate-950 underline font-semibold cursor-pointer text-center sm:text-right">
                       View Specs &amp; Guarantee &rarr;
                     </button>
                   </div>
@@ -1507,7 +1507,7 @@ document.addEventListener('keydown', function(e) {
                 </button>
               </div>
 
-              <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-mono text-xs focus:border-rose-500 focus:outline-hidden leading-relaxed resize-none"></textarea>
+              <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-500 focus:outline-none leading-relaxed resize-none"></textarea>
 
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500">
                 <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
@@ -1526,7 +1526,7 @@ document.addEventListener('keydown', function(e) {
                 </span>
               </div>
 
-              <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 font-mono text-xs overflow-y-auto leading-relaxed select-text">
+              <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs overflow-y-auto leading-relaxed select-text">
                 CONFIDENTIAL CLIENT LEGAL INTAKE &amp; FORENSIC DOSSIER
               </div>
 
@@ -1538,7 +1538,7 @@ document.addEventListener('keydown', function(e) {
 
           </div>
 
-          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200">
             <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer">
               <i class="w-4 h-4" data-lucide="shield-alert"></i>
               <span>Run Sovereign Redaction Engine (Sub-2ms)</span>
@@ -1590,7 +1590,7 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <div class="mt-4">
-                  <label class="block border-2 border-dashed border-slate-700 hover:border-sky-500/60 rounded-xl p-4 text-center cursor-pointer transition bg-slate-950/60 group">
+                  <label class="block border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-4 text-center cursor-pointer transition bg-white hover:bg-slate-50 group">
                     <input type="file" class="hidden" onchange="handleHashCheckFile(this)">
                     <div class="text-xs font-mono text-slate-300 font-bold">
                       Drop ANY file to compute cryptographic hash instantly
@@ -1603,12 +1603,12 @@ document.addEventListener('keydown', function(e) {
 
                 <div class="mt-4 space-y-1.5">
                   <label class="block text-[11px] font-mono text-slate-400">Or type custom text string:</label>
-                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-slate-950 border border-slate-800 text-slate-200 font-mono text-xs focus:border-sky-500 focus:outline-hidden" oninput="runTextHash()">
+                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-sky-500 focus:outline-none" oninput="runTextHash()">
                 </div>
               </div>
 
               <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-800">
-                Target: <strong id="hashcheck-target-label" class="text-white">Raw Text Payload</strong>
+                Target: <strong id="hashcheck-target-label" class="text-slate-900 font-bold">Raw Text Payload</strong>
               </div>
             </div>
 
@@ -1620,7 +1620,7 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <!-- SHA-256 Box -->
-                <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
                   <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
                     <span>SHA-256 (FIPS 180-4 Standard):</span>
                     <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
@@ -1631,7 +1631,7 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <!-- SHA-512 Box -->
-                <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <div class="p-3 rounded-xl bg-white border border-slate-200 space-y-1">
                   <div class="flex items-center justify-between text-[10px] font-mono text-slate-500 uppercase">
                     <span>SHA-512 (FIPS 180-4 Cryptographic Standard):</span>
                     <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-400 hover:text-sky-300 underline cursor-pointer">Copy</button>
@@ -1647,7 +1647,7 @@ document.addEventListener('keydown', function(e) {
               </div>
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
-              <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2">
+              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
                 <div class="flex items-center gap-2 text-slate-400">
                   <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
                   <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
@@ -1717,7 +1717,7 @@ document.addEventListener('keydown', function(e) {
               </button>
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
-              <div class="w-full p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-300 flex flex-col gap-2 text-left">
+              <div class="w-full p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2 text-left">
                 <div class="flex items-center gap-2 text-slate-400">
                   <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
                   <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desktop Windows Master License</span>
@@ -3565,10 +3565,10 @@ document.addEventListener('keydown', function(e) {
           <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-800 text-[10px] font-mono font-extrabold uppercase tracking-wider">
             100% Zero-Risk Protection
           </div>
-          <h4 class="text-lg sm:text-xl font-bold font-heading text-white">
+          <h4 class="text-lg sm:text-xl font-black font-heading text-slate-950">
             The 7-Day Unconditional Money-Back Guarantee
           </h4>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-3xl">
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl font-medium">
             Install any RQL workstation engine on your physical machine. If it fails to operate with 100% offline reliability, perform as documented, or eliminate your recurring SaaS expenses, email Founder Mohammad Rehan directly at <a data-obf="bWFpbHRvOnJlaGFucXVhbnRsYWJAZ21haWwuY29t" role="button" class="text-emerald-700 underline font-bold font-mono">rehanquantlab@gmail.com</a> within 7 days for an immediate 100% refund. Zero questions asked. You risk nothing.
           </p>
         </div>
@@ -3584,26 +3584,26 @@ document.addEventListener('keydown', function(e) {
     <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 text-slate-900 shadow-xl">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-xs font-mono font-bold">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-mono font-bold">
             <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span><span>COST SAVINGS AUDIT</span>
           </div>
-          <h3 class="text-xl sm:text-2xl font-bold font-heading text-white mt-2">
+          <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-2">
             The 3-Year Commercial ROI Balance Sheet
           </h3>
-          <p class="text-xs text-slate-400 mt-1">
+          <p class="text-xs text-slate-600 mt-1 font-medium">
             Compare recurring monthly corporate cloud rent vs 100% offline pure Rust workstation ownership.
           </p>
         </div>
         <div class="px-4 py-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-right">
           <div class="text-[10px] font-mono uppercase tracking-wider text-slate-400">Total 3-Yr Cash Returned to Client</div>
-          <div class="text-xl sm:text-2xl font-black font-mono text-emerald-400">+$8,714.00 USD <span class="text-xs font-normal text-slate-400">(&#8377;7,23,260)</span></div>
+          <div class="text-xl sm:text-2xl font-black font-mono text-emerald-700">+$8,714.00 USD <span class="text-xs font-normal text-slate-500">(&#8377;7,23,260)</span></div>
         </div>
       </div>
 
       <div class="overflow-x-auto mt-6">
         <table class="w-full text-left text-xs font-mono">
           <thead>
-            <tr class="text-slate-400 border-b border-slate-200">
+            <tr class="text-slate-700 border-b border-slate-200 font-bold">
               <th class="pb-3 font-semibold">RQL Desktop Suite</th>
               <th class="pb-3 font-semibold">Corporate Cloud Alternative &amp; Rent</th>
               <th class="pb-3 font-semibold">RQL Lifetime Price</th>
@@ -3612,122 +3612,122 @@ document.addEventListener('keydown', function(e) {
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
             <tr>
-              <td class="py-3 font-bold text-white">01. RQL DocumentShield&trade;</td>
-              <td class="py-3 text-slate-400">Adobe Acrobat Pro ($23.99/mo &bull; $288/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">01. RQL DocumentShield&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Adobe Acrobat Pro ($23.99/mo &bull; $288/yr)</td>
               <td class="py-3 text-rose-400 font-bold">$179 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$685 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">02. RQL WhisperVault&trade;</td>
-              <td class="py-3 text-slate-400">Otter.ai Pro ($16.99/mo &bull; $204/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">02. RQL WhisperVault&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Otter.ai Pro ($16.99/mo &bull; $204/yr)</td>
               <td class="py-3 text-violet-400 font-bold">$149 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$463 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">03. RQL RetailPOS&trade;</td>
-              <td class="py-3 text-slate-400">Square Retail Plus ($20.00/mo &bull; $240/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">03. RQL RetailPOS&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Square Retail Plus ($20.00/mo &bull; $240/yr)</td>
               <td class="py-3 text-emerald-400 font-bold">$169 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$551 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">04. RQL StoreChain&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Multi-Till SaaS ($35.00/mo &bull; $420/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">04. RQL StoreChain&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Multi-Till SaaS ($35.00/mo &bull; $420/yr)</td>
               <td class="py-3 text-indigo-400 font-bold">$299 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$961 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">05. RQL Conduit&trade;</td>
-              <td class="py-3 text-slate-400">Speedify Teams ($14.99/mo &bull; $180/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">05. RQL Conduit&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Speedify Teams ($14.99/mo &bull; $180/yr)</td>
               <td class="py-3 text-sky-400 font-bold">$129 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$411 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">06. RQL HashCheck&trade;</td>
-              <td class="py-3 text-slate-400">HashTab / Cloud SFV ($5.00/mo &bull; $60/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">06. RQL HashCheck&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">HashTab / Cloud SFV ($5.00/mo &bull; $60/yr)</td>
               <td class="py-3 text-teal-400 font-bold">$39 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$141 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">07. RQL QRStudio&trade;</td>
-              <td class="py-3 text-slate-400">Bitly / QR Tiger Cloud ($9.99/mo &bull; $120/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">07. RQL QRStudio&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Bitly / QR Tiger Cloud ($9.99/mo &bull; $120/yr)</td>
               <td class="py-3 text-amber-400 font-bold">$79 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$281 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">08. RQL TextDiff&trade;</td>
-              <td class="py-3 text-slate-400">Beyond Compare / DeltaWalker ($120/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">08. RQL TextDiff&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Beyond Compare / DeltaWalker ($120/yr)</td>
               <td class="py-3 text-indigo-400 font-bold">$99 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$261 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">09. RQL Renamer&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Bulk Renamer ($10.00/mo &bull; $120/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">09. RQL Renamer&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Bulk Renamer ($10.00/mo &bull; $120/yr)</td>
               <td class="py-3 text-teal-400 font-bold">$49 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$311 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">10. RQL TagEditor&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Audio Tagger / SongKong ($12.00/mo &bull; $144/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">10. RQL TagEditor&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Audio Tagger / SongKong ($12.00/mo &bull; $144/yr)</td>
               <td class="py-3 text-fuchsia-400 font-bold">$59 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$373 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">11. RQL FontViewer&trade;</td>
-              <td class="py-3 text-slate-400">FontBase Pro / Suitcase Fusion ($10.00/mo &bull; $120/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">11. RQL FontViewer&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">FontBase Pro / Suitcase Fusion ($10.00/mo &bull; $120/yr)</td>
               <td class="py-3 text-cyan-400 font-bold">$49 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$311 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">12. RQL DPDPShield&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Data Privacy SaaS ($20.00/mo &bull; $240/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">12. RQL DPDPShield&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Data Privacy SaaS ($20.00/mo &bull; $240/yr)</td>
               <td class="py-3 text-emerald-400 font-bold">$89 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$631 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">13. RQL PriceTag&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Barcode &amp; Labeling SaaS ($15.00/mo &bull; $180/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">13. RQL PriceTag&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Barcode &amp; Labeling SaaS ($15.00/mo &bull; $180/yr)</td>
               <td class="py-3 text-amber-400 font-bold">$79 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$461 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">14. RQL InvoiceGen&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Billing &amp; Invoicing SaaS ($15.00/mo &bull; $180/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">14. RQL InvoiceGen&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Billing &amp; Invoicing SaaS ($15.00/mo &bull; $180/yr)</td>
               <td class="py-3 text-indigo-400 font-bold">$89 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$451 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">15. RQL CSVFormat&trade;</td>
-              <td class="py-3 text-slate-400">Cloud Data Cleaning &amp; Tabular SaaS ($15.00/mo &bull; $180/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">15. RQL CSVFormat&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Cloud Data Cleaning &amp; Tabular SaaS ($15.00/mo &bull; $180/yr)</td>
               <td class="py-3 text-indigo-400 font-bold">$89 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$451 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">16. RQL PDFMerge&trade;</td>
-              <td class="py-3 text-slate-400">Adobe Acrobat Pro &amp; Smallpdf SaaS ($20.00/mo &bull; $240/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">16. RQL PDFMerge&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Adobe Acrobat Pro &amp; Smallpdf SaaS ($20.00/mo &bull; $240/yr)</td>
               <td class="py-3 text-indigo-400 font-bold">$119 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$601 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">17. RQL TaxLedger&trade;</td>
-              <td class="py-3 text-slate-400">Tally Prime &amp; Zoho Books SaaS ($25.00/mo &bull; $300/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">17. RQL TaxLedger&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Tally Prime &amp; Zoho Books SaaS ($25.00/mo &bull; $300/yr)</td>
               <td class="py-3 text-amber-400 font-bold">$119 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$781 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">18. RQL FileShredder&trade;</td>
-              <td class="py-3 text-slate-400">Blancco Cloud Eraser SaaS ($8.00/mo &bull; $96/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">18. RQL FileShredder&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Blancco Cloud Eraser SaaS ($8.00/mo &bull; $96/yr)</td>
               <td class="py-3 text-red-400 font-bold">$59 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$229 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">19. RQL ClipVault&trade;</td>
-              <td class="py-3 text-slate-400">Paste App Cloud Sync SaaS ($4.00/mo &bull; $48/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">19. RQL ClipVault&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">Paste App Cloud Sync SaaS ($4.00/mo &bull; $48/yr)</td>
               <td class="py-3 text-violet-400 font-bold">$39 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$105 Saved</td>
             </tr>
             <tr>
-              <td class="py-3 font-bold text-white">20. RQL ImageBatch&trade;</td>
-              <td class="py-3 text-slate-400">TinyPNG &amp; BulkResize SaaS ($9.00/mo &bull; $108/yr)</td>
+              <td class="py-3 font-bold text-slate-950 font-heading">20. RQL ImageBatch&trade;</td>
+              <td class="py-3 text-slate-600 font-medium">TinyPNG &amp; BulkResize SaaS ($9.00/mo &bull; $108/yr)</td>
               <td class="py-3 text-emerald-400 font-bold">$69 Once</td>
               <td class="py-3 text-right font-bold text-emerald-400">+$255 Saved</td>
             </tr>
@@ -3738,7 +3738,7 @@ document.addEventListener('keydown', function(e) {
 
     <!-- Empty Search State -->
     <div id="store-empty-state" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 my-8 shadow-xl">
-      <p class="text-base text-white font-bold">No software suites matched your search.</p>
+      <p class="text-base text-slate-950 font-black">No software suites matched your search.</p>
       <button onclick="resetStoreFilters()" class="mt-3 inline-block px-4 py-2 rounded-xl bg-emerald-500 text-slate-950 font-black text-xs btn-spring">
         Reset Search &amp; Filters
       </button>
@@ -3912,10 +3912,10 @@ document.addEventListener('keydown', function(e) {
           <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500">Official Windows 64-Bit Binary</span>
         </div>
 
-        <h3 id="modal-product-title" class="text-2xl font-black font-heading text-white">
+        <h3 id="modal-product-title" class="text-2xl font-black font-heading text-slate-950">
           RQL Commercial Workstation &bull; Specifications &amp; Guarantee
         </h3>
-        <p id="modal-product-desc" class="text-xs text-slate-300 mt-1">
+        <p id="modal-product-desc" class="text-xs text-slate-600 mt-1 font-medium">
           High-performance, air-gapped offline computing suite.
         </p>
 
@@ -3932,19 +3932,19 @@ document.addEventListener('keydown', function(e) {
 
         <!-- Architecture & Specifications Details -->
         <div class="mt-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs font-mono text-slate-300">
-          <div class="flex justify-between items-center text-slate-300">
+          <div class="flex justify-between items-center text-slate-600 font-medium">
             <span>Executable Format:</span>
             <span class="text-slate-900 font-bold">Portable .exe (Single Native Binary)</span>
           </div>
-          <div class="flex justify-between items-center text-slate-300">
+          <div class="flex justify-between items-center text-slate-600 font-medium">
             <span>Target OS:</span>
             <span class="text-slate-900 font-bold">Windows 10 / 11 / Server (64-bit)</span>
           </div>
-          <div class="flex justify-between items-center text-slate-300">
+          <div class="flex justify-between items-center text-slate-600 font-medium">
             <span>Cloud Dependencies:</span>
             <span class="text-emerald-700 font-bold bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">0 Bytes (Strict Air-Gap)</span>
           </div>
-          <div class="flex justify-between items-center text-slate-300">
+          <div class="flex justify-between items-center text-slate-600 font-medium">
             <span>Licensing Model:</span>
             <span class="text-slate-900 font-bold">Perpetual (Pay Once, Own Forever)</span>
           </div>
@@ -4197,10 +4197,10 @@ if (mobileBtn && mobileMenu) {
 function filterStoreCategory(category, buttonEl) {
   const buttons = document.querySelectorAll('#store-filter-buttons button');
   buttons.forEach(btn => {
-    btn.className = 'store-cat-btn px-4 py-2 rounded-xl text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition cursor-pointer';
+    btn.className = 'store-cat-btn px-4 py-2 rounded-xl text-xs font-bold font-mono text-slate-700 bg-white hover:bg-slate-100 hover:text-slate-950 border border-slate-200 transition cursor-pointer shadow-2xs';
   });
   if (buttonEl) {
-    buttonEl.className = 'store-cat-btn px-4 py-2 rounded-xl text-xs font-bold font-mono transition bg-emerald-500 text-slate-950 font-black shadow-lg shadow-emerald-500/20 cursor-pointer';
+    buttonEl.className = 'store-cat-btn px-4 py-2 rounded-xl text-xs font-bold font-mono transition bg-slate-950 text-white border border-slate-950 shadow-xs cursor-pointer';
   }
 
   const cards = document.querySelectorAll('#commercial-products-grid .store-product-card');
@@ -4757,10 +4757,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Title & Subtitle -->
         <div class="mb-4">
-          <h3 id="desk-product-title" class="text-xl sm:text-2xl font-black font-heading text-white leading-tight">
+          <h3 id="desk-product-title" class="text-xl sm:text-2xl font-black font-heading text-slate-950 leading-tight">
             Indian Domestic UPI &amp; License Desk
           </h3>
-          <p class="text-xs text-slate-300 mt-0.5">
+          <p class="text-xs text-slate-600 mt-0.5 font-medium">
             Instant domestic acquisition via UPI (Google Pay, PhonePe, Paytm, BHIM) with zero credit card foreign markups.
           </p>
         </div>
@@ -4793,20 +4793,20 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="flex flex-col justify-between space-y-3 font-mono text-xs">
             <div class="space-y-2.5">
               <div>
-                <label class="block text-slate-200 font-semibold mb-1">Full Name *</label>
+                <label class="block text-slate-800 font-bold mb-1">Full Name *</label>
                 <input id="desk-cust-name" type="text" placeholder="e.g. Adv. Rajesh Kumar" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
               </div>
               <div>
-                <label class="block text-slate-200 font-semibold mb-1">Firm / Business Name (Optional for Tax Invoice)</label>
+                <label class="block text-slate-800 font-bold mb-1">Firm / Business Name (Optional for Tax Invoice)</label>
                 <input id="desk-cust-firm" type="text" placeholder="e.g. Kumar Law Chambers / Sharma Enterprises" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
               </div>
               <div class="grid grid-cols-2 gap-2.5">
                 <div>
-                  <label class="block text-slate-200 font-semibold mb-1">WhatsApp Mobile *</label>
+                  <label class="block text-slate-800 font-bold mb-1">WhatsApp Mobile *</label>
                   <input id="desk-cust-phone" type="tel" placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
                 </div>
                 <div>
-                  <label class="block text-slate-200 font-semibold mb-1">State / Place of Supply *</label>
+                  <label class="block text-slate-800 font-bold mb-1">State / Place of Supply *</label>
                   <input id="desk-cust-state" type="text" placeholder="e.g. Bihar / Maharashtra" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
                 </div>
               </div>
@@ -4856,7 +4856,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <input id="desk-utr-input" type="text" maxlength="12" inputmode="numeric" placeholder="e.g. 431528910472" oninput="validateDeskUtrInput(this)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-emerald-600 font-mono text-sm tracking-wider font-bold" />
               <div id="desk-utr-error" class="hidden text-[10.5px] font-mono text-rose-700 bg-rose-50 border border-rose-200 rounded-lg p-2 font-medium"></div>
               <p class="text-[10px] text-slate-500 font-mono">Found in your GPay / PhonePe / Paytm / BHIM transaction receipt (strictly 12 digits).</p>
-              <div class="text-[10px] font-mono text-slate-300 bg-slate-950 rounded-xl p-2.5 border border-slate-800 leading-relaxed">
+              <div class="text-[10px] font-mono text-slate-700 bg-slate-100 rounded-xl p-2.5 border border-slate-200 leading-relaxed">
                 <span class="font-bold text-slate-800">&#128274; Statutory Bank Audit Rule:</span> UTR numbers are cross-verified against live HDFC Bank credit records before the Ed25519 cryptographic activation key is signed. Unverified or dummy UTR entries cannot activate commercial software.
               </div>
             </div>
@@ -4872,8 +4872,8 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <!-- Right Column: Crisp UPI Payment QR Box -->
-          <div class="p-4 rounded-2xl bg-slate-950/80 border-2 border-emerald-500/40 shadow-xl flex flex-col items-center justify-center text-center space-y-2.5">
-            <div class="text-[11px] font-mono font-bold text-emerald-900 uppercase">
+          <div class="p-4 rounded-2xl bg-slate-50 border-2 border-emerald-500/40 shadow-xs flex flex-col items-center justify-center text-center space-y-2.5">
+            <div class="text-[11px] font-mono font-bold text-emerald-800 uppercase">
               Scan with Any UPI App (GPay / PhonePe / Paytm / BHIM)
             </div>
             

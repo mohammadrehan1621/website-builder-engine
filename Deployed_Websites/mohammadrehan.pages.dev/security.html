@@ -304,10 +304,10 @@
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-200 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-600" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-950">Menu</span>
-</button>
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-xs hover:border-slate-400" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+              <i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
+              <span class="font-heading font-bold text-slate-950">Menu</span>
+            </button>
 </div>
 
 </div>
@@ -516,7 +516,7 @@ document.addEventListener('keydown', function(e) {
             <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
             <span>WDSI Status</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">14 / 14</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">14 / 14</div>
           <div class="text-[11px] text-slate-400 font-mono mt-0.5">Whitelisted Clean</div>
         </div>
 
@@ -525,7 +525,7 @@ document.addEventListener('keydown', function(e) {
             <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="wifi-off"></i>
             <span>Telemetry</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">0 KB</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">0 KB</div>
           <div class="text-[11px] text-slate-400 font-mono mt-0.5">Zero Network Sockets</div>
         </div>
 
@@ -534,7 +534,7 @@ document.addEventListener('keydown', function(e) {
             <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="cpu"></i>
             <span>Architecture</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">Pure Rust</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">Pure Rust</div>
           <div class="text-[11px] text-slate-400 font-mono mt-0.5">Native Win32 PE64</div>
         </div>
 
@@ -543,7 +543,7 @@ document.addEventListener('keydown', function(e) {
             <i class="w-3.5 h-3.5 text-amber-600" data-lucide="fingerprint"></i>
             <span>Verification</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">SHA-256</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">SHA-256</div>
           <div class="text-[11px] text-slate-400 font-mono mt-0.5">Bit-Accurate Hash</div>
         </div>
       </div>
@@ -553,11 +553,11 @@ document.addEventListener('keydown', function(e) {
     <div class="bg-slate-50 text-slate-900 rounded-3xl p-6 sm:p-8 mb-10 border border-slate-200 shadow-xl">
       <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-200">
         <div class="space-y-2 max-w-3xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-bold">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-mono font-bold">
             <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="shield-alert"></i>
             <span>TRANSPARENCY REPORT &bull; WINDOWS DEFENDER SMARTSCREEN</span>
           </div>
-          <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white">
+          <h3 class="text-xl sm:text-2xl font-black tracking-tight text-slate-950 font-heading">
             Why does Windows SmartScreen show an "Unrecognized App" prompt?
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -573,7 +573,7 @@ document.addEventListener('keydown', function(e) {
 
       <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
         <div class="space-y-3 text-xs text-slate-600">
-          <p class="font-semibold text-white text-sm">How to independently verify binary authenticity before running:</p>
+          <p class="font-bold text-slate-950 text-sm">How to independently verify binary authenticity before running:</p>
           <p>
             You do not have to take our word for it. Open Windows PowerShell and run this one-line command against your downloaded setup file to compute its cryptographic SHA-256 digest:
           </p>
@@ -962,7 +962,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 14 InvoiceGen -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">14</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-invoicegen" class="hover:text-indigo-600 transition">RQL InvoiceGen&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -987,7 +987,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 15 CSVFormat -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">15</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-csvformat" class="hover:text-indigo-600 transition">RQL CSVFormat&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1011,7 +1011,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 16 PDFMerge -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">16</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-pdfmerge" class="hover:text-indigo-600 transition">RQL PDFMerge&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1035,7 +1035,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 17 TaxLedger -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">17</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-taxledger" class="hover:text-amber-600 transition">RQL TaxLedger&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1059,7 +1059,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 18 FileShredder -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">18</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-fileshredder" class="hover:text-red-600 transition">RQL FileShredder&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1083,7 +1083,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 19 ClipVault -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">19</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-clipvault" class="hover:text-violet-600 transition">RQL ClipVault&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1107,7 +1107,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 20 ImageBatch -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">20</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-imagebatch" class="hover:text-emerald-600 transition">RQL ImageBatch&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1132,7 +1132,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 21 AudioExtract -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">21</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-audioextract" class="hover:text-emerald-600 transition">RQL AudioExtract&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1157,7 +1157,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 22 SubtitleSync -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">22</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-subtitlesync" class="hover:text-emerald-600 transition">RQL SubtitleSync&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1182,7 +1182,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 23 SpaceMap -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">23</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-spacemap" class="hover:text-emerald-600 transition">RQL SpaceMap&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1207,7 +1207,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 24 DocProtect -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">24</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-docprotect" class="hover:text-emerald-600 transition">RQL DocProtect&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1232,7 +1232,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 25 CashDrawer -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">25</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-cashdrawer" class="hover:text-emerald-600 transition">RQL CashDrawer&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1257,7 +1257,7 @@ document.addEventListener('keydown', function(e) {
             <!-- 26 ReceiptPrinter -->
             <tr class="hover:bg-slate-800/50 transition">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">26</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-white">
+              <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-receiptprinter" class="hover:text-emerald-600 transition">RQL ReceiptPrinter&trade;</a>
               </td>
               <td class="py-3.5 px-4 font-mono text-slate-600 font-semibold">
@@ -1401,11 +1401,11 @@ document.addEventListener('keydown', function(e) {
     <!-- DIRECT PDF DOWNLOAD BUTTON -->
     <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm mb-12">
       <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-100 text-xs font-mono font-bold border border-slate-200">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-mono font-bold border border-slate-200">
           <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="file-text"></i>
           <span>OFFICIAL GOVERNANCE &amp; ARCHITECTURAL DOCUMENTS</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">
           Download Official Institutional Security Certificate
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -1430,7 +1430,7 @@ document.addEventListener('keydown', function(e) {
     <!-- ENTERPRISE INTEGRATION CALLOUT -->
     <div class="p-6 sm:p-8 rounded-3xl bg-slate-50 text-slate-900 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-200 text-center md:text-left">
       <div class="space-y-2">
-        <h4 class="text-lg sm:text-xl font-bold font-heading text-white">
+        <h4 class="text-lg sm:text-xl font-black font-heading text-slate-950">
           Require Custom Vendor Security Questionnaires or Enterprise Fleet Keys?
         </h4>
         <p class="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
@@ -1441,7 +1441,7 @@ document.addEventListener('keydown', function(e) {
         <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwcmV2aWV3aW5nJTIwdGhlJTIwUlFMJTIwVHJ1c3QlMjAlMjYlMjBTZWN1cml0eSUyMFJlZ2lzdHJ5JTIwYW5kJTIwd291bGQlMjBsaWtlJTIwdG8lMjBkaXNjdXNzJTIwZW50ZXJwcmlzZSUyMGxpY2Vuc2luZy4=" role="button" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs font-mono uppercase shadow-md transition hover:scale-105">
           Founder WhatsApp &rarr;
         </a>
-        <a href="contact.html" class="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs font-mono border border-slate-700 transition hover:scale-105">
+        <a href="contact.html" class="px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs font-mono border border-slate-300 transition hover:scale-105">
           Schedule Briefing
         </a>
       </div>
