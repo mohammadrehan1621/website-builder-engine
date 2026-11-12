@@ -243,7 +243,7 @@
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
 
   <!-- Single Unified Institutional Status & Rotating Announcement Bar -->
   <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
@@ -266,29 +266,29 @@
   <!-- Header -->
   <!-- START: RQL_HYBRID_NAV_AND_DRAWER -->
 <!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+<header class="sticky top-0 z-40 bg-[#06090e]/95 backdrop-blur-md border-b border-slate-800 transition-all duration-200">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
 <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
 <div class="whitespace-nowrap">
-<span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
-<span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+<span class="font-extrabold text-white tracking-tight text-base block font-heading">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-400 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
 </div>
 </a>
 
 <!-- Clean Spacious 3-Flagship Desktop Navigation -->
 <nav class="hidden md:flex items-center gap-5 lg:gap-7 text-sm whitespace-nowrap">
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
 
 <!-- Commercial Suites (Sleek Pill with Live Count 14) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
 <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">26</span></a>
 
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
 </nav>
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
@@ -298,15 +298,15 @@
 <span>Schedule Briefing</span>
 </a>
 
-<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
-<i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
+<i class="w-3.5 h-3.5 text-slate-400" data-lucide="download"></i>
 <span>Resume</span>
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-900">Menu</span>
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+<i class="w-4 h-4 text-slate-200" data-lucide="menu"></i>
+<span class="font-heading font-bold text-white">Menu</span>
 </button>
 </div>
 
@@ -318,126 +318,140 @@
 <!-- ========================================== -->
 <div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-[#0b111b] text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
-    <div class="flex items-center gap-2.5">
-      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-[#06090e]/95">
+    <div class="flex items-center gap-3">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-8 h-8 rounded-lg border border-slate-700 shadow-sm">
       <div>
-        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
-        <div class="text-[10px] text-slate-500 font-mono">Site Directory Navigation</div>
+        <div class="font-black text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10.5px] text-emerald-400 font-mono tracking-wide font-bold">Site Directory Navigation</div>
       </div>
     </div>
-    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
       <i class="w-4 h-4" data-lucide="x"></i>
     </button>
   </div>
 
   <!-- Drawer Body -->
   <div class="p-5 space-y-6 flex-grow">
-    <!-- Flagship Systems & Portals -->
     <div>
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
-      <nav class="space-y-1.5">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Flagship Portals</div>
+      <nav class="space-y-2">
         <!-- Home -->
-        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
-              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Home</div>
+              <div class="text-[11px] text-slate-300">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Commercial Suites (14) -->
-        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 text-slate-800 transition group">
+        <!-- Commercial Suites (26) -->
+        <a href="store.html" class="flex items-center justify-between p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
             <div>
-              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
                 <span>Commercial Suites</span>
                 <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">26 Live</span>
               </div>
-              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+              <div class="text-[11px] text-rose-200 font-medium">100% offline desktop workstations &bull; Gumroad</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Free Web Tools -->
+        <a href="tools/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="wrench"></i></div>
+            <div>
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Free Web Tools</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
+              </div>
+              <div class="text-[11px] text-slate-300">100% offline in-browser sovereign utilities</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Projects -->
-        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="projects.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
-              <div class="text-[11px] text-slate-500">26 desktop tools, technical architecture &amp; specifications</div>
+              <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-300">26 desktop tools, architecture &amp; specifications</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Professional Experience -->
-        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="experience.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
-              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-300">4+ years retail leadership, BCA &amp; skill radar</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Security & Trust Registry -->
-        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100 font-bold text-slate-950 border border-slate-200 transition group">
+        <a href="security.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
-              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-300">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Research & Engineering Papers -->
-        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <!-- Research & Papers -->
+        <a href="research/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 border border-violet-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Technical Papers</div>
-              <div class="text-[11px] text-slate-500">Technical papers on pure-Rust architectures &amp; offline privacy</div>
+              <div class="text-sm font-bold text-white group-hover:text-violet-400 transition">Research &amp; Papers</div>
+              <div class="text-[11px] text-slate-300">Technical papers on pure-Rust &amp; offline privacy</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Contact & Hire -->
-        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="contact.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
-              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+              <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-300">Direct founder technical briefing &amp; consulting</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
       </nav>
     </div>
 
     <!-- Institutional Ledger & Legal -->
-    <div class="pt-4 border-t border-slate-100">
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+    <div class="pt-4 border-t border-slate-800">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Institutional Ledger</div>
       <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="scale"></i>
           <span>Legal &amp; Terms</span>
         </a>
-        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="history"></i>
           <span>Changelog</span>
         </a>
       </div>
@@ -445,13 +459,13 @@
   </div>
 
   <!-- Drawer Footer Actions -->
-  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
-      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+  <div class="p-5 border-t border-slate-800/90 bg-[#06090e]/95 space-y-2.5">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black font-heading shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-4 h-4 text-slate-950" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
-    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
-      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold font-mono flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-3.5 h-3.5 text-slate-300" data-lucide="download"></i>
       <span>Download Resume (PDF)</span>
     </a>
   </div>
@@ -520,49 +534,49 @@ document.addEventListener('keydown', function(e) {
         <i class="w-4 h-4 text-emerald-600" data-lucide="shield-check"></i>
         <span>TRUST &amp; CRYPTOGRAPHIC INTEGRITY REGISTRY</span>
       </div>
-      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heading text-slate-900 tracking-tight leading-tight">
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
         100% Air-Gapped Desktop Software &bull; Cryptographically Audited by Microsoft Security Intelligence
       </h1>
-      <p class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed mt-4 max-w-2xl mx-auto">
+      <p class="text-slate-300 text-xs sm:text-sm sm:leading-relaxed mt-4 max-w-2xl mx-auto">
         Every executable published by Rehan Quant Lab is engineered strictly in native 64-bit Rust (Win32), operates with zero cloud telemetry, and is whitelisted clean by Microsoft Defender.
       </p>
 
       <!-- 4 Key Invariants Cards -->
       <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+        <div class="bg-[#0b111b] p-4 rounded-2xl border border-slate-800 text-slate-100 shadow-xl shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-400 font-bold flex items-center gap-1.5">
             <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
             <span>WDSI Status</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">14 / 14</div>
-          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Whitelisted Clean</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">14 / 14</div>
+          <div class="text-[11px] text-slate-400 font-mono mt-0.5">Whitelisted Clean</div>
         </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+        <div class="bg-[#0b111b] p-4 rounded-2xl border border-slate-800 text-slate-100 shadow-xl shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-400 font-bold flex items-center gap-1.5">
             <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="wifi-off"></i>
             <span>Telemetry</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">0 KB</div>
-          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Zero Network Sockets</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">0 KB</div>
+          <div class="text-[11px] text-slate-400 font-mono mt-0.5">Zero Network Sockets</div>
         </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+        <div class="bg-[#0b111b] p-4 rounded-2xl border border-slate-800 text-slate-100 shadow-xl shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-400 font-bold flex items-center gap-1.5">
             <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="cpu"></i>
             <span>Architecture</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">Pure Rust</div>
-          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Native Win32 PE64</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">Pure Rust</div>
+          <div class="text-[11px] text-slate-400 font-mono mt-0.5">Native Win32 PE64</div>
         </div>
 
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
+        <div class="bg-[#0b111b] p-4 rounded-2xl border border-slate-800 text-slate-100 shadow-xl shadow-2xs">
+          <div class="text-[10px] font-mono uppercase text-slate-400 font-bold flex items-center gap-1.5">
             <i class="w-3.5 h-3.5 text-amber-600" data-lucide="fingerprint"></i>
             <span>Verification</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-900 mt-1">SHA-256</div>
-          <div class="text-[11px] text-slate-500 font-mono mt-0.5">Bit-Accurate Hash</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">SHA-256</div>
+          <div class="text-[11px] text-slate-400 font-mono mt-0.5">Bit-Accurate Hash</div>
         </div>
       </div>
     </div>
@@ -585,7 +599,7 @@ document.addEventListener('keydown', function(e) {
         <div class="p-4 rounded-2xl bg-white/5 border border-white/10 shrink-0 text-center font-mono text-xs min-w-[200px]">
           <span class="text-slate-400 block text-[10px] uppercase">Independent Indie Lab</span>
           <span class="text-emerald-400 font-bold text-sm block mt-1">100% Clean Source</span>
-          <span class="text-slate-500 text-[10px] mt-1 block">Zero Telemetry &bull; Zero Trojans</span>
+          <span class="text-slate-400 text-[10px] mt-1 block">Zero Telemetry &bull; Zero Trojans</span>
         </div>
       </div>
 
@@ -622,13 +636,13 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <!-- 14 DESKTOP SUITES CRYPTOGRAPHIC VERIFICATION TABLE -->
-    <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-sm mb-12">
+    <div class="bg-[#0b111b] border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-sm mb-12">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-100 gap-4">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold font-heading text-slate-900 tracking-tight">
+          <h2 class="text-xl sm:text-2xl font-bold font-heading text-white tracking-tight">
             26 Desktop Suites Cryptographic Verification Table
           </h2>
-          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">
             Authoritative, immutable SHA-256 checksums matching official production Gumroad releases.
           </p>
         </div>
@@ -642,7 +656,7 @@ document.addEventListener('keydown', function(e) {
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="border-b border-slate-200 text-[11px] font-mono uppercase tracking-wider text-slate-500 bg-slate-50/80">
+            <tr class="border-b border-slate-800 text-[11px] font-mono uppercase tracking-wider text-slate-400 bg-slate-900/80">
               <th class="py-3 px-3 text-center w-12 font-bold">#</th>
               <th class="py-3 px-4 font-bold">Product Suite</th>
               <th class="py-3 px-4 font-bold">Master Executable</th>
@@ -653,18 +667,18 @@ document.addEventListener('keydown', function(e) {
           <tbody class="divide-y divide-slate-100 text-xs font-sans">
 
             <!-- 01 DocumentShield -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">01</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">01</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-documentshield" class="hover:text-indigo-600 transition">RQL DocumentShield&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_DocumentShield_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735</span>
-                  <button onclick="copyHash('E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735</span>
+                  <button onclick="copyHash('E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -678,18 +692,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 02 WhisperVault -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">02</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">02</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-whispervault" class="hover:text-indigo-600 transition">RQL WhisperVault&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_WhisperVault_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E</span>
-                  <button onclick="copyHash('8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E</span>
+                  <button onclick="copyHash('8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -703,18 +717,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 03 RetailPOS -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">03</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">03</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-retailpos" class="hover:text-indigo-600 transition">RQL RetailPOS&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_RetailPOS_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C</span>
-                  <button onclick="copyHash('1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C</span>
+                  <button onclick="copyHash('1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -728,18 +742,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 04 StoreChain -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">04</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">04</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-storechain" class="hover:text-indigo-600 transition">RQL StoreChain&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_StoreChain_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731</span>
-                  <button onclick="copyHash('05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731</span>
+                  <button onclick="copyHash('05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -753,18 +767,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 05 Conduit -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">05</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">05</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-conduit" class="hover:text-indigo-600 transition">RQL Conduit&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_Conduit_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A</span>
-                  <button onclick="copyHash('8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A</span>
+                  <button onclick="copyHash('8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -778,18 +792,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 06 HashCheck -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">06</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">06</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-hashcheck" class="hover:text-indigo-600 transition">RQL HashCheck&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_HashCheck_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A</span>
-                  <button onclick="copyHash('47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A</span>
+                  <button onclick="copyHash('47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -803,18 +817,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 07 QRStudio -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">07</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">07</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-qrstudio" class="hover:text-indigo-600 transition">RQL QRStudio&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_QRStudio_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA</span>
-                  <button onclick="copyHash('DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA</span>
+                  <button onclick="copyHash('DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -828,18 +842,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 08 TextDiff -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">08</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">08</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-textdiff" class="hover:text-indigo-600 transition">RQL TextDiff&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_TextDiff_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6</span>
-                  <button onclick="copyHash('FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6</span>
+                  <button onclick="copyHash('FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -853,18 +867,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 09 Renamer -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">09</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">09</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-renamer" class="hover:text-indigo-600 transition">RQL Renamer&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_Renamer_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42</span>
-                  <button onclick="copyHash('0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42</span>
+                  <button onclick="copyHash('0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -878,18 +892,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 10 TagEditor -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">10</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">10</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-tageditor" class="hover:text-indigo-600 transition">RQL TagEditor&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_TagEditor_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735</span>
-                  <button onclick="copyHash('14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735</span>
+                  <button onclick="copyHash('14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -903,18 +917,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 11 FontViewer -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">11</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">11</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-fontviewer" class="hover:text-indigo-600 transition">RQL FontViewer&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_FontViewer_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A</span>
-                  <button onclick="copyHash('33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A</span>
+                  <button onclick="copyHash('33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -928,18 +942,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 12 DPDPShield -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">12</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">12</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-dpdpshield" class="hover:text-indigo-600 transition">RQL DPDPShield&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_DPDPShield_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5</span>
-                  <button onclick="copyHash('6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5</span>
+                  <button onclick="copyHash('6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -953,18 +967,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 13 PriceTag -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">13</td>
-              <td class="py-3.5 px-4 font-bold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">13</td>
+              <td class="py-3.5 px-4 font-bold text-white">
                 <a href="store.html#rql-pricetag" class="hover:text-indigo-600 transition">RQL PriceTag&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_PriceTag_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2 group">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">B2B9CFC2906E97FCC5FA6C3788C9799BD89DDB3AE6CFC915E2925C5BA4528C19</span>
-                  <button onclick="copyHash('B2B9CFC2906E97FCC5FA6C3788C9799BD89DDB3AE6CFC915E2925C5BA4528C19')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">B2B9CFC2906E97FCC5FA6C3788C9799BD89DDB3AE6CFC915E2925C5BA4528C19</span>
+                  <button onclick="copyHash('B2B9CFC2906E97FCC5FA6C3788C9799BD89DDB3AE6CFC915E2925C5BA4528C19')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <i class="w-3.5 h-3.5" data-lucide="copy"></i>
                   </button>
                 </div>
@@ -978,18 +992,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 14 InvoiceGen -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">14</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">14</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-invoicegen" class="hover:text-indigo-600 transition">RQL InvoiceGen&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_InvoiceGen_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF</span>
-                  <button onclick="copyHash('9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF</span>
+                  <button onclick="copyHash('9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1003,18 +1017,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 15 CSVFormat -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">15</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">15</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-csvformat" class="hover:text-indigo-600 transition">RQL CSVFormat&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_CSVFormat_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9</span>
-                  <button onclick="copyHash('FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9</span>
+                  <button onclick="copyHash('FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1027,18 +1041,18 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 16 PDFMerge -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">16</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">16</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-pdfmerge" class="hover:text-indigo-600 transition">RQL PDFMerge&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_PDFMerge_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">222AA5AC602B7EFC5733FFEF77C048DF8C9CF110638777B1AFE4A5B425408548</span>
-                  <button onclick="copyHash('222AA5AC602B7EFC5733FFEF77C048DF8C9CF110638777B1AFE4A5B425408548')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">222AA5AC602B7EFC5733FFEF77C048DF8C9CF110638777B1AFE4A5B425408548</span>
+                  <button onclick="copyHash('222AA5AC602B7EFC5733FFEF77C048DF8C9CF110638777B1AFE4A5B425408548')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1051,18 +1065,18 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 17 TaxLedger -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">17</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">17</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-taxledger" class="hover:text-amber-600 transition">RQL TaxLedger&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_TaxLedger_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">7F2CBDE5F1DB5B23E2483CB08B3033DA0EEB3892A2ED5AF5A809A0539F8F499B</span>
-                  <button onclick="copyHash('7F2CBDE5F1DB5B23E2483CB08B3033DA0EEB3892A2ED5AF5A809A0539F8F499B')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">7F2CBDE5F1DB5B23E2483CB08B3033DA0EEB3892A2ED5AF5A809A0539F8F499B</span>
+                  <button onclick="copyHash('7F2CBDE5F1DB5B23E2483CB08B3033DA0EEB3892A2ED5AF5A809A0539F8F499B')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1075,18 +1089,18 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 18 FileShredder -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">18</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">18</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-fileshredder" class="hover:text-red-600 transition">RQL FileShredder&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_FileShredder_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">470DCB5912155668EF6E0F7CB1001AC9406B2EA3C639B28288177524EB098595</span>
-                  <button onclick="copyHash('470DCB5912155668EF6E0F7CB1001AC9406B2EA3C639B28288177524EB098595')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">470DCB5912155668EF6E0F7CB1001AC9406B2EA3C639B28288177524EB098595</span>
+                  <button onclick="copyHash('470DCB5912155668EF6E0F7CB1001AC9406B2EA3C639B28288177524EB098595')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1099,18 +1113,18 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 19 ClipVault -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">19</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">19</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-clipvault" class="hover:text-violet-600 transition">RQL ClipVault&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_ClipVault_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">CC93D84A3566EFD34C352A89C921D007D4377EBB7ABDAD9ACE9C32308660D058</span>
-                  <button onclick="copyHash('CC93D84A3566EFD34C352A89C921D007D4377EBB7ABDAD9ACE9C32308660D058')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">CC93D84A3566EFD34C352A89C921D007D4377EBB7ABDAD9ACE9C32308660D058</span>
+                  <button onclick="copyHash('CC93D84A3566EFD34C352A89C921D007D4377EBB7ABDAD9ACE9C32308660D058')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1123,18 +1137,18 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 20 ImageBatch -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">20</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">20</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-imagebatch" class="hover:text-emerald-600 transition">RQL ImageBatch&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_ImageBatch_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">5465420D195551BF704D26AD0711E076DB6F0491FC72F63E08094257879606C2</span>
-                  <button onclick="copyHash('5465420D195551BF704D26AD0711E076DB6F0491FC72F63E08094257879606C2')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">5465420D195551BF704D26AD0711E076DB6F0491FC72F63E08094257879606C2</span>
+                  <button onclick="copyHash('5465420D195551BF704D26AD0711E076DB6F0491FC72F63E08094257879606C2')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1148,18 +1162,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 21 AudioExtract -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">21</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">21</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-audioextract" class="hover:text-emerald-600 transition">RQL AudioExtract&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_AudioExtract_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">FC46615AD4B39B165A430E9EB5C33B69BE0D2A5B8A81D2C6DE1DFA6DDCF291BD</span>
-                  <button onclick="copyHash('FC46615AD4B39B165A430E9EB5C33B69BE0D2A5B8A81D2C6DE1DFA6DDCF291BD')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">FC46615AD4B39B165A430E9EB5C33B69BE0D2A5B8A81D2C6DE1DFA6DDCF291BD</span>
+                  <button onclick="copyHash('FC46615AD4B39B165A430E9EB5C33B69BE0D2A5B8A81D2C6DE1DFA6DDCF291BD')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1173,18 +1187,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 22 SubtitleSync -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">22</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">22</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-subtitlesync" class="hover:text-emerald-600 transition">RQL SubtitleSync&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_SubtitleSync_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">F029E8A1147EE6AF83444DA3246AE54A84B351A537FBE81B28D0A690FFAC9085</span>
-                  <button onclick="copyHash('F029E8A1147EE6AF83444DA3246AE54A84B351A537FBE81B28D0A690FFAC9085')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">F029E8A1147EE6AF83444DA3246AE54A84B351A537FBE81B28D0A690FFAC9085</span>
+                  <button onclick="copyHash('F029E8A1147EE6AF83444DA3246AE54A84B351A537FBE81B28D0A690FFAC9085')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1198,18 +1212,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 23 SpaceMap -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">23</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">23</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-spacemap" class="hover:text-emerald-600 transition">RQL SpaceMap&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_SpaceMap_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">BA5379406DA8CDE92710E623A80DE746395F42613D30797BCC392E6373941236</span>
-                  <button onclick="copyHash('BA5379406DA8CDE92710E623A80DE746395F42613D30797BCC392E6373941236')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">BA5379406DA8CDE92710E623A80DE746395F42613D30797BCC392E6373941236</span>
+                  <button onclick="copyHash('BA5379406DA8CDE92710E623A80DE746395F42613D30797BCC392E6373941236')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1223,18 +1237,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 24 DocProtect -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">24</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">24</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-docprotect" class="hover:text-emerald-600 transition">RQL DocProtect&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_DocProtect_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">499B978C8DBC0C820A005ADEE40067785624FCF0AA7E988B97486FA7E31C6620</span>
-                  <button onclick="copyHash('499B978C8DBC0C820A005ADEE40067785624FCF0AA7E988B97486FA7E31C6620')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">499B978C8DBC0C820A005ADEE40067785624FCF0AA7E988B97486FA7E31C6620</span>
+                  <button onclick="copyHash('499B978C8DBC0C820A005ADEE40067785624FCF0AA7E988B97486FA7E31C6620')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1248,18 +1262,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 25 CashDrawer -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">25</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">25</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-cashdrawer" class="hover:text-emerald-600 transition">RQL CashDrawer&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_CashDrawer_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">22DF6CDB3DC22B0A46526BBEB3AA84196199A93DC0A4DDED97354C78367F6539</span>
-                  <button onclick="copyHash('22DF6CDB3DC22B0A46526BBEB3AA84196199A93DC0A4DDED97354C78367F6539')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">22DF6CDB3DC22B0A46526BBEB3AA84196199A93DC0A4DDED97354C78367F6539</span>
+                  <button onclick="copyHash('22DF6CDB3DC22B0A46526BBEB3AA84196199A93DC0A4DDED97354C78367F6539')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1273,18 +1287,18 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 26 ReceiptPrinter -->
-            <tr class="hover:bg-slate-50/70 transition">
-              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-500">26</td>
-              <td class="py-3.5 px-4 font-heading font-semibold text-slate-900">
+            <tr class="hover:bg-slate-800/50 transition">
+              <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">26</td>
+              <td class="py-3.5 px-4 font-heading font-semibold text-white">
                 <a href="store.html#rql-receiptprinter" class="hover:text-emerald-600 transition">RQL ReceiptPrinter&trade;</a>
               </td>
-              <td class="py-3.5 px-4 font-mono text-slate-700 font-semibold">
+              <td class="py-3.5 px-4 font-mono text-slate-200 font-semibold">
                 <code>RQL_ReceiptPrinter_Master_Setup.exe</code>
               </td>
               <td class="py-3.5 px-4">
                 <div class="flex items-center gap-2">
-                  <span class="hash-cell text-slate-700 bg-slate-100 px-2 py-1 rounded border border-slate-200">1023C97CB5BFC2780C37F6F3B53460216CB5ADCBE75EC7DAF727B3B47EECADA0</span>
-                  <button onclick="copyHash('1023C97CB5BFC2780C37F6F3B53460216CB5ADCBE75EC7DAF727B3B47EECADA0')" class="p-1 rounded text-slate-400 hover:text-slate-800 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
+                  <span class="hash-cell text-slate-200 bg-slate-100 px-2 py-1 rounded border border-slate-800">1023C97CB5BFC2780C37F6F3B53460216CB5ADCBE75EC7DAF727B3B47EECADA0</span>
+                  <button onclick="copyHash('1023C97CB5BFC2780C37F6F3B53460216CB5ADCBE75EC7DAF727B3B47EECADA0')" class="p-1 rounded text-slate-400 hover:text-slate-100 hover:bg-slate-200 transition shrink-0" title="Copy SHA-256">
                     <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                   </button>
                 </div>
@@ -1362,10 +1376,10 @@ document.addEventListener('keydown', function(e) {
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-bold mb-2">
             <span>&#128274; SOVEREIGN RSA-4096 / SHA-256 RELEASE SIGNING REGISTRY</span>
           </div>
-          <h3 class="text-xl sm:text-2xl font-bold font-heading text-slate-900 tracking-tight">
+          <h3 class="text-xl sm:text-2xl font-bold font-heading text-white tracking-tight">
             Cryptographically Signed Master Hash Manifest
           </h3>
-          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
             Every digital archive published by Rehan Quant Lab is cryptographically hashed, aggregated into an immutable master manifest, and signed using Founder Mohammad Rehan's sovereign RSA-4096 private key.
           </p>
         </div>
@@ -1379,10 +1393,10 @@ document.addEventListener('keydown', function(e) {
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <!-- Artifact 1: Master Manifest -->
-        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 flex flex-col justify-between space-y-3">
           <div>
-            <div class="text-xs font-mono font-bold text-slate-900">1. Master SHA-256 Manifest</div>
-            <p class="text-[11px] text-slate-500 font-mono mt-1">Plaintext registry of all 26 official production setup archives and their cryptographic hashes.</p>
+            <div class="text-xs font-mono font-bold text-white">1. Master SHA-256 Manifest</div>
+            <p class="text-[11px] text-slate-400 font-mono mt-1">Plaintext registry of all 26 official production setup archives and their cryptographic hashes.</p>
           </div>
           <a href="downloads/RQL_SOVEREIGN_MANIFEST.sha256" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer">
             <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1391,10 +1405,10 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- Artifact 2: Detached Signature -->
-        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 flex flex-col justify-between space-y-3">
           <div>
-            <div class="text-xs font-mono font-bold text-slate-900">2. RSA-4096 Sovereign Signature</div>
-            <p class="text-[11px] text-slate-500 font-mono mt-1">Detached cryptographic PKCS#1 v1.5 signature proving authenticity of the master manifest.</p>
+            <div class="text-xs font-mono font-bold text-white">2. RSA-4096 Sovereign Signature</div>
+            <p class="text-[11px] text-slate-400 font-mono mt-1">Detached cryptographic PKCS#1 v1.5 signature proving authenticity of the master manifest.</p>
           </div>
           <a href="downloads/RQL_SOVEREIGN_MANIFEST.sha256.sig" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-indigo-900 hover:bg-indigo-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer">
             <svg class="w-3.5 h-3.5 text-indigo-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1403,10 +1417,10 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- Artifact 3: Public Verification Key -->
-        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 flex flex-col justify-between space-y-3">
           <div>
-            <div class="text-xs font-mono font-bold text-slate-900">3. Sovereign Public Key</div>
-            <p class="text-[11px] text-slate-500 font-mono mt-1">Mohammad Rehan's public key registered in RFC 9116 security.txt registry.</p>
+            <div class="text-xs font-mono font-bold text-white">3. Sovereign Public Key</div>
+            <p class="text-[11px] text-slate-400 font-mono mt-1">Mohammad Rehan's public key registered in RFC 9116 security.txt registry.</p>
           </div>
           <a href=".well-known/rql-release-signing-public.key" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer">
             <svg class="w-3.5 h-3.5 text-emerald-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -1417,16 +1431,16 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <!-- DIRECT PDF DOWNLOAD BUTTON -->
-    <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm mb-12">
+    <div class="bg-[#0b111b] border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-sm mb-12">
       <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-mono font-bold border border-slate-200">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-100 text-xs font-mono font-bold border border-slate-800">
           <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="file-text"></i>
           <span>OFFICIAL GOVERNANCE &amp; ARCHITECTURAL DOCUMENTS</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold font-heading text-slate-900">
+        <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
           Download Official Institutional Security Certificate
         </h3>
-        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
           Download digitally signed PDF certificate for vendor onboarding, cryptographic audit verification, and corporate procurement.
         </p>
       </div>
@@ -1469,57 +1483,67 @@ document.addEventListener('keydown', function(e) {
 </main>
 
   <!-- FOOTER -->
-  <footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
-      <div class="space-y-3 md:col-span-2">
-        <div class="flex items-center gap-2.5">
-          <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
-          <span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab&trade;</span></span>
-        </div>
-        <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
-          Founder &amp; Principal Systems Architect. High-performance computational &amp; distributed systems engineering.
-        </p>
-        <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
-          <i class="w-4 h-4" data-lucide="shield-check"></i>
-          <span>100% Air-Gapped Desktop Software &bull; Zero Cloud Telemetry</span>
-        </div>
-      </div>
-      <div>
-        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
-          <li><a class="hover:text-slate-900 transition" href="store.html">Commercial Store (14 Suites)</a></li>
-          <li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Systems</a></li>
-          <li><a class="hover:text-slate-900 transition" href="experience.html">Professional Experience</a></li>
-          <li><a class="text-emerald-700 font-bold hover:underline flex items-center gap-1" href="security.html">Trust &amp; Security Registry </a></li>
-          <li><a class="hover:text-slate-900 transition" href="contact.html">Contact &amp; Hire</a></li>
-          <li><a class="hover:text-slate-900 transition" href="legal.html">Master SaaS Agreement </a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Official Channels</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a class="hover:text-emerald-700 transition flex items-center gap-1" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg=" role="button" target="_blank" rel="noopener noreferrer">WhatsApp Direct: &#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&nbsp;&#49;&#56;&#53;&#52;&#56;</a></li>
-          <li><a class="hover:text-indigo-600 transition" href="https://github.com/mohammadrehan1621" target="_blank" rel="noopener noreferrer">GitHub Enterprise Track</a></li>
-          <li><a class="hover:text-indigo-600 transition" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" target="_blank" rel="noopener noreferrer">Gumroad Commercial Store</a></li>
-          <li><a class="hover:text-indigo-600 transition" href="security.html">Cryptographic Hash Registry</a></li>
-        </ul>
+  <footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <div class="space-y-3.5">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover border border-slate-700">
+      <div class="leading-tight">
+        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-      <div class="flex flex-wrap items-center gap-3">
-        <span>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade;. All rights reserved.</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200/90 text-slate-700 font-mono text-[10px]"><i class="w-3 h-3 text-emerald-600" data-lucide="award"></i><span>Govt. of India MSME: UDYAM-BR-26-0258772 &bull; Est. 12/01/2023</span></span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a class="hover:underline text-emerald-600 font-semibold" href="security.html">Security Registry</a>
-        <span>&bull;</span>
-        <a class="hover:underline" href="legal.html">Legal Agreement</a>
-        <span>&bull;</span>
-        <a class="hover:underline" href="sitemap.xml">Sitemap (ISO 8601)</a>
-      </div>
+    <p class="text-xs text-slate-400 leading-relaxed">
+      Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
+    </p>
+    <div class="pt-1 text-xs text-slate-400 space-y-1">
+      <div><span class="font-semibold text-slate-200">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-200">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-200">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
     </div>
-  </footer>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-rose-400 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-emerald-400 hover:text-emerald-300 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-slate-900 border border-slate-700 px-1 rounded">SHA-256</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+  <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade; &bull; UDYAM-BR-26-0258772</div>
+  <div class="flex items-center gap-4">
+    <a href="legal.html" class="hover:text-white transition">Terms &amp; Disclosures</a>
+    <span>&bull;</span>
+    <a href="security.html" class="hover:text-white transition">Trust Registry</a>
+    <span>&bull;</span>
+    <span class="text-emerald-400 font-mono">100% Offline Resilient</span>
+  </div>
+</div>
+</footer>
 
   <!-- Toast Notification Element -->
   <div id="toast" class="toast">&#10003; SHA-256 Hash Copied!</div>

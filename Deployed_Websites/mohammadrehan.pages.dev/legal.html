@@ -198,7 +198,7 @@ p, li, span, a {
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
 </head>
-<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
 
 <!-- Single Unified Institutional Status & Rotating Announcement Bar -->
 <div class="bg-slate-950 text-slate-300 text-xs py-1.5 px-4 font-mono tracking-tight border-b border-slate-800/80 relative z-50">
@@ -212,7 +212,7 @@ p, li, span, a {
         </div>
         <div class="flex items-center gap-3 shrink-0 text-xs font-sans">
             <span class="text-slate-400 hidden md:inline font-mono text-[11px]">&lt; 1ms Rust Latency &bull; Zero Cloud Telemetry</span>
-            <span class="text-slate-700 hidden md:inline">|</span>
+            <span class="text-slate-200 hidden md:inline">|</span>
             <a href="store.html" class="text-emerald-400 hover:text-emerald-300 font-bold underline transition flex items-center gap-1 font-mono">
                 <span>Commercial Suites (14)</span>
                 <i class="w-3 h-3" data-lucide="arrow-right"></i>
@@ -224,29 +224,29 @@ p, li, span, a {
 <!-- Header (Spacious, Institutional Firm Header) -->
 <!-- START: RQL_HYBRID_NAV_AND_DRAWER -->
 <!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+<header class="sticky top-0 z-40 bg-[#06090e]/95 backdrop-blur-md border-b border-slate-800 transition-all duration-200">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
 <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
 <div class="whitespace-nowrap">
-<span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
-<span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+<span class="font-extrabold text-white tracking-tight text-base block font-heading">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-400 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
 </div>
 </a>
 
 <!-- Clean Spacious 3-Flagship Desktop Navigation -->
 <nav class="hidden md:flex items-center gap-5 lg:gap-7 text-sm whitespace-nowrap">
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
 
 <!-- Commercial Suites (Sleek Pill with Live Count 14) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
 <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">26</span></a>
 
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
 </nav>
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
@@ -256,15 +256,15 @@ p, li, span, a {
 <span>Schedule Briefing</span>
 </a>
 
-<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
-<i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
+<i class="w-3.5 h-3.5 text-slate-400" data-lucide="download"></i>
 <span>Resume</span>
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-900">Menu</span>
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+<i class="w-4 h-4 text-slate-200" data-lucide="menu"></i>
+<span class="font-heading font-bold text-white">Menu</span>
 </button>
 </div>
 
@@ -276,126 +276,140 @@ p, li, span, a {
 <!-- ========================================== -->
 <div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-[#0b111b] text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
-    <div class="flex items-center gap-2.5">
-      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-[#06090e]/95">
+    <div class="flex items-center gap-3">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-8 h-8 rounded-lg border border-slate-700 shadow-sm">
       <div>
-        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
-        <div class="text-[10px] text-slate-500 font-mono">Site Directory Navigation</div>
+        <div class="font-black text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10.5px] text-emerald-400 font-mono tracking-wide font-bold">Site Directory Navigation</div>
       </div>
     </div>
-    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
       <i class="w-4 h-4" data-lucide="x"></i>
     </button>
   </div>
 
   <!-- Drawer Body -->
   <div class="p-5 space-y-6 flex-grow">
-    <!-- Flagship Systems & Portals -->
     <div>
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
-      <nav class="space-y-1.5">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Flagship Portals</div>
+      <nav class="space-y-2">
         <!-- Home -->
-        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
-              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Home</div>
+              <div class="text-[11px] text-slate-300">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Commercial Suites (14) -->
-        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 text-slate-800 transition group">
+        <!-- Commercial Suites (26) -->
+        <a href="store.html" class="flex items-center justify-between p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
             <div>
-              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
                 <span>Commercial Suites</span>
                 <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">26 Live</span>
               </div>
-              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+              <div class="text-[11px] text-rose-200 font-medium">100% offline desktop workstations &bull; Gumroad</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Free Web Tools -->
+        <a href="tools/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="wrench"></i></div>
+            <div>
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Free Web Tools</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
+              </div>
+              <div class="text-[11px] text-slate-300">100% offline in-browser sovereign utilities</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Projects -->
-        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="projects.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
-              <div class="text-[11px] text-slate-500">26 desktop tools, technical architecture &amp; specifications</div>
+              <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-300">26 desktop tools, architecture &amp; specifications</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Professional Experience -->
-        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="experience.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
-              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-300">4+ years retail leadership, BCA &amp; skill radar</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Security & Trust Registry -->
-        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="security.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
-              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-300">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Research & Engineering Papers -->
-        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <!-- Research & Papers -->
+        <a href="research/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 border border-violet-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Technical Papers</div>
-              <div class="text-[11px] text-slate-500">Technical papers on pure-Rust architectures &amp; offline privacy</div>
+              <div class="text-sm font-bold text-white group-hover:text-violet-400 transition">Research &amp; Papers</div>
+              <div class="text-[11px] text-slate-300">Technical papers on pure-Rust &amp; offline privacy</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Contact & Hire -->
-        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="contact.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
-              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+              <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-300">Direct founder technical briefing &amp; consulting</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
       </nav>
     </div>
 
     <!-- Institutional Ledger & Legal -->
-    <div class="pt-4 border-t border-slate-100">
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+    <div class="pt-4 border-t border-slate-800">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Institutional Ledger</div>
       <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="scale"></i>
           <span>Legal &amp; Terms</span>
         </a>
-        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="history"></i>
           <span>Changelog</span>
         </a>
       </div>
@@ -403,13 +417,13 @@ p, li, span, a {
   </div>
 
   <!-- Drawer Footer Actions -->
-  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
-      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+  <div class="p-5 border-t border-slate-800/90 bg-[#06090e]/95 space-y-2.5">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black font-heading shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-4 h-4 text-slate-950" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
-    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
-      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold font-mono flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-3.5 h-3.5 text-slate-300" data-lucide="download"></i>
       <span>Download Resume (PDF)</span>
     </a>
   </div>
@@ -476,12 +490,12 @@ document.addEventListener('keydown', function(e) {
         <!-- Search Input -->
         <div class="relative w-full sm:w-80">
             <i class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" data-lucide="search"></i>
-            <input id="clause-search-input" type="text" placeholder="Search clauses (e.g. arbitration, goods, refund)..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 text-xs font-sans text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 bg-white transition shadow-2xs">
+            <input id="clause-search-input" type="text" placeholder="Search clauses (e.g. arbitration, goods, refund)..." class="w-full pl-9 pr-3 py-2 rounded-lg border border-slate-300 text-xs font-sans text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 bg-white transition shadow-2xs">
         </div>
 
         <!-- Quick Section Dropdown & Print Actions -->
         <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-            <select id="clause-jump-select" onchange="jumpToClause(this.value)" class="px-2.5 py-2 rounded-lg border border-slate-300 bg-white text-slate-700 text-xs font-sans focus:outline-none focus:ring-1 focus:ring-slate-900 cursor-pointer shadow-2xs">
+            <select id="clause-jump-select" onchange="jumpToClause(this.value)" class="px-2.5 py-2 rounded-lg border border-slate-300 bg-white text-slate-200 text-xs font-sans focus:outline-none focus:ring-1 focus:ring-slate-900 cursor-pointer shadow-2xs">
                 <option value="">Jump to Clause (1&ndash;15)...</option>
                 <option value="clause-1">1. Introduction (Electronic Record)</option>
                 <option value="clause-2">2. General Terms &amp; Definitions</option>
@@ -500,7 +514,7 @@ document.addEventListener('keydown', function(e) {
                 <option value="clause-15">15. Official Operator Details &amp; Notices</option>
             </select>
 
-            <button onclick="expandAllClauses()" class="px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition border border-slate-300 shadow-2xs cursor-pointer">
+            <button onclick="expandAllClauses()" class="px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-200 font-semibold transition border border-slate-300 shadow-2xs cursor-pointer">
                 Reset
             </button>
 
@@ -512,7 +526,7 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <!-- OFFICIAL COMMERCIAL TERMS &amp; USER LICENSE AGREEMENT -->
-    <article id="legal-deed-document" class="max-w-4xl mx-auto bg-white border border-slate-300 shadow-lg sm:rounded-sm px-6 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-16 md:py-20 text-slate-800 leading-relaxed font-sans relative print:border-none print:shadow-none print:p-0 print:m-0 print:max-w-full">
+    <article id="legal-deed-document" class="max-w-4xl mx-auto bg-white border border-slate-300 shadow-lg sm:rounded-sm px-6 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-16 md:py-20 text-slate-100 leading-relaxed font-sans relative print:border-none print:shadow-none print:p-0 print:m-0 print:max-w-full">
 
         <!-- OFFICIAL STATUTORY HEADER -->
         <header class="text-center space-y-2.5 pb-6 border-b border-slate-300">
@@ -523,16 +537,16 @@ document.addEventListener('keydown', function(e) {
                 <div class="font-heading font-black text-xl sm:text-2xl tracking-widest text-slate-950 uppercase">
                     REHAN QUANT LAB&trade;
                 </div>
-                <div class="text-[11px] font-mono tracking-wider text-slate-600 uppercase font-semibold">
+                <div class="text-[11px] font-mono tracking-wider text-slate-300 uppercase font-semibold">
                     Govt. of India Registered MSME &bull; Ministry of Micro, Small &amp; Medium Enterprises
                 </div>
-                <div class="text-[10px] font-mono text-slate-500">
-                    Udyam Reg: <strong class="text-slate-800">UDYAM-BR-26-0258772</strong> &bull; Date of Commencement: <strong>12/01/2023</strong> &bull; NIC: 62011, 58202, 72100 &bull; HQ: Patna, Bihar 800006, India
+                <div class="text-[10px] font-mono text-slate-400">
+                    Udyam Reg: <strong class="text-slate-100">UDYAM-BR-26-0258772</strong> &bull; Date of Commencement: <strong>12/01/2023</strong> &bull; NIC: 62011, 58202, 72100 &bull; HQ: Patna, Bihar 800006, India
                 </div>
             </div>
 
             <!-- Master Agreement Header -->
-            <div class="border-t-2 border-b border-slate-900 py-1.5 my-5 text-center font-heading font-black tracking-widest uppercase text-[10px] text-slate-900">
+            <div class="border-t-2 border-b border-slate-900 py-1.5 my-5 text-center font-heading font-black tracking-widest uppercase text-[10px] text-white">
                 Commercial Terms and Conditions &bull; Rehan Quant Lab (Version 2.2) &bull; January 12, 2023
             </div>
 
@@ -542,15 +556,15 @@ document.addEventListener('keydown', function(e) {
         </header>
 
         <!-- AGREEMENT DETAILS BAR -->
-        <div class="py-2.5 px-4 bg-slate-50 border-y border-slate-300 my-6 text-[11px] font-mono text-slate-700 grid grid-cols-2 sm:grid-cols-4 gap-y-2 gap-x-4">
-            <div><span class="text-slate-500 uppercase font-bold">Document ID:</span> <span class="font-bold text-slate-900">RQL-GTC-2026-v2.2</span></div>
-            <div><span class="text-slate-500 uppercase font-bold">Judicial Seat:</span> <span class="font-bold text-indigo-900">Patna, Bihar, India</span></div>
-            <div><span class="text-slate-500 uppercase font-bold">Enforceability:</span> <span class="font-bold text-emerald-800">Sec. 65B Evidence Act</span></div>
-            <div><span class="text-slate-500 uppercase font-bold">Effective Date:</span> <span class="font-bold text-slate-900">12/01/2023 (Live v2.2)</span></div>
+        <div class="py-2.5 px-4 bg-[#0b111b] border-y border-slate-300 my-6 text-[11px] font-mono text-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-y-2 gap-x-4">
+            <div><span class="text-slate-400 uppercase font-bold">Document ID:</span> <span class="font-bold text-white">RQL-GTC-2026-v2.2</span></div>
+            <div><span class="text-slate-400 uppercase font-bold">Judicial Seat:</span> <span class="font-bold text-indigo-900">Patna, Bihar, India</span></div>
+            <div><span class="text-slate-400 uppercase font-bold">Enforceability:</span> <span class="font-bold text-emerald-800">Sec. 65B Evidence Act</span></div>
+            <div><span class="text-slate-400 uppercase font-bold">Effective Date:</span> <span class="font-bold text-white">12/01/2023 (Live v2.2)</span></div>
         </div>
 
         <!-- CLAUSE STREAMS: 15 NUMBERED SECTIONS -->
-        <div id="clauses-stream" class="space-y-8 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <div id="clauses-stream" class="space-y-8 text-xs sm:text-sm text-slate-200 leading-relaxed">
 
             <!-- CLAUSE 1: INTRODUCTION (ELECTRONIC RECORD UNDER IT ACT, 2000) -->
             <section id="clause-1" class="legal-clause border-t border-slate-300 pt-6 space-y-3">
@@ -702,7 +716,7 @@ document.addEventListener('keydown', function(e) {
                     <p>
                         <strong>a. 26 Commercial Suites Across 5 Operational Classes:</strong> This Universal Master License establishes a binding legal framework governing the acquisition, perpetual ownership, and workstation deployment of all twenty-six (26) commercial desktop applications:
                     </p>
-                    <div class="space-y-2.5 my-3 pl-4 border-l-2 border-slate-300 text-xs font-mono text-slate-800">
+                    <div class="space-y-2.5 my-3 pl-4 border-l-2 border-slate-300 text-xs font-mono text-slate-100">
                         <div>
                             <strong>i. Class I &bull; Quant &amp; Systematic Financial Research:</strong>
                             Stoikov Micro-Pricing Engine, Order Flow Imbalance (OFI), Tick Depth Bitmask Router, Liquidity Routing Engine, Monte Carlo VaR Simulators, and Execution Pipelines. Delivered strictly as self-directed, deterministic computational research tools.
@@ -733,7 +747,7 @@ document.addEventListener('keydown', function(e) {
                     <p>
                         <strong>d. Phase 2 Institutional Colossi Architecture (Titans 55 to 99 Across 5 Citadels):</strong> To complete the 99 Sovereign Titans of Rehan Quant Lab (54 Commercial Suites + 45 Institutional Colossi), all Phase 2 deployments ($139 to $999 USD) operate under strict institutional covenants:
                     </p>
-                    <div class="space-y-2.5 my-3 pl-4 border-l-2 border-indigo-400 text-xs font-mono text-slate-800">
+                    <div class="space-y-2.5 my-3 pl-4 border-l-2 border-indigo-400 text-xs font-mono text-slate-100">
                         <div>
                             <strong>i. The 5 Citadels of Engineering Complexity:</strong> (1) <em>Citadel I (Titans 55-63)</em>: Atomic Streaming, In-Memory Storage &amp; Big Data (StreamKafka, ParquetForge, AegisDB, ArrowDMA); (2) <em>Citadel II (Titans 64-72)</em>: Local Sovereign AI &amp; Neural Silicon (VectorSearch, Quantized LLM, Offline Voice &amp; Vision); (3) <em>Citadel III (Titans 73-81)</em>: Cryptographic Vaults &amp; P2P Mesh Networks (Zero-Knowledge Proofs, FROST TSS, Post-Quantum Kyber/Dilithium); (4) <em>Citadel IV (Titans 82-90)</em>: Kernel Hardware &amp; Bare-Metal PMU Defense (WFP Egress Clamps, Rootkit Traps, DMA Sentry); (5) <em>Citadel V (Titans 91-99)</em>: Apex Quantitative Finance &amp; Market Microstructure (L3 Order Book Replay, Volatility Surfaces, culminating in Titan 99: RQL APEX CITADEL&trade;).
                         </div>
@@ -747,7 +761,7 @@ document.addEventListener('keydown', function(e) {
                             <strong>iv. 100% Free Lifetime Generational Upgrades:</strong> All commercial and institutional licenses include perpetual, free generational updates for life (v1.0 &rarr; v2.0 &rarr; v3.0) with zero maintenance fees, zero support contracts, and zero mandatory cloud migrations.
                         </div>
                         <div>
-                            <strong>v. Sovereign On-Premise Persistence &amp; Living Immune Warranty:</strong> Persistent application state is strictly maintained on local physical drives inside <code class="bg-slate-100 text-slate-900 px-1 py-0.5 rounded font-mono">%APPDATA%\RehanQuantLab\&lt;TitanName&gt;\</code> with zero cloud shadow copies. Every release is hardened by the Aegis-Chaos-Phoenix Triad and verified under the 25-point Pentagon physical fault model, providing automated crash-only recovery, deterministic state rollbacks, and zero data loss across power interruptions.
+                            <strong>v. Sovereign On-Premise Persistence &amp; Living Immune Warranty:</strong> Persistent application state is strictly maintained on local physical drives inside <code class="bg-slate-100 text-white px-1 py-0.5 rounded font-mono">%APPDATA%\RehanQuantLab\&lt;TitanName&gt;\</code> with zero cloud shadow copies. Every release is hardened by the Aegis-Chaos-Phoenix Triad and verified under the 25-point Pentagon physical fault model, providing automated crash-only recovery, deterministic state rollbacks, and zero data loss across power interruptions.
                         </div>
                     </div>
                 </div>
@@ -851,13 +865,13 @@ document.addEventListener('keydown', function(e) {
                 <h2 class="text-sm sm:text-base font-bold text-slate-950 uppercase tracking-wide font-heading">
                     Section 15. Business Details, Operator Coordinates &amp; Official Notices
                 </h2>
-                <div class="space-y-2 text-slate-700">
+                <div class="space-y-2 text-slate-200">
                     <p><strong>Entity / Operator:</strong> Mohammad Rehan (Founder &amp; Principal Systems Architect, Rehan Quant Lab&trade;)</p>
                     <p><strong>Enterprise Standing:</strong> Govt. of India Registered MSME &bull; Udyam Reg: <strong>UDYAM-BR-26-0258772</strong> (Commenced: <strong>12/01/2023</strong>)</p>
                     <p><strong>Primary Address &amp; Service Seat:</strong> Patna, Bihar 800001, India</p>
                     <p><strong>Legal &amp; Privacy Communications:</strong> <a data-obf="bWFpbHRvOnByaXZhY3lAcmVoYW5xdWFudGxhYi5jb20=" role="button" class="text-indigo-600 font-bold hover:underline">privacy@rehanquantlab.com</a> &bull; <a data-obf="bWFpbHRvOmNvbnRhY3RAcmVoYW5xdWFudGxhYi5jb20=" role="button" class="text-indigo-600 font-bold hover:underline">contact@rehanquantlab.com</a></p>
                     <p><strong>Direct WhatsApp Helpline:</strong> <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg=" role="button" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&nbsp;&#49;&#56;&#53;&#52;&#56;</a></p>
-                    <p><strong>Official Canonical Domain:</strong> <a href="https://rehanquantlab.com" class="text-slate-900 font-semibold hover:underline">https://rehanquantlab.com</a></p>
+                    <p><strong>Official Canonical Domain:</strong> <a href="https://rehanquantlab.com" class="text-white font-semibold hover:underline">https://rehanquantlab.com</a></p>
                 </div>
             </section>
 
@@ -866,38 +880,38 @@ document.addEventListener('keydown', function(e) {
         <!-- FORMAL EXECUTION, DIGITAL ATTESTATION & CORPORATE SEAL BLOCK -->
         <div class="border-t-2 border-slate-900 pt-8 mt-12 space-y-6">
             <div class="text-center sm:text-left space-y-1">
-                <div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
+                <div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
                     IN WITNESS WHEREOF &bull; EXECUTION UNDER DIGITAL EVIDENCE ACT
                 </div>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-950 font-heading">
                     Formal Attestation &amp; Digital Seal
                 </h3>
-                <p class="text-xs text-slate-600 max-w-2xl leading-relaxed">
+                <p class="text-xs text-slate-300 max-w-2xl leading-relaxed">
                     Executed with binding statutory authority under Section 65B of the Indian Evidence Act, 1872 and Section 10A of the Information Technology Act, 2000.
                 </p>
             </div>
 
             <!-- Attestation Details -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-4 border-y border-slate-200 text-xs font-mono">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-4 border-y border-slate-800 text-xs font-mono">
                 <div>
                     <span class="text-slate-400 block text-[10px] uppercase font-bold">Licensor &amp; Architect</span>
-                    <span class="font-bold text-slate-900 block mt-0.5">Mohammad Rehan</span>
-                    <span class="text-slate-500 text-[11px]">Rehan Quant Lab&trade;</span>
+                    <span class="font-bold text-white block mt-0.5">Mohammad Rehan</span>
+                    <span class="text-slate-400 text-[11px]">Rehan Quant Lab&trade;</span>
                 </div>
                 <div>
                     <span class="text-slate-400 block text-[10px] uppercase font-bold">Statutory Enterprise</span>
                     <span class="font-bold text-emerald-800 block mt-0.5">UDYAM-BR-26-0258772</span>
-                    <span class="text-slate-500 text-[11px]">Est. 12/01/2023 &bull; Patna</span>
+                    <span class="text-slate-400 text-[11px]">Est. 12/01/2023 &bull; Patna</span>
                 </div>
                 <div>
                     <span class="text-slate-400 block text-[10px] uppercase font-bold">Judicial Seat</span>
                     <span class="font-bold text-indigo-900 block mt-0.5">Patna, Bihar, India</span>
-                    <span class="text-slate-500 text-[11px]">Sole Arbitrator &bull; Act 1996</span>
+                    <span class="text-slate-400 text-[11px]">Sole Arbitrator &bull; Act 1996</span>
                 </div>
                 <div>
                     <span class="text-slate-400 block text-[10px] uppercase font-bold">Revision Hash</span>
-                    <span class="font-bold text-slate-800 block mt-0.5 truncate">SHA-256: 7F9A3B...2C1D</span>
-                    <span class="text-slate-500 text-[11px]">Section 65B Enforceable</span>
+                    <span class="font-bold text-slate-100 block mt-0.5 truncate">SHA-256: 7F9A3B...2C1D</span>
+                    <span class="text-slate-400 text-[11px]">Section 65B Enforceable</span>
                 </div>
             </div>
 
@@ -905,8 +919,8 @@ document.addEventListener('keydown', function(e) {
                 <div class="flex items-center gap-3">
                     <img src="emblem.webp" alt="RQL Official Seal" class="w-12 h-12 rounded-lg border border-slate-300 shadow-xs object-cover">
                     <div class="text-xs">
-                        <div class="font-bold text-slate-900 font-heading">REHAN QUANT LAB&trade;</div>
-                        <div class="text-[11px] text-slate-500 font-mono">Official Corporate Seal &bull; Patna, Bihar</div>
+                        <div class="font-bold text-white font-heading">REHAN QUANT LAB&trade;</div>
+                        <div class="text-[11px] text-slate-400 font-mono">Official Corporate Seal &bull; Patna, Bihar</div>
                     </div>
                 </div>
                 <a href="contact.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-sans text-xs font-semibold transition print:hidden">
@@ -918,55 +932,64 @@ document.addEventListener('keydown', function(e) {
     </article>
 </main>
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm mt-20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
-    <div class="space-y-3 md:col-span-2">
-        <div class="flex items-center gap-2.5">
-            <img src="emblem.webp" loading="lazy" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
-            <span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab&trade;</span></span>
-        </div>
-        <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
-            Founder &amp; Principal Systems Architect. Mission-critical computational &amp; distributed quantitative systems engineering.
-        </p>
-        <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
-            <i class="w-4 h-4" data-lucide="shield-check"></i>
-            <span>Master SaaS License v2.2 &bull; Commercial License</span>
-        </div>
+<footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <div class="space-y-3.5">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover border border-slate-700">
+      <div class="leading-tight">
+        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
+      </div>
     </div>
-    <div>
-        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
-        <ul class="space-y-2 text-xs">
-            <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
-            <li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Systems</a></li>
-            <li><a class="hover:text-slate-900 transition" href="experience.html">Professional Experience</a></li>
-            <li><a class="hover:text-slate-900 transition" href="contact.html">Contact &amp; Hire</a></li>
-            <li><a class="text-emerald-700 font-bold hover:underline flex items-center gap-1" href="security.html">Trust &amp; Security Registry</a></li>
-            <li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="legal.html">Master SaaS Agreement</a></li>
-        </ul>
+    <p class="text-xs text-slate-400 leading-relaxed">
+      Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
+    </p>
+    <div class="pt-1 text-xs text-slate-400 space-y-1">
+      <div><span class="font-semibold text-slate-200">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-200">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-200">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
     </div>
-    <div>
-        <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Official Channels</h4>
-        <ul class="space-y-2 text-xs">
-            <li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
-            <li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2FmZmlsaWF0ZXM=" role="button" target="_blank" rel="noopener noreferrer"><span>Affiliate Program (Earn 30%)</span></a></li>
-            <li><span class="text-slate-500">Email:</span> <a class="text-indigo-600 font-semibold hover:underline cursor-pointer" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button" title="Click to email founder">founder@rehanquantlab.com</a></li>
-        </ul>
-    </div>
-</div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-  <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
-    <span>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade;</span>
-    <span class="hidden sm:inline text-slate-300">&bull;</span>
-    <span>Air-Gapped Desktop Software &amp; Quantitative Infrastructure</span>
   </div>
-  <div class="flex flex-wrap items-center justify-center gap-3 font-medium">
-    <a href="legal.html" class="text-slate-600 hover:text-slate-900 transition">Terms &amp; Risk Disclosures</a>
-    <span class="text-slate-300">&bull;</span>
-    <span class="text-slate-600 font-medium">Proprietary Commercial Software</span>
-    <span class="text-slate-300">&bull;</span>
-    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200/90 text-slate-700 font-mono text-[10px]"><i class="w-3 h-3 text-emerald-600" data-lucide="award"></i><span>Govt. of India MSME: UDYAM-BR-26-0258772 &bull; Est. 12/01/2023</span></span>
-    <span class="text-slate-300">&bull;</span>
-    <span class="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">100% Offline Resilient</span>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-rose-400 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-emerald-400 hover:text-emerald-300 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-slate-900 border border-slate-700 px-1 rounded">SHA-256</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+  <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade; &bull; UDYAM-BR-26-0258772</div>
+  <div class="flex items-center gap-4">
+    <a href="legal.html" class="hover:text-white transition">Terms &amp; Disclosures</a>
+    <span>&bull;</span>
+    <a href="security.html" class="hover:text-white transition">Trust Registry</a>
+    <span>&bull;</span>
+    <span class="text-emerald-400 font-mono">100% Offline Resilient</span>
   </div>
 </div>
 </footer>

@@ -44,7 +44,7 @@ tailwind.config = {
 }
 </script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-white flex flex-col min-h-screen">
 
   <!-- Top Announcement Bar -->
   <header class="bg-slate-950 text-slate-300 py-2.5 px-4 text-xs font-mono border-b border-slate-800">
@@ -61,20 +61,20 @@ tailwind.config = {
   </header>
 
   <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80">
+  <nav class="sticky top-0 z-50 bg-[#06090e]/95 backdrop-blur-xl border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <a href="../index.html" class="flex items-center gap-2.5">
         <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white font-black text-sm">R</div>
         <div>
-          <div class="text-sm font-bold font-heading text-slate-950">Mohammad Rehan</div>
-          <div class="text-[10px] font-mono text-slate-500">Founder @ Rehan Quant Lab</div>
+          <div class="text-sm font-bold font-heading text-white">Mohammad Rehan</div>
+          <div class="text-[10px] font-mono text-slate-400">Founder @ Rehan Quant Lab</div>
         </div>
       </a>
       <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
-        <a href="../index.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Home</a>
+        <a href="../index.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-800 text-slate-200 transition">Home</a>
         <a href="../store.html" class="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold transition hover:bg-emerald-100">Commercial Store (26)</a>
         <a href="index.html" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white font-bold transition">Free Tools</a>
-        <a href="../contact.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-100 text-slate-600 transition">Contact</a>
+        <a href="../contact.html" class="hidden sm:inline px-3 py-1.5 rounded-lg hover:bg-slate-800 text-slate-200 transition">Contact</a>
       </div>
     </div>
   </nav>
@@ -86,21 +86,21 @@ tailwind.config = {
         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
         <span>100% IN-BROWSER RAM &bull; ZERO SERVER CALLS</span>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-black font-heading text-slate-950 tracking-tight leading-tight">
+      <h1 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
         Sovereign, Zero-Telemetry <br class="hidden sm:inline"/>Browser Utilities.
       </h1>
-      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
         Five fast, zero-installation utilities engineered in pure client-side primitives. Every computation executes strictly inside your computer's RAM. Turn off your Wi-Fi or unplug your Ethernet cable&mdash;all five tools will continue running with zero network errors.
       </p>
 
       <!-- The Skeptic's Dare Badge -->
-      <div class="mt-6 p-4 rounded-2xl bg-white border-2 border-slate-200/90 shadow-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div class="mt-6 p-4 rounded-2xl bg-[#0b111b] border border-slate-800 shadow-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div class="space-y-1">
           <div class="flex items-center gap-2">
             <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">THE SKEPTIC'S DARE</span>
-            <span class="text-xs font-bold text-slate-900 font-heading">Think "100% Offline" is just marketing words?</span>
+            <span class="text-xs font-bold text-white font-heading">Think "100% Offline" is just marketing words?</span>
           </div>
-          <p class="text-xs text-slate-600 font-mono">
+          <p class="text-xs text-slate-300 font-mono">
             Unplug your internet connection right now, open any tool below, and test it. If a single byte leaves your machine, don't use our software.
           </p>
         </div>
@@ -115,28 +115,28 @@ tailwind.config = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
 
       <!-- Card 1: WebP Compressor -->
-      <div class="bg-white border-2 border-emerald-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+      <div class="bg-[#0b111b] border border-slate-800/90 hover:border-emerald-500/40 rounded-3xl p-6 flex flex-col justify-between shadow-xl bento-card-spring transition duration-300 group">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold text-lg font-mono">01</span>
             <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold border border-emerald-200">SIMD Accelerated</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-emerald-600 transition">
+            <h2 class="text-xl font-bold font-heading text-white group-hover:text-emerald-600 transition">
               Offline WebP Converter &amp; Compressor
             </h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
               Convert PNG and JPEG images to WebP locally in your browser RAM with live quality sliders and instant savings metrics. Zero files uploaded to external cloud servers.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
             <div>&#10003; 80%&ndash;92% Size Reduction</div>
             <div>&#10003; Sub-10ms Local Execution</div>
             <div>&#10003; Zero Image Telemetry</div>
           </div>
         </div>
-        <div class="pt-5 mt-4 border-t border-slate-100">
-          <a href="offline-webp-compressor.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
+        <div class="pt-5 mt-4 border-t border-slate-800">
+          <a href="offline-webp-compressor.html" class="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black font-mono text-xs shadow-lg shadow-emerald-500/20 btn-spring flex items-center justify-center gap-2 transition shadow-xs">
             <span>Launch WebP Tool</span>
             <span>&rarr;</span>
           </a>
@@ -144,27 +144,27 @@ tailwind.config = {
       </div>
 
       <!-- Card 2: DocumentShield -->
-      <div class="bg-white border-2 border-rose-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+      <div class="bg-[#0b111b] border border-slate-800/90 hover:border-rose-500/40 rounded-3xl p-6 flex flex-col justify-between shadow-xl bento-card-spring transition duration-300 group">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="w-10 h-10 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold text-lg font-mono">02</span>
             <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-mono font-bold border border-rose-200">Legal &amp; HIPAA</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-rose-600 transition">
+            <h2 class="text-xl font-bold font-heading text-white group-hover:text-rose-600 transition">
               Offline Document Redactor &amp; Sanitizer
             </h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
               Permanently blackout Social Security numbers, tax EINs, credit cards, and confidential PII from legal and medical text snippets using sub-2ms client-side regex vectorization.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
             <div>&#10003; Permanent Vector Blackout</div>
             <div>&#10003; Auto PII Token Detection</div>
             <div>&#10003; Sub-2ms In-RAM Vectorizer</div>
           </div>
         </div>
-        <div class="pt-5 mt-4 border-t border-slate-100">
+        <div class="pt-5 mt-4 border-t border-slate-800">
           <a href="offline-pdf-redactor.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-rose-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
             <span>Launch Redactor Tool</span>
             <span>&rarr;</span>
@@ -173,27 +173,27 @@ tailwind.config = {
       </div>
 
       <!-- Card 3: HashCheck -->
-      <div class="bg-white border-2 border-sky-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+      <div class="bg-[#0b111b] border border-slate-800/90 hover:border-sky-500/40 rounded-3xl p-6 flex flex-col justify-between shadow-xl bento-card-spring transition duration-300 group">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="w-10 h-10 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center font-bold text-lg font-mono">03</span>
             <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 text-[10px] font-mono font-bold border border-sky-200">FIPS 180-4</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-sky-600 transition">
+            <h2 class="text-xl font-bold font-heading text-white group-hover:text-sky-600 transition">
               Offline SHA-256 / SHA-512 Hash Verifier
             </h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
               Compute cryptographic SHA-256 and SHA-512 hashes for any local file or text string in your browser RAM using window.crypto.subtle hardware acceleration.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
             <div>&#10003; Hardware WebCrypto API</div>
             <div>&#10003; Zero Server Uploads</div>
             <div>&#10003; 1-Click Checksum Copy</div>
           </div>
         </div>
-        <div class="pt-5 mt-4 border-t border-slate-100">
+        <div class="pt-5 mt-4 border-t border-slate-800">
           <a href="sha256-checksum-verifier.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
             <span>Launch Hasher Tool</span>
             <span>&rarr;</span>
@@ -202,27 +202,27 @@ tailwind.config = {
       </div>
 
       <!-- Card 4: QRStudio -->
-      <div class="bg-white border-2 border-purple-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+      <div class="bg-[#0b111b] border border-slate-800/90 hover:border-purple-500/40 rounded-3xl p-6 flex flex-col justify-between shadow-xl bento-card-spring transition duration-300 group">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="w-10 h-10 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center font-bold text-lg font-mono">04</span>
             <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 text-[10px] font-mono font-bold border border-purple-200">Never Expire</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-purple-600 transition">
+            <h2 class="text-xl font-bold font-heading text-white group-hover:text-purple-600 transition">
               Offline Vector QR Code Generator (SVG)
             </h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
               Generate permanent, infinite-scalable vector SVG QR codes directly in your browser. Zero cloud redirect links, zero tracking pixels, and zero expiration dates.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
             <div>&#10003; Scalable Vector SVG Export</div>
             <div>&#10003; URL, UPI &amp; WhatsApp Presets</div>
             <div>&#10003; Zero 30-Day Link Expiration</div>
           </div>
         </div>
-        <div class="pt-5 mt-4 border-t border-slate-100">
+        <div class="pt-5 mt-4 border-t border-slate-800">
           <a href="offline-qr-code-generator.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-purple-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
             <span>Launch QR Tool</span>
             <span>&rarr;</span>
@@ -231,27 +231,27 @@ tailwind.config = {
       </div>
 
       <!-- Card 5: TextDiff -->
-      <div class="bg-white border-2 border-amber-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 group">
+      <div class="bg-[#0b111b] border border-slate-800/90 hover:border-amber-500/40 rounded-3xl p-6 flex flex-col justify-between shadow-xl bento-card-spring transition duration-300 group">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="w-10 h-10 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold text-lg font-mono">05</span>
             <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-mono font-bold border border-amber-200">Sub-1ms Myers</span>
           </div>
           <div>
-            <h2 class="text-xl font-bold font-heading text-slate-950 group-hover:text-amber-600 transition">
+            <h2 class="text-xl font-bold font-heading text-white group-hover:text-amber-600 transition">
               Offline Text &amp; Contract Difference Checker
             </h2>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed">
               Compare two revisions of source code or confidential legal clauses. Sub-millisecond Myers vector algorithm highlights alterations with zero cloud exposure.
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-500 space-y-1">
+          <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 space-y-1">
             <div>&#10003; Myers Vector Difference Engine</div>
             <div>&#10003; Word &amp; Line Change Detection</div>
             <div>&#10003; Zero NDA Data Leakage</div>
           </div>
         </div>
-        <div class="pt-5 mt-4 border-t border-slate-100">
+        <div class="pt-5 mt-4 border-t border-slate-800">
           <a href="offline-text-diff.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-xs">
             <span>Launch Diff Tool</span>
             <span>&rarr;</span>
@@ -281,7 +281,7 @@ tailwind.config = {
           </div>
         </div>
         <div class="pt-5 mt-4 border-t border-slate-800">
-          <a href="../store.html" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/40">
+          <a href="../store.html" class="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-black btn-spring font-mono font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/40">
             <span>Explore All 26 Desktop Suites</span>
             <span>&rarr;</span>
           </a>
@@ -293,28 +293,28 @@ tailwind.config = {
     <!-- Architectural FAQ Section (SEO Structured Data) -->
     <section class="max-w-4xl mx-auto pt-8 border-t border-slate-200">
       <div class="text-center mb-8">
-        <h2 class="text-2xl font-bold font-heading text-slate-950">Frequently Asked Technical Questions</h2>
-        <p class="text-xs font-mono text-slate-500 mt-1">Understanding client-side sovereign computing &amp; air-gapped web architecture</p>
+        <h2 class="text-2xl font-bold font-heading text-white">Frequently Asked Technical Questions</h2>
+        <p class="text-xs font-mono text-slate-400 mt-1">Understanding client-side sovereign computing &amp; air-gapped web architecture</p>
       </div>
 
       <div class="space-y-4 text-xs font-mono">
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
-          <div class="font-bold text-slate-900 text-sm font-heading">How do these tools run without an internet connection?</div>
-          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 space-y-1.5">
+          <div class="font-bold text-white text-sm font-heading">How do these tools run without an internet connection?</div>
+          <p class="text-slate-300 leading-relaxed font-sans text-xs">
             When you load this webpage, all HTML, CSS, and JavaScript logic are delivered to your browser cache. Once loaded, algorithms like WebCrypto SHA hashing, Canvas WebP encoding, and regex redaction execute entirely inside your local device CPU and RAM using native browser APIs. No packets are transmitted over the network.
           </p>
         </div>
 
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
-          <div class="font-bold text-slate-900 text-sm font-heading">Are my files or photos ever uploaded to a server?</div>
-          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 space-y-1.5">
+          <div class="font-bold text-white text-sm font-heading">Are my files or photos ever uploaded to a server?</div>
+          <p class="text-slate-300 leading-relaxed font-sans text-xs">
             Never. Unlike typical cloud converters that upload your files to remote Amazon AWS or Google Cloud servers for background processing, Rehan Quant Lab tools do not have an upload endpoint. You can inspect the browser Network tab (F12) or unplug your Wi-Fi to confirm zero outbound network sockets.
           </p>
         </div>
 
-        <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-1.5">
-          <div class="font-bold text-slate-900 text-sm font-heading">What is the difference between these free browser tools and the commercial desktop software?</div>
-          <p class="text-slate-600 leading-relaxed font-sans text-xs">
+        <div class="p-4 rounded-2xl bg-[#0b111b] border border-slate-800 space-y-1.5">
+          <div class="font-bold text-white text-sm font-heading">What is the difference between these free browser tools and the commercial desktop software?</div>
+          <p class="text-slate-300 leading-relaxed font-sans text-xs">
             Our free in-browser tools are designed for single-file micro-tasks (one image, one document snippet, one hash). Our commercial Windows software (.exe) flagships are multi-threaded native Rust binaries built for heavy industrial workloads: batch-processing 5,000 images directly from Windows Explorer, redacting 500-page scanned court filings, and running multi-till LAN retail billing without internet.
           </p>
         </div>
@@ -324,19 +324,67 @@ tailwind.config = {
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t border-slate-200 py-8 px-4 text-xs font-mono text-slate-500">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        <span>&copy; 2026 Rehan Quant Lab &bull; Sovereign Air-Gapped Software Systems</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="../store.html" class="hover:text-slate-900 underline">Commercial Store</a>
-        <a href="../projects.html" class="hover:text-slate-900 underline">Projects</a>
-        <a href="../security.html" class="hover:text-slate-900 underline">Security Ledger</a>
-        <a href="../legal.html" class="hover:text-slate-900 underline">Legal</a>
+  <footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <div class="space-y-3.5">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover border border-slate-700">
+      <div class="leading-tight">
+        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
       </div>
     </div>
-  </footer>
+    <p class="text-xs text-slate-400 leading-relaxed">
+      Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
+    </p>
+    <div class="pt-1 text-xs text-slate-400 space-y-1">
+      <div><span class="font-semibold text-slate-200">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-200">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-200">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
+    </div>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-rose-400 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-emerald-400 hover:text-emerald-300 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-slate-900 border border-slate-700 px-1 rounded">SHA-256</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+  <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade; &bull; UDYAM-BR-26-0258772</div>
+  <div class="flex items-center gap-4">
+    <a href="legal.html" class="hover:text-white transition">Terms &amp; Disclosures</a>
+    <span>&bull;</span>
+    <a href="security.html" class="hover:text-white transition">Trust Registry</a>
+    <span>&bull;</span>
+    <span class="text-emerald-400 font-mono">100% Offline Resilient</span>
+  </div>
+</div>
+</footer>
 
   <script>
     if (window.lucide) { lucide.createIcons(); }

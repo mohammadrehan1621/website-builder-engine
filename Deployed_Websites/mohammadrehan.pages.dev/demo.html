@@ -160,7 +160,7 @@
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-slate-900 selection:text-white">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
 
 <!-- Top Announcement Ticker -->
 <div class="bg-slate-900 text-white text-xs py-2 px-4 border-b border-slate-800">
@@ -184,29 +184,29 @@
 <!-- Header / Navigation -->
 <!-- START: RQL_HYBRID_NAV_AND_DRAWER -->
 <!-- STICKY NAVBAR (Hybrid 3-Flagship + Side Drawer Engine) -->
-<header class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-xs transition-all">
+<header class="sticky top-0 z-40 bg-[#06090e]/95 backdrop-blur-md border-b border-slate-800 transition-all duration-200">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
 <img src="emblem.jpg" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-700/50">
 <div class="whitespace-nowrap">
-<span class="font-extrabold text-slate-900 tracking-tight text-base block font-heading">Mohammad Rehan</span>
-<span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
+<span class="font-extrabold text-white tracking-tight text-base block font-heading">Mohammad Rehan</span>
+<span class="text-[10px] text-slate-400 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
 </div>
 </a>
 
 <!-- Clean Spacious 3-Flagship Desktop Navigation -->
 <nav class="hidden md:flex items-center gap-5 lg:gap-7 text-sm whitespace-nowrap">
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="index.html">Home</a>
 
 <!-- Commercial Suites (Sleek Pill with Live Count 14) -->
-<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
+<a class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 font-semibold text-xs transition shadow-2xs group" href="store.html" title="14 Pure-Rust Commercial Desktop Suites on Gumroad">
 <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
 <span>Commercial Suites</span>
 <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">26</span></a>
 
-<a class="text-slate-600 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
+<a class="text-slate-300 hover:text-slate-950 font-medium py-1 transition" href="contact.html">Contact</a>
 </nav>
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
@@ -216,15 +216,15 @@
 <span>Schedule Briefing</span>
 </a>
 
-<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
-<i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+<a href="Mohammad_Rehan_Resume.pdf" download class="hidden sm:flex px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/80 text-xs font-semibold font-mono items-center gap-1.5 transition">
+<i class="w-3.5 h-3.5 text-slate-400" data-lucide="download"></i>
 <span>Resume</span>
 </a>
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
-<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-900">Menu</span>
+<button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-100 border border-slate-800/90 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-300" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
+<i class="w-4 h-4 text-slate-200" data-lucide="menu"></i>
+<span class="font-heading font-bold text-white">Menu</span>
 </button>
 </div>
 
@@ -236,126 +236,140 @@
 <!-- ========================================== -->
 <div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl border-l border-slate-200 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-[#0b111b] text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/80">
-    <div class="flex items-center gap-2.5">
-      <img src="emblem.jpg" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-[#06090e]/95">
+    <div class="flex items-center gap-3">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-8 h-8 rounded-lg border border-slate-700 shadow-sm">
       <div>
-        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
-        <div class="text-[10px] text-slate-500 font-mono">Site Directory Navigation</div>
+        <div class="font-black text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10.5px] text-emerald-400 font-mono tracking-wide font-bold">Site Directory Navigation</div>
       </div>
     </div>
-    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
       <i class="w-4 h-4" data-lucide="x"></i>
     </button>
   </div>
 
   <!-- Drawer Body -->
   <div class="p-5 space-y-6 flex-grow">
-    <!-- Flagship Systems & Portals -->
     <div>
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
-      <nav class="space-y-1.5">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Flagship Portals</div>
+      <nav class="space-y-2">
         <!-- Home -->
-        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
-              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Home</div>
+              <div class="text-[11px] text-slate-300">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Commercial Suites (14) -->
-        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 text-slate-800 transition group">
+        <!-- Commercial Suites (26) -->
+        <a href="store.html" class="flex items-center justify-between p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
             <div>
-              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
                 <span>Commercial Suites</span>
                 <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">26 Live</span>
               </div>
-              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+              <div class="text-[11px] text-rose-200 font-medium">100% offline desktop workstations &bull; Gumroad</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Free Web Tools -->
+        <a href="tools/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="wrench"></i></div>
+            <div>
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Free Web Tools</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
+              </div>
+              <div class="text-[11px] text-slate-300">100% offline in-browser sovereign utilities</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Projects -->
-        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="projects.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
-              <div class="text-[11px] text-slate-500">26 desktop tools, technical architecture &amp; specifications</div>
+              <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-300">26 desktop tools, architecture &amp; specifications</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Professional Experience -->
-        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="experience.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
-              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-300">4+ years retail leadership, BCA &amp; skill radar</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Security & Trust Registry -->
-        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="security.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
-              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-300">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Research & Engineering Papers -->
-        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <!-- Research & Papers -->
+        <a href="research/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 border border-violet-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Technical Papers</div>
-              <div class="text-[11px] text-slate-500">Technical papers on pure-Rust architectures &amp; offline privacy</div>
+              <div class="text-sm font-bold text-white group-hover:text-violet-400 transition">Research &amp; Papers</div>
+              <div class="text-[11px] text-slate-300">Technical papers on pure-Rust &amp; offline privacy</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Contact & Hire -->
-        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="contact.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
-              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+              <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-300">Direct founder technical briefing &amp; consulting</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
       </nav>
     </div>
 
     <!-- Institutional Ledger & Legal -->
-    <div class="pt-4 border-t border-slate-100">
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+    <div class="pt-4 border-t border-slate-800">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Institutional Ledger</div>
       <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="scale"></i>
           <span>Legal &amp; Terms</span>
         </a>
-        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="history"></i>
           <span>Changelog</span>
         </a>
       </div>
@@ -363,13 +377,13 @@
   </div>
 
   <!-- Drawer Footer Actions -->
-  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
-      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+  <div class="p-5 border-t border-slate-800/90 bg-[#06090e]/95 space-y-2.5">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black font-heading shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-4 h-4 text-slate-950" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
-    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
-      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold font-mono flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-3.5 h-3.5 text-slate-300" data-lucide="download"></i>
       <span>Download Resume (PDF)</span>
     </a>
   </div>
@@ -433,7 +447,7 @@ document.addEventListener('keydown', function(e) {
 
 
     <!-- Hero Header -->
-    <section class="relative py-12 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
+    <section class="relative py-12 sm:py-16 bg-[#0b111b] border-b border-slate-800 overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold shadow-2xs">
                 <span class="relative flex h-2 w-2">
@@ -443,11 +457,11 @@ document.addEventListener('keydown', function(e) {
                 <span>Live Browser Cryptography &amp; Vector Synthesis</span>
             </div>
             
-            <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-slate-900 tracking-tight">
+            <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
                 Interactive Micro-Demos
             </h1>
             
-            <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
                 Experience the deterministic performance and zero-cloud privacy of Rehan Quant Lab software right inside your web browser. 100% client-side execution &mdash; zero bytes are sent to any external server.
             </p>
         </div>
@@ -463,10 +477,10 @@ document.addEventListener('keydown', function(e) {
                     <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-mono font-bold">
                         <span>LIVE DEMO 01 &bull; RQL HASHCHECK&trade;</span>
                     </div>
-                    <h2 class="text-2xl font-bold font-heading text-slate-900">
+                    <h2 class="text-2xl font-bold font-heading text-white">
                         In-Browser Cryptographic Hash Verifier
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-500">
+                    <p class="text-xs sm:text-sm text-slate-400">
                         Calculates SHA-256 and SHA-512 instantly using the Web Crypto API. Drag any file or click the instant sample button.
                     </p>
                 </div>
@@ -477,17 +491,17 @@ document.addEventListener('keydown', function(e) {
             </div>
 
             <!-- Drop Zone -->
-            <div id="hashDropZone" class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-8 text-center bg-slate-50 hover:bg-emerald-50/40 transition cursor-pointer space-y-3">
+            <div id="hashDropZone" class="border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-2xl p-8 text-center bg-[#0b111b] hover:bg-emerald-50/40 transition cursor-pointer space-y-3">
                 <input type="file" id="hashFileInput" class="hidden">
                 <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center">
                     <i class="w-6 h-6" data-lucide="upload-cloud"></i>
                 </div>
                 <div>
-                    <span class="text-sm font-bold text-slate-900">Drag &amp; drop any file here</span>
-                    <span class="text-xs text-slate-500 block">or click to browse from your machine</span>
+                    <span class="text-sm font-bold text-white">Drag &amp; drop any file here</span>
+                    <span class="text-xs text-slate-400 block">or click to browse from your machine</span>
                 </div>
                 <div class="pt-2">
-                    <button type="button" onclick="loadHashTestSample(event)" class="px-4 py-2 rounded-xl bg-white border border-slate-300 hover:border-emerald-500 text-slate-700 hover:text-emerald-700 text-xs font-mono font-bold shadow-2xs transition">
+                    <button type="button" onclick="loadHashTestSample(event)" class="px-4 py-2 rounded-xl bg-white border border-slate-300 hover:border-emerald-500 text-slate-200 hover:text-emerald-700 text-xs font-mono font-bold shadow-2xs transition">
                          Load Test Sample Payload (Instant Demo)
                     </button>
                 </div>
@@ -495,15 +509,15 @@ document.addEventListener('keydown', function(e) {
 
             <!-- Results Output -->
             <div id="hashResults" class="space-y-4 hidden">
-                <div class="flex items-center justify-between text-xs font-mono text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200">
-                    <span id="hashFileName" class="font-bold text-slate-900 truncate max-w-xs">File: payload.bin</span>
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400 bg-[#0b111b] p-3 rounded-xl border border-slate-800">
+                    <span id="hashFileName" class="font-bold text-white truncate max-w-xs">File: payload.bin</span>
                     <span id="hashFileSize">Size: 0 KB</span>
                     <span id="hashLatency" class="text-emerald-700 font-bold">Latency: 1.2ms</span>
                 </div>
 
                 <div class="space-y-3">
                     <div>
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1">
                             <span>SHA-256 Checksum:</span>
                             <button onclick="copyHashText('sha256Out', this)" class="text-emerald-600 hover:underline">Copy Hash</button>
                         </div>
@@ -511,7 +525,7 @@ document.addEventListener('keydown', function(e) {
                     </div>
 
                     <div>
-                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 mb-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1">
                             <span>SHA-512 Checksum:</span>
                             <button onclick="copyHashText('sha512Out', this)" class="text-emerald-600 hover:underline">Copy Hash</button>
                         </div>
@@ -520,8 +534,8 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <!-- Match Compare Box -->
-                <div class="pt-4 border-t border-slate-200 space-y-2">
-                    <label class="block text-xs font-bold text-slate-700 uppercase font-mono">
+                <div class="pt-4 border-t border-slate-800 space-y-2">
+                    <label class="block text-xs font-bold text-slate-200 uppercase font-mono">
                         Verification Matcher (Paste Expected Hash to Verify):
                     </label>
                     <input type="text" id="hashCompareInput" oninput="compareHashMatch()" placeholder="Paste official vendor SHA-256 hash here..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-emerald-500 focus:outline-none">
@@ -538,10 +552,10 @@ document.addEventListener('keydown', function(e) {
                     <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-violet-100 text-violet-800 text-[10px] font-mono font-bold">
                         <span>LIVE DEMO 02 &bull; RQL QRSTUDIO&trade;</span>
                     </div>
-                    <h2 class="text-2xl font-bold font-heading text-slate-900">
+                    <h2 class="text-2xl font-bold font-heading text-white">
                         Permanent Vector QR Code Generator
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-500">
+                    <p class="text-xs sm:text-sm text-slate-400">
                         Synthesizes permanent ISO/IEC 18004 barcodes directly in your browser with zero expiring cloud redirects.
                     </p>
                 </div>
@@ -555,7 +569,7 @@ document.addEventListener('keydown', function(e) {
                 <!-- Controls -->
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold text-slate-700 uppercase font-mono mb-1">
+                        <label class="block text-xs font-bold text-slate-200 uppercase font-mono mb-1">
                             Input Payload (URL, Wi-Fi, Text, UPI):
                         </label>
                         <textarea id="qrTextInput" rows="3" oninput="generateLiveQr()" class="w-full p-3 rounded-xl border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-violet-500 focus:outline-none">https://rehanquantlab.com</textarea>
@@ -563,17 +577,17 @@ document.addEventListener('keydown', function(e) {
 
                     <!-- Presets -->
                     <div>
-                        <span class="block text-[11px] font-mono text-slate-500 mb-1.5">Quick Presets:</span>
+                        <span class="block text-[11px] font-mono text-slate-400 mb-1.5">Quick Presets:</span>
                         <div class="flex flex-wrap gap-2">
-                            <button onclick="setQrPreset('https://rehanquantlab.com/store')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> Store URL</button>
-                            <button onclick="setQrPreset('upi://pay?pa=founder@rehanquantlab&pn=MohammadRehan&cu=INR')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> UPI Payment</button>
-                            <button onclick="setQrPreset('WIFI:T:WPA;S:RQL-AirGapped;P:AirGappedRust2026;;')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-700 hover:text-violet-900 text-xs font-mono transition"> Wi-Fi Access</button>
+                            <button onclick="setQrPreset('https://rehanquantlab.com/store')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-200 hover:text-violet-900 text-xs font-mono transition"> Store URL</button>
+                            <button onclick="setQrPreset('upi://pay?pa=founder@rehanquantlab&pn=MohammadRehan&cu=INR')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-200 hover:text-violet-900 text-xs font-mono transition"> UPI Payment</button>
+                            <button onclick="setQrPreset('WIFI:T:WPA;S:RQL-AirGapped;P:AirGappedRust2026;;')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-violet-100 text-slate-200 hover:text-violet-900 text-xs font-mono transition"> Wi-Fi Access</button>
                         </div>
                     </div>
 
                     <!-- Error Correction -->
                     <div class="flex items-center gap-4 text-xs font-mono">
-                        <span class="text-slate-500">Parity:</span>
+                        <span class="text-slate-400">Parity:</span>
                         <label class="inline-flex items-center gap-1 cursor-pointer">
                             <input type="radio" name="qrParity" value="L" onchange="generateLiveQr()"> <span>L (7%)</span>
                         </label>
@@ -587,8 +601,8 @@ document.addEventListener('keydown', function(e) {
                 </div>
 
                 <!-- Canvas Preview -->
-                <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center space-y-4">
-                    <div id="qrcodeCanvas" class="p-4 bg-white rounded-2xl shadow-sm border border-slate-200"></div>
+                <div class="flex flex-col items-center justify-center p-6 bg-[#0b111b] rounded-2xl border border-slate-800 text-center space-y-4">
+                    <div id="qrcodeCanvas" class="p-4 bg-white rounded-2xl shadow-sm border border-slate-800"></div>
                     <div class="flex items-center gap-3">
                         <button onclick="downloadQrPng()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading shadow-xs transition flex items-center gap-1.5">
                             <i class="w-3.5 h-3.5 text-violet-400" data-lucide="download"></i>
@@ -605,57 +619,66 @@ document.addEventListener('keydown', function(e) {
 </main>
 
 <!-- Footer -->
-<footer class="bg-white border-t border-slate-200 py-12 text-slate-600 text-sm mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 mb-8">
-        <div class="space-y-3 md:col-span-2">
-            <div class="flex items-center gap-2.5">
-                <img src="emblem.webp" loading="lazy" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-sm border border-slate-700/50">
-                <span class="font-bold text-slate-900 text-base">Mohammad Rehan <span class="text-xs font-normal text-indigo-600 font-mono">/ Rehan Quant Lab&trade;</span></span>
-            </div>
-            <p class="text-xs text-slate-500 max-w-sm leading-relaxed">
-                Founder &amp; Lead Systems Architect. Mission-critical computational &amp; distributed quantitative systems engineering.
-            </p>
-            <div class="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-3 py-1.5 rounded-lg w-max">
-                <i class="w-4 h-4" data-lucide="shield-check"></i>
-                <span>Master SaaS License v2.0 &bull; Commercial License</span>
-            </div>
-        </div>
-        <div>
-            <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
-            <ul class="space-y-2 text-xs">
-                <li><a class="hover:text-slate-900 transition" href="index.html">Home</a></li>
-                <li><a class="hover:text-slate-900 transition" href="store.html">Commercial Store (26 Flagships)</a></li>
-                <li><a class="hover:text-slate-900 transition" href="projects.html">Projects &amp; Systems</a></li>
-                <li><a class="hover:text-slate-900 transition" href="changelog.html">System Changelog &amp; Releases </a></li>
-                <li><a class="text-indigo-600 font-semibold hover:underline flex items-center gap-1" href="demo.html">Interactive Demos </a></li>
-                <li><a class="hover:text-slate-900 transition" href="legal.html">Master SaaS Agreement </a></li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Official Channels</h4>
-            <ul class="space-y-2 text-xs">
-                <li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
-                <li><a class="text-slate-700 font-medium hover:text-slate-900 transition flex items-center gap-1.5" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2FmZmlsaWF0ZXM=" role="button" target="_blank" rel="noopener noreferrer"><span class="text-xs"></span> <span>Affiliate Program (Earn 30%)</span></a></li>
-                <li><span class="text-slate-500">Email:</span> <a class="text-indigo-600 font-semibold hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></li>
-            </ul>
-        </div>
+<footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <div class="space-y-3.5">
+    <div class="flex items-center gap-2.5">
+      <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover border border-slate-700">
+      <div class="leading-tight">
+        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
+      </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
-            <span>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade;</span>
-            <span class="hidden sm:inline text-slate-300">&bull;</span>
-            <span>Air-Gapped Desktop Software &amp; Quantitative Infrastructure</span>
-        <span class="hidden sm:inline text-slate-300">&bull;</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200/90 text-slate-700 font-mono text-[10px]"><i class="w-3 h-3 text-emerald-600" data-lucide="award"></i><span>Govt. of India MSME: UDYAM-BR-26-0258772 &bull; Est. 12/01/2023</span></span>
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-3 font-medium">
-            <a href="demo.html" class="text-slate-600 hover:text-slate-900 transition font-bold">Live Demos</a>
-            <span class="text-slate-300">&bull;</span>
-            <a href="changelog.html" class="text-slate-600 hover:text-slate-900 transition">Changelog</a>
-            <span class="text-slate-300">&bull;</span>
-            <span class="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">100% Offline Resilient</span>
-        </div>
+    <p class="text-xs text-slate-400 leading-relaxed">
+      Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
+    </p>
+    <div class="pt-1 text-xs text-slate-400 space-y-1">
+      <div><span class="font-semibold text-slate-200">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-200">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-200">Email:</span> <a class="text-emerald-400 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
     </div>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">Commercial Suites</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono"></span></a></li>
+      <li><a class="text-rose-400 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-emerald-400 hover:text-emerald-300 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-slate-900 border border-slate-700 px-1 rounded">SHA-256</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <ul class="space-y-2 text-xs">
+      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="legal.html">Master SaaS &amp; Licensing Terms</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+  <div>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade; &bull; UDYAM-BR-26-0258772</div>
+  <div class="flex items-center gap-4">
+    <a href="legal.html" class="hover:text-white transition">Terms &amp; Disclosures</a>
+    <span>&bull;</span>
+    <a href="security.html" class="hover:text-white transition">Trust Registry</a>
+    <span>&bull;</span>
+    <span class="text-emerald-400 font-mono">100% Offline Resilient</span>
+  </div>
+</div>
 </footer>
 
 <script>

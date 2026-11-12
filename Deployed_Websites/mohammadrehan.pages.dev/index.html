@@ -667,7 +667,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
                 <span>Instant Checkout</span>
                 <i class="w-3 h-3" data-lucide="arrow-right"></i>
             </a>
-            <span class="text-slate-700 hidden md:inline">|</span>
+            <span class="text-slate-100 hidden md:inline">|</span>
             <span class="text-slate-400 hidden md:inline font-mono text-[11px]">&lt; 1ms Rust &bull; Zero Cloud Telemetry</span>
         </div>
     </div>
@@ -720,8 +720,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 <!-- Tactile Side Drawer Trigger (Menu / All Pages) -->
 <button onclick="toggleSideDrawer()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-bold font-mono flex items-center gap-1.5 transition cursor-pointer shadow-2xs hover:border-slate-600" id="mobile-menu-btn" aria-label="Open Full Navigation Menu">
-<i class="w-4 h-4 text-slate-700" data-lucide="menu"></i>
-<span class="font-heading font-bold text-slate-900">Menu</span>
+<i class="w-4 h-4 text-slate-300" data-lucide="menu"></i>
+<span class="font-heading font-bold text-white">Menu</span>
 </button>
 </div>
 
@@ -729,145 +729,144 @@ img, svg, video, canvas, audio, iframe, embed, object {
 </header>
 
 <!-- ========================================== -->
-<!-- SLIDE-OUT NAVIGATION DRAWER -->
+<!-- SLIDE-OUT NAVIGATION DRAWER (OBSIDIAN DARK) -->
 <!-- ========================================== -->
-<div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/50 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+<div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-slate-900 text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-[#0b111b] text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
-    <div class="flex items-center gap-2.5">
-      <img src="emblem.webp" decoding="async" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-300 shadow-xs">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-[#06090e]/95">
+    <div class="flex items-center gap-3">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-8 h-8 rounded-lg border border-slate-700 shadow-sm">
       <div>
-        <div class="font-bold text-slate-900 text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
-        <div class="text-[10px] text-slate-500 font-mono">Site Directory Navigation</div>
+        <div class="font-black text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10.5px] text-emerald-400 font-mono tracking-wide font-bold">Site Directory Navigation</div>
       </div>
     </div>
-    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
       <i class="w-4 h-4" data-lucide="x"></i>
     </button>
   </div>
 
   <!-- Drawer Body -->
   <div class="p-5 space-y-6 flex-grow">
-    <!-- Flagship Systems & Portals -->
     <div>
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Flagship Portals</div>
-      <nav class="space-y-1.5">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Flagship Portals</div>
+      <nav class="space-y-2">
         <!-- Home -->
-        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100 font-bold text-slate-950 border border-slate-200 transition group">
+        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition">Home</div>
-              <div class="text-[11px] text-slate-500">Pure-Rust offline desktop tools &amp; profile</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Home</div>
+              <div class="text-[11px] text-slate-300">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
-        </a>
-
-        <!-- Free Web Tools -->
-        <a href="tools/" class="flex items-center justify-between p-2.5 rounded-xl bg-emerald-50/70 hover:bg-emerald-100/70 border border-emerald-200/60 text-slate-800 transition group">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="wrench"></i></div>
-            <div>
-              <div class="text-sm font-bold text-emerald-950 flex items-center gap-2">
-                <span>Free Web Tools</span>
-                <span class="bg-emerald-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
-              </div>
-              <div class="text-[11px] text-slate-500">100% offline in-browser sovereign utilities</div>
-            </div>
-          </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Commercial Suites (26) -->
-        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-50/70 hover:bg-rose-100/70 border border-rose-200/60 text-slate-800 transition group">
+        <a href="store.html" class="flex items-center justify-between p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
             <div>
-              <div class="text-sm font-bold text-rose-950 flex items-center gap-2">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
                 <span>Commercial Suites</span>
                 <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">26 Live</span>
               </div>
-              <div class="text-[11px] text-rose-700 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+              <div class="text-[11px] text-rose-200 font-medium">100% offline desktop workstations &bull; Gumroad</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-rose-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Free Web Tools -->
+        <a href="tools/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="wrench"></i></div>
+            <div>
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Free Web Tools</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
+              </div>
+              <div class="text-[11px] text-slate-300">100% offline in-browser sovereign utilities</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Projects -->
-        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="projects.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">Projects &amp; Systems</div>
-              <div class="text-[11px] text-slate-500">26 desktop tools, technical architecture &amp; specifications</div>
+              <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Projects &amp; Systems</div>
+              <div class="text-[11px] text-slate-300">26 desktop tools, architecture &amp; specifications</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Professional Experience -->
-        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="experience.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-slate-950 transition">Professional Experience</div>
-              <div class="text-[11px] text-slate-500">4+ years retail leadership, BCA &amp; skill radar</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-300">4+ years retail leadership, BCA &amp; skill radar</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Security & Trust Registry -->
-        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="security.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition">Security &amp; Trust Registry</div>
-              <div class="text-[11px] text-slate-500">Microsoft WDSI 100% clean &amp; SHA-256 binary proofs</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Security &amp; Trust Registry</div>
+              <div class="text-[11px] text-slate-300">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <!-- Research & Engineering Papers -->
-        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <!-- Research & Papers -->
+        <a href="research/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-violet-50 text-violet-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 border border-violet-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-violet-700 transition">Research &amp; Technical Papers</div>
-              <div class="text-[11px] text-slate-500">Technical papers on pure-Rust architectures &amp; offline privacy</div>
+              <div class="text-sm font-bold text-white group-hover:text-violet-400 transition">Research &amp; Papers</div>
+              <div class="text-[11px] text-slate-300">Technical papers on pure-Rust &amp; offline privacy</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
         <!-- Contact & Hire -->
-        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-slate-800 transition group">
+        <a href="contact.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
             <div>
-              <div class="text-sm font-bold text-slate-900 group-hover:text-cyan-700 transition">Contact &amp; Hire</div>
-              <div class="text-[11px] text-slate-500">Direct founder technical briefing &amp; consulting</div>
+              <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Contact &amp; Hire</div>
+              <div class="text-[11px] text-slate-300">Direct founder technical briefing &amp; consulting</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
       </nav>
     </div>
 
     <!-- Institutional Ledger & Legal -->
-    <div class="pt-4 border-t border-slate-100">
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">Institutional Ledger</div>
+    <div class="pt-4 border-t border-slate-800">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Institutional Ledger</div>
       <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="scale"></i>
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="scale"></i>
           <span>Legal &amp; Terms</span>
         </a>
-        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/80 flex items-center gap-2 transition">
-          <i class="w-3.5 h-3.5 text-slate-500" data-lucide="history"></i>
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
+          <i class="w-3.5 h-3.5 text-slate-400" data-lucide="history"></i>
           <span>Changelog</span>
         </a>
       </div>
@@ -875,13 +874,13 @@ img, svg, video, canvas, audio, iframe, embed, object {
   </div>
 
   <!-- Drawer Footer Actions -->
-  <div class="p-5 border-t border-slate-100 bg-slate-50/80 space-y-2">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition">
-      <i class="w-4 h-4 text-emerald-400" data-lucide="calendar"></i>
+  <div class="p-5 border-t border-slate-800/90 bg-[#06090e]/95 space-y-2.5">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black font-heading shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-4 h-4 text-slate-950" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
-    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
-      <i class="w-3.5 h-3.5 text-slate-500" data-lucide="download"></i>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold font-mono flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-3.5 h-3.5 text-slate-300" data-lucide="download"></i>
       <span>Download Resume (PDF)</span>
     </a>
   </div>
@@ -958,11 +957,11 @@ document.addEventListener('keydown', function(e) {
 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.12]">
     Fast, single-binary <span class="bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-400 bg-clip-text text-transparent">Windows desktop tools</span> in pure Rust.
     <span class="block text-base sm:text-lg lg:text-xl text-slate-400 font-mono font-medium mt-3">
-        Engineered by Mohammad Rehan &bull; Patna, Bihar
+        <span class="text-emerald-400 font-semibold font-mono">Engineered by Mohammad Rehan &bull; Patna, Bihar</span>
     </span>
 </h1>
 
-<p class="text-base sm:text-lg text-slate-400 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+<p class="text-base sm:text-lg text-slate-100 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
     I build native Windows desktop tools that run <strong>100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-slate-200 border border-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
 </p>
 
@@ -976,18 +975,18 @@ document.addEventListener('keydown', function(e) {
     </div>
     <div class="space-y-1.5 flex-grow">
       <div class="flex flex-wrap items-center gap-2">
-        <span class="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 shadow-2xs">The Skeptic's Dare</span>
-        <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-2xs">&#10003; 100% Proven In Browser</span>
+        <span class="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-rose-950 text-rose-300 border border-rose-500/50 shadow-2xs">The Skeptic's Dare</span>
+        <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-300 border border-emerald-500/50 shadow-2xs">&#10003; 100% Proven In Browser</span>
       </div>
       <h3 class="text-base sm:text-lg font-extrabold font-heading text-white tracking-tight leading-snug">
         Think "100% Offline" is just marketing words? Prove us wrong in 5 seconds.
       </h3>
-      <p class="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed">
+      <p class="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed">
         Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
       </p>
       <div class="pt-2 flex items-center gap-3">
-        <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs transition shadow-sm hover:scale-102 cursor-pointer">
-          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="zap"></i>
+        <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black font-mono text-xs transition shadow-lg shadow-emerald-500/25 hover:scale-102 cursor-pointer btn-spring">
+          <i class="w-4 h-4 text-slate-950" data-lucide="zap"></i>
           <span>Take The 5-Second Air-Gap Challenge</span>
           <span>&rarr;</span>
         </a>
@@ -998,16 +997,16 @@ document.addEventListener('keydown', function(e) {
 
 <!-- CTA Buttons with Micro-Interactions -->
 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-<a class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2.5 text-sm group btn-spring" href="contact.html#schedule-briefing">
-<i class="w-4 h-4 text-emerald-300 group-hover:scale-110 transition-transform duration-300" data-lucide="calendar"></i>
+<a class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3.5 rounded-xl shadow-xl shadow-emerald-500/25 transition flex items-center gap-2.5 text-sm group btn-spring" href="contact.html#schedule-briefing">
+<i class="w-4 h-4 text-slate-950 group-hover:scale-110 transition-transform duration-300" data-lucide="calendar"></i>
 <span>Schedule Technical Briefing</span>
 </a>
-<a class="bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700/80 font-medium px-6 py-3.5 rounded-xl shadow-md transition flex items-center gap-2.5 text-sm group btn-spring" href="#about">
-<i class="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" data-lucide="layers"></i>
+<a class="bg-white hover:bg-slate-100 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2.5 text-sm group btn-spring" href="#about">
+<i class="w-4 h-4 text-slate-950 group-hover:rotate-12 transition-transform duration-300" data-lucide="layers"></i>
 <span>Architecture Blueprint</span>
 </a>
-<a class="bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-medium px-5 py-3.5 rounded-xl shadow-sm transition flex items-center gap-2.5 text-sm group btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
-<i class="w-4 h-4 text-slate-700" data-lucide="download"></i>
+<a class="bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 hover:border-slate-500 font-bold px-5 py-3.5 rounded-xl shadow-md transition flex items-center gap-2.5 text-sm group btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
+<i class="w-4 h-4 text-emerald-400" data-lucide="download"></i>
 <span>Resume (PDF)</span>
 </a>
 </div>
@@ -1016,19 +1015,19 @@ document.addEventListener('keydown', function(e) {
 <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80 max-w-xl mx-auto lg:mx-0">
 <div>
 <p class="text-2xl font-black font-mono text-white tabular-nums">0 Bytes</p>
-<p class="text-xs text-slate-500 mt-0.5 font-medium">Cloud Telemetry</p>
+<p class="text-xs text-slate-300 mt-0.5 font-bold font-mono">Cloud Telemetry</p>
 </div>
 <div>
 <p class="text-2xl font-black font-mono text-emerald-400 tabular-nums">&#8377;0 / Mo</p>
-<p class="text-xs text-slate-500 mt-0.5 font-medium">Zero Monthly Fees</p>
+<p class="text-xs text-slate-300 mt-0.5 font-bold font-mono">Zero Monthly Fees</p>
 </div>
 <div>
 <p class="text-2xl font-black font-mono text-cyan-400 tabular-nums">100%</p>
-<p class="text-xs text-slate-500 mt-0.5 font-medium">Pure Native Rust</p>
+<p class="text-xs text-slate-300 mt-0.5 font-bold font-mono">Pure Native Rust</p>
 </div>
 <div>
 <p class="text-2xl font-black font-mono text-slate-200 tabular-nums">Patna, IN</p>
-<p class="text-xs text-slate-500 mt-0.5 font-medium">Engineered Locally</p>
+<p class="text-xs text-slate-300 mt-0.5 font-bold font-mono">Engineered Locally</p>
 </div>
 </div>
 </div>
@@ -1045,7 +1044,7 @@ document.addEventListener('keydown', function(e) {
 <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/20 border border-slate-700/50">
 <div>
 <h2 class="font-bold text-white text-base">Mohammad Rehan</h2>
-<p class="text-xs text-indigo-600 font-medium">Founder @ Rehan Quant Lab</p>
+<p class="text-xs text-emerald-400 font-mono font-bold">Founder @ Rehan Quant Lab</p>
 </div>
 </div>
 <span class="bg-indigo-50 text-indigo-800 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-100 flex items-center gap-1 font-mono">
@@ -1057,7 +1056,7 @@ document.addEventListener('keydown', function(e) {
 <div class="py-5 space-y-3 relative z-10">
 <div class="flex items-start gap-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80">
 <i class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" data-lucide="quote"></i>
-<p class="text-xs text-slate-300 italic leading-relaxed">
+<p class="text-xs text-slate-100 italic leading-relaxed">
     "I build fast, offline-first desktop software that solves real business problems&mdash;from air-gapped document privacy to multi-counter retail billing&mdash;with zero recurring subscription fees."
 </p>
 </div>
@@ -1065,16 +1064,16 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Verified Core Tech Badges -->
 <div class="space-y-2.5 pt-1 relative z-10">
-<p class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
+<p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
 <div class="flex flex-wrap gap-1.5">
 <span class="bg-indigo-50/90 text-indigo-900 border border-indigo-200/70 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">100% Pure Native Rust</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Win32 &amp; Windows 11 API</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Air-Gapped Forensic Security</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Offline AI Whisper Transcriber</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Sub-12ms Anycast Web Arch</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Multi-Counter LAN Billing (POS)</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Direct UPI QR Integration</span>
-<span class="bg-slate-900 text-slate-300 border border-slate-800 text-[11px] px-2.5 py-1 rounded-lg font-medium transition hover:scale-105">Zero Cloud Dependencies</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Win32 &amp; Windows 11 API</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Air-Gapped Forensic Security</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Offline AI Whisper Transcriber</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Sub-12ms Anycast Web Arch</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Multi-Counter LAN Billing (POS)</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Direct UPI QR Integration</span>
+<span class="bg-slate-900 text-white border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-semibold transition hover:scale-105">Zero Cloud Dependencies</span>
 </div>
 </div>
 
@@ -1085,8 +1084,8 @@ document.addEventListener('keydown', function(e) {
     <span id="hero-node-status" class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">100% OFFLINE VERIFIED</span>
 </div>
 
-<button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 hover:from-indigo-900 hover:to-slate-900 text-white text-xs font-mono font-semibold py-2.5 px-4 rounded-xl shadow-md hover:shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 group cursor-pointer active:scale-95">
-    <i class="w-3.5 h-3.5 text-emerald-400 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
+<button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black text-xs font-mono py-3 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2 group cursor-pointer btn-spring">
+    <i class="w-4 h-4 text-slate-950 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
     <span>Run Memory &amp; Air-Gap Diagnostic</span>
 </button>
 
@@ -1184,7 +1183,7 @@ document.addEventListener('keydown', function(e) {
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight">
             Engineering Principles, System Architecture &amp; Reliability Standards
         </h2>
-        <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
+        <p class="text-slate-200 text-base sm:text-lg leading-relaxed pt-2">
             Software designed without operational context often fails when unexpected edge cases hit production. Grounded in <strong>4+ years of commercial retail business operations</strong> in Patna, Bihar, and an accredited <strong>Bachelor of Computer Applications (BCA)</strong>, I engineer pure native Rust offline desktop software suites (<strong class="text-slate-900">RQL DocumentShield&trade; &amp; RQL WhisperVault&trade;</strong>), deterministic execution layers, and robust business software (<strong class="text-indigo-600">Rehan Quant Lab&trade;</strong>) built for continuous uptime and strict data integrity.
         </p>
     </div>
@@ -1193,20 +1192,20 @@ document.addEventListener('keydown', function(e) {
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         <!-- Pillar 1: WHAT WE DO -->
-        <div class="bg-slate-50 rounded-3xl border border-slate-200/90 p-8 flex flex-col justify-between hover:shadow-xl hover:border-slate-300 transition duration-300">
+        <div class="bg-[#0b111b] rounded-3xl border border-slate-800/90 hover:border-emerald-500/40 p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl transition duration-300">
             <div>
-                <div class="flex items-center justify-between pb-6 border-b border-slate-200/70">
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800">
                     <span class="font-mono text-xs font-bold text-indigo-600 uppercase tracking-widest">Pillar 01</span>
                     <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-indigo-100/70 text-indigo-800">Core Engineering</span>
                 </div>
                 <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center my-6 shadow-md shadow-indigo-600/20">
                     <i class="w-6 h-6" data-lucide="cpu"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-3">What We Do</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <h3 class="text-2xl font-bold text-white tracking-tight mb-3">What We Do</h3>
+                <p class="text-slate-200 text-sm leading-relaxed mb-6">
                     We build reliable, single-purpose desktop tools and systems engineered in pure native Rust with zero cloud dependencies:
                 </p>
-                <ul class="space-y-4 text-xs sm:text-sm text-slate-700">
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-100">
                     <li class="flex items-start gap-3">
                         <i class="w-4 h-4 text-indigo-600 mt-1 shrink-0" data-lucide="shield-alert"></i>
                         <span><strong>Native Pure-Rust Desktop Software:</strong> Standalone Windows applications (.exe) compiled in native 64-bit Rust. Features sub-50ms instant cold launches, zero background telemetry, deterministic local SQLite storage, and zero recurring subscription fees.</span>
@@ -1229,7 +1228,7 @@ document.addEventListener('keydown', function(e) {
                     </li>
                 </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500 font-mono">
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
                 <span>Focus: Desktop Engineering &amp; Systems</span>
                 <span class="text-emerald-600 font-semibold">&bull; Production Ready</span>
             </div>
@@ -1280,20 +1279,20 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- Pillar 3: HOW WE MAKE IT POSSIBLE -->
-        <div class="bg-slate-50 rounded-3xl border border-slate-200/90 p-8 flex flex-col justify-between hover:shadow-xl hover:border-slate-300 transition duration-300">
+        <div class="bg-[#0b111b] rounded-3xl border border-slate-800/90 hover:border-emerald-500/40 p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl transition duration-300">
             <div>
-                <div class="flex items-center justify-between pb-6 border-b border-slate-200/70">
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800">
                     <span class="font-mono text-xs font-bold text-amber-600 uppercase tracking-widest">Pillar 03</span>
                     <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-100/70 text-amber-800">Verification</span>
                 </div>
                 <div class="w-12 h-12 rounded-2xl bg-amber-500 text-slate-950 flex items-center justify-center my-6 shadow-md shadow-amber-500/20">
                     <i class="w-6 h-6" data-lucide="flame"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 tracking-tight mb-3">How We Make It Possible</h3>
-                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <h3 class="text-2xl font-bold text-white tracking-tight mb-3">How We Make It Possible</h3>
+                <p class="text-slate-200 text-sm leading-relaxed mb-6">
                     Reliability comes from disciplined engineering habits, hands-on business experience, and honest testing:
                 </p>
-                <ul class="space-y-4 text-xs sm:text-sm text-slate-700">
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-100">
                     <li class="flex items-start gap-3">
                         <i class="w-4 h-4 text-amber-600 mt-1 shrink-0" data-lucide="zap"></i>
                         <span><strong>Automated Stress-Testing:</strong> We simulate real-world failure scenarios&mdash;dropped network connections, malformed input files, process kills, and full disks&mdash;to verify stability before software ships to clients.</span>
@@ -1312,7 +1311,7 @@ document.addEventListener('keydown', function(e) {
                     </li>
                 </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500 font-mono">
+            <div class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
                 <span>Standard: Thoroughly Tested</span>
                 <span class="text-amber-600 font-semibold">&bull; 100% Deterministic</span>
             </div>
@@ -1352,7 +1351,7 @@ document.addEventListener('keydown', function(e) {
             </div>
             <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
                 <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">John Gall (1975)</span>
-                <span class="text-slate-600">&bull;</span>
+                <span class="text-slate-200">&bull;</span>
                 <span class="bg-slate-800 px-2.5 py-1 rounded border border-slate-700">Edsger W. Dijkstra (Simplicity)</span>
             </div>
         </div>
@@ -1409,7 +1408,7 @@ document.addEventListener('keydown', function(e) {
                 <div class="pt-2 flex flex-wrap items-center gap-3">
                     <span class="text-sm font-bold text-slate-900">Mohammad Rehan</span>
                     <span class="text-xs text-slate-400">&bull;</span>
-                    <span class="text-xs text-slate-600 font-medium">Founder &amp; Operations Lead (Ladies Zone Patna) | Self-Taught Distributed Systems Engineer | BCA (2025)</span>
+                    <span class="text-xs text-slate-200 font-medium">Founder &amp; Operations Lead (Ladies Zone Patna) | Self-Taught Distributed Systems Engineer | BCA (2025)</span>
                     <span class="text-xs text-slate-400">&bull;</span>
                     <span class="text-xs font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Patna, Bihar, India</span>
                 </div>
@@ -1430,15 +1429,15 @@ document.addEventListener('keydown', function(e) {
         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-mono font-bold mb-2">
           <span> Desktop Engineering Flagships</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-900 tracking-tight">
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white tracking-tight">
           Featured Commercial Desktop Systems
         </h2>
-        <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-3xl leading-relaxed">
-          Official Windows Setup Wizards (<code class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800 font-mono text-xs">Setup.exe</code>) &bull; Air-Gapped Workstations &bull; Lifetime Binary Ownership
+        <p class="text-xs sm:text-sm text-slate-200 mt-1 max-w-3xl leading-relaxed">
+          Official Windows Setup Wizards (<code class="bg-slate-900 text-slate-200 border border-slate-800 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">Setup.exe</code>) &bull; Air-Gapped Workstations &bull; Lifetime Binary Ownership
         </p>
       </div>
       <div class="flex items-center gap-2 shrink-0">
-        <a class="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-900 bg-white border border-slate-300 hover:bg-slate-100 px-4 py-2.5 rounded-xl transition shadow-2xs" href="store.html">
+        <a class="inline-flex items-center gap-2 text-xs font-mono font-bold text-white bg-slate-900 border border-slate-700 hover:bg-slate-800 px-4 py-2.5 rounded-xl transition shadow-sm" href="store.html">
           <span>Explore All 26 Commercial Suites</span>
           <span class="text-rose-600 font-bold">&rarr;</span>
         </a>
@@ -1466,15 +1465,15 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-rose-700 font-bold truncate">RQL_DocumentShield_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-100 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-rose-600 transition">
                 RQL DocumentShield&trade;
               </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-200 leading-relaxed">
                 Enterprise Forensic PDF Redaction &amp; Deep Metadata Removal Software: True permanent vector redaction, automated SSN/EIN pattern detection, and court-admissible SHA-256 compliance certificate.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-200 space-y-1">
                 <div>&#10003; True Permanent Vector &amp; Text Redaction</div>
                 <div>&#10003; Automated SSN, Tax EIN, Card &amp; Phone Scanner</div>
                 <div>&#10003; Court-Admissible SHA-256 Compliance Certificate</div>
@@ -1521,15 +1520,15 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-sky-700 font-bold truncate">RQL_WhisperVault_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-100 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Air-Gapped OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-sky-600 transition">
                 RQL WhisperVault&trade;
               </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-200 leading-relaxed">
                 Air-Gapped AI Voice Intelligence &amp; Meeting Transcription OS: Powered by local Whisper AI with word-level SRT/VTT subtitle generation and executive PDF meeting reports.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-200 space-y-1">
                 <div>&#10003; 100% Offline Local Whisper AI (Zero Cloud Telemetry)</div>
                 <div>&#10003; Millisecond Word-Level Subtitles (.SRT / .VTT)</div>
                 <div>&#10003; Executive PDF Meeting Summaries &amp; SHA-256 Vault</div>
@@ -1576,15 +1575,15 @@ document.addEventListener('keydown', function(e) {
             <div class="space-y-3">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 gap-2 overflow-hidden">
                 <span class="text-indigo-700 font-bold truncate">RQL_TextDiff_Master_Setup.exe</span>
-                <span class="shrink-0 whitespace-nowrap text-slate-700 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
+                <span class="shrink-0 whitespace-nowrap text-slate-100 bg-slate-100 border border-slate-300/80 px-2 py-0.5 rounded text-[10px]">Myers Vector OS</span>
               </div>
               <h3 class="text-xl font-bold font-heading text-slate-900 group-hover:text-indigo-600 transition">
                 RQL TextDiff&trade;
               </h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-200 leading-relaxed">
                 Offline Visual File &amp; Code Comparison Engine: Sub-millisecond Myers vector diff, side-by-side contract alteration auditing, and court-admissible PDF reports.
               </p>
-              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-600 space-y-1">
+              <div class="pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-200 space-y-1">
                 <div>&#10003; Sub-Millisecond Myers Vector Diff Engine</div>
                 <div>&#10003; Side-by-Side Word &amp; Character Alteration Audit</div>
                 <div>&#10003; Court-Admissible PDF Comparison Certificates</div>
@@ -1678,48 +1677,48 @@ document.addEventListener('keydown', function(e) {
         <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="check-circle-2"></i>
         <span>PROVEN FIELD DEPLOYMENTS</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight">
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white tracking-tight">
         Real-World Engineering Case Studies
       </h2>
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-slate-200">
         Authentic production systems built to eliminate recurring subscription fees and survive harsh offline operational environments.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       <!-- Case Study 1 -->
-      <div class="bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+      <div class="bg-[#0b111b] rounded-3xl border border-slate-800/90 hover:border-emerald-500/40 p-7 sm:p-8 shadow-xl hover:shadow-2xl transition flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between gap-2 mb-4">
             <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Patna, Bihar Deployment
             </span>
-            <span class="text-xs font-mono text-slate-600">Retail Systems</span>
+            <span class="text-xs font-mono text-slate-200">Retail Systems</span>
           </div>
-          <h3 class="text-xl font-bold font-heading text-slate-900">
+          <h3 class="text-xl font-bold font-heading text-white">
             High-Volume Multi-Counter Retail POS Engine
           </h3>
-          <p class="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-200 mt-2.5 leading-relaxed">
             Eliminated recurring &#8377;3,500/mo cloud POS subscription lock-in for a high-volume retail storefront in Patna. Replaced intermittent broadband dependencies with 100% offline local SQLite WAL persistence and sub-millisecond barcode scanning.
           </p>
-          <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center font-mono text-xs">
+          <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800/80 text-center font-mono text-xs">
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">Processed</div>
-              <div class="text-slate-900 font-bold mt-0.5">&#8377;45L+</div>
+              <div class="text-slate-400 text-[10px] uppercase">Processed</div>
+              <div class="text-white font-bold mt-0.5">&#8377;45L+</div>
             </div>
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">SaaS Rent</div>
+              <div class="text-slate-400 text-[10px] uppercase">SaaS Rent</div>
               <div class="text-emerald-600 font-bold mt-0.5">&#8377;0 / Mo</div>
             </div>
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">Barcode Scan</div>
+              <div class="text-slate-400 text-[10px] uppercase">Barcode Scan</div>
               <div class="text-indigo-600 font-bold mt-0.5">&lt; 0.4s</div>
             </div>
           </div>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
           <span class="text-[11px] font-mono text-slate-500">Architecture: Pure Rust + Local LAN</span>
-          <a href="projects.html#case-study-patna" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+          <a href="projects.html#case-study-patna" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
             <span>Read Case Study</span>
             <span>&rarr;</span>
           </a>
@@ -1727,38 +1726,38 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Case Study 2 -->
-      <div class="bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+      <div class="bg-[#0b111b] rounded-3xl border border-slate-800/90 hover:border-emerald-500/40 p-7 sm:p-8 shadow-xl hover:shadow-2xl transition flex flex-col justify-between group">
         <div>
           <div class="flex items-center justify-between gap-2 mb-4">
             <span class="bg-indigo-50 text-indigo-800 border border-indigo-200 text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg flex items-center gap-1.5">
               <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Global Anycast Web
             </span>
-            <span class="text-xs font-mono text-slate-600">Forensic Speed Migration</span>
+            <span class="text-xs font-mono text-slate-200">Forensic Speed Migration</span>
           </div>
-          <h3 class="text-xl font-bold font-heading text-slate-900">
+          <h3 class="text-xl font-bold font-heading text-white">
             Sub-12ms Anycast Web Architecture &amp; Speed Migration
           </h3>
-          <p class="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed">
+          <p class="text-xs sm:text-sm text-slate-200 mt-2.5 leading-relaxed">
             Forensically purged 2.8MB of bloated WordPress/Elementor plugins and render-blocking scripts for a corporate client. Migrated to static Anycast edge hosting with inline critical CSS and WebP asset streaming.
           </p>
-          <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 text-center font-mono text-xs">
+          <div class="mt-5 grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800/80 text-center font-mono text-xs">
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">Lighthouse</div>
+              <div class="text-slate-400 text-[10px] uppercase">Lighthouse</div>
               <div class="text-emerald-600 font-bold mt-0.5">100 / 100</div>
             </div>
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">Edge TTFB</div>
-              <div class="text-slate-900 font-bold mt-0.5">14ms</div>
+              <div class="text-slate-400 text-[10px] uppercase">Edge TTFB</div>
+              <div class="text-white font-bold mt-0.5">14ms</div>
             </div>
             <div>
-              <div class="text-slate-600 text-[10px] uppercase">Organic Traffic</div>
+              <div class="text-slate-400 text-[10px] uppercase">Organic Traffic</div>
               <div class="text-indigo-600 font-bold mt-0.5">+44%</div>
             </div>
           </div>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
           <span class="text-[11px] font-mono text-slate-500">Platform: Cloudflare Edge + Vanilla HTML/JS</span>
-          <a href="projects.html#case-study-anycast" class="text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1">
+          <a href="projects.html#case-study-anycast" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
             <span>Read Case Study</span>
             <span>&rarr;</span>
           </a>
@@ -1774,64 +1773,64 @@ document.addEventListener('keydown', function(e) {
 <section id="homepage-faq" class="py-16 sm:py-20 bg-[#06090e] border-t border-slate-800/80 text-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-mono font-bold">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-emerald-400 text-xs font-mono font-bold">
         <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="help-circle"></i>
         <span>QUESTIONS &amp; ANSWERS</span>
       </div>
       <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 tracking-tight">
         Frequently Asked Questions
       </h2>
-      <p class="text-xs sm:text-sm text-slate-600">
+      <p class="text-xs sm:text-sm text-slate-200">
         Direct answers regarding software licensing, offline air-gap guarantees, and custom systems engineering.
       </p>
     </div>
 
     <div class="space-y-3.5">
-      <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
-        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+      <details class="group bg-[#0b111b] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 open:bg-slate-900/90 open:border-slate-700 transition-all">
+        <summary class="font-bold text-white text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
           <span>Who is Mohammad Rehan?</span>
-          <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 group-open:bg-emerald-500 group-open:text-slate-950 flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
         </summary>
-        <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <div class="mt-3.5 pt-3 border-t border-slate-800/80 text-xs sm:text-sm text-slate-200 leading-relaxed">
           <p><strong>Mohammad Rehan</strong> (also referenced as <em>Mohmmad Rehan</em> or <em>M. Rehan</em>) is an independent quantitative systems architect, bare-metal Rust engineer, and the Founder of <strong>Rehan Quant Lab&trade;</strong>. He engineers air-gapped desktop workstations, deterministic distributed ledgers, Win32 kernel network diagnostic tools, and zero-telemetry commercial utilities including DocumentShield&trade;, WhisperVault&trade;, QRStudio&trade;, and TextDiff&trade;.</p>
         </div>
       </details>
-      <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
-        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+      <details class="group bg-[#0b111b] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 open:bg-slate-900/90 open:border-slate-700 transition-all">
+        <summary class="font-bold text-white text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
           <span>Does this desktop software require an active internet connection to run?</span>
-          <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 group-open:bg-emerald-500 group-open:text-slate-950 flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
         </summary>
-        <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <div class="mt-3.5 pt-3 border-t border-slate-800/80 text-xs sm:text-sm text-slate-200 leading-relaxed">
           <p><strong>No. All 26 commercial software releases are 100% offline and air-gapped.</strong> Every algorithm, redaction engine, and local AI model executes strictly on your local CPU and RAM with 0 outbound network calls and 0 cloud telemetry.</p>
         </div>
       </details>
 
-      <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
-        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+      <details class="group bg-[#0b111b] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 open:bg-slate-900/90 open:border-slate-700 transition-all">
+        <summary class="font-bold text-white text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
           <span>Are there recurring subscription fees or cloud bills?</span>
-          <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 group-open:bg-emerald-500 group-open:text-slate-950 flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
         </summary>
-        <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <div class="mt-3.5 pt-3 border-t border-slate-800/80 text-xs sm:text-sm text-slate-200 leading-relaxed">
           <p><strong>Zero recurring fees.</strong> Every application is sold as a perpetual commercial license. You pay once and own that release version forever on your hardware with no monthly invoices or price spikes.</p>
         </div>
       </details>
 
-      <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
-        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+      <details class="group bg-[#0b111b] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 open:bg-slate-900/90 open:border-slate-700 transition-all">
+        <summary class="font-bold text-white text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
           <span>How can Indian buyers purchase if they don't have an international credit card?</span>
-          <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 group-open:bg-emerald-500 group-open:text-slate-950 flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
         </summary>
-        <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
-          <p>We provide instant domestic Indian payment via <strong>UPI (Google Pay, PhonePe, Paytm) and Net Banking</strong>. You can connect directly via WhatsApp at <code class="bg-slate-100 px-1 py-0.5 rounded text-indigo-700 font-mono font-bold">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&#49;&#56;&#53;&#52;&#56;</code> to receive an instant tax invoice and license key.</p>
+        <div class="mt-3.5 pt-3 border-t border-slate-800/80 text-xs sm:text-sm text-slate-200 leading-relaxed">
+          <p>We provide instant domestic Indian payment via <strong>UPI (Google Pay, PhonePe, Paytm) and Net Banking</strong>. You can connect directly via WhatsApp at <code class="bg-slate-900 text-emerald-400 border border-slate-800 px-1.5 py-0.5 rounded font-mono font-bold">&#43;&#57;&#49;&nbsp;&#55;&#48;&#57;&#49;&#53;&#49;&#56;&#53;&#52;&#56;</code> to receive an instant tax invoice and license key.</p>
         </div>
       </details>
 
-      <details class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 open:bg-white open:border-slate-300 open:shadow-sm transition-all">
-        <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
+      <details class="group bg-[#0b111b] border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 open:bg-slate-900/90 open:border-slate-700 transition-all">
+        <summary class="font-bold text-white text-sm sm:text-base cursor-pointer list-none flex items-center justify-between select-none">
           <span>What web engineering &amp; consulting services does Mohammad Rehan provide?</span>
-          <span class="w-6 h-6 rounded-full bg-slate-200/70 group-open:bg-indigo-600 group-open:text-white flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
+          <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 group-open:bg-emerald-500 group-open:text-slate-950 flex items-center justify-center text-xs transition-colors shrink-0 ml-4 font-mono font-bold">+</span>
         </summary>
-        <div class="mt-3.5 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+        <div class="mt-3.5 pt-3 border-t border-slate-800/80 text-xs sm:text-sm text-slate-200 leading-relaxed">
           <p>I build sub-12ms Anycast web systems, conduct forensic speed audits for bloated client sites, and engineer air-gapped Rust applications. You can use our <a href="websites/" class="text-indigo-600 underline font-semibold">Web &amp; Speed Studio</a> or schedule a direct consultation.</p>
         </div>
       </details>
@@ -1847,11 +1846,11 @@ document.addEventListener('keydown', function(e) {
 Whether you require sub-12ms Anycast web architectures, air-gapped desktop computing suites, or custom quantitative systems engineering, let's connect.
 </p>
 <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
-<a class="bg-white hover:bg-slate-100 text-slate-900 font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm" href="contact.html">
+<a class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-7 py-3.5 rounded-xl transition-all shadow-lg shadow-emerald-500/25 hover:scale-102 text-sm btn-spring" href="contact.html">
 Contact Mohammad Rehan
 </a>
-<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-7 py-3.5 rounded-xl transition-all shadow-md hover:shadow-xl text-sm flex items-center gap-2" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwaW50ZXJlc3RlZCUyMGluJTIweW91ciUyMHNlcnZpY2VzLg==" role="button" rel="noopener noreferrer" target="_blank">
-<i class="w-4 h-4" data-lucide="message-circle"></i>
+<a class="bg-white hover:bg-slate-100 text-slate-950 font-extrabold px-7 py-3.5 rounded-xl transition-all shadow-md hover:scale-102 text-sm flex items-center gap-2 btn-spring" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwaW50ZXJlc3RlZCUyMGluJTIweW91ciUyMHNlcnZpY2VzLg==" role="button" rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4 text-emerald-600" data-lucide="message-circle"></i>
 <span>Chat on WhatsApp</span>
 </a>
 </div>
@@ -1859,25 +1858,25 @@ Contact Mohammad Rehan
 </section>
 </main>
 <!-- FOOTER -->
-<footer class="bg-white border-t border-slate-200 pt-16 pb-12 text-slate-600 text-sm">
+<footer class="bg-[#06090e] border-t border-slate-800/90 pt-16 pb-12 text-slate-300 text-sm">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
   <!-- Col 1: Identity & Architecture -->
   <div class="space-y-3.5">
     <div class="flex items-center gap-2.5">
       <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-8 h-8 rounded-lg object-cover shadow-xs border border-slate-700/40">
       <div class="leading-tight">
-        <span class="font-bold text-slate-900 text-sm block">Mohammad Rehan</span>
-        <span class="text-[11px] font-mono text-indigo-600">Rehan Quant Lab&trade;</span>
+        <span class="font-bold text-white text-sm block">Mohammad Rehan</span>
+        <span class="text-[11px] font-mono text-emerald-400 font-bold">Rehan Quant Lab&trade;</span>
       </div>
     </div>
-    <p class="text-xs text-slate-500 leading-relaxed">
+    <p class="text-xs text-slate-400 leading-relaxed">
       Founder &amp; Principal Systems Architect. Engineering 100% pure native Rust desktop software, forensic air-gapped security, and sub-12ms Anycast web systems.
     </p>
-    <div class="pt-1 text-xs text-slate-500 space-y-1">
-      <div><span class="font-semibold text-slate-700">HQ:</span> Patna, Bihar 800006, India</div>
-      <div><span class="font-semibold text-slate-700">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
-      <div><span class="font-semibold text-slate-700">Entity:</span> Govt. of India Registered MSME (Udyam)</div>
-      <div><span class="font-semibold text-slate-700">Email:</span> <a class="text-indigo-600 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
+    <div class="pt-1 text-xs text-slate-400 space-y-1">
+      <div><span class="font-semibold text-slate-100">HQ:</span> Patna, Bihar 800006, India</div>
+      <div><span class="font-semibold text-slate-100">MSME Reg:</span> UDYAM-BR-26-0258772 (Govt. of India &bull; Commenced 12/01/2023)</div>
+      <div><span class="font-semibold text-slate-100">Entity:</span> Govt. of India Registered MSME (Udyam)</div>
+      <div><span class="font-semibold text-slate-100">Email:</span> <a class="text-indigo-600 font-medium hover:underline" data-obf="bWFpbHRvOmZvdW5kZXJAcmVoYW5xdWFudGxhYi5jb20=" role="button">founder@rehanquantlab.com</a></div>
       <div class="flex items-center gap-1.5 text-emerald-700 font-semibold pt-0.5">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
         <span>Verified Institutional Architect</span>
@@ -1887,47 +1886,47 @@ Contact Mohammad Rehan
 
   <!-- Col 2: Commercial Desktop Suites -->
   <div>
-    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
       <span>Commercial Suites</span>
       <span class="bg-rose-100 text-rose-700 text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold">14</span>
     </h4>
     <ul class="space-y-2 text-xs">
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-900">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono">$179</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-900">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono">$149</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-900">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono">$169</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-storechain"><span class="font-medium text-slate-900">RQL StoreChain&trade; Enterprise</span><span class="text-slate-400 font-mono">$299</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-conduit"><span>RQL Conduit&trade;</span><span class="text-slate-400 font-mono">$129</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-pricetag"><span>RQL PriceTag&trade;</span><span class="text-slate-400 font-mono">$79</span></a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center justify-between" href="store.html#rql-tageditor"><span>RQL TagEditor&trade;</span><span class="text-slate-400 font-mono">$59</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-documentshield"><span class="font-medium text-slate-200 hover:text-white">RQL DocumentShield&trade;</span><span class="text-slate-400 font-mono">$179</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-whispervault"><span class="font-medium text-slate-200 hover:text-white">RQL WhisperVault&trade;</span><span class="text-slate-400 font-mono">$149</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-retailpos"><span class="font-medium text-slate-200 hover:text-white">RQL Retail POS&trade;</span><span class="text-slate-400 font-mono">$169</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-storechain"><span class="font-medium text-slate-200 hover:text-white">RQL StoreChain&trade; Enterprise</span><span class="text-slate-400 font-mono">$299</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-conduit"><span>RQL Conduit&trade;</span><span class="text-slate-400 font-mono">$129</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-pricetag"><span>RQL PriceTag&trade;</span><span class="text-slate-400 font-mono">$79</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center justify-between" href="store.html#rql-tageditor"><span>RQL TagEditor&trade;</span><span class="text-slate-400 font-mono">$59</span></a></li>
       <li><a class="text-rose-600 font-semibold hover:underline flex items-center gap-1 pt-1 font-mono" href="store.html">Explore All 26 Flagships &rarr;</a></li>
     </ul>
   </div>
 
   <!-- Col 3: Platforms & Research Papers -->
   <div>
-    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Platforms &amp; Systems</h4>
     <ul class="space-y-2 text-xs">
       <li><a class="text-emerald-700 hover:text-emerald-900 font-medium transition flex items-center gap-1.5" href="security.html"><span>Trust &amp; Security Registry</span><span class="text-[10px] font-mono bg-emerald-50 px-1 rounded border border-emerald-200">SHA-256</span></a></li>
-      <li><a class="hover:text-slate-950 transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
-      <li><a class="hover:text-slate-950 transition" href="experience.html">Professional Track Record</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="projects.html">Projects &amp; Systems Architecture</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="experience.html">Professional Track Record</a></li>
       <li><a class="text-cyan-700 hover:text-cyan-900 font-medium transition flex items-center gap-1.5" href="auditor/"><span>Forensic Speed Auditor</span><span class="text-[10px] font-mono bg-cyan-50 px-1 rounded border border-cyan-200">16ms</span></a></li>
       <li><a class="text-emerald-700 hover:text-emerald-900 font-medium transition flex items-center gap-1.5" href="builder/"><span>Instant Website Studio</span><span class="text-[10px] font-mono bg-emerald-50 px-1 rounded border border-emerald-200">1-Click</span></a></li>
       <li><a class="text-indigo-600 hover:text-indigo-800 font-medium transition flex items-center gap-1" href="research/"><span>Research Papers (Sub-12ms Rust)</span><span class="text-[10px]"></span></a></li>
-      <li><a class="hover:text-slate-950 transition" href="demo.html">Interactive Systems Demos</a></li>
-      <li><a class="hover:text-slate-950 transition" href="changelog.html">System Changelog &amp; Releases</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="demo.html">Interactive Systems Demos</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="changelog.html">System Changelog &amp; Releases</a></li>
     </ul>
   </div>
 
   <!-- Col 4: Governance & Connect -->
   <div>
-    <h4 class="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
+    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3.5">Governance &amp; Contact</h4>
     <ul class="space-y-2 text-xs">
-      <li><a class="hover:text-slate-950 transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
-      <li><a class="hover:text-slate-950 transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
-      <li><a class="text-slate-700 hover:text-slate-950 transition flex items-center gap-1.5" href="legal.html"><span>Master SaaS &amp; Licensing Terms</span> </a></li>
+      <li><a class="text-slate-300 hover:text-white transition font-medium" href="contact.html">Contact &amp; Executive Hire</a></li>
+      <li><a class="text-slate-300 hover:text-white transition" href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer">Schedule Technical Briefing &rarr;</a></li>
+      <li><a class="text-slate-100 hover:text-slate-950 transition flex items-center gap-1.5" href="legal.html"><span>Master SaaS &amp; Licensing Terms</span> </a></li>
       <li><a class="text-violet-600 hover:text-violet-800 font-semibold transition flex items-center gap-1" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2FmZmlsaWF0ZXM=" role="button" target="_blank" rel="noopener noreferrer"><span>Affiliate Program (Earn 30%)</span> &rarr;</a></li>
-      <li><a class="hover:text-slate-950 transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
-      <li><a class="hover:text-red-600 transition flex items-center gap-1.5 text-slate-700" href="https://www.youtube.com/channel/UCf1-IOclsbG8QHI2HKuac0A" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current text-red-600" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> <span>YouTube Channel</span></a></li>
+      <li><a class="text-slate-300 hover:text-white transition flex items-center gap-1.5" href="https://x.com/rehanquantlab" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span>X (@rehanquantlab)</span></a></li>
+      <li><a class="hover:text-red-600 transition flex items-center gap-1.5 text-slate-100" href="https://www.youtube.com/channel/UCf1-IOclsbG8QHI2HKuac0A" target="_blank" rel="noopener noreferrer"><svg class="w-3.5 h-3.5 fill-current text-red-600" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> <span>YouTube Channel</span></a></li>
       <li><a class="text-emerald-600 font-semibold hover:underline flex items-center gap-1" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg=" role="button" target="_blank" rel="noopener noreferrer"><span>WhatsApp Direct Channel &rarr;</span></a></li>
     </ul>
   </div>
@@ -1935,31 +1934,31 @@ Contact Mohammad Rehan
 
 <!-- SOFTWARE ENGINEERING & TECHNOLOGY LICENSING STATEMENT -->
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-<div class="bg-slate-50 border border-slate-200/90 rounded-2xl p-5 text-slate-600 text-xs space-y-2">
-    <div class="flex items-center gap-2 font-bold text-slate-900 uppercase tracking-wider text-[11px]">
+<div class="bg-[#0b111b] border border-slate-800 rounded-2xl p-5 text-slate-300 text-xs space-y-2">
+    <div class="flex items-center gap-2 font-bold text-white uppercase tracking-wider text-[11px]">
         <i class="w-4 h-4 text-emerald-600" data-lucide="shield-check"></i>
         <span>Software Engineering &amp; Technology Licensing Statement</span>
-        <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-semibold">Institutional Grade</span>
+        <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/40 text-[10px] px-2 py-0.5 rounded-full font-semibold">Institutional Grade</span>
     </div>
     <p class="leading-relaxed">
         <strong>Rehan Quant Lab&trade;</strong> is an independent software technology laboratory and digital systems consultancy. We engineer offline desktop software suites, air-gapped forensic document security (including RQL DocumentShield&trade;), offline AI speech systems (including RQL WhisperVault&trade;), and sub-12ms native client web portals.
     </p>
     <p class="text-slate-500 text-[11px] leading-relaxed">
-        <strong>Commercial Notice:</strong> All software suites, point-of-sale systems, and web architectures are delivered as perpetual proprietary commercial licenses with zero mandatory cloud dependencies. For full risk disclosures, algorithmic benchmarking boundaries, and legal agreements, review our <a href="legal.html" class="text-slate-700 font-semibold underline hover:text-slate-900">Master Legal Terms &amp; Agreement &amp; SaaS Agreement</a>.
+        <strong>Commercial Notice:</strong> All software suites, point-of-sale systems, and web architectures are delivered as perpetual proprietary commercial licenses with zero mandatory cloud dependencies. For full risk disclosures, algorithmic benchmarking boundaries, and legal agreements, review our <a href="legal.html" class="text-slate-100 font-semibold underline hover:text-slate-900">Master Legal Terms &amp; Agreement &amp; SaaS Agreement</a>.
     </p>
 </div>
 </div>
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 border-t border-slate-200/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
   <div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-center md:text-left">
     <span>&copy; 2026 Mohammad Rehan &bull; Rehan Quant Lab&trade;</span>
     <span class="hidden sm:inline text-slate-300">&bull;</span>
-    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200/90 text-slate-700 font-mono text-[10px]"><i class="w-3 h-3 text-emerald-600" data-lucide="award"></i><span>Govt. of India MSME: UDYAM-BR-26-0258772 &bull; Est. 12/01/2023</span></span>
+    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 font-mono text-[10px]"><i class="w-3 h-3 text-emerald-600" data-lucide="award"></i><span>Govt. of India MSME: UDYAM-BR-26-0258772 &bull; Est. 12/01/2023</span></span>
   </div>
   <div class="flex flex-wrap items-center justify-center gap-3 font-medium">
-    <a href="legal.html" class="text-slate-600 hover:text-slate-900 transition">Terms &amp; Risk Disclosures</a>
+    <a href="legal.html" class="text-slate-200 hover:text-slate-900 transition">Terms &amp; Risk Disclosures</a>
     <span class="text-slate-300">&bull;</span>
-    <a href="security.html" class="text-slate-600 hover:text-slate-900 transition">Trust Registry</a>
+    <a href="security.html" class="text-slate-200 hover:text-slate-900 transition">Trust Registry</a>
     <span class="text-slate-300">&bull;</span>
     <span class="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 text-[10px] font-mono">100% Offline Resilient</span>
   </div>
@@ -2170,14 +2169,14 @@ function filterProjects(category, triggerEl) {
         const isMatch = (triggerEl && btn === triggerEl) || (btnFilter && btnFilter === normCat);
 
         if (isMatch || (!triggerEl && !btnFilter && btn.textContent.toLowerCase().includes(normCat))) {
-            btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            btn.classList.remove('bg-slate-800', 'text-slate-200', 'border', 'border-slate-700');
             btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
         } else if (normCat === 'all' && (btnFilter === 'all' || btn.textContent.includes('All Systems') || btn.textContent.includes('All Commercial'))) {
-            btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            btn.classList.remove('bg-slate-800', 'text-slate-200', 'border', 'border-slate-700');
             btn.classList.add('bg-slate-900', 'text-white', 'shadow-sm');
         } else {
             btn.classList.remove('bg-slate-900', 'text-white', 'shadow-sm');
-            btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            btn.classList.add('bg-slate-800', 'text-slate-200', 'border', 'border-slate-700');
         }
     });
 

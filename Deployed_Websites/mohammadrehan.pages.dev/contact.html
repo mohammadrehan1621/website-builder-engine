@@ -222,17 +222,17 @@
 <!-- SLIDE-OUT NAVIGATION DRAWER -->
 <div id="side-drawer-backdrop" onclick="closeSideDrawer()" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
-<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-slate-900 text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
+<aside id="side-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-[#0b111b] text-slate-100 z-50 shadow-2xl border-l border-slate-800 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between overflow-y-auto">
   <!-- Drawer Top Bar -->
-  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
-    <div class="flex items-center gap-2.5">
-      <img src="emblem.webp" alt="RQL" class="w-7 h-7 rounded-lg border border-slate-700 shadow-xs">
+  <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-[#06090e]/95">
+    <div class="flex items-center gap-3">
+      <img src="emblem.webp" decoding="async" alt="RQL" class="w-8 h-8 rounded-lg border border-slate-700 shadow-sm">
       <div>
-        <div class="font-bold text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
-        <div class="text-[10px] text-slate-400 font-mono">Site Directory Navigation</div>
+        <div class="font-black text-white text-sm font-heading leading-tight">Rehan Quant Lab&trade;</div>
+        <div class="text-[10.5px] text-emerald-400 font-mono tracking-wide font-bold">Site Directory Navigation</div>
       </div>
     </div>
-    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
+    <button onclick="closeSideDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 flex items-center justify-center transition cursor-pointer" aria-label="Close Navigation Menu">
       <i class="w-4 h-4" data-lucide="x"></i>
     </button>
   </div>
@@ -240,20 +240,22 @@
   <!-- Drawer Body -->
   <div class="p-5 space-y-6 flex-grow">
     <div>
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 mb-2.5">Flagship Portals</div>
-      <nav class="space-y-1.5">
-        <a href="index.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-800/60 text-slate-300 transition group">
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-3">Flagship Portals</div>
+      <nav class="space-y-2">
+        <!-- Home -->
+        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 flex items-center justify-center shrink-0 border border-indigo-800/40"><i class="w-4 h-4" data-lucide="home"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
-              <div class="text-sm font-bold text-white group-hover:text-indigo-400 transition">Home</div>
-              <div class="text-[11px] text-slate-400">Pure-Rust offline desktop tools &amp; profile</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Home</div>
+              <div class="text-[11px] text-slate-300">Pure-Rust offline desktop tools &amp; profile</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="store.html" class="flex items-center justify-between p-2.5 rounded-xl bg-rose-950/30 hover:bg-rose-900/30 border border-rose-800/40 text-slate-200 transition group">
+        <!-- Commercial Suites (26) -->
+        <a href="store.html" class="flex items-center justify-between p-3 rounded-xl bg-rose-950/40 hover:bg-rose-900/50 border border-rose-800/60 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-xs"><i class="w-4 h-4" data-lucide="shopping-bag"></i></div>
             <div>
@@ -261,78 +263,98 @@
                 <span>Commercial Suites</span>
                 <span class="bg-rose-600 text-white text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">26 Live</span>
               </div>
-              <div class="text-[11px] text-rose-300 font-medium">100% offline desktop workstations &bull; Gumroad checkout</div>
+              <div class="text-[11px] text-rose-200 font-medium">100% offline desktop workstations &bull; Gumroad</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-rose-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="projects.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-800/60 text-slate-300 transition group">
+        <!-- Free Web Tools -->
+        <a href="tools/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 flex items-center justify-center shrink-0 border border-blue-800/40"><i class="w-4 h-4" data-lucide="cpu"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="wrench"></i></div>
+            <div>
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Free Web Tools</span>
+                <span class="bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-1.5 py-0.2 rounded-full font-bold">5 Online</span>
+              </div>
+              <div class="text-[11px] text-slate-300">100% offline in-browser sovereign utilities</div>
+            </div>
+          </div>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
+        </a>
+
+        <!-- Projects -->
+        <a href="projects.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="cpu"></i></div>
             <div>
               <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Projects &amp; Systems</div>
-              <div class="text-[11px] text-slate-400">26 desktop tools, architecture &amp; specifications</div>
+              <div class="text-[11px] text-slate-300">26 desktop tools, architecture &amp; specifications</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="experience.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-800/60 text-slate-300 transition group">
+        <!-- Professional Experience -->
+        <a href="experience.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-slate-950 text-slate-200 border border-slate-800 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="briefcase"></i></div>
             <div>
-              <div class="text-sm font-bold text-white group-hover:text-white transition">Professional Experience</div>
-              <div class="text-[11px] text-slate-400">4+ years retail leadership, BCA &amp; skill radar</div>
+              <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Professional Experience</div>
+              <div class="text-[11px] text-slate-300">4+ years retail leadership, BCA &amp; skill radar</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="security.html" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-800/60 text-slate-300 transition group">
+        <!-- Security & Trust Registry -->
+        <a href="security.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-800/40"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="shield-check"></i></div>
             <div>
               <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Security &amp; Trust Registry</div>
-              <div class="text-[11px] text-slate-400">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
+              <div class="text-[11px] text-slate-300">Microsoft WDSI 100% clean &amp; SHA-256 proofs</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="research/" class="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-800/60 text-slate-300 transition group">
+        <!-- Research & Papers -->
+        <a href="research/" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 flex items-center justify-center shrink-0 border border-violet-800/40"><i class="w-4 h-4" data-lucide="file-text"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-violet-950 text-violet-400 border border-violet-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="file-text"></i></div>
             <div>
               <div class="text-sm font-bold text-white group-hover:text-violet-400 transition">Research &amp; Papers</div>
-              <div class="text-[11px] text-slate-400">Technical papers on pure-Rust architectures &amp; offline privacy</div>
+              <div class="text-[11px] text-slate-300">Technical papers on pure-Rust &amp; offline privacy</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-500 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
 
-        <a href="contact.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/80 font-bold text-white border border-slate-700 transition group">
+        <!-- Contact & Hire -->
+        <a href="contact.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-100 transition group btn-spring">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center shrink-0 border border-cyan-800/40"><i class="w-4 h-4" data-lucide="mail"></i></div>
+            <div class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-800/50 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="mail"></i></div>
             <div>
               <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition">Contact &amp; Hire</div>
-              <div class="text-[11px] text-slate-400">Direct founder technical briefing &amp; consulting</div>
+              <div class="text-[11px] text-slate-300">Direct founder technical briefing &amp; consulting</div>
             </div>
           </div>
-          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 transition" data-lucide="chevron-right"></i>
+          <i class="w-4 h-4 text-slate-400 group-hover:translate-x-0.5 group-hover:text-white transition" data-lucide="chevron-right"></i>
         </a>
       </nav>
     </div>
 
     <!-- Institutional Ledger & Legal -->
     <div class="pt-4 border-t border-slate-800">
-      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 mb-2">Institutional Ledger</div>
+      <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-2.5">Institutional Ledger</div>
       <div class="grid grid-cols-2 gap-2 text-xs font-mono">
-        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-800/50 hover:bg-slate-800 text-slate-300 border border-slate-700/60 flex items-center gap-2 transition">
+        <a href="legal.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
           <i class="w-3.5 h-3.5 text-slate-400" data-lucide="scale"></i>
           <span>Legal &amp; Terms</span>
         </a>
-        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-800/50 hover:bg-slate-800 text-slate-300 border border-slate-700/60 flex items-center gap-2 transition">
+        <a href="changelog.html" class="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 flex items-center gap-2 transition btn-spring">
           <i class="w-3.5 h-3.5 text-slate-400" data-lucide="history"></i>
           <span>Changelog</span>
         </a>
@@ -341,13 +363,13 @@
   </div>
 
   <!-- Drawer Footer Actions -->
-  <div class="p-5 border-t border-slate-800 bg-slate-950/60 space-y-2">
-    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs flex items-center justify-center gap-2 transition btn-spring">
-      <i class="w-4 h-4 text-emerald-300" data-lucide="calendar"></i>
+  <div class="p-5 border-t border-slate-800/90 bg-[#06090e]/95 space-y-2.5">
+    <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-black font-heading shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-4 h-4 text-slate-950" data-lucide="calendar"></i>
       <span>Schedule Technical Briefing</span>
     </a>
-    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-semibold font-mono flex items-center justify-center gap-2 transition">
-      <i class="w-3.5 h-3.5 text-slate-400" data-lucide="download"></i>
+    <a href="Mohammad_Rehan_Resume.pdf" download class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 text-xs font-bold font-mono flex items-center justify-center gap-2 transition btn-spring">
+      <i class="w-3.5 h-3.5 text-slate-300" data-lucide="download"></i>
       <span>Download Resume (PDF)</span>
     </a>
   </div>

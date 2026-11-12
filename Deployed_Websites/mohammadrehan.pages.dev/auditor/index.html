@@ -265,7 +265,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen grid-bg-dark flex flex-col justify-between selection:bg-cyan-500 selection:text-black">
+<body class="bg-[#06090e] text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950 flex flex-col min-h-screen">
 
   <!-- TOP NAVIGATION WITH CONTRAST ACCENT -->
   <header class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl sticky top-0 z-50">
@@ -549,9 +549,9 @@
 
         <!-- RIGHT PHONE: RQL PURE-RUST ENGINE (INSTANT EDGE STREAM) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-white border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-[#0b111b] border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-200">
+            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-800">
               <div class="phone-notch bg-slate-200 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-400"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-400"></span>
@@ -559,7 +559,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-700">
+            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-200">
               <span class="truncate max-w-[170px]" id="phoneRightDomain">rehanquantlab.com</span>
               <span class="text-emerald-600 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 5G Edge
@@ -567,16 +567,16 @@
             </div>
 
             <!-- Viewport Screen Content (Instant Render) -->
-            <div id="phoneRightScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-50 relative overflow-hidden">
+            <div id="phoneRightScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-950 relative overflow-hidden">
               <div id="phoneRightComplete" class="space-y-2.5 w-full">
                 <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-[11px] font-mono space-y-1.5 shadow-sm">
                   <div class="flex items-center justify-between">
-                    <span class="font-bold text-slate-900 text-xs">&#9889; RQL Pure-Rust Edge</span>
+                    <span class="font-bold text-white text-xs">&#9889; RQL Pure-Rust Edge</span>
                     <span class="text-[9px] bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold">100/100</span>
                   </div>
                   <div class="h-2 bg-emerald-300 rounded w-full"></div>
                   <div class="h-2 bg-emerald-200 rounded w-4/5"></div>
-                  <div class="p-2 rounded bg-white border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
+                  <div class="p-2 rounded bg-[#0b111b] border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
                     &#127937; Instant Render (0.20s Flat)
                   </div>
                 </div>
@@ -587,7 +587,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-100 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-600 font-bold">Instant Edge:</span>
               <span id="phoneRightTimer" class="text-lg font-bold text-emerald-600 tabular-nums">0.20s</span>
             </div>
@@ -646,9 +646,9 @@
 
         <!-- RIGHT PHONE: RQL PURE-RUST ENGINE (INSTANT EDGE STREAM) -->
         <div class="flex flex-col items-center">
-          <div class="phone-mockup bg-white border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
+          <div class="phone-mockup bg-[#0b111b] border-4 border-slate-300 relative flex flex-col justify-between overflow-hidden shadow-2xl">
             <!-- Top Speaker & Camera -->
-            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-200">
+            <div class="w-full flex justify-center bg-slate-100 py-1.5 border-b border-slate-800">
               <div class="phone-notch bg-slate-200 flex items-center justify-around px-3">
                 <span class="w-2 h-2 rounded-full bg-slate-400"></span>
                 <span class="w-8 h-1 rounded-full bg-slate-400"></span>
@@ -656,7 +656,7 @@
             </div>
 
             <!-- Browser URL Bar -->
-            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-[10px] font-mono text-slate-700">
+            <div class="px-3 py-1.5 bg-slate-100 border-b border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-200">
               <span class="truncate max-w-[170px]" id="phoneRightDomain">rehanquantlab.com</span>
               <span class="text-emerald-600 font-bold flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 5G Edge
@@ -664,16 +664,16 @@
             </div>
 
             <!-- Viewport Screen Content (Instant Render) -->
-            <div id="phoneRightScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-50 relative overflow-hidden">
+            <div id="phoneRightScreen" class="flex-grow flex flex-col items-center justify-center p-4 text-center bg-slate-950 relative overflow-hidden">
               <div id="phoneRightComplete" class="space-y-2.5 w-full">
                 <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-[11px] font-mono space-y-1.5 shadow-sm">
                   <div class="flex items-center justify-between">
-                    <span class="font-bold text-slate-900 text-xs">&#9889; RQL Pure-Rust Edge</span>
+                    <span class="font-bold text-white text-xs">&#9889; RQL Pure-Rust Edge</span>
                     <span class="text-[9px] bg-emerald-200 text-emerald-800 px-1.5 py-0.5 rounded font-bold">100/100</span>
                   </div>
                   <div class="h-2 bg-emerald-300 rounded w-full"></div>
                   <div class="h-2 bg-emerald-200 rounded w-4/5"></div>
-                  <div class="p-2 rounded bg-white border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
+                  <div class="p-2 rounded bg-[#0b111b] border border-emerald-300 flex items-center justify-center text-emerald-700 text-[10px] font-bold shadow-sm">
                     &#127937; Instant Render (0.20s Flat)
                   </div>
                 </div>
@@ -684,7 +684,7 @@
             </div>
 
             <!-- Bottom Race Stopwatch -->
-            <div class="p-3 bg-slate-100 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
+            <div class="p-3 bg-slate-100 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
               <span class="text-slate-600 font-bold">Instant Edge:</span>
               <span id="phoneRightTimer" class="text-lg font-bold text-emerald-600 tabular-nums">0.20s</span>
             </div>
@@ -768,7 +768,7 @@
         <div class="cad-plane-4 flex items-center justify-between pb-4 border-b border-slate-300/80 mb-6">
           <div class="flex items-center gap-2.5">
             <span class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
-            <span class="text-xs font-mono font-bold tracking-wider uppercase text-slate-800">RQL PURE-RUST PERFORMANCE EDGE</span>
+            <span class="text-xs font-mono font-bold tracking-wider uppercase text-slate-100">RQL PURE-RUST PERFORMANCE EDGE</span>
           </div>
           <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300 shadow-sm">
             Air-Gapped &bull; 100/100 Lighthouse
@@ -778,7 +778,7 @@
         <!-- CAD PLANE 1: Front Optical Floating Digits -->
         <div class="cad-plane-1 text-center my-6">
           <div class="inline-flex items-baseline gap-2">
-            <span id="fastLoadTimeText" class="text-6xl sm:text-7xl font-extrabold text-slate-900 font-sans tracking-tight tabular-nums drop-shadow-sm">0.20</span>
+            <span id="fastLoadTimeText" class="text-6xl sm:text-7xl font-extrabold text-white font-sans tracking-tight tabular-nums drop-shadow-sm">0.20</span>
             <span class="text-2xl font-sans text-slate-600 font-bold">sec</span>
           </div>
           <p class="text-xs font-mono text-slate-600 mt-1 uppercase tracking-wide font-semibold">Instant Global Edge Render</p>
@@ -787,7 +787,7 @@
           <div class="w-full bg-slate-200 rounded-full h-3 mt-5 p-0.5 border border-slate-300">
             <div id="fastProgressBar" class="bg-gradient-to-r from-teal-500 to-emerald-500 h-full rounded-full transition-all duration-1000 shadow-sm" style="width: 100%;"></div>
           </div>
-          <div class="flex justify-between text-[11px] font-mono text-slate-700 mt-1.5 px-0.5 font-bold">
+          <div class="flex justify-between text-[11px] font-mono text-slate-200 mt-1.5 px-0.5 font-bold">
             <span>Google Score: 100/100 (Optimal)</span>
             <span id="speedMultiplierBadge" class="text-teal-700 bg-teal-100 px-2 py-0.5 rounded text-[10px]">15.6&#215; FASTER</span>
           </div>
@@ -795,29 +795,29 @@
 
         <!-- CAD PLANE 2: Floating Superiority Indicators -->
         <div class="cad-plane-2 space-y-2.5 mt-8 pt-6 border-t border-slate-300/80 text-xs font-mono">
-          <div class="flex items-center justify-between text-slate-800">
+          <div class="flex items-center justify-between text-slate-100">
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Edge Network Latency:
             </span>
             <span class="text-emerald-700 font-bold">180 &ndash; 208 ms</span>
           </div>
-          <div class="flex items-center justify-between text-slate-800">
+          <div class="flex items-center justify-between text-slate-100">
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Compiler Optimization:
             </span>
-            <span class="text-slate-900 font-bold">Pure-Rust Native Stream Minifier</span>
+            <span class="text-white font-bold">Pure-Rust Native Stream Minifier</span>
           </div>
-          <div class="flex items-center justify-between text-slate-800">
+          <div class="flex items-center justify-between text-slate-100">
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Ongoing Annual Server Bill:
             </span>
             <span class="text-emerald-700 font-bold">&#8377;0 Forever (Edge Hosted)</span>
           </div>
-          <div class="flex items-center justify-between text-slate-800">
+          <div class="flex items-center justify-between text-slate-100">
             <span class="flex items-center gap-1.5">
               <span class="text-emerald-600 font-bold">&#10004;</span> Security & Uptime Resilience:
             </span>
-            <span class="text-slate-900 font-bold">Grade A+ (Immutable Air-Gapped Code)</span>
+            <span class="text-white font-bold">Grade A+ (Immutable Air-Gapped Code)</span>
           </div>
         </div>
       </div>
