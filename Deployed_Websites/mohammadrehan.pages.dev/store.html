@@ -5085,7 +5085,6 @@ function goToDeskStep2() {
   const buyerEl = document.getElementById('desk-bill-to-name');
   const prodEl = document.getElementById('desk-bill-product');
   const amtEl = document.getElementById('desk-bill-amount');
-  const qrImg = document.getElementById('desk-qr-image');
 
   const randNum = Math.floor(1000 + Math.random() * 9000);
   if (invEl) invEl.textContent = 'PRO-RQL-2026-' + randNum;
@@ -5093,17 +5092,14 @@ function goToDeskStep2() {
   if (prodEl) prodEl.innerHTML = currentDeskProduct;
   if (amtEl) amtEl.innerHTML = '&#8377;' + currentDeskPrice;
 
-  // Dynamic UPI payment QR
-  if (qrImg) {
-    const rawAmt = currentDeskPrice.replace(/,/g, '');
-    const upiLink = 'upi://pay?pa=7091518548@pthdfc&pn=Mohammad%20Rehan&am=' + encodeURIComponent(rawAmt) + '&cu=INR&tn=RQL%20Workstation%20License';
-    qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(upiLink);
-    qrImg.onerror = function() {
-      qrImg.src = 'qr_codes/p01_DocumentShield_Gumroad_QR.png';
-    };
-    const mobileBtn = document.getElementById('desk-mobile-pay-btn');
-    if (mobileBtn) mobileBtn.href = upiLink;
-  }
+  const guideAmtEl = document.getElementById('desk-guide-amount');
+  if (guideAmtEl) guideAmtEl.innerHTML = '&#8377;' + currentDeskPrice;
+
+  // Direct Mobile UPI Intent Link
+  const rawAmt = currentDeskPrice.replace(/,/g, '');
+  const upiLink = 'upi://pay?pa=7091518548@pthdfc&pn=Mohammad%20Rehan&am=' + encodeURIComponent(rawAmt) + '&cu=INR&tn=RQL%20Workstation%20License';
+  const mobileBtn = document.getElementById('desk-mobile-pay-btn');
+  if (mobileBtn) mobileBtn.href = upiLink;
 
   // Switch steps
   const s1 = document.getElementById('desk-step-1');
@@ -5483,35 +5479,58 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
 
-          <!-- Right Column: Crisp UPI Payment QR Box -->
-          <div class="p-4 rounded-2xl bg-slate-50 border-2 border-emerald-500/40 shadow-xs flex flex-col items-center justify-center text-center space-y-2.5">
-            <div class="text-[11px] font-mono font-bold text-emerald-800 uppercase">
-              Scan with Any UPI App (GPay / PhonePe / Paytm / BHIM)
+          <!-- Right Column: Official Verified UPI Payment Card (No QR Glare) -->
+          <div class="p-5 rounded-2xl bg-slate-50 border-2 border-emerald-500/50 shadow-sm flex flex-col justify-between text-left space-y-4">
+            <div class="space-y-1">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+                <span class="text-xs font-mono font-extrabold text-emerald-800 uppercase tracking-wide">Direct UPI Domestic Payment</span>
+                <span class="text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-300">&#10003; Zero Gateway Fees</span>
+              </div>
+              <p class="text-[11px] font-sans text-slate-600 leading-relaxed pt-1">
+                Transfer the exact license fee directly using any UPI app (Google Pay, PhonePe, Paytm, BHIM, or your mobile banking app).
+              </p>
             </div>
 
-            <!-- Apple iPhone User Guidance Callout -->
-            <div class="w-full p-2 rounded-xl bg-amber-50 border border-amber-300 text-[10.5px] font-sans text-amber-950 font-medium text-left leading-snug">
-              <span class="font-bold text-amber-900">&#9888; iPhone Users:</span> Open <strong>Google Pay, PhonePe, or Paytm</strong> scanner. (Do not use default iPhone Camera &mdash; iOS lacks UPI and treats @pthdfc as an email address).
-            </div>
-            
-            <!-- Compact High-Contrast QR Code -->
-            <div class="w-40 h-40 sm:w-44 sm:h-44 bg-white p-2 border-2 border-slate-300 rounded-xl shadow-xs flex items-center justify-center">
-              <img id="desk-qr-image" src="qr_codes/p01_DocumentShield_Gumroad_QR.png" alt="UPI Payment QR" class="w-full h-full object-contain" />
+            <!-- Big High-Contrast UPI ID Card -->
+            <div class="p-4 rounded-xl bg-white border-2 border-emerald-600/30 shadow-xs space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-[10.5px] font-mono font-bold uppercase tracking-wider text-slate-500">Official Merchant VPA / UPI ID</span>
+                <span class="text-[10.5px] font-mono text-emerald-700 font-bold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span>Active HDFC Node</span>
+                </span>
+              </div>
+              
+              <div class="flex items-center justify-between gap-2 p-3 rounded-lg bg-emerald-50/80 border-2 border-emerald-300">
+                <code class="text-base sm:text-lg font-mono font-black text-slate-950 select-all tracking-tight">7091518548@pthdfc</code>
+                <button type="button" onclick="copyDeskUpiId()" class="py-2 px-3.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-extrabold text-xs flex items-center gap-1.5 transition hover:scale-102 cursor-pointer shadow-xs shrink-0">
+                  <span id="desk-copy-status">Copy UPI ID</span>
+                </button>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-slate-700 pt-1 border-t border-slate-100">
+                <div>Payee: <strong class="text-slate-950 block font-bold">Mohammad Rehan</strong></div>
+                <div>Bank: <strong class="text-slate-950 block font-bold">HDFC Bank India</strong></div>
+              </div>
             </div>
 
-            <!-- Direct Mobile UPI Intent Button (for users browsing on phone) -->
-            <a id="desk-mobile-pay-btn" href="upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan&cu=INR&tn=RQL+Workstation+License" class="w-full py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-sm transition btn-spring">
-              <span>&#9889; Tap to Pay via UPI App Directly</span>
-            </a>
-
-            <div class="space-y-0.5">
-              <div class="text-xs font-mono font-bold text-slate-800">UPI ID: <code class="bg-slate-100 px-2 py-0.5 rounded text-indigo-700 font-bold">7091518548@pthdfc</code></div>
-              <div class="text-[10px] font-mono text-slate-500">Payee: Mohammad Rehan &bull; Account: HDFC Bank</div>
+            <!-- 1-Tap Mobile App Trigger -->
+            <div class="space-y-1.5">
+              <a id="desk-mobile-pay-btn" href="upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan&cu=INR&tn=RQL+Workstation+License" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 shadow-sm transition hover:scale-101 btn-spring">
+                <span>&#9889; Tap to Pay with UPI App (GPay / PhonePe / Paytm)</span>
+              </a>
+              <div class="text-[10px] font-mono text-slate-500 text-center">
+                Clicking above opens your banking app automatically with the exact amount.
+              </div>
             </div>
 
-            <button onclick="copyDeskUpiId()" class="py-1 px-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-[11px] font-mono font-semibold transition cursor-pointer">
-              <span id="desk-copy-status">Copy UPI ID</span>
-            </button>
+            <!-- 3-Step Simple Protocol -->
+            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 text-[10.5px] font-mono text-slate-700 space-y-1">
+              <div class="font-bold text-slate-800 uppercase text-[10px] tracking-wider mb-1">Instant Settlement Protocol:</div>
+              <div>1. Copy UPI ID: <strong class="text-indigo-800">7091518548@pthdfc</strong></div>
+              <div>2. Transfer exact fee (<strong id="desk-guide-amount" class="text-slate-950 font-bold">&#8377;14,900</strong>) in any UPI app.</div>
+              <div>3. Paste the 12-digit UTR Transaction Number on the left &amp; confirm.</div>
+            </div>
           </div>
 
         </div>
