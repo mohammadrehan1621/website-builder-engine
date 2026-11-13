@@ -29,6 +29,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
   // DOM Elements cache helper
   function $(id) { return document.getElementById(id); }
+  window.$ = $;
 
   // Prevent browser from navigating away if user drops file anywhere outside
   window.addEventListener('dragover', function(e) { e.preventDefault(); }, false);
@@ -580,8 +581,19 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
   function getEffectiveQrPayload() {
     var input = $('qrstudio-text-input');
-    var raw = input ? input.value.trim() : 'https://rehanquantlab.com';
-    if (!raw) raw = 'https://rehanquantlab.com';
+    var raw = input ? input.value.trim() : 'https://rehanquantlab.com/store';
+    if (!raw) raw = 'https://rehanquantlab.com/store';
+
+    var noteEl = $('qr-camera-behavior-note');
+    if (noteEl) {
+      if (raw.indexOf('upi://') === 0 || raw.indexOf('@pthdfc') !== -1 || raw.indexOf('@ok') !== -1 || raw.indexOf('@upi') !== -1) {
+        noteEl.innerHTML = '<span class="text-amber-800 font-bold">&#9888; UPI String:</span> Scan with Google Pay, PhonePe, or Paytm. (Apple Camera does not support UPI and treats @ as an email address).';
+      } else if (raw.indexOf('@') !== -1 && raw.indexOf('://') === -1) {
+        noteEl.innerHTML = '<span class="text-blue-800 font-bold">&#9993; Email Address:</span> Phone camera will offer to compose an email in Mail / Gmail.';
+      } else {
+        noteEl.innerHTML = '<span class="text-emerald-800 font-bold">&#10003; Web URL:</span> Point iPhone or Android camera &mdash; opens browser directly to website.';
+      }
+    }
 
     if (window.qrDynamicMode) {
       var resolved = resolveDynamicPayload(raw);
