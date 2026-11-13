@@ -152,42 +152,66 @@ tailwind.config = {
           <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
             <div>
               <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                <span class="text-xs font-mono font-bold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
-                <span id="qrstudio-time-badge" class="text-[11px] font-mono text-purple-400">Vector Render</span>
+                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
+                <span id="qrstudio-time-badge" class="text-[11px] font-mono font-bold text-purple-700">Instant Render</span>
               </div>
 
               <div class="mt-4 space-y-2">
-                <label class="block text-[11px] font-mono text-slate-400">Enter text, URL, or UPI string:</label>
-                <textarea id="qrstudio-text-input" rows="4" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs focus:border-purple-500 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
+                <div class="flex items-center gap-2">
+                  <button id="qr-mode-dynamic-btn" type="button" onclick="setQrDynamicMode(true)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-extrabold transition flex items-center gap-1.5 cursor-pointer bg-purple-700 text-white border-2 border-purple-800 shadow-md">
+                    <span>&#9889; Dynamic Anycast</span>
+                  </button>
+                  <button id="qr-mode-static-btn" type="button" onclick="setQrDynamicMode(false)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-bold transition flex items-center gap-1.5 cursor-pointer bg-white text-slate-800 border-2 border-slate-300 hover:border-slate-400 shadow-2xs">
+                    <span>&#128274; Static Direct</span>
+                  </button>
+                  <span id="qr-density-badge" class="ml-auto text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Low Density (25x25)</span>
+                </div>
+                <label class="block text-[11px] font-mono font-bold text-slate-800 pt-1">Enter target URL, product slug, or raw text:</label>
+                <textarea id="qrstudio-text-input" rows="3" class="w-full p-3 rounded-xl bg-white border-2 border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-purple-600 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com</textarea>
               </div>
 
-              <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono text-slate-400">
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono">
                 <button onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/store.html'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-mono font-bold text-xs shadow-xs transition cursor-pointer">RQL Store</button>
+                <button onclick="document.getElementById('qrstudio-text-input').value='clauseforge'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs shadow-xs transition cursor-pointer">ClauseForge (Titan 27)</button>
                 <button onclick="document.getElementById('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-mono font-bold text-xs shadow-xs transition cursor-pointer">WhatsApp VIP</button>
                 <button onclick="document.getElementById('qrstudio-text-input').value='upi://pay?pa=7091518548@pthdfc&pn=Mohammad+Rehan'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-mono font-bold text-xs shadow-xs transition cursor-pointer">UPI Direct</button>
               </div>
+
+              <div id="qr-routing-readout" class="mt-3 p-2.5 rounded-xl bg-purple-50/80 border border-purple-200 text-[11px] font-mono text-purple-950 flex items-start gap-2">
+                <span class="text-purple-700 font-bold">&#9889;</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-slate-900">Cloudflare Anycast Dynamic Routing:</div>
+                  <div id="qr-resolved-target" class="text-purple-900 break-all font-semibold">https://rehanquantlab.com/go?slug=home</div>
+                  <div class="text-[10px] text-slate-600 mt-0.5">Scans on iOS / Android in &lt;20ms from 15+ feet &bull; Redirects at Anycast edge</div>
+                </div>
+              </div>
             </div>
 
-            <div class="text-[11px] font-mono text-slate-400 pt-2 border-t border-slate-200">
+            <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
               100% Client-Side Vector Geometry &bull; Zero external API dependencies
             </div>
           </div>
 
           <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
             <div class="w-full flex items-center justify-between pb-2 border-b border-slate-200">
-              <span class="text-xs font-mono font-bold text-slate-950 uppercase">Generated Vector QR Preview</span>
-              <span class="text-emerald-400 font-mono text-[11px]">&#10003; Infinite Scalable SVG</span>
+              <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Instant-Scan QR Preview</span>
+              <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; 100% Machine Scannable</span>
             </div>
 
-            <div id="qrstudio-display-container" class="w-44 h-44 flex items-center justify-center"></div>
+            <!-- Vector QR Container (Enlarged to 288px) -->
+            <div id="qrstudio-display-container" class="w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center rounded-2xl border-2 border-slate-300 bg-white shadow-md p-2"></div>
+
+            <div class="text-[11px] font-mono text-slate-600 text-center font-medium">
+              Point iPhone or Android camera &mdash; locks on instantly with zero glare
+            </div>
 
             <div class="w-full space-y-3">
               <div class="grid grid-cols-2 gap-2 w-full">
-                <button onclick="downloadQrSvg()" class="py-2.5 px-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                <button onclick="downloadQrSvg()" class="py-2.5 px-3 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
                   <i class="w-4 h-4" data-lucide="download"></i>
                   <span>Vector (.svg)</span>
                 </button>
-                <button onclick="downloadQrPng()" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-bold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                <button onclick="downloadQrPng()" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
                   <i class="w-4 h-4 text-emerald-400" data-lucide="image"></i>
                   <span>Raster (.png)</span>
                 </button>

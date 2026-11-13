@@ -496,39 +496,173 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   };
 
   // ====================================================================
-  // TOOL 4: RQL QRSTUDIO (Offline High-Res Vector QR Code Generator)
+  // TOOL 4: RQL QRSTUDIO (Offline High-Res Vector & Dynamic QR Generator)
   // ====================================================================
+  window.qrDynamicMode = true;
+
+  var KNOWN_SLUGS = [
+    'store', 'home', 'contact', 'briefing', 'whatsapp', 'experience', 'security',
+    'documentshield', 'whispervault', 'retailpos', 'storechain', 'conduit', 'hashcheck',
+    'qrstudio', 'textdiff', 'renamer', 'tageditor', 'fontviewer', 'dpdpshield',
+    'pricetag', 'invoicegen', 'csvformat', 'pdfmerge', 'taxledger', 'fileshredder',
+    'clipvault', 'imagebatch', 'audioextract', 'subtitlesync', 'spacemap', 'docprotect',
+    'cashdrawer', 'receiptprinter', 'clauseforge'
+  ];
+
+  window.setQrDynamicMode = function(isDynamic) {
+    window.qrDynamicMode = !!isDynamic;
+    var dynamicBtn = $('qr-mode-dynamic-btn');
+    var staticBtn = $('qr-mode-static-btn');
+    var densityBadge = $('qr-density-badge');
+    var routingReadout = $('qr-routing-readout');
+
+    if (dynamicBtn && staticBtn) {
+      if (window.qrDynamicMode) {
+        dynamicBtn.className = 'py-1.5 px-3 rounded-lg text-xs font-mono font-extrabold transition flex items-center gap-1.5 cursor-pointer bg-purple-700 text-white border-2 border-purple-800 shadow-md';
+        staticBtn.className = 'py-1.5 px-3 rounded-lg text-xs font-mono font-bold transition flex items-center gap-1.5 cursor-pointer bg-white text-slate-800 border-2 border-slate-300 hover:border-slate-400 shadow-2xs';
+        if (densityBadge) {
+          densityBadge.textContent = 'Low Density (25x25)';
+          densityBadge.className = 'ml-auto text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200';
+        }
+        if (routingReadout) routingReadout.classList.remove('hidden');
+      } else {
+        dynamicBtn.className = 'py-1.5 px-3 rounded-lg text-xs font-mono font-bold transition flex items-center gap-1.5 cursor-pointer bg-white text-slate-800 border-2 border-slate-300 hover:border-slate-400 shadow-2xs';
+        staticBtn.className = 'py-1.5 px-3 rounded-lg text-xs font-mono font-extrabold transition flex items-center gap-1.5 cursor-pointer bg-slate-900 text-white border-2 border-slate-900 shadow-md';
+        if (densityBadge) {
+          densityBadge.textContent = 'Raw Offline Direct';
+          densityBadge.className = 'ml-auto text-[11px] font-mono font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md border border-slate-200';
+        }
+        if (routingReadout) routingReadout.classList.add('hidden');
+      }
+    }
+    window.generateLiveQrCode();
+  };
+
+  function resolveDynamicPayload(rawText) {
+    var t = (rawText || '').trim();
+    if (!t) return 'https://rehanquantlab.com/go?slug=store';
+
+    var lower = t.toLowerCase();
+    if (KNOWN_SLUGS.indexOf(lower) !== -1) {
+      return 'https://rehanquantlab.com/go?slug=' + lower;
+    }
+
+    var gumroadMatch = t.match(/quantify17\.gumroad\.com\/l\/rql-([a-z0-9\-]+)/i);
+    if (gumroadMatch && gumroadMatch[1]) {
+      var rawSlug = gumroadMatch[1].replace(/-/g, '').toLowerCase();
+      var couponMatch = t.match(/rql-[a-z0-9\-]+\/([A-Z0-9]+)/);
+      var coupon = couponMatch ? couponMatch[1] : '';
+      if (coupon) {
+        return 'https://rehanquantlab.com/go?slug=' + rawSlug + '&coupon=' + coupon;
+      }
+      return 'https://rehanquantlab.com/go?slug=' + rawSlug;
+    }
+
+    if (t === 'https://rehanquantlab.com' || t === 'https://rehanquantlab.com/' || t === 'rehanquantlab.com') {
+      return 'https://rehanquantlab.com/go?slug=home';
+    }
+    if (t.indexOf('rehanquantlab.com/store') !== -1) {
+      return 'https://rehanquantlab.com/go?slug=store';
+    }
+    if (t.indexOf('rehanquantlab.com/contact') !== -1) {
+      return 'https://rehanquantlab.com/go?slug=contact';
+    }
+    if (t.indexOf('wa.me/917091518548') !== -1) {
+      return 'https://rehanquantlab.com/go?slug=whatsapp';
+    }
+
+    if (t.indexOf('http://') === 0 || t.indexOf('https://') === 0 || t.indexOf('upi://') === 0) {
+      return 'https://rehanquantlab.com/go?to=' + encodeURIComponent(t);
+    }
+
+    return t;
+  }
+
+  function getEffectiveQrPayload() {
+    var input = $('qrstudio-text-input');
+    var raw = input ? input.value.trim() : 'https://rehanquantlab.com';
+    if (!raw) raw = 'https://rehanquantlab.com';
+
+    if (window.qrDynamicMode) {
+      var resolved = resolveDynamicPayload(raw);
+      var targetEl = $('qr-resolved-target');
+      if (targetEl) targetEl.textContent = resolved;
+      return resolved;
+    }
+    return raw;
+  }
+
   // Genuine ISO/IEC 18004 QR Matrix Generator (Client-Side, Scannable on all phones)
   window.generateLiveQrCode = function() {
-    var input = $('qrstudio-text-input');
-    var text = input ? input.value.trim() : 'https://rehanquantlab.com';
-    if (!text) text = 'https://rehanquantlab.com';
-
+    var payload = getEffectiveQrPayload();
     var container = $('qrstudio-display-container');
     if (!container) return;
 
     var t0 = performance.now();
-    var svg = generateRealQrSvg(text);
+    var htmlPreview = renderScannableQr(payload);
     var t1 = performance.now();
     var elapsed = (t1 - t0).toFixed(2);
 
-    container.innerHTML = svg;
+    container.innerHTML = htmlPreview;
     var timeEl = $('qrstudio-time-badge');
-    if (timeEl) timeEl.textContent = elapsed + 'ms (Vector Render)';
+    if (timeEl) timeEl.textContent = elapsed + 'ms (Hardware Scaled)';
   };
 
-  function generateRealQrSvg(text) {
+  function renderScannableQr(payload) {
     var tempEl = document.createElement('div');
     var qr = new QRCode(tempEl, {
-      text: text,
-      width: 256,
-      height: 256,
+      text: payload,
+      width: 512,
+      height: 512,
       correctLevel: QRCode.CorrectLevel.M
     });
     var model = qr._oQRCode;
     if (!model) return '';
     var count = model.getModuleCount();
     var margin = 4; // ISO quiet zone margin
+    var total = count + margin * 2;
+
+    var canvas = document.createElement('canvas');
+    var canvasSize = 512;
+    canvas.width = canvasSize;
+    canvas.height = canvasSize;
+    var ctx = canvas.getContext('2d');
+
+    // Pure white quiet zone background
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvasSize, canvasSize);
+
+    // Pure black barcode modules with exact integer pixel geometry
+    ctx.fillStyle = '#000000';
+    var cellSize = canvasSize / total;
+    for (var r = 0; r < count; r++) {
+      for (var c = 0; c < count; c++) {
+        if (model.isDark(r, c)) {
+          var x = Math.round((c + margin) * cellSize);
+          var y = Math.round((r + margin) * cellSize);
+          var w = Math.round((c + margin + 1) * cellSize) - x;
+          var h = Math.round((r + margin + 1) * cellSize) - y;
+          ctx.fillRect(x, y, w, h);
+        }
+      }
+    }
+
+    var dataUrl = canvas.toDataURL('image/png');
+    return '<img id="rql-live-qr-img" src="' + dataUrl + '" alt="Scannable QR Code" class="w-full h-full object-contain p-2 rounded-xl" style="image-rendering: pixelated; image-rendering: crisp-edges;" />';
+  }
+
+  function generateRealQrSvg(payload) {
+    var tempEl = document.createElement('div');
+    var qr = new QRCode(tempEl, {
+      text: payload,
+      width: 1024,
+      height: 1024,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+    var model = qr._oQRCode;
+    if (!model) return '';
+    var count = model.getModuleCount();
+    var margin = 4;
     var total = count + margin * 2;
 
     var pathData = [];
@@ -542,21 +676,18 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
       }
     }
 
-    var svg = '<svg id="rql-qr-svg-export" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + total + ' ' + total + '" class="w-full h-full max-w-[260px] max-h-[260px] mx-auto rounded-xl shadow-inner bg-white p-2" shape-rendering="crispEdges">' +
+    var svg = '<svg id="rql-qr-svg-export" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + total + ' ' + total + '" class="w-full h-full max-w-[280px] max-h-[280px] mx-auto rounded-xl bg-white p-2" shape-rendering="crispEdges">' +
       '<rect width="' + total + '" height="' + total + '" fill="#ffffff"/>' +
-      '<path d="' + pathData.join('') + '" fill="#090d16"/>' +
+      '<path d="' + pathData.join('') + '" fill="#000000"/>' +
       '</svg>';
     return svg;
   }
 
   window.downloadQrSvg = function() {
-    var input = $('qrstudio-text-input');
-    var text = input ? input.value.trim() : 'https://rehanquantlab.com';
-    if (!text) text = 'https://rehanquantlab.com';
-
+    var payload = getEffectiveQrPayload();
     var tempEl = document.createElement('div');
     var qr = new QRCode(tempEl, {
-      text: text,
+      text: payload,
       width: 1024,
       height: 1024,
       correctLevel: QRCode.CorrectLevel.M
@@ -587,7 +718,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
-    a.download = 'RQL_QRStudio_Vector.svg';
+    a.download = window.qrDynamicMode ? 'RQL_Dynamic_QR_Vector.svg' : 'RQL_Static_QR_Vector.svg';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -595,13 +726,10 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   };
 
   window.downloadQrPng = function() {
-    var input = $('qrstudio-text-input');
-    var text = input ? input.value.trim() : 'https://rehanquantlab.com';
-    if (!text) text = 'https://rehanquantlab.com';
-
+    var payload = getEffectiveQrPayload();
     var tempEl = document.createElement('div');
     var qr = new QRCode(tempEl, {
-      text: text,
+      text: payload,
       width: 1024,
       height: 1024,
       correctLevel: QRCode.CorrectLevel.M
@@ -624,20 +752,23 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     for (var r = 0; r < count; r++) {
       for (var c = 0; c < count; c++) {
         if (model.isDark(r, c)) {
-          ctx.fillRect(Math.round((c + margin) * cellSize), Math.round((r + margin) * cellSize), Math.ceil(cellSize), Math.ceil(cellSize));
+          var x = Math.round((c + margin) * cellSize);
+          var y = Math.round((r + margin) * cellSize);
+          var w = Math.round((c + margin + 1) * cellSize) - x;
+          var h = Math.round((r + margin + 1) * cellSize) - y;
+          ctx.fillRect(x, y, w, h);
         }
       }
     }
 
     var a = document.createElement('a');
     a.href = canvas.toDataURL('image/png');
-    a.download = 'RQL_QRStudio_Barcode.png';
+    a.download = window.qrDynamicMode ? 'RQL_Dynamic_Barcode.png' : 'RQL_Static_Barcode.png';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   };
 
-  // ====================================================================
   // TOOL 5: RQL TEXTDIFF (Myers Vector Difference Engine)
   // ====================================================================
   var DEFAULT_DIFF_A = [
