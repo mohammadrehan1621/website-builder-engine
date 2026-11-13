@@ -14,7 +14,7 @@
 
 <script src="../assets/tailwind.min.js"></script>
 <script src="../assets/lucide.min.js"></script>
-<script src="../assets/rql-sandbox.js?v=20261113a" defer></script>
+<script src="../assets/rql-sandbox.js?v=20261113b" defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -164,7 +164,7 @@ tailwind.config = {
               </button>
             </div>
 
-            <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-500 focus:outline-hidden leading-relaxed resize-none"></textarea>
+            <textarea id="redact-input-text" rows="8" oninput="runDocumentShieldRedaction()" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-500 focus:outline-hidden leading-relaxed resize-none"></textarea>
 
             <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
               <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
@@ -178,9 +178,13 @@ tailwind.config = {
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span class="text-xs font-mono font-bold text-slate-950 uppercase">Permanent Blackout Output</span>
               </div>
-              <span id="redact-tokens-count" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">
-                5 Tokens Blacked Out
-              </span>
+              <div class="flex items-center gap-2">
+                <button id="copy-redact-btn" onclick="copyRedactedText('copy-redact-btn')" class="text-[11px] font-mono font-bold text-rose-600 hover:text-rose-800 underline cursor-pointer">Copy</button>
+                <button onclick="downloadRedactedText()" class="text-[11px] font-mono font-bold text-rose-600 hover:text-rose-800 underline cursor-pointer">Download .txt</button>
+                <span id="redact-tokens-count" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-700 border border-rose-300">
+                  5 Tokens Blacked Out
+                </span>
+              </div>
             </div>
 
             <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs overflow-y-auto leading-relaxed select-text">

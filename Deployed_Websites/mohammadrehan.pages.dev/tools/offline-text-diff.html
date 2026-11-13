@@ -14,7 +14,7 @@
 
 <script src="../assets/tailwind.min.js"></script>
 <script src="../assets/lucide.min.js"></script>
-<script src="../assets/rql-sandbox.js?v=20261113a" defer></script>
+<script src="../assets/rql-sandbox.js?v=20261113b" defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -152,7 +152,11 @@ tailwind.config = {
           <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
             <div class="flex items-center justify-between text-xs font-mono font-bold text-slate-600 pb-2 border-b border-slate-200">
               <span>Original Revision (Clause A)</span>
-              <button onclick="resetDiffSample()" class="text-[11px] text-amber-400 underline cursor-pointer">Reset Samples</button>
+              <div class="flex items-center gap-2">
+                <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Contract</button>
+                <button onclick="loadDiffPreset('code')" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Code Patch</button>
+                <button onclick="swapDiffInputs()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Swap A &harr; B</button>
+              </div>
             </div>
             <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 font-mono text-xs focus:border-amber-500 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
           </div>
@@ -169,7 +173,10 @@ tailwind.config = {
 
         <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
           <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
-            <span class="text-xs font-mono font-bold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-bold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+              <button id="copy-diff-btn" onclick="copyDiffReport('copy-diff-btn')" class="text-[11px] font-mono font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Copy Report</button>
+            </div>
             <span id="diff-status-badge" class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
               3 Alterations Detected
             </span>

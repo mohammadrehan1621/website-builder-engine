@@ -33,7 +33,7 @@
 <script src="assets/tailwind.min.js"></script>
 <script src="assets/rql-shield.js" defer></script>
     <script src="assets/rql-wave.js" defer></script>
-    <script src="assets/rql-sandbox.js?v=20261113a" defer></script>
+    <script src="assets/rql-sandbox.js?v=20261113b" defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -1532,7 +1532,7 @@ document.addEventListener('keydown', function(e) {
                 </button>
               </div>
 
-              <textarea id="redact-input-text" rows="8" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-600 focus:outline-none leading-relaxed resize-none"></textarea>
+              <textarea id="redact-input-text" rows="8" oninput="runDocumentShieldRedaction()" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-600 focus:outline-none leading-relaxed resize-none"></textarea>
 
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
                 <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
@@ -1546,9 +1546,13 @@ document.addEventListener('keydown', function(e) {
                   <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
                   <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Permanent Blackout Output</span>
                 </div>
-                <span id="redact-tokens-count" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-700 text-white border border-rose-800 shadow-xs">
-                  5 Tokens Blacked Out
-                </span>
+                <div class="flex items-center gap-2">
+                  <button id="copy-redact-btn" onclick="copyRedactedText('copy-redact-btn')" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Copy</button>
+                  <button onclick="downloadRedactedText()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Download .txt</button>
+                  <span id="redact-tokens-count" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-700 text-white border border-rose-800 shadow-xs">
+                    5 Tokens Blacked Out
+                  </span>
+                </div>
               </div>
 
               <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs overflow-y-auto leading-relaxed select-text">
@@ -1744,10 +1748,16 @@ document.addEventListener('keydown', function(e) {
                 <!-- SVG rendered here -->
               </div>
 
-              <button onclick="downloadQrSvg()" class="w-full py-2.5 px-4 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 cursor-pointer shadow-md">
-                <i class="w-4 h-4" data-lucide="download"></i>
-                <span>Download Vector QR Code (.svg)</span>
-              </button>
+              <div class="grid grid-cols-2 gap-2 w-full">
+                <button onclick="downloadQrSvg()" class="py-2.5 px-3 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                  <i class="w-4 h-4" data-lucide="download"></i>
+                  <span>Vector (.svg)</span>
+                </button>
+                <button onclick="downloadQrPng()" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                  <i class="w-4 h-4 text-emerald-400" data-lucide="image"></i>
+                  <span>Raster (.png)</span>
+                </button>
+              </div>
 
               <!-- Engine C: Natural Free-to-Paid Bridge -->
               <div class="w-full p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2 text-left">
@@ -1787,7 +1797,11 @@ document.addEventListener('keydown', function(e) {
             <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
               <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
                 <span>Original Revision (Clause A)</span>
-                <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Reset Samples</button>
+                <div class="flex items-center gap-2">
+                  <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Contract</button>
+                  <button onclick="loadDiffPreset('code')" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Code Patch</button>
+                  <button onclick="swapDiffInputs()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Swap A &harr; B</button>
+                </div>
               </div>
               <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
             </div>
@@ -1805,7 +1819,10 @@ document.addEventListener('keydown', function(e) {
           <!-- Diff Results Box -->
           <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
             <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
-              <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+                <button id="copy-diff-btn" onclick="copyDiffReport('copy-diff-btn')" class="text-[11px] font-mono font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Copy Report</button>
+              </div>
               <span id="diff-status-badge" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-amber-700 text-white border border-amber-800 shadow-xs">
                 3 Alterations Detected
               </span>

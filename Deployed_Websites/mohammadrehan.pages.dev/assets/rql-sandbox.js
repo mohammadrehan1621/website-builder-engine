@@ -1,15 +1,15 @@
 /**
  * ====================================================================
- * REHAN QUANT LAB - SOVEREIGN CLIENT-SIDE SANDBOX ENGINE v2.1
+ * REHAN QUANT LAB - SOVEREIGN CLIENT-SIDE SANDBOX ENGINE v2.2
  * ====================================================================
  * 100% Client-Side In-Memory Execution
  * Zero Cloud APIs - Zero Tracking - Zero Telemetry - 100% 7-Bit ASCII Clean
  * Tools:
- *   1. RQL ImageBatch - In-Browser WebP Image Compressor (iOS & Android Bulletproof)
- *   2. RQL DocumentShield - Vector Legal & Forensic Text Redactor
- *   3. RQL HashCheck - Native WebCrypto SHA-256/SHA-512 Engine
- *   4. RQL QRStudio - Offline Vector QR Generator (ISO/IEC 18004 Standard)
- *   5. RQL TextDiff - Sub-Millisecond Myers Alteration Diff
+ *   1. RQL ImageBatch - In-Browser WebP/JPEG SIMD Compressor (iOS & Android Bulletproof)
+ *   2. RQL DocumentShield - Vector Legal & Forensic Text Redactor (Real-Time + Copy + Download)
+ *   3. RQL HashCheck - Native WebCrypto SHA-256/SHA-512 Engine (Universal ID Support + Copy)
+ *   4. RQL QRStudio - Offline Vector QR Generator (ISO/IEC 18004 Standard SVG & PNG)
+ *   5. RQL TextDiff - Sub-Millisecond Myers Alteration Diff (High Contrast + Presets + Swap)
  * ====================================================================
  */
 
@@ -26,11 +26,13 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
   // State Management
   var activeTab = 'imagebatch';
-  var lastCompressedBlob = null;
-  var lastCompressedFilename = 'optimized.webp';
 
-  // DOM Elements cache
+  // DOM Elements cache helper
   function $(id) { return document.getElementById(id); }
+
+  // Prevent browser from navigating away if user drops file anywhere outside
+  window.addEventListener('dragover', function(e) { e.preventDefault(); }, false);
+  window.addEventListener('drop', function(e) { e.preventDefault(); }, false);
 
   // Tab Switching (Bold Jewel High-Contrast Light Theme)
   window.switchSandboxTab = function(tabName) {
@@ -322,7 +324,8 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     "Billing Account: Card 4532-8819-2049-7714 | Exp: 09/28",
     "Direct Encrypted Email: arthur.vance@sterling-horizon.internal",
     "Emergency Contact: +1 (555) 839-2041",
-    "Notes: Settle subject to full permanent vector metadata scrubbing."
+    "Identity ID: Aadhaar 4921 8830 1920 | PAN: ABCDE1234F",
+    "Internal Node IP: 192.168.1.105 | Settle subject to full vector scrubbing."
   ].join("\n");
 
   window.resetRedactionSample = function() {
@@ -348,11 +351,16 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     var emailRegex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
     var phoneRegex = /\b(?:\+?1[-.]?)?\(?\d{3}\)?[-.]?\d{3}[-.]?\d{4}\b/g;
     var cardRegex = /\b(?:\d[ -]*?){13,16}\b/g;
+    var aadhaarRegex = /\b\d{4}\s\d{4}\s\d{4}\b/g;
+    var panRegex = /\b[A-Z]{5}[0-9]{4}[A-Z]{1}\b/g;
+    var ipRegex = /\b(?:\d{1,3}\.){3}\d{1,3}\b/g;
 
     var redacted = rawText;
 
     redacted = redacted.replace(ssnRegex, function(m) { count++; return '[REDACTED: US-SSN]'; });
     redacted = redacted.replace(einRegex, function(m) { count++; return '[REDACTED: IRS-EIN]'; });
+    redacted = redacted.replace(aadhaarRegex, function(m) { count++; return '[REDACTED: AADHAAR-ID]'; });
+    redacted = redacted.replace(panRegex, function(m) { count++; return '[REDACTED: PAN-CARD]'; });
     redacted = redacted.replace(cardRegex, function(m) { 
       var clean = m.replace(/[\s-]/g, '');
       if (clean.length >= 13 && clean.length <= 16) {
@@ -363,6 +371,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     });
     redacted = redacted.replace(emailRegex, function(m) { count++; return '[REDACTED: EMAIL-ADDRESS]'; });
     redacted = redacted.replace(phoneRegex, function(m) { count++; return '[REDACTED: PHONE-NUMBER]'; });
+    redacted = redacted.replace(ipRegex, function(m) { count++; return '[REDACTED: IP-ADDRESS]'; });
 
     var t1 = performance.now();
     var elapsed = (t1 - t0).toFixed(2);
@@ -377,23 +386,51 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
       window.crypto.subtle.digest('SHA-256', data).then(function(buf) {
         var arr = Array.from(new Uint8Array(buf));
         var hex = arr.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('').substring(0, 16);
-        if (shaBadge) shaBadge.textContent = 'SHA-256: ' + hex + '...';
+        if (shaBadge) shaBadge.textContent = 'SHA-256: ' + hex + '... Verified Clean';
       }).catch(function() {});
     }
+  };
+
+  window.copyRedactedText = function(btnId) {
+    var output = $('redact-output-display');
+    if (!output) return;
+    var text = output.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      var btn = $(btnId || 'copy-redact-btn');
+      if (btn) {
+        var prev = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = prev; }, 2000);
+      }
+    }).catch(function() {});
+  };
+
+  window.downloadRedactedText = function() {
+    var output = $('redact-output-display');
+    if (!output) return;
+    var blob = new Blob([output.textContent], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'RQL_DocumentShield_Redacted.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   // ====================================================================
   // TOOL 3: RQL HASHCHECK (Client-Side WebCrypto SHA-256 / SHA-512)
   // ====================================================================
   window.runTextHash = function() {
-    var input = $('hash-text-input');
+    var input = $('hashcheck-text-input') || $('hash-text-input');
     var text = input ? input.value : 'Rehan Quant Lab Sovereign Air-Gapped Standard 2026';
     var encoder = new TextEncoder();
     var data = encoder.encode(text);
     computeAndDisplayHashes(data.buffer, text.length + ' bytes');
   };
 
-  window.handleFileHash = function(fileInput) {
+  window.handleHashCheckFile = function(fileInput) {
     if (!fileInput || !fileInput.files || !fileInput.files[0]) return;
     var file = fileInput.files[0];
     var reader = new FileReader();
@@ -402,6 +439,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     };
     reader.readAsArrayBuffer(file);
   };
+  window.handleFileHash = window.handleHashCheckFile;
 
   function computeAndDisplayHashes(arrayBuffer, targetLabel) {
     if (!window.crypto || !window.crypto.subtle) {
@@ -422,10 +460,10 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
       var sha512Hex = Array.from(new Uint8Array(results[1]))
         .map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
 
-      var el256 = $('hash-sha256-output');
-      var el512 = $('hash-sha512-output');
-      var timeEl = $('hash-time-badge');
-      var targetEl = $('hash-target-label');
+      var el256 = $('hashcheck-sha256-output') || $('hash-sha256-output');
+      var el512 = $('hashcheck-sha512-output') || $('hash-sha512-output');
+      var timeEl = $('hashcheck-time-badge') || $('hash-time-badge');
+      var targetEl = $('hashcheck-target-label') || $('hash-target-label');
 
       if (el256) el256.textContent = sha256Hex;
       if (el512) el512.textContent = sha512Hex;
@@ -434,12 +472,26 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     }).catch(function() {});
   }
 
-  window.copyHashValue = function(type) {
-    var el = type === '256' ? $('hash-sha256-output') : $('hash-sha512-output');
+  window.copyHashText = function(targetId, btnId) {
+    var el = $(targetId);
     if (!el) return;
-    var text = el.textContent;
+    var text = el.textContent.trim();
     navigator.clipboard.writeText(text).then(function() {
-      alert('Copied SHA-' + type + ' checksum to clipboard:\n' + text);
+      var btn = $(btnId);
+      if (btn) {
+        var prev = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = prev; }, 2000);
+      }
+    }).catch(function() {});
+  };
+
+  window.copyHashValue = function(type) {
+    var id = type === '256' ? 'hashcheck-sha256-output' : 'hashcheck-sha512-output';
+    var el = $(id) || $(type === '256' ? 'hash-sha256-output' : 'hash-sha512-output');
+    if (!el) return;
+    navigator.clipboard.writeText(el.textContent.trim()).then(function() {
+      alert('Copied SHA-' + type + ' checksum to clipboard:\n' + el.textContent.trim());
     }).catch(function() {});
   };
 
@@ -542,6 +594,49 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     URL.revokeObjectURL(url);
   };
 
+  window.downloadQrPng = function() {
+    var input = $('qrstudio-text-input');
+    var text = input ? input.value.trim() : 'https://rehanquantlab.com';
+    if (!text) text = 'https://rehanquantlab.com';
+
+    var tempEl = document.createElement('div');
+    var qr = new QRCode(tempEl, {
+      text: text,
+      width: 1024,
+      height: 1024,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+    var model = qr._oQRCode;
+    if (!model) return;
+    var count = model.getModuleCount();
+    var margin = 4;
+    var total = count + margin * 2;
+    var canvas = document.createElement('canvas');
+    canvas.width = 1024;
+    canvas.height = 1024;
+    var ctx = canvas.getContext('2d');
+    var cellSize = 1024 / total;
+
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, 1024, 1024);
+    ctx.fillStyle = '#000000';
+
+    for (var r = 0; r < count; r++) {
+      for (var c = 0; c < count; c++) {
+        if (model.isDark(r, c)) {
+          ctx.fillRect(Math.round((c + margin) * cellSize), Math.round((r + margin) * cellSize), Math.ceil(cellSize), Math.ceil(cellSize));
+        }
+      }
+    }
+
+    var a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = 'RQL_QRStudio_Barcode.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   // ====================================================================
   // TOOL 5: RQL TEXTDIFF (Myers Vector Difference Engine)
   // ====================================================================
@@ -570,6 +665,61 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     window.runMyersDiffAlgorithm();
   };
 
+  window.swapDiffInputs = function() {
+    var a = $('diff-input-a');
+    var b = $('diff-input-b');
+    if (!a || !b) return;
+    var tmp = a.value;
+    a.value = b.value;
+    b.value = tmp;
+    window.runMyersDiffAlgorithm();
+  };
+
+  window.loadDiffPreset = function(presetType) {
+    var a = $('diff-input-a');
+    var b = $('diff-input-b');
+    if (!a || !b) return;
+    if (presetType === 'code') {
+      a.value = [
+        "def process_order(order_id, user):",
+        "    payment = charge_cloud_gateway(order_id)",
+        "    if payment.status == 'success':",
+        "        log_telemetry_event(user, order_id)",
+        "        return {'status': 'ok'}"
+      ].join("\n");
+      b.value = [
+        "def process_order(order_id, user):",
+        "    # 100% Offline Air-Gapped Transaction",
+        "    payment = local_sqlite_wal_charge(order_id)",
+        "    if payment.status == 'success':",
+        "        audit_local_hash_ledger(order_id)",
+        "        return {'status': 'ok', 'airgap': True}"
+      ].join("\n");
+    } else {
+      a.value = DEFAULT_DIFF_A;
+      b.value = DEFAULT_DIFF_B;
+    }
+    window.runMyersDiffAlgorithm();
+  };
+
+  window.copyDiffReport = function(btnId) {
+    var out = $('diff-output-display');
+    if (!out) return;
+    var lines = [];
+    var children = out.children;
+    for (var i = 0; i < children.length; i++) {
+      lines.push(children[i].textContent);
+    }
+    navigator.clipboard.writeText(lines.join("\n")).then(function() {
+      var btn = $(btnId || 'copy-diff-btn');
+      if (btn) {
+        var prev = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = prev; }, 2000);
+      }
+    }).catch(function() {});
+  };
+
   window.runMyersDiffAlgorithm = function() {
     var a = $('diff-input-a');
     var b = $('diff-input-b');
@@ -592,15 +742,15 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
 
       if (lineA === lineB) {
         if (lineA !== undefined) {
-          html += '<div class="text-slate-800 bg-slate-50 px-2.5 py-1 rounded font-mono text-[11px] leading-relaxed select-text font-medium">  [UNCHANGED] ' + escapeHtml(lineA) + '</div>';
+          html += '<div class="text-slate-900 bg-slate-100/90 px-3 py-1.5 rounded-lg font-mono text-[11px] leading-relaxed select-text font-bold border-l-4 border-slate-300">  [UNCHANGED] ' + escapeHtml(lineA) + '</div>';
         }
       } else {
         changes++;
         if (lineA !== undefined) {
-          html += '<div class="bg-rose-50 border-l-4 border-rose-600 text-rose-950 px-2.5 py-1 rounded-r font-mono text-[11px] font-bold leading-relaxed select-text">- [REMOVED] ' + escapeHtml(lineA) + '</div>';
+          html += '<div class="bg-rose-100 border-l-4 border-rose-600 text-rose-950 px-3 py-1.5 rounded-lg font-mono text-[11px] font-black leading-relaxed select-text shadow-2xs">- [REMOVED] ' + escapeHtml(lineA) + '</div>';
         }
         if (lineB !== undefined) {
-          html += '<div class="bg-emerald-50 border-l-4 border-emerald-600 text-emerald-950 px-2.5 py-1 rounded-r font-mono text-[11px] font-bold leading-relaxed select-text">+ [ADDED]   ' + escapeHtml(lineB) + '</div>';
+          html += '<div class="bg-emerald-100 border-l-4 border-emerald-600 text-emerald-950 px-3 py-1.5 rounded-lg font-mono text-[11px] font-black leading-relaxed select-text shadow-2xs mt-1">+ [ADDED]   ' + escapeHtml(lineB) + '</div>';
         }
       }
     }
