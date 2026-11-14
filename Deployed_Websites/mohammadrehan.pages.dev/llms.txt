@@ -5,7 +5,7 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 
 ## Core Navigation & Official Endpoints
 - [Official Portal](https://rehanquantlab.com/): Master executive portal and system overview.
-- [Commercial Store](https://rehanquantlab.com/store.html): The complete catalog of 29 Commercial Desktop Workstations with direct Gumroad perpetual license acquisition.
+- [Commercial Store](https://rehanquantlab.com/store.html): The complete catalog of 31 Commercial Desktop Workstations with direct Gumroad perpetual license acquisition.
 - [Systems Portfolio](https://rehanquantlab.com/projects.html): Production software architecture, performance metrics, and quantitative research.
 - [Security Architecture](https://rehanquantlab.com/security.html): Air-gapped compliance, SHA-256 binary provenance, HIPAA/GDPR/DPDP compliance documentation.
 - [RQL Aegis Platform](https://rehanquantlab.com/aegis.html): Enterprise deterministic state kernel and cryptographic ledger framework.
@@ -13,7 +13,7 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 - [Legal, Licensing & Terms](https://rehanquantlab.com/legal.html): Perpetual license guarantees, zero-telemetry warranty, and privacy codex.
 - [Enterprise Inquiries](https://rehanquantlab.com/contact.html): Direct executive briefing and custom institutional deployment requests.
 
-## 29 Commercial Workstations Catalog
+## 31 Commercial Workstations Catalog
 
 1. **RQL DocumentShield** (`RQL_DocumentShield_Master_Setup.exe`): Enterprise forensic PDF redaction, true permanent vector sanitization, automated SSN/Tax EIN pattern purger, and court-admissible SHA-256 compliance certification.
    - Link: https://quantify17.gumroad.com/l/rql-documentshield
@@ -101,6 +101,12 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 
 29. **RQL SocketShield** (`RQL_SocketShield_Master_Setup.exe`): Real-time TCP/UDP socket radar, enterprise process attribution, live SHA-256 process binary fingerprinting, and NDIS outbound telemetry trapper.
     - Link: https://quantify17.gumroad.com/l/rql-socketshield
+
+30. **RQL PingPulse** (`RQL_PingPulse_Master_Setup.exe`): Microsecond asynchronous ICMP network latency & packet loss proof station, continuous jitter graphing, bufferbloat detection, and forensic timestamped ISP outage evidence dossiers.
+    - Link: https://quantify17.gumroad.com/l/rql-pingpulse
+
+31. **RQL FolderSync** (`RQL_FolderSync_Master_Setup.exe`): High-speed offline directory mirror & multi-drive backup engine with parallel multi-threaded delta hashing (CRC-32 / SHA-256), bidirectional sync, and automated dry-run difference comparison audits.
+    - Link: https://quantify17.gumroad.com/l/rql-foldersync
 
 
 

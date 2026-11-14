@@ -11,7 +11,7 @@ export async function onRequest(context) {
     const targetParam = params.get('to') || params.get('url') || params.get('target') || params.get('slug') || params.get('q');
     const coupon = params.get('coupon') || params.get('discount');
 
-    // 28-Suite Product Slugs + Core Hub Routing Map
+    // 31-Suite Product Slugs + Core Hub Routing Map
     const slugMap = {
         // Core Hubs
         'store': 'https://rehanquantlab.com/store',
@@ -22,7 +22,7 @@ export async function onRequest(context) {
         'experience': 'https://rehanquantlab.com/experience',
         'security': 'https://rehanquantlab.com/security',
 
-        // 28 Pure-Rust Commercial Flagships
+        // 31 Pure-Rust Commercial Flagships
         'documentshield': 'https://quantify17.gumroad.com/l/rql-documentshield',
         'whispervault': 'https://quantify17.gumroad.com/l/rql-whispervault',
         'retailpos': 'https://quantify17.gumroad.com/l/rql-retailpos',
@@ -51,7 +51,9 @@ export async function onRequest(context) {
         'receiptprinter': 'https://quantify17.gumroad.com/l/rql-receiptprinter',
         'clauseforge': 'https://quantify17.gumroad.com/l/rql-clauseforge',
         'archivemaster': 'https://quantify17.gumroad.com/l/rql-archivemaster',
-        'socketshield': 'https://quantify17.gumroad.com/l/rql-socketshield'
+        'socketshield': 'https://quantify17.gumroad.com/l/rql-socketshield',
+        'pingpulse': 'https://quantify17.gumroad.com/l/rql-pingpulse',
+        'foldersync': 'https://quantify17.gumroad.com/l/rql-foldersync'
     };
 
     let destination = 'https://rehanquantlab.com/store';
