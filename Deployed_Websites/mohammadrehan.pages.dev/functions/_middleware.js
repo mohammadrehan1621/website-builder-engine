@@ -1,6 +1,6 @@
 // ====================================================================
 // Cloudflare Pages Security Edge Middleware - Rehan Quant Lab (RQL)
-// Defense-in-Depth against Hidden Dotfiles, .git/HEAD, and .env Probes
+// Defense-in-Depth against Hidden Dotfiles, Exploit Scanners, and Probes
 // ====================================================================
 
 export async function onRequest(context) {
@@ -21,8 +21,17 @@ export async function onRequest(context) {
         '/.ssh',
         '/.docker',
         '/.kube',
+        '/.vscode',
+        '/.idea',
         '/id_rsa',
         '/id_ed25519',
+        '/wp-login.php',
+        '/wp-admin',
+        '/xmlrpc.php',
+        '/phpmyadmin',
+        '/pma',
+        '/cgi-bin',
+        '/actuator',
         '/.well-known/../'
     ];
 
