@@ -1957,11 +1957,90 @@ document.addEventListener('keydown', function(e) {
       </div>
     </div>
 
+    <!-- CATEGORY FILTER TABS & SEARCH COMMAND STRIP -->
+    <div id="catalog-controls-container" class="sticky top-16 z-30 bg-[#fafafa]/95 backdrop-blur-md py-4 mb-8 border-y border-slate-200/90 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 transition-all">
+      <div class="max-w-7xl mx-auto space-y-3">
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3.5">
+          
+          <!-- Category Tab Buttons (Scrollable on mobile) -->
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 no-scrollbar" role="tablist" aria-label="Software Categories" id="category-tab-strip">
+            <button type="button" data-filter="all" class="cat-tab-btn active inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer whitespace-nowrap bg-slate-950 text-white ring-1 ring-slate-900" role="tab" aria-selected="true">
+              <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="layers"></i>
+              <span>All Software</span>
+              <span class="cat-pill bg-white/20 text-white text-[10.5px] px-2 py-0.5 rounded-full font-mono font-black">29</span>
+            </button>
+            <button type="button" data-filter="security" class="cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90" role="tab" aria-selected="false">
+              <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield-check"></i>
+              <span>Security &amp; Privacy</span>
+              <span class="cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold">8</span>
+            </button>
+            <button type="button" data-filter="retail" class="cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90" role="tab" aria-selected="false">
+              <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shopping-bag"></i>
+              <span>Retail POS &amp; Billing</span>
+              <span class="cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold">6</span>
+            </button>
+            <button type="button" data-filter="legal" class="cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90" role="tab" aria-selected="false">
+              <i class="w-3.5 h-3.5 text-amber-600" data-lucide="scale"></i>
+              <span>Legal &amp; Compliance</span>
+              <span class="cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold">4</span>
+            </button>
+            <button type="button" data-filter="media" class="cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90" role="tab" aria-selected="false">
+              <i class="w-3.5 h-3.5 text-rose-600" data-lucide="headphones"></i>
+              <span>Media &amp; Audio Studio</span>
+              <span class="cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold">7</span>
+            </button>
+            <button type="button" data-filter="systems" class="cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90" role="tab" aria-selected="false">
+              <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="cpu"></i>
+              <span>Systems &amp; Network</span>
+              <span class="cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold">4</span>
+            </button>
+          </div>
+
+          <!-- Real-Time Search & Live Results Counter -->
+          <div class="flex items-center gap-2.5 shrink-0">
+            <div class="relative w-full sm:w-64">
+              <i class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" data-lucide="search"></i>
+              <input type="text" id="catalog-search-input" placeholder="Search 29 flagships..." aria-label="Search software suites" class="w-full pl-9 pr-8 py-2 rounded-xl bg-white border border-slate-200 text-slate-900 text-xs font-mono placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition" />
+              <button type="button" id="catalog-clear-search" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-xs font-bold" title="Clear search">&times;</button>
+            </div>
+            <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 border border-slate-200/80 text-[11px] font-mono text-slate-600 shrink-0">
+              <span>Showing</span>
+              <strong id="catalog-visible-count" class="text-slate-950 font-bold">29</strong>
+              <span>of 29</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Category Intent Banner -->
+        <div id="catalog-category-desc" class="text-xs text-slate-500 font-medium pl-1 flex items-center gap-2">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+          <span id="catalog-desc-text">Showing all 29 pure-Rust single-binary Windows desktop workstations with zero monthly cloud subscriptions.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty Results Fallback (Hidden by default) -->
+    <div id="catalog-empty-state" class="hidden my-12 p-10 rounded-3xl bg-white border-2 border-dashed border-slate-300 text-center max-w-xl mx-auto space-y-3">
+      <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center mx-auto">
+        <i class="w-6 h-6" data-lucide="search-x"></i>
+      </div>
+      <h3 class="text-base font-bold font-heading text-slate-900">No Matching Software Suites Found</h3>
+      <p class="text-xs text-slate-500 leading-relaxed font-sans">
+        No desktop suites match your search or filter. Try a broader search keyword, or switch back to All Software.
+      </p>
+      <div class="pt-2">
+        <button type="button" id="catalog-reset-btn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition shadow-xs cursor-pointer">
+          <span>Reset All Filters &amp; View All 29 Flagships</span>
+        </button>
+      </div>
+    </div>
+
     <!-- 29 Desktop Product Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6 mb-14">
 
       <!-- Product Card 1: RQL DocumentShield&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-documentshield" data-product-card="true" data-category="security" data-title="RQL DocumentShield" data-keywords="pdf redaction ssn ein card phone permanent sanction audit air-gapped legal" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span>OFFICIAL PRODUCTION RELEASE</span>
         </div>
@@ -2054,7 +2133,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 2: RQL WhisperVault&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-whispervault" data-product-card="true" data-category="media" data-title="RQL WhisperVault" data-keywords="offline whisper ai speech to text audio transcription forensic srt vtt subtitle security" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span>OFFICIAL PRODUCTION RELEASE</span>
         </div>
@@ -2137,7 +2216,7 @@ document.addEventListener('keydown', function(e) {
 
     
       <!-- Product Card 3: RQL Retail POS&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-retailpos" data-product-card="true" data-category="retail" data-title="RQL Retail POS" data-keywords="point of sale checkout inventory barcode scanner cash counter pos offline billing" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            LIVE OFFICIAL RELEASE
         </div>
@@ -2219,7 +2298,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 4: RQL StoreChain&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-storechain" data-product-card="true" data-category="retail" data-title="RQL StoreChain" data-keywords="multi-till multi-counter store lan mesh sync local retail billing network system" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            MULTI-COUNTER LAN &amp; BRANCH
         </div>
@@ -2299,7 +2378,7 @@ document.addEventListener('keydown', function(e) {
         </div>
       </div>
       <!-- Product Card 5: RQL Conduit&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-conduit" data-product-card="true" data-category="systems" data-title="RQL Conduit" data-keywords="multi-wan wan bonding wireguard tunnel network failover aggregation security" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            MULTI-WAN INTERNET BONDING
         </div>
@@ -2380,7 +2459,7 @@ document.addEventListener('keydown', function(e) {
         </div>
       </div>
       <!-- Product Card 6: RQL HashCheck&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-hashcheck" data-product-card="true" data-category="security" data-title="RQL HashCheck" data-keywords="cryptographic sha-256 blake3 md5 hash verification integrity checksum sfv system" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            CRYPTOGRAPHIC INTEGRITY VERIFIER
         </div>
@@ -2461,7 +2540,7 @@ document.addEventListener('keydown', function(e) {
         </div>
       </div>
       <!-- Product Card 7: RQL QRStudio&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-qrstudio" data-product-card="true" data-category="media" data-title="RQL QRStudio" data-keywords="vector qr code generator svg eps png payment wifi bitly qr tiger high-res retail" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            VECTOR QR &amp; BARCODE STUDIO
         </div>
@@ -2543,7 +2622,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 8: RQL TextDiff&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-textdiff" data-product-card="true" data-category="legal" data-title="RQL TextDiff" data-keywords="myers diff comparison code contract redline side by side delta syntax developer" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span>OFFICIAL PRODUCTION RELEASE</span>
         </div>
@@ -2618,7 +2697,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 9: RQL Renamer&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-renamer" data-product-card="true" data-category="systems" data-title="RQL Renamer" data-keywords="bulk regex batch renaming file folder photo exif timestamp organizer utility" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            LIVE OFFICIAL RELEASE
         </div>
@@ -2693,7 +2772,7 @@ document.addEventListener('keydown', function(e) {
       </div>
     
       <!-- Product Card 10: RQL TagEditor&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-tageditor" data-product-card="true" data-category="media" data-title="RQL TagEditor" data-keywords="audio metadata id3 flac mp3 cover art album batch tagger songkong music" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            LIVE OFFICIAL RELEASE
         </div>
@@ -2768,7 +2847,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 11: RQL FontViewer&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-fontviewer" data-product-card="true" data-category="media" data-title="RQL FontViewer" data-keywords="opentype truetype ttf otf typography glyph inspector font preview fontbase design" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            LIVE OFFICIAL RELEASE
         </div>
@@ -2839,7 +2918,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 12: RQL DPDPShield&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-dpdpshield" data-product-card="true" data-category="security" data-title="RQL DPDPShield" data-keywords="indian dpdp act digital personal data protection consent audit log privacy compliance legal" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
            LIVE OFFICIAL RELEASE
         </div>
@@ -2910,7 +2989,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 13: RQL PriceTag&trade; -->
-      <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group" id="rql-pricetag">
+      <div id="rql-pricetag" data-product-card="true" data-category="retail" data-title="RQL PriceTag" data-keywords="barcode shelf label printing ean-13 upc-a code-128 thermal sticker pos" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           [OFFICIAL RELEASE]
         </div>
@@ -2980,7 +3059,7 @@ document.addEventListener('keydown', function(e) {
         </div>
       </div>
       <!-- Product Card 14: RQL InvoiceGen&trade; -->
-      <div id="rql-invoicegen" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-invoicegen" data-product-card="true" data-category="retail" data-title="RQL InvoiceGen" data-keywords="gst invoice billing dynamic payment qr air-gapped b2b b2c tax billing pos legal" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>GST &amp; COMMERCIAL BILLING ENGINE</span>
         </div>
@@ -3058,7 +3137,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 15: RQL CSVFormat&trade; -->
-      <div id="rql-csvformat" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-csvformat" data-product-card="true" data-category="systems" data-title="RQL CSVFormat" data-keywords="csv transformer sanitizer big data delimiter pipe tab delimiter gigabyte tabular database" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>BIG-DATA CSV TRANSFORMER &amp; SANITIZER</span>
         </div>
@@ -3135,7 +3214,7 @@ document.addEventListener('keydown', function(e) {
         </div>
       </div>
       <!-- Product Card 16: RQL PDFMerge&trade; -->
-      <div id="rql-pdfmerge" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-pdfmerge" data-product-card="true" data-category="legal" data-title="RQL PDFMerge" data-keywords="pdf merge split document binder bates stamp assemble courtroom litigation security" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>LEGAL &amp; BUSINESS DOCUMENT BINDER</span>
         </div>
@@ -3213,7 +3292,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 17: RQL TaxLedger&trade; -->
-      <div id="rql-taxledger" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-taxledger" data-product-card="true" data-category="legal" data-title="RQL TaxLedger" data-keywords="indian accounting gstr-1 gst balance sheet profit loss tax ledger tally finance" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>OFFLINE INDIAN ACCOUNTING &amp; GSTR-1 STUDIO</span>
         </div>
@@ -3291,7 +3370,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 18: RQL FileShredder&trade; -->
-      <div id="rql-fileshredder" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-fileshredder" data-product-card="true" data-category="security" data-title="RQL FileShredder" data-keywords="dod 5220 nist 800-88 permanent file shredder data destruction wipe forensic disk" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>NIST 800-88 FORENSIC DATA SANITIZER</span>
         </div>
@@ -3369,7 +3448,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 19: RQL ClipVault&trade; -->
-      <div id="rql-clipvault" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-clipvault" data-product-card="true" data-category="security" data-title="RQL ClipVault" data-keywords="encrypted local clipboard history memory vault keystroke privacy pin privacy" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>ENCRYPTED LOCAL CLIPBOARD HISTORY WORKSTATION</span>
         </div>
@@ -3447,7 +3526,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 20: RQL ImageBatch&trade; -->
-      <div id="rql-imagebatch" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-imagebatch" data-product-card="true" data-category="media" data-title="RQL ImageBatch" data-keywords="batch image resize webp avif simd multi-threaded compression watermark bulk photo" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>HIGH-SPEED BATCH IMAGE PROCESSING WORKSTATION</span>
         </div>
@@ -3526,7 +3605,7 @@ document.addEventListener('keydown', function(e) {
 
 
       <!-- Product Card 21: RQL AudioExtract&trade; -->
-      <div id="rql-audioextract" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-audioextract" data-product-card="true" data-category="media" data-title="RQL AudioExtract" data-keywords="audio separation stream ripper demuxer lossless wav flac mp3 video extract rip sound" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>HIGH-SPEED AUDIO STREAM SPLITTER &amp; DEMUXER</span>
         </div>
@@ -3604,7 +3683,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 22: RQL SubtitleSync&trade; -->
-      <div id="rql-subtitlesync" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-subtitlesync" data-product-card="true" data-category="media" data-title="RQL SubtitleSync" data-keywords="subtitle synchronization microsecond timecode aligner srt vtt ass drift video" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>PRECISION MILLISECOND SUBTITLE SYNCHRONIZER</span>
         </div>
@@ -3682,7 +3761,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 23: RQL SpaceMap&trade; -->
-      <div id="rql-spacemap" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-spacemap" data-product-card="true" data-category="systems" data-title="RQL SpaceMap" data-keywords="visual disk space squarified treemap drive storage analyzer cleaner cluster storage" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>VISUAL DISK STORAGE &amp; SQUARIFIED TREEMAP ANALYZER</span>
         </div>
@@ -3760,7 +3839,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 24: RQL DocProtect&trade; -->
-      <div id="rql-docprotect" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-docprotect" data-product-card="true" data-category="security" data-title="RQL DocProtect" data-keywords="aes-256 pdf password permission vault encryption copy print lockdown owner legal" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>AUTHENTICATED AES-256 PDF PERMISSION VAULT</span>
         </div>
@@ -3838,7 +3917,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 25: RQL CashDrawer&trade; -->
-      <div id="rql-cashdrawer" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-cashdrawer" data-product-card="true" data-category="retail" data-title="RQL CashDrawer" data-keywords="cash drawer sentry shift reconciliation esc/pos solenoid kick audit shortage pos" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>RETAIL CASH RECONCILIATION &amp; SOLENOID KICK SENTRY</span>
         </div>
@@ -3916,7 +3995,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 26: RQL ReceiptPrinter&trade; -->
-      <div id="rql-receiptprinter" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-receiptprinter" data-product-card="true" data-category="retail" data-title="RQL ReceiptPrinter" data-keywords="esc/pos thermal receipt designer win32 serial spooler 80mm 58mm raw cut pos" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>ESC/POS THERMAL RECEIPT DESIGNER &amp; SILICON SPOOLER</span>
         </div>
@@ -3995,7 +4074,7 @@ document.addEventListener('keydown', function(e) {
 
 
       <!-- Product Card 27: RQL ClauseForge&trade; -->
-      <div id="rql-clauseforge" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-clauseforge" data-product-card="true" data-category="legal" data-title="RQL ClauseForge" data-keywords="modular legal contract drafter e-stamp calibrator clauses nda master agreement advocate" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>MODULAR LEGAL CONTRACT DRAFTER &amp; E-STAMP CALIBRATOR</span>
         </div>
@@ -4075,7 +4154,7 @@ document.addEventListener('keydown', function(e) {
     
 
       <!-- Product Card 28: RQL ArchiveMaster&trade; -->
-      <div id="rql-archivemaster" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-archivemaster" data-product-card="true" data-category="security" data-title="RQL ArchiveMaster" data-keywords="zip tar bzip2 tar.gz aes-256 archiver zero-disk inspector vault compression winzip 7zip" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>AIR-GAPPED COMPRESSOR, INSPECTOR &amp; AES-256 VAULT</span>
         </div>
@@ -4153,7 +4232,7 @@ document.addEventListener('keydown', function(e) {
       </div>
 
       <!-- Product Card 29: RQL SocketShield&trade; -->
-      <div id="rql-socketshield" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+      <div id="rql-socketshield" data-product-card="true" data-category="security" data-title="RQL SocketShield" data-keywords="network socket sentry outbound telemetry trapper tcp udp port monitor process radar wireshark firewall" class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
         <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
           <span>AIR-GAPPED NETWORK SENTRY &amp; TELEMETRY TRAPPER</span>
         </div>
@@ -5903,5 +5982,171 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
   <script src="assets/lenis.min.js" defer></script>
   <script src="assets/rql-motion.js" defer></script>
+
+<!-- START: RQL_CATALOG_FILTER_ENGINE -->
+<script>
+(function() {
+  var categoryDescriptions = {
+    'all': 'Showing all 29 pure-Rust single-binary Windows desktop workstations with zero monthly cloud subscriptions.',
+    'security': '8 Flagships &bull; Air-gapped PDF redaction, cryptographic file hashing, DPDP Act compliance, forensic data shredding, encrypted clipboard vaults, and live socket sentinel.',
+    'retail': '6 Flagships &bull; Offline point-of-sale checkout, multi-counter LAN synchronization, barcode label printing, GST invoicing, cash drawer reconciliation, and ESC/POS thermal printing.',
+    'legal': '4 Flagships &bull; Modular legal contract drafting, e-stamp calibration, multi-format legal document assembly, Bates stamping, and offline Indian GST accounting.',
+    'media': '7 Flagships &bull; Offline Whisper AI transcription, vector QR generators, lossless audio metadata tagging, OpenType font inspectors, multi-threaded image resizing, and subtitle aligners.',
+    'systems': '4 Flagships &bull; Multi-WAN tunnel bonding, bulk regex renaming, multi-gigabyte CSV sanitization, and squarified treemap storage analysis.'
+  };
+
+  function initCatalogFilter() {
+    var tabs = document.querySelectorAll('.cat-tab-btn');
+    var searchInput = document.getElementById('catalog-search-input');
+    var clearSearchBtn = document.getElementById('catalog-clear-search');
+    var resetBtn = document.getElementById('catalog-reset-btn');
+    var emptyState = document.getElementById('catalog-empty-state');
+    var countEl = document.getElementById('catalog-visible-count');
+    var descText = document.getElementById('catalog-desc-text');
+    var cards = document.querySelectorAll('[data-product-card="true"]');
+    
+    if (!tabs.length || !cards.length) return;
+
+    var activeFilter = 'all';
+    var searchQuery = '';
+
+    function applyFilter() {
+      var visible = 0;
+      var q = searchQuery.toLowerCase().trim();
+
+      cards.forEach(function(card) {
+        var cat = card.getAttribute('data-category') || '';
+        var title = (card.getAttribute('data-title') || '').toLowerCase();
+        var keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        var text = (card.innerText || '').toLowerCase();
+
+        var matchesCat = (activeFilter === 'all') || (cat === activeFilter);
+        var matchesSearch = !q || (title.indexOf(q) !== -1) || (keywords.indexOf(q) !== -1) || (text.indexOf(q) !== -1);
+
+        if (matchesCat && matchesSearch) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (countEl) countEl.textContent = visible;
+      if (emptyState) {
+        if (visible === 0) {
+          emptyState.classList.remove('hidden');
+        } else {
+          emptyState.classList.add('hidden');
+        }
+      }
+
+      if (descText && categoryDescriptions[activeFilter]) {
+        if (searchQuery.trim().length > 0) {
+          descText.innerHTML = 'Filtering for &ldquo;<span class="text-slate-900 font-bold font-mono">' + escapeHtml(searchQuery) + '</span>&rdquo; &bull; ' + visible + ' matching suites found.';
+        } else {
+          descText.innerHTML = categoryDescriptions[activeFilter];
+        }
+      }
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function setTab(filterName) {
+      activeFilter = filterName;
+      tabs.forEach(function(btn) {
+        var isCurrent = btn.getAttribute('data-filter') === filterName;
+        btn.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+        var pill = btn.querySelector('.cat-pill');
+        if (isCurrent) {
+          btn.className = 'cat-tab-btn active inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer whitespace-nowrap bg-slate-950 text-white ring-1 ring-slate-900';
+          if (pill) pill.className = 'cat-pill bg-white/20 text-white text-[10.5px] px-2 py-0.5 rounded-full font-mono font-black';
+        } else {
+          btn.className = 'cat-tab-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-semibold transition-all cursor-pointer whitespace-nowrap bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-100 border border-slate-200/90';
+          if (pill) pill.className = 'cat-pill bg-slate-100 text-slate-600 text-[10.5px] px-2 py-0.5 rounded-full font-mono font-bold';
+        }
+      });
+      applyFilter();
+    }
+
+    tabs.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var filter = btn.getAttribute('data-filter');
+        setTab(filter);
+        if (filter !== 'all') {
+          history.replaceState(null, null, '#cat=' + filter);
+        } else {
+          history.replaceState(null, null, window.location.pathname);
+        }
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        searchQuery = e.target.value;
+        if (clearSearchBtn) {
+          if (searchQuery.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+          } else {
+            clearSearchBtn.classList.add('hidden');
+          }
+        }
+        applyFilter();
+      });
+    }
+
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener('click', function() {
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+        clearSearchBtn.classList.add('hidden');
+        applyFilter();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+        if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+        setTab('all');
+        history.replaceState(null, null, window.location.pathname);
+      });
+    }
+
+    var hash = window.location.hash;
+    if (hash && hash.indexOf('#cat=') === 0) {
+      var cat = hash.replace('#cat=', '');
+      if (['security', 'retail', 'legal', 'media', 'systems'].indexOf(cat) !== -1) {
+        setTab(cat);
+      }
+    } else if (hash && hash.indexOf('#rql-') === 0) {
+      var targetCard = document.querySelector(hash);
+      if (targetCard) {
+        var cardCat = targetCard.getAttribute('data-category');
+        if (cardCat) {
+          setTab(cardCat);
+        }
+        setTimeout(function() {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 150);
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCatalogFilter);
+  } else {
+    initCatalogFilter();
+  }
+})();
+</script>
+<!-- END: RQL_CATALOG_FILTER_ENGINE -->
+
 </body>
 </html>
