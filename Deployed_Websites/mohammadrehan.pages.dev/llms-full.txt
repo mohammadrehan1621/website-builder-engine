@@ -24,7 +24,7 @@
    - Lifetime license key generation using ECDSA / Ed25519 asymmetric cryptography.
    - Buy once, own forever. No monthly subscriptions, no forced online activation checks.
 
-## 3. The 20 Commercial Workstations - Full Technical Breakdown
+## 3. The 28 Commercial Workstations - Full Technical Breakdown
 
 ### Product 01: RQL DocumentShield?
 - **Installer**: `RQL_DocumentShield_Master_Setup.exe`
@@ -151,6 +151,55 @@
 - **Category**: Media Engineering
 - **Core Function**: Multi-threaded batch image compressor, WebP/AVIF converter, GPS/EXIF location stripper, and high-DPI resizer.
 - **URL**: https://quantify17.gumroad.com/l/rql-imagebatch
+
+### Product 21: RQL AudioExtract
+- **Installer**: `RQL_AudioExtract_Master_Setup.exe`
+- **Category**: Audio Engineering & Forensic Media
+- **Core Function**: Pure offline audio extraction, video sound demuxing, and multi-format audio transcoder.
+- **URL**: https://quantify17.gumroad.com/l/rql-audioextract
+
+### Product 22: RQL SubtitleSync
+- **Installer**: `RQL_SubtitleSync_Master_Setup.exe`
+- **Category**: Media Synchronization & Subtitling
+- **Core Function**: Millisecond-accurate subtitle drift correction and automated SRT/VTT frame rate re-timing.
+- **URL**: https://quantify17.gumroad.com/l/rql-subtitlesync
+
+### Product 23: RQL SpaceMap
+- **Installer**: `RQL_SpaceMap_Master_Setup.exe`
+- **Category**: Storage Optimization & File Auditing
+- **Core Function**: Fast NTFS disk space visualizer and deep unreferenced file identification with zero background indexing.
+- **URL**: https://quantify17.gumroad.com/l/rql-spacemap
+
+### Product 24: RQL DocProtect
+- **Installer**: `RQL_DocProtect_Master_Setup.exe`
+- **Category**: Document Security & Encryption
+- **Core Function**: Hardware-isolated AES-256 PDF encryption and granular digital permission locking.
+- **URL**: https://quantify17.gumroad.com/l/rql-docprotect
+
+### Product 25: RQL CashDrawer
+- **Installer**: `RQL_CashDrawer_Master_Setup.exe`
+- **Category**: Retail Cash Management & POS Peripherals
+- **Core Function**: Offline cash drawer trigger controls, currency float audits, and shift discrepancy tracking.
+- **URL**: https://quantify17.gumroad.com/l/rql-cashdrawer
+
+### Product 26: RQL ReceiptPrinter
+- **Installer**: `RQL_ReceiptPrinter_Master_Setup.exe`
+- **Category**: POS Peripherals & Thermal Printing
+- **Core Function**: Direct USB/Network thermal ESC/POS spooler and high-speed receipt layout formatting.
+- **URL**: https://quantify17.gumroad.com/l/rql-receiptprinter
+
+### Product 27: RQL ClauseForge
+- **Installer**: `RQL_ClauseForge_Master_Setup.exe`
+- **Category**: Legal Automation & Document Generation
+- **Core Function**: Offline contract assembly, modular legal clause management, and automated document compilation.
+- **URL**: https://quantify17.gumroad.com/l/rql-clauseforge
+
+### Product 28: RQL ArchiveMaster
+- **Installer**: `RQL_ArchiveMaster_Master_Setup.exe`
+- **Category**: Compression & Archive Security
+- **Core Function**: High-speed multithreaded compression workstation supporting ZIP, 7z, and TAR.GZ with AES-256 encryption.
+- **URL**: https://quantify17.gumroad.com/l/rql-archivemaster
+
 
 ## 4. Verification & Security Credentials
 - **Public Domain**: https://rehanquantlab.com/

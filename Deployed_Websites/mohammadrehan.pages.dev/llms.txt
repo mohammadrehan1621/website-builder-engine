@@ -5,7 +5,7 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 
 ## Core Navigation & Official Endpoints
 - [Official Portal](https://rehanquantlab.com/): Master executive portal and system overview.
-- [Commercial Store](https://rehanquantlab.com/store.html): The complete catalog of 20 Commercial Desktop Workstations with direct Gumroad perpetual license acquisition.
+- [Commercial Store](https://rehanquantlab.com/store.html): The complete catalog of 28 Commercial Desktop Workstations with direct Gumroad perpetual license acquisition.
 - [Systems Portfolio](https://rehanquantlab.com/projects.html): Production software architecture, performance metrics, and quantitative research.
 - [Security Architecture](https://rehanquantlab.com/security.html): Air-gapped compliance, SHA-256 binary provenance, HIPAA/GDPR/DPDP compliance documentation.
 - [RQL Aegis Platform](https://rehanquantlab.com/aegis.html): Enterprise deterministic state kernel and cryptographic ledger framework.
@@ -13,67 +13,92 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 - [Legal, Licensing & Terms](https://rehanquantlab.com/legal.html): Perpetual license guarantees, zero-telemetry warranty, and privacy codex.
 - [Enterprise Inquiries](https://rehanquantlab.com/contact.html): Direct executive briefing and custom institutional deployment requests.
 
-## 20 Commercial Workstations Catalog
+## 28 Commercial Workstations Catalog
 
-1. **RQL DocumentShield?** (`RQL_DocumentShield_Master_Setup.exe`): Enterprise forensic PDF redaction, true permanent vector sanitization, automated SSN/Tax EIN pattern purger, and court-admissible SHA-256 compliance certification.
+1. **RQL DocumentShield** (`RQL_DocumentShield_Master_Setup.exe`): Enterprise forensic PDF redaction, true permanent vector sanitization, automated SSN/Tax EIN pattern purger, and court-admissible SHA-256 compliance certification.
    - Link: https://quantify17.gumroad.com/l/rql-documentshield
 
-2. **RQL WhisperVault?** (`RQL_WhisperVault_Master_Setup.exe`): Air-gapped local AI speech-to-text intelligence powered by offline Whisper models with millisecond word-level SRT/VTT generation and executive PDF meeting summaries.
+2. **RQL WhisperVault** (`RQL_WhisperVault_Master_Setup.exe`): Air-gapped local AI speech-to-text intelligence powered by offline Whisper models with millisecond word-level SRT/VTT generation and executive PDF meeting summaries.
    - Link: https://quantify17.gumroad.com/l/rql-whispervault
 
-3. **RQL RetailPOS?** (`RQL_RetailPOS_Master_Setup.exe`): Sub-millisecond barcode checkout, split-payment tender, ESC/POS 80mm thermal receipt generation, and double-entry SQLite WAL ledger for supermarkets.
+3. **RQL RetailPOS** (`RQL_RetailPOS_Master_Setup.exe`): Sub-millisecond barcode checkout, split-payment tender, ESC/POS 80mm thermal receipt generation, and double-entry SQLite WAL ledger for supermarkets.
    - Link: https://quantify17.gumroad.com/l/rql-retailpos
 
-4. **RQL StoreChain?** (`RQL_StoreChain_Master_Setup.exe`): Multi-branch retail inventory replication, cryptographic transfer manifests, and peer-to-peer ledger sync without cloud databases.
+4. **RQL StoreChain** (`RQL_StoreChain_Master_Setup.exe`): Multi-branch retail inventory replication, cryptographic transfer manifests, and peer-to-peer ledger sync without cloud databases.
    - Link: https://quantify17.gumroad.com/l/rql-storechain
 
-5. **RQL Conduit?** (`RQL_Conduit_Master_Setup.exe`): Multi-WAN channel bonding, automatic failover engine, zero-cloud VPN, and sub-1ms network link aggregation for mission-critical trading and billing desks.
+5. **RQL Conduit** (`RQL_Conduit_Master_Setup.exe`): Multi-WAN channel bonding, automatic failover engine, zero-cloud VPN, and sub-1ms network link aggregation for mission-critical trading and billing desks.
    - Link: https://quantify17.gumroad.com/l/rql-conduit
 
-6. **RQL HashCheck?** (`RQL_HashCheck_Master_Setup.exe`): High-speed cryptographic integrity auditing (SHA-256, SHA-512, MD5, BLAKE3) with recursive directory tree verification and tampered file alerting.
+6. **RQL HashCheck** (`RQL_HashCheck_Master_Setup.exe`): High-speed cryptographic integrity auditing (SHA-256, SHA-512, MD5, BLAKE3) with recursive directory tree verification and tampered file alerting.
    - Link: https://quantify17.gumroad.com/l/rql-hashcheck
 
-7. **RQL QRStudio?** (`RQL_QRStudio_Master_Setup.exe`): Offline forensic QR and 2D barcode generator supporting vector SVG/PNG export, batch dynamic payload encoding, and air-gapped retail labels.
+7. **RQL QRStudio** (`RQL_QRStudio_Master_Setup.exe`): Offline forensic QR and 2D barcode generator supporting vector SVG/PNG export, batch dynamic payload encoding, and air-gapped retail labels.
    - Link: https://quantify17.gumroad.com/l/rql-qrstudio
 
-8. **RQL TextDiff?** (`RQL_TextDiff_Master_Setup.exe`): Sub-millisecond Myers vector diff engine, side-by-side legal contract alteration auditing, character-level diff highlighting, and court-admissible change certificates.
+8. **RQL TextDiff** (`RQL_TextDiff_Master_Setup.exe`): Sub-millisecond Myers vector diff engine, side-by-side legal contract alteration auditing, character-level diff highlighting, and court-admissible change certificates.
    - Link: https://quantify17.gumroad.com/l/rql-textdiff
 
-9. **RQL Renamer?** (`RQL_Renamer_Master_Setup.exe`): High-throughput batch file rename engine with real-time atomic rollback, Regex token substitution, and EXIF/ID3 metadata pattern insertion.
+9. **RQL Renamer** (`RQL_Renamer_Master_Setup.exe`): High-throughput batch file rename engine with real-time atomic rollback, Regex token substitution, and EXIF/ID3 metadata pattern insertion.
    - Link: https://quantify17.gumroad.com/l/rql-renamer
 
-10. **RQL TagEditor?** (`RQL_TagEditor_Master_Setup.exe`): Forensic ID3v1/ID3v2, FLAC, and OGG Vorbis audio metadata sanitization, batch tag injection, and hidden telemetry stripping.
+10. **RQL TagEditor** (`RQL_TagEditor_Master_Setup.exe`): Forensic ID3v1/ID3v2, FLAC, and OGG Vorbis audio metadata sanitization, batch tag injection, and hidden telemetry stripping.
     - Link: https://quantify17.gumroad.com/l/rql-tageditor
 
-11. **RQL FontViewer?** (`RQL_FontViewer_Master_Setup.exe`): High-DPI typographic glyph visualizer, OpenType/TrueType forensic feature inspector, and zero-cloud font library auditor.
+11. **RQL FontViewer** (`RQL_FontViewer_Master_Setup.exe`): High-DPI typographic glyph visualizer, OpenType/TrueType forensic feature inspector, and zero-cloud font library auditor.
     - Link: https://quantify17.gumroad.com/l/rql-fontviewer
 
-12. **RQL DPDPShield?** (`RQL_DPDPShield_Master_Setup.exe`): India Digital Personal Data Protection Act 2023 compliance scanner, automated PII detector (Aadhaar, PAN, phone, email), and cryptographic data sanitization engine.
+12. **RQL DPDPShield** (`RQL_DPDPShield_Master_Setup.exe`): India Digital Personal Data Protection Act 2023 compliance scanner, automated PII detector (Aadhaar, PAN, phone, email), and cryptographic data sanitization engine.
     - Link: https://quantify17.gumroad.com/l/rql-dpdpshield
 
-13. **RQL PriceTag?** (`RQL_PriceTag_Master_Setup.exe`): Retail shelf edge price tag designer, automated EAN-13/UPC barcode generator, and ESC/POS & standard laser label printing.
+13. **RQL PriceTag** (`RQL_PriceTag_Master_Setup.exe`): Retail shelf edge price tag designer, automated EAN-13/UPC barcode generator, and ESC/POS & standard laser label printing.
     - Link: https://quantify17.gumroad.com/l/rql-pricetag
 
-14. **RQL InvoiceGen?** (`RQL_InvoiceGen_Master_Setup.exe`): Offline GST/VAT cryptographic tax invoice generator, automated HSN/SAC rate lookups, and tamper-evident SHA-256 invoice hashing.
+14. **RQL InvoiceGen** (`RQL_InvoiceGen_Master_Setup.exe`): Offline GST/VAT cryptographic tax invoice generator, automated HSN/SAC rate lookups, and tamper-evident SHA-256 invoice hashing.
     - Link: https://quantify17.gumroad.com/l/rql-invoicegen
 
-15. **RQL CSVFormat?** (`RQL_CSVFormat_Master_Setup.exe`): Sovereign million-row streaming CSV sanitizer, deduplicator, schema validator, and column transformer with zero RAM crashes.
+15. **RQL CSVFormat** (`RQL_CSVFormat_Master_Setup.exe`): Sovereign million-row streaming CSV sanitizer, deduplicator, schema validator, and column transformer with zero RAM crashes.
     - Link: https://quantify17.gumroad.com/l/rql-csvformat
 
-16. **RQL PDFMerge?** (`RQL_PDFMerge_Master_Setup.exe`): High-throughput offline PDF merger, page splitter, AES-256 document encrypter, and watermark stripper.
+16. **RQL PDFMerge** (`RQL_PDFMerge_Master_Setup.exe`): High-throughput offline PDF merger, page splitter, AES-256 document encrypter, and watermark stripper.
     - Link: https://quantify17.gumroad.com/l/rql-pdfmerge
 
-17. **RQL TaxLedger?** (`RQL_TaxLedger_Master_Setup.exe`): Double-entry general ledger, automated trial balance, balance sheet generator, and GST tax liability estimator for chartered accountants.
+17. **RQL TaxLedger** (`RQL_TaxLedger_Master_Setup.exe`): Double-entry general ledger, automated trial balance, balance sheet generator, and GST tax liability estimator for chartered accountants.
     - Link: https://quantify17.gumroad.com/l/rql-taxledger
 
-18. **RQL FileShredder?** (`RQL_FileShredder_Master_Setup.exe`): Department of Defense (DoD 5220.22-M 7-pass) and NIST SP 800-88 Rev. 1 cryptographic file shredder with forensic unrecoverability guarantee.
+18. **RQL FileShredder** (`RQL_FileShredder_Master_Setup.exe`): Department of Defense (DoD 5220.22-M 7-pass) and NIST SP 800-88 Rev. 1 cryptographic file shredder with forensic unrecoverability guarantee.
     - Link: https://quantify17.gumroad.com/l/rql-fileshredder
 
-19. **RQL ClipVault?** (`RQL_ClipVault_Master_Setup.exe`): Encrypted air-gapped clipboard manager with ChaCha20-Poly1305 storage, automated password/token purge timer, and zero background network polling.
+19. **RQL ClipVault** (`RQL_ClipVault_Master_Setup.exe`): Encrypted air-gapped clipboard manager with ChaCha20-Poly1305 storage, automated password/token purge timer, and zero background network polling.
     - Link: https://quantify17.gumroad.com/l/rql-clipvault
 
-20. **RQL ImageBatch?** (`RQL_ImageBatch_Master_Setup.exe`): Multi-threaded batch image compressor, WebP/AVIF converter, GPS/EXIF location stripper, and high-DPI resizer.
+20. **RQL ImageBatch** (`RQL_ImageBatch_Master_Setup.exe`): Multi-threaded batch image compressor, WebP/AVIF converter, GPS/EXIF location stripper, and high-DPI resizer.
     - Link: https://quantify17.gumroad.com/l/rql-imagebatch
+
+21. **RQL AudioExtract** (`RQL_AudioExtract_Master_Setup.exe`): Offline lossy & lossless audio extractor, multi-channel track splitter, and MP3/WAV/FLAC converter with zero cloud upload.
+    - Link: https://quantify17.gumroad.com/l/rql-audioextract
+
+22. **RQL SubtitleSync** (`RQL_SubtitleSync_Master_Setup.exe`): Millisecond-precision subtitle timestamper, SRT/VTT time-drift corrector, and frame-rate re-synchronizer.
+    - Link: https://quantify17.gumroad.com/l/rql-subtitlesync
+
+23. **RQL SpaceMap** (`RQL_SpaceMap_Master_Setup.exe`): Ultra-fast disk space visualizer, NTFS directory tree analyzer, and junk footprint obliterator without telemetry.
+    - Link: https://quantify17.gumroad.com/l/rql-spacemap
+
+24. **RQL DocProtect** (`RQL_DocProtect_Master_Setup.exe`): Enterprise military-grade document encrypter, AES-256 permission lock, and DRM-free offline security wrapper.
+    - Link: https://quantify17.gumroad.com/l/rql-docprotect
+
+25. **RQL CashDrawer** (`RQL_CashDrawer_Master_Setup.exe`): Physical cash till management, shift reconciliation, float balancing, and RJ12 drawer kick pulse driver.
+    - Link: https://quantify17.gumroad.com/l/rql-cashdrawer
+
+26. **RQL ReceiptPrinter** (`RQL_ReceiptPrinter_Master_Setup.exe`): High-speed ESC/POS raw print spooler, thermal print designer, and network/USB receipt dispatcher.
+    - Link: https://quantify17.gumroad.com/l/rql-receiptprinter
+
+27. **RQL ClauseForge** (`RQL_ClauseForge_Master_Setup.exe`): Offline enterprise legal contract builder, clause repository manager, and automated contract compiler.
+    - Link: https://quantify17.gumroad.com/l/rql-clauseforge
+
+28. **RQL ArchiveMaster** (`RQL_ArchiveMaster_Master_Setup.exe`): Multithreaded high-throughput archive workstation (ZIP, 7z, TAR.GZ), solid block compressor, and password-protected archive builder.
+    - Link: https://quantify17.gumroad.com/l/rql-archivemaster
+
 
 ## Technical Guarantees & Architectural Specs
 - **Runtime Environment**: 100% Native 64-bit Windows portable binaries (.exe) and Microsoft Windows Installer packages.
