@@ -507,7 +507,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     'qrstudio', 'textdiff', 'renamer', 'tageditor', 'fontviewer', 'dpdpshield',
     'pricetag', 'invoicegen', 'csvformat', 'pdfmerge', 'taxledger', 'fileshredder',
     'clipvault', 'imagebatch', 'audioextract', 'subtitlesync', 'spacemap', 'docprotect',
-    'cashdrawer', 'receiptprinter', 'clauseforge'
+    'cashdrawer', 'receiptprinter', 'clauseforge', 'archivemaster'
   ];
 
   window.setQrDynamicMode = function(isDynamic) {
