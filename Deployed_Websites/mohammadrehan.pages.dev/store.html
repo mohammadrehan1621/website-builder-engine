@@ -1957,47 +1957,51 @@ document.addEventListener('keydown', function(e) {
       </div>
     </div>
 
-    <!-- CATEGORY TABS & DEDICATED SUITE PANELS -->
+    <!-- CATEGORY TABS & DEDICATED SUITE PANELS (5 FOCUSED SUITES) -->
     <div id="catalog-controls-container" class="mb-8 space-y-4">
       
-      <!-- Top Tab Navigation Strip (Wrap-safe, 100% visible on all viewports) -->
+      <!-- 5 Dedicated Suite Tab Buttons (5-Col Symmetrical Grid on Desktop) -->
       <div class="bg-slate-100/90 p-2 sm:p-2.5 rounded-2xl border border-slate-200 shadow-2xs">
-        <div class="flex flex-wrap items-center gap-2" role="tablist" aria-label="Software Categories" id="category-tab-strip">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2" role="tablist" aria-label="Software Suites" id="category-tab-strip">
           
-          <button type="button" onclick="window.switchStoreTab('all')" data-filter="all" id="tab-btn-all" class="cat-tab-btn active inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900" role="tab" aria-selected="true">
-            <i class="w-4 h-4 text-emerald-400" data-lucide="layers"></i>
-            <span>All Software</span>
-            <span class="cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black">29</span>
+          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900" role="tab" aria-selected="true">
+            <span class="flex items-center gap-2 truncate">
+              <i class="w-4 h-4 text-indigo-400 shrink-0" data-lucide="shield-check"></i>
+              <span class="truncate">Security &amp; Privacy</span>
+            </span>
+            <span class="cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0">8</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
-            <i class="w-4 h-4 text-indigo-600" data-lucide="shield-check"></i>
-            <span>Security &amp; Privacy</span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold">8</span>
+          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+            <span class="flex items-center gap-2 truncate">
+              <i class="w-4 h-4 text-emerald-600 shrink-0" data-lucide="shopping-bag"></i>
+              <span class="truncate">Retail POS &amp; Billing</span>
+            </span>
+            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
-            <i class="w-4 h-4 text-emerald-600" data-lucide="shopping-bag"></i>
-            <span>Retail POS &amp; Billing</span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold">6</span>
+          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+            <span class="flex items-center gap-2 truncate">
+              <i class="w-4 h-4 text-amber-600 shrink-0" data-lucide="scale"></i>
+              <span class="truncate">Legal &amp; Compliance</span>
+            </span>
+            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
-            <i class="w-4 h-4 text-amber-600" data-lucide="scale"></i>
-            <span>Legal &amp; Compliance</span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold">4</span>
+          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+            <span class="flex items-center gap-2 truncate">
+              <i class="w-4 h-4 text-rose-600 shrink-0" data-lucide="headphones"></i>
+              <span class="truncate">Media &amp; Audio</span>
+            </span>
+            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">7</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
-            <i class="w-4 h-4 text-rose-600" data-lucide="headphones"></i>
-            <span>Media &amp; Audio Studio</span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold">7</span>
-          </button>
-
-          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
-            <i class="w-4 h-4 text-cyan-600" data-lucide="cpu"></i>
-            <span>Systems &amp; Network</span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold">4</span>
+          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
+            <span class="flex items-center gap-2 truncate">
+              <i class="w-4 h-4 text-cyan-600 shrink-0" data-lucide="cpu"></i>
+              <span class="truncate">Systems &amp; Network</span>
+            </span>
+            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
           </button>
 
         </div>
@@ -2007,31 +2011,30 @@ document.addEventListener('keydown', function(e) {
       <div id="active-tab-banner" class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-200">
         <div class="space-y-1.5">
           <div class="flex items-center gap-2.5">
-            <span id="active-tab-icon-wrap" class="w-8 h-8 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 shrink-0">
-              <i id="active-tab-icon" class="w-4 h-4 text-emerald-600" data-lucide="layers"></i>
+            <span id="active-tab-icon-wrap" class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200/80 flex items-center justify-center text-indigo-700 shrink-0">
+              <i id="active-tab-icon" class="w-5 h-5 text-indigo-600" data-lucide="shield-check"></i>
             </span>
-            <h3 id="active-tab-title" class="text-lg sm:text-xl font-black font-heading text-slate-950 tracking-tight">
-              All Commercial Suites (29 Flagships)
-            </h3>
+            <div>
+              <h3 id="active-tab-title" class="text-lg sm:text-xl font-black font-heading text-slate-950 tracking-tight">
+                Security &amp; Privacy Engineering Suites
+              </h3>
+            </div>
             <span id="active-tab-count-badge" class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-mono text-[11px] font-bold">
-              29 Programs Live
+              8 Programs Live
             </span>
           </div>
-          <p id="active-tab-desc" class="text-xs sm:text-sm text-slate-600 font-medium pl-10.5">
-            Browse all twenty-nine single-binary pure-Rust Windows workstations with zero monthly cloud rent and lifetime ownership.
+          <p id="active-tab-desc" class="text-xs sm:text-sm text-slate-600 font-medium pl-11.5">
+            Air-gapped document redaction, cryptographic file hashing, DPDP Act compliance, forensic data destruction, encrypted clipboard memory vaults, and live network socket telemetry sentries.
           </p>
         </div>
 
         <!-- Real-Time Search Box inside the Tab Header -->
-        <div class="flex items-center gap-2.5 shrink-0 pl-10.5 md:pl-0">
+        <div class="flex items-center gap-2.5 shrink-0 pl-11.5 md:pl-0">
           <div class="relative w-full sm:w-72">
             <i class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" data-lucide="search"></i>
-            <input type="text" id="catalog-search-input" placeholder="Search by name, feature or .exe..." aria-label="Search software suites" class="w-full pl-9 pr-8 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs font-mono placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition" />
+            <input type="text" id="catalog-search-input" placeholder="Search within this suite..." aria-label="Search software suites" class="w-full pl-9 pr-8 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs font-mono placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition" />
             <button type="button" id="catalog-clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-sm font-bold cursor-pointer" title="Clear search">&times;</button>
           </div>
-          <button type="button" onclick="window.switchStoreTab('all')" id="btn-show-all-quick" class="hidden px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-mono font-bold transition whitespace-nowrap cursor-pointer">
-            View All 29
-          </button>
         </div>
       </div>
 
@@ -2042,13 +2045,13 @@ document.addEventListener('keydown', function(e) {
       <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center mx-auto">
         <i class="w-6 h-6" data-lucide="search-x"></i>
       </div>
-      <h3 class="text-base font-bold font-heading text-slate-900">No Matching Software Suites Found</h3>
+      <h3 class="text-base font-bold font-heading text-slate-900">No Matching Programs Found in this Suite</h3>
       <p id="empty-state-msg" class="text-xs text-slate-500 leading-relaxed font-sans">
-        No desktop suites match your search or filter. Try a broader search keyword, or switch back to All Software.
+        No software in this suite matches your search query. Try clearing your search keyword to view all suite workstations.
       </p>
       <div class="pt-2">
-        <button type="button" onclick="window.switchStoreTab('all')" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition shadow-xs cursor-pointer">
-          <span>Reset All Filters &amp; View All 29 Flagships</span>
+        <button type="button" id="btn-clear-empty-search" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold transition shadow-xs cursor-pointer">
+          <span>Clear Search &amp; View All Suite Programs</span>
         </button>
       </div>
     </div>
@@ -6004,51 +6007,55 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 (function() {
   var tabMeta = {
-    'all': {
-      title: 'All Commercial Suites (29 Flagships)',
-      badge: '29 Programs Live',
-      desc: 'Browse all twenty-nine single-binary pure-Rust Windows workstations with zero monthly cloud rent and lifetime ownership.',
-      icon: 'layers',
-      iconColor: 'text-emerald-600'
-    },
     'security': {
       title: 'Security & Privacy Engineering Suites',
       badge: '8 Programs Live',
       desc: 'Air-gapped document redaction, cryptographic file hashing, DPDP Act compliance, forensic data destruction, encrypted clipboard memory vaults, and live network socket telemetry sentries.',
       icon: 'shield-check',
-      iconColor: 'text-indigo-600'
+      iconWrapBg: 'bg-indigo-50 border-indigo-200/80',
+      iconColor: 'text-indigo-600',
+      tabActiveText: 'text-indigo-400'
     },
     'retail': {
       title: 'Retail POS & Commercial Hardware Suites',
       badge: '6 Programs Live',
       desc: '100% offline point-of-sale checkout, multi-counter LAN synchronization, thermal barcode label printing, air-gapped GST invoicing, cash drawer solenoid sentry, and ESC/POS receipt designers.',
       icon: 'shopping-bag',
-      iconColor: 'text-emerald-600'
+      iconWrapBg: 'bg-emerald-50 border-emerald-200/80',
+      iconColor: 'text-emerald-600',
+      tabActiveText: 'text-emerald-400'
     },
     'legal': {
       title: 'Legal, Tax & Regulatory Compliance Workstations',
       badge: '4 Programs Live',
       desc: 'Modular legal contract drafting, e-stamp calibration, multi-format legal document assembly, Courtroom Bates stamping, and offline Indian GST accounting.',
       icon: 'scale',
-      iconColor: 'text-amber-600'
+      iconWrapBg: 'bg-amber-50 border-amber-200/80',
+      iconColor: 'text-amber-600',
+      tabActiveText: 'text-amber-400'
     },
     'media': {
       title: 'Media, Audio & Forensic Speech Studios',
       badge: '7 Programs Live',
       desc: 'Offline local Whisper AI transcription, vector QR generators, lossless audio metadata tagging, OpenType typography inspectors, SIMD batch image resizing, and microsecond subtitle timecode aligners.',
       icon: 'headphones',
-      iconColor: 'text-rose-600'
+      iconWrapBg: 'bg-rose-50 border-rose-200/80',
+      iconColor: 'text-rose-600',
+      tabActiveText: 'text-rose-400'
     },
     'systems': {
       title: 'Systems, Network Bonding & Data Infrastructure',
       badge: '4 Programs Live',
       desc: 'Multi-WAN tunnel bonding, bulk regex renaming, multi-gigabyte tabular CSV sanitization, and squarified treemap visual disk space analyzers.',
       icon: 'cpu',
-      iconColor: 'text-cyan-600'
+      iconWrapBg: 'bg-cyan-50 border-cyan-200/80',
+      iconColor: 'text-cyan-600',
+      tabActiveText: 'text-cyan-400'
     }
   };
 
-  var activeFilter = 'all';
+  // Default active tab: security (first of the 5 suites)
+  var activeFilter = 'security';
   var searchQuery = '';
 
   function escapeHtml(str) {
@@ -6060,7 +6067,6 @@ document.addEventListener('DOMContentLoaded', () => {
     var emptyState = document.getElementById('catalog-empty-state');
     var emptyMsg = document.getElementById('empty-state-msg');
     var countBadge = document.getElementById('active-tab-count-badge');
-    var showAllBtn = document.getElementById('btn-show-all-quick');
     var visible = 0;
     var q = searchQuery.toLowerCase().trim();
 
@@ -6070,7 +6076,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
       var text = (card.innerText || '').toLowerCase();
 
-      var matchesCat = (activeFilter === 'all') || (cat === activeFilter);
+      var matchesCat = (cat === activeFilter);
       var matchesSearch = !q || (title.indexOf(q) !== -1) || (keywords.indexOf(q) !== -1) || (text.indexOf(q) !== -1);
 
       if (matchesCat && matchesSearch) {
@@ -6089,19 +6095,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    if (showAllBtn) {
-      if (activeFilter !== 'all' || q) {
-        showAllBtn.classList.remove('hidden');
-      } else {
-        showAllBtn.classList.add('hidden');
-      }
-    }
-
     if (emptyState) {
       if (visible === 0) {
         emptyState.classList.remove('hidden');
         if (emptyMsg && q) {
-          emptyMsg.innerHTML = 'No programs found matching &ldquo;<span class="text-slate-900 font-bold font-mono">' + escapeHtml(q) + '</span>&rdquo; in ' + (activeFilter === 'all' ? 'the catalog' : tabMeta[activeFilter].title) + '. Try clearing your search or switching categories.';
+          emptyMsg.innerHTML = 'No programs found matching &ldquo;<span class="text-slate-900 font-bold font-mono">' + escapeHtml(q) + '</span>&rdquo; in ' + (tabMeta[activeFilter] ? tabMeta[activeFilter].title : 'this suite') + '. Try clearing your search keyword.';
         }
       } else {
         emptyState.classList.add('hidden');
@@ -6114,21 +6112,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.switchStoreTab = function(filterName) {
-    if (!tabMeta[filterName]) filterName = 'all';
+    if (!tabMeta[filterName]) filterName = 'security';
     activeFilter = filterName;
 
     // Update Tab Buttons UI
     var tabs = document.querySelectorAll('.cat-tab-btn');
     tabs.forEach(function(btn) {
-      var isCurrent = btn.getAttribute('data-filter') === filterName;
+      var btnFilter = btn.getAttribute('data-filter');
+      var isCurrent = btnFilter === filterName;
       btn.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
       var pill = btn.querySelector('.cat-pill');
+      var icon = btn.querySelector('i');
+
       if (isCurrent) {
-        btn.className = 'cat-tab-btn active inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900';
-        if (pill) pill.className = 'cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black';
+        btn.className = 'cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900';
+        if (pill) pill.className = 'cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0';
+        if (icon && tabMeta[filterName]) {
+          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[filterName].tabActiveText;
+        }
       } else {
-        btn.className = 'cat-tab-btn inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200';
-        if (pill) pill.className = 'cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold';
+        btn.className = 'cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200';
+        if (pill) pill.className = 'cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0';
+        if (icon && tabMeta[btnFilter]) {
+          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[btnFilter].iconColor;
+        }
       }
     });
 
@@ -6137,27 +6144,26 @@ document.addEventListener('DOMContentLoaded', () => {
     var titleEl = document.getElementById('active-tab-title');
     var descEl = document.getElementById('active-tab-desc');
     var iconEl = document.getElementById('active-tab-icon');
+    var iconWrapEl = document.getElementById('active-tab-icon-wrap');
 
     if (titleEl && meta) titleEl.textContent = meta.title;
     if (descEl && meta) descEl.textContent = meta.desc;
+    if (iconWrapEl && meta) iconWrapEl.className = 'w-9 h-9 rounded-xl border flex items-center justify-center shrink-0 ' + meta.iconWrapBg;
     if (iconEl && meta) {
       iconEl.setAttribute('data-lucide', meta.icon);
-      iconEl.className = 'w-4 h-4 ' + meta.iconColor;
+      iconEl.className = 'w-5 h-5 ' + meta.iconColor;
     }
 
     applyFilter();
 
     // Update URL hash
-    if (filterName !== 'all') {
-      history.replaceState(null, null, '#cat=' + filterName);
-    } else {
-      history.replaceState(null, null, window.location.pathname);
-    }
+    history.replaceState(null, null, '#cat=' + filterName);
   };
 
   function initCatalog() {
     var searchInput = document.getElementById('catalog-search-input');
     var clearSearchBtn = document.getElementById('catalog-clear-search');
+    var clearEmptyBtn = document.getElementById('btn-clear-empty-search');
 
     if (searchInput) {
       searchInput.addEventListener('input', function(e) {
@@ -6182,12 +6188,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    if (clearEmptyBtn) {
+      clearEmptyBtn.addEventListener('click', function() {
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+        if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+        applyFilter();
+      });
+    }
+
     // Check URL Hash for deep links
     var hash = window.location.hash;
     if (hash && hash.indexOf('#cat=') === 0) {
       var cat = hash.replace('#cat=', '');
       if (tabMeta[cat]) {
         window.switchStoreTab(cat);
+        return;
       }
     } else if (hash && hash.indexOf('#rql-') === 0) {
       var targetCard = document.querySelector(hash);
@@ -6199,10 +6215,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(function() {
           targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 150);
+        return;
       }
-    } else {
-      applyFilter();
     }
+    
+    // Default open: security
+    window.switchStoreTab('security');
   }
 
   if (document.readyState === 'loading') {
