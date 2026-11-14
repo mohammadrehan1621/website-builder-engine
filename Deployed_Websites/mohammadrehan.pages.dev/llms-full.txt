@@ -24,7 +24,7 @@
    - Lifetime license key generation using ECDSA / Ed25519 asymmetric cryptography.
    - Buy once, own forever. No monthly subscriptions, no forced online activation checks.
 
-## 3. The 28 Commercial Workstations - Full Technical Breakdown
+## 3. The 29 Commercial Workstations - Full Technical Breakdown
 
 ### Product 01: RQL DocumentShield?
 - **Installer**: `RQL_DocumentShield_Master_Setup.exe`
@@ -199,6 +199,15 @@
 - **Category**: Compression & Archive Security
 - **Core Function**: High-speed multithreaded compression workstation supporting ZIP, 7z, and TAR.GZ with AES-256 encryption.
 - **URL**: https://quantify17.gumroad.com/l/rql-archivemaster
+
+### Product 29: RQL SocketShield
+- **Installer**: `RQL_SocketShield_Master_Setup.exe`
+- **Category**: Network Security & Telemetry Forensics
+- **Core Function**: Real-time audit of active TCP/UDP socket tables, process mapping, on-disk SHA-256 binary validation, and NDIS outbound telemetry trapping.
+- **Key Capability**: Operates in local user-space with zero kernel BSOD risk. Correlates every outbound socket packet to its originating PID and physical binary path on disk.
+- **Compliance**: Microsoft WDSI Whitelisted Clean (Submission ID: 169fdb95-1ee5-4bee-bb05-cd7ecbed94a4).
+- **URL**: https://quantify17.gumroad.com/l/rql-socketshield
+
 
 
 ## 4. Verification & Security Credentials

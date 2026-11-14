@@ -50,7 +50,8 @@ export async function onRequest(context) {
         'cashdrawer': 'https://quantify17.gumroad.com/l/rql-cashdrawer',
         'receiptprinter': 'https://quantify17.gumroad.com/l/rql-receiptprinter',
         'clauseforge': 'https://quantify17.gumroad.com/l/rql-clauseforge',
-        'archivemaster': 'https://quantify17.gumroad.com/l/rql-archivemaster'
+        'archivemaster': 'https://quantify17.gumroad.com/l/rql-archivemaster',
+        'socketshield': 'https://quantify17.gumroad.com/l/rql-socketshield'
     };
 
     let destination = 'https://rehanquantlab.com/store';
