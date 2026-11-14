@@ -617,26 +617,26 @@ document.addEventListener('keydown', function(e) {
         </div>
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 text-slate-900 font-mono text-[11px] font-bold shrink-0">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>27 Master Binaries Verified</span>
+          <span>28 Master Binaries Verified</span>
         </div>
       </div>
 
       <!-- Responsive Table Container -->
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="border-b border-slate-200 text-[11px] font-mono uppercase tracking-wider text-slate-400 bg-slate-900/80">
-              <th class="py-3 px-3 text-center w-12 font-bold">#</th>
-              <th class="py-3 px-4 font-bold">Product Suite</th>
-              <th class="py-3 px-4 font-bold">Master Executable</th>
-              <th class="py-3 px-4 font-bold">Cryptographic SHA-256 Hash</th>
-              <th class="py-3 px-4 text-center font-bold">Microsoft WDSI Status</th>
+      <div class="overflow-x-auto max-h-[640px] overflow-y-auto rounded-2xl border border-slate-200/90 shadow-inner bg-white">
+        <table class="w-full text-left border-collapse table-auto md:table-fixed text-xs font-mono">
+          <thead class="sticky top-0 bg-slate-100/95 backdrop-blur-xs z-10 border-b border-slate-300">
+            <tr class="text-[11px] font-mono uppercase tracking-wider text-slate-700 font-bold">
+              <th class="py-3.5 px-3 text-center w-12 font-bold">#</th>
+              <th class="py-3.5 px-4 font-bold w-[24%]">Product Suite</th>
+              <th class="py-3.5 px-4 font-bold w-[26%]">Master Executable</th>
+              <th class="py-3.5 px-4 font-bold w-[36%]">Cryptographic SHA-256 Hash</th>
+              <th class="py-3.5 px-4 text-center font-bold w-[14%]">WDSI Status</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-xs font-sans">
 
             <!-- 01 DocumentShield -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">01</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-documentshield" class="hover:text-indigo-600 transition">RQL DocumentShield&trade;</a>
@@ -661,7 +661,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 02 WhisperVault -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">02</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-whispervault" class="hover:text-indigo-600 transition">RQL WhisperVault&trade;</a>
@@ -686,7 +686,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 03 RetailPOS -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">03</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-retailpos" class="hover:text-indigo-600 transition">RQL RetailPOS&trade;</a>
@@ -711,7 +711,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 04 StoreChain -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">04</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-storechain" class="hover:text-indigo-600 transition">RQL StoreChain&trade;</a>
@@ -736,7 +736,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 05 Conduit -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">05</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-conduit" class="hover:text-indigo-600 transition">RQL Conduit&trade;</a>
@@ -761,7 +761,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 06 HashCheck -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">06</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-hashcheck" class="hover:text-indigo-600 transition">RQL HashCheck&trade;</a>
@@ -786,7 +786,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 07 QRStudio -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">07</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-qrstudio" class="hover:text-indigo-600 transition">RQL QRStudio&trade;</a>
@@ -811,7 +811,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 08 TextDiff -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">08</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-textdiff" class="hover:text-indigo-600 transition">RQL TextDiff&trade;</a>
@@ -836,7 +836,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 09 Renamer -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">09</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-renamer" class="hover:text-indigo-600 transition">RQL Renamer&trade;</a>
@@ -861,7 +861,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 10 TagEditor -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">10</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-tageditor" class="hover:text-indigo-600 transition">RQL TagEditor&trade;</a>
@@ -886,7 +886,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 11 FontViewer -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">11</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-fontviewer" class="hover:text-indigo-600 transition">RQL FontViewer&trade;</a>
@@ -911,7 +911,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 12 DPDPShield -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">12</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-dpdpshield" class="hover:text-indigo-600 transition">RQL DPDPShield&trade;</a>
@@ -936,7 +936,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 13 PriceTag -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">13</td>
               <td class="py-3.5 px-4 font-bold text-slate-950">
                 <a href="store.html#rql-pricetag" class="hover:text-indigo-600 transition">RQL PriceTag&trade;</a>
@@ -961,7 +961,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 14 InvoiceGen -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">14</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-invoicegen" class="hover:text-indigo-600 transition">RQL InvoiceGen&trade;</a>
@@ -986,7 +986,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 15 CSVFormat -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">15</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-csvformat" class="hover:text-indigo-600 transition">RQL CSVFormat&trade;</a>
@@ -1010,7 +1010,7 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 16 PDFMerge -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">16</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-pdfmerge" class="hover:text-indigo-600 transition">RQL PDFMerge&trade;</a>
@@ -1034,7 +1034,7 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 17 TaxLedger -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">17</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-taxledger" class="hover:text-amber-600 transition">RQL TaxLedger&trade;</a>
@@ -1058,7 +1058,7 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 18 FileShredder -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">18</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-fileshredder" class="hover:text-red-600 transition">RQL FileShredder&trade;</a>
@@ -1082,7 +1082,7 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 19 ClipVault -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">19</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-clipvault" class="hover:text-violet-600 transition">RQL ClipVault&trade;</a>
@@ -1106,7 +1106,7 @@ document.addEventListener('keydown', function(e) {
               </td>
             </tr>
             <!-- 20 ImageBatch -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">20</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-imagebatch" class="hover:text-emerald-600 transition">RQL ImageBatch&trade;</a>
@@ -1131,7 +1131,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 21 AudioExtract -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">21</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-audioextract" class="hover:text-emerald-600 transition">RQL AudioExtract&trade;</a>
@@ -1156,7 +1156,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 22 SubtitleSync -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">22</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-subtitlesync" class="hover:text-emerald-600 transition">RQL SubtitleSync&trade;</a>
@@ -1181,7 +1181,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 23 SpaceMap -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">23</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-spacemap" class="hover:text-emerald-600 transition">RQL SpaceMap&trade;</a>
@@ -1206,7 +1206,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 24 DocProtect -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">24</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-docprotect" class="hover:text-emerald-600 transition">RQL DocProtect&trade;</a>
@@ -1231,7 +1231,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 25 CashDrawer -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">25</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-cashdrawer" class="hover:text-emerald-600 transition">RQL CashDrawer&trade;</a>
@@ -1256,7 +1256,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 26 ReceiptPrinter -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">26</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-receiptprinter" class="hover:text-emerald-600 transition">RQL ReceiptPrinter&trade;</a>
@@ -1281,7 +1281,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 27 ClauseForge -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">27</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-clauseforge" class="hover:text-emerald-600 transition">RQL ClauseForge&trade;</a>
@@ -1306,7 +1306,7 @@ document.addEventListener('keydown', function(e) {
             </tr>
 
             <!-- 28 ArchiveMaster -->
-            <tr class="hover:bg-slate-50 transition">
+            <tr class="border-b border-slate-200/70 hover:bg-slate-100/70 transition-colors even:bg-slate-50/60 odd:bg-white">
               <td class="py-3.5 px-3 text-center font-mono font-bold text-slate-400">28</td>
               <td class="py-3.5 px-4 font-heading font-bold text-slate-950">
                 <a href="store.html#rql-archivemaster" class="hover:text-emerald-600 transition">RQL ArchiveMaster&trade;</a>
