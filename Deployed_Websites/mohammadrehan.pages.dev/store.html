@@ -812,6 +812,7 @@ tailwind.config = {
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
+  <link rel="stylesheet" href="assets/rql-motion.css" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -4392,16 +4393,16 @@ document.addEventListener('keydown', function(e) {
       </button>
     </div>
 
-    <!-- Enterprise Master Bundle (Grand Card matching Experience & Home) -->
-    <div class="mt-14 p-6 sm:p-10 rounded-3xl bg-slate-900 text-white shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 border border-slate-800 text-center lg:text-left w-full">
+    <!-- Enterprise Master Bundle (Grand Card matching Experience & Home - High-Contrast Light Theme) -->
+    <div class="mt-14 p-6 sm:p-10 rounded-3xl bg-white text-slate-950 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-6 border-2 border-slate-200/90 text-center lg:text-left w-full spotlight-card bento-card-spring">
       <div class="space-y-2">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span>ENTERPRISE ALL-IN-ONE BUNDLE</span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span>ENTERPRISE ALL-IN-ONE BUNDLE</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">
           Acquire All 28 Desktop Software Flagships Under One Single Enterprise License.
         </h3>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed font-medium">
           Complete commercial bundle for all 28 desktop applications with unlimited offline machine activations, Ed25519 hardware key generator, full source code access, and direct founder architecture onboarding.
         </p>
       </div>
@@ -4411,39 +4412,37 @@ document.addEventListener('keydown', function(e) {
           data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs font-mono tracking-wider uppercase shadow-lg transition hover:scale-105"
+          class="px-6 py-3.5 rounded-2xl bg-emerald-700 hover:bg-emerald-600 text-white font-extrabold text-xs font-mono tracking-wider uppercase shadow-md transition hover:scale-105 btn-spring cursor-pointer"
         >
           View Full Gumroad Catalog &rarr;
         </a>
         <a
-          data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4lMkMlMjBJJTIwd2FudCUyMHRvJTIwYWNxdWlyZSUyMHRoZSUyMENvbXBsZXRlJTIwRW50ZXJwcmlzZSUyMEJ1bmRsZSUyMCUyOEFsbCUyMDE0JTIwQ29tbWVyY2lhbCUyMFN1aXRlcyUyOSUyMGZvciUyMG15JTIwb3JnYW5pemF0aW9uLiUyMFBsZWFzZSUyMGFzc2lzdCUyMHdpdGglMjBsaWNlbnNlJTIwc2V0dXAu" role="button"
+          data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4lMkMlMjBJJTIwd2FudCUyMHRvJTIwYWNxdWlyZSUyMHRoZSUyMENvbXBsZXRlJTIwRW50ZXJwcmlzZSUyMEJ1bmRsZSUyMCUyOEFsbCUyMDI4JTIwQ29tbWVyY2lhbCUyMFN1aXRlcyUyOSUyMGZvciUyMG15JTIwb3JnYW5pemF0aW9uLiUyMFBsZWFzZSUyMGFzc2lzdCUyMHdpdGglMjBsaWNlbnNlJTIwc2V0dXAu" role="button"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs font-mono border border-slate-700 transition hover:scale-105"
+          class="px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs font-mono border-2 border-slate-300 transition hover:scale-105 btn-spring cursor-pointer shadow-xs"
         >
           Inquire with Founder
         </a>
       </div>
     </div>
 
-    <!-- Official Gumroad Affiliate Partner Program Banner (30% Commission) -->
-    <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-violet-950 via-slate-900 to-indigo-950 border border-violet-500/40 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-xl relative overflow-hidden w-full">
-      <!-- Glow ambient backdrop -->
-      
+    <!-- Official Gumroad Affiliate Partner Program Banner (30% Commission - Light Theme) -->
+    <div class="mt-8 p-6 sm:p-8 rounded-3xl bg-violet-50/70 border border-violet-200 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-md relative overflow-hidden w-full spotlight-card bento-card-spring">
       <div class="space-y-3 relative z-10">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/20 border border-violet-500/40 text-violet-300 text-xs font-mono font-bold">
-          <span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span><span>OFFICIAL AFFILIATE PARTNER PROGRAM</span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-100 border border-violet-200 text-violet-900 text-xs font-mono font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-violet-600 animate-pulse"></span><span>OFFICIAL AFFILIATE PARTNER PROGRAM</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">
           Earn 30% Commercial Commission on Every License Referred.
         </h3>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+        <p class="text-xs sm:text-sm text-slate-700 max-w-2xl leading-relaxed font-medium">
           Partner with Rehan Quant Lab&trade; on Gumroad. Recommend our fast, 100% offline desktop software suites to legal practices, retail networks, and engineering teams, and earn a generous 30% revenue share with automated Gumroad payouts.
         </p>
-        <div class="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-mono text-violet-200">
-          <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">&#10003; 30% Commission Per Sale</span>
-          <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">&#10003; All 28 Desktop Suites</span>
-          <span class="bg-violet-900/60 border border-violet-500/40 px-2.5 py-1 rounded-full">&#10003; Instant Direct Gumroad Payouts</span>
+        <div class="flex flex-wrap items-center gap-3 pt-2 text-[11px] font-mono text-violet-900">
+          <span class="bg-white/90 border border-violet-200 px-2.5 py-1 rounded-full font-bold">&#10003; 30% Commission Per Sale</span>
+          <span class="bg-white/90 border border-violet-200 px-2.5 py-1 rounded-full font-bold">&#10003; All 28 Desktop Suites</span>
+          <span class="bg-white/90 border border-violet-200 px-2.5 py-1 rounded-full font-bold">&#10003; Instant Direct Gumroad Payouts</span>
         </div>
       </div>
 
@@ -4452,7 +4451,7 @@ document.addEventListener('keydown', function(e) {
           data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2FmZmlsaWF0ZXM=" role="button"
           target="_blank"
           rel="noopener noreferrer"
-          class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-violet-500 to-indigo-500 hover:from-violet-400 hover:to-indigo-400 text-white font-black text-xs font-mono tracking-wider uppercase shadow-lg transition hover:scale-105 text-center flex items-center justify-center gap-2"
+          class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-violet-700 hover:bg-violet-600 text-white font-extrabold text-xs font-mono tracking-wider uppercase shadow-md transition hover:scale-105 text-center flex items-center justify-center gap-2 btn-spring cursor-pointer"
         >
           <span>Join Affiliate Program (Earn 30%)</span>
           <span>&rarr;</span>
@@ -5819,5 +5818,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animationFrameId = requestAnimationFrame(draw);
 })();
 </script>
+  <script src="assets/lenis.min.js" defer></script>
+  <script src="assets/rql-motion.js" defer></script>
 </body>
 </html>
