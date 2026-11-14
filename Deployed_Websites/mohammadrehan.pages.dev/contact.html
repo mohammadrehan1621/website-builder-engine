@@ -568,6 +568,11 @@
             </p>
 
             <form class="space-y-5" id="contact-form" onsubmit="handleFormSubmit(event)">
+              <!-- Cryptographic Anti-Spam Honeypot (Zero Friction for Real Users) -->
+              <div class="opacity-0 absolute -left-[9999px] pointer-events-none select-none h-0 w-0 overflow-hidden" aria-hidden="true">
+                <label for="contact_company_url">Leave this field blank</label>
+                <input type="text" id="contact_company_url" name="contact_company_url" tabindex="-1" autocomplete="off" value="">
+              </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-[11px] font-mono font-bold text-slate-700 uppercase tracking-wider mb-1.5 font-bold" for="name">Your Full Name *</label>
@@ -1054,6 +1059,16 @@ function handleSmartEmail(e) {
 // Inquiry Form Submission with Local Storage Atomic Journal
 function handleFormSubmit(e) {
   e.preventDefault();
+  
+  // Honeypot Bot Trap: Spambots automatically fill all inputs. If filled, discard silently.
+  const honeypot = document.getElementById('contact_company_url') ? document.getElementById('contact_company_url').value : '';
+  if (honeypot && honeypot.trim().length > 0) {
+    const toast = document.getElementById('form-success-toast');
+    if (toast) toast.classList.remove('hidden');
+    document.getElementById('contact-form').reset();
+    return false;
+  }
+
   const name = document.getElementById('name') ? document.getElementById('name').value : '';
   const email = document.getElementById('email') ? document.getElementById('email').value : '';
   const phone = document.getElementById('phone') ? document.getElementById('phone').value : '';
