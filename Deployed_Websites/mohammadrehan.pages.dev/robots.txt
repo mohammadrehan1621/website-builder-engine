@@ -73,3 +73,4 @@ Sitemap: https://rehanquantlab.com/sitemap.xml
 # LLM Context Feeds (llmstxt.org compliant)
 # Primary: https://rehanquantlab.com/llms.txt
 # Full:    https://rehanquantlab.com/llms-full.txt
+# API:     https://rehanquantlab.com/catalog.json
