@@ -362,6 +362,129 @@ Eliminate typing friction on mobile devices across all search, contact, and dial
 - Telephone / WhatsApp inputs: `type="tel" inputmode="tel"`
 - Discount code fields: `autocapitalize="characters" autocomplete="off" spellcheck="false"`
 
+### 36. Mobile Form Virtual Keyboard Auto-Zoom Defense (font-size >= 16px)
+On iOS Safari and mobile Chromium browsers, focusing any `<input>`, `<select>`, or `<textarea>` with an effective font size smaller than 16px (1rem) triggers an involuntary 15-20% viewport zoom that breaks responsive layout:
+```css
+@media (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+```
+Desktop screens (`md:`) scale down to 14px where cursor click zoom never occurs.
+
+### 37. Microscopic Hit-Slop Expansion (Invisible 44px Hitboxes via ::before)
+High-density engineering interfaces use compact 16px-18px icons for inline actions (table copy buttons, modal close crosses, sort toggles). Visually they remain compact, but WCAG 2.2 AAA requires a minimum 44px x 44px tap target:
+```css
+.tap-target-expanded {
+  position: relative;
+}
+.tap-target-expanded::before {
+  content: '';
+  position: absolute;
+  inset: -12px; /* Expands a 16px icon to a 40-44px click area */
+  cursor: pointer;
+}
+```
+
+### 38. OLED Pure Black Clipping Defense (Obsidian #020617 vs. #000000 Smearing)
+True OLED displays (iPhone Super Retina, Samsung AMOLED) turn off pixels completely at pure #000000. When users scroll rapidly, switching pixels from off to on causes severe purple/blue OLED black smearing:
+- Ban pure #000000 for background surfaces and scrolling containers.
+- Enforce institutional Obsidian `#020617` or Deep Slate `#0b111b` (1-2% luminance floor) to keep OLED subpixels energized and eliminate scroll smearing completely.
+
+### 39. DOM XSS Immunity on URL State Reflection (Ban Raw innerHTML)
+When synchronizing URL query parameters (`?q=search` or `#suite=name`) into search bars, page titles, or filter tabs:
+- NEVER assign query strings directly to `element.innerHTML`.
+- Strictly assign to `input.value = query` or `element.textContent = query`.
+- Eliminates reflected DOM XSS vulnerabilities via crafted URL query parameters.
+
+### 40. Strict Modal Keyboard Cycle Trapping (Shift+Tab / Tab Boundary Loop)
+While `<main inert>` freezes the background DOM, within the modal dialog itself, keyboard Tab navigation must never escape into the browser address bar:
+```javascript
+modal.addEventListener('keydown', (e) => {
+  if (e.key !== 'Tab') return;
+  const focusables = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  if (focusables.length === 0) return;
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    last.focus();
+    e.preventDefault();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    first.focus();
+    e.preventDefault();
+  }
+});
+```
+
+### 41. Hardware Acceleration & Layer Thrashing Bounds (Dynamic will-change)
+Never leave `will-change: transform, opacity` permanently declared in static CSS across dozens of catalog cards. This consumes hundreds of megabytes of GPU VRAM and causes layer thrashing on mobile browsers:
+- Attach `will-change` dynamically on `pointerenter` / `focus`.
+- Remove `will-change` immediately on `transitionend` or `pointerleave`.
+
+### 42. Skip-Ink Typography & Optical Underline Geometry
+Default browser link underlines slice through descending characters (g, y, p, q, j), creating typographic visual noise:
+```css
+a:not([class*="no-underline"]) {
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+```
+
+### 43. Back-to-Top Tactile Return Anchor (Zero-Jump Floating Recovery)
+On long catalog pages (`store.html`, `projects.html` with 31 suites), scrolling past 600px reveals a discreet, fixed bottom-right Return-to-Top anchor:
+- Fades in only after `scrollY > 600px`.
+- Smooth compositor scroll: `window.scrollTo({ top: 0, behavior: 'smooth' })`.
+- Respects `prefers-reduced-motion` (instant 0ms top jump).
+- Anchors above mobile safe-area insets: `bottom: max(16px, env(safe-area-inset-bottom))`.
+
+### 44. Keyboard Shortcut Legend & Discovery (<kbd> Token Architecture)
+Teach power users and auditors keyboard shortcuts without UI clutter:
+```html
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono rounded bg-slate-800 border border-slate-700 text-slate-300 shadow-xs">Ctrl+K</kbd>
+```
+Render shortcut badges inside the search input placeholder (`/`) and Command Ribbon buttons (`Ctrl+K`, `T`).
+
+### 45. Advanced Font Metric Overrides (Zero-FOUT Jitter via size-adjust)
+Eliminate microscopic 2px-4px line jumps during font swap by declaring metric overrides on local fallback stacks:
+```css
+@font-face {
+  font-family: 'Inter-Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+```
+Ensures fallback text matches Inter's physical height before font files arrive over the wire.
+
+### 46. Offline In-Memory QR Code Generator (Zero-Network Canvas via local qrcode.min.js)
+All QR codes (for domestic UPI desk payments, license verification hashes, and mobile handoffs) must be generated directly on an off-screen HTML5 `<canvas>` using the self-hosted `qrcode.min.js` library:
+- Zero external CDN requests.
+- 0ms instant rendering.
+- Zero tracking or IP leakage to third-party chart APIs.
+
+### 47. Network Offline Status Beacon (Air-Gap Verification Toast)
+Provide ambient visual confirmation of Rehan Quant Lab's 100% offline air-gap promise:
+- Listen to `window.addEventListener('offline')` and display an unobtrusive emerald telemetry pill:
+  `[AIR-GAP ACTIVE: 100% Offline Mode - All 31 Local Verifiers Operational]`
+- Swaps to `[ONLINE: Cloudflare Edge Connected]` when the `online` event fires.
+
+### 48. Accessible Video Transcripts & Telemetry Descriptors (aria-describedby)
+For all 31 commercial suite demo video overlays, provide accessible text descriptions for screen readers and silent environments:
+- Every video container links via `aria-describedby` to a semantic `<details>` transcript panel detailing runtime parameters, binary SHA-256, memory allocation, and operational inputs/outputs.
+
+### 49. Smooth CSS Scroll Padding for Fixed Headers (scroll-padding-top: 80px)
+When navigating to in-page anchors (`#faq`, `#commercial-catalog`, `#reviews`):
+```css
+html {
+  scroll-padding-top: 80px; /* 64px header height + 16px optical breathing room */
+}
+```
+Guarantees that every hash link positions the target heading cleanly below the fixed navbar without requiring JavaScript scroll offsets.
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
@@ -418,7 +541,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 22-Point Failure Checklist
+## 7. Pre-Launch 36-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -442,5 +565,19 @@ Before any change is committed or deployed, every question must be verified with
 18. [ ] **Empty State Recovery**: Does search have a dedicated empty state with a 1-click reset button?
 19. [ ] **Reduced Motion Guard**: Does `prefers-reduced-motion: reduce` freeze canvases and make transitions 0ms?
 20. [ ] **Sticky Table Column**: Is the suite name frozen on mobile during horizontal table scrolling?
-21. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-22. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+21. [ ] **Mobile Zoom Defense**: Do all inputs enforce `font-size: 16px` minimum on mobile to prevent iOS auto-zoom?
+22. [ ] **Microscopic Hit-Slop**: Do compact icons use `::before` pseudo-elements to reach 44px tap targets?
+23. [ ] **OLED Black Smearing Guard**: Are backgrounds strictly `#020617` or `#0b111b`, banning pure `#000000`?
+24. [ ] **DOM XSS Immunity**: Are URL query parameters inserted strictly via `textContent` or `value`, never `innerHTML`?
+25. [ ] **Modal Cycle Trap**: Does keyboard `Tab` wrap around strictly inside active modal dialogs?
+26. [ ] **will-change Lifecycle**: Is `will-change` added on hover/focus and cleaned up on transition end?
+27. [ ] **Skip-Ink Typography**: Are link underlines configured with `text-decoration-skip-ink: auto` and 4px offset?
+28. [ ] **Back-to-Top Anchor**: Does the return-to-top anchor fade in past 600px and respect reduced motion?
+29. [ ] **Keyboard Legend Discovery**: Are `<kbd>` tokens clearly displayed for `/` search and `Ctrl+K` palette?
+30. [ ] **Font Metric Overrides**: Are fallback fonts calibrated with `size-adjust` to eliminate FOUT jitter?
+31. [ ] **Offline QR Rendering**: Are QR codes generated on in-memory `<canvas>` via local `qrcode.min.js` with zero CDN calls?
+32. [ ] **Air-Gap Telemetry Beacon**: Does the UI display an offline air-gap notification when disconnected from Wi-Fi?
+33. [ ] **Video Accessibility**: Do video modals provide accessible text descriptions via `aria-describedby`?
+34. [ ] **Scroll Padding**: Does `html` declare `scroll-padding-top: 80px` to prevent fixed navbar heading overlap?
+35. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+36. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
