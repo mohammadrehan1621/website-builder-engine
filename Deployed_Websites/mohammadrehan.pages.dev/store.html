@@ -812,7 +812,7 @@ tailwind.config = {
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v2" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -1098,67 +1098,57 @@ document.addEventListener('keydown', function(e) {
 <!-- Main Page Content -->
 <main class="flex-grow">
 
-  <!-- Hero Section (Light Luminous Modern Theme matching Experience & Home) -->
-  <section class="relative pt-12 pb-10 sm:pt-16 sm:pb-14 bg-slate-50 border-b border-slate-200 overflow-hidden" id="hero-section">
-  <!-- 60FPS In-RAM Hardware-Accelerated Canvas (60-30-10 Chromatic Harmonization) -->
-  <canvas id="rql-store-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
-    
-<!-- Clean High-Performance Static Engineering Grid -->
-<!-- START: RQL_AMBIENT_AURORA -->
-<div class="aurora-container" aria-hidden="true">
-  <div class="aurora-orb aurora-orb-1"></div>
-  <div class="aurora-orb aurora-orb-2"></div>
-  <div class="aurora-orb aurora-orb-3"></div>
-</div>
-<!-- END: RQL_AMBIENT_AURORA -->
-    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
+  <!-- Hero Section (Obsidian Prestige Theme - Option C Hybrid) -->
+  <section class="relative pt-14 pb-14 sm:pt-20 sm:pb-20 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+    <!-- Ambient Radial Laser Light Glow -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.14),transparent_75%)]"></div>
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
 
-    <!-- Ambient Glowing Orbs -->
-    
-    
+    <!-- 60FPS In-RAM Hardware-Accelerated Canvas -->
+    <canvas id="rql-store-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-80"></canvas>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
       
-      <!-- Verified Badge Pill -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold shadow-2xs">
+      <!-- Verified Badge Pill (Obsidian Glow) -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold shadow-lg shadow-emerald-950/40 backdrop-blur-md">
         <span class="relative flex h-2 w-2">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
         </span>
         <span>Commercial Software Store &bull; Instant Digital License Delivery</span>
       </div>
 
-      <!-- Master Heading in Clean Slate 900 Typography -->
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-slate-950 max-w-4xl mx-auto leading-tight">
+      <!-- Master Heading in Obsidian Prestige Typography -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-white max-w-4xl mx-auto leading-tight">
         Offline Desktop Applications <br class="hidden sm:inline" />
-        <span class="bg-gradient-to-r from-indigo-600 via-sky-600 to-emerald-600 bg-clip-text text-transparent">
-          &amp; Commercial Suites.
+        <span class="bg-gradient-to-r from-cyan-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">
+          &amp; Commercial Workstations.
         </span>
       </h1>
 
-      <!-- Subtitle (Harper & Presenton Standard) -->
-      <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-medium leading-relaxed">
-        Thirty-one single-binary Windows desktop tools engineered in pure Rust. <strong>100% offline, zero telemetry, zero monthly subscriptions</strong> &mdash; you pay once, own the compiled <code class="bg-slate-100 text-slate-900 border border-slate-300 px-1.5 py-0.5 rounded font-mono text-xs font-bold">.exe</code> forever, and not a single byte leaves your machine.
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+        Thirty-one single-binary Windows desktop tools engineered in pure Rust. <strong class="text-white">100% offline, zero telemetry, zero monthly subscriptions</strong> &mdash; pay once, own the compiled <code class="bg-slate-900 text-cyan-300 border border-slate-700 px-1.5 py-0.5 rounded font-mono text-xs font-bold">.exe</code> forever, and not a single byte leaves your machine.
       </p>
 
-      <!-- Clean Trust Badges -->
-      <div class="flex flex-wrap items-center justify-center gap-2 pt-1 pb-2 text-xs font-mono text-slate-700 font-semibold">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
-          <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="zap"></i>
+      <!-- Clean Trust Badges (Obsidian Glass) -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 pt-1 pb-2 text-xs font-mono text-slate-300 font-semibold">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 font-semibold shadow-xs backdrop-blur-sm">
+          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="zap"></i>
           <span>Sub-1ms Native Rust</span>
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
-          <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="shield"></i>
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 font-semibold shadow-xs backdrop-blur-sm">
+          <i class="w-3.5 h-3.5 text-cyan-400" data-lucide="shield"></i>
           <span>100% Local &amp; Offline</span>
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold shadow-2xs">
-          <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-700/80 text-slate-200 font-semibold shadow-xs backdrop-blur-sm">
+          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle-2"></i>
           <span>Perpetual License Ownership</span>
         </span>
       </div>
 
-      <div class="pt-3 pb-2 text-center">
-        <a href="#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-950 hover:bg-slate-900 text-emerald-300 border-2 border-emerald-500/50 font-mono font-extrabold text-xs transition shadow-lg hover:scale-103 group cursor-pointer">
+      <div class="pt-2 pb-2 text-center">
+        <a href="#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-emerald-300 border-2 border-emerald-500/60 font-mono font-extrabold text-xs transition shadow-xl shadow-emerald-950/40 hover:scale-103 group cursor-pointer btn-spring">
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <i class="w-4 h-4 text-emerald-400" data-lucide="wifi-off"></i>
           <span class="text-white">THE SKEPTIC'S DARE:</span>
@@ -1166,43 +1156,43 @@ document.addEventListener('keydown', function(e) {
         </a>
       </div>
 
-      <!-- 4 Stat Highlights (60-30-10 Jewel Cards) -->
+      <!-- 4 Stat Highlights (Obsidian Glassmorphic HUD Cards) -->
       <div class="pt-4 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto text-left">
         
-        <div class="bg-emerald-50/70 p-4 sm:p-5 rounded-2xl border border-emerald-200/80 shadow-xs hover:shadow-md bento-card-spring">
-          <div class="text-[10px] sm:text-xs font-mono uppercase text-emerald-800 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="zap"></i>
+        <div class="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-emerald-500/35 shadow-lg shadow-emerald-950/30 hover:border-emerald-400 transition bento-card-spring">
+          <div class="text-[10px] sm:text-xs font-mono uppercase text-emerald-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="zap"></i>
             <span>Latency</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-emerald-950 mt-1 tabular-nums">&lt; 1ms</div>
-          <div class="text-[11px] text-emerald-700/90 font-mono mt-0.5 font-medium">Rust Native Kernel</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">&lt; 1ms</div>
+          <div class="text-[11px] text-emerald-400/90 font-mono mt-0.5 font-medium">Rust Native Kernel</div>
         </div>
 
-        <div class="bg-sky-50/70 p-4 sm:p-5 rounded-2xl border border-sky-200/80 shadow-xs hover:shadow-md bento-card-spring">
-          <div class="text-[10px] sm:text-xs font-mono uppercase text-sky-800 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-sky-600" data-lucide="shield-check"></i>
+        <div class="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-cyan-500/35 shadow-lg shadow-cyan-950/30 hover:border-cyan-400 transition bento-card-spring">
+          <div class="text-[10px] sm:text-xs font-mono uppercase text-cyan-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-cyan-400" data-lucide="shield-check"></i>
             <span>Security</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-sky-950 mt-1 tabular-nums">100%</div>
-          <div class="text-[11px] text-sky-700/90 font-mono mt-0.5 font-medium">Offline &amp; Air-Gapped</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">100%</div>
+          <div class="text-[11px] text-cyan-300/90 font-mono mt-0.5 font-medium">Offline &amp; Air-Gapped</div>
         </div>
 
-        <div class="bg-amber-50/70 p-4 sm:p-5 rounded-2xl border border-amber-200/80 shadow-xs hover:shadow-md bento-card-spring">
-          <div class="text-[10px] sm:text-xs font-mono uppercase text-amber-800 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="wallet"></i>
+        <div class="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-amber-500/35 shadow-lg shadow-amber-950/30 hover:border-amber-400 transition bento-card-spring">
+          <div class="text-[10px] sm:text-xs font-mono uppercase text-amber-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-amber-400" data-lucide="wallet"></i>
             <span>Cloud SaaS Rent</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-amber-950 mt-1 tabular-nums">&#8377;0 / Mo</div>
-          <div class="text-[11px] text-amber-700/90 font-mono mt-0.5 font-medium">Pay Once, Own Forever</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">&#8377;0 / Mo</div>
+          <div class="text-[11px] text-amber-300/90 font-mono mt-0.5 font-medium">Pay Once, Own Forever</div>
         </div>
 
-        <div class="bg-indigo-50/70 p-4 sm:p-5 rounded-2xl border border-indigo-200/80 shadow-xs hover:shadow-md bento-card-spring">
-          <div class="text-[10px] sm:text-xs font-mono uppercase text-indigo-800 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="package"></i>
+        <div class="bg-slate-900/90 p-4 sm:p-5 rounded-2xl border border-indigo-500/35 shadow-lg shadow-indigo-950/30 hover:border-indigo-400 transition bento-card-spring">
+          <div class="text-[10px] sm:text-xs font-mono uppercase text-indigo-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="package"></i>
             <span>Digital Releases</span>
           </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-indigo-950 mt-1 tabular-nums">31 Flagships</div>
-          <div class="text-[11px] text-indigo-700/90 font-mono mt-0.5 font-medium">Live on Gumroad</div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">31 Flagships</div>
+          <div class="text-[11px] text-indigo-300/90 font-mono mt-0.5 font-medium">Live on Gumroad</div>
         </div>
 
       </div>
@@ -1929,27 +1919,28 @@ document.addEventListener('keydown', function(e) {
       </div>
     </div>
 
-    <!-- PIONEER LAUNCH DISCOUNT DIRECT CHECKOUT BANNER -->
-    <div class="max-w-7xl mx-auto mb-8 p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-indigo-500/10 border border-amber-300/80 shadow-sm flex flex-col md:flex-row items-center justify-between gap-5">
-      <div class="space-y-1.5 text-center md:text-left">
-        <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200 text-xs font-mono font-bold">
-          <i class="w-3.5 h-3.5 text-amber-600" data-lucide="tag"></i>
+    <!-- PIONEER LAUNCH DISCOUNT DIRECT CHECKOUT BANNER (Obsidian & Gold VIP Edition) -->
+    <div class="max-w-7xl mx-auto mb-8 p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border-2 border-amber-400/50 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+      <div class="absolute -right-16 -top-16 w-56 h-56 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="space-y-2 text-center md:text-left relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-mono font-bold">
+          <i class="w-3.5 h-3.5 text-amber-300" data-lucide="tag"></i>
           <span>PIONEER FOUNDER DISCOUNTS LIVE</span>
         </div>
-        <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-white tracking-tight">
           Direct Checkout with Auto-Applied Pioneer Discount Passes
         </h3>
-        <p class="text-xs sm:text-sm text-slate-600 max-w-2xl font-medium leading-relaxed">
-          Claim instant auto-applied Pioneer savings: <code data-copy-discount="PIONEER70" title="Click to copy PIONEER70" class="discount-copy-pill bg-amber-100/90 hover:bg-amber-200 border border-amber-300 text-amber-950 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER70</code> (70% Off on 17 Flagship Suites) and <code data-copy-discount="PIONEER20" title="Click to copy PIONEER20" class="discount-copy-pill bg-indigo-100/90 hover:bg-indigo-200 border border-indigo-300 text-indigo-950 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER20</code> (20% Off on 14 Utility Suites). Every card below displays its exact verified single discount pass.
+        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl font-medium leading-relaxed">
+          Claim instant auto-applied Pioneer savings: <code data-copy-discount="PIONEER70" title="Click to copy PIONEER70" class="discount-copy-pill bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400 text-amber-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER70</code> (70% Off on 17 Flagship Suites) and <code data-copy-discount="PIONEER20" title="Click to copy PIONEER20" class="discount-copy-pill bg-indigo-400/20 hover:bg-indigo-400/30 border border-indigo-400 text-indigo-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER20</code> (20% Off on 14 Utility Suites). Every card below displays its verified single discount pass.
         </p>
       </div>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 shrink-0 w-full sm:w-auto">
-        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amber-700 hover:bg-amber-600 text-white font-black text-xs font-mono shadow-sm transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
-          <i class="w-4 h-4 text-amber-200" data-lucide="zap"></i>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 shrink-0 w-full sm:w-auto relative z-10">
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs font-mono shadow-lg shadow-amber-500/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+          <i class="w-4 h-4 text-slate-950" data-lucide="zap"></i>
           <span>DocumentShield PIONEER70 (-70%)</span>
           <span>&rarr;</span>
         </a>
-        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono shadow-sm transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono shadow-lg shadow-indigo-600/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
           <i class="w-4 h-4 text-indigo-200" data-lucide="percent"></i>
           <span>ImageBatch PIONEER20 (-20%)</span>
           <span>&rarr;</span>
@@ -1961,47 +1952,47 @@ document.addEventListener('keydown', function(e) {
     <div id="catalog-controls-container" class="mb-8 space-y-4">
       
       <!-- 5 Dedicated Suite Tab Buttons (5-Col Symmetrical Grid on Desktop) -->
-      <div class="bg-slate-100/90 p-2 sm:p-2.5 rounded-2xl border border-slate-200 shadow-2xs">
+      <div class="bg-slate-950 p-2 sm:p-2.5 rounded-2xl border border-slate-800 shadow-xl">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2" role="tablist" aria-label="Software Suites" id="category-tab-strip">
           
-          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900" role="tab" aria-selected="true">
+          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500" role="tab" aria-selected="true">
             <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-indigo-400 shrink-0" data-lucide="shield-check"></i>
+              <i class="w-4 h-4 text-indigo-600 shrink-0" data-lucide="shield-check"></i>
               <span class="truncate">Security &amp; Privacy</span>
             </span>
-            <span class="cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0">8</span>
+            <span class="cat-pill bg-slate-950 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0">8</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
             <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-emerald-600 shrink-0" data-lucide="shopping-bag"></i>
+              <i class="w-4 h-4 text-emerald-400 shrink-0" data-lucide="shopping-bag"></i>
               <span class="truncate">Retail POS &amp; Billing</span>
             </span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
             <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-amber-600 shrink-0" data-lucide="scale"></i>
+              <i class="w-4 h-4 text-amber-400 shrink-0" data-lucide="scale"></i>
               <span class="truncate">Legal &amp; Compliance</span>
             </span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200" role="tab" aria-selected="false">
+          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
             <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-rose-600 shrink-0" data-lucide="headphones"></i>
+              <i class="w-4 h-4 text-rose-400 shrink-0" data-lucide="headphones"></i>
               <span class="truncate">Media &amp; Audio</span>
             </span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">7</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">7</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
+          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
             <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-cyan-600 shrink-0" data-lucide="cpu"></i>
+              <i class="w-4 h-4 text-cyan-400 shrink-0" data-lucide="cpu"></i>
               <span class="truncate">Systems &amp; Network</span>
             </span>
-            <span class="cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
           </button>
 
         </div>
@@ -6170,7 +6161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v2" defer></script>
 
 <!-- START: RQL_CATALOG_FILTER_ENGINE -->
 <script>
@@ -6300,16 +6291,16 @@ document.addEventListener('DOMContentLoaded', () => {
       var icon = btn.querySelector('i');
 
       if (isCurrent) {
-        btn.className = 'cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-xs cursor-pointer bg-slate-950 text-white ring-2 ring-slate-900';
-        if (pill) pill.className = 'cat-pill bg-white/20 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0';
+        btn.className = 'cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500';
+        if (pill) pill.className = 'cat-pill bg-slate-950 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0';
         if (icon && tabMeta[filterName]) {
-          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[filterName].tabActiveText;
+          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[filterName].iconColor;
         }
       } else {
-        btn.className = 'cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-white text-slate-700 hover:text-slate-950 hover:bg-slate-50 border border-slate-200';
-        if (pill) pill.className = 'cat-pill bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0';
+        btn.className = 'cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800';
+        if (pill) pill.className = 'cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0';
         if (icon && tabMeta[btnFilter]) {
-          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[btnFilter].iconColor;
+          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[btnFilter].tabActiveText;
         }
       }
     });
