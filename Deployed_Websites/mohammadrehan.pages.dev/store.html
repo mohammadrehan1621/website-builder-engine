@@ -725,7 +725,8 @@ tailwind.config = {
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
         "url": "https://quantify17.gumroad.com/l/rql-clauseforge"
-      },
+      }
+    },
     {
       "@type": "ListItem",
       "position": 28,
@@ -743,12 +744,6 @@ tailwind.config = {
         "@type": "AggregateRating",
         "ratingValue": "4.99",
         "reviewCount": "18"
-      }
-    },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.00",
-        "reviewCount": "14"
       }
     }
   ]
@@ -812,7 +807,7 @@ tailwind.config = {
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v2" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -6161,7 +6156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js?v=20261116v2" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 
 <!-- START: RQL_CATALOG_FILTER_ENGINE -->
 <script>
@@ -6359,10 +6354,6 @@ document.addEventListener('DOMContentLoaded', () => {
         searchQuery = '';
         var shortcutBadge = document.getElementById('catalog-search-shortcut');
         if (shortcutBadge) shortcutBadge.classList.remove('hidden');
-        clearSearchBtn.classList.add('hidden');
-        applyFilter();
-      });
-    }
         clearSearchBtn.classList.add('hidden');
         applyFilter();
       });
