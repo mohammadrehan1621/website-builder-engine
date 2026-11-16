@@ -28,11 +28,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
   ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
   .btn-spring {
-    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.2s ease;
     will-change: transform;
   }
-  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
-  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+  .btn-spring:hover { transform: none; }
+  .btn-spring:active { transform: none; }
 
   .bento-card-spring {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
@@ -165,11 +165,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
   ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
   .btn-spring {
-    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.2s ease;
     will-change: transform;
   }
-  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
-  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+  .btn-spring:hover { transform: none; }
+  .btn-spring:active { transform: none; }
 
   .bento-card-spring {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
@@ -629,11 +629,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
   ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
   .btn-spring {
-    transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.2s ease;
     will-change: transform;
   }
-  .btn-spring:hover { transform: translateY(-2px) scale(1.015); }
-  .btn-spring:active { transform: translateY(0px) scale(0.985); }
+  .btn-spring:hover { transform: none; }
+  .btn-spring:active { transform: none; }
 
   .bento-card-spring {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
@@ -682,7 +682,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 <!-- Brand Logo -->
 <a class="flex items-center gap-3 shrink-0 group" href="index.html">
-<img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm group-hover:scale-105 transition border border-slate-200 shadow-xs">
+<img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-9 h-9 rounded-xl object-cover shadow-sm  transition border border-slate-200 shadow-xs">
 <div class="whitespace-nowrap">
 <span class="font-extrabold text-slate-950 tracking-tight text-base block font-heading">Mohammad Rehan</span>
 <span class="text-[10px] text-slate-500 font-medium block -mt-1">Founder @ Rehan Quant Lab</span>
@@ -715,7 +715,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 <span class="hidden md:inline text-slate-600 font-semibold group-hover:text-slate-950">Search</span>
 <kbd class="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-white border border-slate-300 rounded text-slate-600 font-mono shadow-2xs">Ctrl K</kbd>
 </button>
-<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs shadow-indigo-600/20 transition hover:scale-102 items-center gap-1.5 btn-spring">
+<a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs shadow-indigo-600/20 transition  items-center gap-1.5 btn-spring">
 <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
 </a>
@@ -996,7 +996,7 @@ document.addEventListener('keydown', function(e) {
           Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
         </p>
         <div class="pt-2 flex items-center gap-3">
-          <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black font-mono text-xs transition shadow-md shadow-emerald-600/30 hover:scale-102 cursor-pointer btn-spring">
+          <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black font-mono text-xs transition shadow-md shadow-emerald-600/30  cursor-pointer btn-spring">
             <i class="w-4 h-4 text-emerald-100" data-lucide="zap"></i>
             <span>Take The 5-Second Air-Gap Challenge</span>
             <span>&rarr;</span>
@@ -1447,13 +1447,13 @@ document.addEventListener('keydown', function(e) {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- MASTER SUITE 1: RQL DocumentShield&trade; Forensic Redaction OS -->
-        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl  transition-all duration-300 relative group">
           <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 mb-4 mt-2">
-              <img src="01_DocumentShield_Cover_1080p.webp" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="01_DocumentShield_Cover_1080p.webp" alt="RQL DocumentShield&trade; Master Setup" class="w-full h-full object-cover  transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Forensic OS v1.0
               </div>
@@ -1489,16 +1489,16 @@ document.addEventListener('keydown', function(e) {
                 Air-Gapped Vault
               </span>
             </div>
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-102 btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition  btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
               <span>Checkout with PIONEER70 (-70% OFF)</span>
               <span>&rarr;</span>
             </a>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition hover:scale-102 btn-spring">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxk" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition  btn-spring">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBEb2N1bWVudFNoaWVsZCVFMiU4NCVBMiUyME1hc3RlciUyMFNldHVwJTIwKCQxNzklMjAvJTIwJUUyJTgyJUI5MTQsOTAwKS4lMjBQbGVhc2UlMjBhc3Npc3QlMjB3aXRoJTIwb25ib2FyZGluZy4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBEb2N1bWVudFNoaWVsZCVFMiU4NCVBMiUyME1hc3RlciUyMFNldHVwJTIwKCQxNzklMjAvJTIwJUUyJTgyJUI5MTQsOTAwKS4lMjBQbGVhc2UlMjBhc3Npc3QlMjB3aXRoJTIwb25ib2FyZGluZy4=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition ">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1506,13 +1506,13 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- MASTER SUITE 2: RQL WhisperVault&trade; Air-Gapped AI Voice Intelligence OS -->
-        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl  transition-all duration-300 relative group">
           <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 mb-4 mt-2">
-              <img src="02_WhisperVault_Cover_1080p.webp" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="02_WhisperVault_Cover_1080p.webp" alt="RQL WhisperVault&trade; Master Setup" class="w-full h-full object-cover  transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 AI Speech OS v1.0
               </div>
@@ -1548,16 +1548,16 @@ document.addEventListener('keydown', function(e) {
                 Air-Gapped Vault
               </span>
             </div>
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-102 btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdC9QSU9ORUVSNzA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition  btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
               <span>Checkout with PIONEER70 (-70% OFF)</span>
               <span>&rarr;</span>
             </a>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition hover:scale-102 btn-spring">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXdoaXNwZXJ2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition  btn-spring">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBXaGlzcGVyVmF1bHQlRTIlODQlQTIlMjBNYXN0ZXIlMjBTZXR1cCUyMCgkMTQ5JTIwLyUyMCVFMiU4MiVCOTEyLDQ1MCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMG9uYm9hcmRpbmcu" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBXaGlzcGVyVmF1bHQlRTIlODQlQTIlMjBNYXN0ZXIlMjBTZXR1cCUyMCgkMTQ5JTIwLyUyMCVFMiU4MiVCOTEyLDQ1MCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMG9uYm9hcmRpbmcu" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition ">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1565,13 +1565,13 @@ document.addEventListener('keydown', function(e) {
         </div>
 
         <!-- FEATURED FLAGSHIP 3: RQL TextDiff&trade; (Offline Myers File & Code Comparison Engine) -->
-        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative group">
+        <div class="bg-white border border-slate-200/90 hover:border-slate-400 rounded-3xl p-5 sm:p-6 flex flex-col justify-between shadow-xs hover:shadow-xl  transition-all duration-300 relative group">
           <div class="absolute -top-3 left-6 bg-slate-950 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
              LIVE OFFICIAL RELEASE
           </div>
           <div>
             <div class="relative aspect-video w-full rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 mb-4 mt-2 group/media">
-              <img src="08_TextDiff_Cover_1080p.webp" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src="08_TextDiff_Cover_1080p.webp" alt="RQL TextDiff&trade; Master Setup" class="w-full h-full object-cover  transition-transform duration-500" loading="lazy" />
               <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-white text-[10px] font-mono font-bold">
                 Myers Diff v1.0
               </div>
@@ -1607,16 +1607,16 @@ document.addEventListener('keydown', function(e) {
                 Pay Once, Own Forever
               </span>
             </div>
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition hover:scale-102 btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
+            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs font-mono flex items-center justify-center gap-1.5 shadow-sm transition  btn-spring cursor-pointer" title="Direct Gumroad checkout with 70% discount code PIONEER70 applied">
               <span>Checkout with PIONEER70 (-70% OFF)</span>
               <span>&rarr;</span>
             </a>
             <div class="grid grid-cols-2 gap-2">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition hover:scale-102 btn-spring">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZm" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-black text-xs font-heading flex items-center justify-center gap-1.5 shadow-sm shadow-rose-600/20 transition  btn-spring">
                 <span>Buy Setup</span>
                 <span>&rarr;</span>
               </a>
-              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBUZXh0RGlmZiVFMiU4NCVBMiUyMENvbW1lcmNpYWwlMjBMaWNlbnNlJTIwKCQ5OSUyMFVTRCUyMC8lMjAlRTIlODIlQjk4LDIwMCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMGZvdW5kZXIlMjBvbmJvYXJkaW5nLg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition hover:scale-102">
+              <a data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMHdhbnQlMjB0byUyMGFjcXVpcmUlMjB0aGUlMjBSUUwlMjBUZXh0RGlmZiVFMiU4NCVBMiUyMENvbW1lcmNpYWwlMjBMaWNlbnNlJTIwKCQ5OSUyMFVTRCUyMC8lMjAlRTIlODIlQjk4LDIwMCkuJTIwUGxlYXNlJTIwYXNzaXN0JTIwd2l0aCUyMGZvdW5kZXIlMjBvbmJvYXJkaW5nLg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-bold text-xs font-mono flex items-center justify-center gap-1.5 transition ">
                 <span>WhatsApp VIP</span>
               </a>
             </div>
@@ -1639,7 +1639,7 @@ document.addEventListener('keydown', function(e) {
             </p>
           </div>
           <div class="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm font-heading shadow-lg hover:shadow-rose-600/20 transition hover:scale-102">
+            <a href="store.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm font-heading shadow-lg hover:shadow-rose-600/20 transition ">
               <span>Open Commercial Store</span>
               <span class="font-mono text-base">&rarr;</span>
             </a>
@@ -1667,7 +1667,7 @@ document.addEventListener('keydown', function(e) {
         </p>
       </div>
       <div class="flex flex-wrap items-center gap-3 shrink-0 relative z-10">
-        <a href="websites/" class="px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-black text-xs font-heading transition shadow-md shadow-purple-600/20 hover:scale-102 flex items-center gap-2 btn-spring">
+        <a href="websites/" class="px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-black text-xs font-heading transition shadow-md shadow-purple-600/20  flex items-center gap-2 btn-spring">
           <i class="w-4 h-4 text-emerald-600" data-lucide="layers"></i>
           <span>Open Web &amp; Speed Studio</span>
           <span>&rarr;</span>
@@ -1857,10 +1857,10 @@ document.addEventListener('keydown', function(e) {
 Whether you require sub-12ms Anycast web architectures, air-gapped desktop computing suites, or custom quantitative systems engineering, let's connect.
 </p>
 <div class="flex flex-wrap justify-center items-center gap-4 pt-2">
-<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-7 py-3.5 rounded-xl transition-all shadow-md shadow-emerald-600/20 hover:scale-102 text-sm btn-spring" href="contact.html">
+<a class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-7 py-3.5 rounded-xl transition-all shadow-md shadow-emerald-600/20  text-sm btn-spring" href="contact.html">
 Contact Mohammad Rehan
 </a>
-<a class="bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 font-extrabold px-7 py-3.5 rounded-xl transition-all shadow-xs hover:scale-102 text-sm flex items-center gap-2 btn-spring" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwaW50ZXJlc3RlZCUyMGluJTIweW91ciUyMHNlcnZpY2VzLg==" role="button" rel="noopener noreferrer" target="_blank">
+<a class="bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 font-extrabold px-7 py-3.5 rounded-xl transition-all shadow-xs  text-sm flex items-center gap-2 btn-spring" data-obf="aHR0cHM6Ly93YS5tZS85MTcwOTE1MTg1NDg/dGV4dD1IZWxsbyUyME1vaGFtbWFkJTIwUmVoYW4sJTIwSSUyMGFtJTIwaW50ZXJlc3RlZCUyMGluJTIweW91ciUyMHNlcnZpY2VzLg==" role="button" rel="noopener noreferrer" target="_blank">
 <i class="w-4 h-4 text-emerald-600" data-lucide="message-circle"></i>
 <span>Chat on WhatsApp</span>
 </a>

@@ -25,10 +25,10 @@
   transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
 .btn-spring:hover {
-  transform: translateY(-1px);
+  transform: none;
 }
 .btn-spring:active {
-  transform: translateY(0.5px);
+  transform: none;
 }
 
 .btn-magnetic {

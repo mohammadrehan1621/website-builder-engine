@@ -456,14 +456,10 @@ p, li, span, a {
 
         /* Button Hover Micro-Spring Physics */
         .btn-spring {
-            transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease;
+            transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
         }
-        .btn-spring:hover {
-            transform: translateY(-2.5px) scale(1.02);
-        }
-        .btn-spring:active {
-            transform: translateY(0px) scale(0.98);
-        }
+        .btn-spring:hover { transform: none; }
+        .btn-spring:active { transform: none; }
 
         /* Ambient Glowing Background Orbs */
         .ambient-orb {

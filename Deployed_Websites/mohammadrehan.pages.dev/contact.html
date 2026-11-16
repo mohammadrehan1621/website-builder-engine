@@ -95,15 +95,11 @@
 
     /* Remotion Physics & Micro-Interactions */
     .btn-spring {
-      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, border-color 0.2s ease;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.2s ease;
       will-change: transform;
     }
-    .btn-spring:hover {
-      transform: translateY(-2px) scale(1.015);
-    }
-    .btn-spring:active {
-      transform: translateY(0px) scale(0.985);
-    }
+    .btn-spring:hover { transform: none; }
+    .btn-spring:active { transform: none; }
 
     .bento-card-spring {
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.3s ease;
