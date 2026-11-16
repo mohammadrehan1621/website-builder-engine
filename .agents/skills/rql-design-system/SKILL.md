@@ -47,6 +47,9 @@ Elements must feel physically grounded like professional Bloomberg trading termi
 - **Hover Feedback**: Strictly **subtle 1px border luminance** (`border-slate-200` to `border-slate-400` in light mode, or `border-slate-800` to `border-emerald-500/50` in dark mode) paired with soft shadow elevation (`shadow-xs` to `shadow-md`). Zero pixel displacement.
 - **Mobile Touch Invariant**: All desktop hover rules MUST be wrapped inside `@media (hover: hover) and (pointer: fine)` to prevent "sticky hover" locks on mobile taps.
 - **Click Affordance**: Sub-pixel tactile feedback on `pointerdown` (0ms delay, mechanical click feel).
+- **Keyboard Tab Beacon vs. Mouse Focus**:
+  - Mouse/touch clicks get `:focus:not(:focus-visible) { outline: none; box-shadow: none; }` (clean clicks, zero ugly rectangles).
+  - Keyboard users get `:focus-visible { outline: 2px solid #10b981 !important; outline-offset: 2px !important; }` (unmistakable Sovereign Emerald beacon).
 - **Smoothness**: Native high-performance transitions: `transition: border-color 0.15s ease, box-shadow 0.15s ease`.
 - **Keyboard Power**: Every interactive element supports full keyboard navigation (Tab cycling, `Enter`/`Space` activation, `Escape` modal dismissal). Raycast Command Palette accessible everywhere via `Ctrl+K` or `/`.
 
@@ -70,6 +73,11 @@ Every card, bento cell, or modal must have **EXACTLY ONE dominant primary action
 - **Badge Baseline Alignment**: Monospace tags (`font-mono`) next to display titles (`font-sans`) must use optical vertical-alignment (`inline-flex items-center`) to prevent 1px baseline droop.
 - **Sub-Pixel Hairlines on High-DPI Displays**: Use Tailwind inset rings (`ring-1 ring-inset ring-slate-800` or `ring-white/10`) to ensure razor-sharp borders on Apple Retina and 4K screens without box-model width distortion.
 
+### Zero-CLS Skeleton Shimmer & Defensive Loading States
+- Every media container MUST have an explicit `aspect-video` ratio and a dark placeholder:
+  `<div class="aspect-video w-full rounded-xl bg-slate-900 border border-slate-800 relative overflow-hidden">`
+- Prevents image load pops and guarantees Cumulative Layout Shift is mathematically 0.000 under any network condition.
+
 ### Modal Scrollbar Layout Shift Prevention (CLS = 0.000)
 When opening any modal dialog:
 - Never simply inject `overflow: hidden` on `<body>` without compensating for the removed 15px desktop scrollbar.
@@ -79,24 +87,45 @@ When opening any modal dialog:
 
 ## 4. Advanced Performance, Cryptography & Hardware Standards
 
-### 1. LCP Fetch Priority & Asynchronous Image Decoding (`fetchpriority="high"`)
+### 1. Empty-State Architecture & 1-Click Recovery
+Every searchable catalog or data table MUST define a dedicated empty state:
+- Centralized telemetry icon (`lucide="search-x"`).
+- Reassuring copy: *"No commercial engineering suites matched your query."*
+- 1-click instant recovery button: `[Reset Filter & View All 31 Suites]` that clears the query and restores all cards instantly.
+
+### 2. Debounced Search & Input Event Batching (120ms RAF Batch)
+On live search inputs:
+- Wrap search filtering in a 120ms debounce or `requestAnimationFrame` scheduler.
+- Prevents dropped keystrokes and maintains silky 60fps typing velocity across 31 cards and tables.
+
+### 3. Multi-Stop Gradient Smoothing (Color Banding Prevention)
+On deep obsidian backgrounds (`#020617` / `#0b111b`), replace harsh 2-stop linear gradients with smooth 4-stop mathematical curves:
+`linear-gradient(180deg, #020617 0%, #050a14 35%, #09111f 70%, #0e1626 100%)`
+Eliminates visible stair-stepping color bands on 8-bit desktop monitors.
+
+### 4. Adaptive SVG Favicon (Dark/Light OS Vector Morphing)
+Vector SVG favicons embed a media query so they stand out in all browser themes:
+- Light OS mode: Solid dark charcoal shield.
+- Dark OS mode: Automatically morphs to vibrant Electric Emerald (`#10b981`).
+
+### 5. LCP Fetch Priority & Asynchronous Image Decoding (`fetchpriority="high"`)
 For catalog and gallery grids:
 - The first visible flagship card thumbnail MUST declare: `fetchpriority="high" loading="eager" decoding="async"`.
 - All remaining below-the-fold cards MUST declare: `loading="lazy" decoding="async"`.
-- Cuts Largest Contentful Paint (LCP) load time by up to 60% by instructing the browser network scheduler to download the hero thumbnail on the very first packet.
+- Cuts Largest Contentful Paint (LCP) load time by up to 60%.
 
-### 2. Accessible Modal Focus Trapping via the HTML `inert` Attribute
+### 6. Accessible Modal Focus Trapping via the HTML `inert` Attribute
 When modal dialogs are toggled:
 - Set `document.querySelector('main').inert = true;` to freeze background DOM for keyboard users and screen readers.
 - Automatically focus the primary interactive element inside the modal.
 - On modal dismissal, restore `main.inert = false;` and return focus cleanly to the exact button that launched the modal.
 
-### 3. Safe Web Storage Versioning & Incognito Quota Hygiene
+### 7. Safe Web Storage Versioning & Incognito Quota Hygiene
 All browser storage access must be protected:
 - Wrap `localStorage` calls in try/catch accessors to prevent uncaught `QuotaExceededError` or `SecurityError` crashes in private/incognito browsing windows.
 - Prefix all keys with version tags (`rql_store_v1`) to prevent stale legacy keys from corrupting modern interface states.
 
-### 4. Horizontal Table Gesture Containment (`overscroll-behavior-x: contain`)
+### 8. Horizontal Table Gesture Containment (`overscroll-behavior-x: contain`)
 Data tables (`#commercial-catalog-table`) must prevent accidental full-page navigation:
 ```css
 #commercial-catalog-table {
@@ -106,7 +135,7 @@ Data tables (`#commercial-catalog-table`) must prevent accidental full-page navi
 ```
 Traps horizontal trackpad and touch gestures inside the table container, eliminating accidental Back/Forward swipe navigation on iOS Safari and Android Chrome.
 
-### 5. Custom Sovereign Text Selection Styling (`::selection`)
+### 9. Custom Sovereign Text Selection Styling (`::selection`)
 Replace default Windows/Mac blue selection with theme-coherent accents:
 ```css
 ::selection {
@@ -119,7 +148,7 @@ code::selection {
 }
 ```
 
-### 6. Hardware Safe Area Insets for Notched Displays (`env(safe-area-inset-*)`)
+### 10. Hardware Safe Area Insets for Notched Displays (`env(safe-area-inset-*)`)
 Fixed bottom bars and floating dialogs must never be covered by device gesture bars or camera notches:
 ```css
 .sticky-bottom-bar {
@@ -129,7 +158,7 @@ Fixed bottom bars and floating dialogs must never be covered by device gesture b
 }
 ```
 
-### 7. Native View Transitions API (`document.startViewTransition`)
+### 11. Native View Transitions API (`document.startViewTransition`)
 When switching between Cards View and Technical Table View, or between category tabs on `store.html`:
 ```javascript
 if (document.startViewTransition) {
@@ -142,12 +171,12 @@ if (document.startViewTransition) {
 ```
 Cross-fades active layouts over a 120ms compositor curve with zero layout jump and zero external animation libraries.
 
-### 8. Cryptographic Subresource Integrity (SRI) & Hash Pinning
+### 12. Cryptographic Subresource Integrity (SRI) & Hash Pinning
 Local vendor scripts (`lucide.min.js`, `qrcode.min.js`) must declare cryptographic integrity hashes:
 `<script src="assets/lucide.min.js" integrity="sha256-..." crossorigin="anonymous"></script>`
 Guarantees browser-level execution refusal if any local vendor script is modified or tampered with.
 
-### 9. Pure-CSS Compositor Scroll Progress (`animation-timeline: scroll()`)
+### 13. Pure-CSS Compositor Scroll Progress (`animation-timeline: scroll()`)
 The top reading indicator (`#rql-scroll-progress`) runs entirely on the browser GPU compositor thread without running JavaScript during scroll:
 ```css
 @keyframes rql-progress-grow {
@@ -161,72 +190,72 @@ The top reading indicator (`#rql-scroll-progress`) runs entirely on the browser 
 }
 ```
 
-### 10. Native Numeral Localization (`Intl.NumberFormat`)
+### 14. Native Numeral Localization (`Intl.NumberFormat`)
 Never concatenate currency strings manually:
 - Global USD: `new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount)`
 - Domestic INR: `new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(amount)`
 Enforces correct Indian Lakh/Crore digit grouping (`1,49,999`) vs Western thousands (`149,999`).
 
-### 11. Form Error Geometry Reservation (Zero CLS)
+### 15. Form Error Geometry Reservation (Zero CLS)
 On all inquiry and contact forms:
 - Error message containers must declare a fixed reserved height: `min-h-[20px] transition-opacity duration-150`.
 - Validation errors transition between `opacity-0` and `opacity-100`, guaranteeing that form submit buttons never shift vertically by even 1 pixel.
 
-### 12. Document Title Status Badging & Tab Awareness
+### 16. Document Title Status Badging & Tab Awareness
 Provide ambient situational awareness in the browser tab bar:
 - In-progress verification: `document.title = "[84%] Verifying DocumentShield | Rehan Quant Lab"`
 - Completed state: `document.title = "[VERIFIED] DocumentShield | Rehan Quant Lab"`
 
-### 13. Offline PWA & Air-Gap Service Worker Architecture (`sw.js`)
+### 17. Offline PWA & Air-Gap Service Worker Architecture (`sw.js`)
 To prove Rehan Quant Lab's 100% offline air-gap promise:
 - Implement a zero-dependency Service Worker cache strategy (`sw.js`).
 - Cache-first strategy for local static assets (`fonts/*.woff2`, `lucide.min.js`, `store.html`, `security.html`).
 - Enables users to load the site, disconnect from Wi-Fi entirely, and run the **WebCrypto Hash Verifier, SaaS Savings Calculator, and Catalog Table 100% offline in browser memory**.
 
-### 14. URL State Machine & History Traversal (`history.pushState` & `popstate`)
+### 18. URL State Machine & History Traversal (`history.pushState` & `popstate`)
 On catalog routes (`store.html`):
 - Deep-link synchronization: URL updates dynamically without page reloads (`store.html#cat=retail` or `store.html?view=table&q=ssn`).
 - Listen to `window.addEventListener('popstate')` so browser Back and Forward navigation cleanly switches tabs without triggering page refreshes or involuntary viewport jumps.
 
-### 15. Battery Preservation & GPU Throttling Safeguards for `<canvas>`
+### 19. Battery Preservation & GPU Throttling Safeguards for `<canvas>`
 Every background HTML5 canvas particle visualizer must safeguard laptop battery and mobile thermal limits:
 - Pause rendering when scrolled out of view using `IntersectionObserver`.
 - Pause rendering when the browser tab is hidden or minimized using `document.addEventListener('visibilitychange')`.
 
-### 16. APCA High-Contrast Standards for Monospace Telemetry
+### 20. APCA High-Contrast Standards for Monospace Telemetry
 In dark obsidian terminals (`#020617` / `#0b111b`):
 - 10px-11px monospace numbers (`SHA-256`, RAM figures, PE64 specs) require higher lightness contrast (APCA Lc 75+, e.g. `#e2e8f0` or `#38bdf8`) to eliminate eye fatigue during long code audits.
 - Secondary muted labels must never drop below `#94a3b8` (45% lightness).
 
-### 17. OS Browser Theme-Color Synchronization
+### 21. OS Browser Theme-Color Synchronization
 Seamless edge-to-edge mobile status bar integration on iOS Safari and Android Chrome:
 ```html
 <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
 ```
 
-### 18. Zero-Byte Web Audio Tactile Micro-Acoustics
+### 22. Zero-Byte Web Audio Tactile Micro-Acoustics
 For high-importance micro-actions (copying a hash, completing in-browser verification):
 - Synthesize an optional 10ms micro-click directly in memory using native Web Audio API (`AudioContext` oscillator at 800Hz, volume 0.02).
 - Zero network requests, 0ms latency, automatically muted if `prefers-reduced-motion` is active.
 
-### 19. Streaming Memory-Safe File Hashing (OOM Crash Prevention)
+### 23. Streaming Memory-Safe File Hashing (OOM Crash Prevention)
 On cryptographic verification routes (`security.html`):
 - Multi-hundred megabyte `.exe` binaries must NEVER be read into a single in-memory ArrayBuffer.
 - Use incremental stream slicing (`file.slice(offset, offset + chunkSize)` in 2MB to 4MB chunks) updating an incremental cryptographic digest or web worker.
 - Guarantees max RAM usage under 10MB during multi-gigabyte file verification, eliminating browser tab crashes.
 
-### 20. Absolute Self-Hosting & Zero-Telemetry CSP Invariant
+### 24. Absolute Self-Hosting & Zero-Telemetry CSP Invariant
 Rehan Quant Lab is 100% offline and zero-telemetry:
 - **Zero External Dependencies**: Every font (`fonts/*.woff2`), script (`lucide.min.js`, `qrcode.min.js`), and asset MUST be self-hosted locally in `/assets/`.
 - **Strict Content Security Policy**: Prohibit external telemetry leaks:
   `default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self';`
 
-### 21. Dynamic Mobile Viewport Units (`dvh` vs `vh`)
+### 25. Dynamic Mobile Viewport Units (`dvh` vs `vh`)
 - Never use legacy `100vh` on mobile dialogs, heroes, or floating action bars.
 - Use `100dvh` (Dynamic Viewport Height) or `min-h-[100dvh]` so that content is never clipped under the auto-collapsing Safari or Chrome address bar.
 
-### 22. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
+### 26. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
 For high-density product grids (e.g., the 31 commercial suites on `store.html`):
 ```css
 [data-product-card="true"] {
@@ -236,31 +265,31 @@ For high-density product grids (e.g., the 31 commercial suites on `store.html`):
 ```
 Skips rendering off-screen DOM nodes until the user scrolls near them, reducing layout calculation time by up to 80% and maintaining silky 60fps scrolling on mobile devices and lower-spec hardware.
 
-### 23. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
+### 27. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
 Rehan Quant Lab serves both global enterprises and Indian domestic founders:
 - **Global USD**: Stated first (`$179`), linked directly to international checkout desks (Stripe / Gumroad).
 - **Domestic INR & UPI**: Synchronized domestic pricing (`Rs 14,999`), linked to Indian domestic checkout with instant QR and GST invoicing.
 - **Discount Synchronization**: Auto-applied discount passes (`PIONEER70` = 70% off, `PIONEER20` = 20% off) must calculate and display synchronously in both currencies without rounding errors.
 - **Tabular Alignment**: All prices must enforce `font-feature-settings: 'tnum' 1` (`font-mono`) for clean tabular comparison.
 
-### 24. Tactile Clipboard Copying & Screen Reader Announcements
+### 28. Tactile Clipboard Copying & Screen Reader Announcements
 When users copy discount codes (`PIONEER70`), UPI VPAs, or SHA-256 hashes:
 - **Visual State**: Icon swaps to emerald checkmark with `"Copied!"` label for 1800ms.
 - **Legacy Fallback**: Automatic fallback to an offscreen `document.execCommand('copy')` if Clipboard API is restricted.
 - **Assistive Technology**: Updates an invisible `aria-live="polite"` element announcing the copy action for visually impaired users.
 
-### 25. Fluid Typographic Clamping (`clamp()`)
+### 29. Fluid Typographic Clamping (`clamp()`)
 Main hero titles and section headers must scale continuously between mobile and desktop:
 `font-size: clamp(1.85rem, 1.2rem + 2.5vw, 3.25rem);`
 Prevents abrupt breakpoint snaps and eliminates awkward 1-word line wraps on tablet viewports.
 
-### 26. Font Loading & Metric Matching (Zero FOUT / FOIT)
+### 30. Font Loading & Metric Matching (Zero FOUT / FOIT)
 Custom local WOFF2 webfonts (Inter & JetBrains Mono) must enforce:
 - `font-display: swap` in all `@font-face` definitions to prevent Flash of Invisible Text (FOIT).
 - System font fallback stacks must match character widths to prevent layout shifts upon font arrival:
   `font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;`
 
-### 27. Enterprise Print Stylesheet (`@media print`)
+### 31. Enterprise Print Stylesheet (`@media print`)
 Enterprise procurement, legal teams, and auditors require clean PDF exports of license specifications, receipts, and verification declarations:
 ```css
 @media print {
@@ -279,11 +308,11 @@ Enterprise procurement, legal teams, and auditors require clean PDF exports of l
 }
 ```
 
-### 28. High-Contrast & Reduced-Transparency Accessibility
+### 32. High-Contrast & Reduced-Transparency Accessibility
 - **High Contrast**: Support `@media (forced-colors: active)` so all hairline borders and active indicators automatically inherit system tokens (`CanvasText`, `Highlight`).
 - **Transparency Fallback**: Support `@media (prefers-reduced-transparency: reduce)` by replacing translucent acrylics (`backdrop-blur-md`) with solid 100% opaque slate backgrounds.
 
-### 29. Mobile Virtual Keyboard & Typing Ergonomics
+### 33. Mobile Virtual Keyboard & Typing Ergonomics
 Eliminate typing friction on mobile devices across all search, contact, and dialog fields:
 - Search inputs: `type="search" enterkeyhint="search"`
 - Numeric / seat inputs: `type="number" inputmode="numeric"`
@@ -346,7 +375,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 18-Point Failure Checklist
+## 7. Pre-Launch 20-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -366,5 +395,7 @@ Before any change is committed or deployed, every question must be verified with
 14. [ ] **Form Error Geometry**: Do all error message blocks have reserved heights to guarantee CLS = 0?
 15. [ ] **LCP Priority**: Does the primary suite thumbnail declare `fetchpriority="high"` and `loading="eager"`?
 16. [ ] **Modal Focus Trapping**: Is the background `<main>` marked `inert` during active modal presentations?
-17. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-18. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+17. [ ] **Zero-CLS Skeleton**: Do media frames define dark skeleton placeholders to lock layout before download?
+18. [ ] **Empty State Recovery**: Does search have a dedicated empty state with a 1-click reset button?
+19. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+20. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
