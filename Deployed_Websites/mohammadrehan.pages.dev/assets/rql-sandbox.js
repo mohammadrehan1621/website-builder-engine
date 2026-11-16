@@ -548,7 +548,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
       return 'https://rehanquantlab.com/go?slug=' + lower;
     }
 
-    var gumroadMatch = t.match(/quantify17\.gumroad\.com\/l\/rql-([a-z0-9\-]+)/i);
+    var gumroadMatch = t.match(/rehanquantlab\.gumroad\.com\/l\/rql-([a-z0-9\-]+)/i);
     if (gumroadMatch && gumroadMatch[1]) {
       var rawSlug = gumroadMatch[1].replace(/-/g, '').toLowerCase();
       var couponMatch = t.match(/rql-[a-z0-9\-]+\/([A-Z0-9]+)/);

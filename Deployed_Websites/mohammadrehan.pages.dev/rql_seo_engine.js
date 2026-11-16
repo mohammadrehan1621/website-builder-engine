@@ -141,7 +141,7 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-documentshield"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-documentshield"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -162,7 +162,7 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-whispervault"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-whispervault"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -183,7 +183,7 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-retailpos"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-retailpos"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -204,7 +204,7 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-storechain"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-storechain"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -225,7 +225,7 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://quantify17.gumroad.com/l/rql-conduit"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-conduit"
           },
           "aggregateRating": {
             "@type": "AggregateRating",

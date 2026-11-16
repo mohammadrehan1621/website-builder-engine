@@ -102,7 +102,7 @@
 #### 01. RQL DocumentShield™ ($149 | Anchor: Adobe Acrobat $288/yr | Saves: +$685) &mdash; [LIVE 🟢]
 * **Mintage & Escalation Architecture**: Batch 1: 999 @ $149 (&#8377;12,516) | Batch 2: 9,999 @ $194 (+30%) | Batch 3: 99,999 @ $252 (+69%) | Final Cap: 999,999 @ $327 (+120%) &bull; Free Generational Upgrades for Life
 * **Master Binary**: `RQL_DocumentShield_Master_Setup.exe` &bull; **SHA-256**: `E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735`
-* **Microsoft WDSI ID**: `b2e55504-c0c9-47ae-889f-10b77394df6e` &bull; **Store**: `https://quantify17.gumroad.com/l/rql-documentshield`
+* **Microsoft WDSI ID**: `b2e55504-c0c9-47ae-889f-10b77394df6e` &bull; **Store**: `https://rehanquantlab.gumroad.com/l/rql-documentshield`
 * **1. What is it?** An air-gapped forensic document privacy and vector sanitization desktop workstation.
 * **2. What does it do?** Permanently redacts and removes sensitive text, private client figures, and tracking metadata from PDFs and files, preventing catastrophic data leaks.
 * **3. How does it do it?** Re-synthesizes targeted vector bounding boxes into raw pixel arrays in RAM and executes permanent DoD 5220.22-M 7-pass sector overwriting to residual file traces.
@@ -112,7 +112,7 @@
 #### 02. RQL WhisperVault™ ($299 | Anchor: Otter.ai $204/yr | Saves: +$463) &mdash; [LIVE 🟢]
 * **Mintage & Escalation Architecture**: Batch 1: 999 @ $299 (&#8377;25,116) | Batch 2: 9,999 @ $389 (+30%) | Batch 3: 99,999 @ $505 (+69%) | Final Cap: 999,999 @ $657 (+120%) &bull; Free Generational Upgrades for Life
 * **Master Binary**: `RQL_WhisperVault_Master_Setup.exe` &bull; **SHA-256**: `8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E`
-* **Microsoft WDSI ID**: `eb771835-b451-44af-a07a-6741a34cd347` &bull; **Store**: `https://quantify17.gumroad.com/l/rql-whispervault`
+* **Microsoft WDSI ID**: `eb771835-b451-44af-a07a-6741a34cd347` &bull; **Store**: `https://rehanquantlab.gumroad.com/l/rql-whispervault`
 * **1. What is it?** A 100% offline, local CPU speech-to-text artificial intelligence transcription workstation.
 * **2. What does it do?** Converts voice recordings, executive board meetings, legal depositions, and medical dictations into millisecond-accurate Word and SRT subtitles without internet.
 * **3. How does it do it?** Bundles a quantized native Whisper C++/Rust engine directly on local CPU cache with zero outbound network sockets and zero cloud API keys.
@@ -122,7 +122,7 @@
 #### 03. RQL Sovereign RetailPOS™ ($169 | Anchor: Square Plus $240/yr | Saves: +$551) &mdash; [LIVE 🟢]
 * **Mintage & Escalation Architecture**: Batch 1: 999 @ $169 (&#8377;14,196) | Batch 2: 9,999 @ $220 (+30%) | Batch 3: 99,999 @ $286 (+69%) | Final Cap: 999,999 @ $371 (+120%) &bull; Free Generational Upgrades for Life
 * **Master Binary**: `RQL_RetailPOS_Master_Setup.exe` &bull; **SHA-256**: `1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C`
-* **Microsoft WDSI ID**: `fec46339-81b6-42bb-9118-a8aaab4c4b82` &bull; **Store**: `https://quantify17.gumroad.com/l/rql-retailpos`
+* **Microsoft WDSI ID**: `fec46339-81b6-42bb-9118-a8aaab4c4b82` &bull; **Store**: `https://rehanquantlab.gumroad.com/l/rql-retailpos`
 * **1. What is it?** A fast, offline retail Point of Sale (POS) and thermal receipt billing engine.
 * **2. What does it do?** Rings up retail customers, balances shift cash drawers, manages inventory, and prints 80mm thermal bills with zero broadband internet.
 * **3. How does it do it?** Built with an embedded, transactional local SQLite engine running in native Win32, communicating with USB/Serial thermal printers via raw ESC/POS byte buffers in &lt;10ms.
@@ -132,7 +132,7 @@
 #### 04. RQL StoreChain™ ($179 | Anchor: Cloud Multi-Till $420/yr | Saves: +$961) &mdash; [LIVE 🟢]
 * **Mintage & Escalation Architecture**: Batch 1: 999 @ $179 (&#8377;15,036) | Batch 2: 9,999 @ $233 (+30%) | Batch 3: 99,999 @ $303 (+69%) | Final Cap: 999,999 @ $393 (+120%) &bull; Free Generational Upgrades for Life
 * **Master Binary**: `RQL_StoreChain_Master_Setup.exe` &bull; **SHA-256**: `05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731`
-* **Microsoft WDSI ID**: `755fcb54-6eb9-429e-8c2d-73b4a34c6ee5` &bull; **Store**: `https://quantify17.gumroad.com/l/rql-storechain`
+* **Microsoft WDSI ID**: `755fcb54-6eb9-429e-8c2d-73b4a34c6ee5` &bull; **Store**: `https://rehanquantlab.gumroad.com/l/rql-storechain`
 * **1. What is it?** A localized multi-till inventory and sales ledger synchronizer for retail chains.
 * **2. What does it do?** Keeps up to 5 checkout registers in a store synchronized in real-time without relying on external cloud servers, featuring the Dynamic QR Solution that calculates the cart total live and instantly renders a dynamic settlement QR code for that exact amount with 1-click transaction saving.
 * **3. How does it do it?** Utilizes an offline peer-to-peer Wi-Fi/LAN router mesh where registers broadcast encrypted state diffs. Features the Dynamic QR Solution: as cart items are added or modified, it calculates the cart total and generates an exact-amount payment QR (`upi://pay?pa=...&am=...`), locking the exact payment amount on the customer's phone upon scan for 2-second error-free checkout, paired with 1-click transaction saving into the local ledger and thermal receipt printing.
@@ -142,7 +142,7 @@
 #### 05. RQL Conduit™ ($129 | Anchor: Speedify Teams $180/yr | Saves: +$411) &mdash; [LIVE 🟢]
 * **Mintage & Escalation Architecture**: Batch 1: 999 @ $129 (&#8377;10,836) | Batch 2: 9,999 @ $168 (+30%) | Batch 3: 99,999 @ $218 (+69%) | Final Cap: 999,999 @ $283 (+120%) &bull; Free Generational Upgrades for Life
 * **Master Binary**: `RQL_Conduit_Master_Setup.exe` &bull; **SHA-256**: `8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A`
-* **Microsoft WDSI ID**: `d053dca5-2466-40f7-aad8-3a90c4971595` &bull; **Store**: `https://quantify17.gumroad.com/l/rql-conduit`
+* **Microsoft WDSI ID**: `d053dca5-2466-40f7-aad8-3a90c4971595` &bull; **Store**: `https://rehanquantlab.gumroad.com/l/rql-conduit`
 * **1. What is it?** A high-speed, direct peer-to-peer local network (LAN) data transmission engine.
 * **2. What does it do?** Transfers massive multi-gigabyte video projects, database backups, and disk images between local PCs at maximum physical wire speed.
 * **3. How does it do it?** Bypasses internet, cloud storage, and middleman servers entirely by opening direct, unthrottled streaming TCP sockets between two machines pushing raw bytes at up to 1,000 Mbps.
@@ -227,7 +227,7 @@
 * **5. The 1-Sentence Value Proposition**: *"Generates batch retail shelf labels and price stickers with barcodes in seconds, eliminating handwriting errors on store shelves."*
 
 #### 14. RQL InvoiceGen™ ($89 / ₹7,499 | Anchor: Zoho Invoice $180/yr | Saves: +$451) &mdash; [LIVE ON GUMROAD 🟢]
-* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-invoicegen`
+* **Live Gumroad Delivery**: `https://rehanquantlab.gumroad.com/l/rql-invoicegen`
 * **Mintage & Escalation**: Batch 1: 999 @ $89 (&#8377;7,499) | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
 * **Master Binary**: `RQL_InvoiceGen_Master_Setup.exe` &bull; **WDSI ID**: `e8b314fe-0377-47fc-9ff6-a0bdc13ac01c` (Completed 🟢) &bull; **SHA-256**: `9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF`
 * **Chassis**: Pure Native Rust &bull; Embedded PDF Vector Engine &bull; Zero Cloud Telemetry
@@ -238,7 +238,7 @@
 * **5. The 1-Sentence Value Proposition**: *"Generates 2-second sovereign PDF tax invoices with automated GST/VAT splits, thermal receipt dispatch, and dynamic UPI QR embedding with zero cloud telemetry."*
 
 #### 15. RQL CSVFormat™ ($89 / ₹6,999 | Anchor: Gigasheet Cloud $144/yr | Saves: +$343) &mdash; [LIVE ON GUMROAD 🟢]
-* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-csvformat`
+* **Live Gumroad Delivery**: `https://rehanquantlab.gumroad.com/l/rql-csvformat`
 * **Mintage & Escalation**: Batch 1: 999 @ $89 (₹6,999) | Batch 2: 9,999 @ $116 | Batch 3: 99,999 @ $150 | Final Cap: 999,999 @ $196
 * **Master Binary**: `RQL_CSVFormat_Master_Setup.exe` &bull; **WDSI ID**: `f639f750-e413-4aec-84f5-d68eabeb638d` (Completed 🟢) &bull; **SHA-256**: `FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9`
 * **Chassis**: Pure Native Rust &bull; Multi-Threaded SIMD CSV Engine &bull; Zero Cloud Telemetry
@@ -358,7 +358,7 @@
 * **5. The 1-Sentence Value Proposition**: *"Rips pristine lossless audio tracks from large video files in one click without launching heavy editing software."*
 
 #### 22. RQL SubtitleSync™ ($89 | Anchor: HappyScribe $144/yr | Saves: +$343)
-* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-csvformat`
+* **Live Gumroad Delivery**: `https://rehanquantlab.gumroad.com/l/rql-csvformat`
 * **Mintage & Escalation**: Batch 1: 999 @  | Batch 2: 9,999 @  | Batch 3: 99,999 @  | Final Cap: 999,999 @ 
 * **1. What is it?** A precision millisecond subtitle time-shifter and format converter.
 * **2. What does it do?** Fixes out-of-sync movie and course subtitles and converts effortlessly between SRT, VTT, ASS, and SUB formats.
@@ -383,7 +383,7 @@
 * **5. The 1-Sentence Value Proposition**: *"Locks confidential PDFs with authenticated AES-256 encryption, granular printing permissions, and dynamic watermarks offline."*
 
 #### 25. RQL CashDrawer™ ($89 | Anchor: POS Cash Control $144/yr | Saves: +$343)
-* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-csvformat`
+* **Live Gumroad Delivery**: `https://rehanquantlab.gumroad.com/l/rql-csvformat`
 * **Mintage & Escalation**: Batch 1: 999 @  | Batch 2: 9,999 @  | Batch 3: 99,999 @  | Final Cap: 999,999 @ 
 * **1. What is it?** An offline retail shift cash balance and theft reconciliation station.
 * **2. What does it do?** Reconciles opening float, cash sales, paid-out expenses, and closing cash counts to detect cashier shortages and prevent employee theft.
@@ -469,7 +469,7 @@
 * **5. The 1-Sentence Value Proposition**: *"Disables Windows telemetry tracking, removes pre-installed bloatware, and restores sub-10ms system responsiveness in one click."*
 
 #### 35. RQL MediaShrink™ ($89 | Anchor: UniConverter $132/yr | Saves: +$307)
-* **Live Gumroad Delivery**: `https://quantify17.gumroad.com/l/rql-csvformat`
+* **Live Gumroad Delivery**: `https://rehanquantlab.gumroad.com/l/rql-csvformat`
 * **Mintage & Escalation**: Batch 1: 999 @  | Batch 2: 9,999 @  | Batch 3: 99,999 @  | Final Cap: 999,999 @ 
 * **1. What is it?** A hardware-accelerated local video condenser and email attachment optimizer.
 * **2. What does it do?** Shrinks multi-gigabyte phone and camera videos into crisp 25MB attachments ready for WhatsApp, Slack, and email in seconds.

@@ -96,7 +96,7 @@ fn main() {
             </div>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-amber-600" data-lucide="shield-check"></i> RISK-FREE:</span>
-              <button onclick="openEvaluationModal('RQL TaxLedger&trade;', 'Offline 20-Feature Indian Accounting &amp; GSTR-1 JSON Engine', 'TaxLedger_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-taxledger')" class="text-amber-600 hover:text-amber-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
+              <button onclick="openEvaluationModal('RQL TaxLedger&trade;', 'Offline 20-Feature Indian Accounting &amp; GSTR-1 JSON Engine', 'TaxLedger_Cover_1080p.png', 'https://rehanquantlab.gumroad.com/l/rql-taxledger')" class="text-amber-600 hover:text-amber-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
               64-bit Windows portable binary &bull; Zero cloud telemetry &bull; 7-day unconditional money-back guarantee.
@@ -115,7 +115,7 @@ fn main() {
             </span>
           </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+            <a data-obf="aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -163,7 +163,7 @@ fn main() {
             </div>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-red-600" data-lucide="shield-check"></i> RISK-FREE:</span>
-              <button onclick="openEvaluationModal('RQL FileShredder&trade;', 'DoD 5220.22-M Permanent Forensic Data Destruction Engine', 'FileShredder_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-fileshredder')" class="text-red-600 hover:text-red-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
+              <button onclick="openEvaluationModal('RQL FileShredder&trade;', 'DoD 5220.22-M Permanent Forensic Data Destruction Engine', 'FileShredder_Cover_1080p.png', 'https://rehanquantlab.gumroad.com/l/rql-fileshredder')" class="text-red-600 hover:text-red-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
               64-bit Windows portable binary &bull; Zero cloud telemetry &bull; 7-day unconditional money-back guarantee.
@@ -182,7 +182,7 @@ fn main() {
             </span>
           </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+            <a data-obf="aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -230,7 +230,7 @@ fn main() {
             </div>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-violet-600" data-lucide="shield-check"></i> RISK-FREE:</span>
-              <button onclick="openEvaluationModal('RQL ClipVault&trade;', 'Zero-Telemetry Encrypted Clipboard History Engine', 'ClipVault_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-clipvault')" class="text-violet-600 hover:text-violet-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
+              <button onclick="openEvaluationModal('RQL ClipVault&trade;', 'Zero-Telemetry Encrypted Clipboard History Engine', 'ClipVault_Cover_1080p.png', 'https://rehanquantlab.gumroad.com/l/rql-clipvault')" class="text-violet-600 hover:text-violet-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
               64-bit Windows portable binary &bull; Zero cloud telemetry &bull; 7-day unconditional money-back guarantee.
@@ -249,7 +249,7 @@ fn main() {
             </span>
           </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+            <a data-obf="aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -297,7 +297,7 @@ fn main() {
             </div>
             <div class="mt-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 text-xs font-mono font-semibold flex items-center justify-between">
               <span class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-emerald-600" data-lucide="shield-check"></i> RISK-FREE:</span>
-              <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.png', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-emerald-600 hover:text-emerald-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
+              <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', 'ImageBatch_Cover_1080p.png', 'https://rehanquantlab.gumroad.com/l/rql-imagebatch')" class="text-emerald-600 hover:text-emerald-800 font-bold underline cursor-pointer text-[11px]">7-Day Guarantee &amp; Specs (.exe) &rarr;</button>
             </div>
             <p class="text-[10.5px] text-slate-500 mt-1 font-mono">
               64-bit Windows portable binary &bull; Zero cloud telemetry &bull; 7-day unconditional money-back guarantee.
@@ -316,7 +316,7 @@ fn main() {
             </span>
           </div>
           <div class="grid grid-cols-2 gap-2.5">
-            <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
+            <a data-obf="aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g=" role="button" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-heading flex items-center justify-center gap-1.5 shadow-xs transition hover:scale-102">
               <span>Buy on Gumroad</span>
               <span>&rarr;</span>
             </a>
@@ -430,7 +430,7 @@ fn main() {
         "priceCurrency": "USD",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://quantify17.gumroad.com/l/rql-taxledger"
+        "url": "https://rehanquantlab.gumroad.com/l/rql-taxledger"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -451,7 +451,7 @@ fn main() {
         "priceCurrency": "USD",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://quantify17.gumroad.com/l/rql-fileshredder"
+        "url": "https://rehanquantlab.gumroad.com/l/rql-fileshredder"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -472,7 +472,7 @@ fn main() {
         "priceCurrency": "USD",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://quantify17.gumroad.com/l/rql-clipvault"
+        "url": "https://rehanquantlab.gumroad.com/l/rql-clipvault"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -493,7 +493,7 @@ fn main() {
         "priceCurrency": "USD",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://quantify17.gumroad.com/l/rql-imagebatch"
+        "url": "https://rehanquantlab.gumroad.com/l/rql-imagebatch"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -589,7 +589,7 @@ fn main() {
             },
             "price": "119.00",
             "priceCurrency": "USD",
-            "url": "https://quantify17.gumroad.com/l/rql-taxledger"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-taxledger"
           },
           {
             "@type": "Offer",
@@ -601,7 +601,7 @@ fn main() {
             },
             "price": "59.00",
             "priceCurrency": "USD",
-            "url": "https://quantify17.gumroad.com/l/rql-fileshredder"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-fileshredder"
           },
           {
             "@type": "Offer",
@@ -613,7 +613,7 @@ fn main() {
             },
             "price": "39.00",
             "priceCurrency": "USD",
-            "url": "https://quantify17.gumroad.com/l/rql-clipvault"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-clipvault"
           },
           {
             "@type": "Offer",
@@ -625,11 +625,11 @@ fn main() {
             },
             "price": "69.00",
             "priceCurrency": "USD",
-            "url": "https://quantify17.gumroad.com/l/rql-imagebatch"
+            "url": "https://rehanquantlab.gumroad.com/l/rql-imagebatch"
           }"#;
 
         if !content.contains("rql-taxledger") {
-            let needle_schema_pdf = "            \"price\": \"119.00\",\n            \"priceCurrency\": \"USD\",\n            \"url\": \"https://quantify17.gumroad.com/l/rql-pdfmerge\"\n          }";
+            let needle_schema_pdf = "            \"price\": \"119.00\",\n            \"priceCurrency\": \"USD\",\n            \"url\": \"https://rehanquantlab.gumroad.com/l/rql-pdfmerge\"\n          }";
             if content.contains(needle_schema_pdf) {
                 content = content.replace(needle_schema_pdf, &format!("{},\n{}", needle_schema_pdf, schema_index_17_to_20));
                 println!("Added items 17-20 to Schema.org in index.html.");
@@ -1141,8 +1141,8 @@ fn main() {
         let path = web_dir.join("assets/rql-shield.js");
         let mut content = fs::read_to_string(&path).expect("read rql-shield.js").replace("\r\n", "\n");
         if !content.contains("'gumroad-taxledger'") {
-            let needle = "    'gumroad-pdfmerge': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl'";
-            let add = ",\n    'gumroad-taxledger': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==',\n    'gumroad-fileshredder': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==',\n    'gumroad-clipvault': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==',\n    'gumroad-imagebatch': 'aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g='";
+            let needle = "    'gumroad-pdfmerge': 'aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLXBkZm1lcmdl'";
+            let add = ",\n    'gumroad-taxledger': 'aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLXRheGxlZGdlcg==',\n    'gumroad-fileshredder': 'aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWZpbGVzaHJlZGRlcg==',\n    'gumroad-clipvault': 'aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWNsaXB2YXVsdA==',\n    'gumroad-imagebatch': 'aHR0cHM6Ly9yZWhhbnF1YW50bGFiLmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2g='";
             content = content.replace(needle, &format!("{}{}", needle, add));
             fs::write(&path, content).expect("write rql-shield.js");
             println!("rql-shield.js updated with gumroad-taxledger, fileshredder, clipvault, and imagebatch routes.");
@@ -1170,19 +1170,19 @@ fn main() {
             let mut codex = fs::read_to_string(codex_path).expect("read codex");
             codex = codex.replace(
                 "| **17** | **RQL TaxLedger\u{2122} (Powerhouse Edition)** | Offline 20-Feature Indian FY Accounting Workstation, GSTR-1 Portal JSON Exporter, 44ADA Engine & MCA Audit Trail. | Tally Prime & Zoho Books<br>($25.00/mo \u{2248} $300/yr) | **$119 flat (\u{20B9}9,999)**<br>*(4.8 mo anchor)* | **+$770** | **STAGED (20 Master Features & GSTR-1 JSON Engine) \u{1F7E1}** |",
-                "| **17** | **RQL TaxLedger\u{2122} (Powerhouse Edition)** | Offline 20-Feature Indian FY Accounting Workstation, GSTR-1 Portal JSON Exporter, 44ADA Engine & MCA Audit Trail. | Tally Prime & Zoho Books<br>($25.00/mo \u{2248} $300/yr) | **$119 flat (\u{20B9}9,999)**<br>*(4.8 mo anchor)* | **+$781** | **LIVE ON GUMROAD \u{1F7E2} (`quantify17.gumroad.com/l/rql-taxledger`)** |"
+                "| **17** | **RQL TaxLedger\u{2122} (Powerhouse Edition)** | Offline 20-Feature Indian FY Accounting Workstation, GSTR-1 Portal JSON Exporter, 44ADA Engine & MCA Audit Trail. | Tally Prime & Zoho Books<br>($25.00/mo \u{2248} $300/yr) | **$119 flat (\u{20B9}9,999)**<br>*(4.8 mo anchor)* | **+$781** | **LIVE ON GUMROAD \u{1F7E2} (`rehanquantlab.gumroad.com/l/rql-taxledger`)** |"
             );
             codex = codex.replace(
                 "| **18** | **RQL FileShredder** | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. | Blancco Cloud Eraser<br>($8.00/mo \u{2248} $96/yr) | **$59**<br>*(8.0 mo anchor)* | **+$229** | Queued |",
-                "| **18** | **RQL FileShredder\u{2122}** | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. | Blancco Cloud Eraser<br>($8.00/mo \u{2248} $96/yr) | **$59 flat (\u{20B9}4,999)**<br>*(8.0 mo anchor)* | **+$229** | **LIVE ON GUMROAD \u{1F7E2} (`quantify17.gumroad.com/l/rql-fileshredder`)** |"
+                "| **18** | **RQL FileShredder\u{2122}** | Overwrites sensitive client files using permanent multi-pass DoD 5220.22-M sector wiping so deleted data can never be forensically recovered. | Blancco Cloud Eraser<br>($8.00/mo \u{2248} $96/yr) | **$59 flat (\u{20B9}4,999)**<br>*(8.0 mo anchor)* | **+$229** | **LIVE ON GUMROAD \u{1F7E2} (`rehanquantlab.gumroad.com/l/rql-fileshredder`)** |"
             );
             codex = codex.replace(
                 "| **19** | **RQL ClipVault** | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. | Paste App Cloud Sync<br>($4.00/mo \u{2248} $48/yr) | **$39**<br>*(8.5 mo anchor)* | **+$105** | Queued |",
-                "| **19** | **RQL ClipVault\u{2122}** | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. | Paste App Cloud Sync<br>($4.00/mo \u{2248} $48/yr) | **$39 flat (\u{20B9}2,999)**<br>*(8.5 mo anchor)* | **+$105** | **LIVE ON GUMROAD \u{1F7E2} (`quantify17.gumroad.com/l/rql-clipvault`)** |"
+                "| **19** | **RQL ClipVault\u{2122}** | Stores and searches encrypted local clipboard history with zero background internet telemetry or accidental text overwrite loss. | Paste App Cloud Sync<br>($4.00/mo \u{2248} $48/yr) | **$39 flat (\u{20B9}2,999)**<br>*(8.5 mo anchor)* | **+$105** | **LIVE ON GUMROAD \u{1F7E2} (`rehanquantlab.gumroad.com/l/rql-clipvault`)** |"
             );
             codex = codex.replace(
                 "| **20** | **RQL ImageBatch** | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. | TinyPNG / BulkResize<br>($9.00/mo \u{2248} $108/yr) | **$69**<br>*(8.5 mo anchor)* | **+$255** | Queued |",
-                "| **20** | **RQL ImageBatch\u{2122}** | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. | TinyPNG / BulkResize<br>($9.00/mo \u{2248} $108/yr) | **$69 flat (\u{20B9}5,499)**<br>*(8.5 mo anchor)* | **+$255** | **LIVE ON GUMROAD \u{1F7E2} (`quantify17.gumroad.com/l/rql-imagebatch`)** |"
+                "| **20** | **RQL ImageBatch\u{2122}** | Resizes, watermarks, and converts thousands of product images to WebP/JPG locally in seconds without cloud upload bottlenecks. | TinyPNG / BulkResize<br>($9.00/mo \u{2248} $108/yr) | **$69 flat (\u{20B9}5,499)**<br>*(8.5 mo anchor)* | **+$255** | **LIVE ON GUMROAD \u{1F7E2} (`rehanquantlab.gumroad.com/l/rql-imagebatch`)** |"
             );
             fs::write(codex_path, codex).expect("write codex");
             println!("RQL_SOVEREIGN_ENGINEERING_CODEX.md updated with Products 17-20 Live status.");

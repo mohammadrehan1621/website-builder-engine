@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-emerald-400",
             html: "<strong>RQL DocumentShield&trade;</strong> &bull; Enterprise Forensic PDF Redactor (<span class='text-emerald-400 font-bold'>$199 USD / &#8377;18,887</span>)",
-            url: "https://quantify17.gumroad.com/l/rql-documentshield",
+            url: "https://rehanquantlab.gumroad.com/l/rql-documentshield",
             actionText: "Instant Checkout",
             actionColor: "text-emerald-400"
         },
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-sky-400",
             html: "<strong>RQL WhisperVault&trade;</strong> &bull; Air-Gapped AI Speech Intelligence (<span class='text-sky-400 font-bold'>$199 USD / &#8377;18,887</span>)",
-            url: "https://quantify17.gumroad.com/l/rql-whispervault",
+            url: "https://rehanquantlab.gumroad.com/l/rql-whispervault",
             actionText: "Instant Checkout",
             actionColor: "text-sky-400"
         },
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-amber-400",
             html: "<strong>RQL RetailPOS&trade;</strong> &bull; Offline Barcode &amp; Thermal Billing (<span class='text-amber-400 font-bold'>$199 USD / &#8377;16,500</span>)",
-            url: "https://quantify17.gumroad.com/l/rql-retailpos",
+            url: "https://rehanquantlab.gumroad.com/l/rql-retailpos",
             actionText: "Instant Checkout",
             actionColor: "text-amber-400"
         },
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-orange-400",
             html: "<strong>RQL StoreChain&trade;</strong> &bull; 5-Till LAN Mesh &amp; Branch Sync (<span class='text-orange-400 font-bold'>$299 USD / &#8377;24,999</span>)",
-            url: "https://quantify17.gumroad.com/l/rql-storechain",
+            url: "https://rehanquantlab.gumroad.com/l/rql-storechain",
             actionText: "Instant Checkout",
             actionColor: "text-orange-400"
         },
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             label: "\u2B50 NEW RELEASE:",
             labelColor: "text-cyan-400",
             html: "<strong>RQL Conduit&trade;</strong> &bull; Pure-Rust Offline Internet Bonding &amp; Failover (<span class='text-cyan-400 font-bold'>From $99 USD</span>)",
-            url: "https://quantify17.gumroad.com/l/rql-conduit",
+            url: "https://rehanquantlab.gumroad.com/l/rql-conduit",
             actionText: "Instant Checkout",
             actionColor: "text-cyan-400"
         },

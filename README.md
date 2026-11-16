@@ -31,19 +31,19 @@ All applications are pre-compiled for **Windows 10 and Windows 11 (64-bit)** wit
 
 | # | Commercial Suite | Primary Function | Pricing (USD / INR) | Commercial Checkout |
 | :---: | :--- | :--- | :---: | :---: |
-| **01** | **RQL DocumentShield&trade;** | Air-Gapped Forensic PDF Redactor &amp; PII Metadata Eraser | $179 / &#8377;14,900 | [Acquire License](https://quantify17.gumroad.com/l/rql-documentshield) |
-| **02** | **RQL WhisperVault&trade;** | 100% Offline AI Speech Transcription (Quantized Whisper) | $149 / &#8377;12,450 | [Acquire License](https://quantify17.gumroad.com/l/rql-whispervault) |
-| **03** | **RQL Retail POS&trade;** | Offline Single-Store Checkout Terminal &amp; GST Ledger | $169 / &#8377;14,000 | [Acquire License](https://quantify17.gumroad.com/l/rql-retailpos) |
-| **04** | **RQL StoreChain&trade; Enterprise** | Multi-Counter Peer-to-Peer LAN Mesh for Supermarkets &amp; Retail | $299 / &#8377;24,999 | [Acquire License](https://quantify17.gumroad.com/l/rql-storechain) |
-| **05** | **RQL Conduit&trade;** | Multi-WAN Channel Bonding Tunnel (Fiber + 5G Hotspot) | $129 / &#8377;10,750 | [Acquire License](https://quantify17.gumroad.com/l/rql-conduit) |
-| **06** | **RQL PriceTag&trade;** | Desktop Barcode &amp; Thermal Label Studio (TSPL / ESC/POS) | $79 / &#8377;6,500 | [Acquire License](https://quantify17.gumroad.com/l/rql-pricetag) |
-| **07** | **RQL QRStudio&trade;** | Permanent Offline Vector QR &amp; Barcode Layout Generator | $79 / &#8377;6,500 | [Acquire License](https://quantify17.gumroad.com/l/rql-qrstudio) |
-| **08** | **RQL DPDPShield&trade;** | Indian Data Protection &amp; PII Sanitizer (DPDP Act 2023) | $199 / &#8377;16,500 | [Acquire License](https://quantify17.gumroad.com/l/rql-dpdpshield) |
-| **09** | **RQL TagEditor&trade;** | Lossless In-Place Audio ID3v2 &amp; FLAC Metadata Editor | $59 / &#8377;4,899 | [Acquire License](https://quantify17.gumroad.com/l/rql-tageditor) |
-| **10** | **RQL FontViewer&trade;** | Offline Typography &amp; Vector Glyph Inspector (OTF/TTF/WOFF2) | $49 / &#8377;3,999 | [Acquire License](https://quantify17.gumroad.com/l/rql-fontviewer) |
-| **11** | **RQL Renamer&trade;** | Deterministic High-Speed Regex Batch File &amp; Asset Renamer | $49 / &#8377;3,999 | [Acquire License](https://quantify17.gumroad.com/l/rql-renamer) |
-| **12** | **RQL HashCheck&trade;** | Parallel Multi-Algorithm Hash Verifier (SHA-256 / SHA-512 / MD5) | $39 / &#8377;3,250 | [Acquire License](https://quantify17.gumroad.com/l/rql-hashcheck) |
-| **13** | **RQL TextDiff&trade;** | Offline Myers Diff Visual File &amp; Code Comparator | $39 / &#8377;3,250 | [Acquire License](https://quantify17.gumroad.com/l/rql-textdiff) |
+| **01** | **RQL DocumentShield&trade;** | Air-Gapped Forensic PDF Redactor &amp; PII Metadata Eraser | $179 / &#8377;14,900 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-documentshield) |
+| **02** | **RQL WhisperVault&trade;** | 100% Offline AI Speech Transcription (Quantized Whisper) | $149 / &#8377;12,450 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-whispervault) |
+| **03** | **RQL Retail POS&trade;** | Offline Single-Store Checkout Terminal &amp; GST Ledger | $169 / &#8377;14,000 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-retailpos) |
+| **04** | **RQL StoreChain&trade; Enterprise** | Multi-Counter Peer-to-Peer LAN Mesh for Supermarkets &amp; Retail | $299 / &#8377;24,999 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-storechain) |
+| **05** | **RQL Conduit&trade;** | Multi-WAN Channel Bonding Tunnel (Fiber + 5G Hotspot) | $129 / &#8377;10,750 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-conduit) |
+| **06** | **RQL PriceTag&trade;** | Desktop Barcode &amp; Thermal Label Studio (TSPL / ESC/POS) | $79 / &#8377;6,500 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-pricetag) |
+| **07** | **RQL QRStudio&trade;** | Permanent Offline Vector QR &amp; Barcode Layout Generator | $79 / &#8377;6,500 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-qrstudio) |
+| **08** | **RQL DPDPShield&trade;** | Indian Data Protection &amp; PII Sanitizer (DPDP Act 2023) | $199 / &#8377;16,500 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-dpdpshield) |
+| **09** | **RQL TagEditor&trade;** | Lossless In-Place Audio ID3v2 &amp; FLAC Metadata Editor | $59 / &#8377;4,899 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-tageditor) |
+| **10** | **RQL FontViewer&trade;** | Offline Typography &amp; Vector Glyph Inspector (OTF/TTF/WOFF2) | $49 / &#8377;3,999 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-fontviewer) |
+| **11** | **RQL Renamer&trade;** | Deterministic High-Speed Regex Batch File &amp; Asset Renamer | $49 / &#8377;3,999 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-renamer) |
+| **12** | **RQL HashCheck&trade;** | Parallel Multi-Algorithm Hash Verifier (SHA-256 / SHA-512 / MD5) | $39 / &#8377;3,250 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-hashcheck) |
+| **13** | **RQL TextDiff&trade;** | Offline Myers Diff Visual File &amp; Code Comparator | $39 / &#8377;3,250 | [Acquire License](https://rehanquantlab.gumroad.com/l/rql-textdiff) |
 
 ---
 
