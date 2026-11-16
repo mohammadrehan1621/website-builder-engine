@@ -79,23 +79,56 @@ When opening any modal dialog:
 
 ## 4. Advanced Performance, Cryptography & Hardware Standards
 
-### 1. Streaming Memory-Safe File Hashing (OOM Crash Prevention)
+### 1. Offline PWA & Air-Gap Service Worker Architecture (`sw.js`)
+To prove Rehan Quant Lab's 100% offline air-gap promise:
+- Implement a zero-dependency Service Worker cache strategy (`sw.js`).
+- Cache-first strategy for local static assets (`fonts/*.woff2`, `lucide.min.js`, `store.html`, `security.html`).
+- Enables users to load the site, disconnect from Wi-Fi entirely, and run the **WebCrypto Hash Verifier, SaaS Savings Calculator, and Catalog Table 100% offline in browser memory**.
+
+### 2. URL State Machine & History Traversal (`history.pushState` & `popstate`)
+On catalog routes (`store.html`):
+- Deep-link synchronization: URL updates dynamically without page reloads (`store.html#cat=retail` or `store.html?view=table&q=ssn`).
+- Listen to `window.addEventListener('popstate')` so browser Back and Forward navigation cleanly switches tabs without triggering page refreshes or involuntary viewport jumps.
+
+### 3. Battery Preservation & GPU Throttling Safeguards for `<canvas>`
+Every background HTML5 canvas particle visualizer must safeguard laptop battery and mobile thermal limits:
+- Pause rendering when scrolled out of view using `IntersectionObserver`.
+- Pause rendering when the browser tab is hidden or minimized using `document.addEventListener('visibilitychange')`.
+
+### 4. APCA High-Contrast Standards for Monospace Telemetry
+In dark obsidian terminals (`#020617` / `#0b111b`):
+- 10px-11px monospace numbers (`SHA-256`, RAM figures, PE64 specs) require higher lightness contrast (APCA Lc 75+, e.g. `#e2e8f0` or `#38bdf8`) to eliminate eye fatigue during long code audits.
+- Secondary muted labels must never drop below `#94a3b8` (45% lightness).
+
+### 5. OS Browser Theme-Color Synchronization
+Seamless edge-to-edge mobile status bar integration on iOS Safari and Android Chrome:
+```html
+<meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+```
+
+### 6. Zero-Byte Web Audio Tactile Micro-Acoustics
+For high-importance micro-actions (copying a hash, completing in-browser verification):
+- Synthesize an optional 10ms micro-click directly in memory using native Web Audio API (`AudioContext` oscillator at 800Hz, volume 0.02).
+- Zero network requests, 0ms latency, automatically muted if `prefers-reduced-motion` is active.
+
+### 7. Streaming Memory-Safe File Hashing (OOM Crash Prevention)
 On cryptographic verification routes (`security.html`):
 - Multi-hundred megabyte `.exe` binaries must NEVER be read into a single in-memory ArrayBuffer.
 - Use incremental stream slicing (`file.slice(offset, offset + chunkSize)` in 2MB to 4MB chunks) updating an incremental cryptographic digest or web worker.
 - Guarantees max RAM usage under 10MB during multi-gigabyte file verification, eliminating browser tab crashes.
 
-### 2. Absolute Self-Hosting & Zero-Telemetry CSP Invariant
+### 8. Absolute Self-Hosting & Zero-Telemetry CSP Invariant
 Rehan Quant Lab is 100% offline and zero-telemetry:
 - **Zero External Dependencies**: Every font (`fonts/*.woff2`), script (`lucide.min.js`, `qrcode.min.js`), and asset MUST be self-hosted locally in `/assets/`.
 - **Strict Content Security Policy**: Prohibit external telemetry leaks:
   `default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self';`
 
-### 3. Dynamic Mobile Viewport Units (`dvh` vs `vh`)
+### 9. Dynamic Mobile Viewport Units (`dvh` vs `vh`)
 - Never use legacy `100vh` on mobile dialogs, heroes, or floating action bars.
 - Use `100dvh` (Dynamic Viewport Height) or `min-h-[100dvh]` so that content is never clipped under the auto-collapsing Safari or Chrome address bar.
 
-### 4. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
+### 10. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
 For high-density product grids (e.g., the 31 commercial suites on `store.html`):
 ```css
 [data-product-card="true"] {
@@ -105,31 +138,31 @@ For high-density product grids (e.g., the 31 commercial suites on `store.html`):
 ```
 Skips rendering off-screen DOM nodes until the user scrolls near them, reducing layout calculation time by up to 80% and maintaining silky 60fps scrolling on mobile devices and lower-spec hardware.
 
-### 5. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
+### 11. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
 Rehan Quant Lab serves both global enterprises and Indian domestic founders:
 - **Global USD**: Stated first (`$179`), linked directly to international checkout desks (Stripe / Gumroad).
 - **Domestic INR & UPI**: Synchronized domestic pricing (`Rs 14,999`), linked to Indian domestic checkout with instant QR and GST invoicing.
 - **Discount Synchronization**: Auto-applied discount passes (`PIONEER70` = 70% off, `PIONEER20` = 20% off) must calculate and display synchronously in both currencies without rounding errors.
 - **Tabular Alignment**: All prices must enforce `font-feature-settings: 'tnum' 1` (`font-mono`) for clean tabular comparison.
 
-### 6. Tactile Clipboard Copying & Screen Reader Announcements
+### 12. Tactile Clipboard Copying & Screen Reader Announcements
 When users copy discount codes (`PIONEER70`), UPI VPAs, or SHA-256 hashes:
 - **Visual State**: Icon swaps to emerald checkmark with `"Copied!"` label for 1800ms.
 - **Legacy Fallback**: Automatic fallback to an offscreen `document.execCommand('copy')` if Clipboard API is restricted.
 - **Assistive Technology**: Updates an invisible `aria-live="polite"` element announcing the copy action for visually impaired users.
 
-### 7. Fluid Typographic Clamping (`clamp()`)
+### 13. Fluid Typographic Clamping (`clamp()`)
 Main hero titles and section headers must scale continuously between mobile and desktop:
 `font-size: clamp(1.85rem, 1.2rem + 2.5vw, 3.25rem);`
 Prevents abrupt breakpoint snaps and eliminates awkward 1-word line wraps on tablet viewports.
 
-### 8. Font Loading & Metric Matching (Zero FOUT / FOIT)
+### 14. Font Loading & Metric Matching (Zero FOUT / FOIT)
 Custom local WOFF2 webfonts (Inter & JetBrains Mono) must enforce:
 - `font-display: swap` in all `@font-face` definitions to prevent Flash of Invisible Text (FOIT).
 - System font fallback stacks must match character widths to prevent layout shifts upon font arrival:
   `font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;`
 
-### 9. Enterprise Print Stylesheet (`@media print`)
+### 15. Enterprise Print Stylesheet (`@media print`)
 Enterprise procurement, legal teams, and auditors require clean PDF exports of license specifications, receipts, and verification declarations:
 ```css
 @media print {
@@ -148,11 +181,11 @@ Enterprise procurement, legal teams, and auditors require clean PDF exports of l
 }
 ```
 
-### 10. High-Contrast & Reduced-Transparency Accessibility
+### 16. High-Contrast & Reduced-Transparency Accessibility
 - **High Contrast**: Support `@media (forced-colors: active)` so all hairline borders and active indicators automatically inherit system tokens (`CanvasText`, `Highlight`).
 - **Transparency Fallback**: Support `@media (prefers-reduced-transparency: reduce)` by replacing translucent acrylics (`backdrop-blur-md`) with solid 100% opaque slate backgrounds.
 
-### 11. Mobile Virtual Keyboard & Typing Ergonomics
+### 17. Mobile Virtual Keyboard & Typing Ergonomics
 Eliminate typing friction on mobile devices across all search, contact, and dialog fields:
 - Search inputs: `type="search" enterkeyhint="search"`
 - Numeric / seat inputs: `type="number" inputmode="numeric"`
@@ -215,7 +248,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 12-Point Failure Checklist
+## 7. Pre-Launch 14-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -229,5 +262,7 @@ Before any change is committed or deployed, every question must be verified with
 8. [ ] **Modal Scrollbar Shift Guard**: Do all modal dialogs preserve scrollbar gutter width to prevent 15px layout jerks?
 9. [ ] **Color Discipline**: Are all random pink, purple, and orange pills completely purged in favor of the Slate/Emerald/Sky system?
 10. [ ] **Self-Hosting CSP**: Are all fonts, scripts, and media strictly hosted locally with zero external CDN calls?
-11. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-12. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+11. [ ] **Canvas Lifecycle Guard**: Do all animated canvases pause when scrolled out of view or tab is hidden?
+12. [ ] **History Deep-Link Navigation**: Does tab switching sync with the URL and handle browser Back/Forward without reload?
+13. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+14. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
