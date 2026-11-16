@@ -76,7 +76,64 @@ When opening any modal dialog:
 
 ---
 
-## 4. The 19 Web Designer Competencies (Baked into RQL Engineering)
+## 4. Advanced Performance, Hardware & Accessibility Standards
+
+### 1. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
+For high-density product grids (e.g., the 31 commercial suites on `store.html`):
+```css
+[data-product-card="true"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 480px;
+}
+```
+This skips rendering off-screen DOM nodes until the user scrolls near them, reducing layout calculation time by up to 80% and maintaining silky 60fps scrolling on mobile devices and lower-spec hardware.
+
+### 2. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
+Rehan Quant Lab serves both global enterprises and Indian domestic founders:
+- **Global USD**: Stated first (`$179`), linked directly to international checkout desks (Stripe / Gumroad).
+- **Domestic INR & UPI**: Synchronized domestic pricing (`Rs 14,999`), linked to Indian domestic checkout with instant QR and GST invoicing.
+- **Discount Synchronization**: Auto-applied discount passes (`PIONEER70` = 70% off, `PIONEER20` = 20% off) must calculate and display synchronously in both currencies without rounding errors.
+- **Tabular Alignment**: All prices must enforce `font-feature-settings: 'tnum' 1` (`font-mono`) for clean tabular comparison.
+
+### 3. Font Loading & Metric Matching (Zero FOUT / FOIT)
+Custom local WOFF2 webfonts (Inter & JetBrains Mono) must enforce:
+- `font-display: swap` in all `@font-face` definitions to prevent Flash of Invisible Text (FOIT).
+- System font fallback stacks must match character widths to prevent layout shifts upon font arrival:
+  `font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;`
+
+### 4. Enterprise Print Stylesheet (`@media print`)
+Enterprise procurement, legal teams, and auditors require clean PDF exports of license specifications, receipts, and verification declarations:
+```css
+@media print {
+  nav, footer, #catalog-controls-container, #rql-scroll-progress, #rql-palette-backdrop, button, .video-overlay {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  [data-product-card="true"] {
+    break-inside: avoid;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+}
+```
+
+### 5. High-Contrast & Reduced-Transparency Accessibility
+- **High Contrast**: Support `@media (forced-colors: active)` so all hairline borders and active indicators automatically inherit system tokens (`CanvasText`, `Highlight`).
+- **Transparency Fallback**: Support `@media (prefers-reduced-transparency: reduce)` by replacing translucent acrylics (`backdrop-blur-md`) with solid 100% opaque slate backgrounds.
+
+### 6. Mobile Virtual Keyboard & Typing Ergonomics
+Eliminate typing friction on mobile devices across all search, contact, and dialog fields:
+- Search inputs: `type="search" enterkeyhint="search"`
+- Numeric / seat inputs: `type="number" inputmode="numeric"`
+- Telephone / WhatsApp inputs: `type="tel" inputmode="tel"`
+- Discount code fields: `autocapitalize="characters" autocomplete="off" spellcheck="false"`
+
+---
+
+## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
 
 ### Creative & Technical Disciplines
 1. **Visual Design & Gestalt Principles**: Proximity, similarity, and figure-ground separation in all Bento cards.
@@ -116,7 +173,7 @@ When opening any modal dialog:
 
 ---
 
-## 5. Universal Multi-Page Ecosystem Sync
+## 6. Universal Multi-Page Ecosystem Sync
 
 The design system is not applied piecemeal. Every page in the repository must feel like part of the exact same sovereign operating system:
 
@@ -130,7 +187,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 6. Pre-Launch 10-Point Failure Checklist
+## 7. Pre-Launch 10-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
