@@ -978,6 +978,18 @@ code::selection, pre::selection {
   }
 }
 </style>
+  <!-- Speculation Rules API: Instantaneous 0ms Page Navigation -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "source": "list",
+        "urls": ["store.html", "documentshield.html", "whispervault.html", "retailpos.html", "taxledger.html", "conduit.html"],
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
