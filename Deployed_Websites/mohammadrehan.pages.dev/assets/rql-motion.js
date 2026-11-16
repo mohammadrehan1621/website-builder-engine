@@ -699,20 +699,20 @@
     }, 250);
   }
 
-  window.addEventListener('hashchange', handleDeepLinkFocus);
+  // window.addEventListener('hashchange', handleDeepLinkFocus); -> DISABLED: no involuntary scroll jumping
 
   // Self-Executing DOM Initialization
   function boot() {
-    initLenis();
-    init3DTiltCards();
-    initTactileButtons();
-    initMagneticButtons();
-    initStaggeredReveals();
+    // Pure rock-solid stability - NO scroll hijacking, NO 3D wobbling, NO magnetic drifting
+    // initLenis(); -> DISABLED: preserve 100% native browser scroll speed
+    // init3DTiltCards(); -> DISABLED: no annoying wobbling cards
+    // initMagneticButtons(); -> DISABLED: buttons stay strictly in place
+    // initStaggeredReveals(); -> DISABLED: zero layout shifts
     initOdometers();
     initScrollProgress();
     initDiscountCodeCopy();
     initCommandPalette();
-    handleDeepLinkFocus();
+    // handleDeepLinkFocus(); -> DISABLED: no involuntary auto-scrolling
   }
 
   if (document.readyState === 'loading') {

@@ -1220,14 +1220,15 @@ document.addEventListener('keydown', function(e) {
     
     <!-- Header -->
     <div class="mb-10 text-center max-w-3xl mx-auto space-y-2">
-      <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-700 text-xs font-mono font-bold">
-        <span>&#128737;&#65039; Pure-Rust Desktop Applications</span>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700 text-slate-200 text-xs font-mono font-bold shadow-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>31 AIR-GAPPED DESKTOP SUITES &bull; PURE RUST</span>
       </div>
       <h2 class="text-3xl sm:text-4xl font-black font-heading text-slate-950 tracking-tight">
-        Flagship Commercial Releases
+        Commercial Software Suites
       </h2>
-      <p class="text-xs sm:text-sm text-slate-600">
-        Official Windows Master Setup Wizards (<code class="bg-slate-100 border border-slate-300 px-1 py-0.5 rounded text-slate-800 font-mono">Setup.exe</code>) &bull; 100% Offline Air-Gapped Software &bull; Lifetime License &bull; Zero Monthly Fees
+      <p class="text-xs sm:text-sm text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        Single-binary Windows 64-bit applications (<code class="bg-slate-100 border border-slate-300 px-1 py-0.5 rounded text-slate-800 font-mono">Setup.exe</code>) with zero cloud telemetry, zero recurring rent, and lifetime perpetual ownership.
       </p>
       <div class="pt-2">
         <button onclick="openIndianDeskModal('RQL InvoiceGen&trade;', '7,499', 'rql-invoicegen')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-mono text-xs font-bold transition shadow-xs cursor-pointer">
@@ -1237,842 +1238,6 @@ document.addEventListener('keydown', function(e) {
       </div>
     </div>
 
-    <!-- INTERACTIVE SOVEREIGN SAAS RENT BUSTER & CAPITAL ROI CALCULATOR -->
-    <div class="mb-14 bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden bento-card-spring" id="saas-calculator-section">
-      <!-- Ambient Laser Radial Glow -->
-      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(6,182,212,0.12),transparent_75%)]"></div>
-      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-25"></div>
-
-      <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold mb-3 shadow-md">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>CAPITAL PRESERVATION &bull; SAAS RENT CALCULATOR</span>
-          </div>
-          <h3 class="text-2xl sm:text-3xl font-black font-heading text-white tracking-tight">
-            Stop Paying the SaaS Subscription Tax. <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Calculate Your 3-Year Savings</span>
-          </h3>
-          <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed font-normal">
-            See exactly how much capital your business preserves by switching from monthly recurring cloud SaaS subscriptions to single perpetual-license Windows desktop workstations.
-          </p>
-        </div>
-
-        <!-- Global Currency Switcher -->
-        <div class="shrink-0 flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-900 border border-slate-700/80 shadow-inner">
-          <span class="text-[10px] font-mono text-slate-400 uppercase font-bold px-2">Currency:</span>
-          <button id="calc-currency-usd" onclick="setRQLCurrency('USD')" class="px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shadow-xs bg-indigo-600 text-white cursor-pointer btn-spring">
-            $ USD
-          </button>
-          <button id="calc-currency-inr" onclick="setRQLCurrency('INR')" class="px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition text-slate-400 hover:text-white cursor-pointer btn-spring">
-            &#8377; INR (UPI)
-          </button>
-        </div>
-      </div>
-
-      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 items-center">
-        <!-- Left: Interactive Sliders -->
-        <div class="lg:col-span-6 space-y-6">
-          <!-- Slider 1: Team Size -->
-          <div class="space-y-2">
-            <div class="flex justify-between items-center text-xs font-mono">
-              <span class="text-slate-300 font-bold">Team Workstations / Seats:</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-cyan-300 font-black text-sm tabular-nums" id="calc-display-seats">5 Seats</span>
-            </div>
-            <input type="range" id="calc-seats-slider" min="1" max="50" value="5" step="1" oninput="updateSaasCalculator()" class="w-full accent-indigo-500 cursor-pointer h-2 bg-slate-800 rounded-lg" />
-            <div class="flex justify-between text-[10px] font-mono text-slate-500">
-              <span>1 Solo Founder</span>
-              <span>25 Mid-Tier Team</span>
-              <span>50 Workstations</span>
-            </div>
-          </div>
-
-          <!-- Slider 2: Current SaaS Spend -->
-          <div class="space-y-2">
-            <div class="flex justify-between items-center text-xs font-mono">
-              <span class="text-slate-300 font-bold">Monthly Cloud SaaS Cost / Seat:</span>
-              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-emerald-300 font-black text-sm tabular-nums" id="calc-display-monthly">$35 / Seat / Mo</span>
-            </div>
-            <input type="range" id="calc-spend-slider" min="10" max="150" value="35" step="5" oninput="updateSaasCalculator()" class="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-800 rounded-lg" />
-            <div class="flex justify-between text-[10px] font-mono text-slate-500">
-              <span>$10 Basic</span>
-              <span>$75 Professional</span>
-              <span>$150 Enterprise SaaS</span>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 space-y-1.5">
-            <div class="flex items-center gap-2 text-slate-200 font-bold font-mono">
-              <i class="w-4 h-4 text-emerald-400" data-lucide="check-circle-2"></i>
-              <span>Rehan Quant Lab Perpetual Guarantee</span>
-            </div>
-            <p class="leading-relaxed font-normal">
-              Zero monthly recurring invoices. Zero mandatory software renewals. Your single perpetual license includes master setup binaries with lifetime local ownership.
-            </p>
-          </div>
-        </div>
-
-        <!-- Right: Real-Time Savings HUD -->
-        <div class="lg:col-span-6 bg-slate-900/95 border border-slate-800 rounded-2xl p-6 sm:p-7 shadow-2xl space-y-5">
-          <div class="grid grid-cols-2 gap-3 text-left font-mono">
-            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-rose-500/30">
-              <span class="text-[10px] text-rose-400 block uppercase font-bold">3-Year Cloud SaaS Rent</span>
-              <div class="text-xl sm:text-2xl font-black text-rose-300 mt-1 tabular-nums" id="calc-result-saas">$6,300</div>
-              <span class="text-[10px] text-slate-500 block mt-0.5">Recurring capital drain</span>
-            </div>
-
-            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-indigo-500/30">
-              <span class="text-[10px] text-indigo-400 block uppercase font-bold">RQL Perpetual License</span>
-              <div class="text-xl sm:text-2xl font-black text-indigo-300 mt-1 tabular-nums" id="calc-result-rql">$537</div>
-              <span class="text-[10px] text-slate-500 block mt-0.5">Pay once, own forever</span>
-            </div>
-          </div>
-
-          <!-- Total Net Preserved Capital Highlight -->
-          <div class="p-5 rounded-2xl bg-gradient-to-r from-emerald-950/70 via-slate-950 to-cyan-950/70 border border-emerald-500/40 text-center space-y-1">
-            <span class="text-[11px] font-mono text-emerald-400 uppercase font-bold tracking-wider">Total Net Capital Preserved</span>
-            <div class="text-3xl sm:text-4xl font-black font-heading text-white tracking-tight tabular-nums" id="calc-result-saved">
-              $5,763 <span class="text-lg text-emerald-400 font-mono">(91% Saved)</span>
-            </div>
-            <p class="text-[11px] text-slate-400 font-mono pt-1">Directly retained on your company balance sheet.</p>
-          </div>
-
-          <!-- Action Button -->
-          <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
-            <a href="#rql-documentshield" onclick="window.switchStoreTab('security')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs font-mono flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition btn-spring cursor-pointer">
-              <span>Claim Auto-Applied Pioneer Discount (70% Off) &rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3-Step Workflow: How Our Desktop Software Works -->
-    <div class="mb-14 bg-slate-50 text-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs relative overflow-hidden">
-      
-      <div class="max-w-3xl mb-8 relative z-10">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-bold mb-3">
-          <span> THE LOCAL-FIRST ADVANTAGE</span>
-        </div>
-        <h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-950 tracking-tight">
-          How Our Desktop Software Works (3-Step Workflow)
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-          Unlike modern SaaS tools that hold your files hostage behind recurring monthly subscriptions, our software compiles straight to native machine instructions and runs 100% locally on your computer.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-        <!-- Step 1 -->
-        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 font-mono font-bold text-lg flex items-center justify-center border border-indigo-200 mb-4">
-              01
-            </div>
-            <h4 class="text-base font-bold text-slate-950 font-heading">Download &amp; Verify Checksum</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              Get your official 64-bit Windows portable binary or installer (<code class="text-indigo-600 font-semibold">Setup.exe</code>). Every release includes a public SHA-256 cryptographic checksum so you can independently verify binary integrity.
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-emerald-700 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5" data-lucide="shield-check"></i>
-            <span>SHA-256 Authenticated</span>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 font-mono font-bold text-lg flex items-center justify-center border border-emerald-200 mb-4">
-              02
-            </div>
-            <h4 class="text-base font-bold text-slate-950 font-heading">100% Offline Local Execution</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              Unplug Ethernet or turn off Wi-Fi. Every algorithm, redaction engine, and local AI model executes strictly on your CPU and RAM with 0 outbound network sockets and 0 cloud telemetry.
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-emerald-700 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5" data-lucide="wifi-off"></i>
-            <span>0 Bytes Outbound Telemetry</span>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 font-mono font-bold text-lg flex items-center justify-center border border-amber-200 mb-4">
-              03
-            </div>
-            <h4 class="text-base font-bold text-slate-950 font-heading">Perpetual Ownership &amp; Zero Monthly Fees</h4>
-            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
-              Pay once and own the software forever. No monthly billing surprises, no forced logins or cloud outages, with direct founder WhatsApp and email support for lifetime peace of mind.
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-amber-700 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5" data-lucide="check-circle-2"></i>
-            <span>Lifetime License &bull; No Monthly Fees</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <!-- ======================================================== -->
-    <!-- SOVEREIGN CLIENT-SIDE IN-MEMORY ALGORITHM SANDBOX -->
-    <!-- 100% Client-Side In-Memory Execution - Zero Data Collection -->
-    <!-- ======================================================== -->
-    <div id="sovereign-sandbox-section" class="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
-      <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-xs relative overflow-hidden">
-        
-        <!-- Ambient Top Glow -->
-        <div class="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent"></div>
-        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-28 bg-emerald-500/10 blur-3xl pointer-events-none rounded-full"></div>
-
-        <!-- Top Header & Badges -->
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200/80">
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-mono text-[11px] font-bold mb-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>LIVE IN-BROWSER CLIENT-SIDE SANDBOX</span>
-            </div>
-            <h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-950 tracking-tight">
-              Test Our Sovereign Algorithms Live in Your Browser
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl leading-relaxed">
-              Zero installation required. Zero cloud APIs called. Everything executes 100% locally on your machine CPU and RAM in under 2 milliseconds.
-            </p>
-          </div>
-
-          <!-- Strict Privacy & Zero Telemetry Attestation Seal -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 p-3 rounded-2xl bg-slate-900/90 border border-emerald-500/30">
-            <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40">
-              <i class="w-4 h-4" data-lucide="shield-check"></i>
-            </div>
-            <div class="text-[11px] font-mono leading-tight">
-              <div class="font-bold text-white flex items-center gap-1.5">
-                <span class="text-emerald-400">&#10003; ZERO DATA COLLECTION GUARANTEE</span>
-              </div>
-              <div class="text-slate-400 mt-0.5">
-                0 Bytes Network Outbound &bull; Air-Gapped Local RAM &bull; 100% Private
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- The Ultimate Skeptic Challenge: Prove Us Wrong in 5 Seconds -->
-        <div class="my-5 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-2 border-emerald-500/40 shadow-xl relative overflow-hidden">
-          <div class="absolute -right-12 -top-12 w-44 h-44 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
-          
-          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 relative z-10">
-            <div class="flex items-start gap-3.5">
-              <div class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 shadow-inner">
-                <i class="w-6 h-6" data-lucide="zap"></i>
-              </div>
-              <div class="space-y-1.5">
-                <div class="flex flex-wrap items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/40 tracking-wider uppercase">
-                    The Skeptic's Dare
-                  </span>
-                  <span id="airgap-live-indicator" class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">
-                    NETWORK STATUS: ZERO OUTBOUND EGRESS
-                  </span>
-                </div>
-                
-                <h4 class="text-lg sm:text-xl font-extrabold font-heading text-white tracking-tight">
-                  Think This Is Just Marketing Words? Prove Us Wrong in 5 Seconds.
-                </h4>
-                
-                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
-                  Every SaaS on Earth claims they "care about privacy" right before uploading your files to AWS. <strong class="text-white">We refuse to ask for your trust.</strong> Turn off your computer Wi-Fi or unplug your Ethernet cable right now, then compress an image, redact text, or verify a cryptographic hash below. If a single byte leaves your machine or any tool fails, don't buy our software.
-                </p>
-              </div>
-            </div>
-
-            <div class="shrink-0 w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5">
-              <button onclick="auditBrowserNetworkEntries()" class="w-full py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-102 shadow-lg shadow-emerald-950/50 cursor-pointer">
-                <i class="w-4 h-4 text-white" data-lucide="activity"></i>
-                <span>Run Forensic Network Audit</span>
-              </button>
-              <div class="text-[10px] font-mono text-slate-400 text-center">
-                100% In-RAM Execution &bull; 0 Cloud APIs
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tool Selection Tabs -->
-        <div class="flex items-center gap-2.5 overflow-x-auto py-4 px-1 border-b border-slate-200 no-scrollbar">
-          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-emerald-700 text-white border-2 border-emerald-800 shadow-lg ring-2 ring-emerald-200 flex items-center gap-1.5 cursor-pointer shrink-0">
-            <i class="w-4 h-4 text-white shrink-0" data-lucide="image"></i>
-            <span>20. RQL ImageBatch (WebP Compressor)</span>
-          </button>
-          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-rose-700 hover:text-white hover:border-rose-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
-            <i class="w-4 h-4 text-rose-700 group-hover:text-white shrink-0" data-lucide="file-text"></i>
-            <span>01. DocumentShield (Redactor)</span>
-          </button>
-          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-sky-700 hover:text-white hover:border-sky-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
-            <i class="w-4 h-4 text-sky-700 group-hover:text-white shrink-0" data-lucide="fingerprint"></i>
-            <span>06. HashCheck (Cryptographic Hasher)</span>
-          </button>
-          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-purple-700 hover:text-white hover:border-purple-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
-            <i class="w-4 h-4 text-purple-700 group-hover:text-white shrink-0" data-lucide="qr-code"></i>
-            <span>07. QRStudio (Vector QR Studio)</span>
-          </button>
-          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-amber-700 hover:text-white hover:border-amber-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
-            <i class="w-4 h-4 text-amber-700 group-hover:text-white shrink-0" data-lucide="git-compare"></i>
-            <span>08. TextDiff (Myers Vector Engine)</span>
-          </button>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- PANEL 1: RQL IMAGEBATCH (In-Browser WebP Compressor) -->
-        <!-- ======================================================== -->
-        <div id="sandbox-panel-imagebatch" class="pt-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            
-            <!-- Left: Source Control & Dropzone -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
-                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Source Image Input</span>
-                  </div>
-                  <button onclick="loadSampleImage()" class="text-[11px] font-mono font-bold text-emerald-700 hover:text-emerald-900 underline cursor-pointer">
-                    Load 1080p Benchmark Sample
-                  </button>
-                </div>
-
-                <div class="mt-4">
-                  <label class="block border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-5 text-center cursor-pointer transition bg-white hover:bg-slate-50 group">
-                    <input type="file" accept="image/png, image/jpeg, image/webp" class="hidden" onchange="handleImageUpload(this)">
-                    <div class="flex flex-col items-center gap-2">
-                      <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-slate-200 text-slate-700 group-hover:text-slate-950 flex items-center justify-center transition">
-                        <i class="w-5 h-5" data-lucide="upload-cloud"></i>
-                      </div>
-                      <div class="text-xs font-mono text-slate-900 font-bold">
-                        Drop any local image (PNG/JPG) or click to browse
-                      </div>
-                      <div class="text-[10px] font-mono text-slate-500">
-                        100% processed in local browser RAM &bull; Never uploaded to any server
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-                <!-- WebP Quality Slider -->
-                <div class="mt-5 p-3.5 rounded-xl bg-white border border-slate-300 space-y-2 shadow-2xs">
-                  <div class="flex items-center justify-between text-xs font-mono">
-                    <span class="text-slate-800 font-bold">WebP Compression Quality:</span>
-                    <span id="imagebatch-quality-label" class="text-emerald-700 font-black">85%</span>
-                  </div>
-                  <input id="imagebatch-quality-slider" type="range" min="30" max="100" value="85" class="w-full accent-emerald-700 cursor-pointer" oninput="onQualitySliderChange(this.value)">
-                  <div class="flex items-center justify-between text-[10px] font-mono font-semibold text-slate-700">
-                    <span>Higher Compression (Smaller KB)</span>
-                    <span>High Fidelity (Max Crispness)</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-[11px] font-mono text-slate-700 font-semibold flex items-center justify-between pt-3 border-t border-slate-200">
-                <span>Original Size: <strong id="imagebatch-orig-size" class="text-slate-950 font-black">1.2 MB</strong></span>
-                <span class="text-emerald-700 font-extrabold">&#10003; SIMD Hardware Acceleration</span>
-              </div>
-            </div>
-
-            <!-- Right: Real-Time Compressed Output & Metrics -->
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Real-Time WebP Output</span>
-                  </div>
-                  <span id="imagebatch-savings-badge" class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-700 text-white border border-emerald-800 shadow-xs">
-                    -92% SAVED
-                  </span>
-                </div>
-
-                <!-- Visual Preview Frame -->
-                <div class="mt-4 aspect-video w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 relative flex items-center justify-center p-2">
-                  <img id="imagebatch-preview-img" src="emblem.webp" alt="Compressed Preview" class="max-w-full max-h-full object-contain rounded-lg">
-                </div>
-
-                <!-- Metrics Strip -->
-                <div class="grid grid-cols-2 gap-3 mt-4 text-xs font-mono">
-                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
-                    <div class="text-slate-700 font-bold text-[10px] uppercase">Compressed WebP Size:</div>
-                    <div id="imagebatch-comp-size" class="text-emerald-700 font-black text-sm mt-0.5 font-mono">98 KB</div>
-                  </div>
-                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
-                    <div class="text-slate-700 font-bold text-[10px] uppercase">Execution Latency:</div>
-                    <div id="imagebatch-time-badge" class="text-slate-950 font-black text-sm mt-0.5 font-mono">4.2ms (Local RAM)</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Download Action -->
-              <div class="pt-3 border-t border-slate-200 space-y-3">
-                <button id="imagebatch-download-btn" class="w-full py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
-                  <i class="w-4 h-4 text-white" data-lucide="download"></i>
-                  <span>Download Compressed WebP (Zero Cloud Used)</span>
-                  <span>&rarr;</span>
-                </button>
-
-                <!-- Engine C: Natural Free-to-Paid Bridge -->
-                <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
-                  <div class="flex items-center gap-2 text-slate-600">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
-                  </div>
-                  <p class="text-slate-700 leading-relaxed font-sans font-medium">
-                    Need to batch-convert 5,000 images at once with 16-core SIMD directly from Windows Explorer?
-                  </p>
-                  <div class="flex flex-wrap items-center gap-2 pt-1.5">
-                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
-                      <span>PIONEER20 (-20% OFF) &rarr;</span>
-                    </a>
-                  </div>
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
-                    <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
-                      <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
-                      <span>&rarr;</span>
-                    </a>
-                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', '20_ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
-                      View Specs &amp; Guarantee &rarr;
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- PANEL 2: RQL DOCUMENTSHIELD (Confidential Text Redactor) -->
-        <!-- ======================================================== -->
-        <div id="sandbox-panel-documentshield" class="pt-6 hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
-              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-rose-600"></span>
-                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Raw Legal / Forensic Text</span>
-                </div>
-                <button onclick="resetRedactionSample()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">
-                  Reset Sample
-                </button>
-              </div>
-
-              <textarea id="redact-input-text" rows="8" oninput="runDocumentShieldRedaction()" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-600 focus:outline-none leading-relaxed resize-none"></textarea>
-
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
-                <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
-                <span class="text-rose-700 font-extrabold">Sub-1ms Regex Vectorizer</span>
-              </div>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
-              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                <div class="flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Permanent Blackout Output</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <button id="copy-redact-btn" onclick="copyRedactedText('copy-redact-btn')" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Copy</button>
-                  <button onclick="downloadRedactedText()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Download .txt</button>
-                  <span id="redact-tokens-count" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-700 text-white border border-rose-800 shadow-xs">
-                    5 Tokens Blacked Out
-                  </span>
-                </div>
-              </div>
-
-              <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs overflow-y-auto leading-relaxed select-text">
-                CONFIDENTIAL CLIENT LEGAL INTAKE &amp; FORENSIC DOSSIER
-              </div>
-
-              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
-                <span class="text-emerald-700 font-extrabold">&#10003; True Vector Blackout</span>
-                <span id="redact-sha-badge" class="text-slate-800 font-bold">SHA-256: 7d8f...4a21 Verified Clean</span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200">
-            <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-700 hover:bg-rose-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
-              <i class="w-4 h-4 text-white" data-lucide="shield-alert"></i>
-              <span>Run Sovereign Redaction Engine (Sub-2ms)</span>
-            </button>
-            <div class="text-[11px] font-mono font-semibold text-slate-700 text-center sm:text-right">
-              Zero bytes sent to server &bull; Pure client-side regex vectorization
-            </div>
-          </div>
-
-          <!-- Engine C: Natural Free-to-Paid Bridge -->
-          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
-            <div class="space-y-1">
-              <div class="flex items-center gap-2 text-slate-600">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
-              </div>
-              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
-                Need to scrub 500-page scanned PDF dossiers, strip hidden EXIF/XMP metadata, and generate court-admissible audit certificates?
-              </p>
-            </div>
-            <div class="flex flex-wrap items-center gap-2 shrink-0">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
-                <span>PIONEER70 (-70%) &rarr;</span>
-              </a>
-              <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
-                <span>DocumentShield&trade; &mdash; $179</span>
-                <span>&rarr;</span>
-              </a>
-              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '01_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
-                View Specs &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- PANEL 3: RQL HASHCHECK (Native WebCrypto SHA Engine) -->
-        <!-- ======================================================== -->
-        <div id="sandbox-panel-hashcheck" class="pt-6 hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                  <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-sky-600"></span>
-                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Inspect Any File or Text</span>
-                  </div>
-                  <span id="hashcheck-time-badge" class="text-[11px] font-mono font-bold text-sky-700">
-                    Hardware Accelerated
-                  </span>
-                </div>
-
-                <div class="mt-4">
-                  <label class="block border-2 border-dashed border-slate-400 hover:border-sky-600 rounded-xl p-4 text-center cursor-pointer transition bg-white hover:bg-sky-50/40 group">
-                    <input type="file" class="hidden" onchange="handleHashCheckFile(this)">
-                    <div class="text-xs font-mono text-slate-950 font-extrabold">
-                      Drop ANY file to compute cryptographic hash instantly
-                    </div>
-                    <div class="text-[10px] font-mono font-semibold text-slate-700 mt-1">
-                      File never leaves your RAM &bull; Executed via window.crypto.subtle
-                    </div>
-                  </label>
-                </div>
-
-                <div class="mt-4 space-y-1.5">
-                  <label class="block text-[11px] font-mono font-bold text-slate-800">Or type custom text string:</label>
-                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-sky-600 focus:outline-none" oninput="runTextHash()">
-                </div>
-              </div>
-
-              <div class="text-[11px] font-mono text-slate-700 font-semibold pt-2 border-t border-slate-200">
-                Target: <strong id="hashcheck-target-label" class="text-slate-950 font-black">Raw Text Payload</strong>
-              </div>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
-              <div class="space-y-4">
-                <div class="flex items-center justify-between pb-2 border-b border-slate-200">
-                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Cryptographic Checksums</span>
-                  <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; Bit-for-Bit Verified</span>
-                </div>
-
-                <!-- SHA-256 Box -->
-                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
-                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
-                    <span>SHA-256 (FIPS 180-4 Standard):</span>
-                    <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
-                  </div>
-                  <div id="hashcheck-sha256-output" class="font-mono text-xs text-sky-800 break-all select-text font-extrabold">
-                    Computing...
-                  </div>
-                </div>
-
-                <!-- SHA-512 Box -->
-                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
-                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
-                    <span>SHA-512 (FIPS 180-4 Cryptographic Standard):</span>
-                    <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
-                  </div>
-                  <div id="hashcheck-sha512-output" class="font-mono text-[11px] text-slate-900 break-all select-text font-bold max-h-16 overflow-y-auto">
-                    Computing...
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
-                Zero Cloud Uploads &bull; Executed locally via browser WebCrypto primitives
-              </div>
-
-              <!-- Engine C: Natural Free-to-Paid Bridge -->
-              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
-                <div class="flex items-center gap-2 text-slate-600">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse"></span>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
-                </div>
-                <p class="text-slate-700 leading-relaxed font-sans font-medium">
-                  Need right-click SHA verification in Windows Explorer, multi-terabyte disk drive hashing, and CSV compliance export?
-                </p>
-                <div class="flex flex-wrap items-center gap-2 pt-1.5">
-                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
-                      <span>PIONEER20 (-20% OFF) &rarr;</span>
-                    </a>
-                  </div>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
-                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
-                    <span>Get RQL HashCheck&trade; &mdash; $39 Lifetime License</span>
-                    <span>&rarr;</span>
-                  </a>
-                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', '06_HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
-                    View Specs &amp; Guarantee &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- PANEL 4: RQL QRSTUDIO (Offline Vector QR Code Generator) -->
-        <!-- ======================================================== -->
-        <div id="sandbox-panel-qrstudio" class="pt-6 hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-            
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
-              <div>
-                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
-                  <span id="qrstudio-time-badge" class="text-[11px] font-mono font-bold text-purple-700">Instant Render</span>
-                </div>
-
-                <div class="mt-4 space-y-2">
-                  <div class="flex items-center gap-2">
-                    <button id="qr-mode-dynamic-btn" type="button" onclick="setQrDynamicMode(true)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-extrabold transition flex items-center gap-1.5 cursor-pointer bg-purple-700 text-white border-2 border-purple-800 shadow-md">
-                      <span>&#9889; Dynamic Anycast</span>
-                    </button>
-                    <button id="qr-mode-static-btn" type="button" onclick="setQrDynamicMode(false)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-bold transition flex items-center gap-1.5 cursor-pointer bg-white text-slate-800 border-2 border-slate-300 hover:border-slate-400 shadow-2xs">
-                      <span>&#128274; Static Direct</span>
-                    </button>
-                    <span id="qr-density-badge" class="ml-auto text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Low Density (25x25)</span>
-                  </div>
-                  <label class="block text-[11px] font-mono font-bold text-slate-800 pt-1">Enter target URL, product slug, or raw text:</label>
-                  <textarea id="qrstudio-text-input" rows="3" class="w-full p-3 rounded-xl bg-white border-2 border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-purple-600 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com/store</textarea>
-                </div>
-
-                <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono">
-                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/store'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">RQL Store</button>
-                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='clauseforge'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold shadow-xs transition cursor-pointer">ClauseForge (Titan 27)</button>
-                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='archivemaster'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-xs transition cursor-pointer">ArchiveMaster (Titan 28)</button>
-                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">WhatsApp VIP</button>
-                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/contact'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">Contact Desk</button>
-                </div>
-
-                <div id="qr-routing-readout" class="mt-3 p-2.5 rounded-xl bg-purple-50/80 border border-purple-200 text-[11px] font-mono text-purple-950 flex items-start gap-2">
-                  <span class="text-purple-700 font-bold">&#9889;</span>
-                  <div class="min-w-0">
-                    <div class="font-bold text-slate-900">Cloudflare Anycast Dynamic Routing:</div>
-                    <div id="qr-resolved-target" class="text-purple-900 break-all font-semibold">https://rehanquantlab.com/go?slug=store</div>
-                    <div id="qr-camera-behavior-note" class="text-[10px] text-emerald-800 font-bold mt-0.5">&#10003; Web URL: Point iPhone or Android camera &mdash; opens browser directly to website.</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
-                100% Client-Side Vector Geometry &bull; Zero external API dependencies
-              </div>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
-              <div class="w-full flex items-center justify-between pb-2 border-b border-slate-200">
-                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Instant-Scan QR Preview</span>
-                <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; 100% Machine Scannable</span>
-              </div>
-
-              <!-- Vector QR Container (Enlarged to 288px with high contrast) -->
-              <div id="qrstudio-display-container" class="w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center rounded-2xl border-2 border-slate-300 bg-white shadow-md p-2">
-                <!-- Live pixelated Canvas / PNG rendered here -->
-              </div>
-
-              <div class="text-[11px] font-mono text-slate-600 text-center font-medium">
-                Point iPhone or Android camera &mdash; locks on instantly with zero glare
-              </div>
-
-              <div class="grid grid-cols-2 gap-2 w-full">
-                <button onclick="downloadQrSvg()" class="py-2.5 px-3 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
-                  <i class="w-4 h-4" data-lucide="download"></i>
-                  <span>Vector (.svg)</span>
-                </button>
-                <button onclick="downloadQrPng()" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
-                  <i class="w-4 h-4 text-emerald-400" data-lucide="image"></i>
-                  <span>Raster (.png)</span>
-                </button>
-              </div>
-
-              <!-- Engine C: Natural Free-to-Paid Bridge -->
-              <div class="w-full p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2 text-left">
-                <div class="flex items-center gap-2 text-slate-600">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
-                </div>
-                <p class="text-slate-700 leading-relaxed font-sans font-medium">
-                  Need bulk generation of 10,000 inventory barcodes, direct 80mm/58mm thermal label printing, and custom business logos?
-                </p>
-                <div class="flex flex-wrap items-center gap-2 pt-1.5">
-                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
-                      <span>PIONEER70 (-70% OFF) &rarr;</span>
-                    </a>
-                  </div>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
-                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
-                    <span>Get RQL QRStudio&trade; &mdash; $79 Lifetime License</span>
-                    <span>&rarr;</span>
-                  </a>
-                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', '07_QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
-                    View Specs &amp; Guarantee &rarr;
-                  </button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- PANEL 5: RQL TEXTDIFF (Myers Vector Difference Engine) -->
-        <!-- ======================================================== -->
-        <div id="sandbox-panel-textdiff" class="pt-6 hidden">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch mb-4">
-            
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
-                <span>Original Revision (Clause A)</span>
-                <div class="flex items-center gap-2">
-                  <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Contract</button>
-                  <button onclick="loadDiffPreset('code')" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Code Patch</button>
-                  <button onclick="swapDiffInputs()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Swap A &harr; B</button>
-                </div>
-              </div>
-              <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
-            </div>
-
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
-                <span>Modified Revision (Clause B)</span>
-                <span id="diff-time-badge" class="text-[11px] font-bold text-amber-700 font-mono">Sub-1ms Myers</span>
-              </div>
-              <textarea id="diff-input-b" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
-            </div>
-
-          </div>
-
-          <!-- Diff Results Box -->
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
-            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
-                <button id="copy-diff-btn" onclick="copyDiffReport('copy-diff-btn')" class="text-[11px] font-mono font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Copy Report</button>
-              </div>
-              <span id="diff-status-badge" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-amber-700 text-white border border-amber-800 shadow-xs">
-                3 Alterations Detected
-              </span>
-            </div>
-            <div id="diff-output-display" class="w-full max-h-48 p-3 rounded-xl bg-white border border-slate-200 overflow-y-auto space-y-1">
-              <!-- Diff lines injected here -->
-            </div>
-          </div>
-
-          <!-- Engine C: Natural Free-to-Paid Bridge -->
-          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
-            <div class="space-y-1">
-              <div class="flex items-center gap-2 text-slate-600">
-                <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
-                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
-              </div>
-              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
-                Need to compare 300-page legal contracts, multi-gigabyte source code repos, and export forensic PDF difference reports?
-              </p>
-            </div>
-            <div class="flex flex-wrap items-center gap-2 shrink-0">
-              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
-                <span>PIONEER70 (-70%) &rarr;</span>
-              </a>
-              <a href="https://quantify17.gumroad.com/l/rql-textdiff" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
-                <span>TextDiff&trade; &mdash; $99</span>
-                <span>&rarr;</span>
-              </a>
-              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', '08_TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
-                View Specs &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- ======================================================== -->
-        <!-- LIVE AIR-GAP & TELEMETRY INTEGRITY AUDIT STRIP -->
-        <!-- ======================================================== -->
-        <div class="mt-8 pt-5 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-3">
-            <div class="w-3 h-3 rounded-full bg-emerald-600 animate-ping"></div>
-            <div class="text-xs font-mono">
-              <span class="text-slate-800 font-bold">Current Sandbox Status: </span>
-              <span id="sandbox-active-tool-badge" class="text-emerald-700 font-extrabold">RQL ImageBatch v1.0 (SIMD WebP Compressor)</span>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <button onclick="auditBrowserNetworkEntries()" class="py-2 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-mono font-extrabold flex items-center gap-1.5 transition hover:scale-102 shadow-md cursor-pointer">
-              <i class="w-3.5 h-3.5 text-white shrink-0" data-lucide="activity"></i>
-              <span>Run Air-Gap Integrity Audit</span>
-            </button>
-          </div>
-        </div>
-
-        <div id="telemetry-log-display" class="mt-3 p-4 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono leading-relaxed space-y-1 shadow-inner select-text">
-          <div class="text-emerald-400 font-bold font-mono">[Air-Gap Audit Initialized] Local memory sandbox active. 0 telemetry sockets open.</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- PIONEER LAUNCH DISCOUNT DIRECT CHECKOUT BANNER (Obsidian & Gold VIP Edition) -->
-    <div class="max-w-7xl mx-auto mb-8 p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border-2 border-amber-400/50 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
-      <div class="absolute -right-16 -top-16 w-56 h-56 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="space-y-2 text-center md:text-left relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-mono font-bold">
-          <i class="w-3.5 h-3.5 text-amber-300" data-lucide="tag"></i>
-          <span>PIONEER FOUNDER DISCOUNTS LIVE</span>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-black font-heading text-white tracking-tight">
-          Direct Checkout with Auto-Applied Pioneer Discount Passes
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl font-medium leading-relaxed">
-          Claim instant auto-applied Pioneer savings: <code data-copy-discount="PIONEER70" title="Click to copy PIONEER70" class="discount-copy-pill bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400 text-amber-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER70</code> (70% Off on 17 Flagship Suites) and <code data-copy-discount="PIONEER20" title="Click to copy PIONEER20" class="discount-copy-pill bg-indigo-400/20 hover:bg-indigo-400/30 border border-indigo-400 text-indigo-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER20</code> (20% Off on 14 Utility Suites). Every card below displays its verified single discount pass.
-        </p>
-      </div>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 shrink-0 w-full sm:w-auto relative z-10">
-        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs font-mono shadow-lg shadow-amber-500/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
-          <i class="w-4 h-4 text-slate-950" data-lucide="zap"></i>
-          <span>DocumentShield PIONEER70 (-70%)</span>
-          <span>&rarr;</span>
-        </a>
-        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono shadow-lg shadow-indigo-600/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
-          <i class="w-4 h-4 text-indigo-200" data-lucide="percent"></i>
-          <span>ImageBatch PIONEER20 (-20%)</span>
-          <span>&rarr;</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- CATEGORY TABS & DEDICATED SUITE PANELS (5 FOCUSED SUITES) -->
     <div id="catalog-controls-container" class="mb-8 space-y-4">
       
       <!-- 5 Dedicated Suite Tab Buttons (5-Col Symmetrical Grid on Desktop) -->
@@ -2157,6 +1322,7 @@ document.addEventListener('keydown', function(e) {
     </div>
 
     <!-- Empty Results Fallback (Hidden by default) -->
+
     <div id="catalog-empty-state" class="hidden my-12 p-10 rounded-3xl bg-white border-2 border-dashed border-slate-300 text-center max-w-xl mx-auto space-y-3">
       <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-500 flex items-center justify-center mx-auto">
         <i class="w-6 h-6" data-lucide="search-x"></i>
@@ -4603,6 +3769,845 @@ document.addEventListener('keydown', function(e) {
 
     </div>
     <!-- /31 Desktop Product Cards Grid -->
+
+    <!-- INTERACTIVE SOVEREIGN SAAS RENT BUSTER & CAPITAL ROI CALCULATOR -->
+    <div class="mb-14 bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden bento-card-spring" id="saas-calculator-section">
+      <!-- Ambient Laser Radial Glow -->
+      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(6,182,212,0.12),transparent_75%)]"></div>
+      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-25"></div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold mb-3 shadow-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>CAPITAL PRESERVATION &bull; SAAS RENT CALCULATOR</span>
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-black font-heading text-white tracking-tight">
+            Stop Paying the SaaS Subscription Tax. <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Calculate Your 3-Year Savings</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed font-normal">
+            See exactly how much capital your business preserves by switching from monthly recurring cloud SaaS subscriptions to single perpetual-license Windows desktop workstations.
+          </p>
+        </div>
+
+        <!-- Global Currency Switcher -->
+        <div class="shrink-0 flex items-center gap-1.5 p-1.5 rounded-2xl bg-slate-900 border border-slate-700/80 shadow-inner">
+          <span class="text-[10px] font-mono text-slate-400 uppercase font-bold px-2">Currency:</span>
+          <button id="calc-currency-usd" onclick="setRQLCurrency('USD')" class="px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shadow-xs bg-indigo-600 text-white cursor-pointer btn-spring">
+            $ USD
+          </button>
+          <button id="calc-currency-inr" onclick="setRQLCurrency('INR')" class="px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition text-slate-400 hover:text-white cursor-pointer btn-spring">
+            &#8377; INR (UPI)
+          </button>
+        </div>
+      </div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 items-center">
+        <!-- Left: Interactive Sliders -->
+        <div class="lg:col-span-6 space-y-6">
+          <!-- Slider 1: Team Size -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs font-mono">
+              <span class="text-slate-300 font-bold">Team Workstations / Seats:</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-cyan-300 font-black text-sm tabular-nums" id="calc-display-seats">5 Seats</span>
+            </div>
+            <input type="range" id="calc-seats-slider" min="1" max="50" value="5" step="1" oninput="updateSaasCalculator()" class="w-full accent-indigo-500 cursor-pointer h-2 bg-slate-800 rounded-lg" />
+            <div class="flex justify-between text-[10px] font-mono text-slate-500">
+              <span>1 Solo Founder</span>
+              <span>25 Mid-Tier Team</span>
+              <span>50 Workstations</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Current SaaS Spend -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs font-mono">
+              <span class="text-slate-300 font-bold">Monthly Cloud SaaS Cost / Seat:</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-emerald-300 font-black text-sm tabular-nums" id="calc-display-monthly">$35 / Seat / Mo</span>
+            </div>
+            <input type="range" id="calc-spend-slider" min="10" max="150" value="35" step="5" oninput="updateSaasCalculator()" class="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-800 rounded-lg" />
+            <div class="flex justify-between text-[10px] font-mono text-slate-500">
+              <span>$10 Basic</span>
+              <span>$75 Professional</span>
+              <span>$150 Enterprise SaaS</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs text-slate-400 space-y-1.5">
+            <div class="flex items-center gap-2 text-slate-200 font-bold font-mono">
+              <i class="w-4 h-4 text-emerald-400" data-lucide="check-circle-2"></i>
+              <span>Rehan Quant Lab Perpetual Guarantee</span>
+            </div>
+            <p class="leading-relaxed font-normal">
+              Zero monthly recurring invoices. Zero mandatory software renewals. Your single perpetual license includes master setup binaries with lifetime local ownership.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Savings HUD -->
+        <div class="lg:col-span-6 bg-slate-900/95 border border-slate-800 rounded-2xl p-6 sm:p-7 shadow-2xl space-y-5">
+          <div class="grid grid-cols-2 gap-3 text-left font-mono">
+            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-rose-500/30">
+              <span class="text-[10px] text-rose-400 block uppercase font-bold">3-Year Cloud SaaS Rent</span>
+              <div class="text-xl sm:text-2xl font-black text-rose-300 mt-1 tabular-nums" id="calc-result-saas">$6,300</div>
+              <span class="text-[10px] text-slate-500 block mt-0.5">Recurring capital drain</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-950/80 border border-indigo-500/30">
+              <span class="text-[10px] text-indigo-400 block uppercase font-bold">RQL Perpetual License</span>
+              <div class="text-xl sm:text-2xl font-black text-indigo-300 mt-1 tabular-nums" id="calc-result-rql">$537</div>
+              <span class="text-[10px] text-slate-500 block mt-0.5">Pay once, own forever</span>
+            </div>
+          </div>
+
+          <!-- Total Net Preserved Capital Highlight -->
+          <div class="p-5 rounded-2xl bg-gradient-to-r from-emerald-950/70 via-slate-950 to-cyan-950/70 border border-emerald-500/40 text-center space-y-1">
+            <span class="text-[11px] font-mono text-emerald-400 uppercase font-bold tracking-wider">Total Net Capital Preserved</span>
+            <div class="text-3xl sm:text-4xl font-black font-heading text-white tracking-tight tabular-nums" id="calc-result-saved">
+              $5,763 <span class="text-lg text-emerald-400 font-mono">(91% Saved)</span>
+            </div>
+            <p class="text-[11px] text-slate-400 font-mono pt-1">Directly retained on your company balance sheet.</p>
+          </div>
+
+          <!-- Action Button -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+            <a href="#rql-documentshield" onclick="window.switchStoreTab('security')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs font-mono flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition btn-spring cursor-pointer">
+              <span>Claim Auto-Applied Pioneer Discount (70% Off) &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3-Step Workflow: How Our Desktop Software Works -->
+    <div class="mb-14 bg-slate-50 text-slate-900 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs relative overflow-hidden">
+      
+      <div class="max-w-3xl mb-8 relative z-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-bold mb-3">
+          <span> THE LOCAL-FIRST ADVANTAGE</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-950 tracking-tight">
+          How Our Desktop Software Works (3-Step Workflow)
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+          Unlike modern SaaS tools that hold your files hostage behind recurring monthly subscriptions, our software compiles straight to native machine instructions and runs 100% locally on your computer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+        <!-- Step 1 -->
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 font-mono font-bold text-lg flex items-center justify-center border border-indigo-200 mb-4">
+              01
+            </div>
+            <h4 class="text-base font-bold text-slate-950 font-heading">Download &amp; Verify Checksum</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Get your official 64-bit Windows portable binary or installer (<code class="text-indigo-600 font-semibold">Setup.exe</code>). Every release includes a public SHA-256 cryptographic checksum so you can independently verify binary integrity.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-emerald-700 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="shield-check"></i>
+            <span>SHA-256 Authenticated</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 font-mono font-bold text-lg flex items-center justify-center border border-emerald-200 mb-4">
+              02
+            </div>
+            <h4 class="text-base font-bold text-slate-950 font-heading">100% Offline Local Execution</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Unplug Ethernet or turn off Wi-Fi. Every algorithm, redaction engine, and local AI model executes strictly on your CPU and RAM with 0 outbound network sockets and 0 cloud telemetry.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-emerald-700 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="wifi-off"></i>
+            <span>0 Bytes Outbound Telemetry</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white border border-slate-200 p-6 rounded-2xl flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 font-mono font-bold text-lg flex items-center justify-center border border-amber-200 mb-4">
+              03
+            </div>
+            <h4 class="text-base font-bold text-slate-950 font-heading">Perpetual Ownership &amp; Zero Monthly Fees</h4>
+            <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+              Pay once and own the software forever. No monthly billing surprises, no forced logins or cloud outages, with direct founder WhatsApp and email support for lifetime peace of mind.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-amber-700 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5" data-lucide="check-circle-2"></i>
+            <span>Lifetime License &bull; No Monthly Fees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- SOVEREIGN CLIENT-SIDE IN-MEMORY ALGORITHM SANDBOX -->
+    <!-- 100% Client-Side In-Memory Execution - Zero Data Collection -->
+    <!-- ======================================================== -->
+    <div id="sovereign-sandbox-section" class="max-w-7xl mx-auto px-4 sm:px-6 mb-16">
+      <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8 shadow-xs relative overflow-hidden">
+        
+        <!-- Ambient Top Glow -->
+        <div class="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent"></div>
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-28 bg-emerald-500/10 blur-3xl pointer-events-none rounded-full"></div>
+
+        <!-- Top Header & Badges -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-slate-200/80">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-mono text-[11px] font-bold mb-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>LIVE IN-BROWSER CLIENT-SIDE SANDBOX</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-black font-heading text-slate-950 tracking-tight">
+              Test Our Sovereign Algorithms Live in Your Browser
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl leading-relaxed">
+              Zero installation required. Zero cloud APIs called. Everything executes 100% locally on your machine CPU and RAM in under 2 milliseconds.
+            </p>
+          </div>
+
+          <!-- Strict Privacy & Zero Telemetry Attestation Seal -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2.5 p-3 rounded-2xl bg-slate-900/90 border border-emerald-500/30">
+            <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/40">
+              <i class="w-4 h-4" data-lucide="shield-check"></i>
+            </div>
+            <div class="text-[11px] font-mono leading-tight">
+              <div class="font-bold text-white flex items-center gap-1.5">
+                <span class="text-emerald-400">&#10003; ZERO DATA COLLECTION GUARANTEE</span>
+              </div>
+              <div class="text-slate-400 mt-0.5">
+                0 Bytes Network Outbound &bull; Air-Gapped Local RAM &bull; 100% Private
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Ultimate Skeptic Challenge: Prove Us Wrong in 5 Seconds -->
+        <div class="my-5 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 border-2 border-emerald-500/40 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-44 h-44 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 relative z-10">
+            <div class="flex items-start gap-3.5">
+              <div class="w-11 h-11 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 shadow-inner">
+                <i class="w-6 h-6" data-lucide="zap"></i>
+              </div>
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/40 tracking-wider uppercase">
+                    The Skeptic's Dare
+                  </span>
+                  <span id="airgap-live-indicator" class="px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40">
+                    NETWORK STATUS: ZERO OUTBOUND EGRESS
+                  </span>
+                </div>
+                
+                <h4 class="text-lg sm:text-xl font-extrabold font-heading text-white tracking-tight">
+                  Think This Is Just Marketing Words? Prove Us Wrong in 5 Seconds.
+                </h4>
+                
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+                  Every SaaS on Earth claims they "care about privacy" right before uploading your files to AWS. <strong class="text-white">We refuse to ask for your trust.</strong> Turn off your computer Wi-Fi or unplug your Ethernet cable right now, then compress an image, redact text, or verify a cryptographic hash below. If a single byte leaves your machine or any tool fails, don't buy our software.
+                </p>
+              </div>
+            </div>
+
+            <div class="shrink-0 w-full lg:w-auto flex flex-col sm:flex-row lg:flex-col gap-2.5">
+              <button onclick="auditBrowserNetworkEntries()" class="w-full py-3 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center justify-center gap-2 transition hover:scale-102 shadow-lg shadow-emerald-950/50 cursor-pointer">
+                <i class="w-4 h-4 text-white" data-lucide="activity"></i>
+                <span>Run Forensic Network Audit</span>
+              </button>
+              <div class="text-[10px] font-mono text-slate-400 text-center">
+                100% In-RAM Execution &bull; 0 Cloud APIs
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool Selection Tabs -->
+        <div class="flex items-center gap-2.5 overflow-x-auto py-4 px-1 border-b border-slate-200 no-scrollbar">
+          <button id="sandbox-btn-imagebatch" onclick="switchSandboxTab('imagebatch')" class="sandbox-tab-btn group active px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono transition bg-emerald-700 text-white border-2 border-emerald-800 shadow-lg ring-2 ring-emerald-200 flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-white shrink-0" data-lucide="image"></i>
+            <span>20. RQL ImageBatch (WebP Compressor)</span>
+          </button>
+          <button id="sandbox-btn-documentshield" onclick="switchSandboxTab('documentshield')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-rose-700 hover:text-white hover:border-rose-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-rose-700 group-hover:text-white shrink-0" data-lucide="file-text"></i>
+            <span>01. DocumentShield (Redactor)</span>
+          </button>
+          <button id="sandbox-btn-hashcheck" onclick="switchSandboxTab('hashcheck')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-sky-700 hover:text-white hover:border-sky-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-sky-700 group-hover:text-white shrink-0" data-lucide="fingerprint"></i>
+            <span>06. HashCheck (Cryptographic Hasher)</span>
+          </button>
+          <button id="sandbox-btn-qrstudio" onclick="switchSandboxTab('qrstudio')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-purple-700 hover:text-white hover:border-purple-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-purple-700 group-hover:text-white shrink-0" data-lucide="qr-code"></i>
+            <span>07. QRStudio (Vector QR Studio)</span>
+          </button>
+          <button id="sandbox-btn-textdiff" onclick="switchSandboxTab('textdiff')" class="sandbox-tab-btn group px-4 py-2.5 rounded-xl text-xs font-extrabold font-mono text-slate-900 bg-white hover:bg-amber-700 hover:text-white hover:border-amber-800 border-2 border-slate-300 shadow-sm transition flex items-center gap-1.5 cursor-pointer shrink-0">
+            <i class="w-4 h-4 text-amber-700 group-hover:text-white shrink-0" data-lucide="git-compare"></i>
+            <span>08. TextDiff (Myers Vector Engine)</span>
+          </button>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PANEL 1: RQL IMAGEBATCH (In-Browser WebP Compressor) -->
+        <!-- ======================================================== -->
+        <div id="sandbox-panel-imagebatch" class="pt-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            
+            <!-- Left: Source Control & Dropzone -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Source Image Input</span>
+                  </div>
+                  <button onclick="loadSampleImage()" class="text-[11px] font-mono font-bold text-emerald-700 hover:text-emerald-900 underline cursor-pointer">
+                    Load 1080p Benchmark Sample
+                  </button>
+                </div>
+
+                <div class="mt-4">
+                  <label class="block border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-5 text-center cursor-pointer transition bg-white hover:bg-slate-50 group">
+                    <input type="file" accept="image/png, image/jpeg, image/webp" class="hidden" onchange="handleImageUpload(this)">
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-slate-200 text-slate-700 group-hover:text-slate-950 flex items-center justify-center transition">
+                        <i class="w-5 h-5" data-lucide="upload-cloud"></i>
+                      </div>
+                      <div class="text-xs font-mono text-slate-900 font-bold">
+                        Drop any local image (PNG/JPG) or click to browse
+                      </div>
+                      <div class="text-[10px] font-mono text-slate-500">
+                        100% processed in local browser RAM &bull; Never uploaded to any server
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- WebP Quality Slider -->
+                <div class="mt-5 p-3.5 rounded-xl bg-white border border-slate-300 space-y-2 shadow-2xs">
+                  <div class="flex items-center justify-between text-xs font-mono">
+                    <span class="text-slate-800 font-bold">WebP Compression Quality:</span>
+                    <span id="imagebatch-quality-label" class="text-emerald-700 font-black">85%</span>
+                  </div>
+                  <input id="imagebatch-quality-slider" type="range" min="30" max="100" value="85" class="w-full accent-emerald-700 cursor-pointer" oninput="onQualitySliderChange(this.value)">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-semibold text-slate-700">
+                    <span>Higher Compression (Smaller KB)</span>
+                    <span>High Fidelity (Max Crispness)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-[11px] font-mono text-slate-700 font-semibold flex items-center justify-between pt-3 border-t border-slate-200">
+                <span>Original Size: <strong id="imagebatch-orig-size" class="text-slate-950 font-black">1.2 MB</strong></span>
+                <span class="text-emerald-700 font-extrabold">&#10003; SIMD Hardware Acceleration</span>
+              </div>
+            </div>
+
+            <!-- Right: Real-Time Compressed Output & Metrics -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Real-Time WebP Output</span>
+                  </div>
+                  <span id="imagebatch-savings-badge" class="font-mono text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-700 text-white border border-emerald-800 shadow-xs">
+                    -92% SAVED
+                  </span>
+                </div>
+
+                <!-- Visual Preview Frame -->
+                <div class="mt-4 aspect-video w-full rounded-xl overflow-hidden bg-slate-950 border border-slate-800 relative flex items-center justify-center p-2">
+                  <img id="imagebatch-preview-img" src="emblem.webp" alt="Compressed Preview" class="max-w-full max-h-full object-contain rounded-lg">
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="grid grid-cols-2 gap-3 mt-4 text-xs font-mono">
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
+                    <div class="text-slate-700 font-bold text-[10px] uppercase">Compressed WebP Size:</div>
+                    <div id="imagebatch-comp-size" class="text-emerald-700 font-black text-sm mt-0.5 font-mono">98 KB</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-300 shadow-2xs">
+                    <div class="text-slate-700 font-bold text-[10px] uppercase">Execution Latency:</div>
+                    <div id="imagebatch-time-badge" class="text-slate-950 font-black text-sm mt-0.5 font-mono">4.2ms (Local RAM)</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Download Action -->
+              <div class="pt-3 border-t border-slate-200 space-y-3">
+                <button id="imagebatch-download-btn" class="w-full py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
+                  <i class="w-4 h-4 text-white" data-lucide="download"></i>
+                  <span>Download Compressed WebP (Zero Cloud Used)</span>
+                  <span>&rarr;</span>
+                </button>
+
+                <!-- Engine C: Natural Free-to-Paid Bridge -->
+                <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
+                  <div class="flex items-center gap-2 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
+                  </div>
+                  <p class="text-slate-700 leading-relaxed font-sans font-medium">
+                    Need to batch-convert 5,000 images at once with 16-core SIMD directly from Windows Explorer?
+                  </p>
+                  <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
+                      <span>PIONEER20 (-20% OFF) &rarr;</span>
+                    </a>
+                  </div>
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
+                    <a href="https://quantify17.gumroad.com/l/rql-imagebatch" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
+                      <span>Get RQL ImageBatch&trade; &mdash; $49 Lifetime License</span>
+                      <span>&rarr;</span>
+                    </a>
+                    <button onclick="openEvaluationModal('RQL ImageBatch&trade;', 'SIMD Multi-Threaded Batch Image Processing Engine', '20_ImageBatch_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-imagebatch')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
+                      View Specs &amp; Guarantee &rarr;
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PANEL 2: RQL DOCUMENTSHIELD (Confidential Text Redactor) -->
+        <!-- ======================================================== -->
+        <div id="sandbox-panel-documentshield" class="pt-6 hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-rose-600"></span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Raw Legal / Forensic Text</span>
+                </div>
+                <button onclick="resetRedactionSample()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">
+                  Reset Sample
+                </button>
+              </div>
+
+              <textarea id="redact-input-text" rows="8" oninput="runDocumentShieldRedaction()" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs focus:border-rose-600 focus:outline-none leading-relaxed resize-none"></textarea>
+
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
+                <span>Simulated SSN, Tax EIN, Card &amp; Email</span>
+                <span class="text-rose-700 font-extrabold">Sub-1ms Regex Vectorizer</span>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-3">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Permanent Blackout Output</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button id="copy-redact-btn" onclick="copyRedactedText('copy-redact-btn')" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Copy</button>
+                  <button onclick="downloadRedactedText()" class="text-[11px] font-mono font-bold text-rose-700 hover:text-rose-900 underline cursor-pointer">Download .txt</button>
+                  <span id="redact-tokens-count" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-700 text-white border border-rose-800 shadow-xs">
+                    5 Tokens Blacked Out
+                  </span>
+                </div>
+              </div>
+
+              <div id="redact-output-display" class="w-full h-44 p-3 rounded-xl bg-white border border-slate-300 text-slate-900 font-mono text-xs overflow-y-auto leading-relaxed select-text">
+                CONFIDENTIAL CLIENT LEGAL INTAKE &amp; FORENSIC DOSSIER
+              </div>
+
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-700 font-semibold">
+                <span class="text-emerald-700 font-extrabold">&#10003; True Vector Blackout</span>
+                <span id="redact-sha-badge" class="text-slate-800 font-bold">SHA-256: 7d8f...4a21 Verified Clean</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200">
+            <button onclick="runDocumentShieldRedaction()" class="w-full sm:w-auto py-2.5 px-5 rounded-xl bg-rose-700 hover:bg-rose-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-2 transition hover:scale-101 shadow-md cursor-pointer">
+              <i class="w-4 h-4 text-white" data-lucide="shield-alert"></i>
+              <span>Run Sovereign Redaction Engine (Sub-2ms)</span>
+            </button>
+            <div class="text-[11px] font-mono font-semibold text-slate-700 text-center sm:text-right">
+              Zero bytes sent to server &bull; Pure client-side regex vectorization
+            </div>
+          </div>
+
+          <!-- Engine C: Natural Free-to-Paid Bridge -->
+          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
+                Need to scrub 500-page scanned PDF dossiers, strip hidden EXIF/XMP metadata, and generate court-admissible audit certificates?
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER70 (-70%) &rarr;</span>
+              </a>
+              <a href="https://quantify17.gumroad.com/l/rql-documentshield" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
+                <span>DocumentShield&trade; &mdash; $179</span>
+                <span>&rarr;</span>
+              </a>
+              <button onclick="openEvaluationModal('RQL DocumentShield&trade;', 'Forensic PDF Redactor &amp; Metadata Eraser', '01_DocumentShield_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-documentshield')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
+                View Specs &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PANEL 3: RQL HASHCHECK (Native WebCrypto SHA Engine) -->
+        <!-- ======================================================== -->
+        <div id="sandbox-panel-hashcheck" class="pt-6 hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+                    <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Inspect Any File or Text</span>
+                  </div>
+                  <span id="hashcheck-time-badge" class="text-[11px] font-mono font-bold text-sky-700">
+                    Hardware Accelerated
+                  </span>
+                </div>
+
+                <div class="mt-4">
+                  <label class="block border-2 border-dashed border-slate-400 hover:border-sky-600 rounded-xl p-4 text-center cursor-pointer transition bg-white hover:bg-sky-50/40 group">
+                    <input type="file" class="hidden" onchange="handleHashCheckFile(this)">
+                    <div class="text-xs font-mono text-slate-950 font-extrabold">
+                      Drop ANY file to compute cryptographic hash instantly
+                    </div>
+                    <div class="text-[10px] font-mono font-semibold text-slate-700 mt-1">
+                      File never leaves your RAM &bull; Executed via window.crypto.subtle
+                    </div>
+                  </label>
+                </div>
+
+                <div class="mt-4 space-y-1.5">
+                  <label class="block text-[11px] font-mono font-bold text-slate-800">Or type custom text string:</label>
+                  <input id="hashcheck-text-input" type="text" value="Rehan Quant Lab Sovereign Air-Gapped Standard 2026" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-sky-600 focus:outline-none" oninput="runTextHash()">
+                </div>
+              </div>
+
+              <div class="text-[11px] font-mono text-slate-700 font-semibold pt-2 border-t border-slate-200">
+                Target: <strong id="hashcheck-target-label" class="text-slate-950 font-black">Raw Text Payload</strong>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Cryptographic Checksums</span>
+                  <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; Bit-for-Bit Verified</span>
+                </div>
+
+                <!-- SHA-256 Box -->
+                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
+                    <span>SHA-256 (FIPS 180-4 Standard):</span>
+                    <button id="copy-sha256-btn" onclick="copyHashText('hashcheck-sha256-output', 'copy-sha256-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
+                  </div>
+                  <div id="hashcheck-sha256-output" class="font-mono text-xs text-sky-800 break-all select-text font-extrabold">
+                    Computing...
+                  </div>
+                </div>
+
+                <!-- SHA-512 Box -->
+                <div class="p-3 rounded-xl bg-white border border-slate-300 space-y-1 shadow-2xs">
+                  <div class="flex items-center justify-between text-[10px] font-mono font-bold text-slate-700 uppercase">
+                    <span>SHA-512 (FIPS 180-4 Cryptographic Standard):</span>
+                    <button id="copy-sha512-btn" onclick="copyHashText('hashcheck-sha512-output', 'copy-sha512-btn')" class="text-sky-700 hover:text-sky-900 font-extrabold underline cursor-pointer">Copy</button>
+                  </div>
+                  <div id="hashcheck-sha512-output" class="font-mono text-[11px] text-slate-900 break-all select-text font-bold max-h-16 overflow-y-auto">
+                    Computing...
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
+                Zero Cloud Uploads &bull; Executed locally via browser WebCrypto primitives
+              </div>
+
+              <!-- Engine C: Natural Free-to-Paid Bridge -->
+              <div class="p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2">
+                <div class="flex items-center gap-2 text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
+                </div>
+                <p class="text-slate-700 leading-relaxed font-sans font-medium">
+                  Need right-click SHA verification in Windows Explorer, multi-terabyte disk drive hashing, and CSV compliance export?
+                </p>
+                <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWhhc2hjaGVjay9QSU9ORUVSMjA/d2FudGVkPXRydWU=" href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
+                      <span>PIONEER20 (-20% OFF) &rarr;</span>
+                    </a>
+                  </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
+                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
+                    <span>Get RQL HashCheck&trade; &mdash; $39 Lifetime License</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <button onclick="openEvaluationModal('RQL HashCheck&trade;', 'Offline Cryptographic Checksum Verifier', '06_HashCheck_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-hashcheck')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
+                    View Specs &amp; Guarantee &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PANEL 4: RQL QRSTUDIO (Offline Vector QR Code Generator) -->
+        <!-- ======================================================== -->
+        <div id="sandbox-panel-qrstudio" class="pt-6 hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+              <div>
+                <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                  <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">QR Data &amp; Payload Input</span>
+                  <span id="qrstudio-time-badge" class="text-[11px] font-mono font-bold text-purple-700">Instant Render</span>
+                </div>
+
+                <div class="mt-4 space-y-2">
+                  <div class="flex items-center gap-2">
+                    <button id="qr-mode-dynamic-btn" type="button" onclick="setQrDynamicMode(true)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-extrabold transition flex items-center gap-1.5 cursor-pointer bg-purple-700 text-white border-2 border-purple-800 shadow-md">
+                      <span>&#9889; Dynamic Anycast</span>
+                    </button>
+                    <button id="qr-mode-static-btn" type="button" onclick="setQrDynamicMode(false)" class="py-1.5 px-3 rounded-lg text-xs font-mono font-bold transition flex items-center gap-1.5 cursor-pointer bg-white text-slate-800 border-2 border-slate-300 hover:border-slate-400 shadow-2xs">
+                      <span>&#128274; Static Direct</span>
+                    </button>
+                    <span id="qr-density-badge" class="ml-auto text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Low Density (25x25)</span>
+                  </div>
+                  <label class="block text-[11px] font-mono font-bold text-slate-800 pt-1">Enter target URL, product slug, or raw text:</label>
+                  <textarea id="qrstudio-text-input" rows="3" class="w-full p-3 rounded-xl bg-white border-2 border-slate-300 text-slate-950 font-mono text-xs font-semibold focus:border-purple-600 focus:outline-hidden resize-none" oninput="generateLiveQrCode()">https://rehanquantlab.com/store</textarea>
+                </div>
+
+                <div class="mt-3 flex flex-wrap gap-2 text-[11px] font-mono">
+                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/store'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">RQL Store</button>
+                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='clauseforge'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold shadow-xs transition cursor-pointer">ClauseForge (Titan 27)</button>
+                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='archivemaster'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-xs transition cursor-pointer">ArchiveMaster (Titan 28)</button>
+                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://wa.me/917091518548'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">WhatsApp VIP</button>
+                  <button type="button" onclick="document.getElementById('qrstudio-text-input').value='https://rehanquantlab.com/contact'; generateLiveQrCode()" class="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-purple-700 text-white font-bold shadow-xs transition cursor-pointer">Contact Desk</button>
+                </div>
+
+                <div id="qr-routing-readout" class="mt-3 p-2.5 rounded-xl bg-purple-50/80 border border-purple-200 text-[11px] font-mono text-purple-950 flex items-start gap-2">
+                  <span class="text-purple-700 font-bold">&#9889;</span>
+                  <div class="min-w-0">
+                    <div class="font-bold text-slate-900">Cloudflare Anycast Dynamic Routing:</div>
+                    <div id="qr-resolved-target" class="text-purple-900 break-all font-semibold">https://rehanquantlab.com/go?slug=store</div>
+                    <div id="qr-camera-behavior-note" class="text-[10px] text-emerald-800 font-bold mt-0.5">&#10003; Web URL: Point iPhone or Android camera &mdash; opens browser directly to website.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-[11px] font-mono font-semibold text-slate-700 pt-2 border-t border-slate-200">
+                100% Client-Side Vector Geometry &bull; Zero external API dependencies
+              </div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between items-center text-center space-y-4">
+              <div class="w-full flex items-center justify-between pb-2 border-b border-slate-200">
+                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Instant-Scan QR Preview</span>
+                <span class="text-emerald-700 font-mono text-[11px] font-extrabold">&#10003; 100% Machine Scannable</span>
+              </div>
+
+              <!-- Vector QR Container (Enlarged to 288px with high contrast) -->
+              <div id="qrstudio-display-container" class="w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center rounded-2xl border-2 border-slate-300 bg-white shadow-md p-2">
+                <!-- Live pixelated Canvas / PNG rendered here -->
+              </div>
+
+              <div class="text-[11px] font-mono text-slate-600 text-center font-medium">
+                Point iPhone or Android camera &mdash; locks on instantly with zero glare
+              </div>
+
+              <div class="grid grid-cols-2 gap-2 w-full">
+                <button onclick="downloadQrSvg()" class="py-2.5 px-3 rounded-xl bg-purple-700 hover:bg-purple-600 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                  <i class="w-4 h-4" data-lucide="download"></i>
+                  <span>Vector (.svg)</span>
+                </button>
+                <button onclick="downloadQrPng()" class="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-mono font-extrabold text-xs flex items-center justify-center gap-1.5 transition hover:scale-101 cursor-pointer shadow-md">
+                  <i class="w-4 h-4 text-emerald-400" data-lucide="image"></i>
+                  <span>Raster (.png)</span>
+                </button>
+              </div>
+
+              <!-- Engine C: Natural Free-to-Paid Bridge -->
+              <div class="w-full p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700 flex flex-col gap-2 text-left">
+                <div class="flex items-center gap-2 text-slate-600">
+                  <span class="w-1.5 h-1.5 rounded-full bg-purple-600 animate-pulse"></span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
+                </div>
+                <p class="text-slate-700 leading-relaxed font-sans font-medium">
+                  Need bulk generation of 10,000 inventory barcodes, direct 80mm/58mm thermal label printing, and custom business logos?
+                </p>
+                <div class="flex flex-wrap items-center gap-2 pt-1.5">
+                    <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXFyc3R1ZGlvL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition hover:scale-102 cursor-pointer whitespace-nowrap">
+                      <span>PIONEER70 (-70% OFF) &rarr;</span>
+                    </a>
+                  </div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200">
+                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-white font-bold text-xs transition shadow-xs">
+                    <span>Get RQL QRStudio&trade; &mdash; $79 Lifetime License</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <button onclick="openEvaluationModal('RQL QRStudio&trade;', 'Offline Vector QR &amp; Barcode Studio', '07_QRStudio_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-qrstudio')" class="text-xs text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer text-center sm:text-right whitespace-nowrap shrink-0">
+                    View Specs &amp; Guarantee &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- PANEL 5: RQL TEXTDIFF (Myers Vector Difference Engine) -->
+        <!-- ======================================================== -->
+        <div id="sandbox-panel-textdiff" class="pt-6 hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch mb-4">
+            
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
+                <span>Original Revision (Clause A)</span>
+                <div class="flex items-center gap-2">
+                  <button onclick="resetDiffSample()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Contract</button>
+                  <button onclick="loadDiffPreset('code')" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Code Patch</button>
+                  <button onclick="swapDiffInputs()" class="text-[11px] font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Swap A &harr; B</button>
+                </div>
+              </div>
+              <textarea id="diff-input-a" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
+              <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-950 pb-2 border-b border-slate-200">
+                <span>Modified Revision (Clause B)</span>
+                <span id="diff-time-badge" class="text-[11px] font-bold text-amber-700 font-mono">Sub-1ms Myers</span>
+              </div>
+              <textarea id="diff-input-b" rows="5" class="w-full p-2.5 rounded-xl bg-white border border-slate-300 text-slate-950 font-mono text-xs focus:border-amber-600 focus:outline-hidden leading-relaxed resize-none" oninput="runMyersDiffAlgorithm()"></textarea>
+            </div>
+
+          </div>
+
+          <!-- Diff Results Box -->
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+            <div class="flex items-center justify-between pb-2 mb-3 border-b border-slate-200">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-extrabold text-slate-950 uppercase">Side-by-Side Alteration Audit</span>
+                <button id="copy-diff-btn" onclick="copyDiffReport('copy-diff-btn')" class="text-[11px] font-mono font-bold text-amber-700 hover:text-amber-900 underline cursor-pointer">Copy Report</button>
+              </div>
+              <span id="diff-status-badge" class="font-mono text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-amber-700 text-white border border-amber-800 shadow-xs">
+                3 Alterations Detected
+              </span>
+            </div>
+            <div id="diff-output-display" class="w-full max-h-48 p-3 rounded-xl bg-white border border-slate-200 overflow-y-auto space-y-1">
+              <!-- Diff lines injected here -->
+            </div>
+          </div>
+
+          <!-- Engine C: Natural Free-to-Paid Bridge -->
+          <div class="mt-3 p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] font-mono text-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-pulse"></span>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Desktop Windows Master License</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed font-sans font-medium text-xs">
+                Need to compare 300-page legal contracts, multi-gigabyte source code repos, and export forensic PDF difference reports?
+              </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLXRleHRkaWZmL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1 py-1.5 px-2.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-black text-[11px] font-mono shadow-xs transition cursor-pointer">
+                <span>PIONEER70 (-70%) &rarr;</span>
+              </a>
+              <a href="https://quantify17.gumroad.com/l/rql-textdiff" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs transition shadow-xs">
+                <span>TextDiff&trade; &mdash; $99</span>
+                <span>&rarr;</span>
+              </a>
+              <button onclick="openEvaluationModal('RQL TextDiff&trade;', 'Offline Visual File &amp; Code Comparison Engine', '08_TextDiff_Cover_1080p.webp', 'https://quantify17.gumroad.com/l/rql-textdiff')" class="text-[11px] text-slate-800 hover:text-slate-950 underline font-bold cursor-pointer whitespace-nowrap shrink-0">
+                View Specs &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- LIVE AIR-GAP & TELEMETRY INTEGRITY AUDIT STRIP -->
+        <!-- ======================================================== -->
+        <div class="mt-8 pt-5 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-emerald-600 animate-ping"></div>
+            <div class="text-xs font-mono">
+              <span class="text-slate-800 font-bold">Current Sandbox Status: </span>
+              <span id="sandbox-active-tool-badge" class="text-emerald-700 font-extrabold">RQL ImageBatch v1.0 (SIMD WebP Compressor)</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="auditBrowserNetworkEntries()" class="py-2 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-mono font-extrabold flex items-center gap-1.5 transition hover:scale-102 shadow-md cursor-pointer">
+              <i class="w-3.5 h-3.5 text-white shrink-0" data-lucide="activity"></i>
+              <span>Run Air-Gap Integrity Audit</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="telemetry-log-display" class="mt-3 p-4 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono leading-relaxed space-y-1 shadow-inner select-text">
+          <div class="text-emerald-400 font-bold font-mono">[Air-Gap Audit Initialized] Local memory sandbox active. 0 telemetry sockets open.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PIONEER LAUNCH DISCOUNT DIRECT CHECKOUT BANNER (Obsidian & Gold VIP Edition) -->
+    <div class="max-w-7xl mx-auto mb-8 p-6 sm:p-7 rounded-3xl bg-slate-950 text-white border-2 border-amber-400/50 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+      <div class="absolute -right-16 -top-16 w-56 h-56 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="space-y-2 text-center md:text-left relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 text-xs font-mono font-bold">
+          <i class="w-3.5 h-3.5 text-amber-300" data-lucide="tag"></i>
+          <span>PIONEER FOUNDER DISCOUNTS LIVE</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-black font-heading text-white tracking-tight">
+          Direct Checkout with Auto-Applied Pioneer Discount Passes
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-2xl font-medium leading-relaxed">
+          Claim instant auto-applied Pioneer savings: <code data-copy-discount="PIONEER70" title="Click to copy PIONEER70" class="discount-copy-pill bg-amber-400/20 hover:bg-amber-400/30 border border-amber-400 text-amber-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER70</code> (70% Off on 17 Flagship Suites) and <code data-copy-discount="PIONEER20" title="Click to copy PIONEER20" class="discount-copy-pill bg-indigo-400/20 hover:bg-indigo-400/30 border border-indigo-400 text-indigo-300 px-2 py-0.5 rounded font-mono font-bold cursor-pointer transition">PIONEER20</code> (20% Off on 14 Utility Suites). Every card below displays its verified single discount pass.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 shrink-0 w-full sm:w-auto relative z-10">
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWRvY3VtZW50c2hpZWxkL1BJT05FRVI3MD93YW50ZWQ9dHJ1ZQ==" href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs font-mono shadow-lg shadow-amber-500/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+          <i class="w-4 h-4 text-slate-950" data-lucide="zap"></i>
+          <span>DocumentShield PIONEER70 (-70%)</span>
+          <span>&rarr;</span>
+        </a>
+        <a data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29tL2wvcnFsLWltYWdlYmF0Y2gvUElPTkVFUjIwP3dhbnRlZD10cnVl" href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" role="button" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs font-mono shadow-lg shadow-indigo-600/20 transition hover:scale-102 flex items-center justify-center gap-2 btn-spring cursor-pointer text-center">
+          <i class="w-4 h-4 text-indigo-200" data-lucide="percent"></i>
+          <span>ImageBatch PIONEER20 (-20%)</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORY TABS & DEDICATED SUITE PANELS (5 FOCUSED SUITES) -->
+
+    
 
     <!-- 7-DAY UNCONDITIONAL MONEY-BACK GUARANTEE -->
     <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-emerald-50 border border-emerald-200 text-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden shadow-xl bento-card-spring">
