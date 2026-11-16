@@ -17,55 +17,17 @@ For Rehan Quant Lab, the soul is **The Sovereign Quantitative Bastion**:
 
 ---
 
-## 1. The 19 Web Designer Competencies (Baked into RQL Engineering)
+## 1. The Pre-Flight Five-Dial Calibration Matrix (ConardLi Standard)
 
-### Creative & Technical Disciplines
-1. **Visual Design & Gestalt Principles**:
-   - **Proximity**: Group related technical metrics and actions tightly inside dedicated Bento cells.
-   - **Similarity**: Sibling cards share identical 1px border geometry, padding, and typography scales.
-   - **Figure-Ground**: Clear visual separation between the foundational slate canvas, elevated card surfaces, and active overlay dialogs.
-2. **Typography Discipline**:
-   - Primary Display Sans: Inter Display / Apple System Sans (`font-sans`) with tight tracking (`tracking-tight`) for high-impact authority.
-   - Technical Monospace: JetBrains Mono / SF Mono (`font-mono`) for all filenames, SHA-256 hashes, commands, RAM figures, and socket metrics.
-   - **Tabular Figures Invariant**: Mandatory `font-feature-settings: 'tnum' 1` (`font-mono` / `tabular-nums`) across all prices, counters, dates, and tables.
-3. **Composition & Visual Gravity**:
-   - Intentional negative space. Balanced bento layouts with a single primary focal point per screen.
-   - Line length restricted to 65-75 characters (`max-w-2xl` to `max-w-3xl`) for effortless technical scanning.
-4. **Disciplined Color Theory (The Strict 3-Token System)**:
-   - **Role 1 (Structural Canvas)**: Slate / Charcoal / Obsidian (`#020617`, `#0b111b`, `#0f172a`, `#1e293b`, `#334155`, `#f8fafc`).
-   - **Role 2 (Sovereign Accent)**: Electric Emerald (`#10b981` / `text-emerald-500` / `bg-emerald-500/10` / `border-emerald-500/30`) for verified status, active tabs, and primary CTAs.
-   - **Role 3 (Cyber Telemetry)**: Precision Sky Blue (`#0ea5e9` / `text-sky-400` / `bg-sky-500/10` / `border-sky-500/30`) for hardware architecture, AES-256 encryption tags, and memory benchmarks.
-   - **Strict Bans**: BANNED pink/rose pills (`bg-rose-50`, `text-rose-700`), coral-red monospace filenames, and arbitrary purple/orange button clouds.
-5. **Modern Web Tools & Baseline APIs (Google Chrome Guidance)**:
-   - Modern semantic HTML (`<dialog>`, `<nav>`, `<main>`, `<section>`, `<article>`).
-   - Container queries and modern CSS nesting where appropriate.
-   - Fetch priority and native lazy loading (`loading="lazy"`, `decoding="async"`) on all offscreen media.
-6. **Responsive Layouts & Device Ergonomics**:
-   - Mobile Portrait (375px & 390px): Thumb-reachable bottom actions, single-column stacked hierarchy.
-   - Tablet Portrait (768px): 2-column balanced Bento grids.
-   - Desktop & 4K (1280px to 1920px+): High-density multi-column Bento grids with generous breathing room.
-   - Touch targets must always be >= 44x44px.
-7. **User Experience (UX) & Cognitive Load Reduction**:
-   - Anticipate user intent: 1-click direct checkout with auto-applied Pioneer passes.
-   - Progressive disclosure: Essential hardware telemetry and pricing visible upfront; deep architectural specs tucked behind seamless modal views.
-8. **User Interface (UI) Precision & 5-State Completeness**:
-   - Every interactive component (buttons, inputs, cards, tabs) must explicitly define all 5 states:
-     1. `Default`: Resting hairline border and clean surface.
-     2. `Hover`: Subtle 1px border luminance (`border-slate-300` or `border-emerald-500/50`) + soft elevation shadow.
-     3. `Active / Pressed`: Mechanical tactile depression (0ms delay).
-     4. `Focus-Visible`: Unmistakable 2px Emerald outline ring for keyboard users (`focus-visible:ring-2 focus-visible:ring-emerald-500`).
-     5. `Disabled`: Reduced opacity (`opacity-50 pointer-events-none`) with clear tooltip rationale.
-9. **Search Engine Optimization (SEO) & Structured Data**:
-   - Valid JSON-LD Schema (`SoftwareApplication`, `Organization`, `WebSite`) on every page.
-   - Semantic heading hierarchy (`h1` -> `h2` -> `h3`) with zero heading-level skips.
-   - OpenGraph and Twitter card metadata on all commercial routes.
+Before authoring a single line of CSS or HTML for any page, the agent must calibrate the 5 core dials:
 
-### Strategic Mindset & Soft Skills
-10. **Patience & Methodical Refinement**: Never rush code changes. Every commit must be tested against Strix and Aegis sentinels.
-11. **Collaboration & Empathy**: Respect the user's vision. When the user requests a change, listen to the underlying intent and elevate it to world-class craftsmanship.
-12. **Strategic Business Thinking**: Every design element must serve a commercial purpose -- building institutional trust, proving zero-telemetry security, or driving perpetual license acquisition.
-13. **Attention to Detail**: Hairline 1px borders, pixel-perfect alignment, zero widowed text strings, and zero visual friction.
-14. **Continuous Learning**: Continually integrate modern web standards, security patches, and performance optimizations.
+| Dial | Calibration Parameter | Mandated RQL Setting |
+| :--- | :--- | :--- |
+| **Dial 1: Variance** | Restrained vs. Experimental | **100% Institutional Restraint**: Predictable, rock-solid, financial-grade engineering grid. No bizarre layout shifts. |
+| **Dial 2: Motion** | Still vs. Fluid vs. Playful | **Physical Stillness**: Zero scale jumps, zero rubber bounces; feedback is 100% 1px border luminance and shadow elevation. |
+| **Dial 3: Density** | Airy vs. Compact / High-Density | **Bloomberg / Linear High-Density**: Compact single-row Command Ribbon, tight data cells, zero wasted vertical whitespace. |
+| **Dial 4: Asset Fidelity** | Abstract vs. Photographic vs. Technical | **Authentic Technical Telemetry**: Raw PE64 binaries, SHA-256 hashes, verified screenshots, and architecture diagrams. No generic stock art. |
+| **Dial 5: Color Saturation** | Monochrome vs. Restrained vs. High-Vibrancy | **Strict 3-Role Palette**: Obsidian Slate Foundation + Sovereign Emerald (#10b981) + Precision Sky Blue (#0ea5e9). |
 
 ---
 
@@ -83,6 +45,7 @@ Elements must feel physically grounded like professional Bloomberg trading termi
 
 ### The Mandated Interaction Standard
 - **Hover Feedback**: Strictly **subtle 1px border luminance** (`border-slate-200` to `border-slate-400` in light mode, or `border-slate-800` to `border-emerald-500/50` in dark mode) paired with soft shadow elevation (`shadow-xs` to `shadow-md`). Zero pixel displacement.
+- **Mobile Touch Invariant**: All desktop hover rules MUST be wrapped inside `@media (hover: hover) and (pointer: fine)` to prevent "sticky hover" locks on mobile taps.
 - **Click Affordance**: Sub-pixel tactile feedback on `pointerdown` (0ms delay, mechanical click feel).
 - **Smoothness**: Native high-performance transitions: `transition: border-color 0.15s ease, box-shadow 0.15s ease`.
 - **Keyboard Power**: Every interactive element supports full keyboard navigation (Tab cycling, `Enter`/`Space` activation, `Escape` modal dismissal). Raycast Command Palette accessible everywhere via `Ctrl+K` or `/`.
@@ -93,17 +56,67 @@ Elements must feel physically grounded like professional Bloomberg trading termi
 
 Interfaces are organized like financial and engineering workstations: high information density, razor-sharp scannability, and zero visual clutter.
 
-### Component & Card Standards
-- **Cards**: Single rounded corner scale (`rounded-2xl` for standard cards, `rounded-3xl` for flagship containers). 1px hairline border (`border-slate-200/90` or `border-white/10`).
-- **Command Ribbon**: Single-row compact bar (52px max height) consolidating category tabs, real-time live search, and view switcher (Cards vs. Technical Table). No double-box stacking that wastes vertical viewport space.
-- **Action Hierarchy**:
-  - **Dominant Primary CTA**: Full-width high-contrast button with discount auto-applied (e.g. `Acquire Commercial License - $179`).
-  - **Secondary Actions**: Clean, low-friction secondary links (e.g. `Domestic UPI & GST` | `7-Day Specs`).
-- **Aspect Ratios**: Every preview, image, and canvas MUST define explicit layout dimensions (`aspect-video`, `w-full h-full`) to guarantee zero Cumulative Layout Shift (`CLS = 0`).
+### Primary Action Singularity (Hick's Law Enforcement)
+Every card, bento cell, or modal must have **EXACTLY ONE dominant primary action**:
+- **Primary CTA**: High-contrast Sovereign Emerald or Solid Charcoal button (e.g., `Acquire Commercial License - $179`).
+- **Secondary Actions**: Low-visual-weight hairline outline or text links (e.g., `Domestic UPI Desk` | `7-Day Specs`).
+- **Media Previews**: Play overlays are integrated directly into thumbnail media containers with optical centering, never competing with checkout CTAs.
+
+### Optical Alignment vs. Mathematical Alignment (Jakub Krehel Rule)
+- **Optical Play Centering**: Triangular play glyphs must be offset by `+1.5px` to `+2px` on the X-axis (`ml-0.5` or `translate-x-[1.5px]`) because a triangle's geometric center is left of its visual mass center.
+- **Concentric Border Radii**: Nested child elements must scale down border-radius relative to the parent card:
+  - If Card = `rounded-2xl` (16px) with 16px padding, inner media container = `rounded-xl` (12px).
+  - Outer container = `rounded-3xl` (24px) -> inner card = `rounded-2xl` (16px).
+- **Badge Baseline Alignment**: Monospace tags (`font-mono`) next to display titles (`font-sans`) must use optical vertical-alignment (`inline-flex items-center`) to prevent 1px baseline droop.
+
+### Modal Scrollbar Layout Shift Prevention (CLS = 0.000)
+When opening any modal dialog:
+- Never simply inject `overflow: hidden` on `<body>` without compensating for the removed 15px desktop scrollbar.
+- Always apply scrollbar gutter compensation (`scrollbar-gutter: stable` or calculate `padding-right` offset) so the background page does not violently jump 15px horizontally.
 
 ---
 
-## 4. Universal Multi-Page Ecosystem Sync
+## 4. The 19 Web Designer Competencies (Baked into RQL Engineering)
+
+### Creative & Technical Disciplines
+1. **Visual Design & Gestalt Principles**: Proximity, similarity, and figure-ground separation in all Bento cards.
+2. **Typography Hierarchy**:
+   - Primary Display Sans: Inter Display / Apple System Sans (`font-sans`) with tight tracking (`tracking-tight`).
+   - Technical Monospace: JetBrains Mono / SF Mono (`font-mono`) for all filenames, hashes, commands, and metrics.
+   - **Tabular Figures Invariant**: Mandatory `font-feature-settings: 'tnum' 1` (`font-mono` / `tabular-nums`) across all prices, counters, dates, and tables.
+   - **Widow Prevention**: Apply `text-wrap: balance` to all headers and `text-wrap: pretty` to body copy.
+3. **Composition & Visual Gravity**: Line lengths capped at 65-75 characters (`max-w-2xl` to `max-w-3xl`).
+4. **Disciplined Color Theory (The Strict 3-Token System)**:
+   - **Role 1 (Structural Canvas)**: Slate / Charcoal / Obsidian (`#020617`, `#0b111b`, `#0f172a`, `#1e293b`, `#334155`, `#f8fafc`).
+   - **Role 2 (Sovereign Accent)**: Electric Emerald (`#10b981` / `text-emerald-500` / `bg-emerald-500/10` / `border-emerald-500/30`) for verified status, active tabs, and primary CTAs.
+   - **Role 3 (Cyber Telemetry)**: Precision Sky Blue (`#0ea5e9` / `text-sky-400` / `bg-sky-500/10` / `border-sky-500/30`) for hardware architecture, AES-256 encryption tags, and memory benchmarks.
+   - **Strict Bans**: BANNED pink/rose pills (`bg-rose-50`, `text-rose-700`), coral-red monospace filenames, and arbitrary purple/orange button clouds.
+5. **Modern Web Tools & Baseline APIs (Google Chrome Guidance)**: Semantic HTML, modern dialog elements, fetch priority, and native lazy loading (`loading="lazy"`, `decoding="async"`).
+6. **Responsive Layouts & Device Ergonomics**:
+   - Mobile Portrait (375px & 390px): Thumb-reachable bottom actions, single-column stacked hierarchy.
+   - Tablet Portrait (768px): 2-column balanced Bento grids.
+   - Desktop & 4K (1280px to 1920px+): High-density multi-column Bento grids with generous breathing room.
+   - Touch targets must always be >= 44x44px.
+7. **User Experience (UX) & Cognitive Load Reduction**: 1-click direct checkout with auto-applied Pioneer passes.
+8. **User Interface (UI) Precision & 5-State Completeness**:
+   Every interactive component (buttons, inputs, cards, tabs) must explicitly define all 5 states:
+   1. `Default`: Resting hairline border and clean surface.
+   2. `Hover`: Subtle 1px border luminance (`border-slate-300` or `border-emerald-500/50`) + soft elevation shadow.
+   3. `Active / Pressed`: Mechanical tactile depression (0ms delay).
+   4. `Focus-Visible`: Unmistakable 2px Emerald outline ring for keyboard users (`focus-visible:ring-2 focus-visible:ring-emerald-500`).
+   5. `Disabled`: Reduced opacity (`opacity-50 pointer-events-none`) with clear tooltip rationale.
+9. **Search Engine Optimization (SEO) & Structured Data**: Valid JSON-LD Schema on every page, semantic heading hierarchy (`h1` -> `h2` -> `h3`), OpenGraph metadata.
+
+### Strategic Mindset & Soft Skills
+10. **Patience & Methodical Refinement**: Never rush code changes. Every commit must be tested against Strix and Aegis sentinels.
+11. **Collaboration & Empathy**: Listen to the underlying intent and elevate it to world-class craftsmanship.
+12. **Strategic Business Thinking**: Every design element must serve a commercial purpose -- building institutional trust, proving zero-telemetry security, or driving perpetual license acquisition.
+13. **Attention to Detail**: Hairline 1px borders, pixel-perfect alignment, zero widowed text strings, and zero visual friction.
+14. **Continuous Learning**: Continually integrate modern web standards, security patches, and performance optimizations.
+
+---
+
+## 5. Universal Multi-Page Ecosystem Sync
 
 The design system is not applied piecemeal. Every page in the repository must feel like part of the exact same sovereign operating system:
 
@@ -117,23 +130,17 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 5. Production Invariants & Security Sentinel
+## 6. Pre-Launch 10-Point Failure Checklist
 
-Before any file is merged or deployed, it must satisfy all 4 invariant rules:
+Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
-1. **100% 7-Bit ASCII Compliance**: Zero non-ASCII characters, zero unicode emojis in code, zero mojibake. Verified by Strix scanner in `aegis_watchdog.ps1`.
-2. **Cumulative Layout Shift (CLS = 0.000)**: All dynamic blocks, images, and embeds must reserve explicit geometric dimensions.
-3. **Zero JavaScript / JSON-LD Errors**: All scripts must be syntactically valid and pass automated Node.js AST parsing.
-4. **Autonomous Sentinel Pass**: `aegis_watchdog.ps1` must pass 13/13 tests (Strix integrity, PentAGI edge probes, directory checks).
-
----
-
-## The 5 Continuous Steering Loops (Craft & Audit)
-
-Whenever building or refining any page, run through the 5 loops:
-
-- **`/craft`**: Build deliberately from content -> semantics -> spatial hierarchy -> typography -> rock-solid hover.
-- **`/critique`**: Hunt for contrast failures, hierarchy ambiguity, alignment drift, and AI slop cliches.
-- **`/audit`**: Test on real viewports: Mobile (375px/390px), Tablet (768px), and Desktop (1440px+). Check touch targets (>= 44x44px).
-- **`/polish`**: Refine 1px hairline borders, active rings, and instant feedback affirmations.
-- **`/distill`**: Apply the 20% Reduction Rule: *What 20% of redundant badges, borders, or lines can we remove to make the interface 2x clearer and more authoritative?*
+1. [ ] **Widow Check**: Are all headers protected by `text-wrap: balance` with zero widowed orphan words?
+2. [ ] **Accessibility Check**: Does every icon-only button (video play, search trigger, close button) possess an explicit `aria-label`?
+3. [ ] **Tabular Numerals**: Do all prices, memory counters, hashes, and dates enforce `font-feature-settings: 'tnum' 1`?
+4. [ ] **Touch Target Ergonomics**: Are all clickable buttons, tabs, and inputs >= 44x44px?
+5. [ ] **Zero Wobble Verification**: Are all `hover:scale-*`, `hover:-translate-y-*`, and rubber-band bounce transitions eliminated?
+6. [ ] **Mobile Sticky-Hover Guard**: Are all desktop hover styles scoped within `@media (hover: hover) and (pointer: fine)`?
+7. [ ] **Modal Scrollbar Shift Guard**: Do all modal dialogs preserve scrollbar gutter width to prevent 15px layout jerks?
+8. [ ] **Color Discipline**: Are all random pink, purple, and orange pills completely purged in favor of the Slate/Emerald/Sky system?
+9. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+10. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
