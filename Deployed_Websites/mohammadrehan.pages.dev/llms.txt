@@ -7,6 +7,10 @@ Rehan Quant Lab (founded by Mohammad Rehan, Systems Architect in Patna, Bihar, I
 - [Official Portal](https://rehanquantlab.com/): Master executive portal and system overview.
 - [Commercial Store](https://rehanquantlab.com/store.html): The complete catalog of 31 Commercial Desktop Workstations with direct Gumroad perpetual license acquisition.
 - [Systems Portfolio](https://rehanquantlab.com/projects.html): Production software architecture, performance metrics, and quantitative research.
+- [Interactive Tools & Utilities]:
+  - Global Raycast Command Palette: Instant fuzzy keyboard navigation (Ctrl+K / Cmd+K / /) across all 31 suites, live tools, and architectural docs.
+  - Sovereign SaaS-Savings & ROI Calculator: Interactive real-time multi-currency ($ USD / Rs INR) financial modeling on /store.html calculating 3-year enterprise capital preservation.
+  - Client-Side Web Crypto SHA-256 Authenticator: Zero-upload, in-RAM cryptographic binary verification widget on /security.html matching downloaded .exe files against official release hashes.
 - [Security Architecture](https://rehanquantlab.com/security.html): Air-gapped compliance, SHA-256 binary provenance, HIPAA/GDPR/DPDP compliance documentation.
 - [RQL Aegis Platform](https://rehanquantlab.com/aegis.html): Enterprise deterministic state kernel and cryptographic ledger framework.
 - [Career & Technical Dossier](https://rehanquantlab.com/experience.html): Founder background, engineering milestones, and technical certifications.

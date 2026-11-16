@@ -938,6 +938,12 @@ p, li, span, a {
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
 <div class="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+<!-- Global Spotlight / Command Palette Trigger (Ctrl+K) -->
+<button onclick="window.openRQLPalette()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 text-xs font-mono font-medium transition cursor-pointer shadow-2xs hover:border-slate-400 group" title="Open Global Command Palette (Ctrl+K or /)">
+<i class="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-800 transition" data-lucide="search"></i>
+<span class="hidden md:inline text-slate-600 font-semibold group-hover:text-slate-950">Search</span>
+<kbd class="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-white border border-slate-300 rounded text-slate-600 font-mono shadow-2xs">Ctrl K</kbd>
+</button>
 <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs shadow-indigo-600/20 transition hover:scale-102 items-center gap-1.5 btn-spring">
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
@@ -980,7 +986,21 @@ p, li, span, a {
     <div>
       <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 mb-3">Flagship Portals</div>
       <nav class="space-y-2">
-        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-slate-300 text-slate-900 transition group btn-spring shadow-2xs">
+                <!-- Global Quick Search (Command Palette) -->
+        <button onclick="closeSideDrawer(); window.openRQLPalette();" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white transition group btn-spring shadow-xs cursor-pointer mb-2">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="search"></i></div>
+            <div class="text-left">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Quick Search</span>
+                <span class="text-[10px] font-mono bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded border border-slate-700">31 Suites</span>
+              </div>
+              <div class="text-[11px] text-slate-400">Raycast-style spotlight search</div>
+            </div>
+          </div>
+          <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono">Ctrl K</kbd>
+        </button>
+<a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-slate-300 text-slate-900 transition group btn-spring shadow-2xs">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>

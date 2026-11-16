@@ -295,6 +295,12 @@
 
 <!-- Right Header Action CTAs + Side Drawer Trigger -->
 <div class="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+<!-- Global Spotlight / Command Palette Trigger (Ctrl+K) -->
+<button onclick="window.openRQLPalette()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 text-xs font-mono font-medium transition cursor-pointer shadow-2xs hover:border-slate-400 group" title="Open Global Command Palette (Ctrl+K or /)">
+<i class="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-800 transition" data-lucide="search"></i>
+<span class="hidden md:inline text-slate-600 font-semibold group-hover:text-slate-950">Search</span>
+<kbd class="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-white border border-slate-300 rounded text-slate-600 font-mono shadow-2xs">Ctrl K</kbd>
+</button>
 <a href="https://calendly.com/rehanquantlab" target="_blank" rel="noopener noreferrer" class="hidden sm:flex px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold font-heading shadow-xs shadow-indigo-600/20 transition hover:scale-102 items-center gap-1.5 btn-spring">
 <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="calendar"></i>
 <span>Schedule Briefing</span>
@@ -337,7 +343,21 @@
     <div>
       <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 mb-3">Flagship Portals</div>
       <nav class="space-y-2">
-        <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-slate-300 text-slate-900 transition group btn-spring shadow-2xs">
+                <!-- Global Quick Search (Command Palette) -->
+        <button onclick="closeSideDrawer(); window.openRQLPalette();" class="w-full flex items-center justify-between p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white transition group btn-spring shadow-xs cursor-pointer mb-2">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="search"></i></div>
+            <div class="text-left">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span>Quick Search</span>
+                <span class="text-[10px] font-mono bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded border border-slate-700">31 Suites</span>
+              </div>
+              <div class="text-[11px] text-slate-400">Raycast-style spotlight search</div>
+            </div>
+          </div>
+          <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 border border-slate-700 rounded text-slate-300 font-mono">Ctrl K</kbd>
+        </button>
+<a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-slate-300 text-slate-900 transition group btn-spring shadow-2xs">
           <div class="flex items-center gap-3">
             <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center shrink-0"><i class="w-4 h-4" data-lucide="home"></i></div>
             <div>
@@ -606,6 +626,94 @@ document.addEventListener('keydown', function(e) {
             <span class="w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0 font-bold text-[10px]">3</span>
             <span>Enjoy lifetime local execution with 0 bytes of cloud telemetry.</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- ======================================================== -->
+    <!-- INTERACTIVE SOVEREIGN CRYPTOGRAPHIC HASH VERIFIER WORKSTATION -->
+    <!-- 100% Client-Side In-RAM Verification - Zero Server Upload -->
+    <!-- ======================================================== -->
+    <div id="crypto-verifier-section" class="bg-slate-950 text-white rounded-3xl p-6 sm:p-10 mb-12 border border-slate-800 shadow-2xl relative overflow-hidden bento-card-spring">
+      <!-- Ambient Laser Glow -->
+      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.22),rgba(99,102,241,0.12),transparent_75%)]"></div>
+      <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-25"></div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold mb-3 shadow-md">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>IN-BROWSER CRYPTOGRAPHIC AUDIT &bull; ZERO UPLOAD</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black font-heading text-white tracking-tight">
+            Client-Side SHA-256 Binary Authenticator
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
+            Drag and drop any downloaded RQL setup executable (<code class="text-emerald-400 font-mono">Setup.exe</code>) to verify bit-level cryptographic authenticity before launching. Computed entirely inside browser RAM via W3C Web Crypto API. Zero bytes are uploaded.
+          </p>
+        </div>
+        <div class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 font-mono text-xs text-slate-300 flex items-center gap-2 shrink-0">
+          <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="shield-check"></i>
+          <span>SubtleCrypto SHA-256 Active</span>
+        </div>
+      </div>
+
+      <!-- Drag & Drop Zone + Result Card -->
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6">
+        <div class="lg:col-span-7">
+          <div id="crypto-drop-zone" onclick="document.getElementById('crypto-file-input').click()" class="border-2 border-dashed border-slate-700 hover:border-emerald-500 rounded-2xl p-8 sm:p-10 text-center cursor-pointer transition-all bg-slate-900/60 hover:bg-slate-900/90 group">
+            <input type="file" id="crypto-file-input" class="hidden" accept=".exe,.bin,.zip" onchange="handleCryptoFile(event)" />
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="w-7 h-7 text-emerald-400" data-lucide="file-check-2"></i>
+            </div>
+            <div class="text-sm sm:text-base font-bold text-white font-heading">
+              Drop your downloaded <code class="text-emerald-400 font-mono">.exe</code> file here, or <span class="text-emerald-400 underline">browse files</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 font-mono">
+              Pure client-side streaming &bull; 100% Private in RAM &bull; Bit-for-bit mathematical verification
+            </p>
+          </div>
+        </div>
+
+        <!-- Live Results & Match Status -->
+        <div class="lg:col-span-5 flex flex-col justify-between p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+          <div>
+            <div class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider mb-1 flex items-center justify-between">
+              <span>Authentication Status</span>
+              <span id="crypto-audit-timing" class="text-cyan-400 font-normal">Awaiting Executable</span>
+            </div>
+            <div id="crypto-audit-badge" class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono text-slate-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-slate-500"></span>
+              <span id="crypto-audit-msg">Drop an .exe above or paste a hash below</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider mb-1">
+              Computed SHA-256 Digest
+            </div>
+            <div id="crypto-hash-display" class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-500 break-all select-all font-semibold">
+              ----------------------------------------------------------------
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-xs font-mono">
+            <span class="text-slate-400">Registry Match:</span>
+            <span id="crypto-match-name" class="font-bold text-white truncate max-w-[200px]">None</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-Time Hash & Product Search Filter Bar -->
+      <div class="relative z-10 mt-6 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+        <div class="flex-1 relative">
+          <i class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" data-lucide="search"></i>
+          <input type="text" id="registry-search-input" oninput="filterRegistryTable(this.value)" placeholder="Search 31 suites, .exe names, or paste 64-char SHA-256 hash to filter..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs font-mono focus:outline-none focus:border-emerald-500 transition" />
+        </div>
+        <div class="text-[11px] font-mono text-slate-400 shrink-0 flex items-center gap-2">
+          <span>Showing:</span>
+          <span id="filtered-count" class="font-bold text-emerald-400">31</span>
+          <span>of 31 verified suites</span>
         </div>
       </div>
     </div>
@@ -1836,6 +1944,168 @@ document.addEventListener('keydown', function(e) {
       }
     }
   </script>
+  
+  <!-- RQL Sovereign SHA-256 Verifier & Table Filter Engine -->
+  <script>
+  (function() {
+    var RQL_REGISTRY = [
+      { num: "01", title: "RQL DocumentShield", id: "rql-documentshield", exe: "RQL_DocumentShield_Master_Setup.exe", hash: "E63F64727753F92A285AA643A8BE1CDA39CF4DB14E926D6D921CF9A004A1E735" },
+      { num: "02", title: "RQL WhisperVault", id: "rql-whispervault", exe: "RQL_WhisperVault_Master_Setup.exe", hash: "8E9B94C9F133299EDE57284E49E97F7116705B2D7AFC9F4814A3150CD5280A3E" },
+      { num: "03", title: "RQL RetailPOS", id: "rql-retailpos", exe: "RQL_RetailPOS_Master_Setup.exe", hash: "1805C57869FF9DA416D000E6D59BFDFD082B66C1F6F60B8BB99D5C8538E5340C" },
+      { num: "04", title: "RQL StoreChain", id: "rql-storechain", exe: "RQL_StoreChain_Master_Setup.exe", hash: "05501BB5855803C286F6EF837E768C8F86E519BF274F0A2105F8285C129A4731" },
+      { num: "05", title: "RQL Conduit", id: "rql-conduit", exe: "RQL_Conduit_Master_Setup.exe", hash: "8C12D3154F81855FA91A84A44DE2465D4056CC24368927DDA67B25D61FC3D25A" },
+      { num: "06", title: "RQL HashCheck", id: "rql-hashcheck", exe: "RQL_HashCheck_Master_Setup.exe", hash: "47D0BD9EBF8192B9B4B4D6F70413031BFDEB012122E997635DF8CDBE65EBDD1A" },
+      { num: "07", title: "RQL QRStudio", id: "rql-qrstudio", exe: "RQL_QRStudio_Master_Setup.exe", hash: "DE2F8DFAD7BEF708900F42D8B6AD581B0E3032B3599AB9A4949173F6ED90FDFA" },
+      { num: "08", title: "RQL TextDiff", id: "rql-textdiff", exe: "RQL_TextDiff_Master_Setup.exe", hash: "FB61B6DF3576C73F4C680A550A424418DC8F3B7F10D71AECF353740FAC4522E6" },
+      { num: "09", title: "RQL Renamer", id: "rql-renamer", exe: "RQL_Renamer_Master_Setup.exe", hash: "0A040B5EDD2FB0356C2D7A0D295123384880F6E7C516ECABDA2BB77F3161BB42" },
+      { num: "10", title: "RQL TagEditor", id: "rql-tageditor", exe: "RQL_TagEditor_Master_Setup.exe", hash: "14C40ADBDA2789C7CE525A1CB793D428E26B5D55BA8E1626C788F6B49849B735" },
+      { num: "11", title: "RQL FontViewer", id: "rql-fontviewer", exe: "RQL_FontViewer_Master_Setup.exe", hash: "33E6DF2EC5EF638D15844A471AD1594CB97A172346A33306A279C69B05FB498A" },
+      { num: "12", title: "RQL DPDPShield", id: "rql-dpdpshield", exe: "RQL_DPDPShield_Master_Setup.exe", hash: "6B96158CE391B19F379161F6596EBC50FC10EAAB90E6919024313DC6BAED43D5" },
+      { num: "13", title: "RQL PriceTag", id: "rql-pricetag", exe: "RQL_PriceTag_Master_Setup.exe", hash: "B2B9CFC2906E97FCC5FA6C3788C9799BD89DDB3AE6CFC915E2925C5BA4528C19" },
+      { num: "14", title: "RQL InvoiceGen", id: "rql-invoicegen", exe: "RQL_InvoiceGen_Master_Setup.exe", hash: "9EA4A147DC961AAB5B014DF4712FD837680B5CFA4619F91912D142F2303B55DF" },
+      { num: "15", title: "RQL CSVFormat", id: "rql-csvformat", exe: "RQL_CSVFormat_Master_Setup.exe", hash: "FC28906D306CFB1A8BE79A1030D381E342FE2DBEBF7FEFE39C7142CFDA1E96E9" },
+      { num: "16", title: "RQL PDFMerge", id: "rql-pdfmerge", exe: "RQL_PDFMerge_Master_Setup.exe", hash: "222AA5AC602B7EFC5733FFEF77C048DF8C9CF110638777B1AFE4A5B425408548" },
+      { num: "17", title: "RQL TaxLedger", id: "rql-taxledger", exe: "RQL_TaxLedger_Master_Setup.exe", hash: "7F2CBDE5F1DB5B23E2483CB08B3033DA0EEB3892A2ED5AF5A809A0539F8F499B" },
+      { num: "18", title: "RQL FileShredder", id: "rql-fileshredder", exe: "RQL_FileShredder_Master_Setup.exe", hash: "470DCB5912155668EF6E0F7CB1001AC9406B2EA3C639B28288177524EB098595" },
+      { num: "19", title: "RQL ClipVault", id: "rql-clipvault", exe: "RQL_ClipVault_Master_Setup.exe", hash: "CC93D84A3566EFD34C352A89C921D007D4377EBB7ABDAD9ACE9C32308660D058" },
+      { num: "20", title: "RQL ImageBatch", id: "rql-imagebatch", exe: "RQL_ImageBatch_Master_Setup.exe", hash: "5465420D195551BF704D26AD0711E076DB6F0491FC72F63E08094257879606C2" },
+      { num: "21", title: "RQL AudioExtract", id: "rql-audioextract", exe: "RQL_AudioExtract_Master_Setup.exe", hash: "FC46615AD4B39B165A430E9EB5C33B69BE0D2A5B8A81D2C6DE1DFA6DDCF291BD" },
+      { num: "22", title: "RQL SubtitleSync", id: "rql-subtitlesync", exe: "RQL_SubtitleSync_Master_Setup.exe", hash: "F029E8A1147EE6AF83444DA3246AE54A84B351A537FBE81B28D0A690FFAC9085" },
+      { num: "23", title: "RQL SpaceMap", id: "rql-spacemap", exe: "RQL_SpaceMap_Master_Setup.exe", hash: "BA5379406DA8CDE92710E623A80DE746395F42613D30797BCC392E6373941236" },
+      { num: "24", title: "RQL DocProtect", id: "rql-docprotect", exe: "RQL_DocProtect_Master_Setup.exe", hash: "499B978C8DBC0C820A005ADEE40067785624FCF0AA7E988B97486FA7E31C6620" },
+      { num: "25", title: "RQL CashDrawer", id: "rql-cashdrawer", exe: "RQL_CashDrawer_Master_Setup.exe", hash: "22DF6CDB3DC22B0A46526BBEB3AA84196199A93DC0A4DDED97354C78367F6539" },
+      { num: "26", title: "RQL ReceiptPrinter", id: "rql-receiptprinter", exe: "RQL_ReceiptPrinter_Master_Setup.exe", hash: "1023C97CB5BFC2780C37F6F3B53460216CB5ADCBE75EC7DAF727B3B47EECADA0" },
+      { num: "27", title: "RQL ClauseForge", id: "rql-clauseforge", exe: "RQL_ClauseForge_Master_Setup.exe", hash: "4B0FFFD6EE6C5D62C4491659A64286490DE0F31C81FAB2137D914E94515A43EE" },
+      { num: "28", title: "RQL ArchiveMaster", id: "rql-archivemaster", exe: "RQL_ArchiveMaster_Master_Setup.exe", hash: "731F38AF5BB86ACD85D3BB4B79923C52206576C97A041212E449914510B85FAB" },
+      { num: "29", title: "RQL SocketShield", id: "rql-socketshield", exe: "RQL_SocketShield_Master_Setup.exe", hash: "35C9615DB16E10AFACEC5F1FF9B1E7F4A646782BA384F2662FE303144A743DCD" },
+      { num: "30", title: "RQL PingPulse", id: "rql-pingpulse", exe: "RQL_PingPulse_Master_Setup.exe", hash: "71C0B91741D1E9B80CF5E458709100F3D88616C0E6539D853E7532B4DD3152C8" },
+      { num: "31", title: "RQL FolderSync", id: "rql-foldersync", exe: "RQL_FolderSync_Master_Setup.exe", hash: "CC7C58DAF838824CAD4C216CC48D1A1294C7507A284869881EF7596998C8CEDF" }
+    ];
+
+    window.filterRegistryTable = function(query) {
+      var q = (query || '').trim().toUpperCase();
+      var rows = document.querySelectorAll('tbody tr');
+      var matchedCount = 0;
+
+      rows.forEach(function(row) {
+        var text = (row.textContent || '').toUpperCase();
+        if (!q || text.indexOf(q) !== -1) {
+          row.style.display = '';
+          matchedCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      var countEl = document.getElementById('filtered-count');
+      if (countEl) countEl.innerText = matchedCount;
+    };
+
+    window.handleCryptoFile = function(e) {
+      var file = e.target.files && e.target.files[0];
+      if (!file) return;
+      processFileHash(file);
+    };
+
+    function processFileHash(file) {
+      var badge = document.getElementById('crypto-audit-badge');
+      var timing = document.getElementById('crypto-audit-timing');
+      var hashDisplay = document.getElementById('crypto-hash-display');
+      var matchName = document.getElementById('crypto-match-name');
+
+      if (badge) {
+        badge.className = 'p-3 rounded-xl bg-slate-900 border border-cyan-500/50 text-xs font-mono text-cyan-300 flex items-center gap-2';
+        badge.innerHTML = '<span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span><span>Computing SHA-256 for ' + file.name + ' (' + (file.size / (1024*1024)).toFixed(2) + ' MB)...</span>';
+      }
+      if (timing) timing.innerText = 'Streaming RAM Bytes...';
+
+      var startTime = performance.now();
+      var reader = new FileReader();
+
+      reader.onload = function(evt) {
+        var buffer = evt.target.result;
+        crypto.subtle.digest('SHA-256', buffer).then(function(hashBuffer) {
+          var hashArray = Array.from(new Uint8Array(hashBuffer));
+          var hex = hashArray.map(function(b) { return b.toString(16).padStart(2, '0'); }).join('').toUpperCase();
+          var duration = Math.round(performance.now() - startTime);
+
+          if (hashDisplay) {
+            hashDisplay.innerText = hex;
+            hashDisplay.className = 'p-3 rounded-xl bg-slate-950 border border-emerald-500/50 text-[11px] font-mono text-emerald-300 break-all select-all font-bold';
+          }
+          if (timing) timing.innerText = duration + ' ms Client-Side';
+
+          // Match against RQL Registry
+          var matched = RQL_REGISTRY.find(function(item) {
+            return item.hash === hex;
+          });
+
+          if (matched) {
+            if (badge) {
+              badge.className = 'p-3 rounded-xl bg-emerald-950/80 border border-emerald-500 text-xs font-mono text-emerald-300 flex items-center gap-2';
+              badge.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span><span>100% BIT-FOR-BIT AUTHENTIC RQL RELEASE</span>';
+            }
+            if (matchName) {
+              matchName.innerHTML = '<span class="text-emerald-400 font-bold">' + matched.title + ' (' + matched.exe + ')</span>';
+            }
+            if (window.playTactileClick) window.playTactileClick('success');
+            // Auto-filter table to show the matched suite
+            var searchInput = document.getElementById('registry-search-input');
+            if (searchInput) {
+              searchInput.value = matched.exe;
+              window.filterRegistryTable(matched.exe);
+            }
+          } else {
+            if (badge) {
+              badge.className = 'p-3 rounded-xl bg-amber-950/80 border border-amber-500/70 text-xs font-mono text-amber-300 flex items-center gap-2';
+              badge.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span><span>UNREGISTERED HASH &bull; CHECK BUILD / SOURCE</span>';
+            }
+            if (matchName) {
+              matchName.innerHTML = '<span class="text-amber-400 font-medium">Custom / Non-Standard Binary</span>';
+            }
+            if (window.playTactileClick) window.playTactileClick('toggle');
+          }
+        }).catch(function(err) {
+          if (badge) {
+            badge.className = 'p-3 rounded-xl bg-rose-950 border border-rose-500 text-xs font-mono text-rose-300';
+            badge.innerText = 'Crypto calculation error: ' + err.message;
+          }
+        });
+      };
+
+      reader.readAsArrayBuffer(file);
+    }
+
+    // Drag and Drop Zone Listeners
+    var dropZone = document.getElementById('crypto-drop-zone');
+    if (dropZone) {
+      ['dragenter', 'dragover'].forEach(function(evtName) {
+        dropZone.addEventListener(evtName, function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('border-emerald-400', 'bg-slate-900');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach(function(evtName) {
+        dropZone.addEventListener(evtName, function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('border-emerald-400', 'bg-slate-900');
+        });
+      });
+
+      dropZone.addEventListener('drop', function(e) {
+        var dt = e.dataTransfer;
+        var files = dt.files;
+        if (files && files.length > 0) {
+          processFileHash(files[0]);
+        }
+      });
+    }
+  })();
+  </script>
+
   <script src="assets/lenis.min.js" defer></script>
   <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
