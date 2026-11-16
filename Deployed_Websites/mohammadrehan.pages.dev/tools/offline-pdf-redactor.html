@@ -76,6 +76,164 @@ tailwind.config = {
   ]
 }
 </script>
+<style id="rql-sovereign-invariants">
+/* RQL Sovereign Design System & Engineering Codex (200-Law Invariants) */
+:root, html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  scrollbar-gutter: stable;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+/* Heading & Paragraph Optical Typography */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Tabular Numerals & Monospace Telemetry */
+font-mono, .font-mono, [data-tabular], code, kbd, pre, table td, .price-display {
+  font-feature-settings: 'tnum' 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Skip-Ink Optical Underlines */
+a:not([class*="no-underline"]) {
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+/* Keyboard Beacon vs Mouse Focus */
+:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+:focus-visible {
+  outline: 2px solid #10b981 !important;
+  outline-offset: 2px !important;
+}
+
+/* Touch & Tap Ergonomics */
+button, a, [role="button"], .tab-btn, summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+button, [role="button"], .tab-btn, .badge-trigger, summary {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Sovereign Text Selection */
+::selection {
+  background: #065f46;
+  color: #ffffff;
+}
+code::selection, pre::selection {
+  background: #0369a1;
+  color: #ffffff;
+}
+
+/* Mobile Virtual Keyboard Auto-Zoom Defense */
+@media (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Cryptographic Word-Break & Hyphen Safety */
+.crypto-hash, .telemetry-code, [data-hash] {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  hyphens: none !important;
+}
+
+/* Reduced Motion Hard Invariant */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Border Survival (Windows Forced Colors) */
+@media (forced-colors: active) {
+  .bento-card, .command-ribbon-btn, [data-product-card], button {
+    border: 1px solid ButtonBorder !important;
+    outline: 1px solid transparent !important;
+  }
+}
+
+/* Increase Contrast Accessibility Override */
+@media (prefers-contrast: more) {
+  .bento-card, .command-ribbon-btn, [data-product-card] {
+    border-color: #64748b !important;
+  }
+  .text-slate-400 {
+    color: #f1f5f9 !important;
+  }
+}
+
+/* Display P3 Wide-Gamut Invariant */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-emerald-sovereign: color(display-p3 0.06 0.73 0.51);
+    --color-sky-precision: color(display-p3 0.05 0.65 0.91);
+  }
+}
+
+/* Deep-Link Target Highlight with Emerald Pulse */
+[id]:target, [data-product-card]:target {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25) !important;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Optical Text Box Trim */
+@supports (text-box-trim: both) {
+  .command-ribbon-btn, .badge-pill, [data-badge] {
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
+  }
+}
+
+/* Microscopic Scrollbar Track Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #020617;
+}
+
+/* Enterprise Print Stylesheet with URL Expansion */
+@media print {
+  nav, footer, button, .no-print, #rql-scroll-progress, #rql-back-to-top {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75rem;
+    color: #64748b;
+    word-break: break-all;
+  }
+}
+</style>
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -317,5 +475,113 @@ tailwind.config = {
   <script>
     if (window.lucide) { lucide.createIcons(); }
   </script>
+<script id="rql-runtime-engine">
+(function() {
+  'use strict';
+  // 1. Air-gap offline/online telemetry banner
+  function showAirGapToast(isOffline) {
+    var beacon = document.getElementById('rql-airgap-beacon');
+    if (!beacon) {
+      beacon = document.createElement('div');
+      beacon.id = 'rql-airgap-beacon';
+      beacon.style.cssText = 'position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:99999;padding:6px 14px;border-radius:9999px;font-family:ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:0.05em;transition:opacity 0.2s,transform 0.2s;pointer-events:none;';
+      document.body.appendChild(beacon);
+    }
+    if (isOffline) {
+      beacon.textContent = '[AIR-GAP ACTIVE: 100% Offline Mode - Local Verifiers Operational]';
+      beacon.style.background = '#064e3b';
+      beacon.style.color = '#34d399';
+      beacon.style.border = '1px solid #10b981';
+      beacon.style.opacity = '1';
+    } else {
+      beacon.textContent = '[ONLINE: Cloudflare Edge Connected]';
+      beacon.style.background = '#0f172a';
+      beacon.style.color = '#38bdf8';
+      beacon.style.border = '1px solid #0ea5e9';
+      setTimeout(function() {
+        if (beacon) beacon.style.opacity = '0';
+      }, 2500);
+    }
+  }
+  window.addEventListener('offline', function() { showAirGapToast(true); });
+  window.addEventListener('online', function() { showAirGapToast(false); });
+
+  // 2. Tab Visibility Management
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      if (window.rqlAudioContext && window.rqlAudioContext.state === 'running') {
+        window.rqlAudioContext.suspend();
+      }
+    } else {
+      if (window.rqlAudioContext && window.rqlAudioContext.state === 'suspended') {
+        window.rqlAudioContext.resume();
+      }
+    }
+  });
+
+  // 3. Back-to-Top Floating Anchor
+  var backToTopBtn = document.createElement('button');
+  backToTopBtn.id = 'rql-back-to-top';
+  backToTopBtn.setAttribute('aria-label', 'Return to top');
+  backToTopBtn.textContent = 'Top';
+  backToTopBtn.style.cssText = 'position:fixed;bottom:max(20px,env(safe-area-inset-bottom));right:20px;z-index:9000;padding:8px 14px;border-radius:8px;background:#0b111b;border:1px solid #1e293b;color:#94a3b8;font-family:ui-monospace,monospace;font-size:11px;font-weight:600;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.2s,border-color 0.2s;';
+  backToTopBtn.addEventListener('click', function() {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  });
+  document.body.appendChild(backToTopBtn);
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backToTopBtn.style.opacity = '1';
+      backToTopBtn.style.pointerEvents = 'auto';
+    } else {
+      backToTopBtn.style.opacity = '0';
+      backToTopBtn.style.pointerEvents = 'none';
+    }
+  }, { passive: true });
+
+  // 4. Secure Target Blank Hardening
+  var externalLinks = document.querySelectorAll('a[target="_blank"]');
+  for (var i = 0; i < externalLinks.length; i++) {
+    var rel = externalLinks[i].getAttribute('rel') || '';
+    if (!rel.includes('noopener')) rel += (rel ? ' ' : '') + 'noopener';
+    if (!rel.includes('noreferrer')) rel += ' noreferrer';
+    externalLinks[i].setAttribute('rel', rel);
+  }
+
+  // 5. Form Idempotency Locking
+  var forms = document.querySelectorAll('form');
+  for (var f = 0; f < forms.length; f++) {
+    forms[f].addEventListener('submit', function(e) {
+      var btn = this.querySelector('button[type="submit"]');
+      if (btn && !btn.disabled) {
+        btn.disabled = true;
+        btn.setAttribute('data-original-text', btn.textContent);
+        btn.textContent = '[TRANSMITTING...]';
+        setTimeout(function() {
+          btn.disabled = false;
+          var orig = btn.getAttribute('data-original-text');
+          if (orig) btn.textContent = orig;
+        }, 3000);
+      }
+    });
+  }
+
+  // 6. Speculative Internal Link Pre-fetching
+  document.addEventListener('pointerenter', function(e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (a && a.href && a.origin === window.location.origin && !a.href.includes('#')) {
+      var existing = document.querySelector('link[rel="prefetch"][href="' + a.href + '"]');
+      if (!existing) {
+        var link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = a.href;
+        document.head.appendChild(link);
+      }
+    }
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>
