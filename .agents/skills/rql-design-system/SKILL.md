@@ -919,6 +919,649 @@ Any embedded frame or video player must declare strict sandbox restrictions:
 <iframe sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer" loading="lazy"></iframe>
 ```
 
+### 92. CSS @layer Cascade Architecture
+Organize stylesheets into strict cascade layers to eliminate specificity wars without resorting to `!important`:
+```css
+@layer reset, base, components, utilities, overrides;
+```
+Ensures that utility tokens and system overrides cleanly take precedence over base component styles.
+
+### 93. CSS Subgrid Multi-Card Alignment (grid-template-rows: subgrid)
+Across multi-card Bento grids, card titles, telemetry rows, and CTAs must align horizontally across varying card content heights:
+```css
+.bento-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-auto-rows: auto;
+}
+.bento-card {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+```
+
+### 94. CSS Logical Properties Mandate
+Use CSS Logical Properties for internationalized spatial geometry:
+- Replace `margin-left` with `margin-inline-start`
+- Replace `margin-right` with `margin-inline-end`
+- Replace `padding-top` with `padding-block-start`
+- Replace `padding-bottom` with `padding-block-end`
+
+### 95. Dynamic Viewport Modernization (dvw, svh, lvh)
+Support all modern viewport dimensions:
+- Small viewport height (`100svh`): Height when address bar is expanded.
+- Large viewport height (`100lvh`): Height when address bar is collapsed.
+- Dynamic viewport height (`100dvh`): Dynamically adapts to address bar state.
+
+### 96. Smooth Viewport Height Jitter Elimination
+Provide graceful fallback for older browsers:
+```css
+.full-screen-container {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+```
+
+### 97. Pure CSS Multi-Line Truncation with Tooltip
+Enforce clean multi-line truncation without JavaScript:
+```css
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+```
+
+### 98. CSS @scope Boundary Containment
+Isolate component styling without style leakage across the DOM:
+```css
+@scope (.command-palette) to (.command-result-item) {
+  input { border-color: #10b981; }
+}
+```
+
+### 99. CSS @starting-style Discrete Entry Transitions
+Use modern native CSS discrete transitions for dialog and modal entry without JavaScript:
+```css
+dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 150ms ease, transform 150ms ease;
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+```
+
+### 100. Native CSS Popover API Integration (popover="auto")
+Use native HTML popover attributes for lightweight tooltips and menus:
+```html
+<button popovertarget="telemetry-info">Telemetry</button>
+<div id="telemetry-info" popover="auto" class="bento-card">Details</div>
+```
+Renders in the browser native top-layer, completely immune to parent container `overflow: hidden` or `z-index` stacking issues.
+
+### 101. Native HTML <dialog> showModal Elevation
+All modal dialogs must use the semantic HTML `<dialog>` element with `.showModal()`:
+- Automatic native backdrop pseudo-element (`::backdrop`).
+- Built-in `Escape` key dismissal.
+- Native top-layer rendering.
+
+### 102. Native CSS Nesting Standards
+Author clean native CSS nesting without requiring preprocessors (Sass/PostCSS):
+```css
+.command-ribbon {
+  background: #020617;
+  & .ribbon-btn {
+    border: 1px solid #1e293b;
+    &:hover { border-color: #10b981; }
+  }
+}
+```
+
+### 103. Container Query Units for Modular Typography
+Card typography scales relative to its parent container width, not the entire viewport:
+```css
+.bento-card {
+  container-type: inline-size;
+}
+.bento-card-title {
+  font-size: clamp(1rem, 4cqi, 1.5rem);
+}
+```
+
+### 104. Pure CSS Scroll-Driven Header Compaction
+Shrink the top navigation bar during scroll using GPU compositor timelines:
+```css
+@keyframes header-compact {
+  from { height: 72px; }
+  to { height: 56px; }
+}
+header.sticky-nav {
+  animation: header-compact auto linear;
+  animation-timeline: scroll(root block);
+  animation-range: 0px 150px;
+}
+```
+
+### 105. Dynamic Viewport Resizing Debounce (100ms RAF Batch)
+When handling window resize or orientation changes, batch measurements through `requestAnimationFrame`:
+```javascript
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  if (resizeTimer) cancelAnimationFrame(resizeTimer);
+  resizeTimer = requestAnimationFrame(() => {
+    recalculateLayoutMetrics();
+  });
+}, { passive: true });
+```
+
+### 106. CSS Gradient Interpolation Color Spaces (in oklab)
+Avoid dead muddy gray bands in gradients by interpolating in OKLab or LCH color spaces:
+```css
+.sovereign-gradient {
+  background: linear-gradient(135deg in oklab, #020617, #064e3b, #0284c7);
+}
+```
+
+### 107. Fluid Spacing Calculus via clamp()
+Scale layout margins and section padding continuously between mobile and desktop:
+```css
+section {
+  padding-block: clamp(3rem, 1rem + 5vw, 6rem);
+}
+```
+
+### 108. CSS Font-Synthesis Prohibition (font-synthesis: none)
+Prevent the browser from generating fake bold or pseudo-italics that distort typeface geometry:
+```css
+body {
+  font-synthesis: none;
+}
+```
+
+### 109. System Font Metric Normalization (size-adjust on Monospace)
+Normalize font metrics on JetBrains Mono and fallback monospace fonts:
+```css
+@font-face {
+  font-family: 'Mono-Fallback';
+  src: local('Courier New');
+  ascent-override: 85%;
+  descent-override: 20%;
+  size-adjust: 105%;
+}
+```
+
+### 110. Microscopic Scrollbar Track Color Styling
+Style browser scrollbars cleanly in dark obsidian:
+```css
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #020617;
+}
+```
+
+### 111. Stale-While-Revalidate Caching for Documentation
+In the Service Worker, serve cached documentation instantly while fetching updates in the background:
+```javascript
+self.addEventListener('fetch', (event) => {
+  if (event.request.url.includes('/docs/')) {
+    event.respondWith(
+      caches.open('rql-docs').then(async (cache) => {
+        const cached = await cache.match(event.request);
+        const fetched = fetch(event.request).then((resp) => {
+          cache.put(event.request, resp.clone());
+          return resp;
+        });
+        return cached || fetched;
+      })
+    );
+  }
+});
+```
+
+### 112. Cache-First Protocol for WOFF2 Fonts and Icons
+Static local font files and icons must be retrieved cache-first:
+```javascript
+if (event.request.destination === 'font') {
+  event.respondWith(caches.match(event.request).then(resp => resp || fetch(event.request)));
+}
+```
+
+### 113. Network-First Protocol with Offline Fallback for Catalog Rates
+Live currency rates and catalog discounts check network first, falling back to local cached rates if offline.
+
+### 114. Background Sync API for Offline Forms
+When submitting inquiry forms while offline, register a background sync event:
+```javascript
+if ('serviceWorker' in navigator && 'SyncManager' in window) {
+  navigator.serviceWorker.ready.then(reg => reg.sync.register('sync-inquiry'));
+}
+```
+
+### 115. BroadcastChannel API for Instant Cross-Tab State Sync
+Synchronize currency preferences or active catalog view across multiple open browser tabs:
+```javascript
+const channel = new BroadcastChannel('rql_state_sync');
+channel.onmessage = (event) => {
+  if (event.data.type === 'CURRENCY_CHANGE') {
+    applyCurrency(event.data.currency, false);
+  }
+};
+```
+
+### 116. Service Worker Navigation Preload
+Eliminate Service Worker boot latency on page loads:
+```javascript
+self.addEventListener('activate', (event) => {
+  event.waitUntil(async function() {
+    if (self.registration.navigationPreload) {
+      await self.registration.navigationPreload.enable();
+    }
+  }());
+});
+```
+
+### 117. Exponential Backoff Fetch Retries
+For critical network operations, retry up to 3 times with exponential backoff:
+```javascript
+async function fetchWithRetry(url, retries = 3, delay = 500) {
+  try {
+    return await fetch(url);
+  } catch (err) {
+    if (retries === 0) throw err;
+    await new Promise(r => setTimeout(r, delay));
+    return fetchWithRetry(url, retries - 1, delay * 2);
+  }
+}
+```
+
+### 118. Request AbortController Lifecycle
+Abort in-flight catalog search requests when a new keystroke arrives:
+```javascript
+let currentAbort = null;
+function executeSearch(query) {
+  if (currentAbort) currentAbort.abort();
+  currentAbort = new AbortController();
+  // Fetch or filter with currentAbort.signal
+}
+```
+
+### 119. Beacon API for Unload Telemetry (navigator.sendBeacon)
+Transmit non-blocking diagnostic telemetry on page unload:
+```javascript
+window.addEventListener('pagehide', () => {
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon('/telemetry', JSON.stringify({ event: 'exit' }));
+  }
+});
+```
+
+### 120. Local Cache Size Limits & LRU Eviction
+Limit local Service Worker asset caches to 50MB. Evict oldest cache keys when limit is reached.
+
+### 121. Service Worker Self-Update Detection
+Notify users when a new Service Worker version is installed:
+```javascript
+navigator.serviceWorker.ready.then(reg => {
+  reg.onupdatefound = () => {
+    const installing = reg.installing;
+    installing.onstatechange = () => {
+      if (installing.state === 'installed' && navigator.serviceWorker.controller) {
+        showUpdateBanner();
+      }
+    };
+  };
+});
+```
+
+### 122. Complete Web App Manifest Meta
+Ensure manifest.json includes all standard PWA declarations:
+`display: standalone`, `theme_color: #020617`, `background_color: #020617`, and high-resolution icons.
+
+### 123. Maskable Icons with 10% Safe Margins
+PWA icons must provide maskable variants with a 10% inner safe zone to prevent icon cropping on Android.
+
+### 124. Desktop PWA Window Drag Regions
+On desktop PWA windows, mark top header navigation with `app-region: drag` and interactive buttons with `app-region: no-drag`.
+
+### 125. Offline Resource Fallback Image Placeholders
+Provide an inline SVG data URI fallback image if any product preview image fails to load offline.
+
+### 126. AudioContext Master Gain & Global Mute Switch
+Route all synthesized audio operations through a centralized master gain node:
+```javascript
+const masterGain = audioCtx.createGain();
+masterGain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+masterGain.connect(audioCtx.destination);
+function toggleMute(muted) {
+  masterGain.gain.setValueAtTime(muted ? 0 : 0.1, audioCtx.currentTime);
+}
+```
+
+### 127. In-Memory Sine Wave Confirmation Chirp
+Synthesize positive action confirmation using frequency modulation:
+```javascript
+function playConfirmationChirp() {
+  if (!audioCtx || isMuted) return;
+  const osc = audioCtx.createOscillator();
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.08);
+  osc.connect(masterGain);
+  osc.start();
+  osc.stop(audioCtx.currentTime + 0.08);
+}
+```
+
+### 128. Error Dissonance Tone Synthesizer
+Synthesize dual-tone 220Hz + 215Hz dissonance on form validation rejections:
+```javascript
+function playErrorTone() {
+  if (!audioCtx || isMuted) return;
+  const osc1 = audioCtx.createOscillator();
+  const osc2 = audioCtx.createOscillator();
+  osc1.frequency.value = 220;
+  osc2.frequency.value = 215; // 5Hz beat frequency
+  osc1.connect(masterGain);
+  osc2.connect(masterGain);
+  osc1.start();
+  osc2.start();
+  osc1.stop(audioCtx.currentTime + 0.15);
+  osc2.stop(audioCtx.currentTime + 0.15);
+}
+```
+
+### 129. Audio Node Garbage Collection
+Disconnect and close unused audio nodes to prevent memory leaks in the audio engine:
+```javascript
+osc.onended = () => {
+  osc.disconnect();
+};
+```
+
+### 130. Reduced Motion Absolute Audio Suppression
+When `prefers-reduced-motion: reduce` is detected, immediately silence all UI acoustics.
+
+### 131. Mono Audio Output Consistency
+Author all Web Audio synthesizer nodes as mono channels to guarantee identical sound levels across all speakers and headphones.
+
+### 132. Mechanical Keypress Tactile Acoustic Emulation
+For interactive CLI and terminal input fields, synthesize subtle 3ms click impulses at 1800Hz.
+
+### 133. Audio Node Exponential Ramp Value Scheduling
+Never abruptly set audio gain to zero. Always use `exponentialRampToValueAtTime` to eliminate speaker pops and clicks.
+
+### 134. Haptic Vibration Pattern Sequencing
+Provide sequenced haptic patterns for verification milestones:
+```javascript
+if ('vibrate' in navigator) navigator.vibrate([10, 30, 10]);
+```
+
+### 135. Audio Promise Rejection Swallowing
+Always catch and handle unhandled audio play promise rejections:
+```javascript
+audioEl.play().catch(() => { /* Swallowed: Autoplay policy */ });
+```
+
+### 136. Synthesizer Polyphony Limits
+Enforce a maximum of 2 concurrent synthesizer voices to prevent acoustic distortion or clipping.
+
+### 137. Audio Buffer Caching in Memory
+Cache pre-rendered audio buffers in memory rather than re-instantiating oscillators repeatedly.
+
+### 138. Dynamic Volume Ducking
+Reduce synthesized audio volume by 50% if active media is playing on the page.
+
+### 139. Audio Context Device Change Handling
+Listen to `audioCtx.onstatechange` to handle Bluetooth headphone disconnects smoothly.
+
+### 140. Tactile Sound Preference Persistence
+Persist user audio sound ON/OFF toggles in `localStorage` under `rql_audio_enabled`.
+
+### 141. Web Worker Multi-Threaded Hashing
+Offload heavy file hashing to a dedicated background Web Worker to keep the UI at 60fps:
+```javascript
+const worker = new Worker('assets/hash-worker.js');
+worker.postMessage({ file: fileSlice });
+```
+
+### 142. Incremental SHA-256 Digest Streaming
+Stream binary slices sequentially without accumulating megabytes in memory.
+
+### 143. Cryptographic Timing Attack Defense
+Use constant-time string comparison when validating authentication tokens or hashes:
+```javascript
+function constantTimeEquals(a, b) {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) {
+    diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return diff === 0;
+}
+```
+
+### 144. In-Browser RSA-4096 Signature Verification
+Verify digital signatures in-browser using WebCrypto:
+```javascript
+const valid = await crypto.subtle.verify(
+  'RSASSA-PKCS1-v1_5',
+  publicKey,
+  signature,
+  data
+);
+```
+
+### 145. Binary File Header Magic Byte Inspection
+Inspect the first 2 bytes of uploaded binaries to verify PE64 headers (`4D 5A` = MZ):
+```javascript
+const slice = await file.slice(0, 2).arrayBuffer();
+const view = new DataView(slice);
+const isMZ = view.getUint8(0) === 0x4D && view.getUint8(1) === 0x5A;
+```
+
+### 146. Zero-Memory File Blob Revocation
+Immediately revoke object URLs after download to free memory:
+```javascript
+const url = URL.createObjectURL(blob);
+link.href = url;
+link.click();
+URL.revokeObjectURL(url);
+```
+
+### 147. License Key Checksum Formatting
+Format license keys into groups with checksum verification:
+`RQL-XXXX-XXXX-XXXX-XXXX`
+
+### 148. Cryptographically Secure Random Values
+Always use `crypto.getRandomValues()` for session nonces, never `Math.random()`.
+
+### 149. Hexadecimal Hash Format Sanitization
+Strip whitespace, colons, and force lowercase on SHA-256 strings before comparison:
+```javascript
+function sanitizeHash(h) {
+  return h.replace(/[^a-fA-F0-9]/g, '').toLowerCase();
+}
+```
+
+### 150. Dynamic Hashing Progress Reporting
+Calculate and report hashing throughput (MB/s) and estimated time remaining during large file verification.
+
+### 151. Drag-and-Drop File Extension Whitelist
+Enforce a strict whitelist on file dropzones: `.exe`, `.dll`, `.bin`, `.sig`, `.txt`.
+
+### 152. Multiple File Drag Rejection
+Reject multiple simultaneous file drops. Accept strictly 1 file at a time to prevent memory exhaustion.
+
+### 153. Cryptographic Certificate Display Protocol
+Display PEM certificates with 64-character line wraps in monospace format.
+
+### 154. In-Memory Zeroization of Sensitive Telemetry
+Overwrite sensitive buffers with zeros upon job completion:
+```javascript
+new Uint8Array(buffer).fill(0);
+```
+
+### 155. Self-Sovereign Manifest Cross-Verification
+Match local binary digests against published `manifest.sha256` checksums.
+
+### 156. Currency Rate Staleness Flagging
+Display rate timestamp (`Rates updated: YYYY-MM-DD`) beside international conversions.
+
+### 157. Unicode Bidi Isolation (<bdi>)
+Wrap user-supplied input strings in `<bdi>` tags to prevent bidirectional layout distortion in RTL environments.
+
+### 158. Indian Rupee Symbol Baseline Alignment
+Ensure `Rs` and currency symbols align with monospace numerals:
+```css
+.currency-symbol {
+  vertical-align: baseline;
+  font-family: var(--font-sans);
+}
+```
+
+### 159. Tabular Decimal Point Alignment
+Align decimal points in pricing tables using `font-variant-numeric: tabular-nums`.
+
+### 160. International Date Formatting (Intl.DateTimeFormat)
+Format release timestamps using `Intl.DateTimeFormat` with ISO 8601 fallbacks.
+
+### 161. Timezone Telemetry Display
+Display UTC offsets (e.g. `UTC+00:00`) alongside timestamps in engineering changelogs.
+
+### 162. Relative Time Formatting (Intl.RelativeTimeFormat)
+Format relative release dates (e.g. "3 days ago") using standard `Intl.RelativeTimeFormat`.
+
+### 163. Pluralization Rules (Intl.PluralRules)
+Handle license seat pluralization correctly using `Intl.PluralRules`.
+
+### 164. Locale-Aware String Collator Sorting
+Sort product titles and filenames using `Intl.Collator`.
+
+### 165. Currency Symbol Position Handling
+Position currency symbols before or after amounts based on active locale rules.
+
+### 166. Strict 7-Bit ASCII Transliteration Table
+All non-ASCII characters must map to clean 7-bit ASCII equivalents (e.g., e for accented e).
+
+### 167. Zero-Width Space Break Hints (<wbr>)
+Insert `<wbr>` break hints into long technical identifiers to enable clean line wrapping.
+
+### 168. Non-Breaking Spaces on Units
+Use non-breaking spaces (`&nbsp;`) between numbers and technical units (`16&nbsp;GB`, `0.02&nbsp;ms`).
+
+### 169. Strict Plain ASCII Quotes
+Use straight ASCII quotes (`"` and `'`) across all content, completely banning curly unicode quotes.
+
+### 170. Monospace Code Block Line Numbering
+Style line numbers in code blocks using unselectable CSS counters:
+```css
+pre code { counter-reset: line; }
+pre code span.line::before {
+  counter-increment: line;
+  content: counter(line);
+  user-select: none;
+}
+```
+
+### 171. Battery Status API Frame Throttling
+When `navigator.getBattery()` reports battery level < 20% or discharging, throttle canvas render loop to 30fps.
+
+### 172. Device Memory Telemetry Adaptation
+Query `navigator.deviceMemory` to reduce background particle count on low-memory devices (< 4GB).
+
+### 173. Hardware Concurrency Thread Throttling
+Limit background web worker pools to `navigator.hardwareConcurrency || 4` threads.
+
+### 174. Ambient Light Sensor Contrast Adaptation
+Detect high ambient brightness and boost text contrast automatically when supported.
+
+### 175. Network Information Effective Type Detection
+Adapt image qualities based on `navigator.connection.effectiveType` (e.g., 2g, 3g, 4g).
+
+### 176. GPU Thermal Runaway Defense
+Clamp `requestAnimationFrame` delta times to 100ms max to prevent physics explosions after tab lag.
+
+### 177. WebGL Context Loss & Restoration Recovery
+Listen to `webglcontextlost` and `webglcontextrestored` events on background 3D canvas visualizers.
+
+### 178. Canvas DPR Retina Scaling
+Scale canvas buffer resolution to `window.devicePixelRatio` while keeping CSS display dimensions fixed.
+
+### 179. High-DPI Mouse Polling Batching
+Batch mouse movement events on 1000Hz gaming mice to prevent render thread starvation.
+
+### 180. Mobile Touch Event Coalescing
+Use `e.getCoalescedEvents()` for smooth, sub-frame touch tracking on supported mobile devices.
+
+### 181. Mobile Orientation Change Layout Preservation
+Preserve scroll position and modal state during device orientation changes.
+
+### 182. Screen Wake Lock API During Heavy Jobs
+Request `navigator.wakeLock.request('screen')` while cryptographic verification is running to prevent display sleep.
+
+### 183. Page Lifecycle Freeze Event Handling
+Listen to `freeze` and `resume` events in the Page Lifecycle API to preserve client state.
+
+### 184. Discarded Tab State Graceful Restoration
+Check `document.wasDiscarded` on page load to restore user search queries and filter selections.
+
+### 185. CSS Media Query Hover Pointer Pairing
+Enforce `@media (hover: hover) and (pointer: fine)` on all desktop hover rules without exception.
+
+### 186. Live Region Polite Announcements (aria-live="polite")
+Announce catalog filter result counts to screen readers:
+```html
+<div aria-live="polite" class="sr-only">Showing 14 commercial suites</div>
+```
+
+### 187. Live Region Assertive Announcements (aria-live="assertive")
+Announce critical security or hash mismatch errors with `aria-live="assertive"`.
+
+### 188. Accessible Breadcrumb Navigation
+Breadcrumb containers must declare `aria-label="Breadcrumb"` and current item `aria-current="page"`.
+
+### 189. Accordion and Disclosure ARIA Semantics
+Disclosures must declare `aria-expanded="false"` and link to content via `aria-controls`.
+
+### 190. Tablist and Tabpanel ARIA Roles
+Category navigation must declare `role="tablist"`, `role="tab"`, and `role="tabpanel"`.
+
+### 191. Modal Dialog Accessibility Attributes
+Modals must declare `role="dialog"`, `aria-modal="true"`, and `aria-labelledby="dialog-title"`.
+
+### 192. Skip to Main Content Link (.skip-link)
+Provide an offscreen skip link that becomes visible on keyboard focus, jumping directly to `#main`.
+
+### 193. Explicit Form Label Association
+Every form input must have a matching `<label for="id">` or explicit `aria-label`.
+
+### 194. Error Field Accessibility Association
+Inputs with validation errors must declare `aria-invalid="true"` and `aria-errormessage="err-id"`.
+
+### 195. Color-Blindness Redundancy Invariant
+Never convey status via color alone. Always pair colors with text labels, checkmarks, or distinct icons.
+
+### 196. Minimum Body Typography Floor
+Body copy must never drop below 14px; secondary telemetry metadata must never drop below 11px.
+
+### 197. Line Height Ergonomic Standards
+Maintain `line-height: 1.5` minimum for body prose and `1.25` for display headers.
+
+### 198. DOM Source Order Visual Equivalence
+DOM source code order must strictly match visual on-screen reading order.
+
+### 199. Universal Support & Contact Discoverability
+Contact, security disclosures, and documentation links must be present in identical locations across all page footers.
+
+### 200. Pre-Launch 100-Point Verification Protocol
+Execute the complete 100-point failure verification checklist before any production commit or Cloudflare Pages deployment.
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
@@ -975,7 +1618,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 78-Point Failure Checklist
+## 7. Pre-Launch 100-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -1055,5 +1698,27 @@ Before any change is committed or deployed, every question must be verified with
 74. [ ] **Title Notification Cycling**: Does tab title update dynamically on background task completion?
 75. [ ] **Storage Quota Check**: Are large storage writes verified against `navigator.storage.estimate`?
 76. [ ] **IFrame Sandbox Bounds**: Do embedded demo frames declare strict sandbox attributes?
-77. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-78. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+77. [ ] **CSS Cascade Layers**: Are styles organized into `@layer` to prevent specificity conflicts?
+78. [ ] **Subgrid Alignment**: Do Bento cards enforce `grid-template-rows: subgrid` for horizontal alignment?
+79. [ ] **Logical Properties**: Are margin/padding declared using CSS logical properties?
+80. [ ] **CSS Starting Style**: Do modal entries use native `@starting-style` discrete transitions?
+81. [ ] **Native Popover API**: Are popovers declared with `popover="auto"` in the native top-layer?
+82. [ ] **OKLab Gradient Smoothing**: Are gradients interpolated in OKLab or LCH color spaces?
+83. [ ] **Font Synthesis Disabled**: Does body enforce `font-synthesis: none`?
+84. [ ] **Stale-While-Revalidate**: Does Service Worker use SWR for documentation routes?
+85. [ ] **BroadcastChannel Sync**: Does tab state sync across tabs via `BroadcastChannel`?
+86. [ ] **AbortController Signal**: Do live search queries abort in-flight requests on keypress?
+87. [ ] **Beacon API Telemetry**: Is non-blocking exit telemetry sent via `navigator.sendBeacon`?
+88. [ ] **Web Audio Master Gain**: Are all acoustic synthesizers routed through a master volume node?
+89. [ ] **Polyphony Bounds**: Are concurrent audio synthesizer voices capped at 2?
+90. [ ] **Web Worker Hashing**: Is multi-gigabyte file hashing offloaded to a background Worker?
+91. [ ] **Constant-Time Comparison**: Are hashes compared using constant-time string algorithms?
+92. [ ] **PE64 Magic Byte Check**: Does file upload verify MZ (`0x4D 0x5A`) header bytes?
+93. [ ] **Memory Zeroization**: Are sensitive ArrayBuffers overwritten with zeros upon job finish?
+94. [ ] **Bidi Isolation (<bdi>)**: Are user text strings wrapped in `<bdi>` tags?
+95. [ ] **Battery Throttling**: Does canvas throttle to 30fps when battery < 20%?
+96. [ ] **Screen Wake Lock**: Does the client request screen wake lock during active hash operations?
+97. [ ] **Skip to Content Link**: Is an accessible skip-to-content link present for keyboard users?
+98. [ ] **Color Redundancy**: Is state conveyed through redundant icons/text, never color alone?
+99. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis, and zero mojibake?
+100. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
