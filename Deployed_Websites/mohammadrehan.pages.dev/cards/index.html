@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-slate-950 text-slate-100">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sovereign Executive Card Studio (4K 3D Interactive) | Rehan Quant Lab</title>
+  <meta name="description" content="Ultra-luxury 4K interactive 3D executive business card for Mohammad Rehan, Founder of Rehan Quant Lab. Centurion Black Card protocol, ISO 7810 ID-1 standard, 3D raised gold foil." />
+  <link rel="canonical" href="https://rehanquantlab.com/card.html" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="assets/tailwind.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0b0c0e',
+            'gold-foil': '#d4af37',
+            'gold-light': '#f3e5ab',
+            'gold-dark': '#997a15',
+            titanium: '#e0e2ec'
+          },
+          fontFamily: {
+            mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'monospace'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* 3D Stage & Card Physics */
+    .card-stage {
+      perspective: 1400px;
+    }
+    .card-flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: grab;
+    }
+    .card-flipper:active {
+      cursor: grabbing;
+    }
+    .card-flipper.flipped {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.25);
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Hot-Stamped Gold Foil Physics (Shine Overlay) */
+    .gold-foil-text {
+      background: linear-gradient(135deg, #fef08a 0%, #d4af37 45%, #ca8a04 70%, #fef08a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .gold-border {
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+    .specular-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 300px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(254, 240, 138, 0.18), transparent 70%);
+      mix-blend-mode: overlay;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+    .specular-sheen-foil {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.3), transparent 60%);
+      mix-blend-mode: color-dodge;
+      opacity: 0.6;
+    }
+    .carbon-texture {
+      background-color: #0b0c0e;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 0);
+      background-size: 8px 8px;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-300">
+
+  <!-- Top Executive Command Ribbon -->
+  <header class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition">
+          <svg class="w-7 h-7 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <span class="font-heading font-black tracking-wider text-sm text-white">REHAN QUANT LAB</span>
+        </a>
+        <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Executive Card Studio 4K</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-mono">
+        <a href="store.html" class="text-slate-400 hover:text-white transition">Store</a>
+        <a href="security.html" class="text-slate-400 hover:text-white transition">Security</a>
+        <a href="experience.html" class="text-slate-400 hover:text-white transition">Founder Dossier</a>
+        <a href="contact.html" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition">Briefing</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 4K 3D Studio Stage -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex flex-col items-center justify-center">
+    
+    <!-- Title & Sovereign Badge -->
+    <div class="text-center mb-8 max-w-2xl">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-mono mb-3">
+        <span>Centurion Black Card Protocol</span>
+        <span>&bull;</span>
+        <span>ISO/IEC 7810 ID-1 Standard</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white font-heading">
+        Sovereign Executive Visiting Card
+      </h1>
+      <p class="text-slate-400 text-xs sm:text-sm mt-2 font-sans">
+        Interact with the live 3D card below. Drag cursor to illuminate the hot-stamped gold foil. Click card or press <kbd class="px-1.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-amber-300 font-mono text-xs">Spacebar</kbd> to flip.
+      </p>
+    </div>
+
+    <!-- 3D Interactive Card Stage -->
+    <div class="w-full max-w-[560px] aspect-[1.5858/1] card-stage select-none mb-8" id="cardContainer">
+      <div class="card-flipper" id="cardFlipper">
+        
+        <!-- ============================================== -->
+        <!-- FACE A: THE SOVEREIGN OBVERSE (FRONT)           -->
+        <!-- ============================================== -->
+        <div class="card-face carbon-texture p-6 sm:p-8 flex flex-col justify-between border border-amber-500/40 relative">
+          <!-- Specular Sheen Overlays -->
+          <div class="specular-sheen"></div>
+          <div class="specular-sheen-foil"></div>
+
+          <!-- Top Micro-Telemetry -->
+          <div class="flex items-center justify-between text-[10px] font-mono tracking-widest text-slate-500">
+            <span>RQL-CORP-ID1</span>
+            <div class="flex items-center gap-1.5 text-amber-400/80">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>AIR-GAPPED SOVEREIGN</span>
+            </div>
+            <span>EST. 2026</span>
+          </div>
+
+          <!-- Center Monogram & Wordmark -->
+          <div class="text-center my-auto flex flex-col items-center">
+            <!-- Sovereign 3D Crest Monogram SVG -->
+            <div class="w-16 h-16 sm:w-20 sm:h-20 mb-3 relative flex items-center justify-center">
+              <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)]">
+                <!-- Concentric Rings -->
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.8"/>
+                <!-- Diamond Points -->
+                <polygon points="50,4 53,10 47,10" fill="#d4af37"/>
+                <polygon points="50,96 53,90 47,90" fill="#d4af37"/>
+                <polygon points="4,50 10,47 10,53" fill="#d4af37"/>
+                <polygon points="96,50 90,47 90,53" fill="#d4af37"/>
+                <!-- RQL Sovereign Monogram Geometry -->
+                <path d="M34 32 H54 C62 32 66 36 66 42 C66 48 61 51 53 51 H43 V68 H34 V32 Z M43 40 V44 H52 C55 44 57 43 57 42 C57 40 55 40 52 40 H43 Z" fill="url(#goldGrad)"/>
+                <path d="M52 50 L66 68 H55 L43 52 Z" fill="url(#goldGrad)"/>
+                <defs>
+                  <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fffbeb"/>
+                    <stop offset="35%" stop-color="#fef08a"/>
+                    <stop offset="65%" stop-color="#d4af37"/>
+                    <stop offset="100%" stop-color="#854d0e"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Firm Wordmark -->
+            <h2 class="text-xl sm:text-2xl font-black tracking-[0.25em] gold-foil-text font-heading uppercase drop-shadow-sm">
+              REHAN QUANT LAB
+            </h2>
+            
+            <!-- Hairline Divider -->
+            <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent my-2"></div>
+            
+            <!-- Category Subtitle -->
+            <p class="text-[9px] sm:text-[11px] font-mono tracking-[0.35em] text-slate-300 uppercase">
+              SOVEREIGN DESKTOP SYSTEMS
+            </p>
+          </div>
+
+          <!-- Bottom Baseline Motto -->
+          <div class="flex items-center justify-between text-[9px] sm:text-[10px] font-mono tracking-[0.25em] text-slate-400 border-t border-slate-800/80 pt-3">
+            <span>PERPETUAL</span>
+            <span class="text-amber-400">&bull;</span>
+            <span>AIR-GAPPED</span>
+            <span class="text-amber-400">&bull;</span>
+            <span>OWNED</span>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- FACE B: THE EXECUTIVE REVERSE (BACK)            -->
+        <!-- ============================================== -->
+        <div class="card-face carbon-texture p-6 sm:p-8 flex flex-col justify-between border border-amber-500/40 card-back relative">
+          <!-- Specular Sheen Overlays -->
+          <div class="specular-sheen"></div>
+          <div class="specular-sheen-foil"></div>
+
+          <!-- Top Executive Header: Name & Contactless Wave -->
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-base sm:text-lg font-black tracking-wider text-white font-heading">
+                MOHAMMAD REHAN
+              </h3>
+              <p class="text-[9px] sm:text-[10px] font-mono tracking-[0.25em] text-amber-400 uppercase font-bold mt-0.5">
+                FOUNDER & LEAD SYSTEMS ARCHITECT
+              </p>
+            </div>
+            <!-- Contactless Gold NFC Waves -->
+            <div class="w-8 h-8 flex items-center justify-center opacity-80" title="Contactless Card Simulation">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 text-amber-400 stroke-current fill-none" stroke-width="2">
+                <path d="M8.5 16.5a5 5 0 0 1 0-9"/>
+                <path d="M12 19a8.5 8.5 0 0 0 0-14"/>
+                <path d="M15.5 21.5a12 12 0 0 0 0-19"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Middle Authority Serial & Chip -->
+          <div class="my-auto py-2">
+            <!-- Simulated Brushed Gold EMV Chip -->
+            <div class="w-11 h-8 rounded-md bg-gradient-to-br from-amber-200 via-amber-400 to-amber-600 p-[1px] shadow-sm mb-3">
+              <div class="w-full h-full bg-slate-900 rounded-[5px] flex items-center justify-center border border-amber-400/40">
+                <div class="w-6 h-4 border border-amber-400/50 rounded-sm"></div>
+              </div>
+            </div>
+
+            <!-- Black Card Serial Coordinates -->
+            <div class="text-[9px] sm:text-[10px] font-mono text-slate-400 tracking-widest flex items-center gap-2 mb-3">
+              <span>MEMBER SINCE: 2026</span>
+              <span class="text-amber-500">&bull;</span>
+              <span>CARD: RQL-0001</span>
+              <span class="text-amber-500">&bull;</span>
+              <span class="text-emerald-400">FOUNDER TIER-0</span>
+            </div>
+
+            <!-- Structured Executive Telemetry Grid -->
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[9px] sm:text-[11px] font-mono border-t border-slate-800/80 pt-2.5">
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 text-[9px]">DIRECT:</span>
+                <span class="text-slate-200 font-bold">&#43;91 70915 18548</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 text-[9px]">DISPATCH:</span>
+                <span class="text-slate-200">founder@rehanquantlab.com</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 text-[9px]">PORTAL:</span>
+                <span class="text-amber-300 font-bold">rehanquantlab.com</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-slate-500 text-[9px]">BASE:</span>
+                <span class="text-slate-300">Patna, Bihar, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Micro-Disclaimer -->
+          <div class="flex items-center justify-between text-[8px] sm:text-[9px] font-mono text-slate-500 border-t border-slate-800/80 pt-2">
+            <span>REHAN QUANT LAB - SOVEREIGN FOUNDRY</span>
+            <span>31 PERPETUAL SUITES LIVE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Action Ribbon & 4K Export Controls -->
+    <div class="flex flex-wrap items-center justify-center gap-3 w-full max-w-2xl">
+      <button id="btnFlip" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs font-bold transition flex items-center gap-2 shadow-md border border-slate-700 cursor-pointer">
+        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <span>Flip Card (Face A / B)</span>
+      </button>
+
+      <button id="btnExportFront" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-mono text-xs font-black transition flex items-center gap-2 shadow-lg shadow-amber-600/25 cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        <span>Export 4K Front (PNG)</span>
+      </button>
+
+      <button id="btnExportBack" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-black transition flex items-center gap-2 shadow-lg shadow-emerald-600/25 cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        <span>Export 4K Back (PNG)</span>
+      </button>
+
+      <a id="btnCanvaLink" href="https://canva.link/n6na2lzepgejl7o" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-mono text-xs font-bold transition flex items-center gap-2 shadow-md cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        <span>Open in Canva</span>
+      </a>
+    </div>
+
+    <!-- Technical Print Specifications (Physical Runbook) -->
+    <div class="mt-12 w-full max-w-4xl border border-slate-800 rounded-2xl bg-slate-900/40 p-6">
+      <h3 class="text-sm font-bold font-mono text-amber-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <span>4K Commercial Print Specification Runbook</span>
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs font-mono">
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="text-slate-500 text-[10px]">DIMENSION STANDARD</div>
+          <div class="text-slate-200 font-bold mt-1">ISO/IEC 7810 ID-1</div>
+          <div class="text-slate-400 text-[10px] mt-0.5">85.60 x 53.98 mm (3.37 x 2.13 in)</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="text-slate-500 text-[10px]">RESOLUTION & DPI</div>
+          <div class="text-slate-200 font-bold mt-1">3840 x 2420 px (4K)</div>
+          <div class="text-slate-400 text-[10px] mt-0.5">300 DPI Ultra-HD Master Scale</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="text-slate-500 text-[10px]">PAPER & FINISH</div>
+          <div class="text-slate-200 font-bold mt-1">450+ GSM Silk Board</div>
+          <div class="text-slate-400 text-[10px] mt-0.5">Matte Velvet + 3D Raised Gold Foil</div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+          <div class="text-slate-500 text-[10px]">COLOR PROFILE</div>
+          <div class="text-slate-200 font-bold mt-1">CMYK Rich Black</div>
+          <div class="text-slate-400 text-[10px] mt-0.5">C:60 M:40 Y:40 K:100 (Deep Matte)</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive 3D Cursor & Export Engine Script -->
+  <script>
+    (function() {
+      'use strict';
+      var container = document.getElementById('cardContainer');
+      var flipper = document.getElementById('cardFlipper');
+      var btnFlip = document.getElementById('btnFlip');
+      var btnExportFront = document.getElementById('btnExportFront');
+      var btnExportBack = document.getElementById('btnExportBack');
+
+      var isFlipped = false;
+
+      function toggleFlip() {
+        isFlipped = !isFlipped;
+        if (isFlipped) {
+          flipper.classList.add('flipped');
+        } else {
+          flipper.classList.remove('flipped');
+        }
+      }
+
+      // Flip listeners
+      btnFlip.addEventListener('click', toggleFlip);
+      flipper.addEventListener('click', toggleFlip);
+      window.addEventListener('keydown', function(e) {
+        if (e.code === 'Space' && e.target === document.body) {
+          e.preventDefault();
+          toggleFlip();
+        }
+      });
+
+      // 3D Tilt & Specular Lighting
+      container.addEventListener('mousemove', function(e) {
+        var rect = container.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        
+        var xPct = (x / rect.width) * 100;
+        var yPct = (y / rect.height) * 100;
+        
+        document.documentElement.style.setProperty('--mouse-x', xPct + '%');
+        document.documentElement.style.setProperty('--mouse-y', yPct + '%');
+
+        var rotateY = ((x / rect.width) - 0.5) * 24;
+        var rotateX = ((y / rect.height) - 0.5) * -24;
+
+        if (isFlipped) {
+          flipper.style.transform = 'rotateY(' + (180 + rotateY) + 'deg) rotateX(' + rotateX + 'deg)';
+        } else {
+          flipper.style.transform = 'rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg)';
+        }
+      });
+
+      container.addEventListener('mouseleave', function() {
+        if (isFlipped) {
+          flipper.style.transform = 'rotateY(180deg)';
+        } else {
+          flipper.style.transform = 'rotateY(0deg)';
+        }
+      });
+
+      // 4K Ultra-HD Native Canvas Export Engine (3840 x 2420 px at 300 DPI)
+      function render4KCard(isBack) {
+        var canvas = document.createElement('canvas');
+        var W = 3840;
+        var H = 2420; // 1.586 : 1 ratio
+        canvas.width = W;
+        canvas.height = H;
+        var ctx = canvas.getContext('2d');
+
+        // Background Rich Black
+        ctx.fillStyle = '#0b0c0e';
+        ctx.fillRect(0, 0, W, H);
+
+        // Carbon Texture Dot Matrix
+        ctx.fillStyle = 'rgba(212, 175, 55, 0.05)';
+        for (var px = 0; px < W; px += 24) {
+          for (var py = 0; py < H; py += 24) {
+            ctx.fillRect(px, py, 3, 3);
+          }
+        }
+
+        // Perimeter Hairline Gold Border with rounded corners
+        ctx.strokeStyle = '#d4af37';
+        ctx.lineWidth = 6;
+        var r = 70;
+        ctx.beginPath();
+        ctx.moveTo(80 + r, 80);
+        ctx.lineTo(W - 80 - r, 80);
+        ctx.quadraticCurveTo(W - 80, 80, W - 80, 80 + r);
+        ctx.lineTo(W - 80, H - 80 - r);
+        ctx.quadraticCurveTo(W - 80, H - 80, W - 80 - r, H - 80);
+        ctx.lineTo(80 + r, H - 80);
+        ctx.quadraticCurveTo(80, H - 80, 80, H - 80 - r);
+        ctx.lineTo(80, 80 + r);
+        ctx.quadraticCurveTo(80, 80, 80 + r, 80);
+        ctx.closePath();
+        ctx.stroke();
+
+        // Inner Safe Frame
+        ctx.strokeStyle = 'rgba(212, 175, 55, 0.2)';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(140, 140, W - 280, H - 280);
+
+        if (!isBack) {
+          // --- FACE A: THE SOVEREIGN OBVERSE (FRONT) ---
+          ctx.fillStyle = '#64748b';
+          ctx.font = 'bold 36px monospace';
+          ctx.fillText('RQL-CORP-ID1', 180, 220);
+
+          ctx.textAlign = 'right';
+          ctx.fillText('EST. 2026', W - 180, 220);
+
+          ctx.textAlign = 'center';
+          ctx.fillStyle = '#10b981';
+          ctx.fillText('AIR-GAPPED SOVEREIGN', W / 2, 220);
+
+          // Center Monogram Circle
+          ctx.strokeStyle = '#d4af37';
+          ctx.lineWidth = 5;
+          ctx.beginPath();
+          ctx.arc(W / 2, H / 2 - 240, 220, 0, Math.PI * 2);
+          ctx.stroke();
+
+          // Gold Monogram Lettering
+          var goldGradient = ctx.createLinearGradient(W/2 - 300, H/2 - 200, W/2 + 300, H/2 + 200);
+          goldGradient.addColorStop(0, '#fffbeb');
+          goldGradient.addColorStop(0.4, '#fef08a');
+          goldGradient.addColorStop(0.7, '#d4af37');
+          goldGradient.addColorStop(1, '#854d0e');
+
+          ctx.fillStyle = goldGradient;
+          ctx.font = '900 240px serif';
+          ctx.fillText('RQL', W / 2, H / 2 - 160);
+
+          // Wordmark
+          ctx.font = '900 130px sans-serif';
+          ctx.letterSpacing = '18px';
+          ctx.fillText('REHAN QUANT LAB', W / 2, H / 2 + 180);
+
+          // Divider Line
+          ctx.strokeStyle = '#d4af37';
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.moveTo(W / 2 - 300, H / 2 + 240);
+          ctx.lineTo(W / 2 + 300, H / 2 + 240);
+          ctx.stroke();
+
+          // Subtitle
+          ctx.fillStyle = '#e0e2ec';
+          ctx.font = 'bold 50px monospace';
+          ctx.fillText('SOVEREIGN DESKTOP SYSTEMS', W / 2, H / 2 + 330);
+
+          // Baseline
+          ctx.font = 'bold 40px monospace';
+          ctx.fillStyle = '#94a3b8';
+          ctx.fillText('PERPETUAL   *   AIR-GAPPED   *   OWNED', W / 2, H - 200);
+
+        } else {
+          // --- FACE B: THE EXECUTIVE REVERSE (BACK) ---
+          ctx.textAlign = 'left';
+
+          // Cardholder Name
+          ctx.fillStyle = '#ffffff';
+          ctx.font = '900 130px sans-serif';
+          ctx.fillText('MOHAMMAD REHAN', 220, 360);
+
+          // Title
+          ctx.fillStyle = '#d4af37';
+          ctx.font = 'bold 54px monospace';
+          ctx.fillText('FOUNDER & LEAD SYSTEMS ARCHITECT', 220, 450);
+
+          // EMV Chip Simulation
+          ctx.fillStyle = '#ca8a04';
+          ctx.fillRect(220, 560, 280, 200);
+          ctx.strokeStyle = '#fef08a';
+          ctx.lineWidth = 4;
+          ctx.strokeRect(220, 560, 280, 200);
+
+          // Authority Serial
+          ctx.fillStyle = '#94a3b8';
+          ctx.font = 'bold 44px monospace';
+          ctx.fillText('MEMBER SINCE: 2026   *   CARD: RQL-0001   *   FOUNDER TIER-0', 220, 880);
+
+          // Telemetry Grid
+          var gridY = 1100;
+          ctx.font = 'bold 50px monospace';
+          
+          ctx.fillStyle = '#64748b';
+          ctx.fillText('DIRECT:', 220, gridY);
+          ctx.fillStyle = '#f8fafc';
+          ctx.fillText('+91 70915 18548', 600, gridY);
+
+          ctx.fillStyle = '#64748b';
+          ctx.fillText('DISPATCH:', 220, gridY + 120);
+          ctx.fillStyle = '#f8fafc';
+          ctx.fillText('founder@rehanquantlab.com', 600, gridY + 120);
+
+          ctx.fillStyle = '#64748b';
+          ctx.fillText('PORTAL:', 220, gridY + 240);
+          ctx.fillStyle = '#fef08a';
+          ctx.fillText('rehanquantlab.com', 600, gridY + 240);
+
+          ctx.fillStyle = '#64748b';
+          ctx.fillText('BASE:', 220, gridY + 360);
+          ctx.fillStyle = '#f8fafc';
+          ctx.fillText('Patna, Bihar, India', 600, gridY + 360);
+
+          // Baseline
+          ctx.fillStyle = '#64748b';
+          ctx.font = 'bold 38px monospace';
+          ctx.fillText('REHAN QUANT LAB - SOVEREIGN FOUNDRY', 220, H - 200);
+          ctx.textAlign = 'right';
+          ctx.fillText('31 PERPETUAL SUITES LIVE', W - 220, H - 200);
+        }
+
+        // Trigger Download
+        var link = document.createElement('a');
+        link.download = isBack ? 'RQL_Executive_Card_Back_4K.png' : 'RQL_Executive_Card_Front_4K.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      }
+
+      btnExportFront.addEventListener('click', function() { render4KCard(false); });
+      btnExportBack.addEventListener('click', function() { render4KCard(true); });
+    })();
+  </script>
+</body>
+</html>
