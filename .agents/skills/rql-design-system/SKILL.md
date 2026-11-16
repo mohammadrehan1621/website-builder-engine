@@ -781,6 +781,144 @@ When search queries return 0 results in the technical catalog table, span the em
 </tr>
 ```
 
+### 78. Root color-scheme: dark Declaration for Native Controls
+Enforce `color-scheme: dark;` on `:root` and `html`:
+```css
+:root, html {
+  color-scheme: dark;
+}
+```
+Forces the browser engine to render all OS native dialogs, dropdowns, scrollbars, and input adornments in native obsidian dark mode without blinding white flashes.
+
+### 79. Mobile Tap Highlight & Touch Callout Suppression (-webkit-tap-highlight-color: transparent)
+Eliminate default mobile overlays and system callout menus in favor of our sovereign border-luminance feedback:
+```css
+button, a, [role="button"], .tab-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+```
+
+### 80. Cryptographic Word-Break & Hyphenation Safety (word-break: break-all; hyphens: none;)
+64-character SHA-256 hashes, compiler flags, and memory addresses contain no whitespace. All cryptographic telemetry containers must enforce:
+```css
+.crypto-hash, .telemetry-code {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  hyphens: none !important;
+}
+```
+Prevents card blowout while strictly forbidding hyphen insertion into cryptographic hashes.
+
+### 81. Horizontal Scroll Snap for Mobile Bento Ribbons (scroll-snap-type: x mandatory)
+Ensure mobile swipe gestures physically lock onto cards cleanly with zero mid-card truncation:
+```css
+.mobile-horizontal-tray {
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 16px;
+  scroll-padding-right: 16px;
+}
+.mobile-horizontal-tray > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+```
+
+### 82. Screen Reader SVG Redundancy Defense (aria-hidden="true" on Decorative Glyphs)
+Every inline SVG icon inside a labeled button or link MUST declare `aria-hidden="true" focusable="false"`. Icon-only buttons must declare an explicit `aria-label`:
+```html
+<button aria-label="Copy SHA-256 Hash">
+  <svg aria-hidden="true" focusable="false" ...></svg>
+</button>
+```
+
+### 83. Hardware-Accelerated WebCrypto subtle Digest Invariant (window.crypto.subtle)
+Client-side cryptographic hashing must ONLY use native, hardware-accelerated `window.crypto.subtle.digest('SHA-256', buffer)`:
+```javascript
+const hashBuffer = await window.crypto.subtle.digest('SHA-256', arrayBuffer);
+const hashArray = Array.from(new Uint8Array(hashBuffer));
+const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+```
+Executes in native C++ engine threads with 0ms main thread jank and zero external dependencies.
+
+### 84. Microscopic Tooltip Hover Intent Physics (300ms Intent vs. Instant Flash)
+Hover tooltips must enforce a 300ms hover intent delay before appearing to eliminate visual clutter during casual mouse traversal:
+```css
+.tooltip-panel {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease 300ms;
+}
+.tooltip-trigger:hover .tooltip-panel {
+  opacity: 1;
+  pointer-events: auto;
+}
+```
+
+### 85. Dynamic Subpixel Cursor Ingestion Affordance (cursor: copy)
+Use intentional cursor semantics across all specialized surfaces:
+- Cryptographic hash cells and discount code badges: `cursor: copy;`
+- Drag-and-drop file verification zones: `cursor: copy;` on dragover.
+- Disabled or locked tier buttons: `cursor: not-allowed;`
+
+### 86. Table Column Width Safety & Ellipsis Bounds (max-w-[140px] truncate)
+In `#commercial-catalog-table`, enforce desktop column constraints with ellipsis truncation:
+```html
+<td class="max-w-[140px] truncate font-mono text-xs text-slate-400" title="Click to copy full SHA-256">
+  e3b0c44298fc1c14...
+</td>
+```
+
+### 87. CSS Safe-Area Inset Bounds on Floating Modals (max-height: calc(100dvh - ...))
+Modal dialog bounds must respect device notches and home indicator bars:
+```css
+.modal-dialog {
+  max-height: calc(100dvh - max(32px, env(safe-area-inset-top) + env(safe-area-inset-bottom)));
+  margin-left: max(16px, env(safe-area-inset-left));
+  margin-right: max(16px, env(safe-area-inset-right));
+}
+```
+
+### 88. CSS Two-Digit Monospace Counter Architecture (counter-increment)
+Use pure CSS counters for step-by-step verification flows and milestones:
+```css
+.rql-step-list { counter-reset: rql-step; }
+.rql-step-item::before {
+  counter-increment: rql-step;
+  content: counter(rql-step, decimal-leading-zero);
+  font-family: var(--font-mono);
+  color: #10b981;
+  margin-right: 0.5rem;
+}
+```
+Guarantees automatic two-digit monospace numbering (`01`, `02`, `03`) that updates dynamically on DOM reordering.
+
+### 89. Dynamic Page Title Notification Cycling on Tab Inactivity
+When an operation completes while `document.hidden === true`, cycle the document title:
+```javascript
+document.title = "(1) [VERIFIED] DocumentShield | Rehan Quant Lab";
+window.addEventListener('focus', () => {
+  document.title = "DocumentShield | Rehan Quant Lab";
+}, { once: true });
+```
+
+### 90. Heavy Storage Quota Verification Before Write (navigator.storage.estimate)
+Check storage quota before large client-side writes:
+```javascript
+if (navigator.storage && navigator.storage.estimate) {
+  const { quota, usage } = await navigator.storage.estimate();
+  if (quota - usage < 1024 * 1024) {
+    console.warn('Storage quota nearing limit; skipping local caching.');
+  }
+}
+```
+
+### 91. Strict IFrame Sandbox Boundaries for Demo Players (sandbox Hardening)
+Any embedded frame or video player must declare strict sandbox restrictions:
+```html
+<iframe sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer" loading="lazy"></iframe>
+```
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
@@ -837,7 +975,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 64-Point Failure Checklist
+## 7. Pre-Launch 78-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -903,5 +1041,19 @@ Before any change is committed or deployed, every question must be verified with
 60. [ ] **Right-Click Preservation**: Is the browser native `contextmenu` 100% unblocked everywhere?
 61. [ ] **Download Hardening**: Do manifest download links declare `download` and `rel="noopener"`?
 62. [ ] **Table Empty Colspan**: Do table empty-search states span `colspan="100%"` across all columns?
-63. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-64. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+63. [ ] **Dark Color Scheme**: Does root declare `color-scheme: dark` for native controls and scrollbars?
+64. [ ] **Mobile Tap Suppression**: Are `-webkit-tap-highlight-color` and `-webkit-touch-callout` disabled?
+65. [ ] **Crypto Word-Break Safety**: Do hashes enforce `word-break: break-all` and `hyphens: none`?
+66. [ ] **Mobile Scroll Snap**: Do horizontal card trays enforce `scroll-snap-type: x mandatory`?
+67. [ ] **Screen Reader SVG Defense**: Do decorative SVGs declare `aria-hidden="true" focusable="false"`?
+68. [ ] **Hardware WebCrypto**: Does client hashing use native `window.crypto.subtle` with 0ms jank?
+69. [ ] **Tooltip Hover Intent**: Do tooltips enforce a 300ms hover delay to prevent visual clutter?
+70. [ ] **Subpixel Cursor Affordance**: Do hashes and dropzones declare semantic `cursor: copy`?
+71. [ ] **Table Ellipsis Bounds**: Are long hashes and telemetry constrained with desktop `truncate`?
+72. [ ] **Modal Safe-Area Inset**: Do modal dialogs enforce `env(safe-area-inset-*)` boundaries?
+73. [ ] **Two-Digit CSS Counters**: Do step lists use CSS `decimal-leading-zero` counters?
+74. [ ] **Title Notification Cycling**: Does tab title update dynamically on background task completion?
+75. [ ] **Storage Quota Check**: Are large storage writes verified against `navigator.storage.estimate`?
+76. [ ] **IFrame Sandbox Bounds**: Do embedded demo frames declare strict sandbox attributes?
+77. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+78. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
