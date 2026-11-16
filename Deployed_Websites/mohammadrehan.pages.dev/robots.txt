@@ -1,8 +1,11 @@
 # ====================================================================
-# Rehan Quant Lab (RQL) - Search Engine Optimization & Security Directives
-# Generated Deterministically by Bare-Metal Rust Engine on 2026-11-11
+# Rehan Quant Lab (RQL) - Search Engine & AI Agent Directives
+# Specification: RFC 9309 / llmstxt.org Standard
+# Domain: https://rehanquantlab.com
+# Updated: 2026-11-16
 # ====================================================================
 
+# Global Search Engine Directives
 User-agent: *
 Allow: /
 Disallow: /.git/
@@ -19,16 +22,7 @@ Disallow: /downloads/*.exe
 Disallow: /downloads/*.tar.gz
 Allow: /downloads/*.pdf
 
-# Sitemap Index Declaration
-Sitemap: https://rehanquantlab.com/sitemap.xml
-
-# LLM & AI Engine Directives (llms.txt standard)
-# Specification: https://llmstxt.org/
-# Machine-readable context for ChatGPT, Perplexity, Claude, Gemini, Cursor
-# https://rehanquantlab.com/llms.txt
-# https://rehanquantlab.com/llms-full.txt
-
-# Friendly Bot Optimizations
+# Traditional Search Crawlers (SEO)
 User-agent: Googlebot
 Allow: /
 
@@ -44,8 +38,12 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# LLM Web Search Agents (GEO - Generative Engine Optimization)
+# Generative AI & LLM Search Agents (GEO & LLMO)
+# Explicitly permitting real-time search, deep research, and citation synthesis
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -57,5 +55,21 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Omgilibot
+User-agent: Applebot-Extended
 Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Cohere-training-data-crawler
+Allow: /
+
+# Core Sitemap & LLM Context Directives
+Sitemap: https://rehanquantlab.com/sitemap.xml
+
+# LLM Context Feeds (llmstxt.org compliant)
+# Primary: https://rehanquantlab.com/llms.txt
+# Full:    https://rehanquantlab.com/llms-full.txt
