@@ -1,6 +1,6 @@
 // ============================================================================
-// REHAN QUANT LAB™ — CLOUDFLARE PAGES EDGE FUNCTION: LEAD & UPI DISPATCH GATEWAY
-// "The Doctor's Ding — Sub-10ms Lead Processing & Multi-Channel Alert Router"
+// REHAN QUANT LAB - CLOUDFLARE PAGES EDGE FUNCTION: LEAD & UPI DISPATCH GATEWAY
+// Sub-10ms Lead Processing, Honeypot Bot-Trap & Multi-Channel Alert Router
 // Founder & Principal Systems Architect: Mohammad Rehan
 // ============================================================================
 
@@ -43,6 +43,24 @@ export async function onRequest(context) {
       );
     }
 
+    // 1. Anti-Bot Honeypot Sinkhole:
+    // If automated headless bots populate invisible honeypot inputs, return simulated 200 OK
+    // without executing any outbound dispatch, WhatsApp trigger, or WAL persistence.
+    if (body.contact_company_url || body.website_hp || body.company_url || body.bot_trap_field || body.website) {
+      return new Response(
+        JSON.stringify({
+          ok: true,
+          protocol: "RQL_PHOENIX_SENTINEL_EDGE_DISPATCH_v2",
+          lead_id: "LEAD-" + Date.now().toString(36).toUpperCase(),
+          sha256: "0000000000000000000000000000000000000000000000000000000000000000",
+          status: "delivered",
+          filter: "HONEYPOT_AUTOMATION_SINKHOLE",
+          latency_ms: 1
+        }),
+        { status: 200, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" } }
+      );
+    }
+
     const leadType = body.type || "APPOINTMENT_REQUEST";
     const slug = body.slug || "unspecified-clinic";
     const businessName = body.business_name || "Specialized Clinic";
@@ -69,22 +87,22 @@ export async function onRequest(context) {
     const hashArray = Array.from(new Uint8Array(hashBuffer));
     const sha256 = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-    // Format Doctor WhatsApp Alert Text
+    // Format Alert Text
     const isUpi = leadType === "UPI_TOKEN_PAYMENT" || (utr && utr.length > 0);
-    const badge = isUpi ? "⚡ *PRIORITY UPI TOKEN CONFIRMED*" : "📅 *NEW PRIORITY OPD APPOINTMENT*";
-    const utrLine = isUpi ? `\n💳 *Token Paid:* ₹${amount} (UTR: ${utr || "Verified on Client"})` : "";
+    const badge = isUpi ? "[PRIORITY UPI TOKEN CONFIRMED]" : "[NEW PRIORITY OPD APPOINTMENT]";
+    const utrLine = isUpi ? `\n[Token Paid]: INR ${amount} (UTR: ${utr || "Verified on Client"})` : "";
 
     const alertMessage = 
 `${badge}
-🏛️ *${businessName}*
+[${businessName}]
 
-👤 *Patient:* ${patientName}
-📞 *Contact:* ${patientPhone}
-🩺 *Service:* ${service}${utrLine}
-📝 *Notes:* ${notes}
+Patient: ${patientName}
+Contact: ${patientPhone}
+Service: ${service}${utrLine}
+Notes: ${notes}
 
-⏰ *Received:* ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST
-🛡️ *Phoenix WAL Seal:* ${sha256.substring(0, 16)}...
+Received: ${new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })} IST
+Phoenix WAL Seal: ${sha256.substring(0, 16)}...
 
 Reply directly to confirm patient's slot.`;
 
