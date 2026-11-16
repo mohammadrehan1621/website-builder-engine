@@ -1,30 +1,80 @@
 ---
 name: rql-design-system
-description: The sovereign, world-class design system and engineering standard for Rehan Quant Lab (rehanquantlab.com). Synthesizes Apple fluidity, Linear/Stripe precision, Paul Bakaus craftsmanship, Anthropic visual restraint, and Vercel technical performance into one definitive law. Enforces 100% rock-solid stability (zero wobbles/scale jumps), unified obsidian/emerald/sky palette, high-density Bento grids, 100% 7-bit ASCII compliance, and CLS=0.
+description: The sovereign, world-class design system and engineering standard for Rehan Quant Lab (rehanquantlab.com). Synthesizes ConardLi Web Design Engineer mindset, Jakub Krehel interface craftsmanship, Google Chrome modern web guidance, Apple fluidity, Linear/Stripe precision, Paul Bakaus discipline, and Anthropic visual restraint into one definitive law. Enforces 100% rock-solid stability (zero wobbles/scale jumps), unified obsidian/emerald/sky palette, high-density Bento grids, 100% 7-bit ASCII compliance, and CLS=0.
 ---
 
 # Rehan Quant Lab (RQL) Sovereign Design System & Engineering Codex
 
-## Core Philosophy: The Sovereign Quantitative Bastion
-Rehan Quant Lab interfaces must reflect **financial-grade precision, zero-telemetry air-gapped security, and native Rust hardware velocity**.
+## Core Philosophy: "The Bar is Stunning, Not Merely Functional"
+Inspired by the industry-defining Web Design Engineer framework (ConardLi), Jakub Krehel's interface engineering, and Google Chrome modern web guidance:
 
-We categorically reject generic AI frontend "slop":
-- **NO** arbitrary purple/pink gradients or floating neon blobs.
-- **NO** cartoonish bouncy spring curves, rubber-band overshoots, or wobbly tilts.
-- **NO** unanchored floating white cards with muddy shadows.
-- **NO** random rainbow badge scatter (pink, purple, orange, coral red).
-- **NO** centered walls of generic marketing text.
+> **"Every pixel is intentional. Every interaction is deliberate. The bar is never merely 'functional' -- it must be undeniably stunning, authoritative, and rock-solid."**
 
-Every pixel, 1px hairline border, and color token must earn its place. If an element does not provide clarity, trust, or utility, it is purged.
+For Rehan Quant Lab, the soul is **The Sovereign Quantitative Bastion**:
+- Financial-grade precision, zero-telemetry air-gapped security, and native Rust hardware velocity.
+- Rejection of all generic AI frontend "slop": no floating purple blobs, no cartoonish rubber-band bounces, no unanchored cards, no rainbow badge clouds.
+- Absolute respect for visual hierarchy, Gestalt psychology, and deliberate whitespace.
 
 ---
 
-## Pillar 1: Rock-Solid Interaction & Motion Law (Zero Wobble)
+## 1. The 19 Web Designer Competencies (Baked into RQL Engineering)
 
-Interface elements must feel physically grounded, rock-solid, and instantaneous like professional trading terminals, macOS system utilities, and Linear.
+### Creative & Technical Disciplines
+1. **Visual Design & Gestalt Principles**:
+   - **Proximity**: Group related technical metrics and actions tightly inside dedicated Bento cells.
+   - **Similarity**: Sibling cards share identical 1px border geometry, padding, and typography scales.
+   - **Figure-Ground**: Clear visual separation between the foundational slate canvas, elevated card surfaces, and active overlay dialogs.
+2. **Typography Discipline**:
+   - Primary Display Sans: Inter Display / Apple System Sans (`font-sans`) with tight tracking (`tracking-tight`) for high-impact authority.
+   - Technical Monospace: JetBrains Mono / SF Mono (`font-mono`) for all filenames, SHA-256 hashes, commands, RAM figures, and socket metrics.
+   - **Tabular Figures Invariant**: Mandatory `font-feature-settings: 'tnum' 1` (`font-mono` / `tabular-nums`) across all prices, counters, dates, and tables.
+3. **Composition & Visual Gravity**:
+   - Intentional negative space. Balanced bento layouts with a single primary focal point per screen.
+   - Line length restricted to 65-75 characters (`max-w-2xl` to `max-w-3xl`) for effortless technical scanning.
+4. **Disciplined Color Theory (The Strict 3-Token System)**:
+   - **Role 1 (Structural Canvas)**: Slate / Charcoal / Obsidian (`#020617`, `#0b111b`, `#0f172a`, `#1e293b`, `#334155`, `#f8fafc`).
+   - **Role 2 (Sovereign Accent)**: Electric Emerald (`#10b981` / `text-emerald-500` / `bg-emerald-500/10` / `border-emerald-500/30`) for verified status, active tabs, and primary CTAs.
+   - **Role 3 (Cyber Telemetry)**: Precision Sky Blue (`#0ea5e9` / `text-sky-400` / `bg-sky-500/10` / `border-sky-500/30`) for hardware architecture, AES-256 encryption tags, and memory benchmarks.
+   - **Strict Bans**: BANNED pink/rose pills (`bg-rose-50`, `text-rose-700`), coral-red monospace filenames, and arbitrary purple/orange button clouds.
+5. **Modern Web Tools & Baseline APIs (Google Chrome Guidance)**:
+   - Modern semantic HTML (`<dialog>`, `<nav>`, `<main>`, `<section>`, `<article>`).
+   - Container queries and modern CSS nesting where appropriate.
+   - Fetch priority and native lazy loading (`loading="lazy"`, `decoding="async"`) on all offscreen media.
+6. **Responsive Layouts & Device Ergonomics**:
+   - Mobile Portrait (375px & 390px): Thumb-reachable bottom actions, single-column stacked hierarchy.
+   - Tablet Portrait (768px): 2-column balanced Bento grids.
+   - Desktop & 4K (1280px to 1920px+): High-density multi-column Bento grids with generous breathing room.
+   - Touch targets must always be >= 44x44px.
+7. **User Experience (UX) & Cognitive Load Reduction**:
+   - Anticipate user intent: 1-click direct checkout with auto-applied Pioneer passes.
+   - Progressive disclosure: Essential hardware telemetry and pricing visible upfront; deep architectural specs tucked behind seamless modal views.
+8. **User Interface (UI) Precision & 5-State Completeness**:
+   - Every interactive component (buttons, inputs, cards, tabs) must explicitly define all 5 states:
+     1. `Default`: Resting hairline border and clean surface.
+     2. `Hover`: Subtle 1px border luminance (`border-slate-300` or `border-emerald-500/50`) + soft elevation shadow.
+     3. `Active / Pressed`: Mechanical tactile depression (0ms delay).
+     4. `Focus-Visible`: Unmistakable 2px Emerald outline ring for keyboard users (`focus-visible:ring-2 focus-visible:ring-emerald-500`).
+     5. `Disabled`: Reduced opacity (`opacity-50 pointer-events-none`) with clear tooltip rationale.
+9. **Search Engine Optimization (SEO) & Structured Data**:
+   - Valid JSON-LD Schema (`SoftwareApplication`, `Organization`, `WebSite`) on every page.
+   - Semantic heading hierarchy (`h1` -> `h2` -> `h3`) with zero heading-level skips.
+   - OpenGraph and Twitter card metadata on all commercial routes.
+
+### Strategic Mindset & Soft Skills
+10. **Patience & Methodical Refinement**: Never rush code changes. Every commit must be tested against Strix and Aegis sentinels.
+11. **Collaboration & Empathy**: Respect the user's vision. When the user requests a change, listen to the underlying intent and elevate it to world-class craftsmanship.
+12. **Strategic Business Thinking**: Every design element must serve a commercial purpose -- building institutional trust, proving zero-telemetry security, or driving perpetual license acquisition.
+13. **Attention to Detail**: Hairline 1px borders, pixel-perfect alignment, zero widowed text strings, and zero visual friction.
+14. **Continuous Learning**: Continually integrate modern web standards, security patches, and performance optimizations.
+
+---
+
+## 2. Pillar of Rock-Solid Stability (Zero Wobble Law)
+
+Elements must feel physically grounded like professional Bloomberg trading terminals and macOS system utilities.
 
 ### The Forbidden List (Purged Everywhere)
-1. **NO `hover:scale-*` or `group-hover:scale-*`**: Elements must never suddenly expand or zoom when the cursor passes over them.
+1. **NO `hover:scale-*` or `group-hover:scale-*`**: Elements must never suddenly zoom, scale, or jitter when the cursor passes over them.
 2. **NO `hover:-translate-y-*` or floating lifts**: Cards must not lift upward on hover. Layout geometry stays strictly fixed.
 3. **NO 3D Perspective Tilting**: Banned `perspective(1000px) rotateX(...) rotateY(...)`. No gyroscope card tilting or mouse-following glare.
 4. **NO Rubber-Band Bounce Easing**: Banned `cubic-bezier(0.34, 1.56, 0.64, 1)` where overshoot causes wobbly bounces.
@@ -34,41 +84,16 @@ Interface elements must feel physically grounded, rock-solid, and instantaneous 
 ### The Mandated Interaction Standard
 - **Hover Feedback**: Strictly **subtle 1px border luminance** (`border-slate-200` to `border-slate-400` in light mode, or `border-slate-800` to `border-emerald-500/50` in dark mode) paired with soft shadow elevation (`shadow-xs` to `shadow-md`). Zero pixel displacement.
 - **Click Affordance**: Sub-pixel tactile feedback on `pointerdown` (0ms delay, mechanical click feel).
-- **Smoothness**: Use native high-performance transitions: `transition: border-color 0.15s ease, box-shadow 0.15s ease`.
+- **Smoothness**: Native high-performance transitions: `transition: border-color 0.15s ease, box-shadow 0.15s ease`.
 - **Keyboard Power**: Every interactive element supports full keyboard navigation (Tab cycling, `Enter`/`Space` activation, `Escape` modal dismissal). Raycast Command Palette accessible everywhere via `Ctrl+K` or `/`.
 
 ---
 
-## Pillar 2: The Sovereign Palette (Strict 3-Color Discipline)
+## 3. High-Density Bento Grid & Card Architecture
 
-Arbitrary color choices erode trust. RQL strictly enforces a disciplined 3-role semantic color system across all pages:
+Interfaces are organized like financial and engineering workstations: high information density, razor-sharp scannability, and zero visual clutter.
 
-| Role | Color / Hex Tokens | Purpose & Usage |
-| :--- | :--- | :--- |
-| **1. Structural Foundation** | **Slate / Charcoal / Obsidian**<br>`#020617` / `#0b111b` / `#0f172a`<br>`#1e293b` / `#334155` / `#f8fafc` | Canvas backgrounds, elevated card surfaces, hair-thin 1px borders, and readable body typography. |
-| **2. Sovereign Accent** | **Electric Emerald**<br>`#10b981` / `text-emerald-500`<br>`bg-emerald-500/10` / `border-emerald-500/30` | Official verified releases, 100% air-gapped indicators, active tab selection, and primary high-conversion CTA buttons. |
-| **3. Cyber Telemetry** | **Precision Sky Blue**<br>`#0ea5e9` / `text-sky-400`<br>`bg-sky-500/10` / `border-sky-500/30` | Technical architecture specs, cryptography tags (AES-256-GCM, SHA-256), memory telemetry, and code references. |
-
-### Strict Bans
-- **BANNED**: Pink and rose pills (`bg-rose-50`, `text-rose-700`, `bg-rose-500`).
-- **BANNED**: Coral-red monospace file labels (`text-rose-700`).
-- **BANNED**: Arbitrary purple, violet, or yellow badge clouds.
-- **BANNED**: Jarring "Checkerboard Sandwiches" (e.g. dropping pure black boxes on pure white backgrounds without proper transitional elevation).
-
----
-
-## Pillar 3: High-Density Bento Grid & Typography
-
-Interfaces are organized like financial and engineering dashboards: high information density, razor-sharp scannability, and zero visual clutter.
-
-### Typography Hierarchy
-- **Primary Display Sans**: Inter Display / Apple System Sans (`font-sans`), tight letter-spacing (`tracking-tight`), crisp font weights (`font-semibold`, `font-bold`, `font-black`).
-- **Technical Monospace**: JetBrains Mono / SF Mono (`font-mono`) for all filenames, execution commands, memory metrics, cryptographic hashes, and telemetry counters.
-- **Tabular Figures Invariant**: Always enforce `font-feature-settings: 'tnum' 1` (`font-mono` or `tabular-nums`) on prices, dates, hashes, and performance counters.
-- **Reading Gravity**: Maximum line width of 65-75 characters (`max-w-2xl` to `max-w-3xl`) for technical descriptions. Left-align all technical copy; center only high-impact single-concept hero titles.
-- **WCAG AAA Contrast**: Secondary text must always maintain minimum 7:1 contrast ratio (`text-slate-400` on dark, `text-slate-600` on light). Never use washed-out low-contrast grey.
-
-### Component & Card Architecture
+### Component & Card Standards
 - **Cards**: Single rounded corner scale (`rounded-2xl` for standard cards, `rounded-3xl` for flagship containers). 1px hairline border (`border-slate-200/90` or `border-white/10`).
 - **Command Ribbon**: Single-row compact bar (52px max height) consolidating category tabs, real-time live search, and view switcher (Cards vs. Technical Table). No double-box stacking that wastes vertical viewport space.
 - **Action Hierarchy**:
@@ -78,7 +103,7 @@ Interfaces are organized like financial and engineering dashboards: high informa
 
 ---
 
-## Pillar 4: Universal Multi-Page Ecosystem Sync
+## 4. Universal Multi-Page Ecosystem Sync
 
 The design system is not applied piecemeal. Every page in the repository must feel like part of the exact same sovereign operating system:
 
@@ -92,7 +117,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## Pillar 5: Production Invariants & Security Sentinel
+## 5. Production Invariants & Security Sentinel
 
 Before any file is merged or deployed, it must satisfy all 4 invariant rules:
 
