@@ -621,6 +621,166 @@ When linking directly to a specific suite via hash (`store.html#suite-documentsh
 ```
 Instantly draws the user's eye to the targeted suite when arriving from a deep link.
 
+### 64. Display P3 Wide-Gamut Invariant (@supports (color: color(display-p3 1 1 1)))
+Modern Apple displays (MacBook Pro Liquid Retina, iPhone OLED, iPad Pro) and 4K HDR monitors support Display P3 wide color gamut (25% richer than standard sRGB):
+```css
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --color-emerald-sovereign: color(display-p3 0.06 0.73 0.51);
+    --color-sky-precision: color(display-p3 0.05 0.65 0.91);
+  }
+}
+```
+Provides hyper-vivid, incandescent emerald telemetry on wide-gamut hardware while gracefully falling back to standard sRGB `#10b981`.
+
+### 65. High-Contrast Accessibility Theme (@media (prefers-contrast: more))
+On macOS, iOS, and Android systems with "Increase Contrast" enabled:
+```css
+@media (prefers-contrast: more) {
+  .bento-card, .command-ribbon-btn, [data-product-card] {
+    border-color: #64748b !important;
+  }
+  .text-slate-400 {
+    color: #f1f5f9 !important;
+  }
+}
+```
+Boosts muted text and hairline borders to high-contrast white and slate for users with low vision.
+
+### 66. Layout Containment for Render Isolation (contain: layout paint)
+On high-density pages with 31 product cards (`store.html`), updating internal card state must not trigger layout recalculations across sibling cards:
+```css
+.bento-card, [data-product-card] {
+  contain: layout paint;
+}
+```
+Isolates card DOM and eliminates layout thrashing during client interactions.
+
+### 67. Focus Restoration Anchor on Modal / Palette Dismissal (document.activeElement)
+Always store the active element before opening a dialog and restore focus upon dismissal:
+```javascript
+let lastFocusedTrigger = null;
+function openModal(modalEl, triggerEl) {
+  lastFocusedTrigger = triggerEl || document.activeElement;
+  modalEl.classList.remove('hidden');
+}
+function closeModal(modalEl) {
+  modalEl.classList.add('hidden');
+  lastFocusedTrigger?.focus();
+}
+```
+Prevents focus from getting dumped to `document.body`, preserving screen reader orientation.
+
+### 68. Web Share API with Desktop Clipboard Fallback (navigator.share)
+Mobile users expect native OS share sheet activation when sharing a suite deep link:
+```javascript
+async function shareSuite(title, url) {
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: title, text: title + ' - Rehan Quant Lab', url: url });
+      return;
+    } catch (err) { /* Cancelled */ }
+  }
+  await copyToClipboard(url);
+  showToastBeacon('Deep Link Copied to Clipboard');
+}
+```
+
+### 69. Background Tab Visibility Management (document.visibilityState)
+When the user switches to another browser tab, pause particle canvases and Web Audio contexts:
+```javascript
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (audioCtx && audioCtx.state === 'running') audioCtx.suspend();
+    pauseCanvasRenderer();
+  } else {
+    resumeCanvasRenderer();
+  }
+});
+```
+
+### 70. Sticky Table Header Divider Shadow on Vertical Scroll
+In `#commercial-catalog-table`, table headers must apply solid obsidian backing with a hairline bottom divider shadow:
+```css
+#commercial-catalog-table th {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  z-index: 30;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+```
+Prevents scrolling data rows from clashing with header text.
+
+### 71. Native Momentum Scrolling on Mobile Horizontal Tables (-webkit-overflow-scrolling: touch)
+Enforce native momentum physics on scrollable tables on iOS Safari:
+```css
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+```
+
+### 72. Optical Text Box Trim (text-box-trim: both)
+Eliminate invisible half-leading font metric whitespace in buttons and badges:
+```css
+@supports (text-box-trim: both) {
+  .command-ribbon-btn, .badge-pill {
+    text-box-trim: both;
+    text-box-edge: cap alphabetic;
+  }
+}
+```
+Achieves 100% optical and mathematical vertical centering.
+
+### 73. Low-Bandwidth & Data-Saver Mode (navigator.connection.saveData)
+When users are on metered or data-saver mobile connections, suspend non-essential visual loops:
+```javascript
+const isDataSaver = (navigator.connection && navigator.connection.saveData) || 
+                    window.matchMedia('(prefers-reduced-data: reduce)').matches;
+if (isDataSaver) {
+  disableCanvasParticles();
+  disablePreloadAssets();
+}
+```
+
+### 74. Local Storage Schema Integrity & Tamper Recovery
+Wrap storage reads in schema validation with automatic recovery to prevent UI crashes if keys are corrupted:
+```javascript
+function loadStoredPreference(key, defaultVal, validator) {
+  try {
+    const raw = localStorage.getItem(key);
+    if (!raw) return defaultVal;
+    const parsed = JSON.parse(raw);
+    return validator(parsed) ? parsed : defaultVal;
+  } catch (e) {
+    localStorage.setItem(key, JSON.stringify(defaultVal));
+    return defaultVal;
+  }
+}
+```
+
+### 75. Absolute Right-Click Context Menu Preservation
+BANNED: Never intercept or disable `contextmenu`. Preserve 100% native browser right-click freedom for developer tools, URL copying, and security audits everywhere.
+
+### 76. Download Attribute Hardening on Binary Manifests (download + rel="noopener")
+All cryptographic verification manifests and certificate download links must declare:
+```html
+<a href="manifests/sha256.txt" download="RQL-SHA256-Manifest.txt" rel="noopener">
+```
+
+### 77. Responsive Table Empty Search Column Spanning (colspan="100%")
+When search queries return 0 results in the technical catalog table, span the empty state across the entire table:
+```html
+<tr>
+  <td colspan="100%" class="py-12 text-center text-slate-400">
+    <div class="flex flex-col items-center justify-center space-y-3">
+      <!-- Reassuring empty state with 1-click reset -->
+    </div>
+  </td>
+</tr>
+```
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
@@ -677,7 +837,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 50-Point Failure Checklist
+## 7. Pre-Launch 64-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -729,5 +889,19 @@ Before any change is committed or deployed, every question must be verified with
 46. [ ] **Windows DPR Antialiasing**: Do grids avoid fractional subpixel borders on 125%/150% scaling?
 47. [ ] **Progressive Picture Packaging**: Are screenshots delivered via `<picture>` with `.webp` and `.png` fallbacks?
 48. [ ] **Deep-Link Highlight**: Does `:target` apply an emerald pulse border when navigating via hash anchors?
-49. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-50. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+49. [ ] **Display P3 Wide Gamut**: Are emerald and sky accents calibrated for Display P3 wide gamut displays?
+50. [ ] **High-Contrast Theme**: Does `prefers-contrast: more` elevate borders and text to high luminance?
+51. [ ] **Layout Containment**: Do cards enforce `contain: layout paint` to isolate browser render cycles?
+52. [ ] **Focus Restoration**: Does modal dismissal return keyboard focus directly to the opening trigger?
+53. [ ] **Web Share Sheet**: Does mobile share trigger native `navigator.share` with desktop clipboard fallback?
+54. [ ] **Visibility Management**: Do hidden tabs automatically suspend audio and pause canvas animation?
+55. [ ] **Sticky Table Header Shadow**: Do table headers maintain an obsidian backing and hairline shadow on scroll?
+56. [ ] **Momentum Scrolling**: Do horizontal table containers enforce `-webkit-overflow-scrolling: touch`?
+57. [ ] **Text Box Trim**: Do buttons and badges trim half-leading metrics via `text-box-trim: both`?
+58. [ ] **Data-Saver Adaptation**: Does the UI automatically disable canvas loops if `saveData` is active?
+59. [ ] **Storage Schema Integrity**: Are `localStorage` reads protected by schema validation and safe fallback?
+60. [ ] **Right-Click Preservation**: Is the browser native `contextmenu` 100% unblocked everywhere?
+61. [ ] **Download Hardening**: Do manifest download links declare `download` and `rel="noopener"`?
+62. [ ] **Table Empty Colspan**: Do table empty-search states span `colspan="100%"` across all columns?
+63. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+64. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
