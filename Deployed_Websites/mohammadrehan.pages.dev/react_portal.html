@@ -106,7 +106,19 @@
             pointer-events: none;
             z-index: 1;
         }
-    </style>
+    /* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
+</style>
     <link rel="preconnect" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button" crossorigin>
     <link rel="dns-prefetch" data-obf="aHR0cHM6Ly9xdWFudGlmeTE3Lmd1bXJvYWQuY29t" role="button">
     <link rel="preconnect" href="https://assets.gumroad.com" crossorigin>

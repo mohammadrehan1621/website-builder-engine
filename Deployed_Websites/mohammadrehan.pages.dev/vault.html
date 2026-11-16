@@ -268,7 +268,19 @@
       text-align: center;
       box-shadow: 0 25px 50px -12px rgba(16,185,129,0.25);
     }
-  </style>
+  /* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
+</style>
   <script src="rql_seo_engine.js" defer></script>
     <script src="assets/rql-shield.js"></script>
 <style id="rql-sovereign-invariants">

@@ -47,6 +47,18 @@
     ::-webkit-scrollbar-track { background: #f1f5f9; }
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+/* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
 </style>
 
 <!-- JSON-LD SCHEMA: Commercial Web & Speed Studio -->

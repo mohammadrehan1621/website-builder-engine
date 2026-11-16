@@ -158,6 +158,18 @@
   animation: aurora-drift-3 26s ease-in-out infinite alternate;
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
+/* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
 </style>
   <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 <style id="rql-sovereign-invariants">

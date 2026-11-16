@@ -57,7 +57,19 @@
     }
     .toast.show { display: block; animation: fadeIn 0.2s ease-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
+  /* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
+</style>
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">

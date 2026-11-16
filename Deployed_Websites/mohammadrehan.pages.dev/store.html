@@ -94,6 +94,18 @@ tailwind.config = {
     outline: none;
     box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.6);
   }
+/* Zero-Wobble Hard Law Enforcement */
+.bento-card-spring, .btn-spring, [class*="bento-card-spring"], [class*="btn-spring"] {
+  transform: none !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+.bento-card-spring:hover, .btn-spring:hover, .btn-spring:active {
+  transform: none !important;
+}
+[class*="hover:scale-"], [class*="group-hover:scale-"],
+[class*="hover:-translate-y-"], [class*="group-hover:translate-x-"] {
+  transform: none !important;
+}
 </style>
   <script src="rql_seo_engine.js" defer></script>
   <script src="lively_motion.js" defer></script>
@@ -3943,17 +3955,25 @@ document.addEventListener('keydown', function(e) {
     <!-- /31 Desktop Product Cards Grid -->
 
     <!-- High-Density Technical Enterprise Table View -->
-    <div id="commercial-catalog-table" class="hidden mb-14 bg-white border border-slate-200/90 rounded-2xl shadow-xs overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse table-auto text-xs font-sans">
-          <thead class="bg-slate-100 border-b border-slate-200 text-slate-700 font-mono text-[11px] uppercase tracking-wider">
+    <div id="commercial-catalog-table" class="hidden mb-14 bg-white border border-slate-200 rounded-2xl shadow-xs overflow-hidden">
+      <div class="overflow-x-auto" style="overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;">
+        <table class="w-full text-left border-collapse table-fixed text-xs font-sans min-w-[840px]">
+          <colgroup>
+            <col style="width: 5%;">
+            <col style="width: 26%;">
+            <col style="width: 22%;">
+            <col style="width: 18%;">
+            <col style="width: 14%;">
+            <col style="width: 15%;">
+          </colgroup>
+          <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-mono text-[11px] uppercase tracking-wider sticky top-0 z-20 shadow-2xs">
             <tr>
-              <th class="py-3 px-3 text-center w-12 font-bold">#</th>
-              <th class="py-3 px-4 font-bold">Commercial Workstation</th>
-              <th class="py-3 px-4 font-bold">Master Executable</th>
-              <th class="py-3 px-4 font-bold">Architecture &amp; Air-Gap</th>
-              <th class="py-3 px-4 font-bold">Perpetual License</th>
-              <th class="py-3 px-4 text-right font-bold pr-6">Instant Checkout &amp; Specs</th>
+              <th class="py-3.5 px-3 text-center font-bold text-slate-400">#</th>
+              <th class="py-3.5 px-4 font-bold text-slate-900">Commercial Workstation</th>
+              <th class="py-3.5 px-4 font-bold text-slate-700">Master Executable</th>
+              <th class="py-3.5 px-4 font-bold text-slate-700">Architecture &amp; Air-Gap</th>
+              <th class="py-3.5 px-4 font-bold text-slate-900">Perpetual License</th>
+              <th class="py-3.5 px-4 text-right font-bold pr-6 text-slate-900">Instant Checkout &amp; Specs</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100">
@@ -3979,13 +3999,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-documentshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4020,13 +4040,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-whispervault/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4061,13 +4081,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-retailpos/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-retailpos/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4102,13 +4122,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-storechain/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-storechain/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4143,13 +4163,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-conduit/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-conduit/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4184,13 +4204,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-hashcheck/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4225,13 +4245,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-qrstudio/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4266,13 +4286,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-textdiff/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4307,13 +4327,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-renamer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-renamer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4348,13 +4368,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-tageditor/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-tageditor/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4389,13 +4409,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-fontviewer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-fontviewer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4430,13 +4450,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-dpdpshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-dpdpshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4471,13 +4491,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-pricetag/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-pricetag/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4512,13 +4532,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$89 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;7,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-invoicegen/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-invoicegen/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4553,13 +4573,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-csvformat/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-csvformat/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4594,13 +4614,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-pdfmerge/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-pdfmerge/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4635,13 +4655,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-taxledger/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-taxledger/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -4676,13 +4696,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-fileshredder/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-fileshredder/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4717,13 +4737,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-clipvault/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-clipvault/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4758,13 +4778,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-imagebatch/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4799,13 +4819,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-audioextract/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-audioextract/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4840,13 +4860,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-subtitlesync/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-subtitlesync/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4881,13 +4901,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-spacemap/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-spacemap/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4922,13 +4942,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-docprotect/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-docprotect/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -4963,13 +4983,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-cashdrawer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-cashdrawer/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -5004,13 +5024,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-receiptprinter/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-receiptprinter/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -5045,13 +5065,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-clauseforge/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-clauseforge/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -5086,13 +5106,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-archivemaster/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-archivemaster/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -5127,13 +5147,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$179 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;14,900</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER70 (70% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER70 (70% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-socketshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-socketshield/PIONEER70?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER70</span>
                     <span>&rarr;</span>
                   </a>
@@ -5168,13 +5188,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$29 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;2,499</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-pingpulse/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-pingpulse/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -5209,13 +5229,13 @@ document.addEventListener('keydown', function(e) {
               </td>
               <td class="py-3.5 px-4 font-mono">
                 <div class="text-slate-950 font-bold text-sm tabular-nums">$59 USD <span class="text-xs text-slate-400 font-normal">/ &#8377;4,999</span></div>
-                <div class="text-[10.5px] text-amber-700 font-bold flex items-center gap-1 mt-0.5">
-                  <span class="bg-amber-100 px-1 rounded text-amber-900">PIONEER20 (20% OFF)</span>
+                <div class="text-[10.5px] text-emerald-700 font-bold flex items-center gap-1 mt-0.5">
+                  <span class="bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 font-bold px-1.5 py-0.5 rounded text-[10px]">PIONEER20 (20% OFF)</span>
                 </div>
               </td>
               <td class="py-3.5 px-4 text-right">
                 <div class="flex items-center justify-end gap-2">
-                  <a href="https://quantify17.gumroad.com/l/rql-foldersync/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-2xs transition">
+                  <a href="https://quantify17.gumroad.com/l/rql-foldersync/PIONEER20?wanted=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono font-bold text-xs flex items-center gap-1 shadow-xs transition">
                     <span>PIONEER20</span>
                     <span>&rarr;</span>
                   </a>
@@ -5244,7 +5264,7 @@ document.addEventListener('keydown', function(e) {
 
 
     <!-- INTERACTIVE SOVEREIGN SAAS RENT BUSTER & CAPITAL ROI CALCULATOR -->
-    <div class="mb-14 bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden bento-card-spring" id="saas-calculator-section">
+    <div class="mb-14 bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden " id="saas-calculator-section">
       <!-- Ambient Laser Radial Glow -->
       <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(6,182,212,0.12),transparent_75%)]"></div>
       <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-25"></div>
