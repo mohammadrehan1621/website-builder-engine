@@ -43,7 +43,7 @@ tailwind.config = {
   }
 }
 </script>
-  <link rel="stylesheet" href="../assets/rql-motion.css" />
+  <link rel="stylesheet" href="../assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -80,37 +80,45 @@ tailwind.config = {
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <main class="grow max-w-7xl mx-auto px-4 sm:px-6 py-12 w-full">
-    <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-bold border border-emerald-300">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+  <!-- Hero Section: OPTION C HYBRID PRESTIGE (OBSIDIAN VOID + AMBIENT LASER GLOW) -->
+  <section class="relative pt-14 pb-16 lg:pt-20 lg:pb-20 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+    <!-- Ambient Laser Radial Glow & Fine Grid -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.18),transparent_75%)]"></div>
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 text-emerald-300 text-xs font-mono font-bold border border-emerald-500/40 shadow-lg shadow-emerald-950/40 backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span>100% IN-BROWSER RAM &bull; ZERO SERVER CALLS</span>
       </div>
-      <h1 class="text-3xl sm:text-5xl font-black font-heading text-slate-950 tracking-tight font-black leading-tight">
-        Sovereign, Zero-Telemetry <br class="hidden sm:inline"/>Browser Utilities.
+      <h1 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+        Sovereign, Zero-Telemetry <br class="hidden sm:inline"/><span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Browser Utilities</span>.
       </h1>
-      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-normal max-w-2xl mx-auto">
         Five fast, zero-installation utilities engineered in pure client-side primitives. Every computation executes strictly inside your computer's RAM. Turn off your Wi-Fi or unplug your Ethernet cable&mdash;all five tools will continue running with zero network errors.
       </p>
 
-      <!-- The Skeptic's Dare Badge -->
-      <div class="mt-6 p-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <!-- The Skeptic's Dare Badge (Obsidian HUD) -->
+      <div class="mt-6 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-2xl text-left flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bento-card-spring">
         <div class="space-y-1">
           <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">THE SKEPTIC'S DARE</span>
-            <span class="text-xs font-bold text-slate-950 font-heading">Think "100% Offline" is just marketing words?</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-950 text-emerald-400 border border-emerald-500/40">THE SKEPTIC'S DARE</span>
+            <span class="text-xs font-bold text-white font-heading">Think "100% Offline" is just marketing words?</span>
           </div>
-          <p class="text-xs text-slate-600 font-mono">
+          <p class="text-xs text-slate-300 font-mono">
             Unplug your internet connection right now, open any tool below, and test it. If a single byte leaves your machine, don't use our software.
           </p>
         </div>
-        <div class="shrink-0 flex items-center gap-2 text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-200">
-          <i class="w-4 h-4" data-lucide="wifi-off"></i>
+        <div class="shrink-0 flex items-center gap-2 text-xs font-mono font-bold text-emerald-300 bg-emerald-950/80 px-3 py-1.5 rounded-xl border border-emerald-500/40 shadow-sm">
+          <i class="w-4 h-4 text-emerald-400" data-lucide="wifi-off"></i>
           <span>Air-Gap Ready</span>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Tools Directory Section -->
+  <main class="grow max-w-7xl mx-auto px-4 sm:px-6 py-12 w-full">
 
     <!-- 5 Micro-Tools Directory Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -391,6 +399,6 @@ tailwind.config = {
     if (window.lucide) { lucide.createIcons(); }
   </script>
   <script src="../assets/lenis.min.js" defer></script>
-  <script src="../assets/rql-motion.js" defer></script>
+  <script src="../assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>

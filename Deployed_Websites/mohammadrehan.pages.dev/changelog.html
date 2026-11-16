@@ -159,7 +159,7 @@
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -417,42 +417,46 @@ document.addEventListener('keydown', function(e) {
 <!-- END: RQL_AMBIENT_AURORA -->
 
 
-    <!-- Hero Header -->
-    <section class="relative py-12 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold shadow-2xs">
+    <!-- Hero Header: OPTION C HYBRID PRESTIGE (OBSIDIAN VOID + AMBIENT LASER GLOW) -->
+    <section class="relative pt-14 pb-16 lg:pt-20 lg:pb-20 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+        <!-- Ambient Laser Radial Glow & Fine Grid -->
+        <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.18),transparent_75%)]"></div>
+        <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold shadow-lg shadow-emerald-950/40 backdrop-blur-md">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
                 <span>System Release History &amp; Architectural Milestones</span>
             </div>
             
-            <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-slate-950 tracking-tight font-black">
-                Changelog &amp; Release History
+            <h1 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+                Changelog &amp; <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Release History</span>
             </h1>
             
-            <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
                 Chronological ledger of pure-Rust desktop software releases, Win32 kernel integrations, deterministic memory benchmarks, and cryptographic security audits.
             </p>
 
-            <!-- Quick Metrics Grid -->
+            <!-- Quick Metrics Grid (Obsidian HUD) -->
             <div class="pt-4 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto text-left">
-                <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-[10px] font-mono text-slate-400 uppercase font-bold">Total Suites</div>
-                    <div class="text-xl font-black text-slate-950 mt-0.5">31 Flagships</div>
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-indigo-500/35 text-center shadow-lg shadow-indigo-950/30 bento-card-spring">
+                    <div class="text-[10px] font-mono text-indigo-400 uppercase font-bold">Total Suites</div>
+                    <div class="text-xl font-black text-white mt-0.5 tabular-nums">31 Flagships</div>
                 </div>
-                <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-[10px] font-mono text-slate-400 uppercase font-bold">Core Architecture</div>
-                    <div class="text-xl font-black text-slate-950 mt-0.5">100% Native Rust</div>
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/35 text-center shadow-lg shadow-cyan-950/30 bento-card-spring">
+                    <div class="text-[10px] font-mono text-cyan-400 uppercase font-bold">Core Architecture</div>
+                    <div class="text-xl font-black text-white mt-0.5">100% Native Rust</div>
                 </div>
-                <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-[10px] font-mono text-slate-400 uppercase font-bold">Outbound Sockets</div>
-                    <div class="text-xl font-extrabold text-emerald-700 mt-0.5">0 (Air-Gapped)</div>
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/35 text-center shadow-lg shadow-emerald-950/30 bento-card-spring">
+                    <div class="text-[10px] font-mono text-emerald-400 uppercase font-bold">Outbound Sockets</div>
+                    <div class="text-xl font-extrabold text-emerald-300 mt-0.5 font-mono">0 (Air-Gapped)</div>
                 </div>
-                <div class="bg-white p-3.5 rounded-2xl border border-slate-200 text-center">
-                    <div class="text-[10px] font-mono text-slate-400 uppercase font-bold">SaaS Rent</div>
-                    <div class="text-xl font-black text-slate-950 mt-0.5">&#8377;0 / Month</div>
+                <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/35 text-center shadow-lg shadow-amber-950/30 bento-card-spring">
+                    <div class="text-[10px] font-mono text-amber-400 uppercase font-bold">SaaS Rent</div>
+                    <div class="text-xl font-black text-white mt-0.5 tabular-nums">&#8377;0 / Month</div>
                 </div>
             </div>
         </div>
@@ -1224,6 +1228,6 @@ document.addEventListener('keydown', function(e) {
     }
 </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>

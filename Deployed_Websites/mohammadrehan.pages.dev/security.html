@@ -243,7 +243,7 @@
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -486,6 +486,65 @@ document.addEventListener('keydown', function(e) {
 
 
 
+  <!-- HERO SECTION: OPTION C HYBRID PRESTIGE (OBSIDIAN VOID + AMBIENT LASER GLOW) -->
+  <section class="relative pt-14 pb-16 lg:pt-20 lg:pb-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800/90" id="hero-section">
+    <!-- Ambient Laser Radial Glow & Fine Grid -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.18),transparent_75%)]"></div>
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold mb-4 shadow-lg shadow-emerald-950/40 backdrop-blur-md">
+        <i class="w-4 h-4 text-emerald-400" data-lucide="shield-check"></i>
+        <span>TRUST &amp; CRYPTOGRAPHIC INTEGRITY REGISTRY</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight max-w-4xl mx-auto">
+        100% Air-Gapped Desktop Software &bull; <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Cryptographically Audited</span>
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed mt-4 max-w-2xl mx-auto font-normal">
+        Every executable published by Rehan Quant Lab is engineered strictly in native 64-bit Rust (Win32), operates with zero cloud telemetry, and is whitelisted clean by Microsoft Defender.
+      </p>
+
+      <!-- 4 Key Invariants Cards (Obsidian HUD) -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left max-w-4xl mx-auto">
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-emerald-500/35 text-white shadow-lg shadow-emerald-950/30 bento-card-spring">
+          <div class="text-[10px] font-mono uppercase text-emerald-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-emerald-400" data-lucide="check-circle-2"></i>
+            <span>WDSI Status</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">31 / 31</div>
+          <div class="text-[11px] text-emerald-300/80 font-mono mt-0.5">Whitelisted Clean</div>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-cyan-500/35 text-white shadow-lg shadow-cyan-950/30 bento-card-spring">
+          <div class="text-[10px] font-mono uppercase text-cyan-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-cyan-400" data-lucide="wifi-off"></i>
+            <span>Telemetry</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1 tabular-nums">0 KB</div>
+          <div class="text-[11px] text-cyan-300/80 font-mono mt-0.5">Zero Network Sockets</div>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-indigo-500/35 text-white shadow-lg shadow-indigo-950/30 bento-card-spring">
+          <div class="text-[10px] font-mono uppercase text-indigo-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="cpu"></i>
+            <span>Architecture</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">Pure Rust</div>
+          <div class="text-[11px] text-indigo-300/80 font-mono mt-0.5">Native Win32 PE64</div>
+        </div>
+
+        <div class="bg-slate-900/90 p-4 rounded-2xl border border-amber-500/35 text-white shadow-lg shadow-amber-950/30 bento-card-spring">
+          <div class="text-[10px] font-mono uppercase text-amber-400 font-bold flex items-center gap-1.5">
+            <i class="w-3.5 h-3.5 text-amber-400" data-lucide="fingerprint"></i>
+            <span>Verification</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black font-heading text-white mt-1">SHA-256</div>
+          <div class="text-[11px] text-amber-300/80 font-mono mt-0.5">Bit-Accurate Hash</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- MAIN CONTENT -->
   <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 w-full">
 <div class="relative overflow-hidden">
@@ -496,60 +555,6 @@ document.addEventListener('keydown', function(e) {
   <div class="aurora-orb aurora-orb-3"></div>
 </div>
 <!-- END: RQL_AMBIENT_AURORA -->
-
-
-    <!-- PAGE HERO -->
-    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold mb-4 shadow-2xs">
-        <i class="w-4 h-4 text-emerald-600" data-lucide="shield-check"></i>
-        <span>TRUST &amp; CRYPTOGRAPHIC INTEGRITY REGISTRY</span>
-      </div>
-      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heading text-slate-950 tracking-tight font-black leading-tight">
-        100% Air-Gapped Desktop Software &bull; Cryptographically Audited by Microsoft Security Intelligence
-      </h1>
-      <p class="text-slate-600 text-xs sm:text-sm sm:leading-relaxed mt-4 max-w-2xl mx-auto">
-        Every executable published by Rehan Quant Lab is engineered strictly in native 64-bit Rust (Win32), operates with zero cloud telemetry, and is whitelisted clean by Microsoft Defender.
-      </p>
-
-      <!-- 4 Key Invariants Cards -->
-      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-left">
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-slate-900 shadow-xl shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-emerald-600" data-lucide="check-circle-2"></i>
-            <span>WDSI Status</span>
-          </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1 tabular-nums">31 / 31</div>
-          <div class="text-[11px] text-slate-600 font-mono mt-0.5">Whitelisted Clean</div>
-        </div>
-
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-slate-900 shadow-xl shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-cyan-600" data-lucide="wifi-off"></i>
-            <span>Telemetry</span>
-          </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1 tabular-nums">0 KB</div>
-          <div class="text-[11px] text-slate-600 font-mono mt-0.5">Zero Network Sockets</div>
-        </div>
-
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-slate-900 shadow-xl shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-indigo-600" data-lucide="cpu"></i>
-            <span>Architecture</span>
-          </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">Pure Rust</div>
-          <div class="text-[11px] text-slate-600 font-mono mt-0.5">Native Win32 PE64</div>
-        </div>
-
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-slate-900 shadow-xl shadow-2xs">
-          <div class="text-[10px] font-mono uppercase text-slate-500 font-bold flex items-center gap-1.5">
-            <i class="w-3.5 h-3.5 text-amber-600" data-lucide="fingerprint"></i>
-            <span>Verification</span>
-          </div>
-          <div class="text-xl sm:text-2xl font-black font-heading text-slate-950 mt-1">SHA-256</div>
-          <div class="text-[11px] text-slate-600 font-mono mt-0.5">Bit-Accurate Hash</div>
-        </div>
-      </div>
-    </div>
 
     <!-- TECHNICAL TRANSPARENCY: WINDOWS DEFENDER SMARTSCREEN & EV CODE SIGNING -->
     <div class="bg-slate-50 text-slate-900 rounded-3xl p-6 sm:p-8 mb-10 border border-slate-200 shadow-xl">
@@ -1832,6 +1837,6 @@ document.addEventListener('keydown', function(e) {
     }
   </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>

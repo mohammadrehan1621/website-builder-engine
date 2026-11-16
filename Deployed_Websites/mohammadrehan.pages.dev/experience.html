@@ -490,7 +490,7 @@ p, li, span, a {
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -737,76 +737,71 @@ document.addEventListener('keydown', function(e) {
 
 <!-- Main Content Area -->
 <main class="flex-grow">
-<!-- Page Header -->
-<section class="relative pt-10 pb-8 sm:pt-14 sm:pb-10 bg-[#fafafa] border-b border-slate-200 overflow-hidden" id="hero-section">
-<!-- Clean High-Performance Static Engineering Grid -->
-<!-- START: RQL_AMBIENT_AURORA -->
-<div class="aurora-container" aria-hidden="true">
-  <div class="aurora-orb aurora-orb-1"></div>
-  <div class="aurora-orb aurora-orb-2"></div>
-  <div class="aurora-orb aurora-orb-3"></div>
-</div>
-<!-- END: RQL_AMBIENT_AURORA -->
-    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
+<!-- Page Header (Obsidian Prestige Theme) -->
+<section class="relative pt-12 pb-12 sm:pt-16 sm:pb-16 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+  <!-- Ambient Laser Radial Glow & Fine Grid -->
+  <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.14),transparent_75%)]"></div>
+  <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
 
-<!-- Ambient Glowing Orbs -->
+  <div class="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-4">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold shadow-lg shadow-emerald-950/40 backdrop-blur-md">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Verified Career History &amp; Skill Radar</span>
+    </div>
 
+    <h1 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+      Professional Experience <span class="bg-gradient-to-r from-cyan-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">&amp; Systems Engineering</span>
+    </h1>
 
+    <!-- Dynamic Interactive Role Rotator -->
+    <div class="flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-cyan-300">
+      <span id="experience-role-rotator">Operations Lead &amp; Systems Architect</span>
+    </div>
 
-<div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-600 mb-3 shadow-sm">
-<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-<span>Verified Career History &amp; Skill Radar</span>
-</div>
+    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+      Bridging hands-on retail leadership, commercial business management, and high-performance software engineering in Patna, Bihar.
+    </p>
 
-<h1 class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight font-black mb-2">
-Professional Experience &amp; Expertise
-</h1>
+    <!-- Executive Stats Grid (Obsidian HUD Cards) -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto pt-2 text-left">
+      <div class="bg-slate-900/90 p-4 rounded-xl border border-amber-500/35 shadow-lg shadow-amber-950/30 hover:border-amber-400 transition bento-card-spring">
+        <span class="text-[10px] text-amber-400 uppercase font-mono font-bold block">Commercial Track</span>
+        <span class="text-sm font-black text-white block mt-0.5 tabular-nums">4+ Years</span>
+        <span class="text-[11px] text-amber-300/90 font-medium font-mono">Retail Leadership</span>
+      </div>
+      <div class="bg-slate-900/90 p-4 rounded-xl border border-indigo-500/35 shadow-lg shadow-indigo-950/30 hover:border-indigo-400 transition bento-card-spring">
+        <span class="text-[10px] text-indigo-400 uppercase font-mono font-bold block">Academic Base</span>
+        <span class="text-sm font-black text-white block mt-0.5">BCA Degree</span>
+        <span class="text-[11px] text-indigo-300/90 font-medium font-mono">Graduated Jan 2025</span>
+      </div>
+      <div class="bg-slate-900/90 p-4 rounded-xl border border-emerald-500/35 shadow-lg shadow-emerald-950/30 hover:border-emerald-400 transition bento-card-spring">
+        <span class="text-[10px] text-emerald-400 uppercase font-mono font-bold block">Architecture</span>
+        <span class="text-sm font-black text-white block mt-0.5">3-AZ Quorum</span>
+        <span class="text-[11px] text-emerald-300/90 font-medium font-mono">Fault-Tolerant HA</span>
+      </div>
+      <div class="bg-slate-900/90 p-4 rounded-xl border border-cyan-500/35 shadow-lg shadow-cyan-950/30 hover:border-cyan-400 transition bento-card-spring">
+        <span class="text-[10px] text-cyan-400 uppercase font-mono font-bold block">Operational SLA</span>
+        <span class="text-sm font-black text-white block mt-0.5 tabular-nums">100% Uptime</span>
+        <span class="text-[11px] text-cyan-300/90 font-medium font-mono">Zero Loss Capital</span>
+      </div>
+    </div>
 
-<!-- Dynamic Interactive Role Rotator -->
-<div class="flex items-center justify-center text-sm sm:text-base font-mono font-semibold text-indigo-600 mb-4">
-    <span id="experience-role-rotator">Operations Lead &amp; Systems Architect</span>
-    
-</div>
-
-<p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6">
-Bridging hands-on retail leadership, commercial business management, and high-performance software engineering in Patna, Bihar.
-</p>
-
-<!-- Executive Stats Grid -->
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto mb-6 text-left">
-<div class="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200/80 shadow-xs hover:shadow-md bento-card-spring">
-<span class="text-[10px] text-amber-800 uppercase font-mono font-bold block">Commercial Track</span>
-<span class="text-sm font-black text-amber-950 block mt-0.5">4+ Years</span>
-<span class="text-[11px] text-amber-700/90 font-medium font-mono">Retail Leadership</span>
-</div>
-<div class="bg-indigo-50/70 p-3.5 rounded-xl border border-indigo-200/80 shadow-xs hover:shadow-md bento-card-spring">
-<span class="text-[10px] text-indigo-800 uppercase font-mono font-bold block">Academic Base</span>
-<span class="text-sm font-black text-indigo-950 block mt-0.5">BCA Degree</span>
-<span class="text-[11px] text-indigo-700/90 font-medium font-mono">Graduated Jan 2025</span>
-</div>
-<div class="bg-emerald-50/70 p-3.5 rounded-xl border border-emerald-200/80 shadow-xs hover:shadow-md bento-card-spring">
-<span class="text-[10px] text-emerald-800 uppercase font-mono font-bold block">Architecture</span>
-<span class="text-sm font-black text-emerald-950 block mt-0.5">3-AZ Multi-Node Quorum</span>
-<span class="text-[11px] text-emerald-700/90 font-medium font-mono">Fault-Tolerant HA</span>
-</div>
-<div class="bg-sky-50/70 p-3.5 rounded-xl border border-sky-200/80 shadow-xs hover:shadow-md bento-card-spring">
-<span class="text-[10px] text-sky-800 uppercase font-mono font-bold block">Operational SLA</span>
-<span class="text-sm font-black text-sky-950 block mt-0.5">100% Uptime</span>
-<span class="text-[11px] text-sky-700/90 font-medium font-mono">Zero Loss Capital</span>
-</div>
-</div>
-
-<div class="flex flex-wrap justify-center gap-3">
-<a class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-xl transition text-xs shadow-md shadow-indigo-600/20 btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
-<i class="w-4 h-4 text-emerald-400" data-lucide="download"></i>
-<span>Download Resume (PDF)</span>
-</a>
-<a class="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-600 border border-slate-200 font-semibold px-5 py-2.5 rounded-xl transition text-xs shadow-sm" href="projects.html">
-<i class="w-4 h-4 text-indigo-600" data-lucide="folder-git-2"></i>
-<span>View Systems Portfolio</span>
-</a>
-<a class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold px-5 py-2.5 rounded-xl transition text-xs" href="contact.html">
+    <div class="flex flex-wrap justify-center gap-3 pt-3">
+      <a class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-xs shadow-lg shadow-indigo-600/30 btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
+        <i class="w-4 h-4 text-indigo-200" data-lucide="download"></i>
+        <span>Download Resume (PDF)</span>
+      </a>
+      <a class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-bold px-5 py-2.5 rounded-xl transition text-xs shadow-xs btn-spring" href="projects.html">
+        <i class="w-4 h-4 text-cyan-400" data-lucide="folder-git-2"></i>
+        <span>View Systems Portfolio</span>
+      </a>
+      <a class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl transition text-xs shadow-md shadow-emerald-600/25 btn-spring" href="contact.html">
+        <i class="w-4 h-4 text-emerald-100" data-lucide="mail"></i>
+        <span>Contact Directly &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
 <i class="w-4 h-4" data-lucide="mail"></i>
 <span>Get in Touch</span>
 </a>
@@ -1446,6 +1441,6 @@ function handleSmartEmail(e) {
 
 <script src="lively_motion.js" defer></script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>

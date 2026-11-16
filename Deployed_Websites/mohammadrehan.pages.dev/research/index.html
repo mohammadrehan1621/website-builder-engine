@@ -48,6 +48,7 @@
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 </style>
+<link rel="stylesheet" href="../assets/rql-motion.css?v=20261116v3" />
 
 <!-- JSON-LD SCHEMA: Research Papers Collection & Tech Articles -->
 <script type="application/ld+json">
@@ -382,37 +383,33 @@ document.addEventListener('keydown', function(e) {
 
 
 <main class="flex-grow">
-<!-- HERO HEADER -->
-<section class="relative pt-14 pb-16 bg-gradient-to-b from-slate-50 via-white to-slate-50 border-b border-slate-200">
-<!-- START: RQL_AMBIENT_AURORA -->
-<div class="aurora-container" aria-hidden="true">
-  <div class="aurora-orb aurora-orb-1"></div>
-  <div class="aurora-orb aurora-orb-2"></div>
-  <div class="aurora-orb aurora-orb-3"></div>
-</div>
-<!-- END: RQL_AMBIENT_AURORA -->
-    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-mono font-semibold">
-        <i class="w-3.5 h-3.5" data-lucide="cpu"></i>
-        <span>On-Domain Engineering Monographs &bull; Native Systems Publication</span>
+<!-- HERO HEADER: OPTION C HYBRID PRESTIGE (OBSIDIAN VOID + AMBIENT LASER GLOW) -->
+<section class="relative pt-14 pb-16 lg:pt-20 lg:pb-20 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+    <!-- Ambient Laser Radial Glow & Fine Grid -->
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.18),transparent_75%)]"></div>
+    <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-indigo-500/40 text-indigo-300 text-xs font-mono font-bold shadow-lg shadow-indigo-950/40 backdrop-blur-md">
+            <i class="w-3.5 h-3.5 text-indigo-400" data-lucide="cpu"></i>
+            <span>On-Domain Engineering Monographs &bull; Native Systems Publication</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Systems Architecture &amp; <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Engineering Research</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+            Flagship engineering monographs on pure-native Rust systems, air-gapped forensic document security, deterministic offline intelligence, and sub-12ms Anycast edge distribution.
+        </p>
+        <div class="pt-3 flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-slate-300">
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">Zero Cloud Telemetry</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">Deterministic RAII</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800">SHA-256 Air-Gapped Proofs</span>
+            <a href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold hover:underline flex items-center gap-1">
+                <span>Also on Substack (Newsletter)</span>
+                <i class="w-3 h-3 text-cyan-400" data-lucide="external-link"></i>
+            </a>
+        </div>
     </div>
-    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-950 tracking-tight font-black leading-tight">
-        Systems Architecture &amp; Engineering Research
-    </h1>
-    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-        Flagship engineering monographs on pure-native Rust systems, air-gapped forensic document security, deterministic offline intelligence, and sub-12ms Anycast edge distribution.
-    </p>
-    <div class="pt-3 flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-slate-500">
-        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">Zero Cloud Telemetry</span>
-        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">Deterministic RAII</span>
-        <span class="px-2.5 py-1 rounded-md bg-white border border-slate-200">SHA-256 Air-Gapped Proofs</span>
-        <a href="https://rehanquantlab.substack.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-semibold hover:underline flex items-center gap-1">
-            <span>Also on Substack (Newsletter)</span>
-            <i class="w-3 h-3" data-lucide="external-link"></i>
-        </a>
-    </div>
-</div>
 </section>
 
 <!-- RESEARCH ESSAYS CONTAINER -->
@@ -663,5 +660,6 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 </script>
+<script src="../assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>

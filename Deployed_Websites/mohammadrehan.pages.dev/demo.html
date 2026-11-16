@@ -159,7 +159,7 @@
 }
 /* END: RQL_AMBIENT_AURORA_STYLES */
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
 </head>
 <body class="bg-[#fafafa] text-slate-900 antialiased selection:bg-slate-900 selection:text-white flex flex-col min-h-screen">
 
@@ -415,22 +415,26 @@ document.addEventListener('keydown', function(e) {
 <!-- END: RQL_AMBIENT_AURORA -->
 
 
-    <!-- Hero Header -->
-    <section class="relative py-12 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono font-bold shadow-2xs">
+    <!-- Hero Header: OPTION C HYBRID PRESTIGE (OBSIDIAN VOID + AMBIENT LASER GLOW) -->
+    <section class="relative pt-14 pb-16 lg:pt-20 lg:pb-20 bg-slate-950 text-white border-b border-slate-800/90 overflow-hidden" id="hero-section">
+        <!-- Ambient Laser Radial Glow & Fine Grid -->
+        <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.18),transparent_75%)]"></div>
+        <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 relative z-10">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold shadow-lg shadow-emerald-950/40 backdrop-blur-md">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
                 </span>
                 <span>Live Browser Cryptography &amp; Vector Synthesis</span>
             </div>
             
-            <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-slate-950 tracking-tight font-black">
-                Interactive Micro-Demos
+            <h1 class="text-3xl sm:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+                Interactive <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Micro-Demos</span>
             </h1>
             
-            <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
                 Experience the deterministic performance and zero-cloud privacy of Rehan Quant Lab software right inside your web browser. 100% client-side execution &mdash; zero bytes are sent to any external server.
             </p>
         </div>
@@ -837,6 +841,6 @@ document.addEventListener('keydown', function(e) {
     });
 </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js" defer></script>
+  <script src="assets/rql-motion.js?v=20261116v3" defer></script>
 </body>
 </html>
