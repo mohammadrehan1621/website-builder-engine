@@ -485,6 +485,142 @@ html {
 ```
 Guarantees that every hash link positions the target heading cleanly below the fixed navbar without requiring JavaScript scroll offsets.
 
+### 50. Passive Event Listeners on High-Frequency Touch & Wheel Events ({ passive: true })
+Attaching `touchmove`, `touchstart`, or `wheel` listeners without `{ passive: true }` forces the browser main compositor thread to block while checking for `e.preventDefault()`, causing frame drops and degrading Google Interaction to Next Paint (INP):
+```javascript
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+window.addEventListener('touchmove', handleTouchTelemetry, { passive: true });
+```
+
+### 51. Double-Click & Fast-Tap Delay Suppression (touch-action: manipulation)
+On touch devices, rapid tapping on filter tabs or catalog buttons triggers a 300ms mobile browser delay waiting for a potential double-tap zoom:
+```css
+button, [role="button"], .tab-btn, a {
+  touch-action: manipulation;
+}
+```
+Eliminates the 300ms mobile tap latency and prevents accidental double-tap zoom gestures.
+
+### 52. Subpixel Hairline Border Survival in OS High-Contrast Mode (outline: 1px solid transparent)
+In Windows High Contrast Mode (Forced Colors), translucent borders are erased by the OS rendering engine:
+```css
+@media (forced-colors: active) {
+  .bento-card, .command-ribbon-btn {
+    border: 1px solid ButtonBorder !important;
+    outline: 1px solid transparent !important;
+  }
+}
+```
+Guarantees cards and buttons retain razor-sharp physical boundaries when users enable OS accessibility high-contrast themes.
+
+### 53. Text Selection Lock on Interactive UI (user-select: none)
+Rapidly clicking category tabs, quantity adjusters, or modal close buttons often causes the browser to accidentally highlight button text with an awkward selection block:
+```css
+button, [role="button"], .tab-btn, .badge-trigger {
+  user-select: none;
+  -webkit-user-select: none;
+}
+```
+Actual data cells, hashes, code blocks, and prose copy preserve normal text selection (`user-select: text`).
+
+### 54. Multi-Page Scrollbar Gutter Reservation (scrollbar-gutter: stable)
+Navigating between a short page with no vertical scrollbar (e.g. `contact.html`) and a tall catalog page with a vertical scrollbar (e.g. `store.html`) causes the entire layout and centered navbar to jump horizontally by 7.5px to 15px:
+```css
+html {
+  scrollbar-gutter: stable;
+}
+```
+Permanently reserves space for the scrollbar across all pages, ensuring zero horizontal layout jump during cross-page navigation.
+
+### 55. Reverse Tabnabbing Defense & Secure Link Target Hardening (rel="noopener noreferrer")
+External links with `target="_blank"` that omit `rel="noopener noreferrer"` expose `window.opener`, allowing external sites to redirect the origin tab to a phishing clone:
+```html
+<a href="https://gumroad.com/..." target="_blank" rel="noopener noreferrer">
+```
+Protects browser process isolation and eliminates reverse tabnabbing exploits.
+
+### 56. Dual-Tier Clipboard Recovery for Sandboxed Iframes & Insecure Contexts
+Calling `navigator.clipboard.writeText()` inside sandboxed environments or non-secure contexts throws an unhandled `NotAllowedError`:
+```javascript
+async function copyToClipboard(text) {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch (e) { /* Fallback */ }
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  const success = document.execCommand('copy');
+  document.body.removeChild(ta);
+  return success;
+}
+```
+
+### 57. Microscopic Haptic Pulse on High-Stakes Operations (navigator.vibrate)
+On mobile devices supporting the Vibration API, trigger an 8ms micro-haptic confirmation pulse upon successful cryptographic operations:
+```javascript
+if ('vibrate' in navigator && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  navigator.vibrate(8);
+}
+```
+Strictly prohibited on general clicks or scrolls; reserved solely for verified cryptographic commitments.
+
+### 58. Print Optimization: Link Destination URL Expansion (a[href]::after)
+When legal counsel, enterprise auditors, or compliance officers print a page or save it as a PDF (`Ctrl+P`), embedded hyperlinks become dead text:
+```css
+@media print {
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75rem;
+    color: #64748b;
+    word-break: break-all;
+  }
+}
+```
+Guarantees exported PDF audit declarations include fully traceable, actionable URLs.
+
+### 59. Dynamic Browser Favicon Status Cycling on Long Verifications
+When a user uploads a large file to `security.html` for local in-memory WebCrypto hashing and switches tabs, provide ambient tab status:
+- Update the browser favicon dynamically to an in-memory SVG data URI spinner during active calculation.
+- Restore the Sovereign Emerald shield when the hash finishes.
+
+### 60. Stale Form Submission & Idempotency Lock
+On institutional inquiry forms (`contact.html`), double-clicking or rapid tapping on "Transmit Sovereign Inquiry" triggers duplicate network submissions:
+- Immediately lock the submit button (`disabled` and `pointer-events-none`).
+- Update label to `[TRANSMITTING TELEMETRY...]` with a 1px emerald pulse indicator.
+- Enforce a 3,000ms debounce latch before allowing another submission.
+
+### 61. Windows Display Scaling Fractional Pixel Antialiasing (125% / 150% DPR)
+Windows laptops frequently default to 125% or 150% display scaling. CSS grids using fractional widths can suffer from rounding errors resulting in blurred borders:
+- Mandate integer-aligned outer container paddings (`p-4` = 16px, `p-6` = 24px).
+- Enforce `box-sizing: border-box;` and Tailwind inset rings (`ring-1 ring-inset`) rather than fractional border widths.
+
+### 62. Progressive WebP Picture Packaging with PNG Fallback
+Package all visual assets using `<picture>` elements with modern, self-hosted `.webp` sources and `.png` fallbacks:
+```html
+<picture>
+  <source type="image/webp" srcset="assets/previews/suite-01.webp">
+  <img src="assets/previews/suite-01.png" alt="DocumentShield Telemetry" loading="lazy" decoding="async">
+</picture>
+```
+Reduces image weight by up to 70% while remaining 100% self-hosted and backwards-compatible.
+
+### 63. Deep-Link Target Highlight with Emerald Pulse (:target)
+When linking directly to a specific suite via hash (`store.html#suite-documentshield`):
+```css
+[data-product-card]:target {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25) !important;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+```
+Instantly draws the user's eye to the targeted suite when arriving from a deep link.
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
@@ -541,7 +677,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 36-Point Failure Checklist
+## 7. Pre-Launch 50-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -579,5 +715,19 @@ Before any change is committed or deployed, every question must be verified with
 32. [ ] **Air-Gap Telemetry Beacon**: Does the UI display an offline air-gap notification when disconnected from Wi-Fi?
 33. [ ] **Video Accessibility**: Do video modals provide accessible text descriptions via `aria-describedby`?
 34. [ ] **Scroll Padding**: Does `html` declare `scroll-padding-top: 80px` to prevent fixed navbar heading overlap?
-35. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-36. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+35. [ ] **Passive Event Listeners**: Do all high-frequency touch and wheel listeners pass `{ passive: true }`?
+36. [ ] **Fast-Tap Delay Suppression**: Do buttons and tabs declare `touch-action: manipulation` to kill 300ms delay?
+37. [ ] **Forced Colors Border Survival**: Do all hairline cards declare `outline: 1px solid transparent` for Windows High Contrast?
+38. [ ] **Interactive Selection Lock**: Do interactive buttons and tabs declare `user-select: none` to prevent accidental text drag?
+39. [ ] **Scrollbar Gutter Reservation**: Does root HTML declare `scrollbar-gutter: stable` to prevent cross-page layout jumps?
+40. [ ] **Reverse Tabnabbing Defense**: Do all external `target="_blank"` links include `rel="noopener noreferrer"`?
+41. [ ] **Dual-Tier Clipboard**: Does clipboard copy fall back to offscreen textarea in restricted/insecure contexts?
+42. [ ] **Cryptographic Micro-Haptic**: Does SHA-256 copy trigger an 8ms haptic pulse on supported mobile devices?
+43. [ ] **Print URL Expansion**: Do printed pages automatically print full link destinations via `a[href]::after`?
+44. [ ] **Favicon Status Cycling**: Does background hash verification cycle favicon states dynamically?
+45. [ ] **Form Idempotency Lock**: Does form submission immediately lock buttons to prevent double-click submissions?
+46. [ ] **Windows DPR Antialiasing**: Do grids avoid fractional subpixel borders on 125%/150% scaling?
+47. [ ] **Progressive Picture Packaging**: Are screenshots delivered via `<picture>` with `.webp` and `.png` fallbacks?
+48. [ ] **Deep-Link Highlight**: Does `:target` apply an emerald pulse border when navigating via hash anchors?
+49. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+50. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
