@@ -68,6 +68,7 @@ Every card, bento cell, or modal must have **EXACTLY ONE dominant primary action
   - If Card = `rounded-2xl` (16px) with 16px padding, inner media container = `rounded-xl` (12px).
   - Outer container = `rounded-3xl` (24px) -> inner card = `rounded-2xl` (16px).
 - **Badge Baseline Alignment**: Monospace tags (`font-mono`) next to display titles (`font-sans`) must use optical vertical-alignment (`inline-flex items-center`) to prevent 1px baseline droop.
+- **Sub-Pixel Hairlines on High-DPI Displays**: Use Tailwind inset rings (`ring-1 ring-inset ring-slate-800` or `ring-white/10`) to ensure razor-sharp borders on Apple Retina and 4K screens without box-model width distortion.
 
 ### Modal Scrollbar Layout Shift Prevention (CLS = 0.000)
 When opening any modal dialog:
@@ -76,9 +77,25 @@ When opening any modal dialog:
 
 ---
 
-## 4. Advanced Performance, Hardware & Accessibility Standards
+## 4. Advanced Performance, Cryptography & Hardware Standards
 
-### 1. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
+### 1. Streaming Memory-Safe File Hashing (OOM Crash Prevention)
+On cryptographic verification routes (`security.html`):
+- Multi-hundred megabyte `.exe` binaries must NEVER be read into a single in-memory ArrayBuffer.
+- Use incremental stream slicing (`file.slice(offset, offset + chunkSize)` in 2MB to 4MB chunks) updating an incremental cryptographic digest or web worker.
+- Guarantees max RAM usage under 10MB during multi-gigabyte file verification, eliminating browser tab crashes.
+
+### 2. Absolute Self-Hosting & Zero-Telemetry CSP Invariant
+Rehan Quant Lab is 100% offline and zero-telemetry:
+- **Zero External Dependencies**: Every font (`fonts/*.woff2`), script (`lucide.min.js`, `qrcode.min.js`), and asset MUST be self-hosted locally in `/assets/`.
+- **Strict Content Security Policy**: Prohibit external telemetry leaks:
+  `default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self';`
+
+### 3. Dynamic Mobile Viewport Units (`dvh` vs `vh`)
+- Never use legacy `100vh` on mobile dialogs, heroes, or floating action bars.
+- Use `100dvh` (Dynamic Viewport Height) or `min-h-[100dvh]` so that content is never clipped under the auto-collapsing Safari or Chrome address bar.
+
+### 4. DOM Virtualization via `content-visibility: auto` (Google Chrome Baseline)
 For high-density product grids (e.g., the 31 commercial suites on `store.html`):
 ```css
 [data-product-card="true"] {
@@ -86,22 +103,33 @@ For high-density product grids (e.g., the 31 commercial suites on `store.html`):
   contain-intrinsic-size: 0 480px;
 }
 ```
-This skips rendering off-screen DOM nodes until the user scrolls near them, reducing layout calculation time by up to 80% and maintaining silky 60fps scrolling on mobile devices and lower-spec hardware.
+Skips rendering off-screen DOM nodes until the user scrolls near them, reducing layout calculation time by up to 80% and maintaining silky 60fps scrolling on mobile devices and lower-spec hardware.
 
-### 2. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
+### 5. Dual-Currency Synchronization Architecture (USD vs. Domestic INR)
 Rehan Quant Lab serves both global enterprises and Indian domestic founders:
 - **Global USD**: Stated first (`$179`), linked directly to international checkout desks (Stripe / Gumroad).
 - **Domestic INR & UPI**: Synchronized domestic pricing (`Rs 14,999`), linked to Indian domestic checkout with instant QR and GST invoicing.
 - **Discount Synchronization**: Auto-applied discount passes (`PIONEER70` = 70% off, `PIONEER20` = 20% off) must calculate and display synchronously in both currencies without rounding errors.
 - **Tabular Alignment**: All prices must enforce `font-feature-settings: 'tnum' 1` (`font-mono`) for clean tabular comparison.
 
-### 3. Font Loading & Metric Matching (Zero FOUT / FOIT)
+### 6. Tactile Clipboard Copying & Screen Reader Announcements
+When users copy discount codes (`PIONEER70`), UPI VPAs, or SHA-256 hashes:
+- **Visual State**: Icon swaps to emerald checkmark with `"Copied!"` label for 1800ms.
+- **Legacy Fallback**: Automatic fallback to an offscreen `document.execCommand('copy')` if Clipboard API is restricted.
+- **Assistive Technology**: Updates an invisible `aria-live="polite"` element announcing the copy action for visually impaired users.
+
+### 7. Fluid Typographic Clamping (`clamp()`)
+Main hero titles and section headers must scale continuously between mobile and desktop:
+`font-size: clamp(1.85rem, 1.2rem + 2.5vw, 3.25rem);`
+Prevents abrupt breakpoint snaps and eliminates awkward 1-word line wraps on tablet viewports.
+
+### 8. Font Loading & Metric Matching (Zero FOUT / FOIT)
 Custom local WOFF2 webfonts (Inter & JetBrains Mono) must enforce:
 - `font-display: swap` in all `@font-face` definitions to prevent Flash of Invisible Text (FOIT).
 - System font fallback stacks must match character widths to prevent layout shifts upon font arrival:
   `font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;`
 
-### 4. Enterprise Print Stylesheet (`@media print`)
+### 9. Enterprise Print Stylesheet (`@media print`)
 Enterprise procurement, legal teams, and auditors require clean PDF exports of license specifications, receipts, and verification declarations:
 ```css
 @media print {
@@ -120,11 +148,11 @@ Enterprise procurement, legal teams, and auditors require clean PDF exports of l
 }
 ```
 
-### 5. High-Contrast & Reduced-Transparency Accessibility
+### 10. High-Contrast & Reduced-Transparency Accessibility
 - **High Contrast**: Support `@media (forced-colors: active)` so all hairline borders and active indicators automatically inherit system tokens (`CanvasText`, `Highlight`).
 - **Transparency Fallback**: Support `@media (prefers-reduced-transparency: reduce)` by replacing translucent acrylics (`backdrop-blur-md`) with solid 100% opaque slate backgrounds.
 
-### 6. Mobile Virtual Keyboard & Typing Ergonomics
+### 11. Mobile Virtual Keyboard & Typing Ergonomics
 Eliminate typing friction on mobile devices across all search, contact, and dialog fields:
 - Search inputs: `type="search" enterkeyhint="search"`
 - Numeric / seat inputs: `type="number" inputmode="numeric"`
@@ -187,7 +215,7 @@ The design system is not applied piecemeal. Every page in the repository must fe
 
 ---
 
-## 7. Pre-Launch 10-Point Failure Checklist
+## 7. Pre-Launch 12-Point Failure Checklist
 
 Before any change is committed or deployed, every question must be verified with a 100% "YES":
 
@@ -197,7 +225,9 @@ Before any change is committed or deployed, every question must be verified with
 4. [ ] **Touch Target Ergonomics**: Are all clickable buttons, tabs, and inputs >= 44x44px?
 5. [ ] **Zero Wobble Verification**: Are all `hover:scale-*`, `hover:-translate-y-*`, and rubber-band bounce transitions eliminated?
 6. [ ] **Mobile Sticky-Hover Guard**: Are all desktop hover styles scoped within `@media (hover: hover) and (pointer: fine)`?
-7. [ ] **Modal Scrollbar Shift Guard**: Do all modal dialogs preserve scrollbar gutter width to prevent 15px layout jerks?
-8. [ ] **Color Discipline**: Are all random pink, purple, and orange pills completely purged in favor of the Slate/Emerald/Sky system?
-9. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
-10. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
+7. [ ] **Dynamic Viewport (`100dvh`)**: Are all mobile full-height containers protected against bottom bar clipping?
+8. [ ] **Modal Scrollbar Shift Guard**: Do all modal dialogs preserve scrollbar gutter width to prevent 15px layout jerks?
+9. [ ] **Color Discipline**: Are all random pink, purple, and orange pills completely purged in favor of the Slate/Emerald/Sky system?
+10. [ ] **Self-Hosting CSP**: Are all fonts, scripts, and media strictly hosted locally with zero external CDN calls?
+11. [ ] **100% 7-Bit ASCII Compliance**: Does the file contain zero non-ASCII bytes, zero emojis in code, and zero mojibake?
+12. [ ] **Aegis Sentinel Pass**: Does `aegis_watchdog.ps1` execute with 13/13 PASSED?
