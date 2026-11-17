@@ -84,7 +84,28 @@
             "@type": "Organization",
             "name": "Rehan Quant Lab",
             "identifier": "UDYAM-BR-26-0258772"
+          },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": ["US", "IN"],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 7,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
           }
+        },
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -183,7 +204,7 @@
     "prerender": [
       {
         "source": "list",
-        "urls": ["/store.html", "/documentshield.html", "/whispervault.html", "/retailpos.html", "/taxledger.html", "/conduit.html"]
+        "urls": ["/store.html","/documentshield.html","/whispervault.html","/retailpos.html","/taxledger.html","/conduit.html","/dpdpshield.html","/textdiff.html"]
       }
     ]
   }

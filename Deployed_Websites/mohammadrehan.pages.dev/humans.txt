@@ -1,0 +1,21 @@
+/* TEAM */
+Founder & Sovereign Systems Architect: Mohammad Rehan
+Location: Patna, Bihar, India
+Contact: contact@rehanquantlab.com
+Official Portal: https://rehanquantlab.com
+MSME Registration: UDYAM-BR-26-0258772 (Ministry of MSME, Govt of India)
+GitHub: https://github.com/mohammadrehan
+
+/* SOVEREIGN PHILOSOPHY */
+Architecture: 100% Offline Single Native Win32 Binaries (.exe)
+Core Language: Pure Native Rust (Memory-Safe, Zero-Cost Abstractions)
+Local Storage: SQLite Write-Ahead Logging (WAL) Mode
+Network Invariant: Zero Cloud Telemetry, 0 Open Sockets
+Commercial Model: Perpetual Lifetime Ownership (Pay Once, Own Forever)
+Encoding Standard: 100% 7-Bit ASCII Clean-Room Discipline
+
+/* EDGE INFRASTRUCTURE */
+Edge CDN: Cloudflare Global Anycast Edge (330+ Cities)
+Performance: Sub-30ms Global TTFB, 0ms Speculation Rules Preload
+Security Standards: RFC 9116 security.txt, Ed25519 SHA-256 Manifest
+Discovery Protocols: OpenAPI 3.1.0, Princeton GEO llms.txt, RSS 2.0

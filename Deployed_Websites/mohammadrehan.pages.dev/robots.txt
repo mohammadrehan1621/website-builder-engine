@@ -79,3 +79,4 @@ Sitemap: https://rehanquantlab.com/sitemap.xml
 OpenAPI-Spec: https://rehanquantlab.com/openapi.json
 RSS-Feed: https://rehanquantlab.com/feed.xml
 Web-Manifest: https://rehanquantlab.com/manifest.json
+Humans-Txt: https://rehanquantlab.com/humans.txt
