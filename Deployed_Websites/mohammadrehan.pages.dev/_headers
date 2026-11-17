@@ -8,7 +8,7 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
   X-Permitted-Cross-Domain-Policies: none
-  Content-Security-Policy: upgrade-insecure-requests; default-src 'self' data: blob:; script-src 'self' data: blob: 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com https://gumroad.com https://assets.gumroad.com; style-src 'self' data: blob: 'unsafe-inline' https://assets.gumroad.com; img-src 'self' data: blob: https:; font-src 'self' data:; frame-src 'self' https:; connect-src 'self' https: wss:; object-src 'none'; base-uri 'self';
+  Content-Security-Policy: upgrade-insecure-requests; default-src 'self' data: blob:; script-src 'self' data: blob: 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdnjs.cloudflare.com https://gumroad.com https://assets.gumroad.com https://static.cloudflareinsights.com; style-src 'self' data: blob: 'unsafe-inline' https://assets.gumroad.com; img-src 'self' data: blob: https:; font-src 'self' data: https://assets.gumroad.com; frame-src 'self' https:; connect-src 'self' https: wss:; object-src 'none'; base-uri 'self';
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
