@@ -424,4 +424,371 @@ html.lenis, html.lenis body {
   border-color: rgba(52, 211, 153, 0.5);
 }
 
+/* ========================================================
+ * CAPRICORN x CONWEST x ASIDE x TOPOLOGY SOVEREIGN CODEX
+ * World-Class Architectural & Creative Technology Standard
+ * ======================================================== */
 
+/* 1. Capricorn Matte Carbon Atmosphere */
+body.capricorn-theme,
+.capricorn-canvas {
+  background-color: #0c0d12 !important;
+  color: #f5f5f7 !important;
+}
+
+.capricorn-surface {
+  background-color: #12131a !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.capricorn-hairline {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 2. Conwest Rhythmic Cadence & Word Illumination */
+.conwest-cadence-title {
+  font-size: clamp(2.75rem, 6.5vw, 5.75rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.02 !important;
+  color: #f5f5f7 !important;
+}
+
+.conwest-cadence-dim {
+  color: #71717a !important;
+}
+
+.conwest-manifesto-text {
+  font-size: clamp(1.15rem, 2.2vw, 1.85rem) !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 500 !important;
+  color: #d4d4d8 !important;
+}
+
+.conwest-card {
+  border-radius: 16px;
+  background: rgba(18, 19, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.conwest-card:hover {
+  border-color: rgba(52, 211, 153, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
+}
+
+/* 3. Aside Tactile Desktop Application Window */
+.aside-window-frame {
+  border-radius: 20px;
+  background: #111218;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px -10px rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.aside-window-bar {
+  background: rgba(18, 19, 26, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside-dots {
+  display: flex;
+  gap: 7px;
+}
+
+.aside-dot-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #ef4444;
+}
+
+.aside-dot-yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #f59e0b;
+}
+
+.aside-dot-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #10b981;
+}
+
+.aside-telemetry-pill {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* 4. Topology Numbered System Codex */
+.topology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 840px) {
+  .topology-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.topology-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+  text-align: left;
+}
+
+.topology-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 800;
+  color: #34d399;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.topology-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.topology-desc {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: #94a3b8;
+}
+
+/* 5. Capricorn Zagato Limited-Edition 31 Suites Grid */
+.zagato-card {
+  position: relative;
+  background: #121319;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 22px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.zagato-card:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.65), 0 0 20px -5px rgba(16, 185, 129, 0.15);
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ========================================================
+ * ACETERNITY UI x MIDU VOLUMETRIC LAMP & SPOTLIGHT
+ * Viral Awwwards / Framer Creative Technology Standards
+ * ======================================================== */
+
+/* 1. Aceternity Lamp Container & Stage (The MIDU Aura) */
+.aceternity-lamp-container {
+  position: relative;
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+  width: 100%;
+  z-index: 0;
+}
+
+.aceternity-lamp-stage {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex: 1 1 0%;
+  transform: scaleY(1.25);
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  z-index: 0;
+}
+
+.aceternity-conic-left {
+  position: absolute;
+  inset: auto;
+  right: 50%;
+  height: 14rem;
+  width: 32rem;
+  background-image: conic-gradient(from 70deg at center top, #10b981, transparent, transparent);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.aceternity-conic-right {
+  position: absolute;
+  inset: auto;
+  left: 50%;
+  height: 14rem;
+  width: 32rem;
+  background-image: conic-gradient(from 290deg at center top, transparent, transparent, #10b981);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.aceternity-lamp-mask-bottom {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: #0c0d12;
+  height: 10rem;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to top, white, transparent);
+  -webkit-mask-image: linear-gradient(to top, white, transparent);
+}
+
+.aceternity-lamp-mask-left {
+  position: absolute;
+  width: 12rem;
+  height: 100%;
+  left: 0;
+  background-color: #0c0d12;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to right, white, transparent);
+  -webkit-mask-image: linear-gradient(to right, white, transparent);
+}
+
+.aceternity-lamp-mask-right {
+  position: absolute;
+  width: 12rem;
+  height: 100%;
+  right: 0;
+  background-color: #0c0d12;
+  bottom: 0;
+  z-index: 20;
+  mask-image: linear-gradient(to left, white, transparent);
+  -webkit-mask-image: linear-gradient(to left, white, transparent);
+}
+
+.aceternity-lamp-halo {
+  position: absolute;
+  top: 50%;
+  height: 12rem;
+  width: 100%;
+  transform: translateY(3rem) scaleX(1.5);
+  background-color: #0c0d12;
+  filter: blur(48px);
+}
+
+.aceternity-lamp-orb {
+  position: absolute;
+  inset: auto;
+  z-index: 30;
+  height: 9rem;
+  width: 28rem;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background-color: #10b981;
+  opacity: 0.45;
+  filter: blur(64px);
+}
+
+.aceternity-lamp-inner-orb {
+  position: absolute;
+  inset: auto;
+  z-index: 30;
+  height: 9rem;
+  width: 16rem;
+  transform: translateY(-6rem);
+  border-radius: 9999px;
+  background-color: #34d399;
+  filter: blur(32px);
+}
+
+.aceternity-lamp-beam-line {
+  position: absolute;
+  inset: auto;
+  z-index: 50;
+  height: 2px;
+  width: 34rem;
+  transform: translateY(-7rem);
+  background: linear-gradient(90deg, transparent, #34d399, #38bdf8, #34d399, transparent);
+  box-shadow: 0 0 24px 3px rgba(52, 211, 153, 0.9);
+}
+
+/* 2. Aceternity Spotlight Animation */
+@keyframes aceternity-spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: aceternity-spotlight 1.8s ease 0.3s 1 forwards;
+}
+
+/* 3. Aceternity 3D Card Interactive Perspective Tilt */
+.aceternity-3d-wrap {
+  perspective: 1200px;
+}
+
+.aceternity-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.aceternity-3d-pop {
+  transform: translateZ(32px);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aceternity-3d-pop-deep {
+  transform: translateZ(52px);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 4. Aceternity Moving Border Beam */
+.aceternity-border-beam {
+  position: relative;
+  overflow: hidden;
+}
+
+.aceternity-border-beam::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.8), rgba(56, 189, 248, 0.8), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

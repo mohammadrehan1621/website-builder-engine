@@ -662,7 +662,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
     font-feature-settings: 'tnum' 1;
   }
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css?v=20261117v6" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261117v7" />
 <style id="rql-sovereign-invariants">
 /* RQL Sovereign Design System & Engineering Codex (200-Law Invariants) */
 :root, html {
@@ -1153,77 +1153,187 @@ document.addEventListener('keydown', function(e) {
 
 <!-- HERO SECTION (HOME PAGE ROLE) -->
 <main class="flex-grow">
-<section class="relative pt-12 pb-14 lg:pt-16 lg:pb-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800/90" id="hero-section">
-  <!-- Volumetric Diffuse Glow (The MIDU Backlight) -->
-  <div class="rql-cinema-glow"></div>
+<section class="relative pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-[#0c0d12] text-white border-b border-white/10" id="hero-section">
   
-  <!-- 60FPS In-RAM Hardware-Accelerated Canvas (Homepage Hero Constellation) -->
-  <canvas id="rql-home-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="rql-cinema-stage">
-      
-      <!-- Tier 2 Overline Kicker -->
-      <div class="rql-tier2-overline inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 mb-4 shadow-lg shadow-emerald-950/40">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>01 // PURE NATIVE RUST SOVEREIGN FOUNDRY &bull; WIN32 ARCHITECTURE</span>
-      </div>
+  <!-- ACETERNITY UI x SPOTLIGHT SVG -->
+  <svg class="animate-spotlight pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] -top-40 left-0 md:left-60 md:-top-20 opacity-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
+    <g filter="url(#spotlight-filter)">
+      <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="#10b981" fill-opacity="0.18"></ellipse>
+    </g>
+    <defs>
+      <filter id="spotlight-filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+        <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur_1065_8"></feGaussianBlur>
+      </filter>
+    </defs>
+  </svg>
 
-      <!-- Giant Architectural Headline (MIDU & NOTHIN' Style) -->
-      <h1 class="rql-cinema-title">
-        FAST. OFFLINE.<br>
-        <span class="rql-cinema-gradient-text">PURE RUST.</span>
-      </h1>
+  <!-- ACETERNITY WAVY BACKGROUND CANVAS (The Iridescent Ribbon Wave) -->
+  <canvas id="rql-wavy-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
 
-      <p class="rql-cinema-tagline">
-        Single-binary Windows desktop tools that collect zero telemetry and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-cyan-300 border border-slate-700 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever.
-      </p>
-
-      <!-- Live Interactive 3D Canvas Stage (Drag to Spin, Mouse Hover Physics) -->
-      <div class="rql-3d-canvas-wrap" title="Interactive 3D Stage: Move cursor or drag to rotate forensic geometry">
-        <canvas id="rql-3d-canvas"></canvas>
-        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 rql-tier5-telemetry text-[9px] text-slate-400 bg-slate-950/80 px-2.5 py-0.5 rounded-full border border-slate-800 pointer-events-none whitespace-nowrap">
-          <span class="text-emerald-400 font-bold">&#8226; LIVE 3D CANVAS</span> &bull; DRAG OR MOVE MOUSE TO ROTATE
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-1">
-        <a class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center gap-2.5 text-xs font-mono group btn-spring" href="store.html">
-          <i class="w-4 h-4 text-emerald-100" data-lucide="package"></i>
-          <span>EXPLORE 31 COMMERCIAL SUITES</span>
-          <span class="bg-emerald-800 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">31</span>
-        </a>
-        <a class="bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-extrabold px-6 py-3.5 rounded-xl shadow-xs transition flex items-center gap-2.5 text-xs font-mono group btn-spring" href="store.html#sovereign-sandbox-section">
-          <i class="w-4 h-4 text-emerald-400" data-lucide="zap"></i>
-          <span>THE 5-SECOND AIR-GAP CHALLENGE &rarr;</span>
-        </a>
-      </div>
-
-      <!-- Architectural Telemetry Dock -->
-      <div class="rql-cinema-dock">
-        <div class="rql-dock-card">
-          <div class="rql-tier5-telemetry text-emerald-400 mb-1">[01] 100% NATIVE RUST</div>
-          <div class="rql-tier3-title text-sm text-white font-bold">Single-Binary Win32 Core</div>
-          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Zero Electron, zero webviews, zero runtime dependencies. Sub-1ms startup.</div>
-        </div>
-        <div class="rql-dock-card">
-          <div class="rql-tier5-telemetry text-cyan-400 mb-1">[02] AIR-GAPPED PRIVACY</div>
-          <div class="rql-tier3-title text-sm text-white font-bold">0 Bytes Cloud Telemetry</div>
-          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Unplug your Wi-Fi right now. Every algorithm runs locally in RAM.</div>
-        </div>
-        <div class="rql-dock-card">
-          <div class="rql-tier5-telemetry text-indigo-400 mb-1">[03] SOVEREIGN LICENSE</div>
-          <div class="rql-tier3-title text-sm text-white font-bold">No Monthly Subscriptions</div>
-          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Pay once on Gumroad, own the compiled software forever with SHA-256 integrity.</div>
-        </div>
-      </div>
-
+  <!-- ACETERNITY x MIDU VOLUMETRIC LAMP STAGE -->
+  <div class="relative flex w-full flex-1 scale-y-110 items-center justify-center isolate z-0 pointer-events-none mb-[-260px]">
+    <div class="aceternity-conic-left">
+      <div class="aceternity-lamp-mask-bottom"></div>
+      <div class="aceternity-lamp-mask-left"></div>
     </div>
+    <div class="aceternity-conic-right">
+      <div class="aceternity-lamp-mask-right"></div>
+      <div class="aceternity-lamp-mask-bottom"></div>
+    </div>
+    <div class="aceternity-lamp-halo"></div>
+    <div class="aceternity-lamp-orb"></div>
+    <div class="aceternity-lamp-inner-orb"></div>
+    <div class="aceternity-lamp-beam-line"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    
+    <!-- Capricorn Kicker -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono font-bold mb-6 tracking-widest uppercase shadow-xs">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>CAPRICORN 01 ARCHITECTURE // THE ESSENTIAL MACHINE</span>
+    </div>
+
+    <!-- Conwest Rhythmic Cadence Headline -->
+    <h1 class="conwest-cadence-title max-w-5xl mx-auto mb-6">
+      The Sovereign Machine.<br>
+      Pure Native Rust.<br>
+      <span class="conwest-cadence-dim">Zero Cloud Telemetry.</span>
+    </h1>
+
+    <!-- Capricorn Philosophy Subtitle -->
+    <p class="conwest-manifesto-text max-w-3xl mx-auto mb-8 text-zinc-300">
+      Desktop software engineered without compromise. Single-binary native Windows tools uniting bare-metal memory safety with zero monthly cloud rent. You pay once, own the compiled <code class="text-emerald-400 bg-black/60 px-2 py-0.5 rounded border border-white/10 font-mono text-sm">.exe</code> forever.
+    </p>
+
+    <!-- Primary Action Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+      <a class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-7 py-4 rounded-xl shadow-xl shadow-emerald-600/25 transition flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider btn-spring" href="store.html">
+        <i class="w-4 h-4 text-emerald-100" data-lucide="package"></i>
+        <span>Explore 31 Commercial Suites</span>
+        <span class="bg-emerald-800 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">31</span>
+      </a>
+      <a class="bg-white/5 hover:bg-white/10 text-white border border-white/15 font-bold px-7 py-4 rounded-xl shadow-xs transition flex items-center gap-2.5 text-xs font-mono uppercase tracking-wider btn-spring" href="store.html#sovereign-sandbox-section">
+        <i class="w-4 h-4 text-emerald-400" data-lucide="zap"></i>
+        <span>The 5-Second Air-Gap Challenge &rarr;</span>
+      </a>
+    </div>
+
+    <!-- ASIDE TACTILE WIN32 DESKTOP WINDOW FRAME (With Aceternity 3D Card Tilt) -->
+    <div class="aceternity-3d-wrap max-w-5xl mx-auto">
+      <div class="aside-window-frame aceternity-3d-card shadow-2xl">
+        <!-- Window Titlebar -->
+        <div class="aside-window-bar">
+          <div class="flex items-center gap-3">
+            <div class="aside-dots">
+              <span class="aside-dot-red"></span>
+              <span class="aside-dot-yellow"></span>
+              <span class="aside-dot-green"></span>
+            </div>
+            <span class="text-xs font-mono font-bold text-zinc-300 hidden sm:inline">RQL_DocumentShield.exe &mdash; Win32 Native Kernel Subsystem (PID: 4096)</span>
+            <span class="text-xs font-mono font-bold text-zinc-300 sm:hidden">RQL_DocumentShield.exe</span>
+          </div>
+          <div class="aside-telemetry-pill">
+            &bull; 100% AIR-GAPPED // ZERO TELEMETRY
+          </div>
+        </div>
+
+        <!-- Window Interior -->
+        <div class="p-6 sm:p-8 bg-[#0e0f15]/95 grid lg:grid-cols-12 gap-8 items-center">
+          <!-- Left: Interactive 3D Canvas Stage -->
+          <div class="lg:col-span-7 relative">
+            <div class="rql-3d-canvas-wrap my-0 h-[280px] sm:h-[320px]" title="Interactive 3D Stage: Move cursor or drag to rotate forensic geometry">
+              <canvas id="rql-3d-canvas"></canvas>
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 rql-tier5-telemetry text-[9px] text-zinc-400 bg-black/80 px-2.5 py-0.5 rounded border border-white/10 pointer-events-none whitespace-nowrap">
+                DRAG OR MOVE TO TILT 3D KERNEL
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Win32 Execution Telemetry -->
+          <div class="lg:col-span-5 text-left space-y-4 font-mono text-xs">
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+              <span class="text-zinc-400">ENGINE SUBSYSTEM:</span>
+              <span class="text-emerald-400 font-bold">DocumentShield v1.0</span>
+            </div>
+
+            <div class="space-y-2 text-[11px]">
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; Target Document:</span>
+                <span class="text-white font-bold">board_minutes.pdf</span>
+              </div>
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; Scrub Latency:</span>
+                <span class="text-emerald-400 font-bold">0.84 ms</span>
+              </div>
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; Cloud Exfiltration:</span>
+                <span class="text-emerald-400 font-bold">0.000 Bytes (0)</span>
+              </div>
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; Memory Footprint:</span>
+                <span class="text-sky-300 font-bold">14.2 MB RSS</span>
+              </div>
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; Cryptographic Hash:</span>
+                <span class="text-zinc-300 font-bold">SHA-256 Validated</span>
+              </div>
+              <div class="flex items-center justify-between text-zinc-300">
+                <span class="text-zinc-500">&gt; License Ownership:</span>
+                <span class="text-purple-300 font-bold">Perpetual On-Device</span>
+              </div>
+            </div>
+
+            <button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full mt-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs font-mono py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2 group cursor-pointer btn-spring">
+              <i class="w-4 h-4 text-emerald-100 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
+              <span>Run In-RAM Air-Gap Diagnostic</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- React 18 + Rust WASM 60 FPS Live Motion HUD Mount -->
   <div id="react-live-hud-root" class="relative z-20 mt-8 w-full"></div>
+</section>
+
+<!-- ========================================================
+     TOPOLOGY NUMBERED SYSTEM CODEX (01. / 02. / 03.)
+     ======================================================== -->
+<section class="py-16 bg-[#0c0d12] border-b border-white/10 relative z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="topology-grid">
+      
+      <div class="topology-block">
+        <span class="topology-num">01. ARCHITECTURE</span>
+        <h3 class="topology-title">Single-Binary Determinism</h3>
+        <p class="topology-desc">
+          Zero Electron bloat, zero webviews, zero runtime junk. Every tool compiles directly to a standalone x86-64 native Windows binary with sub-1ms execution.
+        </p>
+      </div>
+
+      <div class="topology-block">
+        <span class="topology-num">02. SECURITY</span>
+        <h3 class="topology-title">In-RAM Forensic Privacy</h3>
+        <p class="topology-desc">
+          Zero cloud telemetry, zero remote servers. Every algorithm executes completely in volatile RAM, mathematically severed from the internet.
+        </p>
+      </div>
+
+      <div class="topology-block">
+        <span class="topology-num">03. COMMERCIAL</span>
+        <h3 class="topology-title">Perpetual Sovereign License</h3>
+        <p class="topology-desc">
+          Pay once on Gumroad, own the compiled tool forever. Zero monthly subscription fees, zero arbitrary license invalidations.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- ========================================================
@@ -2596,5 +2706,9 @@ function filterProjects(category, triggerEl) {
   }, { passive: true });
 })();
 </script>
+
+  <script src="assets/rql-wavy-ribbon.js?v=20261117v7"></script>
+  <script src="assets/rql-3d-tilt.js?v=20261117v7"></script>
+
 </body>
 </html>
