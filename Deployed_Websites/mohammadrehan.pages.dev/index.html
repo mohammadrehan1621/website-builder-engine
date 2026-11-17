@@ -662,7 +662,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
     font-feature-settings: 'tnum' 1;
   }
 </style>
-  <link rel="stylesheet" href="assets/rql-motion.css?v=20261116v3" />
+  <link rel="stylesheet" href="assets/rql-motion.css?v=20261117v6" />
 <style id="rql-sovereign-invariants">
 /* RQL Sovereign Design System & Engineering Codex (200-Law Invariants) */
 :root, html {
@@ -1157,6 +1157,11 @@ document.addEventListener('keydown', function(e) {
   <!-- 60FPS In-RAM Hardware-Accelerated Canvas (Homepage Hero Constellation) -->
   <canvas id="rql-home-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-70"></canvas>
   
+  <!-- Ambient Luminous Mesh Glow (TypeGPU / Canvas Visuals) & Fine Grid -->
+  <div class="rql-luminous-canvas">
+    <div class="rql-mesh-glow-emerald"></div>
+    <div class="rql-mesh-glow-indigo"></div>
+  </div>
   <!-- Ambient Laser Radial Glow & Fine Grid -->
   <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.14),transparent_75%)]"></div>
   <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
@@ -1165,19 +1170,25 @@ document.addEventListener('keydown', function(e) {
   <div class="grid lg:grid-cols-12 gap-12 items-center">
   <!-- Left Column: Copy, Dynamic Rotator & CTAs -->
   <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.12]">
+  <!-- Tier 2 Architectural Overline -->
+  <div class="rql-tier2-overline inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 mb-3">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>SOVEREIGN SYSTEM ARCHITECTURE // ZERO CLOUD TELEMETRY</span>
+  </div>
+
+  <h1 class="rql-tier1-display text-4xl sm:text-5xl lg:text-6xl text-white">
       Fast, single-binary <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">Windows desktop tools</span> in pure Rust.
       <span class="block text-base sm:text-lg lg:text-xl text-slate-300 font-mono font-medium mt-3">
-          <span class="text-emerald-400 font-semibold font-mono">Engineered by Mohammad Rehan &bull; Patna, Bihar</span>
+          <span class="rql-tier5-telemetry text-emerald-400 font-semibold">ENGINEERED BY MOHAMMAD REHAN &bull; PATNA, BIHAR &bull; 100% AIR-GAPPED</span>
       </span>
   </h1>
 
-  <p class="text-base sm:text-lg text-slate-300 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+  <p class="rql-tier4-body text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
       I build native Windows desktop tools that run <strong class="text-white">100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-cyan-300 border border-slate-700 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
   </p>
 
   <!-- The Skeptic's Dare Attention Card (Obsidian Glassmorphism Edition) -->
-  <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 text-left shadow-2xl max-w-2xl mx-auto lg:mx-0 relative overflow-hidden bento-card-spring group">
+  <div class="rql-bento-glow-card p-6 sm:p-7 text-left shadow-2xl max-w-2xl mx-auto lg:mx-0 relative overflow-hidden group">
     <div class="absolute -right-10 -top-10 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
     <div class="absolute -left-10 -bottom-10 w-36 h-36 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
     <div class="flex items-start gap-3.5 sm:gap-4 relative z-10">
@@ -1245,7 +1256,7 @@ document.addEventListener('keydown', function(e) {
 
   <!-- Right Column: Interactive Profile Card & Real Verification Sandbox -->
   <div class="lg:col-span-5">
-  <div id="hero-profile-card" class="bg-slate-900/95 rounded-3xl border-2 border-slate-800 shadow-2xl p-6 sm:p-8 relative bento-card-spring group text-white">
+  <div id="hero-profile-card" class="rql-bento-glow-card p-6 sm:p-8 relative group text-white">
   <!-- Dynamic Radial Glow Light Following Cursor -->
   <div id="card-glow-overlay" class="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.18),transparent_70%)]"></div>
 
@@ -1314,10 +1325,7 @@ document.addEventListener('keydown', function(e) {
   </div>
   </div>
   </div>
-<span>Direct Consultation</span>
-<i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
-</a>
-</div>
+
 </div>
 </div>
 </div>

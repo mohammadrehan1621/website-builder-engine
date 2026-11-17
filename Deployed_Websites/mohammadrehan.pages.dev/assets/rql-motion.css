@@ -196,3 +196,121 @@ html.lenis, html.lenis body {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+/* ========================================================
+ * 5-TIER MASTER TYPOGRAPHIC HIERARCHY STANDARD
+ * Swiss International Craftsmanship | Tabular Precision
+ * ======================================================== */
+
+/* Tier 1: Sovereign Display & Hero Anchor */
+.rql-tier1-display,
+.rql-display-headline {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'tnum' 1;
+  letter-spacing: -0.035em !important;
+  line-height: 1.08 !important;
+  font-weight: 900 !important;
+}
+
+/* Tier 2: Architectural Overline / Kicker */
+.rql-tier2-overline,
+.rql-overline {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.18em !important;
+  color: #34d399 !important; /* emerald-400 */
+}
+
+/* Tier 3: Bento & Suite Component Titles */
+.rql-tier3-title,
+.rql-card-title {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #f8fafc !important;
+  line-height: 1.35 !important;
+}
+
+/* Tier 4: Editorial Body Copy */
+.rql-tier4-body,
+.rql-editorial-body {
+  font-size: 0.9375rem !important;
+  line-height: 1.625 !important;
+  text-wrap: pretty;
+  color: #94a3b8 !important;
+  font-weight: 400 !important;
+}
+
+/* Tier 5: Micro-Telemetry & Tab Badges */
+.rql-tier5-telemetry,
+.rql-telemetry-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* ========================================================
+ * LUMINOUS GPU AMBIENT MESH GLOW (from @kevin.snippet)
+ * Hardware-Accelerated Ambient Light Physics
+ * ======================================================== */
+.rql-luminous-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rql-mesh-glow-emerald {
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, rgba(6, 182, 212, 0.06) 45%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+}
+
+.rql-mesh-glow-indigo {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 550px;
+  height: 550px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(139, 92, 246, 0.06) 45%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+}
+
+/* ========================================================
+ * HIGH-DENSITY GLOWING BENTO CARDS (from @kevin.snippet #9)
+ * Hairline Precision | Zero-Wobble Stability (CLS = 0)
+ * ======================================================== */
+.rql-bento-glow-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(2, 6, 23, 0.96) 100%);
+  border: 1px solid rgba(51, 65, 85, 0.65);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rql-bento-glow-card:hover {
+  border-color: rgba(52, 211, 153, 0.55);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.7), 0 0 25px -4px rgba(16, 185, 129, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
