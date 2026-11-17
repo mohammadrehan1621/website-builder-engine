@@ -1,25 +1,16 @@
 {
-  "name": "RQL Founder Sovereign Studio",
-  "short_name": "RQL Studio",
-  "description": "Founder Cryptographic Authority & CW/ACW Bi-Directional Sovereign License Engine",
-  "start_url": "/vault.html",
-  "scope": "/",
+  "name": "Rehan Quant Lab - Sovereign Desktop Software",
+  "short_name": "RQL Store",
+  "description": "100% offline, air-gapped desktop software suites built in pure Rust. Zero subscriptions, lifetime licenses.",
+  "start_url": "/store.html",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#0B0F19",
-  "theme_color": "#10B981",
+  "background_color": "#030712",
+  "theme_color": "#030712",
   "icons": [
     {
-      "src": "/emblem.webp",
-      "sizes": "192x192 512x512",
-      "type": "image/webp",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/og_preview.png",
-      "sizes": "1200x630",
-      "type": "image/png",
-      "purpose": "any"
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
   ]
 }

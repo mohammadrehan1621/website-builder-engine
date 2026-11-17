@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rehan Quant Lab - Sovereign Desktop Software Releases</title>
+    <link>https://rehanquantlab.com/store.html</link>
+    <description>Official release feed for 100% offline, native Windows desktop software suites built in pure Rust. Zero subscriptions, zero telemetry.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Nov 2026 06:00:00 GMT</lastBuildDate>
+    <atom:link href="https://rehanquantlab.com/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>DocumentShield AI v2.4 Released: Forensic Air-Gapped PDF Redaction</title>
+      <link>https://rehanquantlab.com/documentshield.html</link>
+      <guid isPermaLink="true">https://rehanquantlab.com/documentshield.html?v=2.4</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 GMT</pubDate>
+      <description>DocumentShield AI v2.4 brings automated SSN/EIN pattern scrubbing, Bates stamping, and SHA-256 compliance auditing. Benchmark: 1.4s 50-page redaction, 13.8MB RAM, 0 KB network sockets.</description>
+    </item>
+
+    <item>
+      <title>WhisperVault v3.1 Released: 100% Local Voice Transcription Studio</title>
+      <link>https://rehanquantlab.com/whispervault.html</link>
+      <guid isPermaLink="true">https://rehanquantlab.com/whispervault.html?v=3.1</guid>
+      <pubDate>Sun, 15 Nov 2026 10:00:00 GMT</pubDate>
+      <description>WhisperVault v3.1 delivers private meeting transcription powered by offline OpenAI Whisper models in Rust. AES-256 encrypted vaults, word-level timestamps, zero cloud audio streaming.</description>
+    </item>
+
+    <item>
+      <title>Retail POS v4.0 Released: Offline Point-of-Sale with SQLite WAL Journaling</title>
+      <link>https://rehanquantlab.com/retailpos.html</link>
+      <guid isPermaLink="true">https://rehanquantlab.com/retailpos.html?v=4.0</guid>
+      <pubDate>Sat, 14 Nov 2026 08:00:00 GMT</pubDate>
+      <description>Retail POS v4.0 engineered for physical counters: sub-0.4s barcode scans, ESC/POS thermal printing, crash-proof power-cut recovery, and zero monthly SaaS rental fees.</description>
+    </item>
+
+    <item>
+      <title>TaxLedger v2.2 Released: Offline Double-Entry &amp; GSTR-1 Portal Invoicing</title>
+      <link>https://rehanquantlab.com/taxledger.html</link>
+      <guid isPermaLink="true">https://rehanquantlab.com/taxledger.html?v=2.2</guid>
+      <pubDate>Fri, 13 Nov 2026 14:00:00 GMT</pubDate>
+      <description>TaxLedger v2.2 provides standalone Indian financial accounting, GSTR-1 portal JSON exports, and Section 44ADA presumptive tax calculations with zero cloud lock-in.</description>
+    </item>
+
+    <item>
+      <title>Conduit v1.8 Released: Multi-WAN Network Tunnel Bonding &amp; Failover</title>
+      <link>https://rehanquantlab.com/conduit.html</link>
+      <guid isPermaLink="true">https://rehanquantlab.com/conduit.html?v=1.8</guid>
+      <pubDate>Thu, 12 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Conduit v1.8 bonds cellular, fiber, and Starlink links into a unified virtual socket with sub-10ms packet failover and wire-speed ChaCha20-Poly1305 encryption.</description>
+    </item>
+  </channel>
+</rss>

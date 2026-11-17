@@ -74,3 +74,8 @@ Sitemap: https://rehanquantlab.com/sitemap.xml
 # Primary: https://rehanquantlab.com/llms.txt
 # Full:    https://rehanquantlab.com/llms-full.txt
 # API:     https://rehanquantlab.com/catalog.json
+
+# Machine APIs and Autonomous Bot Feeds
+OpenAPI-Spec: https://rehanquantlab.com/openapi.json
+RSS-Feed: https://rehanquantlab.com/feed.xml
+Web-Manifest: https://rehanquantlab.com/manifest.json
