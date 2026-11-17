@@ -1153,186 +1153,176 @@ document.addEventListener('keydown', function(e) {
 
 <!-- HERO SECTION (HOME PAGE ROLE) -->
 <main class="flex-grow">
-<section class="relative pt-14 pb-16 lg:pt-20 lg:pb-24 overflow-hidden bg-slate-950 text-white border-b border-slate-800/90" id="hero-section">
-  <!-- 60FPS In-RAM Hardware-Accelerated Canvas (Homepage Hero Constellation) -->
-  <canvas id="rql-home-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-70"></canvas>
+<section class="relative pt-12 pb-14 lg:pt-16 lg:pb-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800/90" id="hero-section">
+  <!-- Volumetric Diffuse Glow (The MIDU Backlight) -->
+  <div class="rql-cinema-glow"></div>
   
-  <!-- Ambient Luminous Mesh Glow (TypeGPU / Canvas Visuals) & Fine Grid -->
-  <div class="rql-luminous-canvas">
-    <div class="rql-mesh-glow-emerald"></div>
-    <div class="rql-mesh-glow-indigo"></div>
-  </div>
-  <!-- Ambient Laser Radial Glow & Fine Grid -->
-  <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(99,102,241,0.28),rgba(6,182,212,0.14),transparent_75%)]"></div>
-  <div class="absolute inset-0 pointer-events-none z-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:28px_28px] opacity-35"></div>
-
+  <!-- 60FPS In-RAM Hardware-Accelerated Canvas (Homepage Hero Constellation) -->
+  <canvas id="rql-home-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+  
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-  <div class="grid lg:grid-cols-12 gap-12 items-center">
-  <!-- Left Column: Copy, Dynamic Rotator & CTAs -->
-  <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-  <!-- Tier 2 Architectural Overline -->
-  <div class="rql-tier2-overline inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 mb-3">
-      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-      <span>SOVEREIGN SYSTEM ARCHITECTURE // ZERO CLOUD TELEMETRY</span>
-  </div>
-
-  <h1 class="rql-tier1-display text-4xl sm:text-5xl lg:text-6xl text-white">
-      Fast, single-binary <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">Windows desktop tools</span> in pure Rust.
-      <span class="block text-base sm:text-lg lg:text-xl text-slate-300 font-mono font-medium mt-3">
-          <span class="rql-tier5-telemetry text-emerald-400 font-semibold">ENGINEERED BY MOHAMMAD REHAN &bull; PATNA, BIHAR &bull; 100% AIR-GAPPED</span>
-      </span>
-  </h1>
-
-  <p class="rql-tier4-body text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-      I build native Windows desktop tools that run <strong class="text-white">100% offline</strong>, collect zero telemetry, and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-cyan-300 border border-slate-700 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever, and not a single byte of your data ever leaves your local computer.
-  </p>
-
-  <!-- The Skeptic's Dare Attention Card (Obsidian Glassmorphism Edition) -->
-  <div class="rql-bento-glow-card p-6 sm:p-7 text-left shadow-2xl max-w-2xl mx-auto lg:mx-0 relative overflow-hidden group">
-    <div class="absolute -right-10 -top-10 w-36 h-36 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
-    <div class="absolute -left-10 -bottom-10 w-36 h-36 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
-    <div class="flex items-start gap-3.5 sm:gap-4 relative z-10">
-      <div class="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 shadow-xs">
-        <i class="w-5 h-5 text-emerald-400" data-lucide="wifi-off"></i>
+    <div class="rql-cinema-stage">
+      
+      <!-- Tier 2 Overline Kicker -->
+      <div class="rql-tier2-overline inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-400 mb-4 shadow-lg shadow-emerald-950/40">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>01 // PURE NATIVE RUST SOVEREIGN FOUNDRY &bull; WIN32 ARCHITECTURE</span>
       </div>
-      <div class="space-y-1.5 flex-grow">
-        <div class="flex flex-wrap items-center gap-2">
-          <span class="text-[10px] font-mono font-bold uppercase px-2.5 py-0.5 rounded-full bg-slate-950 text-white shadow-2xs border border-slate-800">The Skeptic's Dare</span>
-          <span class="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 shadow-2xs">&#10003; 100% Proven In Browser</span>
-        </div>
-        <h3 class="text-base sm:text-lg font-black font-heading text-white tracking-tight leading-snug">
-          Think "100% Offline" is just marketing words? Prove us wrong in 5 seconds.
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
-          Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
-        </p>
-        <div class="pt-2 flex items-center gap-3">
-          <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black font-mono text-xs transition shadow-md shadow-emerald-600/30  cursor-pointer btn-spring">
-            <i class="w-4 h-4 text-emerald-100" data-lucide="zap"></i>
-            <span>Take The 5-Second Air-Gap Challenge</span>
-            <span>&rarr;</span>
-          </a>
+
+      <!-- Giant Architectural Headline (MIDU & NOTHIN' Style) -->
+      <h1 class="rql-cinema-title">
+        FAST. OFFLINE.<br>
+        <span class="rql-cinema-gradient-text">PURE RUST.</span>
+      </h1>
+
+      <p class="rql-cinema-tagline">
+        Single-binary Windows desktop tools that collect zero telemetry and never charge a monthly subscription. You pay once, own the compiled <code class="bg-slate-900 text-cyan-300 border border-slate-700 px-1.5 py-0.5 rounded font-mono text-xs font-semibold">.exe</code> forever.
+      </p>
+
+      <!-- Live Interactive 3D Canvas Stage (Drag to Spin, Mouse Hover Physics) -->
+      <div class="rql-3d-canvas-wrap" title="Interactive 3D Stage: Move cursor or drag to rotate forensic geometry">
+        <canvas id="rql-3d-canvas"></canvas>
+        <div class="absolute bottom-2 left-1/2 -translate-x-1/2 rql-tier5-telemetry text-[9px] text-slate-400 bg-slate-950/80 px-2.5 py-0.5 rounded-full border border-slate-800 pointer-events-none whitespace-nowrap">
+          <span class="text-emerald-400 font-bold">&#8226; LIVE 3D CANVAS</span> &bull; DRAG OR MOVE MOUSE TO ROTATE
         </div>
       </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-1">
+        <a class="bg-emerald-600 hover:bg-emerald-500 text-white font-black px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center gap-2.5 text-xs font-mono group btn-spring" href="store.html">
+          <i class="w-4 h-4 text-emerald-100" data-lucide="package"></i>
+          <span>EXPLORE 31 COMMERCIAL SUITES</span>
+          <span class="bg-emerald-800 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">31</span>
+        </a>
+        <a class="bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-extrabold px-6 py-3.5 rounded-xl shadow-xs transition flex items-center gap-2.5 text-xs font-mono group btn-spring" href="store.html#sovereign-sandbox-section">
+          <i class="w-4 h-4 text-emerald-400" data-lucide="zap"></i>
+          <span>THE 5-SECOND AIR-GAP CHALLENGE &rarr;</span>
+        </a>
+      </div>
+
+      <!-- Architectural Telemetry Dock -->
+      <div class="rql-cinema-dock">
+        <div class="rql-dock-card">
+          <div class="rql-tier5-telemetry text-emerald-400 mb-1">[01] 100% NATIVE RUST</div>
+          <div class="rql-tier3-title text-sm text-white font-bold">Single-Binary Win32 Core</div>
+          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Zero Electron, zero webviews, zero runtime dependencies. Sub-1ms startup.</div>
+        </div>
+        <div class="rql-dock-card">
+          <div class="rql-tier5-telemetry text-cyan-400 mb-1">[02] AIR-GAPPED PRIVACY</div>
+          <div class="rql-tier3-title text-sm text-white font-bold">0 Bytes Cloud Telemetry</div>
+          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Unplug your Wi-Fi right now. Every algorithm runs locally in RAM.</div>
+        </div>
+        <div class="rql-dock-card">
+          <div class="rql-tier5-telemetry text-indigo-400 mb-1">[03] SOVEREIGN LICENSE</div>
+          <div class="rql-tier3-title text-sm text-white font-bold">No Monthly Subscriptions</div>
+          <div class="rql-tier4-body text-xs text-slate-400 mt-1">Pay once on Gumroad, own the compiled software forever with SHA-256 integrity.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- CTA Buttons with Micro-Interactions -->
-  <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-  <a class="bg-indigo-600 hover:bg-indigo-500 text-white font-black px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center gap-2.5 text-sm group btn-spring" href="contact.html#schedule-briefing">
-  <i class="w-4 h-4 text-indigo-200 group-hover:scale-110 transition-transform duration-300" data-lucide="calendar"></i>
-  <span>Schedule Technical Briefing</span>
-  </a>
-  <a class="bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-extrabold px-6 py-3.5 rounded-xl shadow-xs transition flex items-center gap-2.5 text-sm group btn-spring" href="#about">
-  <i class="w-4 h-4 text-slate-300 group-hover:rotate-12 transition-transform duration-300" data-lucide="layers"></i>
-  <span>Architecture Blueprint</span>
-  </a>
-  <a class="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold px-5 py-3.5 rounded-xl transition flex items-center gap-2.5 text-sm group btn-spring" href="Mohammad_Rehan_Resume.pdf" download="Mohammad_Rehan_Resume.pdf">
-  <i class="w-4 h-4 text-emerald-400" data-lucide="download"></i>
-  <span>Resume (PDF)</span>
-  </a>
-  </div>
+  <!-- React 18 + Rust WASM 60 FPS Live Motion HUD Mount -->
+  <div id="react-live-hud-root" class="relative z-20 mt-8 w-full"></div>
+</section>
 
-  <!-- Real-World Grounded Trust Pillars -->
-  <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80 max-w-xl mx-auto lg:mx-0">
-  <div>
-  <p class="text-2xl font-black font-mono text-indigo-400 tabular-nums">0 Bytes</p>
-  <p class="text-xs text-slate-400 mt-0.5 font-bold font-mono">Cloud Telemetry</p>
-  </div>
-  <div>
-  <p class="text-2xl font-black font-mono text-emerald-400 tabular-nums">&#8377;0 / Mo</p>
-  <p class="text-xs text-slate-400 mt-0.5 font-bold font-mono">Zero Monthly Fees</p>
-  </div>
-  <div>
-  <p class="text-2xl font-black font-mono text-cyan-400 tabular-nums">100%</p>
-  <p class="text-xs text-slate-400 mt-0.5 font-bold font-mono">Pure Native Rust</p>
-  </div>
-  <div>
-  <p class="text-2xl font-black font-mono text-white tabular-nums">Patna, IN</p>
-  <p class="text-xs text-slate-400 mt-0.5 font-bold font-mono">Engineered Locally</p>
-  </div>
-  </div>
-  </div>
+<!-- ========================================================
+     SOVEREIGN DUAL BENTO GRID: THE AIR-GAP DARE & FOUNDER
+     ======================================================== -->
+<section class="py-12 bg-slate-950 border-b border-slate-800 relative z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+      
+      <!-- Skeptic Card -->
+      <div class="lg:col-span-7 rql-bento-glow-card p-6 sm:p-8 flex flex-col justify-between">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0 shadow-xs">
+            <i class="w-6 h-6 text-emerald-400" data-lucide="wifi-off"></i>
+          </div>
+          <div class="space-y-2">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rql-tier5-telemetry px-2.5 py-0.5 rounded-full bg-slate-950 text-white border border-slate-800">The Skeptic's Dare</span>
+              <span class="rql-tier5-telemetry px-2.5 py-0.5 rounded-full bg-emerald-950/90 text-emerald-300 border border-emerald-500/40">&#10003; 100% Proven In Browser</span>
+            </div>
+            <h3 class="rql-tier3-title text-lg sm:text-xl font-bold">
+              Think "100% Offline" is just marketing words? Prove us wrong in 5 seconds.
+            </h3>
+            <p class="rql-tier4-body text-xs sm:text-sm">
+              Turn off your Wi-Fi or unplug your Ethernet cable right now, then test our algorithms live. If a single byte leaves your machine or any tool fails, don't hire us or buy our tools.
+            </p>
+          </div>
+        </div>
 
-  <!-- Right Column: Interactive Profile Card & Real Verification Sandbox -->
-  <div class="lg:col-span-5">
-  <div id="hero-profile-card" class="rql-bento-glow-card p-6 sm:p-8 relative group text-white">
-  <!-- Dynamic Radial Glow Light Following Cursor -->
-  <div id="card-glow-overlay" class="absolute inset-0 rounded-3xl pointer-events-none transition-opacity duration-300 opacity-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.18),transparent_70%)]"></div>
+        <div class="pt-6 mt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <a href="store.html#sovereign-sandbox-section" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black font-mono text-xs transition shadow-md shadow-emerald-600/30 cursor-pointer btn-spring">
+              <i class="w-4 h-4 text-emerald-100" data-lucide="zap"></i>
+              <span>Take The 5-Second Air-Gap Challenge &rarr;</span>
+            </a>
+          </div>
+          <div class="rql-tier5-telemetry text-slate-400">
+            0 BYTES CLOUD &bull; &#8377;0 / MO &bull; 100% PURE RUST
+          </div>
+        </div>
+      </div>
 
-  <!-- Top Decorative Header -->
-  <div class="flex items-center justify-between pb-6 border-b border-slate-800 relative z-10">
-  <div class="flex items-center gap-3">
-  <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/40 border border-slate-700 shadow-xs">
-  <div>
-  <h2 class="font-black text-white text-base">Mohammad Rehan</h2>
-  <p class="text-xs text-emerald-400 font-mono font-bold">Founder @ Rehan Quant Lab</p>
-  </div>
-  </div>
-  <span class="bg-indigo-950 text-indigo-300 text-[11px] font-semibold px-2.5 py-1 rounded-lg border border-indigo-800/60 flex items-center gap-1 font-mono">
-      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Patna, Bihar
-  </span>
-  </div>
+      <!-- Founder Card -->
+      <div id="hero-profile-card" class="lg:col-span-5 rql-bento-glow-card p-6 sm:p-8 flex flex-col justify-between text-white">
+        <div>
+          <!-- Header -->
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div class="flex items-center gap-3">
+              <img src="emblem.webp" decoding="async" alt="Rehan Quant Lab" class="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-indigo-500/40 border border-slate-700 shadow-xs">
+              <div>
+                <h2 class="rql-tier3-title text-base sm:text-lg">Mohammad Rehan</h2>
+                <p class="rql-tier5-telemetry text-emerald-400 mt-0.5">Founder @ Rehan Quant Lab</p>
+              </div>
+            </div>
+            <span class="rql-tier5-telemetry bg-indigo-950/80 text-indigo-300 px-2.5 py-1 rounded-lg border border-indigo-800/60 flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Patna, Bihar
+            </span>
+          </div>
 
-  <!-- Brand Statement Quote -->
-  <div class="py-5 space-y-3 relative z-10">
-  <div class="flex items-start gap-3 bg-slate-950/80 p-4 rounded-2xl border border-slate-800 text-slate-300">
-  <i class="w-5 h-5 text-indigo-400 shrink-0 mt-0.5" data-lucide="quote"></i>
-  <p class="text-xs text-slate-300 italic leading-relaxed">
-      "I build fast, offline-first desktop software that solves real business problems&mdash;from air-gapped document privacy to multi-counter retail billing&mdash;with zero recurring subscription fees."
-  </p>
-  </div>
-  </div>
+          <!-- Quote -->
+          <div class="py-4">
+            <div class="flex items-start gap-3 bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800/80 text-slate-300">
+              <i class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" data-lucide="quote"></i>
+              <p class="rql-tier4-body text-xs italic text-slate-300">
+                "I build fast, offline-first desktop software that solves real business problems&mdash;from air-gapped document privacy to multi-counter retail billing&mdash;with zero recurring subscription fees."
+              </p>
+            </div>
+          </div>
 
-  <!-- Verified Core Tech Badges -->
-  <div class="space-y-2.5 pt-1 relative z-10">
-  <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider font-mono">Verified Architectural Competencies</p>
-  <div class="flex flex-wrap gap-1.5">
-  <span class="bg-slate-800 text-indigo-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">100% Pure Native Rust</span>
-  <span class="bg-slate-800 text-sky-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Win32 &amp; Windows 11 API</span>
-  <span class="bg-slate-800 text-emerald-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Air-Gapped Forensic Security</span>
-  <span class="bg-slate-800 text-purple-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Offline AI Whisper Transcriber</span>
-  <span class="bg-slate-800 text-cyan-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Sub-12ms Anycast Web Arch</span>
-  <span class="bg-slate-800 text-amber-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Multi-Counter LAN Billing (POS)</span>
-  <span class="bg-slate-800 text-emerald-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Direct UPI QR Integration</span>
-  <span class="bg-slate-800 text-rose-300 border border-slate-700 text-[11px] px-2.5 py-1 rounded-lg font-bold transition hover:scale-105">Zero Cloud Dependencies</span>
-  </div>
-  </div>
+          <!-- Competencies -->
+          <div class="space-y-2 pt-1">
+            <p class="rql-tier5-telemetry text-slate-400">Verified Architectural Competencies</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-indigo-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Pure Rust</span>
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-sky-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Win32 API</span>
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-emerald-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Air-Gapped Security</span>
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-purple-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Offline Whisper AI</span>
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-amber-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Multi-Counter LAN POS</span>
+              <span class="rql-tier5-telemetry bg-slate-800/90 text-rose-300 border border-slate-700/80 px-2 py-0.5 rounded-md">Zero Cloud Deps</span>
+            </div>
+          </div>
+        </div>
 
-  <!-- REAL AIR-GAP & HARDWARE INTEGRITY CHECK -->
-  <div class="mt-5 pt-4 border-t border-slate-800 relative z-10">
-  <div class="flex items-center justify-between text-xs font-mono mb-2">
-      <span class="text-slate-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> AIR-GAP INTEGRITY:</span>
-      <span id="hero-node-status" class="text-emerald-300 font-bold bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">100% OFFLINE VERIFIED</span>
-  </div>
+        <!-- Footer Diagnostic -->
+        <div class="mt-4 pt-4 border-t border-slate-800/80">
+          <div class="flex items-center justify-between rql-tier5-telemetry mb-2">
+            <span class="text-slate-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> AIR-GAP INTEGRITY:</span>
+            <span id="hero-node-status" class="text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">100% OFFLINE VERIFIED</span>
+          </div>
+          <button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black rql-tier5-telemetry py-2.5 px-4 rounded-xl shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 group cursor-pointer btn-spring">
+            <i class="w-4 h-4 text-emerald-200 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
+            <span>Run Memory &amp; Air-Gap Diagnostic</span>
+          </button>
+        </div>
 
-  <button id="hero-diagnostic-btn" onclick="triggerHeroDiagnosticPulse()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs font-mono py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2 group cursor-pointer btn-spring">
-      <i class="w-4 h-4 text-emerald-200 group-hover:scale-110 transition-transform" data-lucide="shield-check"></i>
-      <span>Run Memory &amp; Air-Gap Diagnostic</span>
-  </button>
+      </div>
 
-  <div id="hero-diagnostic-telemetry" class="hidden mt-2.5 p-3 rounded-xl bg-slate-950 text-[11px] font-mono text-slate-300 border border-slate-800 transition-all duration-300 space-y-1">
+    </div>
   </div>
-  </div>
-
-  <!-- Bottom Quick Action -->
-  <div class="pt-4 mt-4 border-t border-slate-800 flex items-center justify-between text-xs relative z-10">
-  <span class="text-slate-400">Status: <strong class="text-emerald-400">Active &amp; Ready</strong></span>
-  <a class="text-cyan-400 font-semibold hover:underline flex items-center gap-1" href="contact.html">
-  <span>Contact Directly</span>
-  <i class="w-3.5 h-3.5 text-cyan-400" data-lucide="arrow-right"></i>
-  </a>
-  </div>
-  </div>
-  </div>
-
-</div>
-</div>
-</div>
-
-    <!-- React 18 + Rust WASM 60 FPS Live Motion HUD Mount -->
-    <div id="react-live-hud-root" class="relative z-20 mt-8 w-full"></div>
-</div>
 </section>
 
 
@@ -2496,7 +2486,8 @@ function filterProjects(category, triggerEl) {
 })();
 </script>
   <script src="assets/lenis.min.js" defer></script>
-  <script src="assets/rql-motion.js?v=20261117v5" defer></script>
+  <script src="assets/rql-motion.js?v=20261117v6" defer></script>
+  <script src="assets/rql-3d-scene.js" defer></script>
 <script id="rql-runtime-engine">
 (function() {
   'use strict';

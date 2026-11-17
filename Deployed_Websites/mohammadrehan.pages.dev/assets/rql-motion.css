@@ -314,3 +314,114 @@ html.lenis, html.lenis body {
   box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.7), 0 0 25px -4px rgba(16, 185, 129, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
+/* ========================================================
+ * PURE CINEMA 3D INTERACTIVE HERO (from @kevin.snippet)
+ * Massive Architectural Typography + Live 3D Geometry
+ * ======================================================== */
+.rql-cinema-stage {
+  position: relative;
+  text-align: center;
+  padding: 48px 16px 36px 16px;
+  overflow: hidden;
+}
+
+.rql-cinema-title {
+  font-size: clamp(3rem, 7.5vw, 6.75rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.96 !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.rql-cinema-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 45%, #38bdf8 75%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rql-cinema-glow {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(750px, 92vw);
+  height: 380px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.32) 0%, rgba(6, 182, 212, 0.18) 40%, rgba(99, 102, 241, 0.08) 70%, transparent 85%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rql-3d-canvas-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 360px;
+  margin: 16px auto 24px auto;
+  z-index: 10;
+  cursor: grab;
+}
+
+.rql-3d-canvas-wrap:active {
+  cursor: grabbing;
+}
+
+#rql-3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.rql-cinema-tagline {
+  font-size: clamp(1rem, 2vw, 1.25rem) !important;
+  color: #cbd5e1 !important;
+  max-width: 680px;
+  margin: 0 auto 28px auto;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  position: relative;
+  z-index: 10;
+}
+
+.rql-cinema-dock {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 28px auto 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .rql-3d-canvas-wrap {
+    height: 270px;
+  }
+  .rql-cinema-dock {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.rql-dock-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(51, 65, 85, 0.55);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.rql-dock-card:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+
