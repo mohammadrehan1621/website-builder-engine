@@ -352,68 +352,81 @@
   // 11. Raycast-Style Global Command Palette (Ctrl+K / Cmd+K / Slash)
   var RQL_PALETTE_DATA = [
     // 31 Commercial Suites
-    { id: 'rql-documentshield', title: 'RQL DocumentShield', cat: 'Security & Privacy', tag: 'VIP Flagship 01', price: '$179 ($53.70)', url: 'store.html#rql-documentshield', desc: 'Enterprise PDF Redactor & Permanent Vector Metadata Purge' },
-    { id: 'rql-whispervault', title: 'RQL WhisperVault', cat: 'Media & Audio', tag: 'VIP Flagship 02', price: '$149 ($44.70)', url: 'store.html#rql-whispervault', desc: '100% Offline Whisper AI Audio Transcription & Subtitles' },
-    { id: 'rql-retailpos', title: 'RQL Retail POS', cat: 'Retail POS & Billing', tag: 'VIP Flagship 03', price: '$169 ($50.70)', url: 'store.html#rql-retailpos', desc: 'Sub-1ms Air-Gapped Retail Point of Sale & Thermal Engine' },
-    { id: 'rql-storechain', title: 'RQL StoreChain', cat: 'Retail POS & Billing', tag: 'Commercial 04', price: '$299 ($89.70)', url: 'store.html#rql-storechain', desc: 'Multi-Counter LAN Billing & Multi-Branch Data Sync' },
-    { id: 'rql-conduit', title: 'RQL Conduit', cat: 'Systems & Network', tag: 'Commercial 05', price: '$129 ($38.70)', url: 'store.html#rql-conduit', desc: 'Dual-WAN Internet Bonding, Aggregation & Failover Daemon' },
-    { id: 'rql-hashcheck', title: 'RQL HashCheck', cat: 'Security & Privacy', tag: 'Commercial 06', price: '$39 ($11.70)', url: 'store.html#rql-hashcheck', desc: 'SHA-256 / SHA-512 Stream Cryptographic File Integrity' },
-    { id: 'rql-qrstudio', title: 'RQL QRStudio', cat: 'Retail POS & Billing', tag: 'Commercial 07', price: '$79 ($23.70)', url: 'store.html#rql-qrstudio', desc: 'Offline Vector UPI QR & Barcode Generator Studio' },
-    { id: 'rql-textdiff', title: 'RQL TextDiff', cat: 'Systems & Network', tag: 'Commercial 08', price: '$99 ($29.70)', url: 'store.html#rql-textdiff', desc: 'Side-by-Side Visual Code & Text Difference Comparator' },
-    { id: 'rql-renamer', title: 'RQL Renamer', cat: 'Systems & Network', tag: 'Commercial 09', price: '$49 ($14.70)', url: 'store.html#rql-renamer', desc: 'High-Speed Bulk Regex File & Photo Reorganizer' },
-    { id: 'rql-tageditor', title: 'RQL TagEditor', cat: 'Media & Audio', tag: 'Commercial 10', price: '$59 ($17.70)', url: 'store.html#rql-tageditor', desc: 'Lossless ID3 & FLAC Audio Metadata & Album Art Editor' },
-    { id: 'rql-fontviewer', title: 'RQL FontViewer', cat: 'Systems & Network', tag: 'Commercial 11', price: '$49 ($14.70)', url: 'store.html#rql-fontviewer', desc: 'Desktop Typography Glyph Inspector & OTF/TTF Manager' },
-    { id: 'rql-dpdpshield', title: 'RQL DPDPShield', cat: 'Legal & Compliance', tag: 'Commercial 12', price: '$89 ($26.70)', url: 'store.html#rql-dpdpshield', desc: 'DPDP Act 2023 & GDPR Corporate Compliance Sanitizer' },
-    { id: 'rql-pricetag', title: 'RQL PriceTag', cat: 'Retail POS & Billing', tag: 'Commercial 13', price: '$79 ($23.70)', url: 'store.html#rql-pricetag', desc: 'Thermal Barcode Price Tag & Shelf Label Design Studio' },
-    { id: 'rql-invoicegen', title: 'RQL InvoiceGen', cat: 'Retail POS & Billing', tag: 'Commercial 14', price: '$89 ($26.70)', url: 'store.html#rql-invoicegen', desc: 'Offline GST Tax Invoice Studio & Dynamic UPI QR Engine' },
-    { id: 'rql-csvformat', title: 'RQL CSVFormat', cat: 'Systems & Network', tag: 'Commercial 15', price: '$79 ($23.70)', url: 'store.html#rql-csvformat', desc: 'Multi-Gigabyte CSV Sanitizer, Deduplication & Transform' },
-    { id: 'rql-pdfmerge', title: 'RQL PDFMerge', cat: 'Legal & Compliance', tag: 'Commercial 16', price: '$119 ($35.70)', url: 'store.html#rql-pdfmerge', desc: 'Air-Gapped PDF Combiner, Splitter & Legal Bates Stamper' },
-    { id: 'rql-taxledger', title: 'RQL TaxLedger', cat: 'Legal & Compliance', tag: 'VIP Flagship 17', price: '$119 ($35.70)', url: 'store.html#rql-taxledger', desc: '20-Feature Indian Double-Entry Accounting & GSTR-1 Studio' },
-    { id: 'rql-fileshredder', title: 'RQL FileShredder', cat: 'Security & Privacy', tag: 'Commercial 18', price: '$59 ($17.70)', url: 'store.html#rql-fileshredder', desc: 'DoD 5220.22-M Permanent Forensic Data Destruction' },
-    { id: 'rql-clipvault', title: 'RQL ClipVault', cat: 'Security & Privacy', tag: 'Commercial 19', price: '$39 ($31.20)', url: 'store.html#rql-clipvault', desc: 'Encrypted AES-256 Local Clipboard Memory Vault' },
-    { id: 'rql-imagebatch', title: 'RQL ImageBatch', cat: 'Media & Audio', tag: 'Commercial 20', price: '$69 ($55.20)', url: 'store.html#rql-imagebatch', desc: 'SIMD Multi-Threaded Batch Image Resizer & WebP Converter' },
-    { id: 'rql-audioextract', title: 'RQL AudioExtract', cat: 'Media & Audio', tag: 'Commercial 21', price: '$59 ($47.20)', url: 'store.html#rql-audioextract', desc: 'Lossless MP4/MKV to MP3/WAV/FLAC Audio Demuxer' },
-    { id: 'rql-subtitlesync', title: 'RQL SubtitleSync', cat: 'Media & Audio', tag: 'Commercial 22', price: '$79 ($63.20)', url: 'store.html#rql-subtitlesync', desc: 'Millisecond Subtitle Delay Repair, Shifter & Converter' },
-    { id: 'rql-spacemap', title: 'RQL SpaceMap', cat: 'Systems & Network', tag: 'Commercial 23', price: '$49 ($39.20)', url: 'store.html#rql-spacemap', desc: 'Visual Disk Treemap Storage Analyzer & MFT Bloat Locator' },
-    { id: 'rql-docprotect', title: 'RQL DocProtect', cat: 'Security & Privacy', tag: 'Commercial 24', price: '$69 ($55.20)', url: 'store.html#rql-docprotect', desc: 'Offline PDF AES-256 Encryption & Permission Locker' },
-    { id: 'rql-cashdrawer', title: 'RQL CashDrawer', cat: 'Retail POS & Billing', tag: 'Commercial 25', price: '$89 ($71.20)', url: 'store.html#rql-cashdrawer', desc: 'POS ESC/POS RJ11 Kick-Pulse Serial Drawer Automation' },
-    { id: 'rql-receiptprinter', title: 'RQL ReceiptPrinter', cat: 'Retail POS & Billing', tag: 'Commercial 26', price: '$69 ($55.20)', url: 'store.html#rql-receiptprinter', desc: '80mm/58mm Thermal Receipt Layout & Direct USB Driver' },
-    { id: 'rql-clauseforge', title: 'RQL ClauseForge', cat: 'Legal & Compliance', tag: 'Commercial 27', price: '$499 ($399.20)', url: 'store.html#rql-clauseforge', desc: 'Commercial Contract Assembler & Arbitration Generator' },
-    { id: 'rql-archivemaster', title: 'RQL ArchiveMaster', cat: 'Systems & Network', tag: 'Commercial 28', price: '$39 ($31.20)', url: 'store.html#rql-archivemaster', desc: 'High-Ratio Multithreaded 7z/ZIP/TAR Compression Archiver' },
-    { id: 'rql-socketshield', title: 'RQL SocketShield', cat: 'Security & Privacy', tag: 'VIP Flagship 29', price: '$189 ($56.70)', url: 'store.html#rql-socketshield', desc: 'Live Windows Socket Sentry & Outbound Telemetry Trapper' },
-    { id: 'rql-pingpulse', title: 'RQL PingPulse', cat: 'Systems & Network', tag: 'VIP Flagship 30', price: '$139 ($111.20)', url: 'store.html#rql-pingpulse', desc: 'Microsecond ICMP Latency & Outage Packet Sentry' },
-    { id: 'rql-foldersync', title: 'RQL FolderSync', cat: 'Systems & Network', tag: 'Commercial 31', price: '$129 ($103.20)', url: 'store.html#rql-foldersync', desc: 'Parallel Multi-Drive Directory Mirror & Backup Engine' },
+    { id: 'rql-documentshield', suiteNum: '01', section: 'suites', title: 'RQL DocumentShield', cat: 'Security & Privacy', tag: 'VIP Flagship 01', price: '$179 ($53.70)', url: 'store.html#rql-documentshield', desc: 'Enterprise PDF Redactor & Permanent Vector Metadata Purge', keywords: ['pdf', 'redact', 'redaction', 'purge', 'metadata', 'adobe', 'acrobat', 'vector', '01', '1', 'suite 1'] },
+    { id: 'rql-whispervault', suiteNum: '02', section: 'suites', title: 'RQL WhisperVault', cat: 'Media & Audio', tag: 'VIP Flagship 02', price: '$149 ($44.70)', url: 'store.html#rql-whispervault', desc: '100% Offline Whisper AI Audio Transcription & Subtitles', keywords: ['whisper', 'audio', 'voice', 'transcribe', 'transcription', 'subtitles', 'speech', 'otter', '02', '2', 'suite 2'] },
+    { id: 'rql-retailpos', suiteNum: '03', section: 'suites', title: 'RQL Retail POS', cat: 'Retail POS & Billing', tag: 'VIP Flagship 03', price: '$169 ($50.70)', url: 'store.html#rql-retailpos', desc: 'Sub-1ms Air-Gapped Retail Point of Sale & Thermal Engine', keywords: ['pos', 'retail', 'billing', 'thermal', 'barcode', 'lan', 'offline', 'counter', '03', '3', 'suite 3'] },
+    { id: 'rql-storechain', suiteNum: '04', section: 'suites', title: 'RQL StoreChain', cat: 'Retail POS & Billing', tag: 'Commercial 04', price: '$299 ($89.70)', url: 'store.html#rql-storechain', desc: 'Multi-Counter LAN Billing & Multi-Branch Data Sync', keywords: ['chain', 'lan', 'sync', 'branch', 'store', 'multi-counter', '04', '4', 'suite 4'] },
+    { id: 'rql-conduit', suiteNum: '05', section: 'suites', title: 'RQL Conduit', cat: 'Systems & Network', tag: 'Commercial 05', price: '$129 ($38.70)', url: 'store.html#rql-conduit', desc: 'Dual-WAN Internet Bonding, Aggregation & Failover Daemon', keywords: ['bonding', 'dual-wan', 'failover', 'network', 'router', 'aggregation', '05', '5', 'suite 5'] },
+    { id: 'rql-hashcheck', suiteNum: '06', section: 'suites', title: 'RQL HashCheck', cat: 'Security & Privacy', tag: 'Commercial 06', price: '$39 ($11.70)', url: 'store.html#rql-hashcheck', desc: 'SHA-256 / SHA-512 Stream Cryptographic File Integrity', keywords: ['hash', 'sha256', 'sha512', 'checksum', 'verify', 'integrity', 'crypto', '06', '6', 'suite 6'] },
+    { id: 'rql-qrstudio', suiteNum: '07', section: 'suites', title: 'RQL QRStudio', cat: 'Retail POS & Billing', tag: 'Commercial 07', price: '$79 ($23.70)', url: 'store.html#rql-qrstudio', desc: 'Offline Vector UPI QR & Barcode Generator Studio', keywords: ['qr', 'upi', 'barcode', 'vector', 'svg', 'payment', 'canvas', '07', '7', 'suite 7'] },
+    { id: 'rql-textdiff', suiteNum: '08', section: 'suites', title: 'RQL TextDiff', cat: 'Systems & Network', tag: 'Commercial 08', price: '$99 ($29.70)', url: 'store.html#rql-textdiff', desc: 'Side-by-Side Visual Code & Text Difference Comparator', keywords: ['diff', 'compare', 'text diff', 'code diff', 'side by side', 'syntax', '08', '8', 'suite 8'] },
+    { id: 'rql-renamer', suiteNum: '09', section: 'suites', title: 'RQL Renamer', cat: 'Systems & Network', tag: 'Commercial 09', price: '$49 ($14.70)', url: 'store.html#rql-renamer', desc: 'High-Speed Bulk Regex File & Photo Reorganizer', keywords: ['rename', 'batch', 'bulk', 'regex', 'organize', 'photo', 'files', '09', '9', 'suite 9'] },
+    { id: 'rql-tageditor', suiteNum: '10', section: 'suites', title: 'RQL TagEditor', cat: 'Media & Audio', tag: 'Commercial 10', price: '$59 ($17.70)', url: 'store.html#rql-tageditor', desc: 'Lossless ID3 & FLAC Audio Metadata & Album Art Editor', keywords: ['id3', 'tag', 'flac', 'mp3', 'album art', 'music', 'metadata', '10', 'suite 10'] },
+    { id: 'rql-fontviewer', suiteNum: '11', section: 'suites', title: 'RQL FontViewer', cat: 'Systems & Network', tag: 'Commercial 11', price: '$49 ($14.70)', url: 'store.html#rql-fontviewer', desc: 'Desktop Typography Glyph Inspector & OTF/TTF Manager', keywords: ['font', 'ttf', 'otf', 'glyph', 'typography', 'inspector', '11', 'suite 11'] },
+    { id: 'rql-dpdpshield', suiteNum: '12', section: 'suites', title: 'RQL DPDPShield', cat: 'Legal & Compliance', tag: 'Commercial 12', price: '$89 ($26.70)', url: 'store.html#rql-dpdpshield', desc: 'DPDP Act 2023 & GDPR Corporate Compliance Sanitizer', keywords: ['dpdp', 'gdpr', 'privacy', 'compliance', 'personal data', 'sanitizer', 'audit', '12', 'suite 12'] },
+    { id: 'rql-pricetag', suiteNum: '13', section: 'suites', title: 'RQL PriceTag', cat: 'Retail POS & Billing', tag: 'Commercial 13', price: '$79 ($23.70)', url: 'store.html#rql-pricetag', desc: 'Thermal Barcode Price Tag & Shelf Label Design Studio', keywords: ['price tag', 'shelf', 'label', 'thermal', 'barcode', 'retail', '13', 'suite 13'] },
+    { id: 'rql-invoicegen', suiteNum: '14', section: 'suites', title: 'RQL InvoiceGen', cat: 'Retail POS & Billing', tag: 'Commercial 14', price: '$89 ($26.70)', url: 'store.html#rql-invoicegen', desc: 'Offline GST Tax Invoice Studio & Dynamic UPI QR Engine', keywords: ['invoice', 'gst', 'tax', 'bill', 'upi', 'accounting', 'pdf invoice', '14', 'suite 14'] },
+    { id: 'rql-csvformat', suiteNum: '15', section: 'suites', title: 'RQL CSVFormat', cat: 'Systems & Network', tag: 'Commercial 15', price: '$79 ($23.70)', url: 'store.html#rql-csvformat', desc: 'Multi-Gigabyte CSV Sanitizer, Deduplication & Transform', keywords: ['csv', 'excel', 'data', 'dedup', 'sanitize', 'transform', 'gigabyte', '15', 'suite 15'] },
+    { id: 'rql-pdfmerge', suiteNum: '16', section: 'suites', title: 'RQL PDFMerge', cat: 'Legal & Compliance', tag: 'Commercial 16', price: '$119 ($35.70)', url: 'store.html#rql-pdfmerge', desc: 'Air-Gapped PDF Combiner, Splitter & Legal Bates Stamper', keywords: ['pdf merge', 'split', 'bates', 'bates stamp', 'legal pdf', 'combine', '16', 'suite 16'] },
+    { id: 'rql-taxledger', suiteNum: '17', section: 'suites', title: 'RQL TaxLedger', cat: 'Legal & Compliance', tag: 'VIP Flagship 17', price: '$119 ($35.70)', url: 'store.html#rql-taxledger', desc: '20-Feature Indian Double-Entry Accounting & GSTR-1 Studio', keywords: ['tax', 'ledger', 'accounting', 'gstr1', 'gstr', 'tally', 'balance sheet', '17', 'suite 17'] },
+    { id: 'rql-fileshredder', suiteNum: '18', section: 'suites', title: 'RQL FileShredder', cat: 'Security & Privacy', tag: 'Commercial 18', price: '$59 ($17.70)', url: 'store.html#rql-fileshredder', desc: 'DoD 5220.22-M Permanent Forensic Data Destruction', keywords: ['shred', 'wipe', 'delete', 'dod', 'gutmann', 'forensic', 'destroy', '18', 'suite 18'] },
+    { id: 'rql-clipvault', suiteNum: '19', section: 'suites', title: 'RQL ClipVault', cat: 'Security & Privacy', tag: 'Commercial 19', price: '$39 ($31.20)', url: 'store.html#rql-clipvault', desc: 'Encrypted AES-256 Local Clipboard Memory Vault', keywords: ['clipboard', 'clip', 'aes256', 'encrypted', 'history', 'paste', '19', 'suite 19'] },
+    { id: 'rql-imagebatch', suiteNum: '20', section: 'suites', title: 'RQL ImageBatch', cat: 'Media & Audio', tag: 'Commercial 20', price: '$69 ($55.20)', url: 'store.html#rql-imagebatch', desc: 'SIMD Multi-Threaded Batch Image Resizer & WebP Converter', keywords: ['image', 'webp', 'batch', 'resize', 'compress', 'simd', 'photo', '20', 'suite 20'] },
+    { id: 'rql-audioextract', suiteNum: '21', section: 'suites', title: 'RQL AudioExtract', cat: 'Media & Audio', tag: 'Commercial 21', price: '$59 ($47.20)', url: 'store.html#rql-audioextract', desc: 'Lossless MP4/MKV to MP3/WAV/FLAC Audio Demuxer', keywords: ['audio', 'extract', 'demux', 'mp4', 'mkv', 'mp3', 'wav', 'soundtrack', '21', 'suite 21'] },
+    { id: 'rql-subtitlesync', suiteNum: '22', section: 'suites', title: 'RQL SubtitleSync', cat: 'Media & Audio', tag: 'Commercial 22', price: '$49 ($39.20)', url: 'store.html#rql-subtitlesync', desc: 'Millisecond SRT/VTT Subtitle Timing & Encoding Calibrator', keywords: ['subtitle', 'srt', 'vtt', 'sync', 'timing', 'delay', 'caption', '22', 'suite 22'] },
+    { id: 'rql-spacemap', suiteNum: '23', section: 'suites', title: 'RQL SpaceMap', cat: 'Systems & Network', tag: 'Commercial 23', price: '$79 ($63.20)', url: 'store.html#rql-spacemap', desc: 'High-Speed Multi-Terabyte Treemap Storage Visualizer', keywords: ['disk', 'storage', 'space', 'treemap', 'visualize', 'terabyte', 'cleanup', '23', 'suite 23'] },
+    { id: 'rql-docprotect', suiteNum: '24', section: 'suites', title: 'RQL DocProtect', cat: 'Security & Privacy', tag: 'Commercial 24', price: '$89 ($71.20)', url: 'store.html#rql-docprotect', desc: 'Local Zero-Telemetry AES-GCM-256 PDF Password Encryption', keywords: ['pdf protect', 'encrypt', 'password', 'aes-gcm', 'security', 'lock', '24', 'suite 24'] },
+    { id: 'rql-cashdrawer', suiteNum: '25', section: 'suites', title: 'RQL CashDrawer', cat: 'Retail POS & Billing', tag: 'Commercial 25', price: '$59 ($47.20)', url: 'store.html#rql-cashdrawer', desc: 'Deterministic RJ12 Pulse Cash Drawer Trigger Utility', keywords: ['drawer', 'cash', 'rj12', 'pulse', 'pos hardware', 'retail', '25', 'suite 25'] },
+    { id: 'rql-receiptprinter', suiteNum: '26', section: 'suites', title: 'RQL ReceiptPrinter', cat: 'Retail POS & Billing', tag: 'Commercial 26', price: '$69 ($55.20)', url: 'store.html#rql-receiptprinter', desc: 'Direct-to-USB/LAN Raw Thermal ESC/POS Print Spooler', keywords: ['receipt', 'thermal', 'escpos', 'print', 'spooler', 'usb', 'lan', '26', 'suite 26'] },
+    { id: 'rql-clauseforge', suiteNum: '27', section: 'suites', title: 'RQL ClauseForge', cat: 'Legal & Compliance', tag: 'Commercial 27', price: '$129 ($103.20)', url: 'store.html#rql-clauseforge', desc: 'Deterministic Legal Contract Compiler & Master Precedent Vault', keywords: ['contract', 'legal', 'clause', 'precedent', 'agreement', 'law', '27', 'suite 27'] },
+    { id: 'rql-archivemaster', suiteNum: '28', section: 'suites', title: 'RQL ArchiveMaster', cat: 'Systems & Network', tag: 'Commercial 28', price: '$89 ($71.20)', url: 'store.html#rql-archivemaster', desc: 'High-Ratio Multithreaded 7z/ZIP/TAR Compression Archiver', keywords: ['zip', '7z', 'tar', 'compress', 'archive', 'extract', '28', 'suite 28'] },
+    { id: 'rql-socketshield', suiteNum: '29', section: 'suites', title: 'RQL SocketShield', cat: 'Security & Privacy', tag: 'VIP Flagship 29', price: '$189 ($56.70)', url: 'store.html#rql-socketshield', desc: 'Live Windows Socket Sentry & Outbound Telemetry Trapper', keywords: ['socket', 'telemetry', 'firewall', 'sentry', 'trap', 'network', 'sniffer', '29', 'suite 29'] },
+    { id: 'rql-pingpulse', suiteNum: '30', section: 'suites', title: 'RQL PingPulse', cat: 'Systems & Network', tag: 'VIP Flagship 30', price: '$139 ($111.20)', url: 'store.html#rql-pingpulse', desc: 'Microsecond ICMP Latency & Outage Packet Sentry', keywords: ['ping', 'latency', 'icmp', 'packet', 'jitter', 'uptime', 'monitor', '30', 'suite 30'] },
+    { id: 'rql-foldersync', suiteNum: '31', section: 'suites', title: 'RQL FolderSync', cat: 'Systems & Network', tag: 'Commercial 31', price: '$129 ($103.20)', url: 'store.html#rql-foldersync', desc: 'Parallel Multi-Drive Directory Mirror & Backup Engine', keywords: ['folder', 'sync', 'backup', 'mirror', 'drive', 'directory', 'raid', '31', 'suite 31'] },
 
-    // Core Portals
-    { id: 'page-store', title: 'Commercial Store (31 Suites)', cat: 'Pages & Portals', tag: 'Primary Hub', price: '', url: 'store.html', desc: 'Browse all 31 air-gapped Rust software flagships & discounts' },
-    { id: 'page-projects', title: 'Systems Engineering Portfolio', cat: 'Pages & Portals', tag: 'Portfolio', price: '', url: 'projects.html', desc: 'Architectural blueprints, mathematical invariants & case studies' },
-    { id: 'page-experience', title: 'Professional Experience & Radar', cat: 'Pages & Portals', tag: 'Founder Bio', price: '', url: 'experience.html', desc: '4+ years retail management, BCA & systems architecture radar' },
-    { id: 'page-security', title: 'Security & Trust Registry', cat: 'Pages & Portals', tag: 'Audit', price: '', url: 'security.html', desc: 'Microsoft Defender WDSI clean whitelist & SHA-256 proofs' },
-    { id: 'page-aegis', title: 'Aegis Process Middleware', cat: 'Pages & Portals', tag: 'Systems', price: '', url: 'aegis.html', desc: 'High-availability deterministic local process sentinel' },
-    { id: 'page-contact', title: 'Contact & Executive Dispatch', cat: 'Pages & Portals', tag: 'Founder Direct', price: '', url: 'contact.html', desc: 'Direct briefing, email, and WhatsApp founder consultation' },
-    { id: 'page-changelog', title: 'Changelog & System Ledger', cat: 'Pages & Portals', tag: 'Releases', price: '', url: 'changelog.html', desc: 'Chronological release ledger & Win32 updates' },
-    { id: 'page-legal', title: 'Legal & Commercial Governance', cat: 'Pages & Portals', tag: 'EULA', price: '', url: 'legal.html', desc: 'Statutory EULA, zero-telemetry covenants & DPDP Act compliance' },
-    { id: 'page-tools', title: 'Free Sovereign Browser Tools', cat: 'Pages & Portals', tag: 'Web Tools', price: '', url: 'tools/index.html', desc: 'Five 100% in-browser RAM utilities that work offline' },
-    { id: 'page-research', title: 'Engineering Research Papers', cat: 'Pages & Portals', tag: 'Monographs', price: '', url: 'research/index.html', desc: 'In-depth systems monographs on pure native Rust and memory' },
+    // 10 Dedicated Landing & Comparison Pages
+    { id: 'lp-documentshield', section: 'flagships', badge: 'DOC', title: 'RQL DocumentShield (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'Live Sandbox', price: '$179 ($53.70)', url: 'documentshield.html', desc: 'Enterprise PDF Redaction deep dive with in-browser live vector sandbox', keywords: ['documentshield', 'pdf', 'landing page', 'redact', 'sandbox'] },
+    { id: 'lp-whispervault', section: 'flagships', badge: 'DOC', title: 'RQL WhisperVault (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'Air-Gapped AI', price: '$149 ($44.70)', url: 'whispervault.html', desc: '100% offline local CPU Whisper AI transcription and subtitle specs', keywords: ['whispervault', 'whisper', 'landing page', 'audio', 'transcribe'] },
+    { id: 'lp-retailpos', section: 'flagships', badge: 'DOC', title: 'RQL Retail POS (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'Sub-1ms POS', price: '$169 ($50.70)', url: 'retailpos.html', desc: 'Air-gapped retail point-of-sale architecture & thermal ESC/POS engine', keywords: ['retailpos', 'pos', 'landing page', 'retail', 'billing'] },
+    { id: 'lp-taxledger', section: 'flagships', badge: 'DOC', title: 'RQL TaxLedger (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'GSTR-1 Studio', price: '$119 ($35.70)', url: 'taxledger.html', desc: 'Indian double-entry accounting, GST compliance, and GSTR-1 JSON ledger', keywords: ['taxledger', 'tax', 'gst', 'landing page', 'accounting'] },
+    { id: 'lp-conduit', section: 'flagships', badge: 'DOC', title: 'RQL Conduit (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'WAN Bonding', price: '$129 ($38.70)', url: 'conduit.html', desc: 'Dual-WAN internet bonding daemon, failover engine & packet scheduler', keywords: ['conduit', 'bonding', 'failover', 'landing page', 'network'] },
+    { id: 'lp-dpdpshield', section: 'flagships', badge: 'DOC', title: 'RQL DPDPShield (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'DPDP Act 2023', price: '$89 ($26.70)', url: 'dpdpshield.html', desc: 'Statutory personal data compliance sanitizer under DPDP Act 2023 & GDPR', keywords: ['dpdpshield', 'dpdp', 'gdpr', 'compliance', 'landing page'] },
+    { id: 'lp-textdiff', section: 'flagships', badge: 'DOC', title: 'RQL TextDiff (Flagship Page)', cat: 'Dedicated Landing Page', tag: 'Visual Diff', price: '$99 ($29.70)', url: 'textdiff.html', desc: 'Side-by-side visual difference comparator with live in-browser engine', keywords: ['textdiff', 'diff', 'comparator', 'landing page', 'code'] },
+    { id: 'lp-adobe-alternative', section: 'flagships', badge: 'DOC', title: 'Adobe Acrobat Alternative', cat: 'Competitor Comparison', tag: 'No Cloud', price: 'Perpetual', url: 'adobe-acrobat-alternative.html', desc: 'Why engineering and law teams switch from Adobe Creative Cloud to air-gapped Rust', keywords: ['adobe', 'acrobat', 'alternative', 'comparison', 'pdf'] },
+    { id: 'lp-otter-alternative', section: 'flagships', badge: 'DOC', title: 'Otter.ai Offline Alternative', cat: 'Competitor Comparison', tag: 'Zero Server', price: 'Perpetual', url: 'otter-ai-alternative.html', desc: 'Zero cloud leaks: why executive boardrooms choose local Whisper AI over Otter', keywords: ['otter', 'otter.ai', 'alternative', 'comparison', 'transcription'] },
+    { id: 'lp-pos-comparison', section: 'flagships', badge: 'DOC', title: 'Offline POS vs Cloud POS', cat: 'Competitor Comparison', tag: 'Zero Downtime', price: 'Architecture', url: 'offline-pos-vs-cloud-pos.html', desc: 'The definitive architectural comparison: sub-1ms local Rust vs cloud POS failure modes', keywords: ['pos comparison', 'cloud pos', 'offline pos', 'toast', 'square'] },
 
-    // 5 In-Browser Tools
-    { id: 'tool-webp', title: 'WebP Converter & Compressor', cat: 'Free Browser Tools', tag: 'RAM SIMD', price: 'Free', url: 'tools/offline-webp-compressor.html', desc: '80-92% image compression in browser memory without server upload' },
-    { id: 'tool-pdf', title: 'Forensic PDF Redactor', cat: 'Free Browser Tools', tag: 'RAM Blackout', price: 'Free', url: 'tools/offline-pdf-redactor.html', desc: 'Permanent destructive vector redaction in browser RAM' },
-    { id: 'tool-hash', title: 'SHA-256 Checksum Verifier', cat: 'Free Browser Tools', tag: 'Web Crypto', price: 'Free', url: 'tools/sha256-checksum-verifier.html', desc: 'Instant cryptographic bit-accuracy hash calculation' },
-    { id: 'tool-diff', title: 'Visual Text & Code Diff', cat: 'Free Browser Tools', tag: 'Diff Engine', price: 'Free', url: 'tools/offline-text-diff.html', desc: 'Side-by-side visual difference highlighting in browser memory' },
-    { id: 'tool-qr', title: 'Vector QR Code Generator', cat: 'Free Browser Tools', tag: 'Vector Canvas', price: 'Free', url: 'tools/offline-qr-code-generator.html', desc: 'Offline vector UPI QR codes & barcodes with zero telemetry' },
+    // 5 Free In-Browser Tools
+    { id: 'tool-webp', section: 'tools', badge: 'RAM', title: 'WebP Converter & Compressor', cat: 'Free Browser Tools', tag: 'RAM SIMD', price: 'Free', url: 'tools/offline-webp-compressor.html', desc: '80-92% image compression in browser memory without server upload', keywords: ['webp', 'tool', 'compress', 'image', 'converter'] },
+    { id: 'tool-pdf', section: 'tools', badge: 'RAM', title: 'Forensic PDF Redactor', cat: 'Free Browser Tools', tag: 'RAM Blackout', price: 'Free', url: 'tools/offline-pdf-redactor.html', desc: 'Permanent destructive vector redaction in browser RAM', keywords: ['pdf', 'tool', 'redact', 'blackout', 'forensic'] },
+    { id: 'tool-hash', section: 'tools', badge: 'RAM', title: 'SHA-256 Checksum Verifier', cat: 'Free Browser Tools', tag: 'Web Crypto', price: 'Free', url: 'tools/sha256-checksum-verifier.html', desc: 'Instant cryptographic bit-accuracy hash calculation', keywords: ['hash', 'sha256', 'tool', 'checksum', 'crypto'] },
+    { id: 'tool-diff', section: 'tools', badge: 'RAM', title: 'Visual Text & Code Diff', cat: 'Free Browser Tools', tag: 'Diff Engine', price: 'Free', url: 'tools/offline-text-diff.html', desc: 'Side-by-side visual difference highlighting in browser memory', keywords: ['diff', 'tool', 'compare', 'code diff'] },
+    { id: 'tool-qr', section: 'tools', badge: 'RAM', title: 'Vector QR Code Generator', cat: 'Free Browser Tools', tag: 'Vector Canvas', price: 'Free', url: 'tools/offline-qr-code-generator.html', desc: 'Offline vector UPI QR codes & barcodes with zero telemetry', keywords: ['qr', 'tool', 'upi', 'barcode', 'vector'] },
 
-    // Quick Actions
-    { id: 'act-briefing', title: 'Schedule 20-Min Technical Briefing', cat: 'Quick Actions', tag: 'Calendly', price: 'Free', url: 'https://calendly.com/rehanquantlab', desc: 'Book a 1-on-1 systems briefing with Founder Mohammad Rehan' },
-    { id: 'act-whatsapp', title: 'Chat Directly on WhatsApp', cat: 'Quick Actions', tag: 'Instant', price: '', url: 'https://wa.me/917091518548', desc: 'Open direct WhatsApp chat (+91 70915 18548)' },
-    { id: 'act-email', title: 'Copy Founder Email', cat: 'Quick Actions', tag: 'Clipboard', price: '', action: 'copy_email', desc: 'Copy founder@rehanquantlab.com to clipboard' },
-    { id: 'act-resume', title: 'Download Resume (PDF)', cat: 'Quick Actions', tag: 'Download', price: '', url: 'Mohammad_Rehan_Resume.pdf', desc: 'Download Mohammad Rehan verified resume document' },
-    { id: 'act-dare', title: 'Take 5-Sec Air-Gap Challenge', cat: 'Quick Actions', tag: 'Interactive', price: '', url: 'store.html#sovereign-sandbox-section', desc: 'Unplug your internet and test our algorithms live' }
+    // 10 Pages & Portals
+    { id: 'page-store', section: 'portals', badge: 'PAGE', title: 'Commercial Store (31 Suites)', cat: 'Pages & Portals', tag: 'Primary Hub', price: '', url: 'store.html', desc: 'Browse all 31 air-gapped Rust software flagships & discounts', keywords: ['store', 'catalog', 'shop', 'pricing', 'discount', '31'] },
+    { id: 'page-projects', section: 'portals', badge: 'PAGE', title: 'Systems Engineering Portfolio', cat: 'Pages & Portals', tag: 'Portfolio', price: '', url: 'projects.html', desc: 'Architectural blueprints, mathematical invariants & case studies', keywords: ['portfolio', 'projects', 'architecture', 'case studies'] },
+    { id: 'page-experience', section: 'portals', badge: 'PAGE', title: 'Professional Experience & Radar', cat: 'Pages & Portals', tag: 'Founder Bio', price: '', url: 'experience.html', desc: '4+ years retail management, BCA & systems architecture radar', keywords: ['experience', 'bio', 'founder', 'resume', 'skills'] },
+    { id: 'page-security', section: 'portals', badge: 'PAGE', title: 'Security & Trust Registry', cat: 'Pages & Portals', tag: 'Audit', price: '', url: 'security.html', desc: 'Microsoft Defender WDSI clean whitelist & SHA-256 proofs', keywords: ['security', 'trust', 'defender', 'wdsi', 'whitelist', 'audit'] },
+    { id: 'page-aegis', section: 'portals', badge: 'PAGE', title: 'Aegis Process Middleware', cat: 'Pages & Portals', tag: 'Systems', price: '', url: 'aegis.html', desc: 'High-availability deterministic local process sentinel', keywords: ['aegis', 'middleware', 'sentinel', 'watchdog', 'daemon'] },
+    { id: 'page-contact', section: 'portals', badge: 'PAGE', title: 'Contact & Executive Dispatch', cat: 'Pages & Portals', tag: 'Founder Direct', price: '', url: 'contact.html', desc: 'Direct briefing, email, and WhatsApp founder consultation', keywords: ['contact', 'briefing', 'email', 'whatsapp', 'call'] },
+    { id: 'page-changelog', section: 'portals', badge: 'PAGE', title: 'Changelog & System Ledger', cat: 'Pages & Portals', tag: 'Releases', price: '', url: 'changelog.html', desc: 'Chronological release ledger & Win32 updates', keywords: ['changelog', 'releases', 'history', 'updates'] },
+    { id: 'page-legal', section: 'portals', badge: 'PAGE', title: 'Legal & Commercial Governance', cat: 'Pages & Portals', tag: 'EULA', price: '', url: 'legal.html', desc: 'Statutory EULA, zero-telemetry covenants & DPDP Act compliance', keywords: ['legal', 'eula', 'terms', 'privacy policy', 'refund'] },
+    { id: 'page-tools', section: 'portals', badge: 'PAGE', title: 'Free Sovereign Browser Tools', cat: 'Pages & Portals', tag: 'Web Tools', price: '', url: 'tools/index.html', desc: 'Five 100% in-browser RAM utilities that work offline', keywords: ['tools hub', 'web tools', 'free'] },
+    { id: 'page-research', section: 'portals', badge: 'PAGE', title: 'Engineering Research Papers', cat: 'Pages & Portals', tag: 'Monographs', price: '', url: 'research/index.html', desc: 'In-depth systems monographs on pure native Rust and memory', keywords: ['research', 'papers', 'monographs', 'whitepaper'] },
+
+    // 5 Quick Actions
+    { id: 'act-briefing', section: 'actions', badge: 'ACT', title: 'Schedule 20-Min Technical Briefing', cat: 'Quick Actions', tag: 'Calendly', price: 'Free', url: 'https://calendly.com/rehanquantlab', desc: 'Book a 1-on-1 systems briefing with Founder Mohammad Rehan', keywords: ['briefing', 'calendly', 'meeting', 'schedule', 'call'] },
+    { id: 'act-whatsapp', section: 'actions', badge: 'ACT', title: 'Chat Directly on WhatsApp', cat: 'Quick Actions', tag: 'Instant', price: '', url: 'https://wa.me/917091518548?text=Hello%20Rehan,%20I%20am%20reaching%20out%20from%20your%20command%20palette.', desc: 'Open direct WhatsApp chat (+91 70915 18548)', keywords: ['whatsapp', 'chat', 'message', 'support'] },
+    { id: 'act-email', section: 'actions', badge: 'ACT', title: 'Copy Founder Email', cat: 'Quick Actions', tag: 'Clipboard', price: '', action: 'copy_email', desc: 'Copy founder@rehanquantlab.com to clipboard', keywords: ['email', 'copy', 'mail', 'inbox'] },
+    { id: 'act-resume', section: 'actions', badge: 'ACT', title: 'Download Resume (PDF)', cat: 'Quick Actions', tag: 'Download', price: '', url: 'Mohammad_Rehan_Resume.pdf', desc: 'Download Mohammad Rehan verified resume document', keywords: ['resume', 'cv', 'pdf', 'download resume'] },
+    { id: 'act-dare', section: 'actions', badge: 'ACT', title: 'Take 5-Sec Air-Gap Challenge', cat: 'Quick Actions', tag: 'Interactive', price: '', url: 'store.html#sovereign-sandbox-section', desc: 'Unplug your internet and test our algorithms live', keywords: ['air-gap', 'challenge', 'offline test', 'sandbox'] }
   ];
 
   var paletteOpen = false;
   var paletteActiveIdx = 0;
   var paletteFiltered = [];
+  var paletteActiveTab = 'all';
 
   function buildPaletteDOM() {
     if (document.getElementById('rql-palette-backdrop')) return;
@@ -431,12 +444,21 @@
       '      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />',
       '    </svg>',
       '    <input id="rql-palette-input" type="text" autocomplete="off" spellcheck="false" placeholder="Search 31 Rust suites, portals, free tools, or actions..." class="w-full bg-transparent text-white placeholder-slate-500 font-sans text-sm sm:text-base outline-none pr-2" />',
+      '    <span id="rql-palette-count" class="hidden sm:inline-block text-[11px] font-mono text-slate-500 font-bold shrink-0">56 Items</span>',
       '    <kbd class="hidden sm:inline-block bg-slate-900 border border-slate-700 text-slate-400 text-[10px] font-mono px-2 py-0.5 rounded font-bold shrink-0">ESC</kbd>',
       '    <button id="rql-palette-close-btn" class="sm:hidden text-slate-400 hover:text-white p-1" aria-label="Close palette">',
       '      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>',
       '    </button>',
       '  </div>',
-      '  <div id="rql-palette-results" class="overflow-y-auto p-2 sm:p-3 space-y-1 divide-y divide-slate-800/40 text-xs font-sans" style="max-height: 420px; overscroll-behavior: contain;">',
+      '  <div class="rql-palette-tabs">',
+      '    <button type="button" class="rql-palette-tab active" data-tab="all">All (56)</button>',
+      '    <button type="button" class="rql-palette-tab" data-tab="suites">31 Suites</button>',
+      '    <button type="button" class="rql-palette-tab" data-tab="flagships">Landing Pages (10)</button>',
+      '    <button type="button" class="rql-palette-tab" data-tab="tools">Free Web Tools (5)</button>',
+      '    <button type="button" class="rql-palette-tab" data-tab="portals">Portals (10)</button>',
+      '    <button type="button" class="rql-palette-tab" data-tab="actions">Actions (5)</button>',
+      '  </div>',
+      '  <div id="rql-palette-results" class="overflow-y-auto p-2 sm:p-3 space-y-1 divide-y divide-slate-800/40 text-xs font-sans" style="max-height: 440px; overscroll-behavior: contain;">',
       '  </div>',
       '  <div class="p-3 bg-slate-950 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-500">',
       '    <div class="flex items-center gap-3">',
@@ -461,6 +483,19 @@
         window.closeRQLPalette();
       });
     }
+
+    var tabs = backdrop.querySelectorAll('.rql-palette-tab');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+        paletteActiveTab = tab.getAttribute('data-tab');
+        var inputEl = document.getElementById('rql-palette-input');
+        var q = inputEl ? inputEl.value.trim().toLowerCase() : '';
+        renderPaletteResults(q);
+        if (window.playTactileClick) window.playTactileClick('toggle');
+      });
+    });
 
     var input = document.getElementById('rql-palette-input');
     if (input) {
@@ -535,19 +570,79 @@
 
   function renderPaletteResults(query) {
     var container = document.getElementById('rql-palette-results');
+    var countEl = document.getElementById('rql-palette-count');
     if (!container) return;
 
-    if (!query) {
-      paletteFiltered = RQL_PALETTE_DATA.slice(0, 16);
-    } else {
-      paletteFiltered = RQL_PALETTE_DATA.filter(function(item) {
-        return (
-          item.title.toLowerCase().indexOf(query) !== -1 ||
-          item.cat.toLowerCase().indexOf(query) !== -1 ||
-          item.desc.toLowerCase().indexOf(query) !== -1 ||
-          (item.tag && item.tag.toLowerCase().indexOf(query) !== -1)
-        );
+    var baseData = RQL_PALETTE_DATA;
+    if (paletteActiveTab !== 'all') {
+      baseData = RQL_PALETTE_DATA.filter(function(item) {
+        return item.section === paletteActiveTab;
       });
+    }
+
+    if (!query) {
+      paletteFiltered = baseData;
+    } else {
+      // Smart search: special handling for "31", "31 suites", "suites", "all"
+      if (query === '31' || query === '31 suites' || query === 'all suites' || query === 'suites' || query === 'commercial') {
+        var allSuites = RQL_PALETTE_DATA.filter(function(i) { return i.section === 'suites'; });
+        var storeHub = RQL_PALETTE_DATA.filter(function(i) { return i.id === 'page-store'; });
+        var folderSync = RQL_PALETTE_DATA.filter(function(i) { return i.id === 'rql-foldersync'; });
+        var otherSuites = allSuites.filter(function(i) { return i.id !== 'rql-foldersync'; });
+        paletteFiltered = storeHub.concat(folderSync).concat(otherSuites);
+      } else {
+        var scored = [];
+        var numMatch = query.replace(/[^0-9]/g, '');
+        var paddedNum = numMatch.length === 1 ? '0' + numMatch : numMatch;
+
+        baseData.forEach(function(item) {
+          var score = 0;
+          var titleL = item.title.toLowerCase();
+          var descL = item.desc.toLowerCase();
+          var catL = item.cat.toLowerCase();
+          var tagL = (item.tag || '').toLowerCase();
+
+          // Exact suite number match (e.g. searching "12" or "suite 12")
+          if (item.suiteNum && (item.suiteNum === paddedNum || item.suiteNum === numMatch)) {
+            score += 150;
+          }
+
+          if (titleL === query) {
+            score += 120;
+          } else if (titleL.indexOf(query) === 0) {
+            score += 90;
+          } else if (titleL.indexOf(query) !== -1) {
+            score += 70;
+          }
+
+          if (item.keywords && item.keywords.some(function(k) { return k.indexOf(query) !== -1; })) {
+            score += 60;
+          }
+
+          if (tagL.indexOf(query) !== -1) {
+            score += 45;
+          }
+
+          if (catL.indexOf(query) !== -1) {
+            score += 35;
+          }
+
+          if (descL.indexOf(query) !== -1) {
+            score += 20;
+          }
+
+          if (score > 0) {
+            scored.push({ item: item, score: score });
+          }
+        });
+
+        scored.sort(function(a, b) { return b.score - a.score; });
+        paletteFiltered = scored.map(function(s) { return s.item; });
+      }
+    }
+
+    if (countEl) {
+      countEl.textContent = paletteFiltered.length + (paletteFiltered.length === 1 ? ' Match' : ' Matches');
     }
 
     paletteActiveIdx = 0;
@@ -556,30 +651,57 @@
       container.innerHTML = [
         '<div class="p-8 text-center space-y-2">',
         '  <div class="text-slate-400 font-bold text-sm">No software suites or pages found for "' + query.replace(/</g, '&lt;') + '"</div>',
-        '  <p class="text-slate-500 text-xs">Try searching for "PDF", "POS", "Whisper", "Rust", "Hash", "SLA", or "Contact".</p>',
+        '  <p class="text-slate-500 text-xs">Try searching for "PDF", "POS", "Whisper", "Rust", "Hash", "SLA", "31", or "Contact".</p>',
         '</div>'
       ].join('');
       return;
     }
 
     var html = [];
-    var currentCat = '';
+    var currentSection = '';
 
     paletteFiltered.forEach(function(item, idx) {
-      if (item.cat !== currentCat) {
-        currentCat = item.cat;
-        html.push('<div class="pt-2 pb-1 px-2 text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500">' + currentCat + '</div>');
+      // Group by logical section when browsing or filtering without single query
+      var sectionLabel = '';
+      if (!query || paletteActiveTab === 'all') {
+        if (item.section !== currentSection) {
+          currentSection = item.section;
+          if (currentSection === 'suites') {
+            sectionLabel = 'Commercial Suites (31 Air-Gapped Workstations)';
+          } else if (currentSection === 'flagships') {
+            sectionLabel = 'Dedicated Flagship Landing Pages & Comparisons';
+          } else if (currentSection === 'tools') {
+            sectionLabel = 'Free In-Browser Web Tools (RAM SIMD)';
+          } else if (currentSection === 'portals') {
+            sectionLabel = 'Pages & Citadel Portals';
+          } else if (currentSection === 'actions') {
+            sectionLabel = 'Quick Actions & Executive Dispatch';
+          } else {
+            sectionLabel = item.cat;
+          }
+          html.push('<div class="rql-section-header">' + sectionLabel + '</div>');
+        }
       }
 
       var activeClass = idx === 0 ? ' rql-item-active' : '';
       var priceBadge = item.price ? '<span class="text-emerald-400 font-mono font-bold text-xs shrink-0">' + item.price + '</span>' : '';
       var tagBadge = item.tag ? '<span class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-[10px] font-mono text-cyan-300 font-bold shrink-0">' + item.tag + '</span>' : '';
 
+      // Determine left badge display (true suite number for suites, badge for others)
+      var leftBadge = '';
+      if (item.suiteNum) {
+        leftBadge = item.suiteNum;
+      } else if (item.badge) {
+        leftBadge = item.badge;
+      } else {
+        leftBadge = (idx < 9 ? '0' + (idx + 1) : (idx + 1));
+      }
+
       html.push([
         '<div class="rql-palette-item' + activeClass + '" data-idx="' + idx + '">',
         '  <div class="flex items-center gap-3 overflow-hidden pr-2">',
         '    <div class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 flex items-center justify-center shrink-0 font-mono font-bold text-xs">',
-        '      ' + (idx < 9 ? '0' + (idx + 1) : (idx + 1)),
+        '      ' + leftBadge,
         '    </div>',
         '    <div class="overflow-hidden">',
         '      <div class="font-bold text-white text-xs truncate flex items-center gap-2">',
@@ -623,6 +745,15 @@
     paletteOpen = true;
     backdrop.classList.add('rql-palette-open');
     input.value = '';
+    paletteActiveTab = 'all';
+    var tabs = backdrop.querySelectorAll('.rql-palette-tab');
+    tabs.forEach(function(t) {
+      if (t.getAttribute('data-tab') === 'all') {
+        t.classList.add('active');
+      } else {
+        t.classList.remove('active');
+      }
+    });
     renderPaletteResults('');
     setTimeout(function() {
       input.focus();
@@ -675,6 +806,7 @@
       });
     });
   }
+
 
   // 13. Deep-Link Target Highlighting & Category Auto-Switching
   function handleDeepLinkFocus() {

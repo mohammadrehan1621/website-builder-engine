@@ -142,3 +142,9 @@
 /.env*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-cache, no-store, must-revalidate
+
+/assets/rql-motion.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/rql-motion.css
+  Cache-Control: public, max-age=0, must-revalidate
