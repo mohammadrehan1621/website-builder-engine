@@ -1,5 +1,5 @@
 ================================================================================
-EXPRESSBILL MOBILE POS™ - 100% OFFLINE PROGRESSIVE WEB APP (PWA)
+EXPRESSBILL MOBILE POS(TM) - 100% OFFLINE PROGRESSIVE WEB APP (PWA)
 Light Theme Modern POS Counter for iPhone, Android & iPad
 ================================================================================
 
@@ -29,10 +29,10 @@ METHOD 2: Over Laptop Wi-Fi / Hotspot (Instant Live Sync)
 --------------------------------------------------------------------------------
 KEY FEATURES INCLUDED IN THE MOBILE PWA:
 --------------------------------------------------------------------------------
-• Clean Light Theme (Apple/Stripe POS inspired light aesthetic)
-• Touch-First Catalog Grid with instant quantity tap additions
-• Dynamic Real-Time UPI QR Generator (Customers scan with PhonePe/GPay/Paytm right off your phone screen)
-• 1-Click WhatsApp Invoice Share (sends itemized digital tax bill directly to customer's chat)
-• Offline Local Database (Stores bills, inventory, and stats on the phone even when laptop is turned off)
-• Service Worker (sw.js) for sub-millisecond instant offline boot
+- Clean Light Theme (Apple/Stripe POS inspired light aesthetic)
+- Touch-First Catalog Grid with instant quantity tap additions
+- Dynamic Real-Time UPI QR Generator (Customers scan with PhonePe/GPay/Paytm right off your phone screen)
+- 1-Click WhatsApp Invoice Share (sends itemized digital tax bill directly to customer's chat)
+- Offline Local Database (Stores bills, inventory, and stats on the phone even when laptop is turned off)
+- Service Worker (sw.js) for sub-millisecond instant offline boot
 ================================================================================

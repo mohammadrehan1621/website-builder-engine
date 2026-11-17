@@ -1415,7 +1415,7 @@ document.addEventListener('keydown', function(e) {
       <div class="pt-2">
         <button onclick="openIndianDeskModal('RQL InvoiceGen&trade;', '7,499', 'rql-invoicegen')" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-mono text-xs font-bold transition shadow-xs cursor-pointer">
           <span class="text-emerald-600 font-bold">&#8377;</span>
-          <span>Open Indian Domestic Checkout &amp; Fulfillment Desk (UPI &amp; GST Invoicing) &rarr;</span>
+          <span>Open Indian Domestic Checkout &amp; Fulfillment Desk (UPI &amp; MSME Tax Invoice) &rarr;</span>
         </button>
       </div>
     </div>
@@ -1426,44 +1426,44 @@ document.addEventListener('keydown', function(e) {
       <div class="bg-slate-950 p-2 sm:p-2.5 rounded-2xl border border-slate-800 shadow-xl">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2" role="tablist" aria-label="Software Suites" id="category-tab-strip">
           
-          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500" role="tab" aria-selected="true">
-            <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-indigo-600 shrink-0" data-lucide="shield-check"></i>
-              <span class="truncate">Security &amp; Privacy</span>
+          <button type="button" onclick="window.switchStoreTab('security')" data-filter="security" id="tab-btn-security" class="cat-tab-btn active inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500" role="tab" aria-selected="true">
+            <span class="flex items-center gap-1.5 sm:gap-2 truncate">
+              <i class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600 shrink-0" data-lucide="shield-check"></i>
+              <span class="truncate"><span class="sm:hidden">Security</span><span class="hidden sm:inline">Security &amp; Privacy</span></span>
             </span>
-            <span class="cat-pill bg-slate-950 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0">8</span>
+            <span class="cat-pill bg-slate-950 text-white text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-black shrink-0">8</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
-            <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-emerald-400 shrink-0" data-lucide="shopping-bag"></i>
-              <span class="truncate">Retail POS &amp; Billing</span>
+          <button type="button" onclick="window.switchStoreTab('retail')" data-filter="retail" id="tab-btn-retail" class="cat-tab-btn inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
+            <span class="flex items-center gap-1.5 sm:gap-2 truncate">
+              <i class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400 shrink-0" data-lucide="shopping-bag"></i>
+              <span class="truncate"><span class="sm:hidden">Retail POS</span><span class="hidden sm:inline">Retail POS &amp; Billing</span></span>
             </span>
-            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
-            <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-amber-400 shrink-0" data-lucide="scale"></i>
-              <span class="truncate">Legal &amp; Compliance</span>
+          <button type="button" onclick="window.switchStoreTab('legal')" data-filter="legal" id="tab-btn-legal" class="cat-tab-btn inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
+            <span class="flex items-center gap-1.5 sm:gap-2 truncate">
+              <i class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 shrink-0" data-lucide="scale"></i>
+              <span class="truncate"><span class="sm:hidden">Legal</span><span class="hidden sm:inline">Legal &amp; Compliance</span></span>
             </span>
-            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-bold shrink-0">4</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
-            <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-rose-400 shrink-0" data-lucide="headphones"></i>
-              <span class="truncate">Media &amp; Audio</span>
+          <button type="button" onclick="window.switchStoreTab('media')" data-filter="media" id="tab-btn-media" class="cat-tab-btn inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800" role="tab" aria-selected="false">
+            <span class="flex items-center gap-1.5 sm:gap-2 truncate">
+              <i class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-400 shrink-0" data-lucide="headphones"></i>
+              <span class="truncate"><span class="sm:hidden">Media</span><span class="hidden sm:inline">Media &amp; Audio</span></span>
             </span>
-            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">7</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-bold shrink-0">7</span>
           </button>
 
-          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
-            <span class="flex items-center gap-2 truncate">
-              <i class="w-4 h-4 text-cyan-400 shrink-0" data-lucide="cpu"></i>
-              <span class="truncate">Systems &amp; Network</span>
+          <button type="button" onclick="window.switchStoreTab('systems')" data-filter="systems" id="tab-btn-systems" class="cat-tab-btn inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800 col-span-2 sm:col-span-1" role="tab" aria-selected="false">
+            <span class="flex items-center gap-1.5 sm:gap-2 truncate">
+              <i class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 shrink-0" data-lucide="cpu"></i>
+              <span class="truncate"><span class="sm:hidden">Systems</span><span class="hidden sm:inline">Systems &amp; Network</span></span>
             </span>
-            <span class="cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
+            <span class="cat-pill bg-slate-800 text-slate-300 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-bold shrink-0">6</span>
           </button>
 
         </div>
@@ -1472,17 +1472,17 @@ document.addEventListener('keydown', function(e) {
       <!-- Dedicated Tab View Header Panel -->
       <div id="active-tab-banner" class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-200">
         <div class="space-y-1.5">
-          <div class="flex items-center gap-2.5">
+          <div class="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:gap-2.5">
             <span id="active-tab-icon-wrap" class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200/80 flex items-center justify-center text-indigo-700 shrink-0">
               <i id="active-tab-icon" class="w-5 h-5 text-indigo-600" data-lucide="shield-check"></i>
             </span>
             <div>
-              <h3 id="active-tab-title" class="text-lg sm:text-xl font-black font-heading text-slate-950 tracking-tight">
+              <h3 id="active-tab-title" class="text-base sm:text-xl font-black font-heading text-slate-950 tracking-tight">
                 Security &amp; Privacy Engineering Suites
               </h3>
             </div>
-            <span id="active-tab-count-badge" class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-mono text-[11px] font-bold">
-              8 Programs Live
+            <span id="active-tab-count-badge" class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-mono text-[11px] font-bold whitespace-nowrap shrink-0">
+              8 Live
             </span>
           </div>
           <p id="active-tab-desc" class="text-xs sm:text-sm text-slate-600 font-medium pl-11.5">
@@ -1508,7 +1508,7 @@ document.addEventListener('keydown', function(e) {
         <div class="flex items-center gap-2.5 shrink-0">
           <div class="relative w-full sm:w-72">
             <i class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" data-lucide="search"></i>
-            <input type="text" id="catalog-search-input" placeholder="Search within this suite... [ / ]" aria-label="Search software suites" class="w-full pl-9 pr-10 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs font-mono placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition" />
+            <input type="text" id="catalog-search-input" placeholder="Search suites... [ / ]" aria-label="Search software suites" class="w-full pl-9 pr-10 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-xs font-mono placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900 transition" />
             <span class="hidden sm:inline-block absolute right-3 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-slate-200/80 text-slate-500 text-[10px] font-mono font-bold pointer-events-none" id="catalog-search-shortcut">/</span>
             <button type="button" id="catalog-clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-sm font-bold cursor-pointer" title="Clear search">&times;</button>
           </div>
@@ -7102,6 +7102,8 @@ function openIndianDeskModal(title, priceInr, productCode) {
 
   const modal = document.getElementById('indian-desk-modal');
   if (!modal) return;
+  const btt = document.getElementById('rql-back-to-top');
+  if (btt) btt.style.display = 'none';
 
   const titleEl = document.getElementById('desk-product-title');
   const wsEl = document.getElementById('desk-selected-workstation');
@@ -7120,6 +7122,8 @@ function openIndianDeskModal(title, priceInr, productCode) {
 function closeIndianDeskModal() {
   const modal = document.getElementById('indian-desk-modal');
   if (modal) modal.classList.add('hidden');
+  const btt = document.getElementById('rql-back-to-top');
+  if (btt) btt.style.display = '';
 }
 
 function goToDeskStep1() {
@@ -7306,7 +7310,7 @@ function submitDeskPaymentAndOpenWhatsApp() {
 
   const cleanTitle = currentDeskProduct.replace(/&trade;/g, '').replace(/\u2122/g, '').trim();
 
-  const msg = 'Hello Mohammad Rehan,\nI have completed the Indian Domestic UPI payment for ' + cleanTitle + ' (INR ' + currentDeskPrice + ').\n\nOrder & Statutory Details:\n- Invoice Ref: ' + inv + '\n- Client Name: ' + name + '\n- Firm / Chambers: ' + firm + '\n- WhatsApp Phone: ' + phone + '\n- Place of Supply: ' + state + '\n- Bank UTR / Ref: ' + utr + '\n\nPlease verify and issue my official commercial license key.';
+  const msg = 'Hello Mohammad Rehan,\nI have completed the Indian Domestic UPI payment for ' + cleanTitle + ' (INR ' + currentDeskPrice + ').\n\nOrder & Statutory Details:\n- Invoice Ref: ' + inv + '\n- Client Name: ' + name + '\n- Firm / Chambers: ' + firm + '\n- WhatsApp Phone: ' + phone + '\n- Place of Supply: ' + state + '\n- Tax Status: 0% GST Exempt (MSME Turnover Threshold under CGST Sec 22)\n- Bank UTR / Ref: ' + utr + '\n\nPlease verify and issue my official commercial license key.';
 
   const waUrl = 'https://wa.me/917091518548?text=' + encodeURIComponent(msg);
   window.open(waUrl, '_blank');
@@ -7431,7 +7435,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- ======================================================== -->
     <!-- INDIAN DOMESTIC CHECKOUT & FULFILLMENT DESK (HORIZONTAL LIGHT THEME)-->
     <!-- ======================================================== -->
-    <div id="indian-desk-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div id="indian-desk-modal" class="fixed inset-0 z-[10000] hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
       <div class="bg-white rounded-3xl border border-slate-200 shadow-2xl max-w-4xl w-full p-5 sm:p-7 relative my-auto animate-in fade-in zoom-in-95 duration-200 text-slate-100">
         
         <!-- Top Compact Bar -->
@@ -7439,7 +7443,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span class="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-              Official Indian Domestic Fulfillment Desk &bull; Govt MSME Reg: UDYAM-BR-26-0258772
+              Official Indian Domestic Fulfillment Desk &bull; Govt MSME Reg: UDYAM-BR-26-0258772 &bull; 0% GST Exempt
             </span>
           </div>
           <button onclick="closeIndianDeskModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 flex items-center justify-center text-sm font-mono font-bold transition cursor-pointer" title="Close">&times;</button>
@@ -7474,7 +7478,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div class="pt-3 border-t border-slate-200 space-y-1.5 text-[11px] font-mono text-slate-300">
               <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> 100% Offline Single Native Binary (.exe)</div>
-              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> Official MSME Pro-Forma Tax Invoice</div>
+              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> Official MSME Tax Invoice (0% GST &mdash; Threshold Exempted)</div>
+              <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> 100% Tax Deductible B2B Business Expense (Sec 37 IT Act)</div>
               <div class="flex items-center gap-1.5 text-emerald-800"><span class="font-bold text-emerald-600">&#10003;</span> 7-Day Unconditional Money-Back Guarantee</div>
             </div>
           </div>
@@ -7490,7 +7495,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <label class="block text-slate-800 font-bold mb-1">Firm / Business Name (Optional for Tax Invoice)</label>
                 <input id="desk-cust-firm" type="text" placeholder="e.g. Kumar Law Chambers / Sharma Enterprises" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
               </div>
-              <div class="grid grid-cols-2 gap-2.5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <div>
                   <label class="block text-slate-800 font-bold mb-1">WhatsApp Mobile *</label>
                   <input id="desk-cust-phone" type="tel" placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:border-indigo-600 font-sans text-xs" />
@@ -7531,8 +7536,12 @@ document.addEventListener('DOMContentLoaded', () => {
                   <span id="desk-bill-product" class="font-bold text-slate-900 text-xs truncate max-w-[200px]">RQL DocumentShield</span>
                 </div>
                 <div class="flex justify-between items-center pt-1.5 border-t border-slate-200">
-                  <span class="text-slate-300 font-bold text-xs">Total License Fee:</span>
+                  <span class="text-slate-700 font-bold text-xs">Total License Fee:</span>
                   <span id="desk-bill-amount" class="text-emerald-700 font-black text-base font-mono">&#8377;14,900</span>
+                </div>
+                <div class="flex justify-between items-center text-[10px] text-slate-500 pt-1 border-t border-slate-100 font-mono">
+                  <span>GST Status:</span>
+                  <span class="font-bold text-slate-700">0% Exempt (CGST Sec 22 MSME Threshold)</span>
                 </div>
               </div>
             </div>
@@ -7803,7 +7812,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var tabMeta = {
     'security': {
       title: 'Security & Privacy Engineering Suites',
-      badge: '8 Programs Live',
+      badge: '8 Live',
       desc: 'Air-gapped document redaction, cryptographic file hashing, DPDP Act compliance, forensic data destruction, encrypted clipboard memory vaults, and live network socket telemetry sentries.',
       icon: 'shield-check',
       iconWrapBg: 'bg-indigo-50 border-indigo-200/80',
@@ -7812,7 +7821,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'retail': {
       title: 'Retail POS & Commercial Hardware Suites',
-      badge: '6 Programs Live',
+      badge: '6 Live',
       desc: '100% offline point-of-sale checkout, multi-counter LAN synchronization, thermal barcode label printing, air-gapped GST invoicing, cash drawer solenoid sentry, and ESC/POS receipt designers.',
       icon: 'shopping-bag',
       iconWrapBg: 'bg-emerald-50 border-emerald-200/80',
@@ -7821,7 +7830,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'legal': {
       title: 'Legal, Tax & Regulatory Compliance Workstations',
-      badge: '4 Programs Live',
+      badge: '4 Live',
       desc: 'Modular legal contract drafting, e-stamp calibration, multi-format legal document assembly, Courtroom Bates stamping, and offline Indian GST accounting.',
       icon: 'scale',
       iconWrapBg: 'bg-amber-50 border-amber-200/80',
@@ -7830,7 +7839,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'media': {
       title: 'Media, Audio & Forensic Speech Studios',
-      badge: '7 Programs Live',
+      badge: '7 Live',
       desc: 'Offline local Whisper AI transcription, vector QR generators, lossless audio metadata tagging, OpenType typography inspectors, SIMD batch image resizing, and microsecond subtitle timecode aligners.',
       icon: 'headphones',
       iconWrapBg: 'bg-rose-50 border-rose-200/80',
@@ -7839,7 +7848,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'systems': {
       title: 'Systems, Network Bonding & Data Infrastructure',
-      badge: '6 Programs Live',
+      badge: '6 Live',
       desc: 'Multi-WAN tunnel bonding, bulk regex renaming, multi-gigabyte tabular CSV sanitization, squarified treemap visual disk space analyzers, microsecond ICMP network latency sentinels, and offline differential directory mirroring.',
       icon: 'cpu',
       iconWrapBg: 'bg-cyan-50 border-cyan-200/80',
@@ -7958,17 +7967,18 @@ document.addEventListener('DOMContentLoaded', () => {
       var pill = btn.querySelector('.cat-pill');
       var icon = btn.querySelector('i');
 
+      var sysColSpan = (btnFilter === 'systems' ? ' col-span-2 sm:col-span-1' : '');
       if (isCurrent) {
-        btn.className = 'cat-tab-btn active inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500';
-        if (pill) pill.className = 'cat-pill bg-slate-950 text-white text-[11px] px-2 py-0.5 rounded-full font-mono font-black shrink-0';
+        btn.className = 'cat-tab-btn active inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all shadow-md cursor-pointer bg-white text-slate-950 ring-2 ring-indigo-500' + sysColSpan;
+        if (pill) pill.className = 'cat-pill bg-slate-950 text-white text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-black shrink-0';
         if (icon && tabMeta[filterName]) {
-          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[filterName].iconColor;
+          icon.className = 'w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ' + tabMeta[filterName].iconColor;
         }
       } else {
-        btn.className = 'cat-tab-btn inline-flex items-center justify-between gap-2 px-3.5 py-3 rounded-xl text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800';
-        if (pill) pill.className = 'cat-pill bg-slate-800 text-slate-300 text-[11px] px-2 py-0.5 rounded-full font-mono font-bold shrink-0';
+        btn.className = 'cat-tab-btn inline-flex items-center justify-between gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 sm:py-3 rounded-xl text-[11px] sm:text-xs font-mono font-bold transition-all cursor-pointer bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800/90 border border-slate-800' + sysColSpan;
+        if (pill) pill.className = 'cat-pill bg-slate-800 text-slate-300 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-mono font-bold shrink-0';
         if (icon && tabMeta[btnFilter]) {
-          icon.className = 'w-4 h-4 shrink-0 ' + tabMeta[btnFilter].tabActiveText;
+          icon.className = 'w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ' + tabMeta[btnFilter].tabActiveText;
         }
       }
     });
@@ -8194,7 +8204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTopBtn.id = 'rql-back-to-top';
   backToTopBtn.setAttribute('aria-label', 'Return to top');
   backToTopBtn.textContent = 'Top';
-  backToTopBtn.style.cssText = 'position:fixed;bottom:max(20px,env(safe-area-inset-bottom));right:20px;z-index:9000;padding:8px 14px;border-radius:8px;background:#0b111b;border:1px solid #1e293b;color:#94a3b8;font-family:ui-monospace,monospace;font-size:11px;font-weight:600;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.2s,border-color 0.2s;';
+  backToTopBtn.style.cssText = 'position:fixed;bottom:max(12px,env(safe-area-inset-bottom));right:12px;z-index:40;padding:6px 10px;border-radius:8px;background:#0b111b;border:1px solid #1e293b;color:#94a3b8;font-family:ui-monospace,monospace;font-size:10px;font-weight:600;cursor:pointer;opacity:0;pointer-events:none;transition:opacity 0.2s,border-color 0.2s;';
   backToTopBtn.addEventListener('click', function() {
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
