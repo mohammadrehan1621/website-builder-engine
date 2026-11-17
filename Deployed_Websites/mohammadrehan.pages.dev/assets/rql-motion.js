@@ -458,7 +458,7 @@
       '    <button type="button" class="rql-palette-tab" data-tab="portals">Portals (10)</button>',
       '    <button type="button" class="rql-palette-tab" data-tab="actions">Actions (5)</button>',
       '  </div>',
-      '  <div id="rql-palette-results" class="overflow-y-auto p-2 sm:p-3 space-y-1 divide-y divide-slate-800/40 text-xs font-sans" style="max-height: 440px; overscroll-behavior: contain;">',
+      '  <div id="rql-palette-results" data-lenis-prevent="true" class="overflow-y-auto p-2 sm:p-3 space-y-1 divide-y divide-slate-800/40 text-xs font-sans" style="max-height: 440px; overscroll-behavior: contain;">',
       '  </div>',
       '  <div class="p-3 bg-slate-950 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-500">',
       '    <div class="flex items-center gap-3">',
@@ -836,7 +836,7 @@
   // Self-Executing DOM Initialization
   function boot() {
     // Pure rock-solid stability - NO scroll hijacking, NO 3D wobbling, NO magnetic drifting
-    // initLenis(); -> DISABLED: preserve 100% native browser scroll speed
+    initLenis(); // Active: Lenis hardware-accelerated momentum scroll
     // init3DTiltCards(); -> DISABLED: no annoying wobbling cards
     // initMagneticButtons(); -> DISABLED: buttons stay strictly in place
     // initStaggeredReveals(); -> DISABLED: zero layout shifts

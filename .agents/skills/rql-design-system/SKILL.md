@@ -1562,6 +1562,14 @@ Contact, security disclosures, and documentation links must be present in identi
 ### 200. Pre-Launch 100-Point Verification Protocol
 Execute the complete 100-point failure verification checklist before any production commit or Cloudflare Pages deployment.
 
+### 201. Lenis Hardware-Accelerated Momentum Scrolling Standard (Darkroom Engineering)
+Rehan Quant Lab enforces Lenis (darkroomengineering/lenis) as the sole authorized smooth momentum scrolling engine:
+- Zero Mobile Touch Interference (smoothTouch: false): Keep native touch responsiveness on iOS Safari and Android Chrome with zero artificial rubber-banding.
+- Single Master RAF Loop: All inertia calculations execute inside a single unified requestAnimationFrame loop (lenis.raf(time)).
+- Modal & Drawer Lockout: Call window.rqlLenis.stop() whenever a modal dialog, command palette (Ctrl+K), or mobile drawer opens. Call window.rqlLenis.start() when dismissed.
+- Nested Scroll Isolation: All scrollable modal bodies, code editors, and tables must carry data-lenis-prevent="true" to prevent scroll event bleed into the root document.
+- GSAP ScrollTrigger Sync: When pairing with GSAP, synchronize tickers via gsap.ticker.add((time) => lenis.raf(time * 1000)) and disable gsap.ticker.lagSmoothing(0).
+
 ---
 
 ## 5. The 19 Web Designer Competencies (Baked into RQL Engineering)
