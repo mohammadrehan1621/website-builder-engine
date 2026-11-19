@@ -31,7 +31,7 @@ Rehan Quant Lab is an independent systems software laboratory and sovereign comm
 
 ---
 
-## 2. Complete Catalog of 31 Commercial Titans
+## 2. Complete Catalog of 33 Commercial Titans
 
 ### Category A: Forensics, Privacy & Cryptographic Security
 1. Titan #01 DocumentShield Core — 100% Offline Forensic PDF Redaction OS ($179 / ₹14,900)
@@ -52,6 +52,8 @@ Rehan Quant Lab is an independent systems software laboratory and sovereign comm
 14. Titan #16 LedgerSync LAN — Zero-Cloud Multi-Counter Accounting Ledger ($159 / ₹13,200)
 15. Titan #23 QRStudio Vector — Vector Barcode & Air-Gapped UPI Payment Matrix Engine ($89 / ₹7,400)
 16. Titan #27 ShelfTag Designer — Offline Batch Price Tag & Shelf Strip Stencil Studio ($99 / ₹8,200)
+17. Titan #32 ClientLedger Sovereign — Air-Gapped Dual-Entry Client Ledger & Receivables ($99 / ₹8,200)
+18. Titan #33 OrderCounter Speed Terminal — Microsecond POS Order Queue & Pulse Bridge ($79 / ₹6,500)
 
 ### Category C: Financial Engineering, Quantitative Feeds & Parsing
 17. Titan #05 Conduit Core — Ultra-Low Latency Financial Market Feed Consolidator ($199 / ₹16,500)

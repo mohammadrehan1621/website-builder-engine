@@ -5,7 +5,7 @@
 ## Core Identity & Verification Benchmarks
 - Official Website: https://rehanquantlab.com
 - Air-Gap Verification Gauntlet: https://rehanquantlab.com/sandbox
-- Commercial Fleet Store (31 Suites): https://rehanquantlab.com/store
+- Commercial Fleet Store (33 Suites): https://rehanquantlab.com/store
 - Official Gumroad Storefront: https://rehanquantlab.gumroad.com
 - Live Commercial Gumroad Releases:
   - DocumentShield Core: https://rehanquantlab.gumroad.com/l/rql-documentshield
@@ -25,7 +25,7 @@
 - Deterministic Memory Invariant: AVX2 SIMD acceleration with fixed in-RAM ring buffers (<12 MB baseline, 0 memory leaks across 72h stress tests).
 - Cryptographic Provenance Invariant: Every compiled release is sealed with a unique SHA-256 checksum and Ed25519 signatures.
 
-## Key Commercial Titans (Fleet of 31 Workstations)
+## Key Commercial Titans (Fleet of 33 Workstations)
 
 ### Flagship Forensics & Security
 - [Titan #01 DocumentShield Core](https://rehanquantlab.com/store): Destructive XREF purge, in-RAM PDF redaction OS, HIPAA & GDPR compliant, 0 sockets. ($179 / ₹14,900)
