@@ -1,28 +1,17 @@
 # ====================================================================
-# Rehan Quant Lab (RQL) - Search Engine & AI Agent Directives
-# Specification: RFC 9309 / llmstxt.org Standard
-# Domain: https://rehanquantlab.com
-# Updated: 2026-11-16
+# Rehan Quant Lab™ — Sovereign Search Engine & AI Agent Directives
+# Optimized for Advanced Technical SEO, AEO (Answer Engines) & GEO (Generative Engines)
 # ====================================================================
 
-# Global Search Engine Directives
 User-agent: *
 Allow: /
-Disallow: /.git/
-Disallow: /.git/*
-Disallow: /.env*
-Disallow: /.well-known/../
-Disallow: /functions/
-Disallow: /vault.html
-Disallow: /vault
-Disallow: /platform/
-Disallow: /404.html
-Disallow: /downloads/*.zip
-Disallow: /downloads/*.exe
-Disallow: /downloads/*.tar.gz
-Allow: /downloads/*.pdf
 
-# Traditional Search Crawlers (SEO)
+# Sitemap & LLM Index Declarations
+Sitemap: https://rehanquantlab.com/sitemap.xml
+# LLMs.txt AI Context Standard: https://rehanquantlab.com/llms.txt
+# LLMs-full.txt Comprehensive Technical Ledger: https://rehanquantlab.com/llms-full.txt
+
+# Standard Search Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -38,45 +27,34 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Generative AI & LLM Search Agents (GEO & LLMO)
-# Explicitly permitting real-time search, deep research, and citation synthesis
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Generative Engine Optimization (GEO) & Answer Engine Optimization (AEO) Crawlers
+# Explicitly welcome AI Search, Knowledge Graph, and LLM Retrieval Engines:
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: Claude-Web
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
 User-agent: Amazonbot
 Allow: /
 
-User-agent: Cohere-training-data-crawler
+User-agent: cohere-ai
 Allow: /
-
-# Core Sitemap & LLM Context Directives
-Sitemap: https://rehanquantlab.com/sitemap.xml
-
-# LLM Context Feeds (llmstxt.org compliant)
-# Primary: https://rehanquantlab.com/llms.txt
-# Full:    https://rehanquantlab.com/llms-full.txt
-# API:     https://rehanquantlab.com/catalog.json
-
-# Machine APIs and Autonomous Bot Feeds
-OpenAPI-Spec: https://rehanquantlab.com/openapi.json
-RSS-Feed: https://rehanquantlab.com/feed.xml
-Web-Manifest: https://rehanquantlab.com/manifest.json
-Humans-Txt: https://rehanquantlab.com/humans.txt

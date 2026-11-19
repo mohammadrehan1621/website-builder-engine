@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DocumentShield Core — Luxury Architectural Edition</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background-color: #08090a;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #f8fafc;
+    position: relative;
+  }
+
+  /* Real Photographic Studio Background */
+  .hero-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+    filter: contrast(1.12) brightness(0.96);
+  }
+
+  /* Architectural Studio Lighting & Contrast Gradients */
+  .atmospheric-lighting {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 1200px 800px at 70% 50%,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(0, 0, 0, 0.4) 60%,
+      rgba(0, 0, 0, 0.92) 100%
+    );
+    pointer-events: none;
+  }
+
+  .bottom-cinema-scrim {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 480px;
+    background: linear-gradient(
+      to top,
+      rgba(5, 6, 8, 0.98) 0%,
+      rgba(5, 6, 8, 0.82) 45%,
+      rgba(5, 6, 8, 0.3) 75%,
+      rgba(5, 6, 8, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  .top-cinema-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 6, 8, 0.85) 0%,
+      rgba(5, 6, 8, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* 1px Architectural Layout Frame */
+  .outer-frame {
+    position: absolute;
+    inset: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    z-index: 20;
+  }
+
+  .crosshair-tl { position: absolute; top: 32px; left: 32px; font-family: 'JetBrains Mono'; font-size: 14px; color: rgba(255,255,255,0.4); z-index: 21; }
+  .crosshair-tr { position: absolute; top: 32px; right: 32px; font-family: 'JetBrains Mono'; font-size: 14px; color: rgba(255,255,255,0.4); z-index: 21; }
+  .crosshair-bl { position: absolute; bottom: 32px; left: 32px; font-family: 'JetBrains Mono'; font-size: 14px; color: rgba(255,255,255,0.4); z-index: 21; }
+  .crosshair-br { position: absolute; bottom: 32px; right: 32px; font-family: 'JetBrains Mono'; font-size: 14px; color: rgba(255,255,255,0.4); z-index: 21; }
+
+  /* Content Canvas */
+  .content-canvas {
+    position: relative;
+    z-index: 30;
+    width: 1920px;
+    height: 1080px;
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Luxury Top Nav */
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .brand-emblem {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: 'JetBrains Mono';
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .brand-name {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .brand-division {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .serial-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .titan-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #000000;
+    background: #ffffff;
+    padding: 6px 16px;
+    text-transform: uppercase;
+  }
+
+  /* Main Hero Typographic Lockup (Lower-Third Architecture) */
+  .hero-bottom-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1300px;
+  }
+
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .eyebrow-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+  }
+
+  .eyebrow-rule {
+    flex: 1;
+    max-width: 140px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .titan-headline-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .titan-headline {
+    font-size: 86px;
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+  }
+
+  .titan-version-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.15em;
+  }
+
+  .titan-description {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 960px;
+    letter-spacing: -0.015em;
+  }
+
+  /* Architecture & Invariant Specs Grid */
+  .specs-strip {
+    display: grid;
+    grid-template-columns: repeat(4, auto) 1fr;
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 8px;
+  }
+
+  .spec-cell {
+    background: rgba(10, 12, 16, 0.85);
+    backdrop-filter: blur(16px);
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .spec-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+  }
+
+  .spec-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .spec-cell-last {
+    background: rgba(10, 12, 16, 0.85);
+    backdrop-filter: blur(16px);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .sovereign-seal-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <!-- Real Studio Photographic Plate -->
+  <img class="hero-backdrop" src="/mono_01.png" alt="DocumentShield Core Real Photography" />
+
+  <!-- Atmospheric Cinema Scrims -->
+  <div class="atmospheric-lighting"></div>
+  <div class="top-cinema-scrim"></div>
+  <div class="bottom-cinema-scrim"></div>
+
+  <!-- 1px Precision Architectural Outer Frame -->
+  <div class="outer-frame"></div>
+  <div class="crosshair-tl">+</div>
+  <div class="crosshair-tr">+</div>
+  <div class="crosshair-bl">+</div>
+  <div class="crosshair-br">+</div>
+
+  <!-- Canvas Content -->
+  <div class="content-canvas">
+    <!-- Header -->
+    <header class="header-nav">
+      <div class="brand-lockup">
+        <div class="brand-emblem">◇</div>
+        <div class="brand-name">REHAN QUANT LAB</div>
+        <div class="brand-division">SOVEREIGN SYSTEMS FOUNDRY</div>
+      </div>
+      <div class="header-right">
+        <span class="serial-badge">SER: RQL-2025-DS01</span>
+        <div class="titan-pill">TITAN 01 / 35</div>
+      </div>
+    </header>
+
+    <!-- Lower-Third Typographic Lockup -->
+    <div class="hero-bottom-block">
+      <div class="eyebrow-row">
+        <span class="eyebrow-text">FORENSIC PRIVACY & REDACTION WORKSTATION</span>
+        <div class="eyebrow-rule"></div>
+      </div>
+
+      <div class="titan-headline-row">
+        <h1 class="titan-headline">DOCUMENTSHIELD CORE</h1>
+        <span class="titan-version-tag">// v1.0 PROD-RELEASE</span>
+      </div>
+
+      <p class="titan-description">
+        Destructive 7-pass forensic PDF redaction, vector stream sanitization, and metadata purge engine. Operates 100% in local memory with zero external sockets, zero cloud middleman, and zero recurring subscription fees.
+      </p>
+
+      <!-- Precision Specs Strip -->
+      <div class="specs-strip">
+        <div class="spec-cell">
+          <span class="spec-label">ARCHITECTURE</span>
+          <span class="spec-value">PURE RUST x86-64</span>
+        </div>
+        <div class="spec-cell">
+          <span class="spec-label">CHASSIS RUNTIME</span>
+          <span class="spec-value">100% IN-RAM VOLATILE</span>
+        </div>
+        <div class="spec-cell">
+          <span class="spec-label">NETWORK PROTOCOL</span>
+          <span class="spec-value">AIR-GAPPED (ZERO SOCKETS)</span>
+        </div>
+        <div class="spec-cell">
+          <span class="spec-label">LICENSE GOVERNANCE</span>
+          <span class="spec-value">PERPETUAL SOVEREIGN</span>
+        </div>
+        <div class="spec-cell-last">
+          <span class="sovereign-seal-text">VERIFIED AUDIT 2025 &bull; NATIVE WIN64</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
